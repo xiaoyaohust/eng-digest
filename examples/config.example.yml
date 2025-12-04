@@ -1,0 +1,105 @@
+# Eng Digest Configuration File
+# This is an example configuration showing all available options
+
+# Blog sources to fetch from
+blogs:
+  # Meta Engineering Blog
+  - name: Meta Engineering
+    url: https://engineering.fb.com/feed/
+    type: rss
+    enabled: true
+
+  # Netflix Tech Blog
+  - name: Netflix TechBlog
+    url: https://netflixtechblog.com/feed
+    type: rss
+    enabled: true
+
+  # Uber Engineering Blog
+  - name: Uber Engineering
+    url: https://www.uber.com/blog/rss/
+    type: rss
+    enabled: true
+
+  # Google Developers Blog
+  - name: Google Developers
+    url: https://developers.googleblog.com/feeds/posts/default
+    type: atom
+    enabled: true
+
+  # AWS News Blog
+  - name: AWS News
+    url: https://aws.amazon.com/blogs/aws/feed/
+    type: rss
+    enabled: true
+
+  # GitHub Blog
+  - name: GitHub Blog
+    url: https://github.blog/feed/
+    type: rss
+    enabled: true
+
+  # Shopify Engineering
+  - name: Shopify Engineering
+    url: https://shopify.engineering/blog.atom
+    type: atom
+    enabled: true
+
+  # Spotify Engineering
+  - name: Spotify Engineering
+    url: https://engineering.atspotify.com/feed/
+    type: rss
+    enabled: true
+
+  # Airbnb Tech Blog
+  - name: Airbnb Engineering
+    url: https://medium.com/feed/airbnb-engineering
+    type: rss
+    enabled: true
+
+  # LinkedIn Engineering
+  - name: LinkedIn Engineering
+    url: https://www.linkedin.com/blog/engineering/feed
+    type: rss
+    enabled: true
+
+# Fetching configuration
+fetch:
+  # Only include articles published within this many hours
+  lookback_hours: 24
+
+  # Maximum articles to fetch per blog
+  max_posts_per_blog: 3
+
+  # Maximum total articles across all blogs
+  max_total_posts: 10
+
+# Summarization configuration
+summary:
+  # Summarization method: first_paragraph, textrank, tfidf
+  method: first_paragraph
+
+# Output configuration
+output:
+  # Output type: markdown, html, text
+  type: markdown
+
+  # Directory to save digests
+  path: ./digests
+
+  # Email configuration (optional)
+  email:
+    enabled: false
+    smtp_host: smtp.gmail.com
+    smtp_port: 587
+    smtp_user: your-email@gmail.com
+    smtp_password: your-app-password
+    from_email: your-email@gmail.com
+    to_email: recipient@example.com
+    use_tls: true
+
+  # Telegram configuration (optional)
+  telegram:
+    enabled: false
+    bot_token: YOUR_BOT_TOKEN_HERE
+    chat_id: YOUR_CHAT_ID_HERE
