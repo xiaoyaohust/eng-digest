@@ -12,7 +12,7 @@ from typing import List
 from eng_digest.config import load_config
 from eng_digest.fetcher import RSSFetcher, HTMLFetcher
 from eng_digest.models import Article, Summary
-from eng_digest.output import MarkdownRenderer, TextRenderer, HTMLRenderer
+from eng_digest.output import MarkdownRenderer, TextRenderer, HTMLRenderer, RSSRenderer
 from eng_digest.parser import ArticleParser
 from eng_digest.summarizer import FirstParagraphSummarizer, TextRankSummarizer
 
@@ -150,6 +150,14 @@ def render_digest(summaries: List[Summary], config) -> dict:
     html_renderer = HTMLRenderer()
     digests["html"] = html_renderer.render(summaries)
 
+    # Always generate RSS feed
+    rss_renderer = RSSRenderer(
+        title="Engineering Digest",
+        link="https://github.com/yourusername/eng-digest",
+        description="Daily digest of engineering blog posts from top tech companies"
+    )
+    digests["rss"] = rss_renderer.render(summaries)
+
     # Optionally generate plain text if configured
     if config.output.type == "text":
         text_renderer = TextRenderer()
@@ -182,13 +190,19 @@ def save_digest(digests: dict, config) -> List[str]:
     format_extensions = {
         "markdown": "md",
         "html": "html",
-        "text": "txt"
+        "text": "txt",
+        "rss": "xml"
     }
 
     for format_name, content in digests.items():
         extension = format_extensions.get(format_name, "txt")
-        filename = f"digest-{today}.{extension}"
-        filepath = output_dir / filename
+
+        # RSS feed is saved to root directory as rss.xml (not dated)
+        if format_name == "rss":
+            filepath = Path("rss.xml")
+        else:
+            filename = f"digest-{today}.{extension}"
+            filepath = output_dir / filename
 
         # Save to file
         with open(filepath, "w", encoding="utf-8") as f:

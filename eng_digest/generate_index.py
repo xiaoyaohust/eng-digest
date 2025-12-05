@@ -219,6 +219,14 @@ def generate_index_html(digests: List[Tuple[str, bool, bool]]) -> str:
                     📚 {total_digests} Digests Available
                 </div>
             </div>
+            <div style="margin-top: 25px;">
+                <a href="rss.xml" style="display: inline-flex; align-items: center; gap: 8px; background: #ff6600; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: all 0.3s ease;" onmouseover="this.style.background='#ff7700'" onmouseout="this.style.background='#ff6600'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+                    </svg>
+                    Subscribe via RSS
+                </a>
+            </div>
         </header>
 
         <main>
