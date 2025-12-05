@@ -135,6 +135,12 @@ dmypy.json
 !examples/*.yml
 !.github/**/*.yml
 
+# Database
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
 # OS
 .DS_Store
 Thumbs.db

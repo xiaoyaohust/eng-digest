@@ -6,159 +6,103 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 05 Dec 2025 21:52:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 14:02:26 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Introducing Coral NPU: A full-stack platform for Edge AI</title>
-      <link>https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/</link>
-      <description>Coral NPU is a full-stack platform for Edge AI, addressing performance, fragmentation, and user trust deficits It&amp;apos;s an AI-first architecture, prioritizing ML matrix engines, and offers a unified developer experience Synaptics is the first partner to implement Coral NPU.</description>
-      <pubDate>Fri, 05 Dec 2025 21:52:40 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/</guid>
+      <title>Beyond Request-Response: Architecting Real-time Bidirectional Streaming Multi-agent System</title>
+      <link>https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</link>
+      <description>It advocates for a real-time bidirectional streaming architecture, implemented by the Agent Development Kit (ADK) This streaming model enables true concurrency, natural interruptibility, and unified multimodal processing ADK&amp;apos;s core features are real-time I/O management, stateful sessions for agent handoffs, and streaming-native tools.</description>
+      <pubDate>Fri, 05 Dec 2025 14:02:23 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Say hello to a new level of interactivity in Gemini CLI</title>
-      <link>https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</link>
-      <description>We&amp;apos;re excited to announce an enhancement to Gemini CLI that makes your workflow more powerful a...</description>
-      <pubDate>Fri, 05 Dec 2025 21:52:40 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</guid>
+      <title>Agent Garden - Samples for learning, discovering and building</title>
+      <link>https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</link>
+      <description>Agent Garden is now available to all users to simplify AI agent creation and deployment using the Agent Development Kit (ADK) It provides curated agent samples, one-click deployment via Agent Starter Pack, and customization through Firebase Studio It helps developers with complex business challenges and multi-agent workflows, with Renault Group cited as an early success story.</description>
+      <pubDate>Fri, 05 Dec 2025 14:02:23 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Introducing the Jules extension for Gemini CLI</title>
-      <link>https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</link>
-      <description>Introducing the Jules extension for Gemini CLI, an autonomous sidekick for developers It accelerates coding workflows by offloading tasks like asynchronous work, bug fixes, and changes in new branches to Jules, while you stay in flow with Gemini CLI Get started by installing the extension and using the /jules command to initiate and check task statuses.</description>
-      <pubDate>Fri, 05 Dec 2025 21:52:40 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</guid>
+      <title>Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages</title>
+      <link>https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</link>
+      <description>The Agent Development Kit (ADK), an open-source, code-first toolkit for building powerful and sophisticated AI agents, now supports Go ADK moves LLM orchestration and agent behavior directly into your code, giving you robust debugging, versioning, and deployment freedom ADK for Go is idiomatic and performant, leveraging Go&amp;apos;s strengths, and includes support for over 30+ databases and the Agent-to-Agent (A2A) protocol for collaborative multi-agent systems</description>
+      <pubDate>Fri, 05 Dec 2025 14:02:23 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>How to use GitHub Copilot Spaces to debug issues faster</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/</link>
-      <description>Follow this step-by-step guide to learn how to debug your issues using GitHub Copilot Spaces and Copilot coding agent The post How to use GitHub Copilot Spaces to debug issues faster appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 04 Dec 2025 20:35:36 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>AV1 — Now Powering 30% of Netflix Streaming</title>
-      <link>https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4</link>
-      <description>Today, AV1 powers approximately 30% of all Netflix viewing, marking a major milestone in our efforts to bring more efficient and higher-quality streaming to our members.In this post, we’ll revisit Netflix’s AV1 journey to date, highlight emerging use cases, and share adoption trends across the device ecosystem In March 2025, we launched AV1 HDR streaming We are pleased with the successful progress made, and AV1 with FGS is now supported across a significant and growing number of in-field devices.Looking Ahead: AV1 Today, AV2 TomorrowAs we reflect on our AV1 journey, it’s clear that the codec has already transformed the streaming experience for hundreds of millions of Netflix members worldwide</description>
-      <pubDate>Thu, 04 Dec 2025 20:09:30 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Analyzing how SaaS platforms are shipping payments and finance products in days</title>
-      <link>https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days</link>
-      <description>Leading SaaS platforms across industries—from Squarespace to Jobber—are using embedded components to ship payments and finance features with minimal code We analyzed the data to see which types of platforms are getting the most value.</description>
-      <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Your stack, your rules: Introducing custom agents in GitHub Copilot for observability, IaC, and security</title>
-      <link>https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/</link>
-      <description>Use partner-built Copilot agents to debug, secure, and automate engineering workflows across your terminal, editor, and github.com The post Your stack, your rules: Introducing custom agents in GitHub Copilot for observability, IaC, and security appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 03 Dec 2025 17:00:45 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models</title>
-      <link>https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/</link>
-      <description>Amazon Bedrock now supports reinforcement fine-tuning delivering 66% accuracy gains on average over base models.</description>
-      <pubDate>Wed, 03 Dec 2025 16:08:14 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/</guid>
+      <title>Announcing replication support and Intelligent-Tiering for Amazon S3 Tables</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-replication-support-and-intelligent-tiering-for-amazon-s3-tables/</link>
+      <description>New features enable automatic cost optimization through intelligent storage tiering and simplified table replication across AWS Regions and accounts.</description>
+      <pubDate>Tue, 02 Dec 2025 16:19:14 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-replication-support-and-intelligent-tiering-for-amazon-s3-tables/</guid>
       <source>AWS News</source>
     </item>
     <item>
-      <title>New serverless customization in Amazon SageMaker AI accelerates model fine-tuning</title>
-      <link>https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/</link>
-      <description>Accelerate AI model development with new training features that enable rapid recovery from failures and automatic scaling based on resource availability.</description>
-      <pubDate>Wed, 03 Dec 2025 16:08:03 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/</guid>
+      <title>Amazon S3 Storage Lens adds performance metrics, support for billions of prefixes, and export to S3 Tables</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-s3-storage-lens-adds-performance-metrics-support-for-billions-of-prefixes-and-export-to-s3-tables/</link>
+      <description>New capabilities help optimize application performance, analyze unlimited prefixes, and simplify metrics analysis through S3 Tables integration.</description>
+      <pubDate>Tue, 02 Dec 2025 16:15:12 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-storage-lens-adds-performance-metrics-support-for-billions-of-prefixes-and-export-to-s3-tables/</guid>
       <source>AWS News</source>
     </item>
     <item>
-      <title>Introducing checkpointless and elastic training on Amazon SageMaker HyperPod</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/</link>
-      <description>Accelerate AI model development with new training features that enable instant recovery from failures and automatic scaling based on resource availability.</description>
-      <pubDate>Wed, 03 Dec 2025 16:07:52 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/</guid>
+      <title>Amazon Bedrock AgentCore adds quality evaluations and policy controls for deploying trusted AI agents</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-bedrock-agentcore-adds-quality-evaluations-and-policy-controls-for-deploying-trusted-ai-agents/</link>
+      <description>Deploy AI agents with confidence using new quality evaluations and policy controls—enabling precise boundaries on agent actions, continuous quality monitoring, and experience-based learning while maintaining natural conversation flows.</description>
+      <pubDate>Tue, 02 Dec 2025 16:14:36 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-bedrock-agentcore-adds-quality-evaluations-and-policy-controls-for-deploying-trusted-ai-agents/</guid>
       <source>AWS News</source>
     </item>
     <item>
-      <title>“The local-first rebellion”: How Home Assistant became the most important project in your house</title>
-      <link>https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/</link>
-      <description>Learn how one of GitHub’s fastest-growing open source projects is redefining smart homes without the cloud The post “The local-first rebellion”: How Home Assistant became the most important project in your house appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 02 Dec 2025 17:19:32 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/</guid>
+      <title>How to orchestrate agents using mission control</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-to-orchestrate-agents-using-mission-control/</link>
+      <description>Run multiple Copilot agents from one place Learn prompt techniques, how to spot drift early, and how to review agent work efficiently The post How to orchestrate agents using mission control appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 01 Dec 2025 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-orchestrate-agents-using-mission-control/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>New features to help SaaS platforms manage risk and stay compliant</title>
-      <link>https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant</link>
-      <description>We recently launched three new features that give you more control to fine-tune your risk and compliance strategy, allowing you to use more of Stripe’s data to inform your approach</description>
-      <pubDate>Tue, 02 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant</guid>
-      <source>Stripe Engineering</source>
+      <title>The ultimate gift guide for the developer in your life</title>
+      <link>https://github.blog/news-insights/company-news/the-ultimate-gift-guide-for-the-developer-in-your-life/</link>
+      <description>Finding the perfect gift for your favorite developer is easy with our top tips The post The ultimate gift guide for the developer in your life appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 28 Nov 2025 13:08:56 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/the-ultimate-gift-guide-for-the-developer-in-your-life/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Building the future: highlights from Dropbox’s 2025 summer intern class</title>
-      <link>https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class</link>
-      <description>The Dropbox Intern Program is thoughtfully designed to cultivate growth, spark innovation, and build lasting connections.</description>
-      <pubDate>Wed, 26 Nov 2025 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class</guid>
-      <source>Dropbox Engineering</source>
+      <title>Why developers still flock to Python: Guido van Rossum on readability, AI, and the future of programming</title>
+      <link>https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/</link>
+      <description>Discover how Python changed developer culture—and see why it keeps evolving The post Why developers still flock to Python: Guido van Rossum on readability, AI, and the future of programming appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 25 Nov 2025 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization</title>
-      <link>https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/</link>
-      <description>We’re introducing Zoomer, Meta’s comprehensive, automated debugging and optimization platform for AI Zoomer works across all of our training and inference workloads at Meta and provides deep performance insights that enable energy savings, workflow acceleration, and efficiency gains in our AI infrastructure The post Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization appeared first on Engineering at Meta.</description>
-      <pubDate>Fri, 21 Nov 2025 21:00:15 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/</guid>
+      <title>Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together</title>
+      <link>https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/</link>
+      <description>Connecting Africa and the World We’re excited to share the completion of the core 2Africa infrastructure, the world’s longest open access subsea cable system. 2Africa is a landmark subsea cable system that sets a new standard for global connectivity This project is the result of years of collaboration, innovation, and a shared vision to connect [...] Read More The post Announcing the Completion of the Core 2Africa System: Building the Future of Connectivity Together appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 18 Nov 2025 06:00:58 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2025/11/17/connectivity/core-2africa-system-completion-future-connectivity/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Key Transparency Comes to Messenger</title>
-      <link>https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/</link>
-      <description>We’re excited to share another advancement in the security of your conversations on Messenger: the launch of key transparency verification for end-to-end encrypted chats This new feature enables an additional level of assurance that only you — and the people you’re communicating with — can see or listen to what is sent, and that no [...] Read More The post Key Transparency Comes to Messenger appeared first on Engineering at Meta.</description>
-      <pubDate>Thu, 20 Nov 2025 17:00:21 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/</guid>
+      <title>Enhancing HDR on Instagram for iOS With Dolby Vision</title>
+      <link>https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/</link>
+      <description>We’re sharing how we’ve enabled Dolby Vision and ambient viewing environment (amve) on the Instagram iOS app to enhance the video viewing experience HDR videos created on iPhones contain unique Dolby Vision and amve metadata that we needed to support end-to-end Instagram for iOS is now the first Meta app to support Dolby Vision video, [...] Read More The post Enhancing HDR on Instagram for iOS With Dolby Vision appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 17 Nov 2025 17:30:25 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2025/11/17/ios/enhancing-hdr-on-instagram-for-ios-with-dolby-vision/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Feed blog posts</title>
-      <link>https://www.linkedin.com/blog/engineering/feed</link>
-      <description>Feed blog postsFeedPutting members first: testing and measuring how content appea...Sakshi JainNov 20, 2025InfrastructureFishDB: a generic retrieval engine for scaling LinkedIn’s feedKenneth LiNov 17, 2025Java heap memory and garbage collection: tuning for high-perfo...Nisheedh RaveendranSep 13, 2024Generative AIHow LinkedIn Built the Engineering Infrastructure to Ignite Pr...Shweta PatiraNov 20, 2023FeedHomepage feed multi-task learning using TensorFlowIan AckermanJun 3, 2021Member/Customer ExperienceHelping members discover communities around interestsChiachi LoSep 17, 2020FeedUnderstanding dwell time to improve LinkedIn feed rankingSiddharth DangiMay 12, 2020FeedRapid experimentation through standardization: Typed AI featur...Ian AckermanApr 15, 2020The Top 2019 LinkedIn Engineering BlogsJaren AndersonDec 9, 2019OptimizationAuditing content features in FollowFeedBanu MuthukumarAug 27, 2019FeedCommunity-focused Feed optimizationJun 25, 2019GroupsCommunities AI: Building communities around interests on LinkedInAbdul Al-QawasmehJun 24, 2019Previous123Next</description>
-      <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://www.linkedin.com/blog/engineering/feed</guid>
-      <source>LinkedIn Engineering</source>
-    </item>
-    <item>
-      <title>Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation</title>
-      <link>https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/</link>
-      <description>We’ve released Ax 1.0, an open-source platform that uses machine learning to automatically guide complex, resource-intensive experimentation Our accompanying paper, “Ax: A Platform for Adaptive Experimentation” explains Ax’s architecture, methodology, and how it [...] Read More The post Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 18 Nov 2025 17:00:24 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/</guid>
+      <title>Open Source Is Good for the Environment</title>
+      <link>https://engineering.fb.com/2025/11/14/production-engineering/open-source-is-good-for-the-environment/</link>
+      <description>Most people have heard of open-source software But have you heard about open hardware And did you know open source can have a positive impact on the environment</description>
+      <pubDate>Fri, 14 Nov 2025 20:54:14 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2025/11/14/production-engineering/open-source-is-good-for-the-environment/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>How Dash uses context engineering for smarter AI</title>
-      <link>https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai</link>
-      <description>Building effective, agentic AI isn’t just about adding more; it’s about helping the model focus on what matters most.</description>
-      <pubDate>Mon, 17 Nov 2025 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai</guid>
-      <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Create new monetization opportunities with Stripe Billing’s recent upgrades</title>
-      <link>https://stripe.com/blog/create-new-monetization-opportunities-with-recent-stripe-billing-upgrades</link>
-      <description>We recently released a series of improvements to expand multiprocessor support, give you more control over your billing and invoicing models, and better tailor your pricing for AI products</description>
-      <pubDate>Tue, 11 Nov 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/create-new-monetization-opportunities-with-recent-stripe-billing-upgrades</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>

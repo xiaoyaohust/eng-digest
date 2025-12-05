@@ -15,6 +15,7 @@ from eng_digest.models import Article, Summary
 from eng_digest.output import MarkdownRenderer, TextRenderer, HTMLRenderer, RSSRenderer
 from eng_digest.parser import ArticleParser
 from eng_digest.summarizer import FirstParagraphSummarizer, TextRankSummarizer
+from eng_digest.database import ArticleDatabase
 
 # Configure logging
 logging.basicConfig(
@@ -228,6 +229,11 @@ def run_pipeline(config_path: str):
         config = load_config(config_path)
         logger.info(f"Configuration loaded from {config_path}")
 
+        # Initialize database
+        db = ArticleDatabase()
+        stats = db.get_stats()
+        logger.info(f"Database initialized: {stats['total']} total articles, {stats['unread']} unread")
+
         # Fetch articles
         logger.info("Fetching articles...")
         articles = fetch_articles(config)
@@ -236,22 +242,43 @@ def run_pipeline(config_path: str):
         if not articles:
             logger.warning("No articles fetched")
             print("No articles found for the configured time period.")
+            db.close()
+            return
+
+        # Deduplicate against database
+        logger.info("Deduplicating articles...")
+        new_articles = db.deduplicate_articles(articles)
+        logger.info(f"Found {len(new_articles)} new articles (filtered {len(articles) - len(new_articles)} duplicates)")
+
+        if not new_articles:
+            logger.info("No new articles to process")
+            print(f"✓ No new articles found. Database has {stats['total']} articles ({stats['unread']} unread).")
+            db.close()
             return
 
         # Parse/filter articles
         logger.info("Filtering articles...")
-        filtered = parse_articles(articles, config)
+        filtered = parse_articles(new_articles, config)
         logger.info(f"Filtered to {len(filtered)} articles")
 
         if not filtered:
             logger.warning("No articles after filtering")
             print("No articles match the filter criteria.")
+            db.close()
             return
 
         # Summarize articles
         logger.info("Summarizing articles...")
         summaries = summarize_articles(filtered, config)
         logger.info(f"Created {len(summaries)} summaries")
+
+        # Save articles to database
+        logger.info("Saving articles to database...")
+        saved_count = 0
+        for article, summary in zip(filtered, summaries):
+            if db.insert_article(article, summary):
+                saved_count += 1
+        logger.info(f"Saved {saved_count} articles to database")
 
         # Render digest
         logger.info("Rendering digest...")
@@ -273,9 +300,14 @@ def run_pipeline(config_path: str):
 
         logger.info("Eng Digest pipeline completed successfully")
 
+        # Close database
+        db.close()
+
     except Exception as e:
         logger.error(f"Pipeline failed: {e}", exc_info=True)
         print(f"\n✗ Error: {e}")
+        if 'db' in locals():
+            db.close()
         sys.exit(1)
 
 
@@ -305,6 +337,25 @@ Examples:
     # Generate index command
     index_parser = subparsers.add_parser("generate-index", help="Generate index.html for GitHub Pages")
 
+    # Database commands
+    stats_parser = subparsers.add_parser("stats", help="Show database statistics")
+
+    list_parser = subparsers.add_parser("list", help="List articles from database")
+    list_parser.add_argument("--limit", type=int, default=20, help="Number of articles to show")
+    list_parser.add_argument("--unread", action="store_true", help="Show only unread articles")
+    list_parser.add_argument("--favorites", action="store_true", help="Show only favorites")
+
+    search_parser = subparsers.add_parser("search", help="Search articles")
+    search_parser.add_argument("query", help="Search query")
+    search_parser.add_argument("--limit", type=int, default=20, help="Number of results")
+
+    read_parser = subparsers.add_parser("mark-read", help="Mark article as read")
+    read_parser.add_argument("url", help="Article URL")
+
+    favorite_parser = subparsers.add_parser("favorite", help="Mark article as favorite")
+    favorite_parser.add_argument("url", help="Article URL")
+    favorite_parser.add_argument("--unfavorite", action="store_true", help="Remove from favorites")
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -313,6 +364,16 @@ Examples:
         run_pipeline(args.config)
     elif args.command == "generate-index":
         generate_index()
+    elif args.command == "stats":
+        show_stats()
+    elif args.command == "list":
+        list_articles(args.limit, args.unread, args.favorites)
+    elif args.command == "search":
+        search_articles(args.query, args.limit)
+    elif args.command == "mark-read":
+        mark_article_read(args.url)
+    elif args.command == "favorite":
+        mark_article_favorite(args.url, not args.unfavorite)
     else:
         parser.print_help()
         sys.exit(1)
@@ -322,6 +383,103 @@ def generate_index():
     """Generate index.html for GitHub Pages."""
     from eng_digest.generate_index import main as generate_index_main
     generate_index_main()
+
+
+def show_stats():
+    """Show database statistics."""
+    db = ArticleDatabase()
+    stats = db.get_stats()
+
+    print("\n📊 Database Statistics")
+    print(f"  Total articles: {stats['total']}")
+    print(f"  Unread: {stats['unread']}")
+    print(f"  Read: {stats['read']}")
+    print(f"  Favorites: {stats['favorites']}")
+    print(f"  Sources: {stats['sources']}")
+
+    db.close()
+
+
+def list_articles(limit: int, unread: bool, favorites: bool):
+    """List articles from database."""
+    db = ArticleDatabase()
+
+    is_read = False if unread else None
+    is_favorite = True if favorites else None
+
+    articles = db.get_recent_articles(limit=limit, is_read=is_read, is_favorite=is_favorite)
+
+    if not articles:
+        print("No articles found.")
+        db.close()
+        return
+
+    print(f"\n📚 Recent Articles ({len(articles)} found)\n")
+
+    for article in articles:
+        status = "⭐" if article['is_favorite'] else "  "
+        status += " ✓" if article['is_read'] else " ○"
+
+        print(f"{status} [{article['source']}] {article['title']}")
+        print(f"    {article['url']}")
+        if article['published']:
+            pub_date = datetime.fromisoformat(article['published'])
+            print(f"    Published: {pub_date.strftime('%Y-%m-%d %H:%M')}")
+        print()
+
+    db.close()
+
+
+def search_articles(query: str, limit: int):
+    """Search articles in database."""
+    db = ArticleDatabase()
+
+    articles = db.search(query, limit=limit)
+
+    if not articles:
+        print(f"No articles found matching '{query}'.")
+        db.close()
+        return
+
+    print(f"\n🔍 Search Results for '{query}' ({len(articles)} found)\n")
+
+    for article in articles:
+        status = "⭐" if article['is_favorite'] else "  "
+        status += " ✓" if article['is_read'] else " ○"
+
+        print(f"{status} [{article['source']}] {article['title']}")
+        print(f"    {article['url']}")
+        if article['summary']:
+            summary_preview = article['summary'][:150] + "..." if len(article['summary']) > 150 else article['summary']
+            print(f"    {summary_preview}")
+        print()
+
+    db.close()
+
+
+def mark_article_read(url: str):
+    """Mark article as read."""
+    db = ArticleDatabase()
+
+    if db.mark_read(url, True):
+        print(f"✓ Marked as read: {url}")
+    else:
+        print(f"✗ Article not found: {url}")
+
+    db.close()
+
+
+def mark_article_favorite(url: str, is_favorite: bool):
+    """Mark/unmark article as favorite."""
+    db = ArticleDatabase()
+
+    if db.mark_favorite(url, is_favorite):
+        action = "Added to" if is_favorite else "Removed from"
+        print(f"✓ {action} favorites: {url}")
+    else:
+        print(f"✗ Article not found: {url}")
+
+    db.close()
 
 
 if __name__ == "__main__":
