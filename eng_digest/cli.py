@@ -12,7 +12,7 @@ from typing import List
 from eng_digest.config import load_config
 from eng_digest.fetcher import RSSFetcher, HTMLFetcher
 from eng_digest.models import Article, Summary
-from eng_digest.output import MarkdownRenderer, TextRenderer
+from eng_digest.output import MarkdownRenderer, TextRenderer, HTMLRenderer
 from eng_digest.parser import ArticleParser
 from eng_digest.summarizer import FirstParagraphSummarizer
 
@@ -127,58 +127,75 @@ def summarize_articles(articles: List[Article], config) -> List[Summary]:
     return summaries
 
 
-def render_digest(summaries: List[Summary], config) -> str:
+def render_digest(summaries: List[Summary], config) -> dict:
     """
-    Render digest to output format.
+    Render digest to multiple output formats.
 
     Args:
         summaries: List of summaries
         config: Configuration object
 
     Returns:
-        Rendered digest string
+        Dictionary with format names as keys and rendered content as values
     """
-    output_type = config.output.type
+    digests = {}
 
-    if output_type == "markdown":
-        renderer = MarkdownRenderer()
-    elif output_type == "text":
-        renderer = TextRenderer()
-    else:
-        logger.warning(f"Unknown output type: {output_type}, using markdown")
-        renderer = MarkdownRenderer()
+    # Always generate Markdown
+    md_renderer = MarkdownRenderer()
+    digests["markdown"] = md_renderer.render(summaries)
 
-    digest = renderer.render(summaries)
-    return digest
+    # Always generate HTML
+    html_renderer = HTMLRenderer()
+    digests["html"] = html_renderer.render(summaries)
+
+    # Optionally generate plain text if configured
+    if config.output.type == "text":
+        text_renderer = TextRenderer()
+        digests["text"] = text_renderer.render(summaries)
+
+    return digests
 
 
-def save_digest(digest: str, config) -> str:
+def save_digest(digests: dict, config) -> List[str]:
     """
-    Save digest to file.
+    Save digests to files.
 
     Args:
-        digest: Rendered digest string
+        digests: Dictionary of format -> content
         config: Configuration object
 
     Returns:
-        Path to saved file
+        List of paths to saved files
     """
     # Create output directory
     output_dir = Path(config.output.path)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Generate filename
+    # Generate base filename
     today = datetime.now().strftime("%Y-%m-%d")
-    extension = "md" if config.output.type == "markdown" else "txt"
-    filename = f"digest-{today}.{extension}"
-    filepath = output_dir / filename
 
-    # Save to file
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(digest)
+    saved_files = []
 
-    logger.info(f"Digest saved to: {filepath}")
-    return str(filepath)
+    # Save each format
+    format_extensions = {
+        "markdown": "md",
+        "html": "html",
+        "text": "txt"
+    }
+
+    for format_name, content in digests.items():
+        extension = format_extensions.get(format_name, "txt")
+        filename = f"digest-{today}.{extension}"
+        filepath = output_dir / filename
+
+        # Save to file
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(content)
+
+        logger.info(f"Digest saved to: {filepath}")
+        saved_files.append(str(filepath))
+
+    return saved_files
 
 
 def run_pipeline(config_path: str):
@@ -222,16 +239,21 @@ def run_pipeline(config_path: str):
 
         # Render digest
         logger.info("Rendering digest...")
-        digest = render_digest(summaries, config)
+        digests = render_digest(summaries, config)
 
         # Save digest
-        filepath = save_digest(digest, config)
+        filepaths = save_digest(digests, config)
 
         # Print success message
         print(f"\n✓ Digest created successfully!")
         print(f"  Articles: {len(summaries)}")
-        print(f"  Output: {filepath}")
-        print(f"\n{digest}\n")
+        print(f"  Output files:")
+        for filepath in filepaths:
+            print(f"    - {filepath}")
+
+        # Print Markdown preview (for terminal)
+        if "markdown" in digests:
+            print(f"\n{digests['markdown']}\n")
 
         logger.info("Eng Digest pipeline completed successfully")
 
