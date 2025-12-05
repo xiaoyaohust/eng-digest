@@ -1,0 +1,90 @@
+# Eng Digest Configuration File
+# Simple test configuration
+
+# Blog sources to fetch from
+blogs:
+  # Meta (Facebook) Engineering
+  - name: Meta Engineering
+    url: https://engineering.fb.com/feed/
+    type: rss
+    enabled: true
+
+  # Uber Engineering
+  - name: Uber Engineering
+    url: https://www.uber.com/blog/rss/
+    type: rss
+    enabled: true
+
+  # Netflix Tech Blog
+  - name: Netflix TechBlog
+    url: https://netflixtechblog.com/feed
+    type: rss
+    enabled: true
+
+  # Google Developers Blog
+  - name: Google Developers
+    url: https://developers.googleblog.com/feeds/posts/default
+    type: atom
+    enabled: true
+
+  # Dropbox Tech Blog
+  - name: Dropbox Engineering
+    url: https://dropbox.tech/feed
+    type: rss
+    enabled: true
+
+  # Stripe Engineering Blog
+  - name: Stripe Engineering
+    url: https://stripe.com/blog/feed.rss
+    type: rss
+    enabled: true
+
+  # LinkedIn Engineering
+  - name: LinkedIn Engineering
+    url: https://www.linkedin.com/blog/engineering/feed
+    type: rss
+    enabled: true
+
+  # GitHub Blog
+  - name: GitHub Blog
+    url: https://github.blog/feed/
+    type: rss
+    enabled: true
+
+  # AWS News Blog
+  - name: AWS News
+    url: https://aws.amazon.com/blogs/aws/feed/
+    type: rss
+    enabled: true
+
+# Fetching configuration
+fetch:
+  # Only include articles published within this many hours
+  lookback_hours: 720  # 30 days to ensure we get some articles
+
+  # Maximum articles to fetch per blog
+  max_posts_per_blog: 3
+
+  # Maximum total articles across all blogs
+  max_total_posts: 20
+
+# Summarization configuration
+summary:
+  # Summarization method: first_paragraph, textrank, tfidf
+  method: first_paragraph
+
+# Output configuration
+output:
+  # Output type: markdown, html, text
+  type: markdown
+
+  # Directory to save digests
+  path: ./digests
+
+  # Email configuration (optional)
+  email:
+    enabled: false
+
+  # Telegram configuration (optional)
+  telegram:
+    enabled: false
