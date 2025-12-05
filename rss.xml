@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 05 Dec 2025 22:46:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Dec 2025 22:59:29 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Introducing Coral NPU: A full-stack platform for Edge AI</title>
       <link>https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/</link>
       <description>Coral NPU is a full-stack platform for Edge AI, addressing performance, fragmentation, and user trust deficits It&amp;apos;s an AI-first architecture, prioritizing ML matrix engines, and offers a unified developer experience Synaptics is the first partner to implement Coral NPU.</description>
-      <pubDate>Fri, 05 Dec 2025 22:46:38 GMT</pubDate>
+      <pubDate>Fri, 05 Dec 2025 22:59:25 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Say hello to a new level of interactivity in Gemini CLI</title>
       <link>https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</link>
       <description>We&amp;apos;re excited to announce an enhancement to Gemini CLI that makes your workflow more powerful a...</description>
-      <pubDate>Fri, 05 Dec 2025 22:46:38 GMT</pubDate>
+      <pubDate>Fri, 05 Dec 2025 22:59:25 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Introducing the Jules extension for Gemini CLI</title>
       <link>https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</link>
       <description>Introducing the Jules extension for Gemini CLI, an autonomous sidekick for developers It accelerates coding workflows by offloading tasks like asynchronous work, bug fixes, and changes in new branches to Jules, while you stay in flow with Gemini CLI Get started by installing the extension and using the /jules command to initiate and check task statuses.</description>
-      <pubDate>Fri, 05 Dec 2025 22:46:38 GMT</pubDate>
+      <pubDate>Fri, 05 Dec 2025 22:59:25 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
