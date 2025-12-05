@@ -70,8 +70,8 @@ fetch:
 
 # Summarization configuration
 summary:
-  # Summarization method: first_paragraph, textrank, tfidf
-  method: first_paragraph
+  # Summarization method: first_paragraph, textrank
+  method: textrank
 
 # Output configuration
 output:

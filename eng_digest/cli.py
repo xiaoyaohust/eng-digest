@@ -14,7 +14,7 @@ from eng_digest.fetcher import RSSFetcher, HTMLFetcher
 from eng_digest.models import Article, Summary
 from eng_digest.output import MarkdownRenderer, TextRenderer, HTMLRenderer
 from eng_digest.parser import ArticleParser
-from eng_digest.summarizer import FirstParagraphSummarizer
+from eng_digest.summarizer import FirstParagraphSummarizer, TextRankSummarizer
 
 # Configure logging
 logging.basicConfig(
@@ -119,6 +119,8 @@ def summarize_articles(articles: List[Article], config) -> List[Summary]:
 
     if method == "first_paragraph":
         summarizer = FirstParagraphSummarizer()
+    elif method == "textrank":
+        summarizer = TextRankSummarizer(num_sentences=3)
     else:
         logger.warning(f"Unknown summarizer: {method}, using first_paragraph")
         summarizer = FirstParagraphSummarizer()
