@@ -287,12 +287,38 @@ def run_pipeline(config_path: str):
         # Save digest
         filepaths = save_digest(digests, config)
 
+        # Send email if enabled
+        email_sent = False
+        if config.output.email.enabled:
+            logger.info("Email delivery is enabled, sending digest...")
+            try:
+                from eng_digest.email_sender import EmailSender
+
+                sender = EmailSender.from_config(config)
+                if sender and "html" in digests:
+                    success = sender.send_digest(summaries, digests["html"])
+                    if success:
+                        email_sent = True
+                        recipients = ", ".join(config.output.email.to_emails)
+                        logger.info(f"Email sent successfully to: {recipients}")
+                        print(f"\n📧 Email sent to: {recipients}")
+                    else:
+                        logger.warning("Failed to send email")
+                        print(f"\n⚠️  Warning: Failed to send email (check logs)")
+                else:
+                    logger.warning("Email sender not configured properly")
+            except Exception as e:
+                logger.error(f"Email sending failed: {e}", exc_info=True)
+                print(f"\n⚠️  Warning: Email sending failed: {e}")
+
         # Print success message
         print(f"\n✓ Digest created successfully!")
         print(f"  Articles: {len(summaries)}")
         print(f"  Output files:")
         for filepath in filepaths:
             print(f"    - {filepath}")
+        if email_sent:
+            print(f"  Email: Sent to {len(config.output.email.to_emails)} recipient(s)")
 
         # Print Markdown preview (for terminal)
         if "markdown" in digests:

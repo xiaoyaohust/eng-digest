@@ -151,7 +151,20 @@ output:
     use_tls: true
 ```
 
-**Send Digest Email**
+**Automatic Email Delivery**
+
+Once configured, emails are sent automatically when you run:
+
+```bash
+# Generate digest and auto-send email (if enabled)
+eng-digest run --config config.yml
+```
+
+The email will be sent automatically after generating the digest if `email.enabled: true`.
+
+**Manual Email Sending**
+
+You can also send emails manually for any previously generated digest:
 
 ```bash
 # Send today's digest
@@ -286,6 +299,26 @@ To change schedule, edit `.github/workflows/daily-digest.yml`:
 schedule:
   - cron: '0 9 * * *'  # Change this
 ```
+
+### Email Delivery in GitHub Actions
+
+To enable automatic email delivery in GitHub Actions:
+
+1. **Add GitHub Secrets**
+   - Go to repository Settings → Secrets and variables → Actions
+   - Add the following secrets:
+     - `SMTP_USER`: Your email address (e.g., your-email@gmail.com)
+     - `SMTP_PASSWORD`: Your Gmail App Password (16 characters)
+     - `SMTP_FROM_EMAIL`: Sender email (usually same as SMTP_USER)
+     - `SMTP_TO_EMAILS`: Recipient email(s), comma-separated (e.g., email1@gmail.com,email2@gmail.com)
+
+2. **Done!** The workflow will automatically:
+   - Configure email from secrets
+   - Generate digest
+   - Send email to recipients
+   - Update website
+
+**Note**: Emails are sent only when secrets are configured. If secrets are not set, the workflow runs normally without email delivery.
 
 ## Feature Comparison: Web vs CLI
 

@@ -34,6 +34,32 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .
 
+      - name: Configure email (if secrets are set)
+        run: |
+          if [ -n "${{ secrets.SMTP_USER }}" ]; then
+            echo "Configuring email delivery..."
+            # Update config.yml with email settings from secrets
+            python -c "
+          import yaml
+          with open('config.yml', 'r') as f:
+              config = yaml.safe_load(f)
+
+          # Enable email if SMTP credentials are provided
+          config['output']['email']['enabled'] = True
+          config['output']['email']['smtp_user'] = '${{ secrets.SMTP_USER }}'
+          config['output']['email']['smtp_password'] = '${{ secrets.SMTP_PASSWORD }}'
+          config['output']['email']['from_email'] = '${{ secrets.SMTP_FROM_EMAIL }}'
+          config['output']['email']['to_emails'] = '${{ secrets.SMTP_TO_EMAILS }}'.split(',')
+
+          with open('config.yml', 'w') as f:
+              yaml.dump(config, f, default_flow_style=False)
+
+          print('Email configuration updated from secrets')
+            "
+          else
+            echo "Email secrets not configured, skipping email delivery"
+          fi
+
       - name: Generate digest
         run: |
           eng-digest run --config config.yml
