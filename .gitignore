@@ -130,7 +130,6 @@ dmypy.json
 *~
 
 # Project specific
-digests/
 *.yml
 !config.yml
 !examples/*.yml
