@@ -3,11 +3,14 @@ RSS/Atom feed fetcher.
 """
 
 import logging
+import ssl
 from datetime import datetime
 from typing import List
 from html import unescape
+from urllib.request import urlopen
 
 import feedparser
+import requests
 from dateutil import parser as date_parser
 
 from eng_digest.models import Article, BlogSource
@@ -19,16 +22,18 @@ logger = logging.getLogger(__name__)
 class RSSFetcher(Fetcher):
     """Fetcher for RSS and Atom feeds."""
 
-    def __init__(self, source: BlogSource, timeout: int = 10):
+    def __init__(self, source: BlogSource, timeout: int = 10, verify_ssl: bool = True):
         """
         Initialize RSS fetcher.
 
         Args:
             source: Blog source configuration
             timeout: Request timeout in seconds
+            verify_ssl: Whether to verify SSL certificates (disable for self-signed certs)
         """
         super().__init__(source)
         self.timeout = timeout
+        self.verify_ssl = verify_ssl
 
     def fetch(self) -> List[Article]:
         """
@@ -43,8 +48,23 @@ class RSSFetcher(Fetcher):
         logger.info(f"Fetching RSS feed from {self.source.name}: {self.source.url}")
 
         try:
-            # Parse the feed
-            feed = feedparser.parse(self.source.url)
+            # Fetch feed content using requests (allows SSL verification control)
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+                'Accept-Language': 'en-US,en;q=0.9',
+            }
+
+            response = requests.get(
+                self.source.url,
+                timeout=self.timeout,
+                verify=self.verify_ssl,  # Control SSL verification
+                headers=headers
+            )
+            response.raise_for_status()
+
+            # Parse the feed content
+            feed = feedparser.parse(response.content)
 
             # Check if parsing was successful
             if feed.bozo and not feed.entries:
