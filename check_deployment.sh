@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "🔍 Checking GitHub Pages deployment status..."
+echo ""
+echo "Your repository: xiaoyaohust/eng-digest"
+echo "Expected URL: https://xiaoyaohust.github.io/eng-digest/"
+echo ""
+echo "✅ Files that should be accessible:"
+echo "  - https://xiaoyaohust.github.io/eng-digest/ (index.html)"
+echo "  - https://xiaoyaohust.github.io/eng-digest/digests/digest-2025-12-05.html"
+echo ""
+echo "⏳ If you just enabled Pages, please wait 5-10 minutes"
+echo ""
