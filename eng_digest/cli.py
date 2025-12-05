@@ -356,6 +356,9 @@ Examples:
     favorite_parser.add_argument("url", help="Article URL")
     favorite_parser.add_argument("--unfavorite", action="store_true", help="Remove from favorites")
 
+    # TUI command
+    tui_parser = subparsers.add_parser("tui", help="Launch interactive Terminal UI")
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -374,6 +377,8 @@ Examples:
         mark_article_read(args.url)
     elif args.command == "favorite":
         mark_article_favorite(args.url, not args.unfavorite)
+    elif args.command == "tui":
+        launch_tui()
     else:
         parser.print_help()
         sys.exit(1)
@@ -480,6 +485,12 @@ def mark_article_favorite(url: str, is_favorite: bool):
         print(f"✗ Article not found: {url}")
 
     db.close()
+
+
+def launch_tui():
+    """Launch interactive Terminal UI."""
+    from eng_digest.tui import run_tui
+    run_tui()
 
 
 if __name__ == "__main__":

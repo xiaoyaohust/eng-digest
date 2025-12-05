@@ -21,6 +21,13 @@ Automated daily digest of engineering blog posts from top tech companies, powere
 - **Favorites**: Save important articles for later
 - **Full-Text Search**: Find articles by keywords using SQLite FTS5
 
+### 💻 Interactive Terminal UI
+- **Rich TUI**: Beautiful terminal interface powered by Textual
+- **Keyboard Navigation**: Vim-style (j/k) and arrow key support
+- **Quick Actions**: Open links, mark read, add favorites with single keypress
+- **Real-time Filtering**: Instantly filter by unread, favorites, or search query
+- **Split View**: Article list and detail panel in one screen
+
 ### 💰 Zero Cost
 - No API fees (no AI services required)
 - Free GitHub Actions (2000 min/month)
@@ -88,6 +95,28 @@ This will:
 3. Summarize using TextRank algorithm
 4. Generate Markdown, HTML, and RSS outputs
 5. Save articles to database
+
+#### Interactive Terminal UI (TUI)
+
+```bash
+# Launch interactive TUI
+eng-digest tui
+```
+
+Features:
+- **Navigation**: Use ↑/↓ arrow keys or j/k (Vim-style) to browse articles
+- **Open Article**: Press Enter or 'o' to open article in browser
+- **Mark Read/Unread**: Press 'r' to toggle read status
+- **Add to Favorites**: Press 'f' to toggle favorite status
+- **Search**: Press '/' to open search dialog
+- **Filters**:
+  - Press 'u' to show unread articles only
+  - Press 's' to show favorites only
+  - Press 'a' to show all articles
+- **Help**: Press '?' to show keyboard shortcuts
+- **Quit**: Press 'q' to exit
+
+The TUI provides a rich terminal interface for browsing, searching, and managing your article database with real-time updates.
 
 #### Database Management
 
@@ -218,8 +247,11 @@ schedule:
 | Read/unread tracking | ❌ | ✅ |
 | Favorites | ❌ | ✅ |
 | History browsing | ✅ Limited to published | ✅ Complete history |
+| Interactive TUI | ❌ | ✅ |
+| Keyboard navigation | ❌ | ✅ |
+| Real-time filtering | ❌ | ✅ |
 
-**Note**: Database features (search, favorites, read/unread) are CLI-only because the SQLite database is local and not uploaded to GitHub.
+**Note**: Database features (search, favorites, read/unread, TUI) are CLI-only because the SQLite database is local and not uploaded to GitHub.
 
 ## How It Works
 
@@ -288,6 +320,7 @@ eng-digest/
   - `nltk`: NLP utilities
   - `PyYAML`: Configuration
   - `requests`: HTTP fetching
+  - `textual`: Interactive Terminal UI framework
 
 ## Development
 
