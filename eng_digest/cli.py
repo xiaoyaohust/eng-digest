@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List
 
 from eng_digest.config import load_config
-from eng_digest.fetcher import RSSFetcher
+from eng_digest.fetcher import RSSFetcher, HTMLFetcher
 from eng_digest.models import Article, Summary
 from eng_digest.output import MarkdownRenderer, TextRenderer
 from eng_digest.parser import ArticleParser
@@ -28,6 +28,8 @@ def fetch_articles(config) -> List[Article]:
     """
     Fetch articles from all configured blogs.
 
+    Uses RSS/Atom feeds by default, falls back to HTML parsing if RSS fails.
+
     Args:
         config: Configuration object
 
@@ -41,24 +43,41 @@ def fetch_articles(config) -> List[Article]:
             logger.info(f"Skipping disabled blog: {blog.name}")
             continue
 
-        try:
-            # Create appropriate fetcher
-            if blog.type in ["rss", "atom"]:
-                fetcher = RSSFetcher(blog)
-            else:
-                logger.warning(f"Unsupported blog type: {blog.type} for {blog.name}")
-                continue
+        articles = []
 
-            # Fetch articles
-            articles = fetcher.fetch()
-            all_articles.extend(articles)
+        # Strategy 1: Try RSS/Atom first
+        if blog.type in ["rss", "atom"]:
+            try:
+                logger.info(f"Trying RSS/Atom for {blog.name}...")
+                # Disable SSL verification for public RSS feeds (safe for read-only access)
+                fetcher = RSSFetcher(blog, verify_ssl=False)
+                articles = fetcher.fetch()
 
-            logger.info(f"Fetched {len(articles)} articles from {blog.name}")
+                if articles:
+                    logger.info(f"✓ RSS: Fetched {len(articles)} articles from {blog.name}")
+                    all_articles.extend(articles)
+                    continue
+                else:
+                    logger.warning(f"RSS returned 0 articles from {blog.name}")
 
-        except Exception as e:
-            logger.error(f"Failed to fetch from {blog.name}: {e}")
-            # Continue with other blogs
-            continue
+            except Exception as e:
+                logger.warning(f"RSS failed for {blog.name}: {e}")
+
+        # Strategy 2: Fallback to HTML parsing
+        if not articles:
+            try:
+                logger.info(f"Trying HTML fallback for {blog.name}...")
+                html_fetcher = HTMLFetcher(blog)
+                articles = html_fetcher.fetch()
+
+                if articles:
+                    logger.info(f"✓ HTML: Fetched {len(articles)} articles from {blog.name}")
+                    all_articles.extend(articles)
+                else:
+                    logger.error(f"✗ Both RSS and HTML failed for {blog.name}")
+
+            except Exception as e:
+                logger.error(f"HTML fallback failed for {blog.name}: {e}")
 
     return all_articles
 
