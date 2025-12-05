@@ -1,311 +1,400 @@
-# Eng Digest
+# Engineering Digest 📰
 
-A command-line tool that automatically collects, filters, summarizes, and delivers daily engineering content from selected technology blogs.
+Automated daily digest of engineering blog posts from top tech companies, powered by TextRank summarization and delivered via GitHub Pages.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 ## Features
 
-- **RSS/Atom Feed Support**: Fetch articles from any blog with RSS or Atom feeds
-- **Smart Filtering**: Filter articles by publication date, source, and quantity
-- **Non-AI Summarization**: Multiple summarization strategies that work offline
-  - First paragraph extraction
-  - Keyword extraction using TF-IDF
-  - TextRank summarization (coming soon)
-- **Multiple Output Formats**: Markdown, plain text, HTML (coming soon)
-- **Configurable**: YAML-based configuration for easy customization
-- **Extensible**: Modular architecture for adding new sources, summarizers, and outputs
+### 🎯 Core Features
+- **Automated Digest Generation**: Daily collection from 9+ top engineering blogs
+- **Smart Summarization**: TextRank algorithm for intelligent sentence extraction
+- **RSS Feed**: Subscribe in your favorite RSS reader
+- **Beautiful Web Interface**: GitHub Pages hosted digest archive
+- **Multiple Output Formats**: Markdown, HTML, RSS, and plain text
 
-## Installation
+### 🗄️ Local Database (CLI Only)
+- **Deduplication**: Never see the same article twice
+- **History Tracking**: Search through all past articles
+- **Read/Unread Status**: Mark articles as you read them
+- **Favorites**: Save important articles for later
+- **Full-Text Search**: Find articles by keywords using SQLite FTS5
 
-### Using pip
-
-```bash
-pip install -e .
-```
-
-### From source
-
-```bash
-git clone https://github.com/yourusername/eng-digest.git
-cd eng-digest
-pip install -r requirements.txt
-```
+### 💰 Zero Cost
+- No API fees (no AI services required)
+- Free GitHub Actions (2000 min/month)
+- Free GitHub Pages hosting
+- Local SQLite database (no cloud DB costs)
 
 ## Quick Start
 
-1. **Create a configuration file** (or use the example):
+### Web Access (No Installation)
+
+Visit the live digest: **https://YOUR_USERNAME.github.io/eng-digest/**
+
+Features available on the website:
+- ✅ Browse daily digests (Markdown & HTML)
+- ✅ Subscribe via RSS feed
+- ✅ Search within page (browser search)
+
+### Local CLI Installation
+
+For full features including database and search:
 
 ```bash
-cp examples/config.example.yml config.yml
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/eng-digest.git
+cd eng-digest
+
+# Install dependencies
+pip install -e .
+
+# Run digest generation
+eng-digest run --config config.yml
+
+# View stats
+eng-digest stats
 ```
 
-2. **Edit the configuration** to add your favorite blogs:
+## Usage
+
+### Web Interface
+
+#### Browse Digests
+1. Visit https://YOUR_USERNAME.github.io/eng-digest/
+2. Click on any digest to read (Markdown or HTML version)
+
+#### Subscribe via RSS
+1. Click the "Subscribe via RSS" button on the homepage
+2. Add the feed URL to your RSS reader:
+   - Feedly
+   - NetNewsWire
+   - Inoreader
+   - Any RSS 2.0 compatible reader
+
+### CLI Commands
+
+#### Generate Digest
+
+```bash
+# Generate daily digest
+eng-digest run --config config.yml
+```
+
+This will:
+1. Fetch articles from configured blogs
+2. Deduplicate against local database
+3. Summarize using TextRank algorithm
+4. Generate Markdown, HTML, and RSS outputs
+5. Save articles to database
+
+#### Database Management
+
+**View Statistics**
+```bash
+eng-digest stats
+# Output:
+# 📊 Database Statistics
+#   Total articles: 156
+#   Unread: 89
+#   Read: 67
+#   Favorites: 12
+#   Sources: 8
+```
+
+**List Articles**
+```bash
+# List recent articles
+eng-digest list --limit 20
+
+# List only unread
+eng-digest list --unread --limit 10
+
+# List favorites
+eng-digest list --favorites
+```
+
+**Search Articles**
+```bash
+# Full-text search
+eng-digest search "kubernetes"
+eng-digest search "machine learning" --limit 15
+```
+
+**Mark as Read**
+```bash
+eng-digest mark-read "https://netflixtechblog.com/..."
+```
+
+**Add to Favorites**
+```bash
+# Add favorite
+eng-digest favorite "https://engineering.fb.com/..."
+
+# Remove favorite
+eng-digest favorite "https://engineering.fb.com/..." --unfavorite
+```
+
+#### Generate Index Page
+
+```bash
+eng-digest generate-index
+```
+
+Generates `index.html` with links to all digests.
+
+## Configuration
+
+Edit `config.yml` to customize:
 
 ```yaml
+# Blog sources
 blogs:
-  - name: Meta Engineering
-    url: https://engineering.fb.com/feed/
+  - name: Netflix TechBlog
+    url: https://netflixtechblog.com/feed
     type: rss
     enabled: true
 
+# Fetch settings
 fetch:
-  lookback_hours: 24
+  lookback_hours: 720  # 30 days
   max_posts_per_blog: 3
-  max_total_posts: 10
+  max_total_posts: 20
 
+# Summarization
 summary:
-  method: first_paragraph
+  method: textrank  # or first_paragraph
 
+# Output
 output:
   type: markdown
   path: ./digests
 ```
 
-3. **Run the digest**:
+## Deployment (GitHub Actions + Pages)
 
-```bash
-eng-digest run --config config.yml
-```
+### Initial Setup
 
-## Usage
+1. **Push to GitHub**
+   ```bash
+   git remote add origin https://github.com/YOUR_USERNAME/eng-digest.git
+   git push -u origin main
+   ```
 
-### Basic Command
+2. **Enable GitHub Pages**
+   - Go to repository Settings → Pages
+   - Source: `main` branch, `/ (root)` folder
+   - Click Save
 
-```bash
-eng-digest run --config config.yml
-```
+3. **Done!** GitHub Actions will automatically:
+   - Run daily at 9 AM UTC
+   - Generate fresh digest
+   - Update website
+   - Commit and push results
 
-This will:
-1. Fetch articles from all configured blogs
-2. Filter articles based on time and limits
-3. Generate summaries
-4. Save the digest to the configured output directory
+### Automation Schedule
 
-### Output Example
+The digest runs:
+- **Daily**: Every day at 9 AM UTC (5 PM Beijing Time)
+- **On Push**: When you push to main branch
+- **Manual**: Trigger via GitHub Actions tab
 
-```markdown
-# Engineering Daily Digest – 2025-12-03
-
-**Total Articles:** 8 from 5 sources
-
----
-
-## Meta Engineering
-
-### 1. Sharding Instagram's Messaging System
-
-**URL:** https://engineering.fb.com/...
-
-**Summary:** Instagram's messaging architecture was redesigned to reduce write bottlenecks using a multi-region sharded queue system...
-
-**Keywords:** messaging, sharding, distributed-systems
-
----
-
-## Netflix TechBlog
-
-### 1. Improving Streaming QoS with Adaptive Control
-
-**URL:** https://netflixtechblog.com/...
-
-**Summary:** Netflix engineers implemented a lightweight adaptive QoS model to handle fluctuating network paths...
-
-**Keywords:** streaming, QoS, adaptive-control
-```
-
-## Configuration
-
-### Blog Sources
-
+To change schedule, edit `.github/workflows/daily-digest.yml`:
 ```yaml
-blogs:
-  - name: Blog Name
-    url: https://example.com/feed/
-    type: rss  # or atom
-    enabled: true
+schedule:
+  - cron: '0 9 * * *'  # Change this
 ```
 
-### Fetch Settings
+## Feature Comparison: Web vs CLI
 
-```yaml
-fetch:
-  lookback_hours: 24        # Only fetch articles from last 24 hours
-  max_posts_per_blog: 3     # Maximum 3 articles per blog
-  max_total_posts: 10       # Maximum 10 articles total
+| Feature | Web (GitHub Pages) | CLI (Local) |
+|---------|-------------------|-------------|
+| Browse digests | ✅ | ✅ |
+| RSS subscription | ✅ | ✅ |
+| TextRank summaries | ✅ | ✅ |
+| Article deduplication | ⚠️ Per workflow run | ✅ Full history |
+| Search articles | ❌ | ✅ Full-text search |
+| Read/unread tracking | ❌ | ✅ |
+| Favorites | ❌ | ✅ |
+| History browsing | ✅ Limited to published | ✅ Complete history |
+
+**Note**: Database features (search, favorites, read/unread) are CLI-only because the SQLite database is local and not uploaded to GitHub.
+
+## How It Works
+
+### Summarization: TextRank Algorithm
+
+Unlike simple first-paragraph extraction, TextRank uses graph-based ranking:
+
+1. **Sentence Splitting**: Parse article into sentences
+2. **Similarity Matrix**: Calculate sentence similarity using word overlap
+3. **PageRank**: Rank sentences by importance
+4. **Selection**: Extract top N sentences while preserving order
+
+**Example Output:**
+```
+Today, AV1 powers approximately 30% of all Netflix viewing,
+marking a major milestone... In March 2025, we launched AV1
+HDR streaming... As we reflect on our AV1 journey, it's clear
+that the codec has already transformed the streaming experience...
 ```
 
-### Summary Settings
+### Deduplication
 
-```yaml
-summary:
-  method: first_paragraph   # first_paragraph, textrank, or tfidf
-```
+Uses SHA256 hash of article URLs:
+- **Local CLI**: Full deduplication across all history in SQLite database
+- **GitHub Actions**: Each run starts fresh (no persistent database)
 
-### Output Settings
+### RSS Feed
 
-```yaml
-output:
-  type: markdown            # markdown, text, or html
-  path: ./digests           # Output directory
-```
-
-## Supported Blogs
-
-The tool works with any blog that provides RSS or Atom feeds. Some popular engineering blogs:
-
-- Meta Engineering: https://engineering.fb.com/feed/
-- Netflix TechBlog: https://netflixtechblog.com/feed
-- Uber Engineering: https://www.uber.com/blog/rss/
-- Google Developers: https://developers.googleblog.com/feeds/posts/default
-- AWS News: https://aws.amazon.com/blogs/aws/feed/
-- GitHub Blog: https://github.blog/feed/
-- Shopify Engineering: https://shopify.engineering/blog.atom
-- Spotify Engineering: https://engineering.atspotify.com/feed/
-- Airbnb Engineering: https://medium.com/feed/airbnb-engineering
-- LinkedIn Engineering: https://www.linkedin.com/blog/engineering/feed
-
-See [examples/config.example.yml](examples/config.example.yml) for a complete list.
-
-## Scheduling
-
-### Using Cron (Linux/Mac)
-
-```bash
-# Run daily at 9 AM
-0 9 * * * cd /path/to/eng-digest && eng-digest run --config config.yml
-```
-
-### Using GitHub Actions
-
-Create `.github/workflows/digest.yml`:
-
-```yaml
-name: Daily Digest
-
-on:
-  schedule:
-    - cron: '0 9 * * *'  # 9 AM UTC daily
-
-jobs:
-  digest:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-      - run: pip install -r requirements.txt
-      - run: eng-digest run --config config.yml
-```
-
-### Using macOS launchd
-
-Create `~/Library/LaunchAgents/com.user.engdigest.plist`:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>Label</key>
-    <string>com.user.engdigest</string>
-    <key>ProgramArguments</key>
-    <array>
-        <string>/path/to/eng-digest</string>
-        <string>run</string>
-        <string>--config</string>
-        <string>/path/to/config.yml</string>
-    </array>
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>9</integer>
-        <key>Minute</key>
-        <integer>0</integer>
-    </dict>
-</dict>
-</plist>
-```
+Generated as RSS 2.0 XML with:
+- Article title, link, description
+- Publication date and source
+- Unique GUID per article
+- Self-referencing atom:link
+- Located at: `https://YOUR_USERNAME.github.io/eng-digest/rss.xml`
 
 ## Architecture
 
 ```
 eng-digest/
 ├── eng_digest/
-│   ├── fetcher/          # Fetch articles from sources
-│   │   ├── rss_fetcher.py
-│   │   └── html_fetcher.py (future)
-│   ├── parser/           # Filter and process articles
-│   │   └── article_parser.py
-│   ├── summarizer/       # Generate summaries
-│   │   ├── first_paragraph.py
-│   │   ├── keyword_extractor.py
-│   │   └── textrank.py (future)
-│   ├── output/           # Render and deliver digests
-│   │   ├── markdown.py
-│   │   ├── text.py
-│   │   └── html.py (future)
-│   ├── config/           # Configuration management
-│   │   └── loader.py
-│   ├── models.py         # Data models
-│   └── cli.py            # Command-line interface
-├── examples/
-│   └── config.example.yml
-├── tests/
-└── digests/              # Generated digests
+│   ├── cli.py              # Main CLI entry point
+│   ├── fetcher/            # RSS/HTML fetchers
+│   ├── summarizer/         # TextRank implementation
+│   ├── output/             # Renderers (MD, HTML, RSS)
+│   ├── database/           # SQLite manager
+│   └── models.py           # Data models
+├── .github/workflows/
+│   └── daily-digest.yml    # GitHub Actions workflow
+├── digests/                # Generated digest files
+├── config.yml              # Configuration
+├── rss.xml                 # RSS feed
+└── index.html              # Archive homepage
 ```
+
+## Technology Stack
+
+- **Python 3.8+**: Core language
+- **SQLite**: Local database (zero-cost, file-based)
+- **TextRank**: Graph-based summarization (no AI needed)
+- **GitHub Actions**: Free CI/CD (2000 min/month)
+- **GitHub Pages**: Free static hosting
+- **Libraries**:
+  - `feedparser`: RSS/Atom parsing
+  - `beautifulsoup4`: HTML fallback
+  - `numpy`: TextRank calculations
+  - `nltk`: NLP utilities
+  - `PyYAML`: Configuration
+  - `requests`: HTTP fetching
 
 ## Development
 
-### Running Tests
+### Run Tests
 
 ```bash
-pytest tests/
+pip install -e ".[dev]"
+pytest
 ```
 
-### Code Formatting
+### Code Style
 
 ```bash
 black eng_digest/
-```
-
-### Type Checking
-
-```bash
+flake8 eng_digest/
 mypy eng_digest/
 ```
 
-## Requirements
+### Add New Blog Source
 
-- Python 3.8+
-- feedparser >= 6.0.0
-- python-dateutil >= 2.8.0
-- PyYAML >= 6.0.0
+Edit `config.yml`:
+```yaml
+blogs:
+  - name: Your Blog
+    url: https://blog.example.com/feed
+    type: rss  # or atom
+    enabled: true
+```
 
-## Future Enhancements
+## Troubleshooting
 
-- [ ] HTML scraping support for blogs without RSS
-- [ ] TextRank summarization
-- [ ] Email delivery via SMTP
-- [ ] Telegram bot integration
-- [ ] HTML output renderer
-- [ ] Optional LLM-based summarization
-- [ ] Article caching to avoid duplicates
-- [ ] Web UI for managing configuration
-- [ ] Export to PDF
+### GitHub Actions Fails
+
+**Check workflow logs**: Repository → Actions → Latest run
+
+Common issues:
+- Missing dependencies → Check `pyproject.toml`
+- Blog RSS down → Will skip that blog
+- Rate limiting → Reduce `max_total_posts`
+
+### Database Issues
+
+**Database locked**:
+```bash
+# Close any running eng-digest processes
+pkill -f eng-digest
+```
+
+**Reset database**:
+```bash
+rm eng_digest.db
+eng-digest run --config config.yml  # Rebuilds from scratch
+```
+
+### No Articles Found
+
+**Check configuration**:
+- Verify `lookback_hours` is large enough (e.g., 720 for 30 days)
+- Check if blogs are `enabled: true`
+- Confirm RSS feeds are accessible: `curl <feed-url>`
+
+## Supported Blogs
+
+Currently configured sources:
+- **Meta Engineering**: https://engineering.fb.com/feed/
+- **Netflix TechBlog**: https://netflixtechblog.com/feed
+- **Google Developers**: https://developers.googleblog.com/feeds/posts/default
+- **AWS News**: https://aws.amazon.com/blogs/aws/feed/
+- **Dropbox Engineering**: https://dropbox.tech/feed
+- **Stripe Engineering**: https://stripe.com/blog/feed.rss
+- **LinkedIn Engineering**: https://www.linkedin.com/blog/engineering/feed
+- **GitHub Blog**: https://github.blog/feed/
+
+The tool works with any blog that provides RSS or Atom feeds.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for new features
+4. Submit a pull request
+
+## Roadmap
+
+Future enhancements:
+- [ ] Web-based search interface (static site generator)
+- [ ] Email digest delivery (SMTP)
+- [ ] Slack/Discord notifications
+- [ ] PDF export (reportlab)
+- [ ] EPUB e-book format
+- [ ] Custom blog scraping for non-RSS sites
+- [ ] Multi-language support
+- [ ] Tag/category filtering
 
 ## License
 
-MIT License - see LICENSE file for details.
-
-## Author
-
-Your Name - your.email@example.com
+MIT License - see [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Built with Python and love for engineering content
-- Inspired by the amazing tech blogs of major companies
+- TextRank algorithm based on Mihalcea & Tarau (2004)
+- Blog sources: Netflix, Meta, Google, AWS, Stripe, GitHub, Dropbox, LinkedIn
+- Built with Python and ❤️
+
+---
+
+**Made with Claude Code** 🤖
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)
