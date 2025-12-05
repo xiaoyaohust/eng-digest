@@ -286,15 +286,26 @@ Examples:
         help="Path to configuration file",
     )
 
+    # Generate index command
+    index_parser = subparsers.add_parser("generate-index", help="Generate index.html for GitHub Pages")
+
     # Parse arguments
     args = parser.parse_args()
 
     # Execute command
     if args.command == "run":
         run_pipeline(args.config)
+    elif args.command == "generate-index":
+        generate_index()
     else:
         parser.print_help()
         sys.exit(1)
+
+
+def generate_index():
+    """Generate index.html for GitHub Pages."""
+    from eng_digest.generate_index import main as generate_index_main
+    generate_index_main()
 
 
 if __name__ == "__main__":
