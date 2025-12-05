@@ -40,8 +40,9 @@ class EmailConfig:
     smtp_user: str = ""
     smtp_password: str = ""
     from_email: str = ""
-    to_email: str = ""
+    to_emails: List[str] = field(default_factory=list)
     use_tls: bool = True
+    use_ssl: bool = False
 
 
 @dataclass
@@ -132,6 +133,12 @@ def load_config(config_path: str) -> Config:
     output_data = data.get("output", {})
 
     email_data = output_data.get("email", {})
+
+    # Support both to_email (single) and to_emails (list)
+    to_emails = email_data.get("to_emails", [])
+    if not to_emails and email_data.get("to_email"):
+        to_emails = [email_data.get("to_email")]
+
     email = EmailConfig(
         enabled=email_data.get("enabled", False),
         smtp_host=email_data.get("smtp_host", ""),
@@ -139,8 +146,9 @@ def load_config(config_path: str) -> Config:
         smtp_user=email_data.get("smtp_user", ""),
         smtp_password=email_data.get("smtp_password", ""),
         from_email=email_data.get("from_email", ""),
-        to_email=email_data.get("to_email", ""),
+        to_emails=to_emails,
         use_tls=email_data.get("use_tls", True),
+        use_ssl=email_data.get("use_ssl", False),
     )
 
     telegram_data = output_data.get("telegram", {})

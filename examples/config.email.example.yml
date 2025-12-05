@@ -1,0 +1,95 @@
+# Example Email Configuration for Eng Digest
+# This example shows how to configure email delivery
+
+# Blog sources (same as regular config)
+blogs:
+  - name: Netflix TechBlog
+    url: https://netflixtechblog.com/feed
+    type: rss
+    enabled: true
+
+  - name: Meta Engineering
+    url: https://engineering.fb.com/feed/
+    type: rss
+    enabled: true
+
+  - name: Google Developers
+    url: https://developers.googleblog.com/feeds/posts/default
+    type: atom
+    enabled: true
+
+# Fetching configuration
+fetch:
+  lookback_hours: 720  # 30 days
+  max_posts_per_blog: 3
+  max_total_posts: 20
+
+# Summarization
+summary:
+  method: textrank
+
+# Output configuration with email enabled
+output:
+  type: markdown
+  path: ./digests
+
+  # Email delivery configuration
+  email:
+    enabled: true
+
+    # Gmail configuration (recommended for personal use)
+    # How to get Gmail App Password:
+    # 1. Go to https://myaccount.google.com/security
+    # 2. Enable 2-Step Verification
+    # 3. Go to https://myaccount.google.com/apppasswords
+    # 4. Generate an App Password for "Mail"
+    # 5. Use the 16-character password below
+    smtp_host: smtp.gmail.com
+    smtp_port: 587
+    smtp_user: your-email@gmail.com
+    smtp_password: abcd efgh ijkl mnop  # Replace with your App Password
+    from_email: your-email@gmail.com
+
+    # Recipients (can be multiple)
+    to_emails:
+      - your-email@gmail.com
+      - another-recipient@example.com
+
+    # Encryption settings
+    use_tls: true   # Use STARTTLS (recommended for port 587)
+    use_ssl: false  # Use SSL/TLS from start (for port 465)
+
+  # Alternative SMTP providers:
+
+  # Outlook/Hotmail:
+  # smtp_host: smtp-mail.outlook.com
+  # smtp_port: 587
+  # smtp_user: your-email@outlook.com
+  # smtp_password: your-password
+  # use_tls: true
+
+  # Yahoo Mail:
+  # smtp_host: smtp.mail.yahoo.com
+  # smtp_port: 587
+  # smtp_user: your-email@yahoo.com
+  # smtp_password: your-app-password  # Yahoo also requires App Password
+  # use_tls: true
+
+  # QQ Mail (China):
+  # smtp_host: smtp.qq.com
+  # smtp_port: 587
+  # smtp_user: your-qq-number@qq.com
+  # smtp_password: your-authorization-code  # QQ requires authorization code
+  # use_tls: true
+
+  # 163 Mail (China):
+  # smtp_host: smtp.163.com
+  # smtp_port: 465
+  # smtp_user: your-email@163.com
+  # smtp_password: your-authorization-code
+  # use_tls: false
+  # use_ssl: true
+
+  # Telegram (optional, not yet implemented)
+  telegram:
+    enabled: false

@@ -359,6 +359,19 @@ Examples:
     # TUI command
     tui_parser = subparsers.add_parser("tui", help="Launch interactive Terminal UI")
 
+    # Send email command
+    email_parser = subparsers.add_parser("send-email", help="Send digest via email")
+    email_parser.add_argument(
+        "-c",
+        "--config",
+        required=True,
+        help="Path to configuration file",
+    )
+    email_parser.add_argument(
+        "--date",
+        help="Date of digest to send (YYYY-MM-DD), default: today",
+    )
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -379,6 +392,8 @@ Examples:
         mark_article_favorite(args.url, not args.unfavorite)
     elif args.command == "tui":
         launch_tui()
+    elif args.command == "send-email":
+        send_email(args.config, args.date)
     else:
         parser.print_help()
         sys.exit(1)
@@ -485,6 +500,106 @@ def mark_article_favorite(url: str, is_favorite: bool):
         print(f"✗ Article not found: {url}")
 
     db.close()
+
+
+def send_email(config_path: str, date_str: str = None):
+    """
+    Send digest via email.
+
+    Args:
+        config_path: Path to configuration file
+        date_str: Date of digest to send (YYYY-MM-DD), default: today
+    """
+    from eng_digest.email_sender import EmailSender
+
+    try:
+        # Load configuration
+        config = load_config(config_path)
+
+        # Check if email is enabled
+        if not config.output.email.enabled:
+            print("✗ Email delivery is not enabled in configuration.")
+            print("  Set 'output.email.enabled: true' in your config file.")
+            return
+
+        # Determine date
+        if date_str:
+            try:
+                digest_date = datetime.strptime(date_str, "%Y-%m-%d")
+            except ValueError:
+                print(f"✗ Invalid date format: {date_str}. Use YYYY-MM-DD.")
+                sys.exit(1)
+        else:
+            digest_date = datetime.now()
+
+        date_formatted = digest_date.strftime("%Y-%m-%d")
+
+        # Load digest HTML file
+        output_dir = Path(config.output.path)
+        html_file = output_dir / f"digest-{date_formatted}.html"
+
+        if not html_file.exists():
+            print(f"✗ Digest file not found: {html_file}")
+            print(f"  Run 'eng-digest run --config {config_path}' first to generate digest.")
+            sys.exit(1)
+
+        # Read HTML content
+        with open(html_file, "r", encoding="utf-8") as f:
+            html_content = f.read()
+
+        # Load summaries from database to get article count
+        db = ArticleDatabase()
+        # Get articles for the specific date (approximate)
+        from datetime import timedelta
+        start_date = digest_date
+        end_date = digest_date + timedelta(days=1)
+
+        # For simplicity, we'll extract count from HTML or use database
+        # For now, we'll create a simple summary list from database
+        articles = db.get_recent_articles(limit=50)  # Get recent articles
+        db.close()
+
+        # Create EmailSender
+        sender = EmailSender.from_config(config)
+        if not sender:
+            print("✗ Failed to create email sender. Check configuration.")
+            sys.exit(1)
+
+        # Convert database articles to Summary objects for email
+        from eng_digest.models import Summary
+        summaries = []
+        for article in articles[:20]:  # Limit to 20 for email
+            pub_date = None
+            if article.get('published'):
+                pub_date = datetime.fromisoformat(article['published'])
+
+            summaries.append(Summary(
+                title=article['title'],
+                summary=article.get('summary', ''),
+                url=article['url'],
+                source=article['source'],
+                published=pub_date,
+                keywords=[]
+            ))
+
+        # Send email
+        logger.info(f"Sending digest email for {date_formatted}...")
+        success = sender.send_digest(summaries, html_content)
+
+        if success:
+            recipients = ", ".join(config.output.email.to_emails)
+            print(f"\n✓ Email sent successfully!")
+            print(f"  Date: {date_formatted}")
+            print(f"  Recipients: {recipients}")
+            print(f"  Articles: {len(summaries)}")
+        else:
+            print(f"\n✗ Failed to send email. Check logs for details.")
+            sys.exit(1)
+
+    except Exception as e:
+        logger.error(f"Email sending failed: {e}", exc_info=True)
+        print(f"\n✗ Error: {e}")
+        sys.exit(1)
 
 
 def launch_tui():

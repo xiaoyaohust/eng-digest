@@ -1,0 +1,228 @@
+"""
+Email delivery module for sending digest via SMTP.
+"""
+
+import logging
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from datetime import datetime
+from typing import List, Optional
+
+from eng_digest.models import Summary
+
+logger = logging.getLogger(__name__)
+
+
+class EmailSender:
+    """Send digest via email using SMTP."""
+
+    def __init__(
+        self,
+        smtp_host: str,
+        smtp_port: int,
+        smtp_user: str,
+        smtp_password: str,
+        from_email: str,
+        to_emails: List[str],
+        use_tls: bool = True,
+        use_ssl: bool = False,
+    ):
+        """
+        Initialize email sender.
+
+        Args:
+            smtp_host: SMTP server hostname (e.g., smtp.gmail.com)
+            smtp_port: SMTP server port (e.g., 587 for TLS, 465 for SSL)
+            smtp_user: SMTP username
+            smtp_password: SMTP password or app password
+            from_email: Sender email address
+            to_emails: List of recipient email addresses
+            use_tls: Use STARTTLS encryption (default True)
+            use_ssl: Use SSL/TLS encryption (default False)
+        """
+        self.smtp_host = smtp_host
+        self.smtp_port = smtp_port
+        self.smtp_user = smtp_user
+        self.smtp_password = smtp_password
+        self.from_email = from_email
+        self.to_emails = to_emails
+        self.use_tls = use_tls
+        self.use_ssl = use_ssl
+
+    def send_digest(self, summaries: List[Summary], html_content: str) -> bool:
+        """
+        Send digest email.
+
+        Args:
+            summaries: List of article summaries
+            html_content: Pre-rendered HTML content
+
+        Returns:
+            True if email sent successfully, False otherwise
+        """
+        try:
+            # Create message
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = self._generate_subject(summaries)
+            msg["From"] = self.from_email
+            msg["To"] = ", ".join(self.to_emails)
+
+            # Create plain text version (fallback)
+            text_content = self._generate_text_version(summaries)
+            text_part = MIMEText(text_content, "plain", "utf-8")
+            msg.attach(text_part)
+
+            # Attach HTML version
+            html_part = MIMEText(html_content, "html", "utf-8")
+            msg.attach(html_part)
+
+            # Send email
+            if self.use_ssl:
+                # Use SSL/TLS from the start
+                with smtplib.SMTP_SSL(self.smtp_host, self.smtp_port) as server:
+                    server.login(self.smtp_user, self.smtp_password)
+                    server.sendmail(self.from_email, self.to_emails, msg.as_string())
+            else:
+                # Use STARTTLS
+                with smtplib.SMTP(self.smtp_host, self.smtp_port) as server:
+                    if self.use_tls:
+                        server.starttls()
+                    server.login(self.smtp_user, self.smtp_password)
+                    server.sendmail(self.from_email, self.to_emails, msg.as_string())
+
+            logger.info(f"Email sent successfully to {len(self.to_emails)} recipient(s)")
+            return True
+
+        except smtplib.SMTPAuthenticationError:
+            logger.error("SMTP authentication failed. Check username/password.")
+            return False
+        except smtplib.SMTPException as e:
+            logger.error(f"SMTP error: {e}")
+            return False
+        except Exception as e:
+            logger.error(f"Failed to send email: {e}")
+            return False
+
+    def _generate_subject(self, summaries: List[Summary]) -> str:
+        """
+        Generate email subject line.
+
+        Args:
+            summaries: List of summaries
+
+        Returns:
+            Email subject string
+        """
+        today = datetime.now().strftime("%Y-%m-%d")
+        count = len(summaries)
+        return f"Engineering Digest - {today} ({count} articles)"
+
+    def _generate_text_version(self, summaries: List[Summary]) -> str:
+        """
+        Generate plain text version of digest.
+
+        Args:
+            summaries: List of summaries
+
+        Returns:
+            Plain text content
+        """
+        today = datetime.now().strftime("%Y-%m-%d")
+        lines = [
+            f"Engineering Digest - {today}",
+            "=" * 50,
+            "",
+        ]
+
+        for i, summary in enumerate(summaries, 1):
+            pub_date = ""
+            if summary.published:
+                pub_date = f" ({summary.published.strftime('%Y-%m-%d')})"
+
+            lines.extend([
+                f"{i}. {summary.title}",
+                f"   Source: {summary.source}{pub_date}",
+                f"   {summary.summary}",
+                f"   {summary.url}",
+                "",
+            ])
+
+        lines.extend([
+            "---",
+            "Generated by Engineering Digest",
+            "https://github.com/yourusername/eng-digest",
+        ])
+
+        return "\n".join(lines)
+
+    @classmethod
+    def from_config(cls, config) -> Optional["EmailSender"]:
+        """
+        Create EmailSender from configuration object.
+
+        Args:
+            config: Configuration object with email settings
+
+        Returns:
+            EmailSender instance or None if email not configured
+        """
+        if not hasattr(config, "email") or not config.email.enabled:
+            return None
+
+        return cls(
+            smtp_host=config.email.smtp_host,
+            smtp_port=config.email.smtp_port,
+            smtp_user=config.email.smtp_user,
+            smtp_password=config.email.smtp_password,
+            from_email=config.email.from_email,
+            to_emails=config.email.to_emails,
+            use_tls=getattr(config.email, "use_tls", True),
+            use_ssl=getattr(config.email, "use_ssl", False),
+        )
+
+
+def get_smtp_config_for_provider(provider: str) -> dict:
+    """
+    Get SMTP configuration for common email providers.
+
+    Args:
+        provider: Email provider name (gmail, outlook, yahoo, etc.)
+
+    Returns:
+        Dictionary with smtp_host, smtp_port, use_tls, use_ssl
+    """
+    providers = {
+        "gmail": {
+            "smtp_host": "smtp.gmail.com",
+            "smtp_port": 587,
+            "use_tls": True,
+            "use_ssl": False,
+        },
+        "outlook": {
+            "smtp_host": "smtp-mail.outlook.com",
+            "smtp_port": 587,
+            "use_tls": True,
+            "use_ssl": False,
+        },
+        "yahoo": {
+            "smtp_host": "smtp.mail.yahoo.com",
+            "smtp_port": 587,
+            "use_tls": True,
+            "use_ssl": False,
+        },
+        "qq": {
+            "smtp_host": "smtp.qq.com",
+            "smtp_port": 587,
+            "use_tls": True,
+            "use_ssl": False,
+        },
+        "163": {
+            "smtp_host": "smtp.163.com",
+            "smtp_port": 465,
+            "use_tls": False,
+            "use_ssl": True,
+        },
+    }
+
+    return providers.get(provider.lower(), {})

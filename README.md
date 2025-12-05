@@ -28,6 +28,13 @@ Automated daily digest of engineering blog posts from top tech companies, powere
 - **Real-time Filtering**: Instantly filter by unread, favorites, or search query
 - **Split View**: Article list and detail panel in one screen
 
+### 📧 Email Delivery
+- **SMTP Support**: Send HTML digest via email using any SMTP server
+- **Gmail Integration**: Built-in support for Gmail App Passwords
+- **Multiple Recipients**: Send to multiple email addresses
+- **Auto-send**: Optionally send email after generating digest
+- **Zero Cost**: Use free Gmail account (no paid email service needed)
+
 ### 💰 Zero Cost
 - No API fees (no AI services required)
 - Free GitHub Actions (2000 min/month)
@@ -117,6 +124,51 @@ Features:
 - **Quit**: Press 'q' to exit
 
 The TUI provides a rich terminal interface for browsing, searching, and managing your article database with real-time updates.
+
+#### Email Delivery
+
+**Setup Gmail (Recommended)**
+
+1. Enable 2-Step Verification in your Google Account
+2. Generate an App Password:
+   - Go to https://myaccount.google.com/apppasswords
+   - Select "Mail" and your device
+   - Copy the 16-character password
+3. Update `config.yml`:
+
+```yaml
+output:
+  email:
+    enabled: true
+    smtp_host: smtp.gmail.com
+    smtp_port: 587
+    smtp_user: your-email@gmail.com
+    smtp_password: your-app-password  # 16-char App Password
+    from_email: your-email@gmail.com
+    to_emails:
+      - your-email@gmail.com
+      - friend@example.com  # Optional: add more recipients
+    use_tls: true
+```
+
+**Send Digest Email**
+
+```bash
+# Send today's digest
+eng-digest send-email --config config.yml
+
+# Send specific date's digest
+eng-digest send-email --config config.yml --date 2025-12-04
+```
+
+**Other SMTP Providers**
+
+The tool supports any SMTP server. Common providers:
+
+- **Outlook/Hotmail**: smtp-mail.outlook.com:587
+- **Yahoo**: smtp.mail.yahoo.com:587
+- **QQ Mail**: smtp.qq.com:587
+- **163 Mail**: smtp.163.com:465 (use_ssl: true)
 
 #### Database Management
 
