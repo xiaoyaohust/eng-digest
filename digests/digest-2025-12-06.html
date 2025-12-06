@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2025-12-06</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2025-12-06</p>
+        <div class="stats">
+            <span class="stat-item"><strong>19</strong> articles</span>
+            <span class="stat-item"><strong>8</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" rel="noopener noreferrer">
+                                Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-03 16:08</p>
+                    <p class="article-summary">Amazon Bedrock now supports reinforcement fine-tuning delivering 66% accuracy gains on average over base models.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" target="_blank" rel="noopener noreferrer">
+                                New serverless customization in Amazon SageMaker AI accelerates model fine-tuning
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-03 16:08</p>
+                    <p class="article-summary">Accelerate AI model development with new training features that enable rapid recovery from failures and automatic scaling based on resource availability.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener noreferrer">
+                                Introducing checkpointless and elastic training on Amazon SageMaker HyperPod
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-03 16:07</p>
+                    <p class="article-summary">Accelerate AI model development with new training features that enable instant recovery from failures and automatic scaling based on resource availability.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class" target="_blank" rel="noopener noreferrer">
+                                Building the future: highlights from Dropbox’s 2025 summer intern class
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-26 19:00</p>
+                    <p class="article-summary">The Dropbox Intern Program is thoughtfully designed to cultivate growth, spark innovation, and build lasting connections.</p>
+                    
+                    <a href="https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" target="_blank" rel="noopener noreferrer">
+                                How Dash uses context engineering for smarter AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-17 19:00</p>
+                    <p class="article-summary">Building effective, agentic AI isn’t just about adding more; it’s about helping the model focus on what matters most.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/" target="_blank" rel="noopener noreferrer">
+                                How to use GitHub Copilot Spaces to debug issues faster
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-04 20:35</p>
+                    <p class="article-summary">Follow this step-by-step guide to learn how to debug your issues using GitHub Copilot Spaces and Copilot coding agent The post How to use GitHub Copilot Spaces to debug issues faster appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/" target="_blank" rel="noopener noreferrer">
+                                Your stack, your rules: Introducing custom agents in GitHub Copilot for observability, IaC, and security
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-03 17:00</p>
+                    <p class="article-summary">Use partner-built Copilot agents to debug, secure, and automate engineering workflows across your terminal, editor, and github.com The post Your stack, your rules: Introducing custom agents in GitHub Copilot for observability, IaC, and security appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/" target="_blank" rel="noopener noreferrer">
+                                “The local-first rebellion”: How Home Assistant became the most important project in your house
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-02 17:19</p>
+                    <p class="article-summary">Learn how one of GitHub’s fastest-growing open source projects is redefining smart homes without the cloud The post “The local-first rebellion”: How Home Assistant became the most important project in your house appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/" target="_blank" rel="noopener noreferrer">
+                                Introducing Coral NPU: A full-stack platform for Edge AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-06 09:17</p>
+                    <p class="article-summary">Coral NPU is a full-stack platform for Edge AI, addressing performance, fragmentation, and user trust deficits It's an AI-first architecture, prioritizing ML matrix engines, and offers a unified developer experience Synaptics is the first partner to implement Coral NPU.</p>
+                    
+                    <a href="https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/" target="_blank" rel="noopener noreferrer">
+                                Say hello to a new level of interactivity in Gemini CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-06 09:17</p>
+                    <p class="article-summary">We're excited to announce an enhancement to Gemini CLI that makes your workflow more powerful a...</p>
+                    
+                    <a href="https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/" target="_blank" rel="noopener noreferrer">
+                                Introducing the Jules extension for Gemini CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-06 09:17</p>
+                    <p class="article-summary">Introducing the Jules extension for Gemini CLI, an autonomous sidekick for developers It accelerates coding workflows by offloading tasks like asynchronous work, bug fixes, and changes in new branches to Jules, while you stay in flow with Gemini CLI Get started by installing the extension and using the /jules command to initiate and check task statuses.</p>
+                    
+                    <a href="https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">LinkedIn Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://www.linkedin.com/blog/engineering/feed" target="_blank" rel="noopener noreferrer">
+                                Feed blog posts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-20 00:00</p>
+                    <p class="article-summary">Feed blog postsFeedPutting members first: testing and measuring how content appea...Sakshi JainNov 20, 2025InfrastructureFishDB: a generic retrieval engine for scaling LinkedIn’s feedKenneth LiNov 17, 2025Java heap memory and garbage collection: tuning for high-perfo...Nisheedh RaveendranSep 13, 2024Generative AIHow LinkedIn Built the Engineering Infrastructure to Ignite Pr...Shweta PatiraNov 20, 2023FeedHomepage feed multi-task learning using TensorFlowIan AckermanJun 3, 2021Member/Customer ExperienceHelping members discover communities around interestsChiachi LoSep 17, 2020FeedUnderstanding dwell time to improve LinkedIn feed rankingSiddharth DangiMay 12, 2020FeedRapid experimentation through standardization: Typed AI featur...Ian AckermanApr 15, 2020The Top 2019 LinkedIn Engineering BlogsJaren AndersonDec 9, 2019OptimizationAuditing content features in FollowFeedBanu MuthukumarAug 27, 2019FeedCommunity-focused Feed optimizationJun 25, 2019GroupsCommunities AI: Building communities around interests on LinkedInAbdul Al-QawasmehJun 24, 2019Previous123Next</p>
+                    
+                    <a href="https://www.linkedin.com/blog/engineering/feed" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/" target="_blank" rel="noopener noreferrer">
+                                Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-21 21:00</p>
+                    <p class="article-summary">We’re introducing Zoomer, Meta’s comprehensive, automated debugging and optimization platform for AI Zoomer works across all of our training and inference workloads at Meta and provides deep performance insights that enable energy savings, workflow acceleration, and efficiency gains in our AI infrastructure The post Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" target="_blank" rel="noopener noreferrer">
+                                Key Transparency Comes to Messenger
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-20 17:00</p>
+                    <p class="article-summary">We’re excited to share another advancement in the security of your conversations on Messenger: the launch of key transparency verification for end-to-end encrypted chats This new feature enables an additional level of assurance that only you — and the people you’re communicating with — can see or listen to what is sent, and that no [...] Read More The post Key Transparency Comes to Messenger appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" target="_blank" rel="noopener noreferrer">
+                                Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-18 17:00</p>
+                    <p class="article-summary">We’ve released Ax 1.0, an open-source platform that uses machine learning to automatically guide complex, resource-intensive experimentation Our accompanying paper, “Ax: A Platform for Adaptive Experimentation” explains Ax’s architecture, methodology, and how it [...] Read More The post Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                AV1 — Now Powering 30% of Netflix Streaming
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-04 20:09</p>
+                    <p class="article-summary">Today, AV1 powers approximately 30% of all Netflix viewing, marking a major milestone in our efforts to bring more efficient and higher-quality streaming to our members.In this post, we’ll revisit Netflix’s AV1 journey to date, highlight emerging use cases, and share adoption trends across the device ecosystem In March 2025, we launched AV1 HDR streaming We are pleased with the successful progress made, and AV1 with FGS is now supported across a significant and growing number of in-field devices.Looking Ahead: AV1 Today, AV2 TomorrowAs we reflect on our AV1 journey, it’s clear that the codec has already transformed the streaming experience for hundreds of millions of Netflix members worldwide</p>
+                    
+                    <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days" target="_blank" rel="noopener noreferrer">
+                                Analyzing how SaaS platforms are shipping payments and finance products in days
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-04 00:00</p>
+                    <p class="article-summary">Leading SaaS platforms across industries—from Squarespace to Jobber—are using embedded components to ship payments and finance features with minimal code We analyzed the data to see which types of platforms are getting the most value.</p>
+                    
+                    <a href="https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant" target="_blank" rel="noopener noreferrer">
+                                New features to help SaaS platforms manage risk and stay compliant
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-02 00:00</p>
+                    <p class="article-summary">We recently launched three new features that give you more control to fine-tune your risk and compliance strategy, allowing you to use more of Stripe’s data to inform your approach</p>
+                    
+                    <a href="https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/create-new-monetization-opportunities-with-recent-stripe-billing-upgrades" target="_blank" rel="noopener noreferrer">
+                                Create new monetization opportunities with Stripe Billing’s recent upgrades
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-11 00:00</p>
+                    <p class="article-summary">We recently released a series of improvements to expand multiprocessor support, give you more control over your billing and invoicing models, and better tailor your pricing for AI products</p>
+                    
+                    <a href="https://stripe.com/blog/create-new-monetization-opportunities-with-recent-stripe-billing-upgrades" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2025-12-06 09:17:31</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
