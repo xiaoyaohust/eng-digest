@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 08 Dec 2025 09:26:24 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 09 Dec 2025 09:22:07 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Introducing Coral NPU: A full-stack platform for Edge AI</title>
-      <link>https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/</link>
-      <description>Coral NPU is a full-stack platform for Edge AI, addressing performance, fragmentation, and user trust deficits It&amp;apos;s an AI-first architecture, prioritizing ML matrix engines, and offers a unified developer experience Synaptics is the first partner to implement Coral NPU.</description>
-      <pubDate>Mon, 08 Dec 2025 09:26:21 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-coral-npu-a-full-stack-platform-for-edge-ai/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Say hello to a new level of interactivity in Gemini CLI</title>
       <link>https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</link>
       <description>We&amp;apos;re excited to announce an enhancement to Gemini CLI that makes your workflow more powerful a...</description>
-      <pubDate>Mon, 08 Dec 2025 09:26:21 GMT</pubDate>
+      <pubDate>Tue, 09 Dec 2025 09:22:04 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Introducing the Jules extension for Gemini CLI</title>
       <link>https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</link>
       <description>Introducing the Jules extension for Gemini CLI, an autonomous sidekick for developers It accelerates coding workflows by offloading tasks like asynchronous work, bug fixes, and changes in new branches to Jules, while you stay in flow with Gemini CLI Get started by installing the extension and using the /jules command to initiate and check task statuses.</description>
-      <pubDate>Mon, 08 Dec 2025 09:26:21 GMT</pubDate>
+      <pubDate>Tue, 09 Dec 2025 09:22:04 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Beyond Request-Response: Architecting Real-time Bidirectional Streaming Multi-agent System</title>
+      <link>https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</link>
+      <description>It advocates for a real-time bidirectional streaming architecture, implemented by the Agent Development Kit (ADK) This streaming model enables true concurrency, natural interruptibility, and unified multimodal processing ADK&amp;apos;s core features are real-time I/O management, stateful sessions for agent handoffs, and streaming-native tools.</description>
+      <pubDate>Tue, 09 Dec 2025 09:22:04 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The new identity of a developer: What changes and what doesn’t in the AI era</title>
+      <link>https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/</link>
+      <description>Discover how advanced AI users are redefining software development—shifting from code producers to strategic orchestrators—through delegation, verification, and a new era of AI-fluent engineering The post The new identity of a developer: What changes and what doesn’t in the AI era appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 08 Dec 2025 18:15:17 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS re:Invent keynote recap, on-demand videos, and more (December 8, 2025)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/</link>
+      <description>The week after AWS re:Invent builds on the excitement and energy of the event and is a good time to learn more and understand how the recent announcements can help you solve your challenges and unlock new opportunities As usual, we have you covered with our top announcements of AWS re:Invent 2025 that you can […]</description>
+      <pubDate>Mon, 08 Dec 2025 17:05:29 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>How to use GitHub Copilot Spaces to debug issues faster</title>
@@ -79,22 +95,6 @@
       <pubDate>Wed, 03 Dec 2025 16:08:03 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>Introducing checkpointless and elastic training on Amazon SageMaker HyperPod</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/</link>
-      <description>Accelerate AI model development with new training features that enable instant recovery from failures and automatic scaling based on resource availability.</description>
-      <pubDate>Wed, 03 Dec 2025 16:07:52 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-checkpointless-and-elastic-training-on-amazon-sagemaker-hyperpod/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>“The local-first rebellion”: How Home Assistant became the most important project in your house</title>
-      <link>https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/</link>
-      <description>Learn how one of GitHub’s fastest-growing open source projects is redefining smart homes without the cloud The post “The local-first rebellion”: How Home Assistant became the most important project in your house appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 02 Dec 2025 17:19:32 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/the-local-first-rebellion-how-home-assistant-became-the-most-important-project-in-your-house/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>New features to help SaaS platforms manage risk and stay compliant</title>
