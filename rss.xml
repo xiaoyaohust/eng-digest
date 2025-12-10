@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 09 Dec 2025 09:22:07 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Dec 2025 09:22:48 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Say hello to a new level of interactivity in Gemini CLI</title>
-      <link>https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</link>
-      <description>We&amp;apos;re excited to announce an enhancement to Gemini CLI that makes your workflow more powerful a...</description>
-      <pubDate>Tue, 09 Dec 2025 09:22:04 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/say-hello-to-a-new-level-of-interactivity-in-gemini-cli/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Introducing the Jules extension for Gemini CLI</title>
       <link>https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</link>
       <description>Introducing the Jules extension for Gemini CLI, an autonomous sidekick for developers It accelerates coding workflows by offloading tasks like asynchronous work, bug fixes, and changes in new branches to Jules, while you stay in flow with Gemini CLI Get started by installing the extension and using the /jules command to initiate and check task statuses.</description>
-      <pubDate>Tue, 09 Dec 2025 09:22:04 GMT</pubDate>
+      <pubDate>Wed, 10 Dec 2025 09:22:45 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Beyond Request-Response: Architecting Real-time Bidirectional Streaming Multi-agent System</title>
       <link>https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</link>
       <description>It advocates for a real-time bidirectional streaming architecture, implemented by the Agent Development Kit (ADK) This streaming model enables true concurrency, natural interruptibility, and unified multimodal processing ADK&amp;apos;s core features are real-time I/O management, stateful sessions for agent handoffs, and streaming-native tools.</description>
-      <pubDate>Tue, 09 Dec 2025 09:22:04 GMT</pubDate>
+      <pubDate>Wed, 10 Dec 2025 09:22:45 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Agent Garden - Samples for learning, discovering and building</title>
+      <link>https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</link>
+      <description>Agent Garden is now available to all users to simplify AI agent creation and deployment using the Agent Development Kit (ADK) It provides curated agent samples, one-click deployment via Agent Starter Pack, and customization through Firebase Studio It helps developers with complex business challenges and multi-agent workflows, with Renault Group cited as an early success story.</description>
+      <pubDate>Wed, 10 Dec 2025 09:22:45 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>MCP joins the Linux Foundation: What this means for developers building the next era of AI tools and agents</title>
+      <link>https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/</link>
+      <description>MCP is moving to the Linux Foundation Here&amp;apos;s how that will affect developers The post MCP joins the Linux Foundation: What this means for developers building the next era of AI tools and agents appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 09 Dec 2025 21:00:13 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Speed is nothing without control: How to keep quality high in the AI era</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/</link>
+      <description>AI can help you build faster than ever, but it can also produce bugs, issues, and problems Use these strategies to keep your speed without losing control of your code The post Speed is nothing without control: How to keep quality high in the AI era appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 09 Dec 2025 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>The new identity of a developer: What changes and what doesn’t in the AI era</title>
@@ -49,14 +65,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>How to use GitHub Copilot Spaces to debug issues faster</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/</link>
-      <description>Follow this step-by-step guide to learn how to debug your issues using GitHub Copilot Spaces and Copilot coding agent The post How to use GitHub Copilot Spaces to debug issues faster appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 04 Dec 2025 20:35:36 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>AV1 — Now Powering 30% of Netflix Streaming</title>
       <link>https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4</link>
       <description>Today, AV1 powers approximately 30% of all Netflix viewing, marking a major milestone in our efforts to bring more efficient and higher-quality streaming to our members.In this post, we’ll revisit Netflix’s AV1 journey to date, highlight emerging use cases, and share adoption trends across the device ecosystem In March 2025, we launched AV1 HDR streaming We are pleased with the successful progress made, and AV1 with FGS is now supported across a significant and growing number of in-field devices.Looking Ahead: AV1 Today, AV2 TomorrowAs we reflect on our AV1 journey, it’s clear that the codec has already transformed the streaming experience for hundreds of millions of Netflix members worldwide</description>
@@ -71,14 +79,6 @@
       <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Your stack, your rules: Introducing custom agents in GitHub Copilot for observability, IaC, and security</title>
-      <link>https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/</link>
-      <description>Use partner-built Copilot agents to debug, secure, and automate engineering workflows across your terminal, editor, and github.com The post Your stack, your rules: Introducing custom agents in GitHub Copilot for observability, IaC, and security appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 03 Dec 2025 17:00:45 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models</title>
