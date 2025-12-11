@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 10 Dec 2025 09:22:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Dec 2025 09:24:23 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Introducing the Jules extension for Gemini CLI</title>
-      <link>https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</link>
-      <description>Introducing the Jules extension for Gemini CLI, an autonomous sidekick for developers It accelerates coding workflows by offloading tasks like asynchronous work, bug fixes, and changes in new branches to Jules, while you stay in flow with Gemini CLI Get started by installing the extension and using the /jules command to initiate and check task statuses.</description>
-      <pubDate>Wed, 10 Dec 2025 09:22:45 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-jules-extension-for-gemini-cli/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Beyond Request-Response: Architecting Real-time Bidirectional Streaming Multi-agent System</title>
       <link>https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</link>
       <description>It advocates for a real-time bidirectional streaming architecture, implemented by the Agent Development Kit (ADK) This streaming model enables true concurrency, natural interruptibility, and unified multimodal processing ADK&amp;apos;s core features are real-time I/O management, stateful sessions for agent handoffs, and streaming-native tools.</description>
-      <pubDate>Wed, 10 Dec 2025 09:22:45 GMT</pubDate>
+      <pubDate>Thu, 11 Dec 2025 09:24:20 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/beyond-request-response-architecting-real-time-bidirectional-streaming-multi-agent-system/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,8 +20,16 @@
       <title>Agent Garden - Samples for learning, discovering and building</title>
       <link>https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</link>
       <description>Agent Garden is now available to all users to simplify AI agent creation and deployment using the Agent Development Kit (ADK) It provides curated agent samples, one-click deployment via Agent Starter Pack, and customization through Firebase Studio It helps developers with complex business challenges and multi-agent workflows, with Renault Group cited as an early success story.</description>
-      <pubDate>Wed, 10 Dec 2025 09:22:45 GMT</pubDate>
+      <pubDate>Thu, 11 Dec 2025 09:24:20 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages</title>
+      <link>https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</link>
+      <description>The Agent Development Kit (ADK), an open-source, code-first toolkit for building powerful and sophisticated AI agents, now supports Go ADK moves LLM orchestration and agent behavior directly into your code, giving you robust debugging, versioning, and deployment freedom ADK for Go is idiomatic and performant, leveraging Go&amp;apos;s strengths, and includes support for over 30+ databases and the Agent-to-Agent (A2A) protocol for collaborative multi-agent systems</description>
+      <pubDate>Thu, 11 Dec 2025 09:24:20 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</guid>
       <source>Google Developers</source>
     </item>
     <item>
@@ -151,14 +151,6 @@
       <pubDate>Mon, 17 Nov 2025 19:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Create new monetization opportunities with Stripe Billing’s recent upgrades</title>
-      <link>https://stripe.com/blog/create-new-monetization-opportunities-with-recent-stripe-billing-upgrades</link>
-      <description>We recently released a series of improvements to expand multiprocessor support, give you more control over your billing and invoicing models, and better tailor your pricing for AI products</description>
-      <pubDate>Tue, 11 Nov 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/create-new-monetization-opportunities-with-recent-stripe-billing-upgrades</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
