@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 14 Dec 2025 09:18:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2025 09:30:01 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Agent Garden - Samples for learning, discovering and building</title>
       <link>https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</link>
       <description>Agent Garden is now available to all users to simplify AI agent creation and deployment using the Agent Development Kit (ADK) It provides curated agent samples, one-click deployment via Agent Starter Pack, and customization through Firebase Studio It helps developers with complex business challenges and multi-agent workflows, with Renault Group cited as an early success story.</description>
-      <pubDate>Sun, 14 Dec 2025 09:18:05 GMT</pubDate>
+      <pubDate>Mon, 15 Dec 2025 09:29:58 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Announcing User Simulation in ADK Evaluation</title>
       <link>https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</link>
       <description>The new **User Simulation** feature in the Agent Development Kit (ADK) replaces rigid, brittle manual test scripts with dynamic, LLM-powered conversation generation Developers define a high-level `conversation_plan`, and the simulator handles the multi-turn interaction to achieve the goal This dramatically reduces test creation time, builds more resilient tests, and creates a reliable regression suite for AI agents.</description>
-      <pubDate>Sun, 14 Dec 2025 09:18:05 GMT</pubDate>
+      <pubDate>Mon, 15 Dec 2025 09:29:58 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages</title>
       <link>https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</link>
       <description>The Agent Development Kit (ADK), an open-source, code-first toolkit for building powerful and sophisticated AI agents, now supports Go ADK moves LLM orchestration and agent behavior directly into your code, giving you robust debugging, versioning, and deployment freedom ADK for Go is idiomatic and performant, leveraging Go&amp;apos;s strengths, and includes support for over 30+ databases and the Agent-to-Agent (A2A) protocol for collaborative multi-agent systems</description>
-      <pubDate>Sun, 14 Dec 2025 09:18:05 GMT</pubDate>
+      <pubDate>Mon, 15 Dec 2025 09:29:58 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</guid>
       <source>Google Developers</source>
     </item>
