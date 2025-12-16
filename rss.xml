@@ -6,31 +6,63 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 15 Dec 2025 09:30:01 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 16 Dec 2025 09:25:01 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Agent Garden - Samples for learning, discovering and building</title>
-      <link>https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</link>
-      <description>Agent Garden is now available to all users to simplify AI agent creation and deployment using the Agent Development Kit (ADK) It provides curated agent samples, one-click deployment via Agent Starter Pack, and customization through Firebase Studio It helps developers with complex business challenges and multi-agent workflows, with Renault Group cited as an early success story.</description>
-      <pubDate>Mon, 15 Dec 2025 09:29:58 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/agent-garden-samples-for-learning-discovering-and-building/</guid>
+      <title>Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages</title>
+      <link>https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</link>
+      <description>The Agent Development Kit (ADK), an open-source, code-first toolkit for building powerful and sophisticated AI agents, now supports Go ADK moves LLM orchestration and agent behavior directly into your code, giving you robust debugging, versioning, and deployment freedom ADK for Go is idiomatic and performant, leveraging Go&amp;apos;s strengths, and includes support for over 30+ databases and the Agent-to-Agent (A2A) protocol for collaborative multi-agent systems</description>
+      <pubDate>Tue, 16 Dec 2025 09:24:57 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Announcing User Simulation in ADK Evaluation</title>
       <link>https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</link>
       <description>The new **User Simulation** feature in the Agent Development Kit (ADK) replaces rigid, brittle manual test scripts with dynamic, LLM-powered conversation generation Developers define a high-level `conversation_plan`, and the simulator handles the multi-turn interaction to achieve the goal This dramatically reduces test creation time, builds more resilient tests, and creates a reliable regression suite for AI agents.</description>
-      <pubDate>Mon, 15 Dec 2025 09:29:58 GMT</pubDate>
+      <pubDate>Tue, 16 Dec 2025 09:24:57 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages</title>
-      <link>https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</link>
-      <description>The Agent Development Kit (ADK), an open-source, code-first toolkit for building powerful and sophisticated AI agents, now supports Go ADK moves LLM orchestration and agent behavior directly into your code, giving you robust debugging, versioning, and deployment freedom ADK for Go is idiomatic and performant, leveraging Go&amp;apos;s strengths, and includes support for over 30+ databases and the Agent-to-Agent (A2A) protocol for collaborative multi-agent systems</description>
-      <pubDate>Mon, 15 Dec 2025 09:29:58 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</guid>
+      <title>Making the terminal beautiful one pixel at a time</title>
+      <link>https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</link>
+      <description>Google has launched the redesigned **Android AI Sample Catalog**, a dedicated, open-source application to inspire and educate Android developers on building AI-powered apps It showcases examples using both on-device (Gemini Nano via ML Kit GenAI API) and Cloud models (via Firebase AI Logic SDK), including image generation with Imagen, on-device summarization, and a &amp;quot;Chat with Nano Banana&amp;quot; chatbot The code is easy to copy and paste to help developers quickly start their own projects.</description>
+      <pubDate>Tue, 16 Dec 2025 09:24:57 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How Temporal Powers Reliable Cloud Operations at Netflix</title>
+      <link>https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss----2615bd06b42e---4</link>
+      <description>Clouddriver’s job is to decompose and execute Cloud Operations sent to it by Orca as part of a deployment Ultimately, we decided to pull the trigger on migrating Cloud Operation execution to Temporal.Cloud Operations with TemporalToday, we execute Cloud Operations as Temporal workflows We built a CloudOperationRunner interface in Orca to encapsulate whether the Cloud Operation was being executed via the legacy path or Temporal</description>
+      <pubDate>Mon, 15 Dec 2025 23:51:59 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Netflix Live Origin</title>
+      <link>https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss----2615bd06b42e---4</link>
+      <description>This defect information is provided as metadata when the segment is published to the live origin This combination of cache and highly available storage has met the demanding needs of our Live Origin for over a year now.Storage System High Level ArchitectureDelivering this consistent low latency for large writes with cross-region replication and consistent write-through caching to a distributed cache required solving numerous hard problems with novel techniques, which we plan to share in detail during a future post.Scalability and scalable architectureNetflix’s live streaming platform must handle a high volume of diverse stream renditions for each live event This metadata caching complements the storage system’s distributed media cache, providing a complete solution for traffic surge protection.SummaryThe Netflix Live Origin, built upon an optimized storage platform, is specifically designed for live streaming</description>
+      <pubDate>Mon, 15 Dec 2025 17:38:16 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks</title>
+      <link>https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/</link>
+      <description>Meta’s secure-by-default frameworks wrap potentially unsafe OS and third-party functions, making security the default while preserving developer speed and usability Generative AI and automation accelerate the adoption of secure frameworks at [...] Read More The post How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 15 Dec 2025 17:00:25 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/</link>
+      <description>We’re nearly at the end of 2025 And what a year it’s been From re:Invent recap events, to AWS Summits, AWS Innovate, AWS re:Inforce, Community Days, and DevDays and, recently, adding that cherry on the cake, re:Invent 2025, we have lived through a year filled with exciting moments and technology advancements […]</description>
+      <pubDate>Mon, 15 Dec 2025 16:42:05 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>The future of AI-powered software optimization (and how it can help your team)</title>
@@ -97,14 +129,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>New serverless customization in Amazon SageMaker AI accelerates model fine-tuning</title>
-      <link>https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/</link>
-      <description>Accelerate AI model development with new training features that enable rapid recovery from failures and automatic scaling based on resource availability.</description>
-      <pubDate>Wed, 03 Dec 2025 16:08:03 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/new-serverless-customization-in-amazon-sagemaker-ai-accelerates-model-fine-tuning/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>New features to help SaaS platforms manage risk and stay compliant</title>
       <link>https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant</link>
       <description>We recently launched three new features that give you more control to fine-tune your risk and compliance strategy, allowing you to use more of Stripe’s data to inform your approach</description>
@@ -143,22 +167,6 @@
       <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://www.linkedin.com/blog/engineering/feed</guid>
       <source>LinkedIn Engineering</source>
-    </item>
-    <item>
-      <title>Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation</title>
-      <link>https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/</link>
-      <description>We’ve released Ax 1.0, an open-source platform that uses machine learning to automatically guide complex, resource-intensive experimentation Our accompanying paper, “Ax: A Platform for Adaptive Experimentation” explains Ax’s architecture, methodology, and how it [...] Read More The post Efficient Optimization With Ax, an Open Platform for Adaptive Experimentation appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 18 Nov 2025 17:00:24 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/11/18/open-source/efficient-optimization-ax-open-platform-adaptive-experimentation/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>How Dash uses context engineering for smarter AI</title>
-      <link>https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai</link>
-      <description>Building effective, agentic AI isn’t just about adding more; it’s about helping the model focus on what matters most.</description>
-      <pubDate>Mon, 17 Nov 2025 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-dash-uses-context-engineering-for-smarter-ai</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
