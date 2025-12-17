@@ -6,29 +6,29 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 16 Dec 2025 09:25:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Dec 2025 09:26:07 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Announcing the Agent Development Kit for Go: Build Powerful AI Agents with Your Favorite Languages</title>
-      <link>https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</link>
-      <description>The Agent Development Kit (ADK), an open-source, code-first toolkit for building powerful and sophisticated AI agents, now supports Go ADK moves LLM orchestration and agent behavior directly into your code, giving you robust debugging, versioning, and deployment freedom ADK for Go is idiomatic and performant, leveraging Go&amp;apos;s strengths, and includes support for over 30+ databases and the Agent-to-Agent (A2A) protocol for collaborative multi-agent systems</description>
-      <pubDate>Tue, 16 Dec 2025 09:24:57 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agent-development-kit-for-go-build-powerful-ai-agents-with-your-favorite-languages/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Announcing User Simulation in ADK Evaluation</title>
       <link>https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</link>
       <description>The new **User Simulation** feature in the Agent Development Kit (ADK) replaces rigid, brittle manual test scripts with dynamic, LLM-powered conversation generation Developers define a high-level `conversation_plan`, and the simulator handles the multi-turn interaction to achieve the goal This dramatically reduces test creation time, builds more resilient tests, and creates a reliable regression suite for AI agents.</description>
-      <pubDate>Tue, 16 Dec 2025 09:24:57 GMT</pubDate>
+      <pubDate>Wed, 17 Dec 2025 09:26:04 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing Metrax: performant, efficient, and robust model evaluation metrics in JAX</title>
+      <link>https://developers.googleblog.com/introducing-metrax-performant-efficient-and-robust-model-evaluation-metrics-in-jax/</link>
+      <description>Metrax is a high-performance JAX-based metrics library developed by Google It standardizes model evaluation by offering robust, efficient metrics for classification, NLP, and vision, eliminating manual re-implementation after migrating from TensorFlow Key strengths include parallel computation of &amp;quot;at K&amp;quot; metrics (e.g., PrecisionAtK) for multiple K values and strong integration with the JAX AI Stack, leveraging JAX&amp;apos;s performance features</description>
+      <pubDate>Wed, 17 Dec 2025 09:26:04 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-metrax-performant-efficient-and-robust-model-evaluation-metrics-in-jax/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Making the terminal beautiful one pixel at a time</title>
       <link>https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</link>
       <description>Google has launched the redesigned **Android AI Sample Catalog**, a dedicated, open-source application to inspire and educate Android developers on building AI-powered apps It showcases examples using both on-device (Gemini Nano via ML Kit GenAI API) and Cloud models (via Firebase AI Logic SDK), including image generation with Imagen, on-device summarization, and a &amp;quot;Chat with Nano Banana&amp;quot; chatbot The code is easy to copy and paste to help developers quickly start their own projects.</description>
-      <pubDate>Tue, 16 Dec 2025 09:24:57 GMT</pubDate>
+      <pubDate>Wed, 17 Dec 2025 09:26:04 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</guid>
       <source>Google Developers</source>
     </item>
@@ -63,6 +63,14 @@
       <pubDate>Mon, 15 Dec 2025 16:42:05 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/</guid>
       <source>AWS News</source>
+    </item>
+    <item>
+      <title>PayTo available in Australia</title>
+      <link>https://stripe.com/payment-method/payto</link>
+      <description>Businesses in Australia can now offer PayTo Accept one-off and recurring direct debits with PayTo to get real-time payment confirmation and funds deposited into your Stripe balance instantly, 24 hours a day, every day of the year.</description>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/payment-method/payto</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>The future of AI-powered software optimization (and how it can help your team)</title>
@@ -127,14 +135,6 @@
       <pubDate>Wed, 03 Dec 2025 16:08:14 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>New features to help SaaS platforms manage risk and stay compliant</title>
-      <link>https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant</link>
-      <description>We recently launched three new features that give you more control to fine-tune your risk and compliance strategy, allowing you to use more of Stripe’s data to inform your approach</description>
-      <pubDate>Tue, 02 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/new-features-to-help-saas-platforms-manage-risk-and-stay-compliant</guid>
-      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Building the future: highlights from Dropbox’s 2025 summer intern class</title>
