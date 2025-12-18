@@ -6,31 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 17 Dec 2025 09:26:07 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Dec 2025 09:24:57 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Announcing User Simulation in ADK Evaluation</title>
-      <link>https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</link>
-      <description>The new **User Simulation** feature in the Agent Development Kit (ADK) replaces rigid, brittle manual test scripts with dynamic, LLM-powered conversation generation Developers define a high-level `conversation_plan`, and the simulator handles the multi-turn interaction to achieve the goal This dramatically reduces test creation time, builds more resilient tests, and creates a reliable regression suite for AI agents.</description>
-      <pubDate>Wed, 17 Dec 2025 09:26:04 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-user-simulation-in-adk-evaluation/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Introducing Metrax: performant, efficient, and robust model evaluation metrics in JAX</title>
-      <link>https://developers.googleblog.com/introducing-metrax-performant-efficient-and-robust-model-evaluation-metrics-in-jax/</link>
-      <description>Metrax is a high-performance JAX-based metrics library developed by Google It standardizes model evaluation by offering robust, efficient metrics for classification, NLP, and vision, eliminating manual re-implementation after migrating from TensorFlow Key strengths include parallel computation of &amp;quot;at K&amp;quot; metrics (e.g., PrecisionAtK) for multiple K values and strong integration with the JAX AI Stack, leveraging JAX&amp;apos;s performance features</description>
-      <pubDate>Wed, 17 Dec 2025 09:26:04 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-metrax-performant-efficient-and-robust-model-evaluation-metrics-in-jax/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Making the terminal beautiful one pixel at a time</title>
       <link>https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</link>
       <description>Google has launched the redesigned **Android AI Sample Catalog**, a dedicated, open-source application to inspire and educate Android developers on building AI-powered apps It showcases examples using both on-device (Gemini Nano via ML Kit GenAI API) and Cloud models (via Firebase AI Logic SDK), including image generation with Imagen, on-device summarization, and a &amp;quot;Chat with Nano Banana&amp;quot; chatbot The code is easy to copy and paste to help developers quickly start their own projects.</description>
-      <pubDate>Wed, 17 Dec 2025 09:26:04 GMT</pubDate>
+      <pubDate>Thu, 18 Dec 2025 09:24:54 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Google Colab is Coming to VS Code</title>
+      <link>https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</link>
+      <description>Google Colab has launched an official VS Code extension, bridging the gap between the popular code editor and the AI/ML platform The extension combines VS Code&amp;apos;s powerful development environment with Colab&amp;apos;s seamless access to high-powered runtimes (GPUs/TPUs), allowing users to connect local notebooks to Colab This aims to meet developers where they are and brings the best of both worlds.</description>
+      <pubDate>Thu, 18 Dec 2025 09:24:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing Code Wiki: Accelerating your code understanding</title>
+      <link>https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</link>
+      <description>Code Wiki is a new platform that tackles the bottleneck of reading existing code by providing an automated, continuously updated, structured wiki for code repositories It features hyper-linked documentation, a Gemini-powered chat agent that understands your repo, and automated diagrams A public preview is available for open-source projects, and a Gemini CLI extension is coming soon for secure use on private repos.</description>
+      <pubDate>Thu, 18 Dec 2025 09:24:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How We Built Meta Ray-Ban Display: From Zero to Polish</title>
+      <link>https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/</link>
+      <description>We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet In a previous episode we met the team behind the Meta Neural Band, the EMG wristband packaged with the Ray-Ban Display The post How We Built Meta Ray-Ban Display: From Zero to Polish appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 17 Dec 2025 14:00:17 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Businesses grow revenue on Stripe 27 percentage points faster after accepting financing through Stripe Capital</title>
+      <link>https://stripe.com/blog/businesses-grow-revenue-on-stripe-faster-after-accepting-financing-through-stripe-capital</link>
+      <description>In a new study, we found a strong causal relationship between accepting financing and growing revenue on Stripe Learn which businesses are most likely to benefit, and how greater access to financing could drive significant GDP growth.</description>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/businesses-grow-revenue-on-stripe-faster-after-accepting-financing-through-stripe-capital</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>Introducing next-day settlement, a faster way to access your earnings</title>
+      <link>https://docs.stripe.com/payouts/next-day-settlement</link>
+      <description>Gain next-day access to cash, and use funds where they’re needed most Get reliable auto-settlement in a few clicks right from the Dashboard.</description>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://docs.stripe.com/payouts/next-day-settlement</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>How Temporal Powers Reliable Cloud Operations at Netflix</title>
@@ -97,14 +121,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Introducing the Agentic Commerce Suite: A complete solution for selling on AI agents</title>
-      <link>https://stripe.com/blog/agentic-commerce-suite</link>
-      <description>Today, we’re introducing the Agentic Commerce Suite: a new solution that gets your business agent-ready It enables you to sell on AI agents more easily by making your products discoverable, simplifying your checkout, and allowing you to accept agentic payments via a single integration.</description>
-      <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/agentic-commerce-suite</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
       <title>AWS Weekly Roundup: AWS re:Invent keynote recap, on-demand videos, and more (December 8, 2025)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/</link>
       <description>The week after AWS re:Invent builds on the excitement and energy of the event and is a good time to learn more and understand how the recent announcements can help you solve your challenges and unlock new opportunities As usual, we have you covered with our top announcements of AWS re:Invent 2025 that you can […]</description>
@@ -119,14 +135,6 @@
       <pubDate>Thu, 04 Dec 2025 20:09:30 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Analyzing how SaaS platforms are shipping payments and finance products in days</title>
-      <link>https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days</link>
-      <description>Leading SaaS platforms across industries—from Squarespace to Jobber—are using embedded components to ship payments and finance features with minimal code We analyzed the data to see which types of platforms are getting the most value.</description>
-      <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days</guid>
-      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models</title>
@@ -150,14 +158,6 @@
       <description>We’re introducing Zoomer, Meta’s comprehensive, automated debugging and optimization platform for AI Zoomer works across all of our training and inference workloads at Meta and provides deep performance insights that enable energy savings, workflow acceleration, and efficiency gains in our AI infrastructure The post Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization appeared first on Engineering at Meta.</description>
       <pubDate>Fri, 21 Nov 2025 21:00:15 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Key Transparency Comes to Messenger</title>
-      <link>https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/</link>
-      <description>We’re excited to share another advancement in the security of your conversations on Messenger: the launch of key transparency verification for end-to-end encrypted chats This new feature enables an additional level of assurance that only you — and the people you’re communicating with — can see or listen to what is sent, and that no [...] Read More The post Key Transparency Comes to Messenger appeared first on Engineering at Meta.</description>
-      <pubDate>Thu, 20 Nov 2025 17:00:21 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/11/20/security/key-transparency-comes-to-messenger/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
