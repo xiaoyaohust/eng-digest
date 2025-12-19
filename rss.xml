@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 18 Dec 2025 09:24:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Dec 2025 09:22:19 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Making the terminal beautiful one pixel at a time</title>
-      <link>https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</link>
-      <description>Google has launched the redesigned **Android AI Sample Catalog**, a dedicated, open-source application to inspire and educate Android developers on building AI-powered apps It showcases examples using both on-device (Gemini Nano via ML Kit GenAI API) and Cloud models (via Firebase AI Logic SDK), including image generation with Imagen, on-device summarization, and a &amp;quot;Chat with Nano Banana&amp;quot; chatbot The code is easy to copy and paste to help developers quickly start their own projects.</description>
-      <pubDate>Thu, 18 Dec 2025 09:24:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/making-the-terminal-beautiful-one-pixel-at-a-time/</guid>
+      <title>Introducing Code Wiki: Accelerating your code understanding</title>
+      <link>https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</link>
+      <description>Code Wiki is a new platform that tackles the bottleneck of reading existing code by providing an automated, continuously updated, structured wiki for code repositories It features hyper-linked documentation, a Gemini-powered chat agent that understands your repo, and automated diagrams A public preview is available for open-source projects, and a Gemini CLI extension is coming soon for secure use on private repos.</description>
+      <pubDate>Fri, 19 Dec 2025 09:22:16 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Google Colab is Coming to VS Code</title>
       <link>https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</link>
       <description>Google Colab has launched an official VS Code extension, bridging the gap between the popular code editor and the AI/ML platform The extension combines VS Code&amp;apos;s powerful development environment with Colab&amp;apos;s seamless access to high-powered runtimes (GPUs/TPUs), allowing users to connect local notebooks to Colab This aims to meet developers where they are and brings the best of both worlds.</description>
-      <pubDate>Thu, 18 Dec 2025 09:24:54 GMT</pubDate>
+      <pubDate>Fri, 19 Dec 2025 09:22:16 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Introducing Code Wiki: Accelerating your code understanding</title>
-      <link>https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</link>
-      <description>Code Wiki is a new platform that tackles the bottleneck of reading existing code by providing an automated, continuously updated, structured wiki for code repositories It features hyper-linked documentation, a Gemini-powered chat agent that understands your repo, and automated diagrams A public preview is available for open-source projects, and a Gemini CLI extension is coming soon for secure use on private repos.</description>
-      <pubDate>Thu, 18 Dec 2025 09:24:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</guid>
+      <title>5 things to try with Gemini 3 Pro in Gemini CLI</title>
+      <link>https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/</link>
+      <description>Gemini 3 Pro is now integrated into Gemini CLI, unlocking state-of-the-art reasoning, agentic coding, and advanced tool use for enhanced developer productivity It&amp;apos;s available now for Google AI Ultra and paid Gemini API key subscribers (upgrade CLI to 0.16.x) Features include generating 3D apps and code from visual sketches, running complex shell commands, creating documentation, and debugging live Cloud Run services.</description>
+      <pubDate>Fri, 19 Dec 2025 09:22:16 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Inside the feature store powering real-time AI in Dropbox Dash</title>
+      <link>https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash</link>
+      <description>The feature store is a critical part of how we rank and retrieve the right context across your work.</description>
+      <pubDate>Thu, 18 Dec 2025 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>Stripe Atlas startups in 2025: Year in review</title>
+      <link>https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review</link>
+      <description>2025 was a breakout year for early-stage startups, as founders launched more companies and generated revenue faster than ever Three shifts stand out: customer bases are more international than ever, time-to-revenue has compressed, and founders are turning their attention to AI agents over AI infrastructure or copilots.</description>
+      <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>How We Built Meta Ray-Ban Display: From Zero to Polish</title>
@@ -87,14 +103,6 @@
       <pubDate>Mon, 15 Dec 2025 16:42:05 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>PayTo available in Australia</title>
-      <link>https://stripe.com/payment-method/payto</link>
-      <description>Businesses in Australia can now offer PayTo Accept one-off and recurring direct debits with PayTo to get real-time payment confirmation and funds deposited into your Stripe balance instantly, 24 hours a day, every day of the year.</description>
-      <pubDate>Mon, 15 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/payment-method/payto</guid>
-      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>The future of AI-powered software optimization (and how it can help your team)</title>
@@ -159,14 +167,6 @@
       <pubDate>Fri, 21 Nov 2025 21:00:15 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Feed blog posts</title>
-      <link>https://www.linkedin.com/blog/engineering/feed</link>
-      <description>Feed blog postsFeedPutting members first: testing and measuring how content appea...Sakshi JainNov 20, 2025InfrastructureFishDB: a generic retrieval engine for scaling LinkedIn’s feedKenneth LiNov 17, 2025Java heap memory and garbage collection: tuning for high-perfo...Nisheedh RaveendranSep 13, 2024Generative AIHow LinkedIn Built the Engineering Infrastructure to Ignite Pr...Shweta PatiraNov 20, 2023FeedHomepage feed multi-task learning using TensorFlowIan AckermanJun 3, 2021Member/Customer ExperienceHelping members discover communities around interestsChiachi LoSep 17, 2020FeedUnderstanding dwell time to improve LinkedIn feed rankingSiddharth DangiMay 12, 2020FeedRapid experimentation through standardization: Typed AI featur...Ian AckermanApr 15, 2020The Top 2019 LinkedIn Engineering BlogsJaren AndersonDec 9, 2019OptimizationAuditing content features in FollowFeedBanu MuthukumarAug 27, 2019FeedCommunity-focused Feed optimizationJun 25, 2019GroupsCommunities AI: Building communities around interests on LinkedInAbdul Al-QawasmehJun 24, 2019Previous123Next</description>
-      <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://www.linkedin.com/blog/engineering/feed</guid>
-      <source>LinkedIn Engineering</source>
     </item>
   </channel>
 </rss>
