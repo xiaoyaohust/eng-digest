@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 19 Dec 2025 09:22:19 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Dec 2025 09:18:24 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Introducing Code Wiki: Accelerating your code understanding</title>
-      <link>https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</link>
-      <description>Code Wiki is a new platform that tackles the bottleneck of reading existing code by providing an automated, continuously updated, structured wiki for code repositories It features hyper-linked documentation, a Gemini-powered chat agent that understands your repo, and automated diagrams A public preview is available for open-source projects, and a Gemini CLI extension is coming soon for secure use on private repos.</description>
-      <pubDate>Fri, 19 Dec 2025 09:22:16 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Google Colab is Coming to VS Code</title>
       <link>https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</link>
       <description>Google Colab has launched an official VS Code extension, bridging the gap between the popular code editor and the AI/ML platform The extension combines VS Code&amp;apos;s powerful development environment with Colab&amp;apos;s seamless access to high-powered runtimes (GPUs/TPUs), allowing users to connect local notebooks to Colab This aims to meet developers where they are and brings the best of both worlds.</description>
-      <pubDate>Fri, 19 Dec 2025 09:22:16 GMT</pubDate>
+      <pubDate>Sat, 20 Dec 2025 09:18:21 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,25 @@
       <title>5 things to try with Gemini 3 Pro in Gemini CLI</title>
       <link>https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/</link>
       <description>Gemini 3 Pro is now integrated into Gemini CLI, unlocking state-of-the-art reasoning, agentic coding, and advanced tool use for enhanced developer productivity It&amp;apos;s available now for Google AI Ultra and paid Gemini API key subscribers (upgrade CLI to 0.16.x) Features include generating 3D apps and code from visual sketches, running complex shell commands, creating documentation, and debugging live Cloud Run services.</description>
-      <pubDate>Fri, 19 Dec 2025 09:22:16 GMT</pubDate>
+      <pubDate>Sat, 20 Dec 2025 09:18:21 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building production AI on Google Cloud TPUs with JAX</title>
+      <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
+      <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
+      <pubDate>Sat, 20 Dec 2025 09:18:21 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>DrP: Meta’s Root Cause Analysis Platform at Scale</title>
+      <link>https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/</link>
+      <description>Incident investigation can be a daunting task in today’s digital landscape, where large-scale systems comprise numerous interconnected components and dependencies DrP is a root cause analysis (RCA) platform, designed by Meta, to programmatically automate the investigation process, significantly reducing the mean time to resolve (MTTR) for incidents and alleviating on-call toil Today, DrP is used [...] Read More The post DrP: Meta’s Root Cause Analysis Platform at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Fri, 19 Dec 2025 17:35:13 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Inside the feature store powering real-time AI in Dropbox Dash</title>
@@ -159,14 +167,6 @@
       <pubDate>Wed, 26 Nov 2025 19:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization</title>
-      <link>https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/</link>
-      <description>We’re introducing Zoomer, Meta’s comprehensive, automated debugging and optimization platform for AI Zoomer works across all of our training and inference workloads at Meta and provides deep performance insights that enable energy savings, workflow acceleration, and efficiency gains in our AI infrastructure The post Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization appeared first on Engineering at Meta.</description>
-      <pubDate>Fri, 21 Nov 2025 21:00:15 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/</guid>
-      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>

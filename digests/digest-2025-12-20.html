@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2025-12-20</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2025-12-20</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: Amazon ECS, Amazon CloudWatch, Amazon Cognito and more (December 15, 2025)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-15 16:42</p>
+                    <p class="article-summary">We’re nearly at the end of 2025 And what a year it’s been From re:Invent recap events, to AWS Summits, AWS Innovate, AWS re:Inforce, Community Days, and DevDays and, recently, adding that cherry on the cake, re:Invent 2025, we have lived through a year filled with exciting moments and technology advancements […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: AWS re:Invent keynote recap, on-demand videos, and more (December 8, 2025)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-08 17:05</p>
+                    <p class="article-summary">The week after AWS re:Invent builds on the excitement and energy of the event and is a good time to learn more and understand how the recent announcements can help you solve your challenges and unlock new opportunities As usual, we have you covered with our top announcements of AWS re:Invent 2025 that you can […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-reinvent-keynote-recap-on-demand-videos-and-more-december-8-2025/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" target="_blank" rel="noopener noreferrer">
+                                Amazon Bedrock adds reinforcement ﬁne-tuning simplifying how developers build smarter, more accurate AI models
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-03 16:08</p>
+                    <p class="article-summary">Amazon Bedrock now supports reinforcement fine-tuning delivering 66% accuracy gains on average over base models.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" target="_blank" rel="noopener noreferrer">
+                                Inside the feature store powering real-time AI in Dropbox Dash
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-18 18:00</p>
+                    <p class="article-summary">The feature store is a critical part of how we rank and retrieve the right context across your work.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class" target="_blank" rel="noopener noreferrer">
+                                Building the future: highlights from Dropbox’s 2025 summer intern class
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-11-26 19:00</p>
+                    <p class="article-summary">The Dropbox Intern Program is thoughtfully designed to cultivate growth, spark innovation, and build lasting connections.</p>
+                    
+                    <a href="https://dropbox.tech/culture/highlights-from-dropbox-2025-summer-intern-class" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/" target="_blank" rel="noopener noreferrer">
+                                The future of AI-powered software optimization (and how it can help your team)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-12 20:43</p>
+                    <p class="article-summary">We envision the future of AI-enabled tooling to look like near-effortless engineering for sustainability We call it Continuous Efficiency The post The future of AI-powered software optimization (and how it can help your team) appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/news-insights/product-news/lets-talk-about-github-actions/" target="_blank" rel="noopener noreferrer">
+                                Let’s talk about GitHub Actions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-11 17:40</p>
+                    <p class="article-summary">A look at how we rebuilt GitHub Actions’ core architecture and shipped long-requested upgrades to improve performance, workflow flexibility, reliability, and everyday developer experience The post Let’s talk about GitHub Actions appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/product-news/lets-talk-about-github-actions/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/news-insights/company-news/github-availability-report-november-2025/" target="_blank" rel="noopener noreferrer">
+                                GitHub Availability Report: November 2025
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-11 16:03</p>
+                    <p class="article-summary">In November, we experienced three incidents that resulted in degraded performance across GitHub services The post GitHub Availability Report: November 2025 appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/github-availability-report-november-2025/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/google-colab-is-coming-to-vs-code/" target="_blank" rel="noopener noreferrer">
+                                Google Colab is Coming to VS Code
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-20 09:18</p>
+                    <p class="article-summary">Google Colab has launched an official VS Code extension, bridging the gap between the popular code editor and the AI/ML platform The extension combines VS Code's powerful development environment with Colab's seamless access to high-powered runtimes (GPUs/TPUs), allowing users to connect local notebooks to Colab This aims to meet developers where they are and brings the best of both worlds.</p>
+                    
+                    <a href="https://developers.googleblog.com/google-colab-is-coming-to-vs-code/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/" target="_blank" rel="noopener noreferrer">
+                                5 things to try with Gemini 3 Pro in Gemini CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-20 09:18</p>
+                    <p class="article-summary">Gemini 3 Pro is now integrated into Gemini CLI, unlocking state-of-the-art reasoning, agentic coding, and advanced tool use for enhanced developer productivity It's available now for Google AI Ultra and paid Gemini API key subscribers (upgrade CLI to 0.16.x) Features include generating 3D apps and code from visual sketches, running complex shell commands, creating documentation, and debugging live Cloud Run services.</p>
+                    
+                    <a href="https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/" target="_blank" rel="noopener noreferrer">
+                                Building production AI on Google Cloud TPUs with JAX
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-20 09:18</p>
+                    <p class="article-summary">The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</p>
+                    
+                    <a href="https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/" target="_blank" rel="noopener noreferrer">
+                                DrP: Meta’s Root Cause Analysis Platform at Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-19 17:35</p>
+                    <p class="article-summary">Incident investigation can be a daunting task in today’s digital landscape, where large-scale systems comprise numerous interconnected components and dependencies DrP is a root cause analysis (RCA) platform, designed by Meta, to programmatically automate the investigation process, significantly reducing the mean time to resolve (MTTR) for incidents and alleviating on-call toil Today, DrP is used [...] Read More The post DrP: Meta’s Root Cause Analysis Platform at Scale appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/" target="_blank" rel="noopener noreferrer">
+                                How We Built Meta Ray-Ban Display: From Zero to Polish
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-17 14:00</p>
+                    <p class="article-summary">We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet In a previous episode we met the team behind the Meta Neural Band, the EMG wristband packaged with the Ray-Ban Display The post How We Built Meta Ray-Ban Display: From Zero to Polish appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" target="_blank" rel="noopener noreferrer">
+                                How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-15 17:00</p>
+                    <p class="article-summary">Meta’s secure-by-default frameworks wrap potentially unsafe OS and third-party functions, making security the default while preserving developer speed and usability Generative AI and automation accelerate the adoption of secure frameworks at [...] Read More The post How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                How Temporal Powers Reliable Cloud Operations at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-15 23:51</p>
+                    <p class="article-summary">Clouddriver’s job is to decompose and execute Cloud Operations sent to it by Orca as part of a deployment Ultimately, we decided to pull the trigger on migrating Cloud Operation execution to Temporal.Cloud Operations with TemporalToday, we execute Cloud Operations as Temporal workflows We built a CloudOperationRunner interface in Orca to encapsulate whether the Cloud Operation was being executed via the legacy path or Temporal</p>
+                    
+                    <a href="https://netflixtechblog.com/how-temporal-powers-reliable-cloud-operations-at-netflix-73c69ccb5953?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Netflix Live Origin
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-15 17:38</p>
+                    <p class="article-summary">This defect information is provided as metadata when the segment is published to the live origin This combination of cache and highly available storage has met the demanding needs of our Live Origin for over a year now.Storage System High Level ArchitectureDelivering this consistent low latency for large writes with cross-region replication and consistent write-through caching to a distributed cache required solving numerous hard problems with novel techniques, which we plan to share in detail during a future post.Scalability and scalable architectureNetflix’s live streaming platform must handle a high volume of diverse stream renditions for each live event This metadata caching complements the storage system’s distributed media cache, providing a complete solution for traffic surge protection.SummaryThe Netflix Live Origin, built upon an optimized storage platform, is specifically designed for live streaming</p>
+                    
+                    <a href="https://netflixtechblog.com/netflix-live-origin-41f1b0ad5371?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                AV1 — Now Powering 30% of Netflix Streaming
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-04 20:09</p>
+                    <p class="article-summary">Today, AV1 powers approximately 30% of all Netflix viewing, marking a major milestone in our efforts to bring more efficient and higher-quality streaming to our members.In this post, we’ll revisit Netflix’s AV1 journey to date, highlight emerging use cases, and share adoption trends across the device ecosystem In March 2025, we launched AV1 HDR streaming We are pleased with the successful progress made, and AV1 with FGS is now supported across a significant and growing number of in-field devices.Looking Ahead: AV1 Today, AV2 TomorrowAs we reflect on our AV1 journey, it’s clear that the codec has already transformed the streaming experience for hundreds of millions of Netflix members worldwide</p>
+                    
+                    <a href="https://netflixtechblog.com/av1-now-powering-30-of-netflix-streaming-02f592242d80?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review" target="_blank" rel="noopener noreferrer">
+                                Stripe Atlas startups in 2025: Year in review
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-18 00:00</p>
+                    <p class="article-summary">2025 was a breakout year for early-stage startups, as founders launched more companies and generated revenue faster than ever Three shifts stand out: customer bases are more international than ever, time-to-revenue has compressed, and founders are turning their attention to AI agents over AI infrastructure or copilots.</p>
+                    
+                    <a href="https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/businesses-grow-revenue-on-stripe-faster-after-accepting-financing-through-stripe-capital" target="_blank" rel="noopener noreferrer">
+                                Businesses grow revenue on Stripe 27 percentage points faster after accepting financing through Stripe Capital
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-17 00:00</p>
+                    <p class="article-summary">In a new study, we found a strong causal relationship between accepting financing and growing revenue on Stripe Learn which businesses are most likely to benefit, and how greater access to financing could drive significant GDP growth.</p>
+                    
+                    <a href="https://stripe.com/blog/businesses-grow-revenue-on-stripe-faster-after-accepting-financing-through-stripe-capital" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://docs.stripe.com/payouts/next-day-settlement" target="_blank" rel="noopener noreferrer">
+                                Introducing next-day settlement, a faster way to access your earnings
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2025-12-17 00:00</p>
+                    <p class="article-summary">Gain next-day access to cash, and use funds where they’re needed most Get reliable auto-settlement in a few clicks right from the Dashboard.</p>
+                    
+                    <a href="https://docs.stripe.com/payouts/next-day-settlement" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2025-12-20 09:18:24</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
