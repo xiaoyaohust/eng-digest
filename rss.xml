@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 27 Dec 2025 09:18:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Dec 2025 09:18:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Google Colab is Coming to VS Code</title>
       <link>https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</link>
       <description>Google Colab has launched an official VS Code extension, bridging the gap between the popular code editor and the AI/ML platform The extension combines VS Code&amp;apos;s powerful development environment with Colab&amp;apos;s seamless access to high-powered runtimes (GPUs/TPUs), allowing users to connect local notebooks to Colab This aims to meet developers where they are and brings the best of both worlds.</description>
-      <pubDate>Sat, 27 Dec 2025 09:18:25 GMT</pubDate>
+      <pubDate>Sun, 28 Dec 2025 09:18:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/google-colab-is-coming-to-vs-code/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>5 things to try with Gemini 3 Pro in Gemini CLI</title>
       <link>https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/</link>
       <description>Gemini 3 Pro is now integrated into Gemini CLI, unlocking state-of-the-art reasoning, agentic coding, and advanced tool use for enhanced developer productivity It&amp;apos;s available now for Google AI Ultra and paid Gemini API key subscribers (upgrade CLI to 0.16.x) Features include generating 3D apps and code from visual sketches, running complex shell commands, creating documentation, and debugging live Cloud Run services.</description>
-      <pubDate>Sat, 27 Dec 2025 09:18:25 GMT</pubDate>
+      <pubDate>Sun, 28 Dec 2025 09:18:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/5-things-to-try-with-gemini-3-pro-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Sat, 27 Dec 2025 09:18:25 GMT</pubDate>
+      <pubDate>Sun, 28 Dec 2025 09:18:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
     </item>
