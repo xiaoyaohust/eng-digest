@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 12 Jan 2026 09:30:20 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jan 2026 09:26:40 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building AI Agents with Google Gemini 3 and Open Source Frameworks</title>
       <link>https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</link>
       <description>New agentic features include `thinking_level` for reasoning control, Stateful Tool Use via Thought Signatures, and `media_resolution` for multimodal fidelity It has Day 0 support for open-source frameworks like LangChain, AI SDK, LlamaIndex, Pydantic AI, and n8n Best practices include simplifying prompts and keeping temperature at 1.0.</description>
-      <pubDate>Mon, 12 Jan 2026 09:30:17 GMT</pubDate>
+      <pubDate>Tue, 13 Jan 2026 09:26:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Mon, 12 Jan 2026 09:30:17 GMT</pubDate>
+      <pubDate>Tue, 13 Jan 2026 09:26:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Mon, 12 Jan 2026 09:30:17 GMT</pubDate>
+      <pubDate>Tue, 13 Jan 2026 09:26:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>CSS at Scale With StyleX</title>
+      <link>https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/</link>
+      <description>It’s no different at Meta, which is why we open-sourced StyleX, a solution for CSS at scale StyleX combines the ergonomics of CSS-in-JS with the performance of static CSS The post CSS at Scale With StyleX appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 12 Jan 2026 18:34:59 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Lambda for .NET 10, AWS Client VPN quickstart, Best of AWS re:Invent, and more (January 12, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-for-net-10-aws-client-vpn-quickstart-best-of-aws-reinvent-and-more-january-12-2026/</link>
+      <description>At the beginning of January, I tend to set my top resolutions for the year, a way to focus on what I want to achieve If AI and cloud computing are on your resolution list, consider creating an AWS Free Tier account to receive up to $200 in credits and have 6 months of risk-free […]</description>
+      <pubDate>Mon, 12 Jan 2026 17:39:47 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-for-net-10-aws-client-vpn-quickstart-best-of-aws-reinvent-and-more-january-12-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Want better AI outputs? Try context engineering.</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/</link>
+      <description>Learn how custom instructions, reusable prompts, and custom agents help GitHub Copilot deliver more accurate results The post Want better AI outputs Try context engineering. appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 12 Jan 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Light waves, rising tides, and drifting ships: Game Off 2025 winners</title>
@@ -55,14 +79,6 @@
       <pubDate>Mon, 05 Jan 2026 17:10:37 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>Agentic AI, MCP, and spec-driven development: Top blog posts of 2025</title>
-      <link>https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/</link>
-      <description>Explore the GitHub Blog’s top posts covering the biggest software development topics of the year The post Agentic AI, MCP, and spec-driven development: Top blog posts of 2025 appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 30 Dec 2025 17:20:10 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Python Typing Survey 2025: Code Quality and Flexibility As Top Reasons for Typing Adoption</title>
@@ -95,14 +111,6 @@
       <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How We Built Meta Ray-Ban Display: From Zero to Polish</title>
-      <link>https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/</link>
-      <description>We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet In a previous episode we met the team behind the Meta Neural Band, the EMG wristband packaged with the Ray-Ban Display The post How We Built Meta Ray-Ban Display: From Zero to Polish appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 17 Dec 2025 14:00:17 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Businesses grow revenue on Stripe 27 percentage points faster after accepting financing through Stripe Capital</title>
