@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 13 Jan 2026 09:26:40 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jan 2026 09:27:02 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building AI Agents with Google Gemini 3 and Open Source Frameworks</title>
       <link>https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</link>
       <description>New agentic features include `thinking_level` for reasoning control, Stateful Tool Use via Thought Signatures, and `media_resolution` for multimodal fidelity It has Day 0 support for open-source frameworks like LangChain, AI SDK, LlamaIndex, Pydantic AI, and n8n Best practices include simplifying prompts and keeping temperature at 1.0.</description>
-      <pubDate>Tue, 13 Jan 2026 09:26:37 GMT</pubDate>
+      <pubDate>Wed, 14 Jan 2026 09:26:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Tue, 13 Jan 2026 09:26:37 GMT</pubDate>
+      <pubDate>Wed, 14 Jan 2026 09:26:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Tue, 13 Jan 2026 09:26:37 GMT</pubDate>
+      <pubDate>Wed, 14 Jan 2026 09:26:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>What AI is actually good for, according to developers</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/</link>
+      <description>AI is designed to help you do what you love most, not replace your expertise Discover how developer feedback and real-world experience are shaping AI coding tools that keep you in control The post What AI is actually good for, according to developers appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 13 Jan 2026 18:39:24 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>CSS at Scale With StyleX</title>
@@ -62,14 +70,6 @@
       <description>Out of more than 700 games submitted to Game Off 2025, these ten winners stand out for creativity, craft, and bold interpretations of the WAVES theme All are free to play, with source code available to explore The post Light waves, rising tides, and drifting ships: Game Off 2025 winners appeared first on The GitHub Blog.</description>
       <pubDate>Sat, 10 Jan 2026 21:36:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/open-source/gaming/light-waves-rising-tides-and-drifting-ships-game-off-2025-winners/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Why AI is pushing developers toward typed languages</title>
-      <link>https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/</link>
-      <description>AI is settling the “typed vs. untyped” debate by turning type systems into the safety net for code you didn’t write yourself The post Why AI is pushing developers toward typed languages appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 08 Jan 2026 22:25:54 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
