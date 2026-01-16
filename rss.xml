@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 15 Jan 2026 09:26:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jan 2026 09:25:28 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building AI Agents with Google Gemini 3 and Open Source Frameworks</title>
       <link>https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</link>
       <description>New agentic features include `thinking_level` for reasoning control, Stateful Tool Use via Thought Signatures, and `media_resolution` for multimodal fidelity It has Day 0 support for open-source frameworks like LangChain, AI SDK, LlamaIndex, Pydantic AI, and n8n Best practices include simplifying prompts and keeping temperature at 1.0.</description>
-      <pubDate>Thu, 15 Jan 2026 09:26:29 GMT</pubDate>
+      <pubDate>Fri, 16 Jan 2026 09:25:25 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Thu, 15 Jan 2026 09:26:29 GMT</pubDate>
+      <pubDate>Fri, 16 Jan 2026 09:25:25 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Thu, 15 Jan 2026 09:26:29 GMT</pubDate>
+      <pubDate>Fri, 16 Jan 2026 09:25:25 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Amazon EC2 X8i instances powered by custom Intel Xeon 6 processors are generally available for memory-intensive workloads</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-x8i-instances-powered-by-custom-intel-xeon-6-processors-are-generally-available-for-memory-intensive-workloads/</link>
+      <description>AWS is announcing the general availability of Amazon EC2 X8i instances, next-generation memory optimized instances powered by custom Intel Xeon 6 processors available only on AWS X8i instances are SAP-certified and deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud.</description>
+      <pubDate>Thu, 15 Jan 2026 22:52:17 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-x8i-instances-powered-by-custom-intel-xeon-6-processors-are-generally-available-for-memory-intensive-workloads/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Building an agentic memory system for GitHub Copilot</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/</link>
+      <description>Copilot’s cross-agent memory system lets agents learn and improve across your development workflow, starting with coding agent, CLI, and code review The post Building an agentic memory system for GitHub Copilot appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 15 Jan 2026 21:31:10 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>When protections outlive their purpose: A lesson on managing defense systems at scale</title>
+      <link>https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/</link>
+      <description>User feedback led us to clean up outdated mitigations See why observability and lifecycle management are critical for defense systems The post When protections outlive their purpose: A lesson on managing defense systems at scale appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 15 Jan 2026 20:54:32 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Opening the AWS European Sovereign Cloud</title>
@@ -57,22 +81,6 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Community-powered security with AI: an open source framework for security research</title>
-      <link>https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/</link>
-      <description>Announcing GitHub Security Lab Taskflow Agent, an open source and collaborative framework for security research with AI The post Community-powered security with AI: an open source framework for security research appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 14 Jan 2026 18:45:09 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>What AI is actually good for, according to developers</title>
-      <link>https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/</link>
-      <description>AI is designed to help you do what you love most, not replace your expertise Discover how developer feedback and real-world experience are shaping AI coding tools that keep you in control The post What AI is actually good for, according to developers appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 13 Jan 2026 18:39:24 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>CSS at Scale With StyleX</title>
       <link>https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/</link>
       <description>It’s no different at Meta, which is why we open-sourced StyleX, a solution for CSS at scale StyleX combines the ergonomics of CSS-in-JS with the performance of static CSS The post CSS at Scale With StyleX appeared first on Engineering at Meta.</description>
@@ -86,14 +94,6 @@
       <description>At the beginning of January, I tend to set my top resolutions for the year, a way to focus on what I want to achieve If AI and cloud computing are on your resolution list, consider creating an AWS Free Tier account to receive up to $200 in credits and have 6 months of risk-free […]</description>
       <pubDate>Mon, 12 Jan 2026 17:39:47 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-for-net-10-aws-client-vpn-quickstart-best-of-aws-reinvent-and-more-january-12-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Happy New Year! AWS Weekly Roundup: 10,000 AIdeas Competition, Amazon EC2, Amazon ECS Managed Instances and more (January 5, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/</link>
-      <description>I hope the holidays gave you time to recharge and spend time with your loved ones Like every year, I took a few weeks off after AWS re:Invent to rest and plan ahead I used some of that downtime to plan the next cohort for Become a Solutions Architect (BeSA)</description>
-      <pubDate>Mon, 05 Jan 2026 17:10:37 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/</guid>
       <source>AWS News</source>
     </item>
     <item>
@@ -118,22 +118,6 @@
       <description>2025 was a breakout year for early-stage startups, as founders launched more companies and generated revenue faster than ever Three shifts stand out: customer bases are more international than ever, time-to-revenue has compressed, and founders are turning their attention to AI agents over AI infrastructure or copilots.</description>
       <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Businesses grow revenue on Stripe 27 percentage points faster after accepting financing through Stripe Capital</title>
-      <link>https://stripe.com/blog/businesses-grow-revenue-on-stripe-faster-after-accepting-financing-through-stripe-capital</link>
-      <description>In a new study, we found a strong causal relationship between accepting financing and growing revenue on Stripe Learn which businesses are most likely to benefit, and how greater access to financing could drive significant GDP growth.</description>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/businesses-grow-revenue-on-stripe-faster-after-accepting-financing-through-stripe-capital</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Introducing next-day settlement, a faster way to access your earnings</title>
-      <link>https://docs.stripe.com/payouts/next-day-settlement</link>
-      <description>Gain next-day access to cash, and use funds where they’re needed most Get reliable auto-settlement in a few clicks right from the Dashboard.</description>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://docs.stripe.com/payouts/next-day-settlement</guid>
       <source>Stripe Engineering</source>
     </item>
   </channel>
