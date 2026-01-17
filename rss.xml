@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 16 Jan 2026 09:25:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jan 2026 09:18:30 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Building AI Agents with Google Gemini 3 and Open Source Frameworks</title>
-      <link>https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</link>
-      <description>New agentic features include `thinking_level` for reasoning control, Stateful Tool Use via Thought Signatures, and `media_resolution` for multimodal fidelity It has Day 0 support for open-source frameworks like LangChain, AI SDK, LlamaIndex, Pydantic AI, and n8n Best practices include simplifying prompts and keeping temperature at 1.0.</description>
-      <pubDate>Fri, 16 Jan 2026 09:25:25 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Fri, 16 Jan 2026 09:25:25 GMT</pubDate>
+      <pubDate>Sat, 17 Jan 2026 09:18:27 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,25 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Fri, 16 Jan 2026 09:25:25 GMT</pubDate>
+      <pubDate>Sat, 17 Jan 2026 09:18:27 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Build with Google Antigravity, our new agentic development platform</title>
+      <link>https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</link>
+      <description>Introducing Google Antigravity, a new agentic development platform for orchestrating code It combines an AI-powered Editor View with a Manager Surface to deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser Agents communicate progress via Artifacts (screenshots, recordings) for easy verification</description>
+      <pubDate>Sat, 17 Jan 2026 09:18:27 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The three biggest agentic commerce trends from NRF 2026</title>
+      <link>https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026</link>
+      <description>Not only are the majority of retailers actively implementing, or have plans to implement, agentic commerce, but many are also moving to a more tactical phase of optimizing their setup—refining their product catalog strategy to launch faster and investing in their own agentic shopping experiences in addition to integrating with third-party agents.</description>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Amazon EC2 X8i instances powered by custom Intel Xeon 6 processors are generally available for memory-intensive workloads</title>
@@ -111,14 +119,6 @@
       <pubDate>Thu, 18 Dec 2025 18:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Stripe Atlas startups in 2025: Year in review</title>
-      <link>https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review</link>
-      <description>2025 was a breakout year for early-stage startups, as founders launched more companies and generated revenue faster than ever Three shifts stand out: customer bases are more international than ever, time-to-revenue has compressed, and founders are turning their attention to AI agents over AI infrastructure or copilots.</description>
-      <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
