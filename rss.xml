@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 17 Jan 2026 09:18:30 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jan 2026 09:19:00 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Sat, 17 Jan 2026 09:18:27 GMT</pubDate>
+      <pubDate>Sun, 18 Jan 2026 09:18:57 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Sat, 17 Jan 2026 09:18:27 GMT</pubDate>
+      <pubDate>Sun, 18 Jan 2026 09:18:57 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Build with Google Antigravity, our new agentic development platform</title>
       <link>https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</link>
       <description>Introducing Google Antigravity, a new agentic development platform for orchestrating code It combines an AI-powered Editor View with a Manager Surface to deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser Agents communicate progress via Artifacts (screenshots, recordings) for easy verification</description>
-      <pubDate>Sat, 17 Jan 2026 09:18:27 GMT</pubDate>
+      <pubDate>Sun, 18 Jan 2026 09:18:57 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</guid>
       <source>Google Developers</source>
     </item>
@@ -111,14 +111,6 @@
       <pubDate>Mon, 22 Dec 2025 14:00:16 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2025/12/22/developer-tools/python-typing-survey-2025-code-quality-flexibility-typing-adoption/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Inside the feature store powering real-time AI in Dropbox Dash</title>
-      <link>https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash</link>
-      <description>The feature store is a critical part of how we rank and retrieve the right context across your work.</description>
-      <pubDate>Thu, 18 Dec 2025 18:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/feature-store-powering-realtime-ai-in-dropbox-dash</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
