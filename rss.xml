@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 19 Jan 2026 09:32:11 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jan 2026 09:31:10 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Mon, 19 Jan 2026 09:32:08 GMT</pubDate>
+      <pubDate>Tue, 20 Jan 2026 09:31:06 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Mon, 19 Jan 2026 09:32:08 GMT</pubDate>
+      <pubDate>Tue, 20 Jan 2026 09:31:06 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Build with Google Antigravity, our new agentic development platform</title>
       <link>https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</link>
       <description>Introducing Google Antigravity, a new agentic development platform for orchestrating code It combines an AI-powered Editor View with a Manager Surface to deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser Agents communicate progress via Artifacts (screenshots, recordings) for easy verification</description>
-      <pubDate>Mon, 19 Jan 2026 09:32:08 GMT</pubDate>
+      <pubDate>Tue, 20 Jan 2026 09:31:06 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Kiro CLI latest features, AWS European Sovereign Cloud, EC2 X8i instances, and more (January 19, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/</link>
+      <description>At the end of 2025 I was happy to take a long break to enjoy the incredible summers that the southern hemisphere provides I’m back and writing my first post in 2026 which also happens to be my last post for the AWS News Blog (more on this later) The AWS community is starting the […]</description>
+      <pubDate>Tue, 20 Jan 2026 00:24:38 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>The three biggest agentic commerce trends from NRF 2026</title>
@@ -95,14 +103,6 @@
       <pubDate>Mon, 12 Jan 2026 18:34:59 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: AWS Lambda for .NET 10, AWS Client VPN quickstart, Best of AWS re:Invent, and more (January 12, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-for-net-10-aws-client-vpn-quickstart-best-of-aws-reinvent-and-more-january-12-2026/</link>
-      <description>At the beginning of January, I tend to set my top resolutions for the year, a way to focus on what I want to achieve If AI and cloud computing are on your resolution list, consider creating an AWS Free Tier account to receive up to $200 in credits and have 6 months of risk-free […]</description>
-      <pubDate>Mon, 12 Jan 2026 17:39:47 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-for-net-10-aws-client-vpn-quickstart-best-of-aws-reinvent-and-more-january-12-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Python Typing Survey 2025: Code Quality and Flexibility As Top Reasons for Typing Adoption</title>
