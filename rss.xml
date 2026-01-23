@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 22 Jan 2026 09:30:47 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 09:28:24 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Thu, 22 Jan 2026 09:30:44 GMT</pubDate>
+      <pubDate>Fri, 23 Jan 2026 09:28:00 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Thu, 22 Jan 2026 09:30:44 GMT</pubDate>
+      <pubDate>Fri, 23 Jan 2026 09:28:00 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Build with Google Antigravity, our new agentic development platform</title>
       <link>https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</link>
       <description>Introducing Google Antigravity, a new agentic development platform for orchestrating code It combines an AI-powered Editor View with a Manager Surface to deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser Agents communicate progress via Artifacts (screenshots, recordings) for easy verification</description>
-      <pubDate>Thu, 22 Jan 2026 09:30:44 GMT</pubDate>
+      <pubDate>Fri, 23 Jan 2026 09:28:00 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Build an agent into any app with the GitHub Copilot SDK</title>
+      <link>https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/</link>
+      <description>Now in technical preview, the GitHub Copilot SDK can plan, invoke tools, edit files, and run commands as a programmable layer you can use in any application The post Build an agent into any app with the GitHub Copilot SDK appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 22 Jan 2026 15:01:44 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>A cheat sheet to slash commands in GitHub Copilot CLI</title>
@@ -54,14 +62,6 @@
       <description>Learn how we are using the newly released GitHub Security Lab Taskflow Agent to triage categories of vulnerabilities in GitHub Actions and JavaScript projects The post AI-supported vulnerability triage with the GitHub Security Lab Taskflow Agent appeared first on The GitHub Blog.</description>
       <pubDate>Tue, 20 Jan 2026 19:52:50 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/security/ai-supported-vulnerability-triage-with-the-github-security-lab-taskflow-agent/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Context windows, Plan agent, and TDD: What I learned building a countdown app with GitHub Copilot</title>
-      <link>https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/</link>
-      <description>Learn how I managed context to keep Copilot focused, used the Plan agent to sharpen vague requirements, and required Test Driven Development practices to catch bugs before users The post Context windows, Plan agent, and TDD: What I learned building a countdown app with GitHub Copilot appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 20 Jan 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
