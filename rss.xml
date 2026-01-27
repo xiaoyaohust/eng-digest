@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 26 Jan 2026 09:32:22 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jan 2026 09:30:33 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building with Gemini 3 in Jules</title>
       <link>https://developers.googleblog.com/jules-gemini-3/</link>
       <description>Jules, an always-on, multi-step software development agent, now features Gemini 3, offering clearer reasoning and better reliability Upcoming features include directory attachment without GitHub and automatic PR creation Jules aims to reduce software writing overhead so developers can focus on building.</description>
-      <pubDate>Mon, 26 Jan 2026 09:32:18 GMT</pubDate>
+      <pubDate>Tue, 27 Jan 2026 09:30:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jules-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building production AI on Google Cloud TPUs with JAX</title>
       <link>https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</link>
       <description>The JAX AI Stack is a modular, industrial-grade, end-to-end machine learning platform built on the core JAX library, co-designed with Cloud TPUs It features key components like JAX, Flax, Optax, and Orbax for foundational model development, plus an extended ecosystem for the full ML lifecycle and production This integration provides a powerful, scalable foundation for AI development, delivering significant performance advantages.</description>
-      <pubDate>Mon, 26 Jan 2026 09:32:18 GMT</pubDate>
+      <pubDate>Tue, 27 Jan 2026 09:30:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-production-ai-on-google-cloud-tpus-with-jax/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Build with Google Antigravity, our new agentic development platform</title>
       <link>https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</link>
       <description>Introducing Google Antigravity, a new agentic development platform for orchestrating code It combines an AI-powered Editor View with a Manager Surface to deploy agents that autonomously plan, execute, and verify complex tasks across your editor, terminal, and browser Agents communicate progress via Artifacts (screenshots, recordings) for easy verification</description>
-      <pubDate>Mon, 26 Jan 2026 09:32:18 GMT</pubDate>
+      <pubDate>Tue, 27 Jan 2026 09:30:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The AI Evolution of Graph Search at Netflix</title>
+      <link>https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4</link>
+      <description>We need the LLM to generate a Graph Search Filter DSL statement that is syntactically, semantically, and pragmatically correct.Syntactic correctness is easy — does it parse For some fields, there is additional information we can provide beyond what’s available in the schema as well, in particular permissible values that pull from controlled vocabularies.Each field in the index is associated with metadata as seen below, and that metadata is provided as part of the context.Graph Search index representationThe field is derived from the document path as characterized by the GraphQL query.The description is the comment from the GraphQL schema for the field.The type is derived from the GraphQL schema for the field e.g This design strategically balances LLM involvement with more deterministic strategies.End-to-end architectureThe end-to-end process is as follows:A user’s natural language question (with optional `@mentions` statements) are provided as input, along with the Graph Search index contextThe context is scoped by using the RAG pattern on both fields and possible valuesThe pre-processed context and the question are fed into the LLM with an instruction asking for a syntactically and semantically correct filter statementThe generated filer statement DSL is verified and checked for hallucinationsThe final response contains the related AST in order to build “Chips” and “Facets”SummaryBy combining our existing Graph Search infrastructure with the power and flexibility of LLMs, we’ve bridged the gap between complex filter statements and user intent</description>
+      <pubDate>Mon, 26 Jan 2026 19:01:27 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Power agentic workflows in your terminal with GitHub Copilot CLI</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/</link>
+      <description>Explore the GitHub Copilot CLI and try interacting with Copilot directly from your terminal The post Power agentic workflows in your terminal with GitHub Copilot CLI appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 26 Jan 2026 18:54:49 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Amazon EC2 G7e instances, Amazon Corretto updates, and more (January 26, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-g7e-instances-with-nvidia-blackwell-gpus-january-26-2026/</link>
+      <description>It’s my first post for 2026, and I’m writing to you while watching our driveway getting dug out I hope wherever you are you are safe and warm and your data is still flowing This week brings exciting news for customers running GPU-intensive workloads, with the launch of our newest graphics and AI inference […]</description>
+      <pubDate>Mon, 26 Jan 2026 16:25:46 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-g7e-instances-with-nvidia-blackwell-gpus-january-26-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Metronome + Stripe: Building the future of billing</title>
@@ -65,14 +89,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>AI-supported vulnerability triage with the GitHub Security Lab Taskflow Agent</title>
-      <link>https://github.blog/security/ai-supported-vulnerability-triage-with-the-github-security-lab-taskflow-agent/</link>
-      <description>Learn how we are using the newly released GitHub Security Lab Taskflow Agent to triage categories of vulnerabilities in GitHub Actions and JavaScript projects The post AI-supported vulnerability triage with the GitHub Security Lab Taskflow Agent appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 20 Jan 2026 19:52:50 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/ai-supported-vulnerability-triage-with-the-github-security-lab-taskflow-agent/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>AWS Weekly Roundup: Kiro CLI latest features, AWS European Sovereign Cloud, EC2 X8i instances, and more (January 19, 2026)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/</link>
       <description>At the end of 2025 I was happy to take a long break to enjoy the incredible summers that the southern hemisphere provides I’m back and writing my first post in 2026 which also happens to be my last post for the AWS News Blog (more on this later) The AWS community is starting the […]</description>
@@ -87,14 +103,6 @@
       <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Amazon EC2 X8i instances powered by custom Intel Xeon 6 processors are generally available for memory-intensive workloads</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-x8i-instances-powered-by-custom-intel-xeon-6-processors-are-generally-available-for-memory-intensive-workloads/</link>
-      <description>AWS is announcing the general availability of Amazon EC2 X8i instances, next-generation memory optimized instances powered by custom Intel Xeon 6 processors available only on AWS X8i instances are SAP-certified and deliver the highest performance and fastest memory bandwidth among comparable Intel processors in the cloud.</description>
-      <pubDate>Thu, 15 Jan 2026 22:52:17 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-x8i-instances-powered-by-custom-intel-xeon-6-processors-are-generally-available-for-memory-intensive-workloads/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Adapting the Facebook Reels RecSys AI Model Based on User Feedback</title>
