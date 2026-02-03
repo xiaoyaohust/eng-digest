@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 02 Feb 2026 09:44:53 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Feb 2026 09:38:32 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Unlocking Peak Performance on Qualcomm NPU with LiteRT</title>
       <link>https://developers.googleblog.com/unlocking-peak-performance-on-qualcomm-npu-with-litert/</link>
       <description>LiteRT&amp;apos;s new Qualcomm AI Engine Direct (QNN) Accelerator unlocks dedicated NPU power for on-device GenAI on Android It offers a unified mobile deployment workflow, SOTA performance (up to 100x speedup over CPU), and full model delegation This enables smooth, real-time AI experiences, with FastVLM-0.5B achieving over 11,000 tokens/sec prefill on Snapdragon 8 Elite Gen 5 NPU.</description>
-      <pubDate>Mon, 02 Feb 2026 09:44:51 GMT</pubDate>
+      <pubDate>Tue, 03 Feb 2026 09:38:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unlocking-peak-performance-on-qualcomm-npu-with-litert/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>New Gemini API updates for Gemini 3</title>
       <link>https://developers.googleblog.com/new-gemini-api-updates-for-gemini-3/</link>
       <description>Gemini 3 is available via API with updates for developers: new `thinking_level` for depth control, `media_resolution` for multimodal processing, and enforced `Thought Signatures` for agentic workflows, especially with function calling and image generation It also introduces combining Google Search/URL Grounding with Structured Outputs and new usage-based pricing for Grounding Best practices, like using default temperature, are advised for optimal results.</description>
-      <pubDate>Mon, 02 Feb 2026 09:44:51 GMT</pubDate>
+      <pubDate>Tue, 03 Feb 2026 09:38:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/new-gemini-api-updates-for-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Announcing the Data Commons Gemini CLI extension</title>
       <link>https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</link>
       <description>The new Data Commons extension for the Gemini CLI makes accessing public data easier It allows users to ask complex, natural-language questions to query Data Commons&amp;apos; public datasets, grounding LLM responses in authoritative sources to reduce AI hallucinations Data Commons is an organized library of public data from sources like the UN and World Bank</description>
-      <pubDate>Mon, 02 Feb 2026 09:44:51 GMT</pubDate>
+      <pubDate>Tue, 03 Feb 2026 09:38:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Amazon Bedrock agent workflows, Amazon SageMaker private connectivity, and more (February 2, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agent-workflows-amazon-sagemaker-private-connectivity-and-more-february-2-2026/</link>
+      <description>Over the past week, we passed Laba festival, a traditional marker in the Chinese calendar that signals the final stretch leading up to the Lunar New Year For many in China, it’s a moment associated with reflection and preparation, wrapping up what the year has carried, and turning attention toward what lies ahead</description>
+      <pubDate>Mon, 02 Feb 2026 17:19:48 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agent-workflows-amazon-sagemaker-private-connectivity-and-more-february-2-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>How to maximize GitHub Copilot’s agentic capabilities</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/</link>
+      <description>A senior engineer&amp;apos;s guide to architecting and extending Copilot&amp;apos;s real-world applications The post How to maximize GitHub Copilot’s agentic capabilities appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 02 Feb 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-maximize-github-copilots-agentic-capabilities/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Engineering VP Josh Clemm on how we use knowledge graphs, MCP, and DSPy in Dash</title>
@@ -54,14 +70,6 @@
       <description>Discover the latest trends and insights on public software development activity on GitHub with data from the Innovation Graph through Q3 2025 The post Year recap and future goals for the GitHub Innovation Graph appeared first on The GitHub Blog.</description>
       <pubDate>Wed, 28 Jan 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>7 learnings from Anders Hejlsberg: The architect behind C# and TypeScript</title>
-      <link>https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/</link>
-      <description>Anders Hejlsberg shares lessons from C# and TypeScript on fast feedback loops, scaling software, open source visibility, and building tools that last The post 7 learnings from Anders Hejlsberg: The architect behind C# and TypeScript appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 27 Jan 2026 17:17:28 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -102,14 +110,6 @@
       <description>AWS introduces Amazon EC2 G7e instances accelerated by the NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs with up to 2.3 times inference performance G7e instances deliver cost-effective performance for generative AI inference workloads and the highest performance for graphics workloads.</description>
       <pubDate>Tue, 20 Jan 2026 21:22:56 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7e-instances-accelerated-by-nvidia-rtx-pro-6000-blackwell-server-edition-gpus/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Kiro CLI latest features, AWS European Sovereign Cloud, EC2 X8i instances, and more (January 19, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/</link>
-      <description>At the end of 2025 I was happy to take a long break to enjoy the incredible summers that the southern hemisphere provides I’m back and writing my first post in 2026 which also happens to be my last post for the AWS News Blog (more on this later) The AWS community is starting the […]</description>
-      <pubDate>Tue, 20 Jan 2026 00:24:38 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-kiro-cli-latest-features-aws-european-sovereign-cloud-ec2-x8i-instances-and-more-january-19-2026/</guid>
       <source>AWS News</source>
     </item>
     <item>
