@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 03 Feb 2026 09:38:32 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Feb 2026 09:41:07 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Unlocking Peak Performance on Qualcomm NPU with LiteRT</title>
-      <link>https://developers.googleblog.com/unlocking-peak-performance-on-qualcomm-npu-with-litert/</link>
-      <description>LiteRT&amp;apos;s new Qualcomm AI Engine Direct (QNN) Accelerator unlocks dedicated NPU power for on-device GenAI on Android It offers a unified mobile deployment workflow, SOTA performance (up to 100x speedup over CPU), and full model delegation This enables smooth, real-time AI experiences, with FastVLM-0.5B achieving over 11,000 tokens/sec prefill on Snapdragon 8 Elite Gen 5 NPU.</description>
-      <pubDate>Tue, 03 Feb 2026 09:38:29 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/unlocking-peak-performance-on-qualcomm-npu-with-litert/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>New Gemini API updates for Gemini 3</title>
       <link>https://developers.googleblog.com/new-gemini-api-updates-for-gemini-3/</link>
       <description>Gemini 3 is available via API with updates for developers: new `thinking_level` for depth control, `media_resolution` for multimodal processing, and enforced `Thought Signatures` for agentic workflows, especially with function calling and image generation It also introduces combining Google Search/URL Grounding with Structured Outputs and new usage-based pricing for Grounding Best practices, like using default temperature, are advised for optimal results.</description>
-      <pubDate>Tue, 03 Feb 2026 09:38:29 GMT</pubDate>
+      <pubDate>Wed, 04 Feb 2026 09:41:04 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/new-gemini-api-updates-for-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Announcing the Data Commons Gemini CLI extension</title>
       <link>https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</link>
       <description>The new Data Commons extension for the Gemini CLI makes accessing public data easier It allows users to ask complex, natural-language questions to query Data Commons&amp;apos; public datasets, grounding LLM responses in authoritative sources to reduce AI hallucinations Data Commons is an organized library of public data from sources like the UN and World Bank</description>
-      <pubDate>Tue, 03 Feb 2026 09:38:29 GMT</pubDate>
+      <pubDate>Wed, 04 Feb 2026 09:41:04 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Architecting efficient context-aware multi-agent framework for production</title>
+      <link>https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/</link>
+      <description>ADK introduces **Context Engineering** to scale AI agents beyond large context windows It treats context as a compiled view over a tiered, stateful system (**Session, Memory, Artifacts**) This architecture uses explicit processors for transformation, enables efficient compaction and caching, and allows for strict, scoped context handoffs in multi-agent workflows to ensure reliability and cost-effectiveness in production.</description>
+      <pubDate>Wed, 04 Feb 2026 09:41:04 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS IAM Identity Center now supports multi-Region replication for AWS account access and application use</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/</link>
+      <description>AWS IAM Identity Center now supports multi-Region replication of workforce identities and permission sets, enabling improved resiliency for AWS account access and allowing applications to be deployed closer to users while meeting data residency requirements.</description>
+      <pubDate>Tue, 03 Feb 2026 19:13:34 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>What the fastest-growing tools reveal about how software is being built</title>
+      <link>https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/</link>
+      <description>What languages are growing fastest, and why What about the projects that people are interested in the most The post What the fastest-growing tools reveal about how software is being built appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 03 Feb 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Amazon Bedrock agent workflows, Amazon SageMaker private connectivity, and more (February 2, 2026)</title>
@@ -65,14 +81,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Year recap and future goals for the GitHub Innovation Graph</title>
-      <link>https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/</link>
-      <description>Discover the latest trends and insights on public software development activity on GitHub with data from the Innovation Graph through Q3 2025 The post Year recap and future goals for the GitHub Innovation Graph appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 28 Jan 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/year-recap-and-future-goals-for-the-github-innovation-graph/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Rust at Scale: An Added Layer of Security for WhatsApp</title>
       <link>https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/</link>
       <description>WhatsApp has adopted and rolled out a new layer of security for users – built with Rust – as part of its effort to harden defenses against malware threats WhatsApp’s experience creating and distributing our media consistency library in Rust to billions of devices and browsers proves Rust is production ready at a global scale. [...] Read More The post Rust at Scale: An Added Layer of Security for WhatsApp appeared first on Engineering at Meta.</description>
@@ -103,14 +111,6 @@
       <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/metronome-stripe-building-the-future-of-billing</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Announcing Amazon EC2 G7e instances accelerated by NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7e-instances-accelerated-by-nvidia-rtx-pro-6000-blackwell-server-edition-gpus/</link>
-      <description>AWS introduces Amazon EC2 G7e instances accelerated by the NVIDIA RTX PRO 6000 Blackwell Server Edition GPUs with up to 2.3 times inference performance G7e instances deliver cost-effective performance for generative AI inference workloads and the highest performance for graphics workloads.</description>
-      <pubDate>Tue, 20 Jan 2026 21:22:56 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7e-instances-accelerated-by-nvidia-rtx-pro-6000-blackwell-server-edition-gpus/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>The three biggest agentic commerce trends from NRF 2026</title>
