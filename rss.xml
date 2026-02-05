@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 04 Feb 2026 09:41:07 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 05 Feb 2026 09:41:50 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>New Gemini API updates for Gemini 3</title>
       <link>https://developers.googleblog.com/new-gemini-api-updates-for-gemini-3/</link>
       <description>Gemini 3 is available via API with updates for developers: new `thinking_level` for depth control, `media_resolution` for multimodal processing, and enforced `Thought Signatures` for agentic workflows, especially with function calling and image generation It also introduces combining Google Search/URL Grounding with Structured Outputs and new usage-based pricing for Grounding Best practices, like using default temperature, are advised for optimal results.</description>
-      <pubDate>Wed, 04 Feb 2026 09:41:04 GMT</pubDate>
+      <pubDate>Thu, 05 Feb 2026 09:41:47 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/new-gemini-api-updates-for-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Announcing the Data Commons Gemini CLI extension</title>
       <link>https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</link>
       <description>The new Data Commons extension for the Gemini CLI makes accessing public data easier It allows users to ask complex, natural-language questions to query Data Commons&amp;apos; public datasets, grounding LLM responses in authoritative sources to reduce AI hallucinations Data Commons is an organized library of public data from sources like the UN and World Bank</description>
-      <pubDate>Wed, 04 Feb 2026 09:41:04 GMT</pubDate>
+      <pubDate>Thu, 05 Feb 2026 09:41:47 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Architecting efficient context-aware multi-agent framework for production</title>
       <link>https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/</link>
       <description>ADK introduces **Context Engineering** to scale AI agents beyond large context windows It treats context as a compiled view over a tiered, stateful system (**Session, Memory, Artifacts**) This architecture uses explicit processors for transformation, enables efficient compaction and caching, and allows for strict, scoped context handoffs in multi-agent workflows to ensure reliability and cost-effectiveness in production.</description>
-      <pubDate>Wed, 04 Feb 2026 09:41:04 GMT</pubDate>
+      <pubDate>Thu, 05 Feb 2026 09:41:47 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/</link>
+      <description>AWS launches Amazon EC2 C8id, M8id, and R8id instances backed by NVMe-based SSD block-level instance storage physically connected to the host server These instances offer 3 times more vCPUs, memory, and local storage with up to 22.8TB of local NVMe-backed SSD block-level storage.</description>
+      <pubDate>Wed, 04 Feb 2026 22:31:56 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>No Display? No Problem: Cross-Device Passkey Authentication for XR Devices</title>
+      <link>https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/</link>
+      <description>We’re sharing a novel approach to enabling cross-device passkey authentication for devices with inaccessible displays (like XR devices) Our approach bypasses the use of QR codes and enables cross-device authentication without the need for an on-device display, while still complying with all trust and proximity requirements No Problem: Cross-Device Passkey Authentication for XR Devices appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 04 Feb 2026 22:00:07 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Pick your agent: Use Claude and Codex on Agent HQ</title>
+      <link>https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/</link>
+      <description>Claude by Anthropic and OpenAI Codex are now available in public preview on GitHub and VS Code with a Copilot Pro+ or Copilot Enterprise subscription Here&amp;apos;s what you need to know and how to get started today The post Pick your agent: Use Claude and Codex on Agent HQ appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 04 Feb 2026 17:00:19 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS IAM Identity Center now supports multi-Region replication for AWS account access and application use</title>
@@ -73,14 +97,6 @@
       <source>Dropbox Engineering</source>
     </item>
     <item>
-      <title>From pixels to characters: The engineering behind GitHub Copilot CLI’s animated ASCII banner</title>
-      <link>https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/</link>
-      <description>Learn how GitHub built an accessible, multi-terminal-safe ASCII animation for the Copilot CLI using custom tooling, ANSI color roles, and advanced terminal engineering The post From pixels to characters: The engineering behind GitHub Copilot CLI’s animated ASCII banner appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 28 Jan 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Rust at Scale: An Added Layer of Security for WhatsApp</title>
       <link>https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/</link>
       <description>WhatsApp has adopted and rolled out a new layer of security for users – built with Rust – as part of its effort to harden defenses against malware threats WhatsApp’s experience creating and distributing our media consistency library in Rust to billions of devices and browsers proves Rust is production ready at a global scale. [...] Read More The post Rust at Scale: An Added Layer of Security for WhatsApp appeared first on Engineering at Meta.</description>
@@ -95,14 +111,6 @@
       <pubDate>Mon, 26 Jan 2026 19:01:27 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Amazon EC2 G7e instances, Amazon Corretto updates, and more (January 26, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-g7e-instances-with-nvidia-blackwell-gpus-january-26-2026/</link>
-      <description>It’s my first post for 2026, and I’m writing to you while watching our driveway getting dug out I hope wherever you are you are safe and warm and your data is still flowing This week brings exciting news for customers running GPU-intensive workloads, with the launch of our newest graphics and AI inference […]</description>
-      <pubDate>Mon, 26 Jan 2026 16:25:46 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-g7e-instances-with-nvidia-blackwell-gpus-january-26-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Metronome + Stripe: Building the future of billing</title>
@@ -126,14 +134,6 @@
       <description>We’ve improved personalized video recommendations on Facebook Reels by moving beyond metrics such as likes and watch time and directly leveraging user feedback We’re doubling down on personalization, tackling challenges like sparse user data [...] Read More The post Adapting the Facebook Reels RecSys AI Model Based on User Feedback appeared first on Engineering at Meta.</description>
       <pubDate>Wed, 14 Jan 2026 20:51:33 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/01/14/ml-applications/adapting-the-facebook-reels-recsys-ai-model-based-on-user-feedback/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>CSS at Scale With StyleX</title>
-      <link>https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/</link>
-      <description>It’s no different at Meta, which is why we open-sourced StyleX, a solution for CSS at scale StyleX combines the ergonomics of CSS-in-JS with the performance of static CSS The post CSS at Scale With StyleX appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 12 Jan 2026 18:34:59 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/01/12/web/css-at-scale-with-stylex/</guid>
       <source>Meta Engineering</source>
     </item>
   </channel>
