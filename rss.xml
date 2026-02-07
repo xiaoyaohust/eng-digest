@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 06 Feb 2026 09:40:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 09:28:31 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Announcing the Data Commons Gemini CLI extension</title>
       <link>https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</link>
       <description>The new Data Commons extension for the Gemini CLI makes accessing public data easier It allows users to ask complex, natural-language questions to query Data Commons&amp;apos; public datasets, grounding LLM responses in authoritative sources to reduce AI hallucinations Data Commons is an organized library of public data from sources like the UN and World Bank</description>
-      <pubDate>Fri, 06 Feb 2026 09:40:10 GMT</pubDate>
+      <pubDate>Sat, 07 Feb 2026 09:28:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-data-commons-gemini-cli-extension/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Architecting efficient context-aware multi-agent framework for production</title>
       <link>https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/</link>
       <description>ADK introduces **Context Engineering** to scale AI agents beyond large context windows It treats context as a compiled view over a tiered, stateful system (**Session, Memory, Artifacts**) This architecture uses explicit processors for transformation, enables efficient compaction and caching, and allows for strict, scoped context handoffs in multi-agent workflows to ensure reliability and cost-effectiveness in production.</description>
-      <pubDate>Fri, 06 Feb 2026 09:40:10 GMT</pubDate>
+      <pubDate>Sat, 07 Feb 2026 09:28:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>MediaTek NPU and LiteRT: Powering the next generation of on-device AI</title>
       <link>https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/</link>
       <description>LiteRT and MediaTek are announcing the new LiteRT NeuroPilot Accelerator This is a ground-up successor for the TFLite NeuroPilot delegate, bringing seamless deployment experience, state-of-the-art LLM support, and advanced performance to millions of devices worldwide.</description>
-      <pubDate>Fri, 06 Feb 2026 09:40:10 GMT</pubDate>
+      <pubDate>Sat, 07 Feb 2026 09:28:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/</guid>
       <source>Google Developers</source>
     </item>
