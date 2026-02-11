@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-02-11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-02-11</p>
+        <div class="stats">
+            <span class="stat-item"><strong>16</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: Claude Opus 4.6 in Amazon Bedrock, AWS Builder ID Sign in with Apple, and more (February 9, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-09 20:42</p>
+                    <p class="article-summary">Amazon DynamoDB global tables now support replication across multiple AWS accounts for improved resiliency and workload isolation On the security front, AWS Builder ID now supports Sign in with Apple, AWS STS adds validation for identity provider claims and Amazon CloudFront introduces mutual TLS support for origins to enforce certificate-based authentication For AI, Claude Opus 4.6—Anthropic's most intelligent model—is now available in Amazon Bedrock, bringing industry-leading performance for agentic tasks and complex coding projects</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/" target="_blank" rel="noopener noreferrer">
+                                Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-04 22:31</p>
+                    <p class="article-summary">AWS launches Amazon EC2 C8id, M8id, and R8id instances backed by NVMe-based SSD block-level instance storage physically connected to the host server These instances offer 3 times more vCPUs, memory, and local storage with up to 22.8TB of local NVMe-backed SSD block-level storage.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/" target="_blank" rel="noopener noreferrer">
+                                AWS IAM Identity Center now supports multi-Region replication for AWS account access and application use
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-03 19:13</p>
+                    <p class="article-summary">AWS IAM Identity Center now supports multi-Region replication of workforce identities and permission sets, enabling improved resiliency for AWS account access and allowing applications to be deployed closer to users while meeting data residency requirements.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/machine-learning/vp-josh-clemm-knowledge-graphs-mcp-and-dspy-dash" target="_blank" rel="noopener noreferrer">
+                                Engineering VP Josh Clemm on how we use knowledge graphs, MCP, and DSPy in Dash
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-28 18:00</p>
+                    <p class="article-summary">Engineering VP Josh Clemm deep-dives into how we think about knowledge graphs, indexes, MCP, and prompt optimization using tools like DSPy.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/vp-josh-clemm-knowledge-graphs-mcp-and-dspy-dash" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/" target="_blank" rel="noopener noreferrer">
+                                Continuous AI in practice: What developers can automate today with agentic CI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-05 17:00</p>
+                    <p class="article-summary">Think of Continuous AI as background agents that operate in your repository for tasks that require reasoning The post Continuous AI in practice: What developers can automate today with agentic CI appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/" target="_blank" rel="noopener noreferrer">
+                                Pick your agent: Use Claude and Codex on Agent HQ
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-04 17:00</p>
+                    <p class="article-summary">Claude by Anthropic and OpenAI Codex are now available in public preview on GitHub and VS Code with a Copilot Pro+ or Copilot Enterprise subscription Here's what you need to know and how to get started today The post Pick your agent: Use Claude and Codex on Agent HQ appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/" target="_blank" rel="noopener noreferrer">
+                                What the fastest-growing tools reveal about how software is being built
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-03 17:00</p>
+                    <p class="article-summary">What languages are growing fastest, and why What about the projects that people are interested in the most The post What the fastest-growing tools reveal about how software is being built appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/" target="_blank" rel="noopener noreferrer">
+                                Architecting efficient context-aware multi-agent framework for production
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-11 09:51</p>
+                    <p class="article-summary">ADK introduces **Context Engineering** to scale AI agents beyond large context windows It treats context as a compiled view over a tiered, stateful system (**Session, Memory, Artifacts**) This architecture uses explicit processors for transformation, enables efficient compaction and caching, and allows for strict, scoped context handoffs in multi-agent workflows to ensure reliability and cost-effectiveness in production.</p>
+                    
+                    <a href="https://developers.googleblog.com/architecting-efficient-context-aware-multi-agent-framework-for-production/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/" target="_blank" rel="noopener noreferrer">
+                                MediaTek NPU and LiteRT: Powering the next generation of on-device AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-11 09:51</p>
+                    <p class="article-summary">LiteRT and MediaTek are announcing the new LiteRT NeuroPilot Accelerator This is a ground-up successor for the TFLite NeuroPilot delegate, bringing seamless deployment experience, state-of-the-art LLM support, and advanced performance to millions of devices worldwide.</p>
+                    
+                    <a href="https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/" target="_blank" rel="noopener noreferrer">
+                                Don't Trust, Verify: Building End-to-End Confidential Applications on Google Cloud
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-11 09:51</p>
+                    <p class="article-summary">Google Cloud enables end-to-end confidential applications, protecting sensitive data 'in-use' with hardware isolation The solution combines Confidential Space (TEE/attestation), Oak Functions (private sandbox), and Oak Session (attested end-to-end encryption for scale) This framework anchors user trust in open-source components, proving confidentiality for sensitive workloads like proprietary GenAI models, even when running behind untrusted load balancers.</p>
+                    
+                    <a href="https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" rel="noopener noreferrer">
+                                Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-09 17:00</p>
+                    <p class="article-summary">We’re sharing details of the role backend aggregation (BAG) plays in building Meta’s gigawatt-scale AI clusters like Prometheus Once it’s complete our AI [...] Read More The post Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/" target="_blank" rel="noopener noreferrer">
+                                No Display? No Problem: Cross-Device Passkey Authentication for XR Devices
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-04 22:00</p>
+                    <p class="article-summary">We’re sharing a novel approach to enabling cross-device passkey authentication for devices with inaccessible displays (like XR devices) Our approach bypasses the use of QR codes and enables cross-device authentication without the need for an on-device display, while still complying with all trust and proximity requirements No Problem: Cross-Device Passkey Authentication for XR Devices appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/" target="_blank" rel="noopener noreferrer">
+                                Rust at Scale: An Added Layer of Security for WhatsApp
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-27 15:00</p>
+                    <p class="article-summary">WhatsApp has adopted and rolled out a new layer of security for users – built with Rust – as part of its effort to harden defenses against malware threats WhatsApp’s experience creating and distributing our media consistency library in Rust to billions of devices and browsers proves Rust is production ready at a global scale. [...] Read More The post Rust at Scale: An Added Layer of Security for WhatsApp appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                The AI Evolution of Graph Search at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-26 19:01</p>
+                    <p class="article-summary">We need the LLM to generate a Graph Search Filter DSL statement that is syntactically, semantically, and pragmatically correct.Syntactic correctness is easy — does it parse For some fields, there is additional information we can provide beyond what’s available in the schema as well, in particular permissible values that pull from controlled vocabularies.Each field in the index is associated with metadata as seen below, and that metadata is provided as part of the context.Graph Search index representationThe field is derived from the document path as characterized by the GraphQL query.The description is the comment from the GraphQL schema for the field.The type is derived from the GraphQL schema for the field e.g This design strategically balances LLM involvement with more deterministic strategies.End-to-end architectureThe end-to-end process is as follows:A user’s natural language question (with optional `@mentions` statements) are provided as input, along with the Graph Search index contextThe context is scoped by using the RAG pattern on both fields and possible valuesThe pre-processed context and the question are fed into the LLM with an instruction asking for a syntactically and semantically correct filter statementThe generated filer statement DSL is verified and checked for hallucinationsThe final response contains the related AST in order to build “Chips” and “Facets”SummaryBy combining our existing Graph Search infrastructure with the power and flexibility of LLMs, we’ve bridged the gap between complex filter statements and user intent</p>
+                    
+                    <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/metronome-stripe-building-the-future-of-billing" target="_blank" rel="noopener noreferrer">
+                                Metronome + Stripe: Building the future of billing
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-23 00:00</p>
+                    <p class="article-summary">Together, Metronome and Stripe are building the most flexible and complete billing solution on the market—one that works for everyone, from engineers in a garage figuring out their business model to public companies monetizing at global scale.</p>
+                    
+                    <a href="https://stripe.com/blog/metronome-stripe-building-the-future-of-billing" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026" target="_blank" rel="noopener noreferrer">
+                                The three biggest agentic commerce trends from NRF 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-16 00:00</p>
+                    <p class="article-summary">Not only are the majority of retailers actively implementing, or have plans to implement, agentic commerce, but many are also moving to a more tactical phase of optimizing their setup—refining their product catalog strategy to launch faster and investing in their own agentic shopping experiences in addition to integrating with third-party agents.</p>
+                    
+                    <a href="https://stripe.com/blog/three-agentic-commerce-trends-nrf-2026" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-02-11 09:51:45</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
