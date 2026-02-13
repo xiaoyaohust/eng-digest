@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 12 Feb 2026 09:46:10 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Feb 2026 09:41:14 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>MediaTek NPU and LiteRT: Powering the next generation of on-device AI</title>
       <link>https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/</link>
       <description>LiteRT and MediaTek are announcing the new LiteRT NeuroPilot Accelerator This is a ground-up successor for the TFLite NeuroPilot delegate, bringing seamless deployment experience, state-of-the-art LLM support, and advanced performance to millions of devices worldwide.</description>
-      <pubDate>Thu, 12 Feb 2026 09:46:07 GMT</pubDate>
+      <pubDate>Fri, 13 Feb 2026 09:41:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Don't Trust, Verify: Building End-to-End Confidential Applications on Google Cloud</title>
       <link>https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</link>
       <description>Google Cloud enables end-to-end confidential applications, protecting sensitive data &amp;apos;in-use&amp;apos; with hardware isolation The solution combines Confidential Space (TEE/attestation), Oak Functions (private sandbox), and Oak Session (attested end-to-end encryption for scale) This framework anchors user trust in open-source components, proving confidentiality for sensitive workloads like proprietary GenAI models, even when running behind untrusted load balancers.</description>
-      <pubDate>Thu, 12 Feb 2026 09:46:07 GMT</pubDate>
+      <pubDate>Fri, 13 Feb 2026 09:41:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,41 @@
       <title>Pick up exactly where you left off with Session Management in Gemini CLI</title>
       <link>https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</link>
       <description>Gemini CLI&amp;apos;s new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</description>
-      <pubDate>Thu, 12 Feb 2026 09:46:07 GMT</pubDate>
+      <pubDate>Fri, 13 Feb 2026 09:41:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Scaling LLM Post-Training at Netflix</title>
+      <link>https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4</link>
+      <description>This blog describes the architecture and engineering philosophy of our internal Post-Training Framework, built by the AI Platform team to hide infrastructure complexity so researchers and model developers can focus on model innovation — not distributed systems plumbing.A Model Developer’s Post-Training JourneyPost-training often starts deceptively simply: curate proprietary domain data, load an open-weight model from Hugging Face, and iterate batches through it In particular, we extend Single Program, Multiple Data (SPMD) style SFT workloads to run online RL with a hybrid single-controller + SPMD execution model, which we’ll describe next.Today, this framework supports research use cases ranging from post-training large-scale foundation models to fine-tuning specialized expert models Rather than training directly on transformers model classes, we maintain our own optimized, unified model definitions that can still load/save Hugging Face checkpoints</description>
+      <pubDate>Fri, 13 Feb 2026 08:05:33 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Welcome to the Eternal September of open source. Here’s what we plan to do for maintainers.</title>
+      <link>https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/</link>
+      <description>Open source is hitting an “Eternal September.” As contribution friction drops, maintainers are adapting with new trust signals, triage approaches, and community-led solutions The post Welcome to the Eternal September of open source Here’s what we plan to do for maintainers. appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 12 Feb 2026 20:14:11 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How low-bit inference enables efficient AI</title>
+      <link>https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai</link>
+      <description>Making products like Dropbox Dash accessible to individuals and businesses means tackling new challenges around efficiency and resource use.</description>
+      <pubDate>Thu, 12 Feb 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>Automating RDS Postgres to Aurora Postgres Migration</title>
+      <link>https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4</link>
+      <description>At this stage, the Aurora cluster is created and attached to the RDS PostgreSQL primary as a replica, establishing continuous replication from the source RDS PostgreSQL instance The cluster is fully operational for validation and performance testing, but it is not yet writable — RDS remains the authoritative primary.Quiescence PhaseThe goal of the quiescence phase is to transition client applications from the source RDS PostgreSQL instance to the Aurora PostgreSQL cluster as the new primary database, while preserving data consistency during cutover.The first step in this process is to stop all write traffic to the source RDS PostgreSQL instance to guarantee consistency In addition, any logical replication slots removed during the migration must be recreated so that CDC consumers can continue processing changes from the source database.Once connectivity and replication slots are restored, the RDS PostgreSQL instance can safely resume its role as the primary source of truth.Post-quiescence Rolling back after cutover, once the Aurora PostgreSQL cluster is serving production traffic, is significantly more complex</description>
+      <pubDate>Thu, 12 Feb 2026 14:07:19 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>GitHub availability report: January 2026</title>
@@ -59,7 +91,7 @@
     <item>
       <title>AWS Weekly Roundup: Claude Opus 4.6 in Amazon Bedrock, AWS Builder ID Sign in with Apple, and more (February 9, 2026)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/</link>
-      <description>Amazon DynamoDB global tables now support replication across multiple AWS accounts for improved resiliency and workload isolation On the security front, AWS Builder ID now supports Sign in with Apple, AWS STS adds validation for identity provider claims and Amazon CloudFront introduces mutual TLS support for origins to enforce certificate-based authentication For AI, Claude Opus 4.6—Anthropic&amp;apos;s most intelligent model—is now available in Amazon Bedrock, bringing industry-leading performance for agentic tasks and complex coding projects</description>
+      <description>Here are the notable launches and updates from last week that can help you build, scale, and innovate on AWS Last week’s launches Here are the launches that got my attention this week Let’s start with news related to compute and networking infrastructure: Introducing Amazon EC2 C8id, M8id, and R8id instances: These new Amazon EC2 […]</description>
       <pubDate>Mon, 09 Feb 2026 20:42:04 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/</guid>
       <source>AWS News</source>
@@ -95,14 +127,6 @@
       <pubDate>Wed, 04 Feb 2026 22:00:07 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Pick your agent: Use Claude and Codex on Agent HQ</title>
-      <link>https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/</link>
-      <description>Claude by Anthropic and OpenAI Codex are now available in public preview on GitHub and VS Code with a Copilot Pro+ or Copilot Enterprise subscription Here&amp;apos;s what you need to know and how to get started today The post Pick your agent: Use Claude and Codex on Agent HQ appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 04 Feb 2026 17:00:19 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS IAM Identity Center now supports multi-Region replication for AWS account access and application use</title>
