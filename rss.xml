@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 13 Feb 2026 09:41:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 09:28:11 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>MediaTek NPU and LiteRT: Powering the next generation of on-device AI</title>
-      <link>https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/</link>
-      <description>LiteRT and MediaTek are announcing the new LiteRT NeuroPilot Accelerator This is a ground-up successor for the TFLite NeuroPilot delegate, bringing seamless deployment experience, state-of-the-art LLM support, and advanced performance to millions of devices worldwide.</description>
-      <pubDate>Fri, 13 Feb 2026 09:41:11 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/mediatek-npu-and-litert-powering-the-next-generation-of-on-device-ai/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Don't Trust, Verify: Building End-to-End Confidential Applications on Google Cloud</title>
       <link>https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</link>
       <description>Google Cloud enables end-to-end confidential applications, protecting sensitive data &amp;apos;in-use&amp;apos; with hardware isolation The solution combines Confidential Space (TEE/attestation), Oak Functions (private sandbox), and Oak Session (attested end-to-end encryption for scale) This framework anchors user trust in open-source components, proving confidentiality for sensitive workloads like proprietary GenAI models, even when running behind untrusted load balancers.</description>
-      <pubDate>Fri, 13 Feb 2026 09:41:11 GMT</pubDate>
+      <pubDate>Sat, 14 Feb 2026 09:28:08 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,25 @@
       <title>Pick up exactly where you left off with Session Management in Gemini CLI</title>
       <link>https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</link>
       <description>Gemini CLI&amp;apos;s new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</description>
-      <pubDate>Fri, 13 Feb 2026 09:41:11 GMT</pubDate>
+      <pubDate>Sat, 14 Feb 2026 09:28:08 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building agents with the ADK and the new Interactions API</title>
+      <link>https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</link>
+      <description>The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</description>
+      <pubDate>Sat, 14 Feb 2026 09:28:08 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Automate repository tasks with GitHub Agentic Workflows</title>
+      <link>https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/</link>
+      <description>Discover GitHub Agentic Workflows, now in technical preview Build automations using coding agents in GitHub Actions to handle triage, documentation, code quality, and more The post Automate repository tasks with GitHub Agentic Workflows appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 13 Feb 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Scaling LLM Post-Training at Netflix</title>
@@ -103,14 +111,6 @@
       <pubDate>Mon, 09 Feb 2026 17:00:33 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Continuous AI in practice: What developers can automate today with agentic CI</title>
-      <link>https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/</link>
-      <description>Think of Continuous AI as background agents that operate in your repository for tasks that require reasoning The post Continuous AI in practice: What developers can automate today with agentic CI appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 05 Feb 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available</title>
