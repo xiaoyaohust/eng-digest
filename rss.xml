@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 15 Feb 2026 09:29:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2026 09:52:02 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Don't Trust, Verify: Building End-to-End Confidential Applications on Google Cloud</title>
       <link>https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</link>
       <description>Google Cloud enables end-to-end confidential applications, protecting sensitive data &amp;apos;in-use&amp;apos; with hardware isolation The solution combines Confidential Space (TEE/attestation), Oak Functions (private sandbox), and Oak Session (attested end-to-end encryption for scale) This framework anchors user trust in open-source components, proving confidentiality for sensitive workloads like proprietary GenAI models, even when running behind untrusted load balancers.</description>
-      <pubDate>Sun, 15 Feb 2026 09:29:18 GMT</pubDate>
+      <pubDate>Mon, 16 Feb 2026 09:51:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Pick up exactly where you left off with Session Management in Gemini CLI</title>
       <link>https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</link>
       <description>Gemini CLI&amp;apos;s new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</description>
-      <pubDate>Sun, 15 Feb 2026 09:29:18 GMT</pubDate>
+      <pubDate>Mon, 16 Feb 2026 09:51:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Building agents with the ADK and the new Interactions API</title>
       <link>https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</link>
       <description>The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</description>
-      <pubDate>Sun, 15 Feb 2026 09:29:18 GMT</pubDate>
+      <pubDate>Mon, 16 Feb 2026 09:51:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</guid>
       <source>Google Developers</source>
     </item>
