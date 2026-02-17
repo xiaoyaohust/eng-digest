@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 16 Feb 2026 09:52:02 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 09:45:32 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Don't Trust, Verify: Building End-to-End Confidential Applications on Google Cloud</title>
       <link>https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</link>
       <description>Google Cloud enables end-to-end confidential applications, protecting sensitive data &amp;apos;in-use&amp;apos; with hardware isolation The solution combines Confidential Space (TEE/attestation), Oak Functions (private sandbox), and Oak Session (attested end-to-end encryption for scale) This framework anchors user trust in open-source components, proving confidentiality for sensitive workloads like proprietary GenAI models, even when running behind untrusted load balancers.</description>
-      <pubDate>Mon, 16 Feb 2026 09:51:59 GMT</pubDate>
+      <pubDate>Tue, 17 Feb 2026 09:45:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/dont-trust-verify-building-end-to-end-confidential-applications-on-google-cloud/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Pick up exactly where you left off with Session Management in Gemini CLI</title>
       <link>https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</link>
       <description>Gemini CLI&amp;apos;s new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</description>
-      <pubDate>Mon, 16 Feb 2026 09:51:59 GMT</pubDate>
+      <pubDate>Tue, 17 Feb 2026 09:45:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Building agents with the ADK and the new Interactions API</title>
       <link>https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</link>
       <description>The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</description>
-      <pubDate>Mon, 16 Feb 2026 09:51:59 GMT</pubDate>
+      <pubDate>Tue, 17 Feb 2026 09:45:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/</link>
+      <description>Amazon EC2 Hpc8a instances, powered by 5th Gen AMD EPYC processors, deliver up to 40% higher performance, increased memory bandwidth, and 300 Gbps Elastic Fabric Adapter networking, helping customers accelerate compute-intensive simulations, engineering workloads, and tightly coupled HPC applications.</description>
+      <pubDate>Mon, 16 Feb 2026 23:12:37 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Announcing Amazon SageMaker Inference for custom Amazon Nova models</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-amazon-sagemaker-inference-for-custom-amazon-nova-models/</link>
+      <description>AWS launches Amazon SageMaker Inference for custom Amazon Nova models You can now configure the instance types, auto-scaling policies, and concurrency settings for custom Nova model deployments to best meet their needs.</description>
+      <pubDate>Mon, 16 Feb 2026 21:25:23 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-sagemaker-inference-for-custom-amazon-nova-models/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Amazon EC2 M8azn instances, new open weights models in Amazon Bedrock, and more (February 16, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-m8azn-instances-new-open-weights-models-in-amazon-bedrock-and-more-february-16-2026/</link>
+      <description>I joined AWS in 2021, and since then I’ve watched the Amazon Elastic Compute Cloud (Amazon EC2) instance family grow at a pace that still surprises me From AWS Graviton-powered instances to specialized accelerated computing options, it feels like every few months there’s a new instance type landing that pushes performance boundaries further</description>
+      <pubDate>Mon, 16 Feb 2026 17:28:52 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-m8azn-instances-new-open-weights-models-in-amazon-bedrock-and-more-february-16-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Automate repository tasks with GitHub Agentic Workflows</title>
@@ -97,14 +121,6 @@
       <source>Dropbox Engineering</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: Claude Opus 4.6 in Amazon Bedrock, AWS Builder ID Sign in with Apple, and more (February 9, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/</link>
-      <description>Here are the notable launches and updates from last week that can help you build, scale, and innovate on AWS Last week’s launches Here are the launches that got my attention this week Let’s start with news related to compute and networking infrastructure: Introducing Amazon EC2 C8id, M8id, and R8id instances: These new Amazon EC2 […]</description>
-      <pubDate>Mon, 09 Feb 2026 20:42:04 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-6-in-amazon-bedrock-aws-builder-id-sign-in-with-apple-and-more-february-9-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters</title>
       <link>https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/</link>
       <description>We’re sharing details of the role backend aggregation (BAG) plays in building Meta’s gigawatt-scale AI clusters like Prometheus Once it’s complete our AI [...] Read More The post Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters appeared first on Engineering at Meta.</description>
@@ -113,28 +129,12 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/</link>
-      <description>AWS launches Amazon EC2 C8id, M8id, and R8id instances backed by NVMe-based SSD block-level instance storage physically connected to the host server These instances offer 3 times more vCPUs, memory, and local storage with up to 22.8TB of local NVMe-backed SSD block-level storage.</description>
-      <pubDate>Wed, 04 Feb 2026 22:31:56 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>No Display? No Problem: Cross-Device Passkey Authentication for XR Devices</title>
       <link>https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/</link>
       <description>We’re sharing a novel approach to enabling cross-device passkey authentication for devices with inaccessible displays (like XR devices) Our approach bypasses the use of QR codes and enables cross-device authentication without the need for an on-device display, while still complying with all trust and proximity requirements No Problem: Cross-Device Passkey Authentication for XR Devices appeared first on Engineering at Meta.</description>
       <pubDate>Wed, 04 Feb 2026 22:00:07 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AWS IAM Identity Center now supports multi-Region replication for AWS account access and application use</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/</link>
-      <description>AWS IAM Identity Center now supports multi-Region replication of workforce identities and permission sets, enabling improved resiliency for AWS account access and allowing applications to be deployed closer to users while meeting data residency requirements.</description>
-      <pubDate>Tue, 03 Feb 2026 19:13:34 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Engineering VP Josh Clemm on how we use knowledge graphs, MCP, and DSPy in Dash</title>
