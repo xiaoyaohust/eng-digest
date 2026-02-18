@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-02-18</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-02-18</p>
+        <div class="stats">
+            <span class="stat-item"><strong>19</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" target="_blank" rel="noopener noreferrer">
+                                Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-16 23:12</p>
+                    <p class="article-summary">Amazon EC2 Hpc8a instances, powered by 5th Gen AMD EPYC processors, deliver up to 40% higher performance, increased memory bandwidth, and 300 Gbps Elastic Fabric Adapter networking, helping customers accelerate compute-intensive simulations, engineering workloads, and tightly coupled HPC applications.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-sagemaker-inference-for-custom-amazon-nova-models/" target="_blank" rel="noopener noreferrer">
+                                Announcing Amazon SageMaker Inference for custom Amazon Nova models
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-16 21:25</p>
+                    <p class="article-summary">AWS launches Amazon SageMaker Inference for custom Amazon Nova models You can now configure the instance types, auto-scaling policies, and concurrency settings for custom Nova model deployments to best meet their needs.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-sagemaker-inference-for-custom-amazon-nova-models/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-m8azn-instances-new-open-weights-models-in-amazon-bedrock-and-more-february-16-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: Amazon EC2 M8azn instances, new open weights models in Amazon Bedrock, and more (February 16, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-16 17:28</p>
+                    <p class="article-summary">I joined AWS in 2021, and since then I’ve watched the Amazon Elastic Compute Cloud (Amazon EC2) instance family grow at a pace that still surprises me From AWS Graviton-powered instances to specialized accelerated computing options, it feels like every few months there’s a new instance type landing that pushes performance boundaries further</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-m8azn-instances-new-open-weights-models-in-amazon-bedrock-and-more-february-16-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" target="_blank" rel="noopener noreferrer">
+                                How low-bit inference enables efficient AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-12 18:00</p>
+                    <p class="article-summary">Making products like Dropbox Dash accessible to individuals and businesses means tackling new challenges around efficiency and resource use.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" target="_blank" rel="noopener noreferrer">
+                                Insights from our executive roundtable on AI and engineering productivity
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-11 17:00</p>
+                    <p class="article-summary">From Claude Code to Cursor, we're big adopters of AI coding tools at Dropbox The early results have been promising, but there are still a lot of open questions about how to work with these tools most effectively and where they can have the most impact To push this conversation forward, we hosted an executive roundtable at our San Francisco studio</p>
+                    
+                    <a href="https://dropbox.tech/culture/insights-from-our-executive-roundtable-on-ai-and-engineering-productivity" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://dropbox.tech/machine-learning/vp-josh-clemm-knowledge-graphs-mcp-and-dspy-dash" target="_blank" rel="noopener noreferrer">
+                                Engineering VP Josh Clemm on how we use knowledge graphs, MCP, and DSPy in Dash
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-28 18:00</p>
+                    <p class="article-summary">Engineering VP Josh Clemm deep-dives into how we think about knowledge graphs, indexes, MCP, and prompt optimization using tools like DSPy.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/vp-josh-clemm-knowledge-graphs-mcp-and-dspy-dash" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/open-source/maintainers/securing-the-ai-software-supply-chain-security-results-across-67-open-source-projects/" target="_blank" rel="noopener noreferrer">
+                                Securing the AI software supply chain: Security results across 67 open source projects
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-17 19:00</p>
+                    <p class="article-summary">Learn how The GitHub Secure Open Source Fund helped 67 critical AI‑stack projects accelerate fixes, strengthen ecosystems, and advance open source resilience The post Securing the AI software supply chain: Security results across 67 open source projects appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/open-source/maintainers/securing-the-ai-software-supply-chain-security-results-across-67-open-source-projects/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/" target="_blank" rel="noopener noreferrer">
+                                Automate repository tasks with GitHub Agentic Workflows
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-13 14:00</p>
+                    <p class="article-summary">Discover GitHub Agentic Workflows, now in technical preview Build automations using coding agents in GitHub Actions to handle triage, documentation, code quality, and more The post Automate repository tasks with GitHub Agentic Workflows appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/" target="_blank" rel="noopener noreferrer">
+                                Welcome to the Eternal September of open source. Here’s what we plan to do for maintainers.
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-12 20:14</p>
+                    <p class="article-summary">Open source is hitting an “Eternal September.” As contribution friction drops, maintainers are adapting with new trust signals, triage approaches, and community-led solutions The post Welcome to the Eternal September of open source Here’s what we plan to do for maintainers. appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/" target="_blank" rel="noopener noreferrer">
+                                Pick up exactly where you left off with Session Management in Gemini CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-18 09:44</p>
+                    <p class="article-summary">Gemini CLI's new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</p>
+                    
+                    <a href="https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/" target="_blank" rel="noopener noreferrer">
+                                Building agents with the ADK and the new Interactions API
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-18 09:44</p>
+                    <p class="article-summary">The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</p>
+                    
+                    <a href="https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/" target="_blank" rel="noopener noreferrer">
+                                Introducing A2UI: An open project for agent-driven interfaces
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-18 09:44</p>
+                    <p class="article-summary">A2UI is an open-source project for agent-driven, cross-platform, and generative UI It provides a secure, declarative data format for agents to compose bespoke interfaces from a trusted component catalog, allowing for native styling and incremental updates Designed for the multi-agent mesh (A2A), it offers a framework-agnostic solution to safely render remote agent UIs, with integrations in AG UI, Flutter's GenUI SDK, Opal, and Gemini Enterprise.</p>
+                    
+                    <a href="https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/" target="_blank" rel="noopener noreferrer">
+                                The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-11 17:00</p>
+                    <p class="article-summary">WHAT IT IS The rise of agentic software development means code is being written, reviewed, and shipped faster than ever before across the entire industry Faster development demands faster testing that can catch bugs as they land in a codebase, without [...] Read More The post The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" target="_blank" rel="noopener noreferrer">
+                                Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-09 17:00</p>
+                    <p class="article-summary">We’re sharing details of the role backend aggregation (BAG) plays in building Meta’s gigawatt-scale AI clusters like Prometheus Once it’s complete our AI [...] Read More The post Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/" target="_blank" rel="noopener noreferrer">
+                                No Display? No Problem: Cross-Device Passkey Authentication for XR Devices
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-04 22:00</p>
+                    <p class="article-summary">We’re sharing a novel approach to enabling cross-device passkey authentication for devices with inaccessible displays (like XR devices) Our approach bypasses the use of QR codes and enables cross-device authentication without the need for an on-device display, while still complying with all trust and proximity requirements No Problem: Cross-Device Passkey Authentication for XR Devices appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Scaling LLM Post-Training at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-13 08:05</p>
+                    <p class="article-summary">This blog describes the architecture and engineering philosophy of our internal Post-Training Framework, built by the AI Platform team to hide infrastructure complexity so researchers and model developers can focus on model innovation — not distributed systems plumbing.A Model Developer’s Post-Training JourneyPost-training often starts deceptively simply: curate proprietary domain data, load an open-weight model from Hugging Face, and iterate batches through it In particular, we extend Single Program, Multiple Data (SPMD) style SFT workloads to run online RL with a hybrid single-controller + SPMD execution model, which we’ll describe next.Today, this framework supports research use cases ranging from post-training large-scale foundation models to fine-tuning specialized expert models Rather than training directly on transformers model classes, we maintain our own optimized, unified model definitions that can still load/save Hugging Face checkpoints</p>
+                    
+                    <a href="https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Automating RDS Postgres to Aurora Postgres Migration
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-12 14:07</p>
+                    <p class="article-summary">At this stage, the Aurora cluster is created and attached to the RDS PostgreSQL primary as a replica, establishing continuous replication from the source RDS PostgreSQL instance The cluster is fully operational for validation and performance testing, but it is not yet writable — RDS remains the authoritative primary.Quiescence PhaseThe goal of the quiescence phase is to transition client applications from the source RDS PostgreSQL instance to the Aurora PostgreSQL cluster as the new primary database, while preserving data consistency during cutover.The first step in this process is to stop all write traffic to the source RDS PostgreSQL instance to guarantee consistency In addition, any logical replication slots removed during the migration must be recreated so that CDC consumers can continue processing changes from the source database.Once connectivity and replication slots are restored, the RDS PostgreSQL instance can safely resume its role as the primary source of truth.Post-quiescence Rolling back after cutover, once the Aurora PostgreSQL cluster is serving production traffic, is significantly more complex</p>
+                    
+                    <a href="https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                The AI Evolution of Graph Search at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-26 19:01</p>
+                    <p class="article-summary">We need the LLM to generate a Graph Search Filter DSL statement that is syntactically, semantically, and pragmatically correct.Syntactic correctness is easy — does it parse For some fields, there is additional information we can provide beyond what’s available in the schema as well, in particular permissible values that pull from controlled vocabularies.Each field in the index is associated with metadata as seen below, and that metadata is provided as part of the context.Graph Search index representationThe field is derived from the document path as characterized by the GraphQL query.The description is the comment from the GraphQL schema for the field.The type is derived from the GraphQL schema for the field e.g This design strategically balances LLM involvement with more deterministic strategies.End-to-end architectureThe end-to-end process is as follows:A user’s natural language question (with optional `@mentions` statements) are provided as input, along with the Graph Search index contextThe context is scoped by using the RAG pattern on both fields and possible valuesThe pre-processed context and the question are fed into the LLM with an instruction asking for a syntactically and semantically correct filter statementThe generated filer statement DSL is verified and checked for hallucinationsThe final response contains the related AST in order to build “Chips” and “Facets”SummaryBy combining our existing Graph Search infrastructure with the power and flexibility of LLMs, we’ve bridged the gap between complex filter statements and user intent</p>
+                    
+                    <a href="https://netflixtechblog.com/the-ai-evolution-of-graph-search-at-netflix-d416ec5b1151?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/metronome-stripe-building-the-future-of-billing" target="_blank" rel="noopener noreferrer">
+                                Metronome + Stripe: Building the future of billing
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-01-23 00:00</p>
+                    <p class="article-summary">Together, Metronome and Stripe are building the most flexible and complete billing solution on the market—one that works for everyone, from engineers in a garage figuring out their business model to public companies monetizing at global scale.</p>
+                    
+                    <a href="https://stripe.com/blog/metronome-stripe-building-the-future-of-billing" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-02-18 09:44:33</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
