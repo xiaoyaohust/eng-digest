@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 18 Feb 2026 09:44:33 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 09:42:40 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Pick up exactly where you left off with Session Management in Gemini CLI</title>
       <link>https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</link>
       <description>Gemini CLI&amp;apos;s new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</description>
-      <pubDate>Wed, 18 Feb 2026 09:44:30 GMT</pubDate>
+      <pubDate>Thu, 19 Feb 2026 09:42:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building agents with the ADK and the new Interactions API</title>
       <link>https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</link>
       <description>The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</description>
-      <pubDate>Wed, 18 Feb 2026 09:44:30 GMT</pubDate>
+      <pubDate>Thu, 19 Feb 2026 09:42:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Introducing A2UI: An open project for agent-driven interfaces</title>
       <link>https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/</link>
       <description>A2UI is an open-source project for agent-driven, cross-platform, and generative UI It provides a secure, declarative data format for agents to compose bespoke interfaces from a trusted component catalog, allowing for native styling and incremental updates Designed for the multi-agent mesh (A2A), it offers a framework-agnostic solution to safely render remote agent UIs, with integrations in AG UI, Flutter&amp;apos;s GenUI SDK, Opal, and Gemini Enterprise.</description>
-      <pubDate>Wed, 18 Feb 2026 09:44:30 GMT</pubDate>
+      <pubDate>Thu, 19 Feb 2026 09:42:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>What to expect for open source in 2026</title>
+      <link>https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/</link>
+      <description>Let’s dig into the 2025’s open source data on GitHub to see what we can learn about the future The post What to expect for open source in 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 18 Feb 2026 18:41:42 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Securing the AI software supply chain: Security results across 67 open source projects</title>
@@ -79,14 +87,6 @@
       <pubDate>Fri, 13 Feb 2026 08:05:33 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Welcome to the Eternal September of open source. Here’s what we plan to do for maintainers.</title>
-      <link>https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/</link>
-      <description>Open source is hitting an “Eternal September.” As contribution friction drops, maintainers are adapting with new trust signals, triage approaches, and community-led solutions The post Welcome to the Eternal September of open source Here’s what we plan to do for maintainers. appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 12 Feb 2026 20:14:11 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>How low-bit inference enables efficient AI</title>
