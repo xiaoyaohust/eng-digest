@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Feb 2026 09:42:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 09:38:15 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Pick up exactly where you left off with Session Management in Gemini CLI</title>
-      <link>https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</link>
-      <description>Gemini CLI&amp;apos;s new automatic **Session Management** (v0.20.0+) saves your conversation history, tool outputs, and reasoning, providing project-specific context This feature ensures you never lose your work state, capturing prompts, tool execution details, and usage stats Customize history with cleanup policies in `settings.json`.</description>
-      <pubDate>Thu, 19 Feb 2026 09:42:37 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/pick-up-exactly-where-you-left-off-with-session-management-in-gemini-cli/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Building agents with the ADK and the new Interactions API</title>
       <link>https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</link>
       <description>The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</description>
-      <pubDate>Thu, 19 Feb 2026 09:42:37 GMT</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:38:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,25 @@
       <title>Introducing A2UI: An open project for agent-driven interfaces</title>
       <link>https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/</link>
       <description>A2UI is an open-source project for agent-driven, cross-platform, and generative UI It provides a secure, declarative data format for agents to compose bespoke interfaces from a trusted component catalog, allowing for native styling and incremental updates Designed for the multi-agent mesh (A2A), it offers a framework-agnostic solution to safely render remote agent UIs, with integrations in AG UI, Flutter&amp;apos;s GenUI SDK, Opal, and Gemini Enterprise.</description>
-      <pubDate>Thu, 19 Feb 2026 09:42:37 GMT</pubDate>
+      <pubDate>Fri, 20 Feb 2026 09:38:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Developer’s guide to multi-agent patterns in ADK</title>
+      <link>https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/</link>
+      <description>Learn how to build modular and reliable agentic applications using 8 effective multi-agent design patterns with the Agent Development Kit (ADK).</description>
+      <pubDate>Fri, 20 Feb 2026 09:38:11 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How AI is reshaping developer choice (and Octoverse data proves it)</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/</link>
+      <description>AI is rewiring developer preferences through convenience loops Octoverse 2025 reveals how AI compatibility is becoming the new standard for technology choice The post How AI is reshaping developer choice (and Octoverse data proves it) appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 19 Feb 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>What to expect for open source in 2026</title>
@@ -71,14 +79,6 @@
       <pubDate>Mon, 16 Feb 2026 17:28:52 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-m8azn-instances-new-open-weights-models-in-amazon-bedrock-and-more-february-16-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>Automate repository tasks with GitHub Agentic Workflows</title>
-      <link>https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/</link>
-      <description>Discover GitHub Agentic Workflows, now in technical preview Build automations using coding agents in GitHub Actions to handle triage, documentation, code quality, and more The post Automate repository tasks with GitHub Agentic Workflows appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 13 Feb 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Scaling LLM Post-Training at Netflix</title>
