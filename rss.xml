@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 26 Feb 2026 09:47:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 09:38:09 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Building agents with the ADK and the new Interactions API</title>
-      <link>https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</link>
-      <description>The new Gemini Interactions API enables stateful, multi-turn AI agent workflows, providing a single interface for raw models and the Gemini Deep Research Agent It can be integrated with existing ADK systems as a superior inference engine with simplified state management, or used as a transparent remote A2A agent via InteractionsApiTransport, allowing seamless expansion of multi-agent systems with minimal refactoring.</description>
-      <pubDate>Thu, 26 Feb 2026 09:47:34 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Introducing A2UI: An open project for agent-driven interfaces</title>
       <link>https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/</link>
       <description>A2UI is an open-source project for agent-driven, cross-platform, and generative UI It provides a secure, declarative data format for agents to compose bespoke interfaces from a trusted component catalog, allowing for native styling and incremental updates Designed for the multi-agent mesh (A2A), it offers a framework-agnostic solution to safely render remote agent UIs, with integrations in AG UI, Flutter&amp;apos;s GenUI SDK, Opal, and Gemini Enterprise.</description>
-      <pubDate>Thu, 26 Feb 2026 09:47:34 GMT</pubDate>
+      <pubDate>Fri, 27 Feb 2026 09:38:06 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-a2ui-an-open-project-for-agent-driven-interfaces/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Developer’s guide to multi-agent patterns in ADK</title>
       <link>https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/</link>
       <description>Learn how to build modular and reliable agentic applications using 8 effective multi-agent design patterns with the Agent Development Kit (ADK).</description>
-      <pubDate>Thu, 26 Feb 2026 09:47:34 GMT</pubDate>
+      <pubDate>Fri, 27 Feb 2026 09:38:06 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing Agent Development Kit for TypeScript: Build AI Agents with the Power of a Code-First Approach</title>
+      <link>https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/</link>
+      <description>Introducing the Agent Development Kit (ADK) for TypeScript, an open-source framework for building complex, multi-agent AI systems with a code-first approach Developers can define agent logic in TypeScript, applying traditional software development best practices (version control, testing) ADK offers end-to-end type safety, modularity, and deployment-agnostic functionality, leveraging the familiar TypeScript/JavaScript ecosystem.</description>
+      <pubDate>Fri, 27 Feb 2026 09:38:06 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>What’s new with GitHub Copilot coding agent</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/</link>
+      <description>GitHub Copilot coding agent now includes a model picker, self-review, built-in security scanning, custom agents, and CLI handoff Here&amp;apos;s what&amp;apos;s new and how to use it The post What’s new with GitHub Copilot coding agent appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 26 Feb 2026 20:47:02 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/</link>
+      <description>AWS announces the general availability of AWS Security Hub Extended, a unified, full-stack enterprise security solution It brings together AWS detection services and curated partner solutions through a single, simplified experience.</description>
+      <pubDate>Thu, 26 Feb 2026 18:52:06 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Using LLMs to amplify human labeling and improve Dash search relevance</title>
+      <link>https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash</link>
+      <description>How we train Dash&amp;apos;s search ranking models with a mix of human and LLM-assisted labeling.</description>
+      <pubDate>Thu, 26 Feb 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash</guid>
+      <source>Dropbox Engineering</source>
     </item>
     <item>
       <title>RCCLX: Innovating GPU Communications on AMD Platforms</title>
@@ -81,22 +105,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>What to expect for open source in 2026</title>
-      <link>https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/</link>
-      <description>Let’s dig into the 2025’s open source data on GitHub to see what we can learn about the future The post What to expect for open source in 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 18 Feb 2026 18:41:42 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/what-to-expect-for-open-source-in-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Amazon EC2 Hpc8a Instances powered by 5th Gen AMD EPYC processors are now available</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/</link>
-      <description>Amazon EC2 Hpc8a instances, powered by 5th Gen AMD EPYC processors, deliver up to 40% higher performance, increased memory bandwidth, and 300 Gbps Elastic Fabric Adapter networking, helping customers accelerate compute-intensive simulations, engineering workloads, and tightly coupled HPC applications.</description>
-      <pubDate>Mon, 16 Feb 2026 23:12:37 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-hpc8a-instances-powered-by-5th-gen-amd-epyc-processors-are-now-available/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Scaling LLM Post-Training at Netflix</title>
       <link>https://netflixtechblog.com/scaling-llm-post-training-at-netflix-0046f8790194?source=rss----2615bd06b42e---4</link>
       <description>This blog describes the architecture and engineering philosophy of our internal Post-Training Framework, built by the AI Platform team to hide infrastructure complexity so researchers and model developers can focus on model innovation — not distributed systems plumbing.A Model Developer’s Post-Training JourneyPost-training often starts deceptively simply: curate proprietary domain data, load an open-weight model from Hugging Face, and iterate batches through it In particular, we extend Single Program, Multiple Data (SPMD) style SFT workloads to run online RL with a hybrid single-controller + SPMD execution model, which we’ll describe next.Today, this framework supports research use cases ranging from post-training large-scale foundation models to fine-tuning specialized expert models Rather than training directly on transformers model classes, we maintain our own optimized, unified model definitions that can still load/save Hugging Face checkpoints</description>
@@ -143,14 +151,6 @@
       <pubDate>Mon, 09 Feb 2026 17:00:33 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Engineering VP Josh Clemm on how we use knowledge graphs, MCP, and DSPy in Dash</title>
-      <link>https://dropbox.tech/machine-learning/vp-josh-clemm-knowledge-graphs-mcp-and-dspy-dash</link>
-      <description>Engineering VP Josh Clemm deep-dives into how we think about knowledge graphs, indexes, MCP, and prompt optimization using tools like DSPy.</description>
-      <pubDate>Wed, 28 Jan 2026 18:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/vp-josh-clemm-knowledge-graphs-mcp-and-dspy-dash</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
