@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 28 Feb 2026 09:23:54 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 09:27:41 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Developer’s guide to multi-agent patterns in ADK</title>
       <link>https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/</link>
       <description>Learn how to build modular and reliable agentic applications using 8 effective multi-agent design patterns with the Agent Development Kit (ADK).</description>
-      <pubDate>Sat, 28 Feb 2026 09:23:50 GMT</pubDate>
+      <pubDate>Sun, 01 Mar 2026 09:27:38 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Gemini 3 Flash is now available in Gemini CLI</title>
       <link>https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/</link>
       <description>Gemini 3 Flash is now available in Gemini CLI It delivers Pro-grade coding performance with low latency and a lower cost, matching Gemini 3 Pro&amp;apos;s SWE-bench Verified score of 76% It significantly outperforms 2.5 Pro, improving auto-routing and agentic coding</description>
-      <pubDate>Sat, 28 Feb 2026 09:23:50 GMT</pubDate>
+      <pubDate>Sun, 01 Mar 2026 09:27:38 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/gemini-3-flash-is-now-available-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Introducing Agent Development Kit for TypeScript: Build AI Agents with the Power of a Code-First Approach</title>
       <link>https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/</link>
       <description>Introducing the Agent Development Kit (ADK) for TypeScript, an open-source framework for building complex, multi-agent AI systems with a code-first approach Developers can define agent logic in TypeScript, applying traditional software development best practices (version control, testing) ADK offers end-to-end type safety, modularity, and deployment-agnostic functionality, leveraging the familiar TypeScript/JavaScript ecosystem.</description>
-      <pubDate>Sat, 28 Feb 2026 09:23:50 GMT</pubDate>
+      <pubDate>Sun, 01 Mar 2026 09:27:38 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Mount Mayhem at Netflix: Scaling Containers on Modern CPUs</title>
+      <link>https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4</link>
+      <description>Examining the mount table made it clear that these mounts were related to container creation.The affected nodes were almost all r5.metal instances, and were starting applications whose container image contained many layers (50+).ChallengeMount Lock ContentionThe flamegraph in Figure 1 clearly shows where containerd spent its time Almost all of the time is spent trying to grab a kernel-level lock as part of the various mount-related activities when assembling the container’s root filesystem!Figure 1: Flamegraph depicting lock contentionLooking closer, containerd executes the following calls for each layer if using user namespaces:open_tree() to get a reference to the layer / directorymount_setattr() to set the idmap to match the container’s user range, shifting the ownership so this container can access the filesmove_mount() to create a bind mount on the host with this new idmap appliedThese bind mounts are owned by the container’s user range and are then used as the lowerdirs to create the overlayfs-based rootfs for the container The kernel VFS has various global locks related to the mount table, and each of these mounts requires taking that lock as we can see in the top of the flamegraph</description>
+      <pubDate>Sat, 28 Feb 2026 22:55:53 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>From idea to pull request: A practical guide to building with GitHub Copilot CLI</title>
@@ -119,14 +127,6 @@
       <pubDate>Thu, 12 Feb 2026 18:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-low-bit-inference-enables-efficient-ai</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Automating RDS Postgres to Aurora Postgres Migration</title>
-      <link>https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4</link>
-      <description>At this stage, the Aurora cluster is created and attached to the RDS PostgreSQL primary as a replica, establishing continuous replication from the source RDS PostgreSQL instance The cluster is fully operational for validation and performance testing, but it is not yet writable — RDS remains the authoritative primary.Quiescence PhaseThe goal of the quiescence phase is to transition client applications from the source RDS PostgreSQL instance to the Aurora PostgreSQL cluster as the new primary database, while preserving data consistency during cutover.The first step in this process is to stop all write traffic to the source RDS PostgreSQL instance to guarantee consistency In addition, any logical replication slots removed during the migration must be recreated so that CDC consumers can continue processing changes from the source database.Once connectivity and replication slots are restored, the RDS PostgreSQL instance can safely resume its role as the primary source of truth.Post-quiescence Rolling back after cutover, once the Aurora PostgreSQL cluster is serving production traffic, is significantly more complex</description>
-      <pubDate>Thu, 12 Feb 2026 14:07:19 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/automating-rds-postgres-to-aurora-postgres-migration-261ca045447f?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It</title>
