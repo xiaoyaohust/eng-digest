@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 06 Mar 2026 09:35:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2026 09:26:40 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Conductor: Introducing context-driven development for Gemini CLI</title>
       <link>https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/</link>
       <description>Conductor is a new Gemini CLI extension that promotes context-driven development It shifts project context from chat logs to persistent Markdown files for formal specs and plans, ensuring AI agents adhere to project goals, style, and tech stack This structured workflow is great for &amp;quot;brownfield&amp;quot; projects and teams, allowing for safe iteration and consistent code contributions while keeping the human developer in control.</description>
-      <pubDate>Fri, 06 Mar 2026 09:35:53 GMT</pubDate>
+      <pubDate>Sat, 07 Mar 2026 09:26:36 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Introducing Agent Development Kit for TypeScript: Build AI Agents with the Power of a Code-First Approach</title>
-      <link>https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/</link>
-      <description>Introducing the Agent Development Kit (ADK) for TypeScript, an open-source framework for building complex, multi-agent AI systems with a code-first approach Developers can define agent logic in TypeScript, applying traditional software development best practices (version control, testing) ADK offers end-to-end type safety, modularity, and deployment-agnostic functionality, leveraging the familiar TypeScript/JavaScript ecosystem.</description>
-      <pubDate>Fri, 06 Mar 2026 09:35:53 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-agent-development-kit-for-typescript-build-ai-agents-with-the-power-of-a-code-first-approach/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Real-World Agent Examples with Gemini 3</title>
       <link>https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/</link>
       <description>Gemini 3 is powering the next generation of reliable, production-ready AI agents This post highlights 6 open-source framework collaborations (ADK, Agno, Browser Use, Eigent, Letta, mem0), demonstrating practical agentic workflows for tasks like deep search, multi-agent systems, browser and enterprise automation, and stateful agents with advanced memory Clone the examples and start building today.</description>
-      <pubDate>Fri, 06 Mar 2026 09:35:53 GMT</pubDate>
+      <pubDate>Sat, 07 Mar 2026 09:26:36 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>A Developer's Guide to Debugging JAX on Cloud TPUs: Essential Tools and Techniques</title>
+      <link>https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/</link>
+      <description>A practical guide to debugging and profiling JAX on Cloud TPUs It outlines core components (libtpu, JAX/jaxlib) and essential techniques Tools covered include: Verbose Logging (via libtpu env vars), TPU Monitoring Library for performance metrics, tpu-info for real-time utilization, XLA HLO Dumps for compiler debugging, and the XProf suite for in-depth performance analysis.</description>
+      <pubDate>Sat, 07 Mar 2026 09:26:36 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework</title>
+      <link>https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/</link>
+      <description>GitHub Security Lab Taskflow Agent is very effective at finding Auth Bypasses, IDORs, Token Leaks, and other high-impact vulnerabilities The post How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 06 Mar 2026 21:09:04 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Scaling Global Storytelling: Modernizing Localization Analytics at Netflix</title>
+      <link>https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4</link>
+      <description>However, this growth created technical debt within our systems: a fragmented landscape of analytics workflows, duplicated pipelines, and siloed dashboards that we are now actively modernizing.The Challenge: “Who Made This Dub?”Historically, business logic for localization metrics was replicated across isolated domains To fix this, we revamped our Language Asset Consumption tool — instead of reporting dub and subtitle metrics independently, we combine audio and text languages into one consumption language that helps differentiate Original Language versus Localized Consumption and measure member preferences between subtitles, dubs, or a combination of both for a given language By centralizing business logic into unified tables — such as a “Language Asset Producer” table — we solve the “Who made this dub?” problem once</description>
+      <pubDate>Fri, 06 Mar 2026 15:01:27 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>60 million Copilot code reviews and counting</title>
@@ -55,14 +71,6 @@
       <pubDate>Wed, 04 Mar 2026 20:04:16 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>How we rebuilt the search architecture for high availability in GitHub Enterprise Server</title>
-      <link>https://github.blog/engineering/architecture-optimization/how-we-rebuilt-the-search-architecture-for-high-availability-in-github-enterprise-server/</link>
-      <description>Here&amp;apos;s how we the search experience better, faster, and more resilient for GHES customers The post How we rebuilt the search architecture for high availability in GitHub Enterprise Server appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 03 Mar 2026 18:45:09 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/how-we-rebuilt-the-search-architecture-for-high-availability-in-github-enterprise-server/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Optimizing Recommendation Systems with JDK’s Vector API</title>
@@ -143,14 +151,6 @@
       <pubDate>Tue, 24 Feb 2026 21:30:54 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix</title>
-      <link>https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss----2615bd06b42e---4</link>
-      <description>Consisting of tens of millions of individual shots across multiple titles, our diverse yet entertainment-specific dataset provides the perfect foundation to train multimodal media understanding models that enable many capabilities across the company such as ads relevancy, clip popularity prediction, and clip tagging.For these reasons, we developed the Netflix Media Foundational Model (MediaFM), our new, in-house, multimodal content embedding model For each shot, we generate three distinct embeddings from its core modalities:Video: an internal model called SeqCLIP (a CLIP-style model fine-tuned on video retrieval datasets) is used to embed frames sampled at uniform intervals from segmented shotsAudio: the audio samples from the same shots are embedded using Meta FAIR’s wav2vec2Timed Text: OpenAI’s text-embedding-3-large model is used to encode the corresponding timed text (e.g., closed captions, audio descriptions, or subtitles) for each shotFor each shot, the three embeddings² are concatenated and unit-normed to form a single 2304-dimensional fused embedding vector This avoids the architectural fragility of fine-tuning, allowing us to enhance our existing embedding-based workflows with new modalities more flexibly.All of our data has audio and video; we zero-pad for missing timed text data, which is relatively likely to occur (e.g., in shots without dialogue).The title-level tasks couldn’t be evaluated with the VertexAI MM and Marengo embedding models as the videos exceed the length limit set by the APIs.AcknowledgementsWe would like to thank Matt Thanabalan and Chaitanya Ekanadham for their contributions to this work.MediaFM: The Multimodal AI Foundation for Media Understanding at Netflix was originally published in Netflix TechBlog on Medium, where people are continuing the conversation by highlighting and responding to this story.</description>
-      <pubDate>Mon, 23 Feb 2026 18:24:32 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/mediafm-the-multimodal-ai-foundation-for-media-understanding-at-netflix-e8c28df82e2d?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>How low-bit inference enables efficient AI</title>
