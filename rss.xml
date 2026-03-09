@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 08 Mar 2026 09:27:22 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2026 09:48:13 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Conductor: Introducing context-driven development for Gemini CLI</title>
       <link>https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/</link>
       <description>Conductor is a new Gemini CLI extension that promotes context-driven development It shifts project context from chat logs to persistent Markdown files for formal specs and plans, ensuring AI agents adhere to project goals, style, and tech stack This structured workflow is great for &amp;quot;brownfield&amp;quot; projects and teams, allowing for safe iteration and consistent code contributions while keeping the human developer in control.</description>
-      <pubDate>Sun, 08 Mar 2026 09:27:19 GMT</pubDate>
+      <pubDate>Mon, 09 Mar 2026 09:48:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Real-World Agent Examples with Gemini 3</title>
       <link>https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/</link>
       <description>Gemini 3 is powering the next generation of reliable, production-ready AI agents This post highlights 6 open-source framework collaborations (ADK, Agno, Browser Use, Eigent, Letta, mem0), demonstrating practical agentic workflows for tasks like deep search, multi-agent systems, browser and enterprise automation, and stateful agents with advanced memory Clone the examples and start building today.</description>
-      <pubDate>Sun, 08 Mar 2026 09:27:19 GMT</pubDate>
+      <pubDate>Mon, 09 Mar 2026 09:48:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>A Developer's Guide to Debugging JAX on Cloud TPUs: Essential Tools and Techniques</title>
       <link>https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/</link>
       <description>A practical guide to debugging and profiling JAX on Cloud TPUs It outlines core components (libtpu, JAX/jaxlib) and essential techniques Tools covered include: Verbose Logging (via libtpu env vars), TPU Monitoring Library for performance metrics, tpu-info for real-time utilization, XLA HLO Dumps for compiler debugging, and the XProf suite for in-depth performance analysis.</description>
-      <pubDate>Sun, 08 Mar 2026 09:27:19 GMT</pubDate>
+      <pubDate>Mon, 09 Mar 2026 09:48:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/</guid>
       <source>Google Developers</source>
     </item>
