@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 09 Mar 2026 09:48:13 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2026 09:41:02 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Conductor: Introducing context-driven development for Gemini CLI</title>
-      <link>https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/</link>
-      <description>Conductor is a new Gemini CLI extension that promotes context-driven development It shifts project context from chat logs to persistent Markdown files for formal specs and plans, ensuring AI agents adhere to project goals, style, and tech stack This structured workflow is great for &amp;quot;brownfield&amp;quot; projects and teams, allowing for safe iteration and consistent code contributions while keeping the human developer in control.</description>
-      <pubDate>Mon, 09 Mar 2026 09:48:11 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/conductor-introducing-context-driven-development-for-gemini-cli/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Real-World Agent Examples with Gemini 3</title>
       <link>https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/</link>
       <description>Gemini 3 is powering the next generation of reliable, production-ready AI agents This post highlights 6 open-source framework collaborations (ADK, Agno, Browser Use, Eigent, Letta, mem0), demonstrating practical agentic workflows for tasks like deep search, multi-agent systems, browser and enterprise automation, and stateful agents with advanced memory Clone the examples and start building today.</description>
-      <pubDate>Mon, 09 Mar 2026 09:48:11 GMT</pubDate>
+      <pubDate>Tue, 10 Mar 2026 09:40:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/real-world-agent-examples-with-gemini-3/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>A Developer's Guide to Debugging JAX on Cloud TPUs: Essential Tools and Techniques</title>
       <link>https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/</link>
       <description>A practical guide to debugging and profiling JAX on Cloud TPUs It outlines core components (libtpu, JAX/jaxlib) and essential techniques Tools covered include: Verbose Logging (via libtpu env vars), TPU Monitoring Library for performance metrics, tpu-info for real-time utilization, XLA HLO Dumps for compiler debugging, and the XProf suite for in-depth performance analysis.</description>
-      <pubDate>Mon, 09 Mar 2026 09:48:11 GMT</pubDate>
+      <pubDate>Tue, 10 Mar 2026 09:40:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-developers-guide-to-debugging-jax-on-cloud-tpus-essential-tools-and-techniques/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Under the Hood: Universal Commerce Protocol (UCP)</title>
+      <link>https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/</link>
+      <description>The Universal Commerce Protocol (UCP) is a new, open-source standard for agentic commerce, co-developed by Google and industry leaders It establishes a common, secure language to connect consumer surfaces (like Gemini and AI Mode in Search) with business backends, enabling seamless shopping from product discovery to purchase UCP simplifies integration for businesses, supports various payment providers, and is designed to power the next generation of conversational commerce experiences.</description>
+      <pubDate>Tue, 10 Mar 2026 09:40:59 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Amazon Connect Health, Bedrock AgentCore Policy, GameDay Europe, and more (March 9, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-connect-health-bedrock-agentcore-policy-gameday-europe-and-more-march-9-2026/</link>
+      <description>Fiti AWS Student Community Kenya Last week was an incredible whirlwind: a round of meetups, hands-on workshops, and career discussions across Kenya that culminated with the AWS Student Community Day at Meru University of Science and Technology, with keynotes from my colleagues Veliswa and Tiffany, and sessions on everything from GitOps to cloud-native engineering, and […]</description>
+      <pubDate>Mon, 09 Mar 2026 16:15:35 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-connect-health-bedrock-agentcore-policy-gameday-europe-and-more-march-9-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>How Advanced Browsing Protection Works in Messenger</title>
+      <link>https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/</link>
+      <description>We’re sharing the technical details behind how Advanced Browsing Protection (ABP) in Messenger protects the privacy of the links clicked on within chats while still warning people about malicious links We hope that this post has helped to illuminate some of the engineering challenges and infrastructure components involved for providing this feature for our users. [...] Read More The post How Advanced Browsing Protection Works in Messenger appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 09 Mar 2026 16:00:36 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Under the hood: Security architecture of GitHub Agentic Workflows</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/</link>
+      <description>GitHub Agentic Workflows are built with isolation, constrained outputs, and comprehensive logging Learn how our threat model and security architecture help teams run agents safely in GitHub Actions The post Under the hood: Security architecture of GitHub Agentic Workflows appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 09 Mar 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework</title>
@@ -54,14 +78,6 @@
       <description>How Copilot code review helps teams keep up with AI-accelerated code changes The post 60 million Copilot code reviews and counting appeared first on The GitHub Blog.</description>
       <pubDate>Thu, 05 Mar 2026 20:10:43 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/60-million-copilot-code-reviews-and-counting/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Scaling AI opportunity across the globe: Learnings from GitHub and Andela</title>
-      <link>https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/</link>
-      <description>Developers connected to Andela share how they’re learning AI tools inside real production workflows The post Scaling AI opportunity across the globe: Learnings from GitHub and Andela appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 05 Mar 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/career-growth/scaling-ai-opportunity-across-the-globe-learnings-from-github-and-andela/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -129,28 +145,12 @@
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>AWS Security Hub Extended offers full-stack enterprise security with curated partner solutions</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/</link>
-      <description>AWS announces the general availability of AWS Security Hub Extended, a unified, full-stack enterprise security solution It brings together AWS detection services and curated partner solutions through a single, simplified experience.</description>
-      <pubDate>Thu, 26 Feb 2026 18:52:06 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-security-hub-extended-offers-full-stack-enterprise-security-with-curated-partner-solutions/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Using LLMs to amplify human labeling and improve Dash search relevance</title>
       <link>https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash</link>
       <description>How we train Dash&amp;apos;s search ranking models with a mix of human and LLM-assisted labeling.</description>
       <pubDate>Thu, 26 Feb 2026 17:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>RCCLX: Innovating GPU Communications on AMD Platforms</title>
-      <link>https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/</link>
-      <description>We are open-sourcing the initial version of RCCLX – an enhanced version of RCCL that we developed and tested on Meta’s internal workloads RCCLX is fully integrated with Torchcomms and aims to empower researchers and developers to accelerate innovation, regardless of their chosen backend The post RCCLX: Innovating GPU Communications on AMD Platforms appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 24 Feb 2026 21:30:54 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>How low-bit inference enables efficient AI</title>
