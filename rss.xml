@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 11 Mar 2026 09:39:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 09:40:13 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Under the Hood: Universal Commerce Protocol (UCP)</title>
-      <link>https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/</link>
-      <description>The Universal Commerce Protocol (UCP) is a new, open-source standard for agentic commerce, co-developed by Google and industry leaders It establishes a common, secure language to connect consumer surfaces (like Gemini and AI Mode in Search) with business backends, enabling seamless shopping from product discovery to purchase UCP simplifies integration for businesses, supports various payment providers, and is designed to power the next generation of conversational commerce experiences.</description>
-      <pubDate>Wed, 11 Mar 2026 09:39:53 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/under-the-hood-universal-commerce-protocol-ucp/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>A Guide to Fine-Tuning FunctionGemma</title>
       <link>https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</link>
       <description>FunctionGemma is a specialized AI model for function calling This post explains why fine-tuning is key to resolving tool selection ambiguity (e.g., internal vs It also introduces the &amp;quot;FunctionGemma Tuning Lab,&amp;quot; a no-code demo on Hugging Face Spaces, which streamlines the entire fine-tuning process for developers.</description>
-      <pubDate>Wed, 11 Mar 2026 09:39:53 GMT</pubDate>
+      <pubDate>Thu, 12 Mar 2026 09:40:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Wed, 11 Mar 2026 09:39:53 GMT</pubDate>
+      <pubDate>Thu, 12 Mar 2026 09:40:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>LiteRT: The Universal Framework for On-Device AI</title>
+      <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
+      <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
+      <pubDate>Thu, 12 Mar 2026 09:40:10 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub availability report: February 2026</title>
+      <link>https://github.blog/news-insights/company-news/github-availability-report-february-2026/</link>
+      <description>In February, we experienced six incidents that resulted in degraded performance across GitHub services The post GitHub availability report: February 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 12 Mar 2026 03:23:54 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-february-2026/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Addressing GitHub’s recent availability issues</title>
+      <link>https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/</link>
+      <description>GitHub recently experienced several availability incidents We understand the impact these outages have on our customers and are sharing details on the stabilization work we’re prioritizing right now The post Addressing GitHub’s recent availability issues appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 11 Mar 2026 21:41:51 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>The era of “AI as text” is over. Execution is the new interface.</title>
@@ -63,22 +79,6 @@
       <pubDate>Mon, 09 Mar 2026 16:00:36 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Under the hood: Security architecture of GitHub Agentic Workflows</title>
-      <link>https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/</link>
-      <description>GitHub Agentic Workflows are built with isolation, constrained outputs, and comprehensive logging Learn how our threat model and security architecture help teams run agents safely in GitHub Actions The post Under the hood: Security architecture of GitHub Agentic Workflows appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 09 Mar 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework</title>
-      <link>https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/</link>
-      <description>GitHub Security Lab Taskflow Agent is very effective at finding Auth Bypasses, IDORs, Token Leaks, and other high-impact vulnerabilities The post How to scan for vulnerabilities with GitHub Security Lab’s open source AI-powered framework appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 06 Mar 2026 21:09:04 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/how-to-scan-for-vulnerabilities-with-github-security-labs-open-source-ai-powered-framework/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Scaling Global Storytelling: Modernizing Localization Analytics at Netflix</title>
