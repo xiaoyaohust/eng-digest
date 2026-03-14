@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 13 Mar 2026 09:37:10 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 09:30:40 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>A Guide to Fine-Tuning FunctionGemma</title>
       <link>https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</link>
       <description>FunctionGemma is a specialized AI model for function calling This post explains why fine-tuning is key to resolving tool selection ambiguity (e.g., internal vs It also introduces the &amp;quot;FunctionGemma Tuning Lab,&amp;quot; a no-code demo on Hugging Face Spaces, which streamlines the entire fine-tuning process for developers.</description>
-      <pubDate>Fri, 13 Mar 2026 09:37:07 GMT</pubDate>
+      <pubDate>Sat, 14 Mar 2026 09:30:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Fri, 13 Mar 2026 09:37:07 GMT</pubDate>
+      <pubDate>Sat, 14 Mar 2026 09:30:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>LiteRT: The Universal Framework for On-Device AI</title>
       <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
       <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
-      <pubDate>Fri, 13 Mar 2026 09:37:07 GMT</pubDate>
+      <pubDate>Sat, 14 Mar 2026 09:30:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Patch Me If You Can: AI Codemods for Secure-by-Default Android Apps</title>
+      <link>https://engineering.fb.com/2026/03/13/android/ai-codemods-secure-by-default-android-apps-meta-tech-podcast/</link>
+      <description>Even seemingly simple engineering tasks — like updating an API — can become monumental undertakings when you’re dealing with millions of lines of code and thousands of engineers, especially if the changes are security-related Nowhere is this more apparent than in mobile security, where a single class of vulnerability can be replicated across hundreds of [...] Read More The post Patch Me If You Can: AI Codemods for Secure-by-Default Android Apps appeared first on Engineering at Meta.</description>
+      <pubDate>Fri, 13 Mar 2026 16:00:26 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/03/13/android/ai-codemods-secure-by-default-android-apps-meta-tech-podcast/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Twenty years of Amazon S3 and building what’s next</title>
+      <link>https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/</link>
+      <description>Some reflections on 20 years of innovations in Amazon S3 including S3 Tables, S3 Vectors and S3 Metadata.</description>
+      <pubDate>Fri, 13 Mar 2026 12:58:39 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Introducing account regional namespaces for Amazon S3 general purpose buckets</title>
@@ -113,14 +129,6 @@
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>Introducing OpenClaw on Amazon Lightsail to run your autonomous private AI agents</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/</link>
-      <description>AWS launches OpenClaw on Amazon Lightsail to run OpenClaw instance, pairing your browser, enabling AI capabilities, and optionally connecting messaging channels Your Lightsail OpenClaw instance is pre-configured with Amazon Bedrock for starting with your AI assistant immediately — no additional configuration required.</description>
-      <pubDate>Wed, 04 Mar 2026 20:04:16 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-openclaw-on-amazon-lightsail-to-run-your-autonomous-private-ai-agents/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Optimizing Recommendation Systems with JDK’s Vector API</title>
       <link>https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss----2615bd06b42e---4</link>
       <description>When we looked at CPU profiles for this service, one feature kept standing out: video serendipity scoring — the logic that answers a simple question:“How different is this new title from what you’ve been watching so far?”This single feature was consuming about 7.5% of total CPU on each node running the service More crucially for us, it’s pure Java: no native dependencies, no JNI transitions, and a development model that looks like normal Java code rather than platform-specific assembly or intrinsics.This was a particularly good match for our workload because we had already moved embeddings into flat, contiguous double[] buffers, and the hot loop was dominated by large numbers of dot products So we designed the fallback behavior explicitly: At startup, we detect Vector API support and use the SIMD batched matmul when available; otherwise we fall back to an optimized scalar path, with single-video requests continuing to use the per-item implementation.That gives us a clean operational story: services can opt in to the Vector API for maximum performance, but the system remains safe and predictable without it.Results in Production:With the full design in place with batching, flat buffers, ThreadLocal reuse, and the Vector API, we ran canaries that run production traffic</description>
@@ -142,14 +150,6 @@
       <description>FFmpeg is truly a multi-tool for media processing For the people who use our apps, FFmpeg plays an important role in enabling new video experiences [...] Read More The post FFmpeg at Meta: Media Processing at Scale appeared first on Engineering at Meta.</description>
       <pubDate>Mon, 02 Mar 2026 20:00:12 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Investing in Infrastructure: Meta’s Renewed Commitment to jemalloc</title>
-      <link>https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/</link>
-      <description>Meta recognizes the long-term benefits of jemalloc, a high-performance memory allocator, in its software infrastructure We are renewing focus on jemalloc, aiming to reduce maintenance needs and modernize the codebase while continuing to evolve the allocator to adapt to the latest hardware and workloads We are committed to continuing to develop jemalloc development with the [...] Read More</description>
-      <pubDate>Mon, 02 Mar 2026 17:00:04 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
