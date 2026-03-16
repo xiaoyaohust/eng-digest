@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 15 Mar 2026 09:31:48 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 10:04:23 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>A Guide to Fine-Tuning FunctionGemma</title>
       <link>https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</link>
       <description>FunctionGemma is a specialized AI model for function calling This post explains why fine-tuning is key to resolving tool selection ambiguity (e.g., internal vs It also introduces the &amp;quot;FunctionGemma Tuning Lab,&amp;quot; a no-code demo on Hugging Face Spaces, which streamlines the entire fine-tuning process for developers.</description>
-      <pubDate>Sun, 15 Mar 2026 09:31:45 GMT</pubDate>
+      <pubDate>Mon, 16 Mar 2026 10:04:20 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Sun, 15 Mar 2026 09:31:45 GMT</pubDate>
+      <pubDate>Mon, 16 Mar 2026 10:04:20 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>LiteRT: The Universal Framework for On-Device AI</title>
       <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
       <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
-      <pubDate>Sun, 15 Mar 2026 09:31:45 GMT</pubDate>
+      <pubDate>Mon, 16 Mar 2026 10:04:20 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
       <source>Google Developers</source>
     </item>
