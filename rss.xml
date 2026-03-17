@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 16 Mar 2026 10:04:23 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 09:54:10 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>A Guide to Fine-Tuning FunctionGemma</title>
       <link>https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</link>
       <description>FunctionGemma is a specialized AI model for function calling This post explains why fine-tuning is key to resolving tool selection ambiguity (e.g., internal vs It also introduces the &amp;quot;FunctionGemma Tuning Lab,&amp;quot; a no-code demo on Hugging Face Spaces, which streamlines the entire fine-tuning process for developers.</description>
-      <pubDate>Mon, 16 Mar 2026 10:04:20 GMT</pubDate>
+      <pubDate>Tue, 17 Mar 2026 09:54:07 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Mon, 16 Mar 2026 10:04:20 GMT</pubDate>
+      <pubDate>Tue, 17 Mar 2026 09:54:07 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>LiteRT: The Universal Framework for On-Device AI</title>
       <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
       <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
-      <pubDate>Mon, 16 Mar 2026 10:04:20 GMT</pubDate>
+      <pubDate>Tue, 17 Mar 2026 09:54:07 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/</link>
+      <description>Twenty years ago this past week, Amazon S3 launched publicly on March 14, 2006 While Amazon Simple Storage Service is often considered the foundational storage service that defined cloud infrastructure, what began as a simple object storage service has grown into something far larger in scope and scale As of March 2026, S3 stores more […]</description>
+      <pubDate>Mon, 16 Mar 2026 16:02:17 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>GitHub for Beginners: Getting started with GitHub Actions</title>
+      <link>https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions/</link>
+      <description>Set up your first GitHub Actions workflow in this how-to guide The post GitHub for Beginners: Getting started with GitHub Actions appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 16 Mar 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Patch Me If You Can: AI Codemods for Secure-by-Default Android Apps</title>
@@ -89,28 +105,12 @@
       <source>LinkedIn Engineering</source>
     </item>
     <item>
-      <title>Addressing GitHub’s recent availability issues</title>
-      <link>https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/</link>
-      <description>GitHub recently experienced several availability incidents We understand the impact these outages have on our customers and are sharing details on the stabilization work we’re prioritizing right now The post Addressing GitHub’s recent availability issues appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 11 Mar 2026 21:41:51 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Analyzing first-party fraud trends: Account, free trial, and refund abuse</title>
       <link>https://stripe.com/blog/analyzing-first-party-fraud-trends-account-free-trial-and-refund-abuse</link>
       <description>From November 2025 to February 2026, our models detected 6.2x more abusive free trials across the Stripe network This is part of a broader shift toward first-party fraud, where legitimate users abuse policies by setting up multiple accounts, cycling through free trials, or exploiting refunds.</description>
       <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/analyzing-first-party-fraud-trends-account-free-trial-and-refund-abuse</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Amazon Connect Health, Bedrock AgentCore Policy, GameDay Europe, and more (March 9, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-connect-health-bedrock-agentcore-policy-gameday-europe-and-more-march-9-2026/</link>
-      <description>Fiti AWS Student Community Kenya Last week was an incredible whirlwind: a round of meetups, hands-on workshops, and career discussions across Kenya that culminated with the AWS Student Community Day at Meru University of Science and Technology, with keynotes from my colleagues Veliswa and Tiffany, and sessions on everything from GitOps to cloud-native engineering, and […]</description>
-      <pubDate>Mon, 09 Mar 2026 16:15:35 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-connect-health-bedrock-agentcore-policy-gameday-europe-and-more-march-9-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>How Advanced Browsing Protection Works in Messenger</title>
