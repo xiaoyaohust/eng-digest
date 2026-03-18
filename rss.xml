@@ -6,31 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 17 Mar 2026 09:54:10 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 09:51:56 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>A Guide to Fine-Tuning FunctionGemma</title>
-      <link>https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</link>
-      <description>FunctionGemma is a specialized AI model for function calling This post explains why fine-tuning is key to resolving tool selection ambiguity (e.g., internal vs It also introduces the &amp;quot;FunctionGemma Tuning Lab,&amp;quot; a no-code demo on Hugging Face Spaces, which streamlines the entire fine-tuning process for developers.</description>
-      <pubDate>Tue, 17 Mar 2026 09:54:07 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/a-guide-to-fine-tuning-functiongemma/</guid>
+      <title>LiteRT: The Universal Framework for On-Device AI</title>
+      <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
+      <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
+      <pubDate>Wed, 18 Mar 2026 09:51:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Tue, 17 Mar 2026 09:54:07 GMT</pubDate>
+      <pubDate>Wed, 18 Mar 2026 09:51:54 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>LiteRT: The Universal Framework for On-Device AI</title>
-      <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
-      <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
-      <pubDate>Tue, 17 Mar 2026 09:54:07 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
+      <title>Beyond the Chatbot: A Blueprint for Trustable AI</title>
+      <link>https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</link>
+      <description>At Thunderhill Raceway Park, a team of Google Developer Experts (GDEs) put a new &amp;quot;Trustable AI Framework&amp;quot; to the test Here is how they used GCP, Gemini and Antigravity to turn high-velocity racing into a masterclass for agentic architecture.</description>
+      <pubDate>Wed, 18 Mar 2026 09:51:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation</title>
+      <link>https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/</link>
+      <description>Meta’s Ranking Engineer Agent (REA) autonomously executes key steps across the end-to-end machine learning (ML) lifecycle for ads ranking models This post covers REA’s ML experimentation capabilities: autonomously generating hypotheses, launching training jobs, debugging failures, and iterating on results The post Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 17 Mar 2026 20:07:52 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>How we optimized Dash's relevance judge with DSPy</title>
+      <link>https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy</link>
+      <description>We used DSPy to turn prompt engineering for our relevance judge into a measurable, automated optimization loop, improving task performance, cost, and how reliably it works in production.</description>
+      <pubDate>Tue, 17 Mar 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>Investing in the people shaping open source and securing the future together</title>
+      <link>https://github.blog/security/supply-chain-security/investing-in-the-people-shaping-open-source-and-securing-the-future-together/</link>
+      <description>See how GitHub is investing in open source security funding maintainers, partnering with Alpha-Omega, and expanding access to help reduce burden and strengthen software supply chains The post Investing in the people shaping open source and securing the future together appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 17 Mar 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/investing-in-the-people-shaping-open-source-and-securing-the-future-together/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)</title>
@@ -78,14 +102,6 @@
       <description>AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into continuous, rapid resolutions The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blog.</description>
       <pubDate>Thu, 12 Mar 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>GitHub availability report: February 2026</title>
-      <link>https://github.blog/news-insights/company-news/github-availability-report-february-2026/</link>
-      <description>In February, we experienced six incidents that resulted in degraded performance across GitHub services The post GitHub availability report: February 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 12 Mar 2026 03:23:54 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-february-2026/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -145,28 +161,12 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>FFmpeg at Meta: Media Processing at Scale</title>
-      <link>https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/</link>
-      <description>FFmpeg is truly a multi-tool for media processing For the people who use our apps, FFmpeg plays an important role in enabling new video experiences [...] Read More The post FFmpeg at Meta: Media Processing at Scale appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 02 Mar 2026 20:00:12 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/03/02/video-engineering/ffmpeg-at-meta-media-processing-at-scale/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
       <title>Mount Mayhem at Netflix: Scaling Containers on Modern CPUs</title>
       <link>https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4</link>
       <description>Examining the mount table made it clear that these mounts were related to container creation.The affected nodes were almost all r5.metal instances, and were starting applications whose container image contained many layers (50+).ChallengeMount Lock ContentionThe flamegraph in Figure 1 clearly shows where containerd spent its time Almost all of the time is spent trying to grab a kernel-level lock as part of the various mount-related activities when assembling the container’s root filesystem!Figure 1: Flamegraph depicting lock contentionLooking closer, containerd executes the following calls for each layer if using user namespaces:open_tree() to get a reference to the layer / directorymount_setattr() to set the idmap to match the container’s user range, shifting the ownership so this container can access the filesmove_mount() to create a bind mount on the host with this new idmap appliedThese bind mounts are owned by the container’s user range and are then used as the lowerdirs to create the overlayfs-based rootfs for the container The kernel VFS has various global locks related to the mount table, and each of these mounts requires taking that lock as we can see in the top of the flamegraph</description>
       <pubDate>Sat, 28 Feb 2026 22:55:53 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Using LLMs to amplify human labeling and improve Dash search relevance</title>
-      <link>https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash</link>
-      <description>How we train Dash&amp;apos;s search ranking models with a mix of human and LLM-assisted labeling.</description>
-      <pubDate>Thu, 26 Feb 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/llm-human-labeling-improving-search-relevance-dropbox-dash</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>

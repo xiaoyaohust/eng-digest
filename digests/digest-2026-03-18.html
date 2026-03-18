@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-03-18</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-03-18</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>8</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: Amazon S3 turns 20, Amazon Route 53 Global Resolver general availability, and more (March 16, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-16 16:02</p>
+                    <p class="article-summary">Twenty years ago this past week, Amazon S3 launched publicly on March 14, 2006 While Amazon Simple Storage Service is often considered the foundational storage service that defined cloud infrastructure, what began as a simple object storage service has grown into something far larger in scope and scale As of March 2026, S3 stores more […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-turns-20-amazon-route-53-global-resolver-general-availability-and-more-march-16-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/" target="_blank" rel="noopener noreferrer">
+                                Twenty years of Amazon S3 and building what’s next
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-13 12:58</p>
+                    <p class="article-summary">Some reflections on 20 years of innovations in Amazon S3 including S3 Tables, S3 Vectors and S3 Metadata.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/" target="_blank" rel="noopener noreferrer">
+                                Introducing account regional namespaces for Amazon S3 general purpose buckets
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-12 21:18</p>
+                    <p class="article-summary">AWS launches a new feature of Amazon S3 that lets you create general purpose buckets in your own account regional namespace simplifying bucket creation and management as your data storage needs grow in size and scope.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy" target="_blank" rel="noopener noreferrer">
+                                How we optimized Dash's relevance judge with DSPy
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-17 17:00</p>
+                    <p class="article-summary">We used DSPy to turn prompt engineering for our relevance judge into a measurable, automated optimization loop, improving task performance, cost, and how reliably it works in production.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/security/supply-chain-security/investing-in-the-people-shaping-open-source-and-securing-the-future-together/" target="_blank" rel="noopener noreferrer">
+                                Investing in the people shaping open source and securing the future together
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-17 16:00</p>
+                    <p class="article-summary">See how GitHub is investing in open source security funding maintainers, partnering with Alpha-Omega, and expanding access to help reduce burden and strengthen software supply chains The post Investing in the people shaping open source and securing the future together appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/security/supply-chain-security/investing-in-the-people-shaping-open-source-and-securing-the-future-together/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions/" target="_blank" rel="noopener noreferrer">
+                                GitHub for Beginners: Getting started with GitHub Actions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-16 16:00</p>
+                    <p class="article-summary">Set up your first GitHub Actions workflow in this how-to guide The post GitHub for Beginners: Getting started with GitHub Actions appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-actions/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/" target="_blank" rel="noopener noreferrer">
+                                Continuous AI for accessibility: How GitHub transforms feedback into inclusion
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-12 16:00</p>
+                    <p class="article-summary">AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into continuous, rapid resolutions The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/" target="_blank" rel="noopener noreferrer">
+                                LiteRT: The Universal Framework for On-Device AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-18 09:51</p>
+                    <p class="article-summary">LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</p>
+                    
+                    <a href="https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/" target="_blank" rel="noopener noreferrer">
+                                Tailor Gemini CLI to your workflow with hooks
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-18 09:51</p>
+                    <p class="article-summary">New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</p>
+                    
+                    <a href="https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/" target="_blank" rel="noopener noreferrer">
+                                Beyond the Chatbot: A Blueprint for Trustable AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-18 09:51</p>
+                    <p class="article-summary">At Thunderhill Raceway Park, a team of Google Developer Experts (GDEs) put a new "Trustable AI Framework" to the test Here is how they used GCP, Gemini and Antigravity to turn high-velocity racing into a masterclass for agentic architecture.</p>
+                    
+                    <a href="https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">LinkedIn Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://www.linkedin.com/blog/engineering/feed" target="_blank" rel="noopener noreferrer">
+                                Feed blog posts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-12 00:00</p>
+                    <p class="article-summary">Feed blog postsFeedEngineering the next generation of LinkedIn’s FeedHristo DanchevMar 12, 2026FeedPutting members first: testing and measuring how content appea...Sakshi JainNov 20, 2025InfrastructureFishDB: a generic retrieval engine for scaling LinkedIn’s feedKenneth LiNov 17, 2025Java heap memory and garbage collection: tuning for high-perfo...Nisheedh RaveendranSep 13, 2024Generative AIHow LinkedIn Built the Engineering Infrastructure to Ignite Pr...Shweta PatiraNov 20, 2023FeedHomepage feed multi-task learning using TensorFlowIan AckermanJun 3, 2021Member/Customer ExperienceHelping members discover communities around interestsChiachi LoSep 17, 2020FeedUnderstanding dwell time to improve LinkedIn feed rankingSiddharth DangiMay 12, 2020FeedRapid experimentation through standardization: Typed AI featur...Ian AckermanApr 15, 2020The Top 2019 LinkedIn Engineering BlogsJaren AndersonDec 9, 2019OptimizationAuditing content features in FollowFeedBanu MuthukumarAug 27, 2019FeedCommunity-focused Feed optimizationJun 25, 2019Previous123Next</p>
+                    
+                    <a href="https://www.linkedin.com/blog/engineering/feed" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/" target="_blank" rel="noopener noreferrer">
+                                Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-17 20:07</p>
+                    <p class="article-summary">Meta’s Ranking Engineer Agent (REA) autonomously executes key steps across the end-to-end machine learning (ML) lifecycle for ads ranking models This post covers REA’s ML experimentation capabilities: autonomously generating hypotheses, launching training jobs, debugging failures, and iterating on results The post Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/03/13/android/ai-codemods-secure-by-default-android-apps-meta-tech-podcast/" target="_blank" rel="noopener noreferrer">
+                                Patch Me If You Can: AI Codemods for Secure-by-Default Android Apps
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-13 16:00</p>
+                    <p class="article-summary">Even seemingly simple engineering tasks — like updating an API — can become monumental undertakings when you’re dealing with millions of lines of code and thousands of engineers, especially if the changes are security-related Nowhere is this more apparent than in mobile security, where a single class of vulnerability can be replicated across hundreds of [...] Read More The post Patch Me If You Can: AI Codemods for Secure-by-Default Android Apps appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/13/android/ai-codemods-secure-by-default-android-apps-meta-tech-podcast/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/" target="_blank" rel="noopener noreferrer">
+                                How Advanced Browsing Protection Works in Messenger
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-09 16:00</p>
+                    <p class="article-summary">We’re sharing the technical details behind how Advanced Browsing Protection (ABP) in Messenger protects the privacy of the links clicked on within chats while still warning people about malicious links We hope that this post has helped to illuminate some of the engineering challenges and infrastructure components involved for providing this feature for our users. [...] Read More The post How Advanced Browsing Protection Works in Messenger appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-06 15:01</p>
+                    <p class="article-summary">However, this growth created technical debt within our systems: a fragmented landscape of analytics workflows, duplicated pipelines, and siloed dashboards that we are now actively modernizing.The Challenge: “Who Made This Dub?”Historically, business logic for localization metrics was replicated across isolated domains To fix this, we revamped our Language Asset Consumption tool — instead of reporting dub and subtitle metrics independently, we combine audio and text languages into one consumption language that helps differentiate Original Language versus Localized Consumption and measure member preferences between subtitles, dubs, or a combination of both for a given language By centralizing business logic into unified tables — such as a “Language Asset Producer” table — we solve the “Who made this dub?” problem once</p>
+                    
+                    <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Optimizing Recommendation Systems with JDK’s Vector API
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-03 01:36</p>
+                    <p class="article-summary">When we looked at CPU profiles for this service, one feature kept standing out: video serendipity scoring — the logic that answers a simple question:“How different is this new title from what you’ve been watching so far?”This single feature was consuming about 7.5% of total CPU on each node running the service More crucially for us, it’s pure Java: no native dependencies, no JNI transitions, and a development model that looks like normal Java code rather than platform-specific assembly or intrinsics.This was a particularly good match for our workload because we had already moved embeddings into flat, contiguous double[] buffers, and the hot loop was dominated by large numbers of dot products So we designed the fallback behavior explicitly: At startup, we detect Vector API support and use the SIMD batched matmul when available; otherwise we fall back to an optimized scalar path, with single-video requests continuing to use the per-item implementation.That gives us a clean operational story: services can opt in to the Vector API for maximum performance, but the system remains safe and predictable without it.Results in Production:With the full design in place with batching, flat buffers, ThreadLocal reuse, and the Vector API, we ran canaries that run production traffic</p>
+                    
+                    <a href="https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Mount Mayhem at Netflix: Scaling Containers on Modern CPUs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-02-28 22:55</p>
+                    <p class="article-summary">Examining the mount table made it clear that these mounts were related to container creation.The affected nodes were almost all r5.metal instances, and were starting applications whose container image contained many layers (50+).ChallengeMount Lock ContentionThe flamegraph in Figure 1 clearly shows where containerd spent its time Almost all of the time is spent trying to grab a kernel-level lock as part of the various mount-related activities when assembling the container’s root filesystem!Figure 1: Flamegraph depicting lock contentionLooking closer, containerd executes the following calls for each layer if using user namespaces:open_tree() to get a reference to the layer / directorymount_setattr() to set the idmap to match the container’s user range, shifting the ownership so this container can access the filesmove_mount() to create a bind mount on the host with this new idmap appliedThese bind mounts are owned by the container’s user range and are then used as the lowerdirs to create the overlayfs-based rootfs for the container The kernel VFS has various global locks related to the mount table, and each of these mounts requires taking that lock as we can see in the top of the flamegraph</p>
+                    
+                    <a href="https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/10-lessons" target="_blank" rel="noopener noreferrer">
+                                10 things we learned building for the first generation of agentic commerce
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-12 00:00</p>
+                    <p class="article-summary">A future where we buy with AI agents feels inevitable Making it actually work is harder These lessons from the first wave of agentic commerce are meant to help sellers decide what to tackle, avoid common bottlenecks, and get ahead of what’s coming.</p>
+                    
+                    <a href="https://stripe.com/blog/10-lessons" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/analyzing-first-party-fraud-trends-account-free-trial-and-refund-abuse" target="_blank" rel="noopener noreferrer">
+                                Analyzing first-party fraud trends: Account, free trial, and refund abuse
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-10 00:00</p>
+                    <p class="article-summary">From November 2025 to February 2026, our models detected 6.2x more abusive free trials across the Stripe network This is part of a broader shift toward first-party fraud, where legitimate users abuse policies by setting up multiple accounts, cycling through free trials, or exploiting refunds.</p>
+                    
+                    <a href="https://stripe.com/blog/analyzing-first-party-fraud-trends-account-free-trial-and-refund-abuse" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/supporting-additional-payment-methods-for-agentic-commerce" target="_blank" rel="noopener noreferrer">
+                                Supporting additional payment methods for agentic commerce
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-03 00:00</p>
+                    <p class="article-summary">Stripe is now the first and only provider that supports both agentic network tokens and buy now, pay later tokens in agentic commerce through a single primitive.</p>
+                    
+                    <a href="https://stripe.com/blog/supporting-additional-payment-methods-for-agentic-commerce" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-03-18 09:51:56</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
