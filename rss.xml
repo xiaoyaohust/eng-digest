@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 18 Mar 2026 09:51:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2026 09:40:43 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>LiteRT: The Universal Framework for On-Device AI</title>
-      <link>https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</link>
-      <description>LiteRT, the evolution of TFLite, is now the universal framework for on-device AI It delivers up to 1.4x faster GPU, new NPU support, and streamlined GenAI deployment for models like Gemma.</description>
-      <pubDate>Wed, 18 Mar 2026 09:51:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/litert-the-universal-framework-for-on-device-ai/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Wed, 18 Mar 2026 09:51:54 GMT</pubDate>
+      <pubDate>Thu, 19 Mar 2026 09:40:40 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Beyond the Chatbot: A Blueprint for Trustable AI</title>
       <link>https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</link>
       <description>At Thunderhill Raceway Park, a team of Google Developer Experts (GDEs) put a new &amp;quot;Trustable AI Framework&amp;quot; to the test Here is how they used GCP, Gemini and Antigravity to turn high-velocity racing into a masterclass for agentic architecture.</description>
-      <pubDate>Wed, 18 Mar 2026 09:51:54 GMT</pubDate>
+      <pubDate>Thu, 19 Mar 2026 09:40:40 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Easy FunctionGemma finetuning with Tunix on Google TPUs</title>
+      <link>https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</link>
+      <description>Finetuning the FunctionGemma model is made fast and easy using the lightweight JAX-based Tunix library on Google TPUs, a process demonstrated here using LoRA for supervised finetuning This approach delivers significant accuracy improvements with high TPU efficiency, culminating in a model ready for deployment.</description>
+      <pubDate>Thu, 19 Mar 2026 09:40:40 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Friend Bubbles: Enhancing Social Discovery on Facebook Reels</title>
+      <link>https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/</link>
+      <description>Friend bubbles in Facebook Reels highlight Reels your friends have liked or reacted to, helping you discover new content and making it easier to connect over shared interests This article explains the technical architecture behind friend bubbles, including how machine learning estimates relationship strength and ranks content your friends have interacted with to create more [...] Read More The post Friend Bubbles: Enhancing Social Discovery on Facebook Reels appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 18 Mar 2026 18:19:33 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Our First 2026 AWS Heroes Cohort Is Here!</title>
+      <link>https://aws.amazon.com/blogs/aws/our-first-2026-heroes-cohort-is-here/</link>
+      <description>We’re thrilled to celebrate three exceptional developer community leaders as AWS Heroes These individuals represent the heart of what makes the AWS community so vibrant In addition to sharing technical knowledge, they build connections, forge genuine human relationships, and create pathways for others to grow</description>
+      <pubDate>Wed, 18 Mar 2026 16:26:15 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/our-first-2026-heroes-cohort-is-here/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Introducing the Machine Payments Protocol</title>
+      <link>https://stripe.com/blog/machine-payments-protocol</link>
+      <description>We’re launching the Machine Payments Protocol (MPP), an open standard, internet-native way for agents to pay—co-authored by Tempo and Stripe Businesses on Stripe can accept payments over MPP in a few lines of code using our PaymentIntents API.</description>
+      <pubDate>Wed, 18 Mar 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/machine-payments-protocol</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation</title>
@@ -89,14 +113,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>Introducing account regional namespaces for Amazon S3 general purpose buckets</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/</link>
-      <description>AWS launches a new feature of Amazon S3 that lets you create general purpose buckets in your own account regional namespace simplifying bucket creation and management as your data storage needs grow in size and scope.</description>
-      <pubDate>Thu, 12 Mar 2026 21:18:55 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-account-regional-namespaces-for-amazon-s3-general-purpose-buckets/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Continuous AI for accessibility: How GitHub transforms feedback into inclusion</title>
       <link>https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/</link>
       <description>AI automates triage for accessibility feedback, allowing us to focus on fixing barriers—turning a chaotic backlog into continuous, rapid resolutions The post Continuous AI for accessibility: How GitHub transforms feedback into inclusion appeared first on The GitHub Blog.</description>
@@ -129,14 +145,6 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>How Advanced Browsing Protection Works in Messenger</title>
-      <link>https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/</link>
-      <description>We’re sharing the technical details behind how Advanced Browsing Protection (ABP) in Messenger protects the privacy of the links clicked on within chats while still warning people about malicious links We hope that this post has helped to illuminate some of the engineering challenges and infrastructure components involved for providing this feature for our users. [...] Read More The post How Advanced Browsing Protection Works in Messenger appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 09 Mar 2026 16:00:36 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/03/09/security/how-advanced-browsing-protection-works-in-messenger/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
       <title>Scaling Global Storytelling: Modernizing Localization Analytics at Netflix</title>
       <link>https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4</link>
       <description>However, this growth created technical debt within our systems: a fragmented landscape of analytics workflows, duplicated pipelines, and siloed dashboards that we are now actively modernizing.The Challenge: “Who Made This Dub?”Historically, business logic for localization metrics was replicated across isolated domains To fix this, we revamped our Language Asset Consumption tool — instead of reporting dub and subtitle metrics independently, we combine audio and text languages into one consumption language that helps differentiate Original Language versus Localized Consumption and measure member preferences between subtitles, dubs, or a combination of both for a given language By centralizing business logic into unified tables — such as a “Language Asset Producer” table — we solve the “Who made this dub?” problem once</description>
@@ -151,14 +159,6 @@
       <pubDate>Tue, 03 Mar 2026 01:36:46 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Supporting additional payment methods for agentic commerce</title>
-      <link>https://stripe.com/blog/supporting-additional-payment-methods-for-agentic-commerce</link>
-      <description>Stripe is now the first and only provider that supports both agentic network tokens and buy now, pay later tokens in agentic commerce through a single primitive.</description>
-      <pubDate>Tue, 03 Mar 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/supporting-additional-payment-methods-for-agentic-commerce</guid>
-      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Mount Mayhem at Netflix: Scaling Containers on Modern CPUs</title>
