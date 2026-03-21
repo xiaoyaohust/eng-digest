@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 20 Mar 2026 09:38:44 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2026 09:29:19 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Fri, 20 Mar 2026 09:38:41 GMT</pubDate>
+      <pubDate>Sat, 21 Mar 2026 09:29:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Beyond the Chatbot: A Blueprint for Trustable AI</title>
       <link>https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</link>
       <description>At Thunderhill Raceway Park, a team of Google Developer Experts (GDEs) put a new &amp;quot;Trustable AI Framework&amp;quot; to the test Here is how they used GCP, Gemini and Antigravity to turn high-velocity racing into a masterclass for agentic architecture.</description>
-      <pubDate>Fri, 20 Mar 2026 09:38:41 GMT</pubDate>
+      <pubDate>Sat, 21 Mar 2026 09:29:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Easy FunctionGemma finetuning with Tunix on Google TPUs</title>
       <link>https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</link>
       <description>Finetuning the FunctionGemma model is made fast and easy using the lightweight JAX-based Tunix library on Google TPUs, a process demonstrated here using LoRA for supervised finetuning This approach delivers significant accuracy improvements with high TPU efficiency, culminating in a model ready for deployment.</description>
-      <pubDate>Fri, 20 Mar 2026 09:38:41 GMT</pubDate>
+      <pubDate>Sat, 21 Mar 2026 09:29:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Three of the biggest fraud trends from MRC Vegas 2026</title>
+      <link>https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026</link>
+      <description>The most sophisticated fraud teams are shifting from one-size-fits-all fraud approaches to more dynamic, tailored interventions They are removing friction for trusted users, embedding fraud detection directly into agentic transactions, and investing in multilayered identity verification to combat deepfakes.</description>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Rethinking open source mentorship in the AI era</title>
@@ -127,14 +135,6 @@
       <pubDate>Fri, 13 Mar 2026 16:00:26 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/03/13/android/ai-codemods-secure-by-default-android-apps-meta-tech-podcast/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>10 things we learned building for the first generation of agentic commerce</title>
-      <link>https://stripe.com/blog/10-lessons</link>
-      <description>A future where we buy with AI agents feels inevitable Making it actually work is harder These lessons from the first wave of agentic commerce are meant to help sellers decide what to tackle, avoid common bottlenecks, and get ahead of what’s coming.</description>
-      <pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/10-lessons</guid>
-      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Feed blog posts</title>
