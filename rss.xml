@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Mar 2026 09:30:05 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 10:00:14 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Tailor Gemini CLI to your workflow with hooks</title>
       <link>https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</link>
       <description>New Gemini CLI hooks (v0.26.0+) let you tailor the agentic loop Add context, enforce policies, and block secrets with custom scripts that run at predefined points in your workflow.</description>
-      <pubDate>Sun, 22 Mar 2026 09:30:03 GMT</pubDate>
+      <pubDate>Mon, 23 Mar 2026 10:00:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/tailor-gemini-cli-to-your-workflow-with-hooks/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Beyond the Chatbot: A Blueprint for Trustable AI</title>
       <link>https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</link>
       <description>At Thunderhill Raceway Park, a team of Google Developer Experts (GDEs) put a new &amp;quot;Trustable AI Framework&amp;quot; to the test Here is how they used GCP, Gemini and Antigravity to turn high-velocity racing into a masterclass for agentic architecture.</description>
-      <pubDate>Sun, 22 Mar 2026 09:30:03 GMT</pubDate>
+      <pubDate>Mon, 23 Mar 2026 10:00:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/beyond-the-chatbot-a-blueprint-for-trustable-ai/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Easy FunctionGemma finetuning with Tunix on Google TPUs</title>
       <link>https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</link>
       <description>Finetuning the FunctionGemma model is made fast and easy using the lightweight JAX-based Tunix library on Google TPUs, a process demonstrated here using LoRA for supervised finetuning This approach delivers significant accuracy improvements with high TPU efficiency, culminating in a model ready for deployment.</description>
-      <pubDate>Sun, 22 Mar 2026 09:30:03 GMT</pubDate>
+      <pubDate>Mon, 23 Mar 2026 10:00:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</guid>
       <source>Google Developers</source>
     </item>
