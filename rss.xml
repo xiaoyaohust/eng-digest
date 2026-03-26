@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Mar 2026 09:52:02 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 09:59:15 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Easy FunctionGemma finetuning with Tunix on Google TPUs</title>
-      <link>https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</link>
-      <description>Finetuning the FunctionGemma model is made fast and easy using the lightweight JAX-based Tunix library on Google TPUs, a process demonstrated here using LoRA for supervised finetuning This approach delivers significant accuracy improvements with high TPU efficiency, culminating in a model ready for deployment.</description>
-      <pubDate>Wed, 25 Mar 2026 09:51:59 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/easy-functiongemma-finetuning-with-tunix-on-google-tpus/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Introducing the Developer Knowledge API and MCP Server</title>
       <link>https://developers.googleblog.com/introducing-the-developer-knowledge-api-and-mcp-server/</link>
       <description>Google is launching the Developer Knowledge API and MCP Server in public preview This new toolset provides a canonical, machine-readable way for AI assistants and agentic platforms to search and retrieve up-to-date documentation across Firebase, Google Cloud, Android, and more By using the official MCP server, developers can connect tools directly to Google’s documentation corpus, ensuring that AI-generated code and guidance are based on authoritative, real-time context.</description>
-      <pubDate>Wed, 25 Mar 2026 09:51:59 GMT</pubDate>
+      <pubDate>Thu, 26 Mar 2026 09:59:12 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-developer-knowledge-api-and-mcp-server/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Access public data insights faster: Data Commons MCP is now hosted on Google Cloud</title>
       <link>https://developers.googleblog.com/access-public-data-insights-faster-data-commons-mcp-is-now-hosted-on-google-cloud/</link>
       <description>Data Commons has launched a free, hosted Model Context Protocol (MCP) service on Google Cloud Platform, eliminating the need for users to manage complex local server installations This update simplifies connecting AI agents and the Gemini CLI to Data Commons, allowing Google to handle security, updates, and resource management while users query data natively.</description>
-      <pubDate>Wed, 25 Mar 2026 09:51:59 GMT</pubDate>
+      <pubDate>Thu, 26 Mar 2026 09:59:12 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/access-public-data-insights-faster-data-commons-mcp-is-now-hosted-on-google-cloud/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Making Gemini CLI extensions easier to use</title>
+      <link>https://developers.googleblog.com/making-gemini-cli-extensions-easier-to-use/</link>
+      <description>To simplify the user experience and prevent startup failures, the Gemini CLI has introduced structured extension settings that eliminate the need for manual environment variable configuration This update enables extensions to automatically prompt users for required details during installation and securely stores sensitive information, such as API keys, directly in the system keychain Users can now easily manage and override these configurations globally or per project using the new Gemini extensions config command.</description>
+      <pubDate>Thu, 26 Mar 2026 09:59:12 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/making-gemini-cli-extensions-easier-to-use/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing Amazon Aurora PostgreSQL serverless database creation in seconds</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/</link>
+      <description>AWS introduces a new express configuration for Amazon Aurora PostgreSQL, a streamlined database creation experience with preconfigured defaults designed to help you get started in seconds With Aurora PostgreSQL, start building quickly from the RDS Console or your preferred developer tool—with the ability to modify configurations anytime Plus, Aurora PostgreSQL is now available with AWS Free Tier.</description>
+      <pubDate>Wed, 25 Mar 2026 20:37:11 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Updates to GitHub Copilot interaction data usage policy</title>
+      <link>https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/</link>
+      <description>From April 24 onward, interaction data—specifically inputs, outputs, code snippets, and associated context—from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out The post Updates to GitHub Copilot interaction data usage policy appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 25 Mar 2026 19:02:29 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Reducing our monorepo size to improve developer velocity</title>
+      <link>https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity</link>
+      <description>Monorepos will continue to grow as products evolve, but growth doesn’t have to mean friction.</description>
+      <pubDate>Wed, 25 Mar 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity</guid>
+      <source>Dropbox Engineering</source>
     </item>
     <item>
       <title>Building AI-powered GitHub issue triage with the Copilot SDK</title>
@@ -73,14 +97,6 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>Rethinking open source mentorship in the AI era</title>
-      <link>https://github.blog/open-source/maintainers/rethinking-open-source-mentorship-in-the-ai-era/</link>
-      <description>As contribution volume grows, mentorship signals are harder to read The 3 Cs framework helps maintainers mentor more strategically... without burning out The post Rethinking open source mentorship in the AI era appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 19 Mar 2026 18:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/rethinking-open-source-mentorship-in-the-ai-era/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>20 years in the AWS Cloud – how time flies!</title>
       <link>https://aws.amazon.com/blogs/aws/20-years-in-the-aws-cloud-how-time-flies/</link>
       <description>Celebrating twenty years of innovation in ML and AI technology at AWS Countless developers—myself included—have embraced cloud computing and actively used its capabilities to accomplish what was previously impossible.</description>
@@ -103,14 +119,6 @@
       <pubDate>Wed, 18 Mar 2026 18:19:33 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Our First 2026 AWS Heroes Cohort Is Here!</title>
-      <link>https://aws.amazon.com/blogs/aws/our-first-2026-heroes-cohort-is-here/</link>
-      <description>We’re thrilled to celebrate three exceptional developer community leaders as AWS Heroes These individuals represent the heart of what makes the AWS community so vibrant In addition to sharing technical knowledge, they build connections, forge genuine human relationships, and create pathways for others to grow</description>
-      <pubDate>Wed, 18 Mar 2026 16:26:15 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/our-first-2026-heroes-cohort-is-here/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation</title>
@@ -158,14 +166,6 @@
       <description>When we looked at CPU profiles for this service, one feature kept standing out: video serendipity scoring — the logic that answers a simple question:“How different is this new title from what you’ve been watching so far?”This single feature was consuming about 7.5% of total CPU on each node running the service More crucially for us, it’s pure Java: no native dependencies, no JNI transitions, and a development model that looks like normal Java code rather than platform-specific assembly or intrinsics.This was a particularly good match for our workload because we had already moved embeddings into flat, contiguous double[] buffers, and the hot loop was dominated by large numbers of dot products So we designed the fallback behavior explicitly: At startup, we detect Vector API support and use the SIMD batched matmul when available; otherwise we fall back to an optimized scalar path, with single-video requests continuing to use the per-item implementation.That gives us a clean operational story: services can opt in to the Vector API for maximum performance, but the system remains safe and predictable without it.Results in Production:With the full design in place with batching, flat buffers, ThreadLocal reuse, and the Vector API, we ran canaries that run production traffic</description>
       <pubDate>Tue, 03 Mar 2026 01:36:46 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/optimizing-recommendation-systems-with-jdks-vector-api-30d2830401ec?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Mount Mayhem at Netflix: Scaling Containers on Modern CPUs</title>
-      <link>https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4</link>
-      <description>Examining the mount table made it clear that these mounts were related to container creation.The affected nodes were almost all r5.metal instances, and were starting applications whose container image contained many layers (50+).ChallengeMount Lock ContentionThe flamegraph in Figure 1 clearly shows where containerd spent its time Almost all of the time is spent trying to grab a kernel-level lock as part of the various mount-related activities when assembling the container’s root filesystem!Figure 1: Flamegraph depicting lock contentionLooking closer, containerd executes the following calls for each layer if using user namespaces:open_tree() to get a reference to the layer / directorymount_setattr() to set the idmap to match the container’s user range, shifting the ownership so this container can access the filesmove_mount() to create a bind mount on the host with this new idmap appliedThese bind mounts are owned by the container’s user range and are then used as the lowerdirs to create the overlayfs-based rootfs for the container The kernel VFS has various global locks related to the mount table, and each of these mounts requires taking that lock as we can see in the top of the flamegraph</description>
-      <pubDate>Sat, 28 Feb 2026 22:55:53 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/mount-mayhem-at-netflix-scaling-containers-on-modern-cpus-f3b09b68beac?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
     </item>
   </channel>
