@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 29 Mar 2026 09:34:28 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 10:14:54 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Introducing the Developer Knowledge API and MCP Server</title>
       <link>https://developers.googleblog.com/introducing-the-developer-knowledge-api-and-mcp-server/</link>
       <description>Google is launching the Developer Knowledge API and MCP Server in public preview This new toolset provides a canonical, machine-readable way for AI assistants and agentic platforms to search and retrieve up-to-date documentation across Firebase, Google Cloud, Android, and more By using the official MCP server, developers can connect tools directly to Google’s documentation corpus, ensuring that AI-generated code and guidance are based on authoritative, real-time context.</description>
-      <pubDate>Sun, 29 Mar 2026 09:34:25 GMT</pubDate>
+      <pubDate>Mon, 30 Mar 2026 10:14:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-developer-knowledge-api-and-mcp-server/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Access public data insights faster: Data Commons MCP is now hosted on Google Cloud</title>
       <link>https://developers.googleblog.com/access-public-data-insights-faster-data-commons-mcp-is-now-hosted-on-google-cloud/</link>
       <description>Data Commons has launched a free, hosted Model Context Protocol (MCP) service on Google Cloud Platform, eliminating the need for users to manage complex local server installations This update simplifies connecting AI agents and the Gemini CLI to Data Commons, allowing Google to handle security, updates, and resource management while users query data natively.</description>
-      <pubDate>Sun, 29 Mar 2026 09:34:25 GMT</pubDate>
+      <pubDate>Mon, 30 Mar 2026 10:14:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/access-public-data-insights-faster-data-commons-mcp-is-now-hosted-on-google-cloud/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Making Gemini CLI extensions easier to use</title>
       <link>https://developers.googleblog.com/making-gemini-cli-extensions-easier-to-use/</link>
       <description>To simplify the user experience and prevent startup failures, the Gemini CLI has introduced structured extension settings that eliminate the need for manual environment variable configuration This update enables extensions to automatically prompt users for required details during installation and securely stores sensitive information, such as API keys, directly in the system keychain Users can now easily manage and override these configurations globally or per project using the new Gemini extensions config command.</description>
-      <pubDate>Sun, 29 Mar 2026 09:34:25 GMT</pubDate>
+      <pubDate>Mon, 30 Mar 2026 10:14:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/making-gemini-cli-extensions-easier-to-use/</guid>
       <source>Google Developers</source>
     </item>
