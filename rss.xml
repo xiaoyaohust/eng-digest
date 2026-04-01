@@ -6,31 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 31 Mar 2026 10:04:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 10:04:31 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Access public data insights faster: Data Commons MCP is now hosted on Google Cloud</title>
-      <link>https://developers.googleblog.com/access-public-data-insights-faster-data-commons-mcp-is-now-hosted-on-google-cloud/</link>
-      <description>Data Commons has launched a free, hosted Model Context Protocol (MCP) service on Google Cloud Platform, eliminating the need for users to manage complex local server installations This update simplifies connecting AI agents and the Gemini CLI to Data Commons, allowing Google to handle security, updates, and resource management while users query data natively.</description>
-      <pubDate>Tue, 31 Mar 2026 10:03:59 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/access-public-data-insights-faster-data-commons-mcp-is-now-hosted-on-google-cloud/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Making Gemini CLI extensions easier to use</title>
-      <link>https://developers.googleblog.com/making-gemini-cli-extensions-easier-to-use/</link>
-      <description>To simplify the user experience and prevent startup failures, the Gemini CLI has introduced structured extension settings that eliminate the need for manual environment variable configuration This update enables extensions to automatically prompt users for required details during installation and securely stores sensitive information, such as API keys, directly in the system keychain Users can now easily manage and override these configurations globally or per project using the new Gemini extensions config command.</description>
-      <pubDate>Tue, 31 Mar 2026 10:03:59 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/making-gemini-cli-extensions-easier-to-use/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Conductor Update: Introducing Automated Reviews</title>
       <link>https://developers.googleblog.com/conductor-update-introducing-automated-reviews/</link>
       <description>Conductor for the Gemini CLI has introduced a new Automated Review feature designed to verify the quality and accuracy of AI-generated code This update addresses the challenge of validating agentic development by automatically checking implementations against original plans, enforcing style guides, and identifying security risks or bugs. by incorporating test-suite validation and providing actionable reports, Conductor helps developers ensure that their AI agents deliver safe, predictable, and architecturally sound code before it is finalized.</description>
-      <pubDate>Tue, 31 Mar 2026 10:03:59 GMT</pubDate>
+      <pubDate>Wed, 01 Apr 2026 10:04:27 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/conductor-update-introducing-automated-reviews/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Get ready for Google I/O 2026</title>
+      <link>https://developers.googleblog.com/get-ready-for-google-io-2026/</link>
+      <description>Google I/O returns May 19-20 Watch the livestreams for updates on Android, AI, Chrome, and Cloud Registration is open on the Google I/O website.</description>
+      <pubDate>Wed, 01 Apr 2026 10:04:27 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/get-ready-for-google-io-2026/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Turn creative prompts into interactive XR experiences with Gemini</title>
+      <link>https://developers.googleblog.com/turn-creative-prompts-into-interactive-xr-experiences-with-gemini/</link>
+      <description>The Android XR team is using Gemini&amp;apos;s Canvas feature to make creating immersive extended reality (XR) experiences more accessible This allows developers to rapidly prototype interactive 3D environments and models on a Samsung Galaxy XR headset using simple creative prompts.</description>
+      <pubDate>Wed, 01 Apr 2026 10:04:27 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/turn-creative-prompts-into-interactive-xr-experiences-with-gemini/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/</link>
+      <description>AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emissions data without requiring billing permissions.</description>
+      <pubDate>Tue, 31 Mar 2026 19:04:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads</title>
+      <link>https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/</link>
+      <description>0Meta continues to lead the industry in utilizing groundbreaking AI Recommendation Systems (RecSys) to deliver better experiences for people, and better results for advertisers To reach the next frontier of performance, we are scaling Meta’s Ads Recommender runtime models to LLM-scale &amp;amp; complexity to further a deeper understanding of people’s interests and intent The post Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 31 Mar 2026 16:00:17 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Agent-driven development in Copilot Applied Science</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/</link>
+      <description>I used coding agents to build agents that automated part of my job Here&amp;apos;s what I learned about working better with coding agents The post Agent-driven development in Copilot Applied Science appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 31 Mar 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)</title>
@@ -73,22 +97,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>A year of open source vulnerability trends: CVEs, advisories, and malware</title>
-      <link>https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/</link>
-      <description>Reviewed advisories hit a four-year low, malware advisories surged, and CNA publishing grew—here’s what changed and what it means for your triage and response The post A year of open source vulnerability trends: CVEs, advisories, and malware appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 26 Mar 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/a-year-of-open-source-vulnerability-trends-cves-advisories-and-malware/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Announcing Amazon Aurora PostgreSQL serverless database creation in seconds</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/</link>
-      <description>AWS introduces a new express configuration for Amazon Aurora PostgreSQL, a streamlined database creation experience with preconfigured defaults designed to help you get started in seconds With Aurora PostgreSQL, start building quickly from the RDS Console or your preferred developer tool—with the ability to modify configurations anytime Plus, Aurora PostgreSQL is now available with AWS Free Tier.</description>
-      <pubDate>Wed, 25 Mar 2026 20:37:11 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Reducing our monorepo size to improve developer velocity</title>
       <link>https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity</link>
       <description>Monorepos will continue to grow as products evolve, but growth doesn’t have to mean friction.</description>
@@ -126,14 +134,6 @@
       <description>Friend bubbles in Facebook Reels highlight Reels your friends have liked or reacted to, helping you discover new content and making it easier to connect over shared interests This article explains the technical architecture behind friend bubbles, including how machine learning estimates relationship strength and ranks content your friends have interacted with to create more [...] Read More The post Friend Bubbles: Enhancing Social Discovery on Facebook Reels appeared first on Engineering at Meta.</description>
       <pubDate>Wed, 18 Mar 2026 18:19:33 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation</title>
-      <link>https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/</link>
-      <description>Meta’s Ranking Engineer Agent (REA) autonomously executes key steps across the end-to-end machine learning (ML) lifecycle for ads ranking models This post covers REA’s ML experimentation capabilities: autonomously generating hypotheses, launching training jobs, debugging failures, and iterating on results The post Ranking Engineer Agent (REA): The Autonomous AI Agent Accelerating Meta’s Ads Ranking Innovation appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 17 Mar 2026 20:07:52 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
