@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-04-02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-04-02</p>
+        <div class="stats">
+            <span class="stat-item"><strong>18</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/" target="_blank" rel="noopener noreferrer">
+                                Announcing managed daemon support for Amazon ECS Managed Instances
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-01 23:31</p>
+                    <p class="article-summary">Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and comprehensive host-level observability at scale.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/" target="_blank" rel="noopener noreferrer">
+                                Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-31 19:04</p>
+                    <p class="article-summary">AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emissions data without requiring billing permissions.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: AWS AI/ML Scholars program, Agent Plugin for AWS Serverless, and more (March 30, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-30 16:11</p>
+                    <p class="article-summary">Last week, what excited me most was the launch of the 2026 AWS AI & ML Scholars program by Swami Sivasubramanian, VP of AWS Agentic AI, to provide free AI education to up to 100,000 learners worldwide The program has two phases: a Challenge phase where you’ll learn foundational generative AI skills, followed by a […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity" target="_blank" rel="noopener noreferrer">
+                                Reducing our monorepo size to improve developer velocity
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-25 17:00</p>
+                    <p class="article-summary">Monorepos will continue to grow as products evolve, but growth doesn’t have to mean friction.</p>
+                    
+                    <a href="https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy" target="_blank" rel="noopener noreferrer">
+                                How we optimized Dash's relevance judge with DSPy
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-17 17:00</p>
+                    <p class="article-summary">We used DSPy to turn prompt engineering for our relevance judge into a measurable, automated optimization loop, improving task performance, cost, and how reliably it works in production.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/" target="_blank" rel="noopener noreferrer">
+                                Securing the open source supply chain across GitHub
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-01 19:20</p>
+                    <p class="article-summary">Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on The post Securing the open source supply chain across GitHub appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/" target="_blank" rel="noopener noreferrer">
+                                Run multiple agents at once with /fleet in Copilot CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-01 15:00</p>
+                    <p class="article-summary">/fleet lets Copilot CLI dispatch multiple agents in parallel Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls The post Run multiple agents at once with /fleet in Copilot CLI appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/" target="_blank" rel="noopener noreferrer">
+                                Agent-driven development in Copilot Applied Science
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-31 16:00</p>
+                    <p class="article-summary">I used coding agents to build agents that automated part of my job Here's what I learned about working better with coding agents The post Agent-driven development in Copilot Applied Science appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/agent-driven-development-in-copilot-applied-science/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/get-ready-for-google-io-2026/" target="_blank" rel="noopener noreferrer">
+                                Get ready for Google I/O 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 09:59</p>
+                    <p class="article-summary">Google I/O returns May 19-20 Watch the livestreams for updates on Android, AI, Chrome, and Cloud Registration is open on the Google I/O website.</p>
+                    
+                    <a href="https://developers.googleblog.com/get-ready-for-google-io-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/turn-creative-prompts-into-interactive-xr-experiences-with-gemini/" target="_blank" rel="noopener noreferrer">
+                                Turn creative prompts into interactive XR experiences with Gemini
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 09:59</p>
+                    <p class="article-summary">The Android XR team is using Gemini's Canvas feature to make creating immersive extended reality (XR) experiences more accessible This allows developers to rapidly prototype interactive 3D environments and models on a Samsung Galaxy XR headset using simple creative prompts.</p>
+                    
+                    <a href="https://developers.googleblog.com/turn-creative-prompts-into-interactive-xr-experiences-with-gemini/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/" target="_blank" rel="noopener noreferrer">
+                                On-Device Function Calling in Google AI Edge Gallery
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 09:59</p>
+                    <p class="article-summary">Google has introduced FunctionGemma, a specialized 270M parameter model designed to bring efficient, action-oriented AI experiences directly to mobile devices through on-device function calling By leveraging Google AI Edge and LiteRT-LM, the model enables complex tasks—such as managing calendars, controlling device hardware, or executing specific game logic in the "Tiny Garden" demo—to be performed entirely offline with high speed and low latency Available for testing in the Google AI Edge Gallery app on both Android and iOS, FunctionGemma allows developers to move beyond simple text generation toward building responsive, "agentic" applications that interact seamlessly with the physical and digital world without relying on cloud processing.</p>
+                    
+                    <a href="https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/" target="_blank" rel="noopener noreferrer">
+                                Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-31 16:00</p>
+                    <p class="article-summary">Meta continues to lead the industry in utilizing groundbreaking AI Recommendation Systems (RecSys) to deliver better experiences for people, and better results for advertisers To reach the next frontier of performance, we are scaling Meta’s Ads Recommender runtime models to LLM-scale & complexity to further a deeper understanding of people’s interests and intent The post Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/" target="_blank" rel="noopener noreferrer">
+                                AI for American-Produced Cement and Concrete
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-30 16:00</p>
+                    <p class="article-summary">Meta is continuing its long-term roadmap to help the construction industry leverage AI to produce high-quality and more sustainable concrete mixes, as well as those exclusively produced in the United States Concurrent with the 2026 American Concrete Institute (ACI) Spring Convention, Meta is releasing a new AI model for designing concrete mixes – Bayesian Optimization [...] Read More The post AI for American-Produced Cement and Concrete appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/" target="_blank" rel="noopener noreferrer">
+                                Friend Bubbles: Enhancing Social Discovery on Facebook Reels
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-18 18:19</p>
+                    <p class="article-summary">Friend bubbles in Facebook Reels highlight Reels your friends have liked or reacted to, helping you discover new content and making it easier to connect over shared interests This article explains the technical architecture behind friend bubbles, including how machine learning estimates relationship strength and ranks content your friends have interacted with to create more [...] Read More The post Friend Bubbles: Enhancing Social Discovery on Facebook Reels appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/18/ml-applications/friend-bubbles-enhancing-social-discovery-on-facebook-reels/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Scaling Global Storytelling: Modernizing Localization Analytics at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-06 15:01</p>
+                    <p class="article-summary">However, this growth created technical debt within our systems: a fragmented landscape of analytics workflows, duplicated pipelines, and siloed dashboards that we are now actively modernizing.The Challenge: “Who Made This Dub?”Historically, business logic for localization metrics was replicated across isolated domains To fix this, we revamped our Language Asset Consumption tool — instead of reporting dub and subtitle metrics independently, we combine audio and text languages into one consumption language that helps differentiate Original Language versus Localized Consumption and measure member preferences between subtitles, dubs, or a combination of both for a given language By centralizing business logic into unified tables — such as a “Language Asset Producer” table — we solve the “Who made this dub?” problem once</p>
+                    
+                    <a href="https://netflixtechblog.com/scaling-global-storytelling-modernizing-localization-analytics-at-netflix-816f47290641?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse" target="_blank" rel="noopener noreferrer">
+                                How Stripe Radar helps prevent free trial abuse
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-24 00:00</p>
+                    <p class="article-summary">Radar now helps prevent free trial abuse with just one click When enabled, Radar predicts the presence of abusive behavior that violates common trial terms, such as repeated trial signup or missed cancellations, with 90% accuracy.</p>
+                    
+                    <a href="https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026" target="_blank" rel="noopener noreferrer">
+                                Three of the biggest fraud trends from MRC Vegas 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-20 00:00</p>
+                    <p class="article-summary">The most sophisticated fraud teams are shifting from one-size-fits-all fraud approaches to more dynamic, tailored interventions They are removing friction for trusted users, embedding fraud detection directly into agentic transactions, and investing in multilayered identity verification to combat deepfakes.</p>
+                    
+                    <a href="https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/adaptive-pricing-for-subscriptions" target="_blank" rel="noopener noreferrer">
+                                Testing the impact of Adaptive Pricing across 1.5M subscription checkout sessions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-19 00:00</p>
+                    <p class="article-summary">Adaptive Pricing is now available for subscriptions, allowing businesses to automatically localize prices in 150+ countries while Stripe handles currency conversion In an A/B test across 1.5 million subscription checkouts, businesses saw 4.7% higher conversion and 5.4% higher LTV per session, on average.</p>
+                    
+                    <a href="https://stripe.com/blog/adaptive-pricing-for-subscriptions" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-04-02 09:59:42</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
