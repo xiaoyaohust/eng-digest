@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 04 Apr 2026 09:35:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 09:36:38 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>On-Device Function Calling in Google AI Edge Gallery</title>
       <link>https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/</link>
       <description>Google has introduced FunctionGemma, a specialized 270M parameter model designed to bring efficient, action-oriented AI experiences directly to mobile devices through on-device function calling By leveraging Google AI Edge and LiteRT-LM, the model enables complex tasks—such as managing calendars, controlling device hardware, or executing specific game logic in the &amp;quot;Tiny Garden&amp;quot; demo—to be performed entirely offline with high speed and low latency Available for testing in the Google AI Edge Gallery app on both Android and iOS, FunctionGemma allows developers to move beyond simple text generation toward building responsive, &amp;quot;agentic&amp;quot; applications that interact seamlessly with the physical and digital world without relying on cloud processing.</description>
-      <pubDate>Sat, 04 Apr 2026 09:35:24 GMT</pubDate>
+      <pubDate>Sun, 05 Apr 2026 09:36:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
       <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
       <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Sat, 04 Apr 2026 09:35:24 GMT</pubDate>
+      <pubDate>Sun, 05 Apr 2026 09:36:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>How we built the Google I/O 2026 Save the Date experience</title>
       <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
       <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Sat, 04 Apr 2026 09:35:24 GMT</pubDate>
+      <pubDate>Sun, 05 Apr 2026 09:36:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
       <source>Google Developers</source>
     </item>
