@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 06 Apr 2026 10:07:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2026 10:05:48 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>On-Device Function Calling in Google AI Edge Gallery</title>
       <link>https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/</link>
       <description>Google has introduced FunctionGemma, a specialized 270M parameter model designed to bring efficient, action-oriented AI experiences directly to mobile devices through on-device function calling By leveraging Google AI Edge and LiteRT-LM, the model enables complex tasks—such as managing calendars, controlling device hardware, or executing specific game logic in the &amp;quot;Tiny Garden&amp;quot; demo—to be performed entirely offline with high speed and low latency Available for testing in the Google AI Edge Gallery app on both Android and iOS, FunctionGemma allows developers to move beyond simple text generation toward building responsive, &amp;quot;agentic&amp;quot; applications that interact seamlessly with the physical and digital world without relying on cloud processing.</description>
-      <pubDate>Mon, 06 Apr 2026 10:07:27 GMT</pubDate>
+      <pubDate>Tue, 07 Apr 2026 10:05:46 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
       <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
       <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Mon, 06 Apr 2026 10:07:27 GMT</pubDate>
+      <pubDate>Tue, 07 Apr 2026 10:05:46 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,41 @@
       <title>How we built the Google I/O 2026 Save the Date experience</title>
       <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
       <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Mon, 06 Apr 2026 10:07:27 GMT</pubDate>
+      <pubDate>Tue, 07 Apr 2026 10:05:46 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale</title>
+      <link>https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</link>
+      <description>Older data lingers much longer, because our confidence in its accuracy grows with time.For a 3-hour rolling window, the exponential TTL ensures the vast majority of the query is served from the cache, leaving Druid to only scan the most recent, unsettled data.BucketingIf we were to use a single-level cache key for the query and interval, similar to Druid’s existing result-level cache, we wouldn’t be able to extract only the relevant time range from cached results Without special handling, the cache would treat these empty buckets as gaps and re-query Druid for them every time.We handle this by caching empty sentinel values for time buckets where Druid returned no data Crucially, KVDAL supports independent TTLs on each inner key-value pair, eliminating the need for us to manage cache eviction manually.This two-level structure gives us efficient range queries over the inner keys, which is exactly what we need for partial cache lookups: “give me all cached buckets between time A and time B for query hash X.”ResultsThe biggest win is during high-volume events (e.g., live shows): when many users view the same dashboards, the cache serves most identical queries as full hits, so the query rate reaching Druid is essentially the same with 1 viewer or 100</description>
+      <pubDate>Mon, 06 Apr 2026 22:15:14 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>GitHub Copilot CLI combines model families for a second opinion</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/</link>
+      <description>Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI The post GitHub Copilot CLI combines model families for a second opinion appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 06 Apr 2026 21:53:49 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS DevOps Agent &amp; Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/</link>
+      <description>Last week, I visited AWS Hong Kong User Group with my team Hong Kong has a small but strong community, and their energy and passion are high I was able to strengthen my bond with the community through great food […]</description>
+      <pubDate>Mon, 06 Apr 2026 16:51:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines</title>
+      <link>https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/</link>
+      <description>AI coding assistants are powerful but only as good as their understanding of your codebase When we pointed AI agents at one of Meta’s large-scale data processing pipelines – spanning four repositories, three languages, and over 4,100 files – we quickly found that they weren’t making useful edits quickly enough The post How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 06 Apr 2026 16:00:50 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Powering Multimodal Intelligence for Video Search</title>
@@ -105,35 +137,11 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Run multiple agents at once with /fleet in Copilot CLI</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/</link>
-      <description>/fleet lets Copilot CLI dispatch multiple agents in parallel Learn how to write prompts that split work across files, declare dependencies, and avoid common pitfalls The post Run multiple agents at once with /fleet in Copilot CLI appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 01 Apr 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/run-multiple-agents-at-once-with-fleet-in-copilot-cli/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Announcing the AWS Sustainability console: Programmatic access, configurable CSV reports, and Scope 1–3 reporting in one place</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/</link>
-      <description>AWS announces the Sustainability console, a new standalone service that consolidates carbon emissions reporting and resources, giving sustainability teams independent access to Scope 1, 2, and 3 emissions data without requiring billing permissions.</description>
-      <pubDate>Tue, 31 Mar 2026 19:04:00 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-the-aws-sustainability-console-programmatic-access-configurable-csv-reports-and-scope-1-3-reporting-in-one-place/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads</title>
       <link>https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/</link>
       <description>Meta continues to lead the industry in utilizing groundbreaking AI Recommendation Systems (RecSys) to deliver better experiences for people, and better results for advertisers To reach the next frontier of performance, we are scaling Meta’s Ads Recommender runtime models to LLM-scale &amp;amp; complexity to further a deeper understanding of people’s interests and intent The post Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads appeared first on Engineering at Meta.</description>
       <pubDate>Tue, 31 Mar 2026 16:00:17 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AI for American-Produced Cement and Concrete</title>
-      <link>https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/</link>
-      <description>Meta is continuing its long-term roadmap to help the construction industry leverage AI to produce high-quality and more sustainable concrete mixes, as well as those exclusively produced in the United States Concurrent with the 2026 American Concrete Institute (ACI) Spring Convention, Meta is releasing a new AI model for designing concrete mixes – Bayesian Optimization [...] Read More The post AI for American-Produced Cement and Concrete appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 30 Mar 2026 16:00:34 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/03/30/data-center-engineering/ai-for-american-produced-cement-and-concrete/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
@@ -159,14 +167,6 @@
       <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How we optimized Dash's relevance judge with DSPy</title>
-      <link>https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy</link>
-      <description>We used DSPy to turn prompt engineering for our relevance judge into a measurable, automated optimization loop, improving task performance, cost, and how reliably it works in production.</description>
-      <pubDate>Tue, 17 Mar 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/optimizing-dropbox-dash-relevance-judge-with-dspy</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
