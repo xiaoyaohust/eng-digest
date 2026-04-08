@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 07 Apr 2026 10:05:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 10:05:41 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>On-Device Function Calling in Google AI Edge Gallery</title>
-      <link>https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/</link>
-      <description>Google has introduced FunctionGemma, a specialized 270M parameter model designed to bring efficient, action-oriented AI experiences directly to mobile devices through on-device function calling By leveraging Google AI Edge and LiteRT-LM, the model enables complex tasks—such as managing calendars, controlling device hardware, or executing specific game logic in the &amp;quot;Tiny Garden&amp;quot; demo—to be performed entirely offline with high speed and low latency Available for testing in the Google AI Edge Gallery app on both Android and iOS, FunctionGemma allows developers to move beyond simple text generation toward building responsive, &amp;quot;agentic&amp;quot; applications that interact seamlessly with the physical and digital world without relying on cloud processing.</description>
-      <pubDate>Tue, 07 Apr 2026 10:05:46 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/on-device-function-calling-in-google-ai-edge-gallery/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
       <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
       <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Tue, 07 Apr 2026 10:05:46 GMT</pubDate>
+      <pubDate>Wed, 08 Apr 2026 10:05:39 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>How we built the Google I/O 2026 Save the Date experience</title>
       <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
       <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Tue, 07 Apr 2026 10:05:46 GMT</pubDate>
+      <pubDate>Wed, 08 Apr 2026 10:05:39 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>You can't stream the energy: A developer's guide to Google Cloud Next '26 in Vegas</title>
+      <link>https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</link>
+      <description>While keynotes are available online, Google Cloud Next &amp;apos;26 in Las Vegas offers an irreplaceable in-person experience centered on networking, hands-on problem solving, and the transition to agentic AI The event features specialized technical tracks covering everything from Gemini multimodal breakthroughs to zero-trust security on Cloud Run, providing developers with the tools to balance individual speed with organizational stability Beyond formal sessions, the &amp;quot;in-person advantage&amp;quot; lies in over 20 developer meetups and collaborative whiteboard sessions designed to foster serendipitous breakthroughs</description>
+      <pubDate>Wed, 08 Apr 2026 10:05:39 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Launching S3 Files, making S3 buckets accessible as file systems</title>
+      <link>https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/</link>
+      <description>Amazon S3 Files makes S3 buckets accessible as high-performance file systems on AWS compute resources, eliminating the tradeoff between object storage benefits and interactive file capabilities while enabling seamless data sharing with ~1ms latencies.</description>
+      <pubDate>Tue, 07 Apr 2026 19:18:32 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>How agents, digital wallets, and trust are rewriting checkout</title>
+      <link>https://stripe.com/blog/global-checkout-trends</link>
+      <description>We analyzed checkout activity across more than 20K businesses, surveyed shoppers and ecommerce leaders, and gathered insights from businesses on the Stripe network to understand what’s changing in online conversion.</description>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/global-checkout-trends</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale</title>
@@ -121,14 +137,6 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>Announcing managed daemon support for Amazon ECS Managed Instances</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/</link>
-      <description>Amazon ECS Managed Daemons gives platform engineers independent control over monitoring, logging, and tracing agents without application team coordination, ensuring consistent daemon deployment and comprehensive host-level observability at scale.</description>
-      <pubDate>Wed, 01 Apr 2026 23:31:24 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-managed-daemon-support-for-amazon-ecs-managed-instances/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Securing the open source supply chain across GitHub</title>
       <link>https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/</link>
       <description>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on The post Securing the open source supply chain across GitHub appeared first on The GitHub Blog.</description>
@@ -158,14 +166,6 @@
       <description>Radar now helps prevent free trial abuse with just one click When enabled, Radar predicts the presence of abusive behavior that violates common trial terms, such as repeated trial signup or missed cancellations, with 90% accuracy.</description>
       <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Three of the biggest fraud trends from MRC Vegas 2026</title>
-      <link>https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026</link>
-      <description>The most sophisticated fraud teams are shifting from one-size-fits-all fraud approaches to more dynamic, tailored interventions They are removing friction for trusted users, embedding fraud detection directly into agentic transactions, and investing in multilayered identity verification to combat deepfakes.</description>
-      <pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/three-fraud-trends-from-mrc-vegas-2026</guid>
       <source>Stripe Engineering</source>
     </item>
   </channel>

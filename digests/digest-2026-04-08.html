@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-04-08</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-04-08</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/" target="_blank" rel="noopener noreferrer">
+                                Launching S3 Files, making S3 buckets accessible as file systems
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-07 19:18</p>
+                    <p class="article-summary">Amazon S3 Files makes S3 buckets accessible as high-performance file systems on AWS compute resources, eliminating the tradeoff between object storage benefits and interactive file capabilities while enabling seamless data sharing with ~1ms latencies.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-06 16:51</p>
+                    <p class="article-summary">Last week, I visited AWS Hong Kong User Group with my team Hong Kong has a small but strong community, and their energy and passion are high I was able to strengthen my bond with the community through great food […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-guardrails-supports-cross-account-safeguards-with-centralized-control-and-management/" target="_blank" rel="noopener noreferrer">
+                                Amazon Bedrock Guardrails supports cross-account safeguards with centralized control and management
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-03 20:36</p>
+                    <p class="article-summary">Organizational safeguards are now generally available in Amazon Bedrock Guardrails, enabling centralized enforcement and management of safety controls across multiple AWS accounts within an AWS Organization.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-guardrails-supports-cross-account-safeguards-with-centralized-control-and-management/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store" target="_blank" rel="noopener noreferrer">
+                                Improving storage efficiency in Magic Pocket, our immutable blob store
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 17:00</p>
+                    <p class="article-summary">By turning compaction into a layered, adaptive pipeline and strengthening our monitoring and controls, we made Magic Pocket more resilient to workload changes.</p>
+                    
+                    <a href="https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity" target="_blank" rel="noopener noreferrer">
+                                Reducing our monorepo size to improve developer velocity
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-25 17:00</p>
+                    <p class="article-summary">Monorepos will continue to grow as products evolve, but growth doesn’t have to mean friction.</p>
+                    
+                    <a href="https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/" target="_blank" rel="noopener noreferrer">
+                                GitHub Copilot CLI combines model families for a second opinion
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-06 21:53</p>
+                    <p class="article-summary">Discover how Rubber Duck provides a different perspective to GitHub Copilot CLI The post GitHub Copilot CLI combines model families for a second opinion appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/" target="_blank" rel="noopener noreferrer">
+                                The uphill climb of making diff lines performant
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-03 16:00</p>
+                    <p class="article-summary">The path to better performance is often found in simplicity The post The uphill climb of making diff lines performant appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/" target="_blank" rel="noopener noreferrer">
+                                Securing the open source supply chain across GitHub
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-01 19:20</p>
+                    <p class="article-summary">Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on The post Securing the open source supply chain across GitHub appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/" target="_blank" rel="noopener noreferrer">
+                                Supercharge your AI agents: The New ADK Integrations Ecosystem
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-08 10:05</p>
+                    <p class="article-summary">Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</p>
+                    
+                    <a href="https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/" target="_blank" rel="noopener noreferrer">
+                                How we built the Google I/O 2026 Save the Date experience
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-08 10:05</p>
+                    <p class="article-summary">Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year's experience highlights how AI can empower and accelerate</p>
+                    
+                    <a href="https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/" target="_blank" rel="noopener noreferrer">
+                                You can't stream the energy: A developer's guide to Google Cloud Next '26 in Vegas
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-08 10:05</p>
+                    <p class="article-summary">While keynotes are available online, Google Cloud Next '26 in Las Vegas offers an irreplaceable in-person experience centered on networking, hands-on problem solving, and the transition to agentic AI The event features specialized technical tracks covering everything from Gemini multimodal breakthroughs to zero-trust security on Cloud Run, providing developers with the tools to balance individual speed with organizational stability Beyond formal sessions, the "in-person advantage" lies in over 20 developer meetups and collaborative whiteboard sessions designed to foster serendipitous breakthroughs</p>
+                    
+                    <a href="https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/" target="_blank" rel="noopener noreferrer">
+                                How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-06 16:00</p>
+                    <p class="article-summary">AI coding assistants are powerful but only as good as their understanding of your codebase When we pointed AI agents at one of Meta’s large-scale data processing pipelines – spanning four repositories, three languages, and over 4,100 files – we quickly found that they weren’t making useful edits quickly enough The post How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/" target="_blank" rel="noopener noreferrer">
+                                KernelEvolve: How Meta’s Ranking Engineer Agent Optimizes AI Infrastructure
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 19:59</p>
+                    <p class="article-summary">This is the second post in the Ranking Engineer Agent blog series exploring the autonomous AI capabilities accelerating Meta’s Ads Ranking innovation The previous post introduced Ranking Engineer Agent’s ML exploration capability, which autonomously designs, executes, and analyzes ranking model experiments The post KernelEvolve: How Meta’s Ranking Engineer Agent Optimizes AI Infrastructure appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/" target="_blank" rel="noopener noreferrer">
+                                Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-31 16:00</p>
+                    <p class="article-summary">Meta continues to lead the industry in utilizing groundbreaking AI Recommendation Systems (RecSys) to deliver better experiences for people, and better results for advertisers To reach the next frontier of performance, we are scaling Meta’s Ads Recommender runtime models to LLM-scale & complexity to further a deeper understanding of people’s interests and intent The post Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-06 22:15</p>
+                    <p class="article-summary">Older data lingers much longer, because our confidence in its accuracy grows with time.For a 3-hour rolling window, the exponential TTL ensures the vast majority of the query is served from the cache, leaving Druid to only scan the most recent, unsettled data.BucketingIf we were to use a single-level cache key for the query and interval, similar to Druid’s existing result-level cache, we wouldn’t be able to extract only the relevant time range from cached results Without special handling, the cache would treat these empty buckets as gaps and re-query Druid for them every time.We handle this by caching empty sentinel values for time buckets where Druid returned no data Crucially, KVDAL supports independent TTLs on each inner key-value pair, eliminating the need for us to manage cache eviction manually.This two-level structure gives us efficient range queries over the inner keys, which is exactly what we need for partial cache lookups: “give me all cached buckets between time A and time B for query hash X.”ResultsThe biggest win is during high-volume events (e.g., live shows): when many users view the same dashboards, the cache serves most identical queries as full hits, so the query rate reaching Druid is essentially the same with 1 viewer or 100</p>
+                    
+                    <a href="https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Powering Multimodal Intelligence for Video Search
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-04 00:44</p>
+                    <p class="article-summary">The ultimate challenge lies in harmonizing these heterogeneous data streams to support rich, multi-dimensional queries in real time.Unifying the TimelineTo ensure critical moments aren’t lost across scene boundaries, each model segments the video into overlapping intervals For example, if a model detects a character “Joey” from seconds 2 through 8, the pipeline maps this continuous span of frames into seven distinct one-second buckets.Annotation Intersection: When multiple models generate annotations for the same temporal bucket, such as character recognition “Joey” and scene detection “kitchen” overlapping in second 4, the system fuses them into a single, comprehensive record.Optimized Persistence: These newly enriched records are written back to Cassandra as distinct entities Upon receiving a user request, the system immediately initiates a query preprocessing phase, generating a structured execution plan through three core steps:Query Type Detection: Dynamically categorizes the incoming request to route it down the most efficient retrieval path.Filter Extraction: Isolates specific semantic constraints such as character names, physical objects, or environmental contexts to rapidly narrow the candidate pool.Vector Transformation: Converts raw text into high-dimensional, model-specific embeddings to enable deep, context-aware semantic matching.Once generated, the system compiles this structured plan into a highly optimized Elasticsearch query, executing it directly against the pre-fused temporal buckets to deliver instantaneous, frame-accurate results.Fine-Tuning Semantic SearchTo support the diverse workflows of different production teams, the system provides fine-grained control over search behavior through configurable parameters:Exact vs</p>
+                    
+                    <a href="https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Smarter Live Streaming at Scale: Rolling Out VBR for All Netflix Live Events
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 21:46</p>
+                    <p class="article-summary">That’s more efficient, but it also means that “same nominal bitrate” does not imply “same average number of bits” anymore — so simply reusing our CBR settings risks giving VBR less bitrate on average and losing some quality.In practice, of course, we don’t just encode a single stream; we produce a set of streams at different resolutions and nominal bitrates — often called a bitrate ladder — so devices can adapt to their current network conditions by switching between them Wherever VBR fell more than about one VMAF point below CBR, we increased its nominal bitrate just enough to close the gap Higher‑bitrate streams, where VBR quality was already very close to CBR, were left largely unchanged, including the 8 Mbps stream from the figure.The result is a VBR ladder with slightly higher nominal bitrates on a few low‑end streams, but lower overall traffic, because VBR still drops the bitrate on simple scenes</p>
+                    
+                    <a href="https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/global-checkout-trends" target="_blank" rel="noopener noreferrer">
+                                How agents, digital wallets, and trust are rewriting checkout
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-07 00:00</p>
+                    <p class="article-summary">We analyzed checkout activity across more than 20K businesses, surveyed shoppers and ecommerce leaders, and gathered insights from businesses on the Stripe network to understand what’s changing in online conversion.</p>
+                    
+                    <a href="https://stripe.com/blog/global-checkout-trends" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/shoptalk-2026" target="_blank" rel="noopener noreferrer">
+                                Insights from Shoptalk 2026: How agents are changing retail
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-02 00:00</p>
+                    <p class="article-summary">Retailers know search and discovery have already shifted What comes next is less settled From embedded checkout to emerging third-party surfaces, here’s how ecommerce and AI leaders are integrating agentic commerce.</p>
+                    
+                    <a href="https://stripe.com/blog/shoptalk-2026" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse" target="_blank" rel="noopener noreferrer">
+                                How Stripe Radar helps prevent free trial abuse
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-03-24 00:00</p>
+                    <p class="article-summary">Radar now helps prevent free trial abuse with just one click When enabled, Radar predicts the presence of abusive behavior that violates common trial terms, such as repeated trial signup or missed cancellations, with 90% accuracy.</p>
+                    
+                    <a href="https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-04-08 10:05:41</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
