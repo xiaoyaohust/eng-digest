@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 08 Apr 2026 10:05:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 10:11:22 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
       <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
       <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Wed, 08 Apr 2026 10:05:39 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 10:11:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>How we built the Google I/O 2026 Save the Date experience</title>
       <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
       <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Wed, 08 Apr 2026 10:05:39 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 10:11:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>You can't stream the energy: A developer's guide to Google Cloud Next '26 in Vegas</title>
       <link>https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</link>
       <description>While keynotes are available online, Google Cloud Next &amp;apos;26 in Las Vegas offers an irreplaceable in-person experience centered on networking, hands-on problem solving, and the transition to agentic AI The event features specialized technical tracks covering everything from Gemini multimodal breakthroughs to zero-trust security on Cloud Run, providing developers with the tools to balance individual speed with organizational stability Beyond formal sessions, the &amp;quot;in-person advantage&amp;quot; lies in over 20 developer meetups and collaborative whiteboard sessions designed to foster serendipitous breakthroughs</description>
-      <pubDate>Wed, 08 Apr 2026 10:05:39 GMT</pubDate>
+      <pubDate>Thu, 09 Apr 2026 10:11:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub availability report: March 2026</title>
+      <link>https://github.blog/news-insights/company-news/github-availability-report-march-2026/</link>
+      <description>In March, we experienced four incidents that resulted in degraded performance across GitHub services The post GitHub availability report: March 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 09 Apr 2026 02:21:17 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-march-2026/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Trust But Canary: Configuration Safety at Scale</title>
+      <link>https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/</link>
+      <description>On this episode of the Meta Tech Podcast, Pascal Hartig sits down with Ishwari and Joe from Meta’s Configurations team to discuss how Meta makes config rollouts safe at scale Listen in to learn about canarying and progressive rollouts, the health checks [...] Read More The post Trust But Canary: Configuration Safety at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 08 Apr 2026 18:25:26 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>GitHub Universe is back: We want you to take the stage</title>
+      <link>https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/</link>
+      <description>Get inspired by five of the most memorable, magical, and quirky Universe sessions to date The post GitHub Universe is back: We want you to take the stage appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 08 Apr 2026 16:35:46 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-universe-is-back-we-want-you-to-take-the-stage/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Launching S3 Files, making S3 buckets accessible as file systems</title>
@@ -97,14 +121,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>The uphill climb of making diff lines performant</title>
-      <link>https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/</link>
-      <description>The path to better performance is often found in simplicity The post The uphill climb of making diff lines performant appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 03 Apr 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Smarter Live Streaming at Scale: Rolling Out VBR for All Netflix Live Events</title>
       <link>https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss----2615bd06b42e---4</link>
       <description>That’s more efficient, but it also means that “same nominal bitrate” does not imply “same average number of bits” anymore — so simply reusing our CBR settings risks giving VBR less bitrate on average and losing some quality.In practice, of course, we don’t just encode a single stream; we produce a set of streams at different resolutions and nominal bitrates — often called a bitrate ladder — so devices can adapt to their current network conditions by switching between them Wherever VBR fell more than about one VMAF point below CBR, we increased its nominal bitrate just enough to close the gap Higher‑bitrate streams, where VBR quality was already very close to CBR, were left largely unchanged, including the 8 Mbps stream from the figure.The result is a VBR ladder with slightly higher nominal bitrates on a few low‑end streams, but lower overall traffic, because VBR still drops the bitrate on simple scenes</description>
@@ -135,22 +151,6 @@
       <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/shoptalk-2026</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Securing the open source supply chain across GitHub</title>
-      <link>https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/</link>
-      <description>Recent attacks on open source focus on exfiltrating secrets; here are the prevention steps you can take today, plus a look at the security capabilities GitHub is working on The post Securing the open source supply chain across GitHub appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 01 Apr 2026 19:20:12 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/securing-the-open-source-supply-chain-across-github/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads</title>
-      <link>https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/</link>
-      <description>Meta continues to lead the industry in utilizing groundbreaking AI Recommendation Systems (RecSys) to deliver better experiences for people, and better results for advertisers To reach the next frontier of performance, we are scaling Meta’s Ads Recommender runtime models to LLM-scale &amp;amp; complexity to further a deeper understanding of people’s interests and intent The post Meta Adaptive Ranking Model: Bending the Inference Scaling Curve to Serve LLM-Scale Models for Ads appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 31 Mar 2026 16:00:17 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/03/31/ml-applications/meta-adaptive-ranking-model-bending-the-inference-scaling-curve-to-serve-llm-scale-models-for-ads/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Reducing our monorepo size to improve developer velocity</title>
