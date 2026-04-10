@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 09 Apr 2026 10:11:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2026 10:07:03 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
       <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
       <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Thu, 09 Apr 2026 10:11:19 GMT</pubDate>
+      <pubDate>Fri, 10 Apr 2026 10:06:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>How we built the Google I/O 2026 Save the Date experience</title>
       <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
       <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Thu, 09 Apr 2026 10:11:19 GMT</pubDate>
+      <pubDate>Fri, 10 Apr 2026 10:06:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>You can't stream the energy: A developer's guide to Google Cloud Next '26 in Vegas</title>
       <link>https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</link>
       <description>While keynotes are available online, Google Cloud Next &amp;apos;26 in Las Vegas offers an irreplaceable in-person experience centered on networking, hands-on problem solving, and the transition to agentic AI The event features specialized technical tracks covering everything from Gemini multimodal breakthroughs to zero-trust security on Cloud Run, providing developers with the tools to balance individual speed with organizational stability Beyond formal sessions, the &amp;quot;in-person advantage&amp;quot; lies in over 20 developer meetups and collaborative whiteboard sessions designed to foster serendipitous breakthroughs</description>
-      <pubDate>Thu, 09 Apr 2026 10:11:19 GMT</pubDate>
+      <pubDate>Fri, 10 Apr 2026 10:06:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Escaping the Fork: How Meta Modernized WebRTC Across 50+ Use Cases</title>
+      <link>https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/</link>
+      <description>At Meta, WebRTC powers real-time audio and video across various platforms But forking a large open-source project like WebRTC within our monorepo presents unique challenges – over time, an internal fork can drift behind upstream, cutting itself off from community upgrades The post Escaping the Fork: How Meta Modernized WebRTC Across 50+ Use Cases appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 09 Apr 2026 16:00:34 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>GitHub availability report: March 2026</title>
@@ -127,14 +135,6 @@
       <pubDate>Thu, 02 Apr 2026 21:46:27 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/smarter-live-streaming-at-scale-rolling-out-vbr-for-all-netflix-live-events-c8f833b238cc?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>KernelEvolve: How Meta’s Ranking Engineer Agent Optimizes AI Infrastructure</title>
-      <link>https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/</link>
-      <description>This is the second post in the Ranking Engineer Agent blog series exploring the autonomous AI capabilities accelerating Meta’s Ads Ranking innovation The previous post introduced Ranking Engineer Agent’s ML exploration capability, which autonomously designs, executes, and analyzes ranking model experiments The post KernelEvolve: How Meta’s Ranking Engineer Agent Optimizes AI Infrastructure appeared first on Engineering at Meta.</description>
-      <pubDate>Thu, 02 Apr 2026 19:59:46 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/04/02/developer-tools/kernelevolve-how-metas-ranking-engineer-agent-optimizes-ai-infrastructure/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Improving storage efficiency in Magic Pocket, our immutable blob store</title>
