@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 11 Apr 2026 09:38:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 09:42:31 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
       <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
       <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Sat, 11 Apr 2026 09:37:59 GMT</pubDate>
+      <pubDate>Sun, 12 Apr 2026 09:42:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>How we built the Google I/O 2026 Save the Date experience</title>
       <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
       <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Sat, 11 Apr 2026 09:37:59 GMT</pubDate>
+      <pubDate>Sun, 12 Apr 2026 09:42:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>You can't stream the energy: A developer's guide to Google Cloud Next '26 in Vegas</title>
       <link>https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</link>
       <description>While keynotes are available online, Google Cloud Next &amp;apos;26 in Las Vegas offers an irreplaceable in-person experience centered on networking, hands-on problem solving, and the transition to agentic AI The event features specialized technical tracks covering everything from Gemini multimodal breakthroughs to zero-trust security on Cloud Run, providing developers with the tools to balance individual speed with organizational stability Beyond formal sessions, the &amp;quot;in-person advantage&amp;quot; lies in over 20 developer meetups and collaborative whiteboard sessions designed to foster serendipitous breakthroughs</description>
-      <pubDate>Sat, 11 Apr 2026 09:37:59 GMT</pubDate>
+      <pubDate>Sun, 12 Apr 2026 09:42:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</guid>
       <source>Google Developers</source>
     </item>
