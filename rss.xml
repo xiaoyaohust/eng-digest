@@ -6,31 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 14 Apr 2026 10:13:51 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 10:14:56 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Supercharge your AI agents: The New ADK Integrations Ecosystem</title>
-      <link>https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</link>
-      <description>Agent Development Kit (ADK) now supports a robust ecosystem of third-party tools and integrations Connect your agents to GitHub, Notion, Hugging Face, and more to build capable, real-world applications.</description>
-      <pubDate>Tue, 14 Apr 2026 10:13:48 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-ai-agents-adk-integrations-ecosystem/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>How we built the Google I/O 2026 Save the Date experience</title>
-      <link>https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</link>
-      <description>Google I/O 2026 is returning May 19-20 at Shoreline Amphitheatre in Mountain View, CA But before the keynotes begin, you can get into the spirit of the event with our annual tradition: the save the date puzzle This year&amp;apos;s experience highlights how AI can empower and accelerate</description>
-      <pubDate>Tue, 14 Apr 2026 10:13:48 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-we-built-the-google-io-2026-save-the-date-experience/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>You can't stream the energy: A developer's guide to Google Cloud Next '26 in Vegas</title>
       <link>https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</link>
       <description>While keynotes are available online, Google Cloud Next &amp;apos;26 in Las Vegas offers an irreplaceable in-person experience centered on networking, hands-on problem solving, and the transition to agentic AI The event features specialized technical tracks covering everything from Gemini multimodal breakthroughs to zero-trust security on Cloud Run, providing developers with the tools to balance individual speed with organizational stability Beyond formal sessions, the &amp;quot;in-person advantage&amp;quot; lies in over 20 developer meetups and collaborative whiteboard sessions designed to foster serendipitous breakthroughs</description>
-      <pubDate>Tue, 14 Apr 2026 10:13:48 GMT</pubDate>
+      <pubDate>Wed, 15 Apr 2026 10:14:52 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/you-cant-stream-the-energy-a-developers-guide-to-google-cloud-next-26-in-vegas/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>What's new in TensorFlow 2.21</title>
+      <link>https://developers.googleblog.com/whats-new-in-tensorflow-221/</link>
+      <description>Google has officially launched LiteRT, the successor to TFLite, which offers significantly faster GPU and NPU acceleration alongside seamless support for PyTorch and JAX The update also introduces lower-precision data type support for increased efficiency and a commitment to more frequent security and dependency updates across the TensorFlow ecosystem This transition solidifies LiteRT as Google&amp;apos;s primary high-performance framework for deploying GenAI and advanced on-device inference.</description>
+      <pubDate>Wed, 15 Apr 2026 10:14:52 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/whats-new-in-tensorflow-221/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing Wednesday Build Hour</title>
+      <link>https://developers.googleblog.com/introducing-wednesday-build-hour/</link>
+      <description>Wednesday Build Hour is a weekly, interactive &amp;quot;technical gym session&amp;quot; led by Google Cloud experts to help developers and architects sharpen their cloud skills Each hour-long session is designed to provide tangible results that participants can immediately deploy into their own workflows It serves as a consistent, dedicated space for builders to stay ahead of the curve and connect with a community of cloud engineers.</description>
+      <pubDate>Wed, 15 Apr 2026 10:14:52 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-wednesday-build-hour/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/</link>
+      <description>Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]</description>
+      <pubDate>Tue, 14 Apr 2026 23:54:47 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</title>
+      <link>https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/</link>
+      <description>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills The post Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 14 Apr 2026 18:17:59 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How exposed is your code? Find out in minutes—for free</title>
+      <link>https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/</link>
+      <description>The new Code Security Risk Assessment gives you a one-click view of vulnerabilities across your organization, at no cost The post How exposed is your code Find out in minutes—for free appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 14 Apr 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/application-security/how-exposed-is-your-code-find-out-in-minutes-for-free/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)</title>
@@ -57,28 +81,12 @@
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/</link>
-      <description>GitHub for Beginners: Getting started with the GitHub Copilot CLI, a step-by-step tutorial The post GitHub Copilot CLI for Beginners: Getting started with GitHub Copilot CLI appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 10 Apr 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-getting-started-with-github-copilot-cli/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Escaping the Fork: How Meta Modernized WebRTC Across 50+ Use Cases</title>
       <link>https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/</link>
       <description>At Meta, WebRTC powers real-time audio and video across various platforms But forking a large open-source project like WebRTC within our monorepo presents unique challenges – over time, an internal fork can drift behind upstream, cutting itself off from community upgrades The post Escaping the Fork: How Meta Modernized WebRTC Across 50+ Use Cases appeared first on Engineering at Meta.</description>
       <pubDate>Thu, 09 Apr 2026 16:00:34 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/04/09/developer-tools/escaping-the-fork-how-meta-modernized-webrtc-across-50-use-cases/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>GitHub availability report: March 2026</title>
-      <link>https://github.blog/news-insights/company-news/github-availability-report-march-2026/</link>
-      <description>In March, we experienced four incidents that resulted in degraded performance across GitHub services The post GitHub availability report: March 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 09 Apr 2026 02:21:17 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-march-2026/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Trust But Canary: Configuration Safety at Scale</title>
@@ -111,14 +119,6 @@
       <pubDate>Mon, 06 Apr 2026 22:15:14 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: AWS DevOps Agent &amp; Security Agent GA, Product Lifecycle updates, and more (April 6, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/</link>
-      <description>Last week, I visited AWS Hong Kong User Group with my team Hong Kong has a small but strong community, and their energy and passion are high I was able to strengthen my bond with the community through great food […]</description>
-      <pubDate>Mon, 06 Apr 2026 16:51:00 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines</title>
