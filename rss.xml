@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 16 Apr 2026 10:13:39 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 10:12:13 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Introducing Wednesday Build Hour</title>
-      <link>https://developers.googleblog.com/introducing-wednesday-build-hour/</link>
-      <description>Wednesday Build Hour is a weekly, interactive &amp;quot;technical gym session&amp;quot; led by Google Cloud experts to help developers and architects sharpen their cloud skills Each hour-long session is designed to provide tangible results that participants can immediately deploy into their own workflows It serves as a consistent, dedicated space for builders to stay ahead of the curve and connect with a community of cloud engineers.</description>
-      <pubDate>Thu, 16 Apr 2026 10:13:36 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-wednesday-build-hour/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Introducing Finish Changes and Outlines, now available in Gemini Code Assist extensions on IntelliJ and VS Code</title>
       <link>https://developers.googleblog.com/introducing-finish-changes-and-outlines-now-available-in-gemini-code-assist-extensions-on-intellij-and-vs-code/</link>
       <description>Google has introduced Finish Changes and Outlines for Gemini Code Assist in IntelliJ and VS Code to reduce developer friction and eliminate the need for long, manual prompting Finish Changes acts as an AI pair programmer that completes code, implements pseudocode, and applies refactoring patterns by observing your current edits and context Meanwhile, Outlines improves code comprehension by generating interactive, high-level English summaries interleaved directly within the source code to help engineers navigate and understand complex files.</description>
-      <pubDate>Thu, 16 Apr 2026 10:13:36 GMT</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:12:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-finish-changes-and-outlines-now-available-in-gemini-code-assist-extensions-on-intellij-and-vs-code/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,49 @@
       <title>Unleash Your Development Superpowers: Refining the Core Coding Experience</title>
       <link>https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</link>
       <description>The Gemini Code Assist team has introduced a suite of updates focused on streamlining the core coding workflow through high-velocity tools like Agent Mode with Auto Approve and Inline Diff Views These enhancements, along with new features for precise context management and custom commands, aim to transform the AI from a general assistant into a highly tailored, seamless collaborator that adapts to your specific development style.</description>
-      <pubDate>Thu, 16 Apr 2026 10:13:36 GMT</pubDate>
+      <pubDate>Fri, 17 Apr 2026 10:12:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Plan mode is now available in Gemini CLI</title>
+      <link>https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</link>
+      <description>Gemini CLI now features Plan Mode, a read-only environment that allows the AI to analyze complex codebases and map out architectural changes without the risk of accidental execution By leveraging the new ask_user tool and expanded Model Context Protocol (MCP) support, developers can collaboratively refine strategies and pull in external data before committing to implementation.</description>
+      <pubDate>Fri, 17 Apr 2026 10:12:10 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Capacity Efficiency at Meta: How Unified AI Agents Optimize Performance at Hyperscale</title>
+      <link>https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/</link>
+      <description>We’re sharing insights into Meta’s Capacity Efficiency Program, where we’ve built an AI agent platform that helps automate finding and fixing performance issues throughout our infrastructure By leveraging encoded domain expertise across a unified, standardized tool interface these agents help save power and free up engineers’ time away from addressing performance issues to innovating on [...] Read More The post Capacity Efficiency at Meta: How Unified AI Agents Optimize Performance at Hyperscale appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 16 Apr 2026 16:00:34 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>How GitHub uses eBPF to improve deployment safety</title>
+      <link>https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/</link>
+      <description>Learn how Github uses eBPF to detect and prevent circular dependencies in its deployment tooling The post How GitHub uses eBPF to improve deployment safety appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 16 Apr 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways</title>
+      <link>https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/</link>
+      <description>We’re sharing lessons learned from Meta’s post-quantum cryptography (PQC) migration to help other organizations strengthen their resilience as industry transitions to post-quantum cryptography standards We’re proposing the idea of PQC Migration Levels to help teams within organizations manage the complexity of PQC migration for their various use cases The post Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 16 Apr 2026 14:59:44 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Introducing Anthropic’s Claude Opus 4.7 model in Amazon Bedrock</title>
+      <link>https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/</link>
+      <description>AWS launches Claude Opus 4.7 in Amazon Bedrock, Anthropic&amp;apos;s most intelligent Opus model for advancing performance across coding, long-running agents, and professional work Claude Opus 4.7 is powered by Amazon Bedrock&amp;apos;s next generation inference engine, purpose-built for generative AI inferencing and fine-tuning workloads.</description>
+      <pubDate>Thu, 16 Apr 2026 14:49:33 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Build a personal organization command center with GitHub Copilot CLI</title>
@@ -57,14 +89,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</title>
-      <link>https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/</link>
-      <description>Learn to find and exploit real-world agentic AI vulnerabilities through five progressive challenges in this free, open source game that over 10,000 developers have already used to sharpen their security skills The post Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 14 Apr 2026 18:17:59 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/</link>
       <description>In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year A common theme in those sessions is the need for better cost visibility Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]</description>
@@ -89,22 +113,6 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Trust But Canary: Configuration Safety at Scale</title>
-      <link>https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/</link>
-      <description>On this episode of the Meta Tech Podcast, Pascal Hartig sits down with Ishwari and Joe from Meta’s Configurations team to discuss how Meta makes config rollouts safe at scale Listen in to learn about canarying and progressive rollouts, the health checks [...] Read More The post Trust But Canary: Configuration Safety at Scale appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 08 Apr 2026 18:25:26 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/04/08/security/trust-but-canary-configuration-safety-at-scale-meta-tech-podcast/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Launching S3 Files, making S3 buckets accessible as file systems</title>
-      <link>https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/</link>
-      <description>Amazon S3 Files makes S3 buckets accessible as high-performance file systems on AWS compute resources, eliminating the tradeoff between object storage benefits and interactive file capabilities while enabling seamless data sharing with ~1ms latencies.</description>
-      <pubDate>Tue, 07 Apr 2026 19:18:32 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/launching-s3-files-making-s3-buckets-accessible-as-file-systems/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>How agents, digital wallets, and trust are rewriting checkout</title>
       <link>https://stripe.com/blog/global-checkout-trends</link>
       <description>We analyzed checkout activity across more than 20K businesses, surveyed shoppers and ecommerce leaders, and gathered insights from businesses on the Stripe network to understand what’s changing in online conversion.</description>
@@ -119,14 +127,6 @@
       <pubDate>Mon, 06 Apr 2026 22:15:14 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines</title>
-      <link>https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/</link>
-      <description>AI coding assistants are powerful but only as good as their understanding of your codebase When we pointed AI agents at one of Meta’s large-scale data processing pipelines – spanning four repositories, three languages, and over 4,100 files – we quickly found that they weren’t making useful edits quickly enough The post How Meta Used AI to Map Tribal Knowledge in Large-Scale Data Pipelines appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 06 Apr 2026 16:00:50 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/04/06/developer-tools/how-meta-used-ai-to-map-tribal-knowledge-in-large-scale-data-pipelines/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Powering Multimodal Intelligence for Video Search</title>
