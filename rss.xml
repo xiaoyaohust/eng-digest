@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 17 Apr 2026 10:12:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Apr 2026 09:44:38 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Introducing Finish Changes and Outlines, now available in Gemini Code Assist extensions on IntelliJ and VS Code</title>
-      <link>https://developers.googleblog.com/introducing-finish-changes-and-outlines-now-available-in-gemini-code-assist-extensions-on-intellij-and-vs-code/</link>
-      <description>Google has introduced Finish Changes and Outlines for Gemini Code Assist in IntelliJ and VS Code to reduce developer friction and eliminate the need for long, manual prompting Finish Changes acts as an AI pair programmer that completes code, implements pseudocode, and applies refactoring patterns by observing your current edits and context Meanwhile, Outlines improves code comprehension by generating interactive, high-level English summaries interleaved directly within the source code to help engineers navigate and understand complex files.</description>
-      <pubDate>Fri, 17 Apr 2026 10:12:10 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/introducing-finish-changes-and-outlines-now-available-in-gemini-code-assist-extensions-on-intellij-and-vs-code/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Unleash Your Development Superpowers: Refining the Core Coding Experience</title>
       <link>https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</link>
       <description>The Gemini Code Assist team has introduced a suite of updates focused on streamlining the core coding workflow through high-velocity tools like Agent Mode with Auto Approve and Inline Diff Views These enhancements, along with new features for precise context management and custom commands, aim to transform the AI from a general assistant into a highly tailored, seamless collaborator that adapts to your specific development style.</description>
-      <pubDate>Fri, 17 Apr 2026 10:12:10 GMT</pubDate>
+      <pubDate>Sat, 18 Apr 2026 09:44:35 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Plan mode is now available in Gemini CLI</title>
       <link>https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</link>
       <description>Gemini CLI now features Plan Mode, a read-only environment that allows the AI to analyze complex codebases and map out architectural changes without the risk of accidental execution By leveraging the new ask_user tool and expanded Model Context Protocol (MCP) support, developers can collaboratively refine strategies and pull in external data before committing to implementation.</description>
-      <pubDate>Fri, 17 Apr 2026 10:12:10 GMT</pubDate>
+      <pubDate>Sat, 18 Apr 2026 09:44:35 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing the Colab MCP Server: Connect Any AI Agent to Google Colab</title>
+      <link>https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</link>
+      <description>When you’re prototyping locally with AI agents like Gemini CLI, Claude Code, or your own agent, thei...</description>
+      <pubDate>Sat, 18 Apr 2026 09:44:35 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building an emoji list generator with the GitHub Copilot CLI</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/</link>
+      <description>See how we created an emoji list generator during the Rubber Duck Thursday stream The post Building an emoji list generator with the GitHub Copilot CLI appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 17 Apr 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Bringing more transparency to GitHub’s status page</title>
+      <link>https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/</link>
+      <description>Changes to the status page will provide more specific data, so you&amp;apos;ll have better insight into the overall health of the platform The post Bringing more transparency to GitHub’s status page appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 17 Apr 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>The Human Infrastructure: How Netflix Built the Operations Layer Behind Live at Scale</title>
+      <link>https://netflixtechblog.com/the-human-infrastructure-how-netflix-built-the-operations-layer-behind-live-at-scale-33e2a311c597?source=rss----2615bd06b42e---4</link>
+      <description>This post pulls back the curtain on the Live Operations teams that enable this rapid scale.Humble BeginningsIn March 2023, the engineers who built Netflix’s first live streaming pipeline also operated it In the earliest days of live streaming, there was no dedicated operations team or formal broadcast operations center The software engineers who wrote the code and built the live-streaming infrastructure were the same people manually operating the events on launch night</description>
+      <pubDate>Fri, 17 Apr 2026 15:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/the-human-infrastructure-how-netflix-built-the-operations-layer-behind-live-at-scale-33e2a311c597?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>Capacity Efficiency at Meta: How Unified AI Agents Optimize Performance at Hyperscale</title>
@@ -63,22 +87,6 @@
       <pubDate>Thu, 16 Apr 2026 14:49:33 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>Build a personal organization command center with GitHub Copilot CLI</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/</link>
-      <description>Learn about the productivity tool one GitHub engineer built, and how AI supported the development process The post Build a personal organization command center with GitHub Copilot CLI appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 15 Apr 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/build-a-personal-organization-command-center-with-github-copilot-cli/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Developer policy update: Intermediary liability, copyright, and transparency</title>
-      <link>https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/</link>
-      <description>We’re sharing recent policy updates that developers should know about, updating our Transparency Center with the full year of 2025 data, and looking to what’s ahead The post Developer policy update: Intermediary liability, copyright, and transparency appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 15 Apr 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-intermediary-liability-copyright-and-transparency/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Interconnect is now generally available, with a new option to simplify last-mile connectivity</title>
@@ -126,14 +134,6 @@
       <description>Older data lingers much longer, because our confidence in its accuracy grows with time.For a 3-hour rolling window, the exponential TTL ensures the vast majority of the query is served from the cache, leaving Druid to only scan the most recent, unsettled data.BucketingIf we were to use a single-level cache key for the query and interval, similar to Druid’s existing result-level cache, we wouldn’t be able to extract only the relevant time range from cached results Without special handling, the cache would treat these empty buckets as gaps and re-query Druid for them every time.We handle this by caching empty sentinel values for time buckets where Druid returned no data Crucially, KVDAL supports independent TTLs on each inner key-value pair, eliminating the need for us to manage cache eviction manually.This two-level structure gives us efficient range queries over the inner keys, which is exactly what we need for partial cache lookups: “give me all cached buckets between time A and time B for query hash X.”ResultsThe biggest win is during high-volume events (e.g., live shows): when many users view the same dashboards, the cache serves most identical queries as full hits, so the query rate reaching Druid is essentially the same with 1 viewer or 100</description>
       <pubDate>Mon, 06 Apr 2026 22:15:14 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Powering Multimodal Intelligence for Video Search</title>
-      <link>https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss----2615bd06b42e---4</link>
-      <description>The ultimate challenge lies in harmonizing these heterogeneous data streams to support rich, multi-dimensional queries in real time.Unifying the TimelineTo ensure critical moments aren’t lost across scene boundaries, each model segments the video into overlapping intervals For example, if a model detects a character “Joey” from seconds 2 through 8, the pipeline maps this continuous span of frames into seven distinct one-second buckets.Annotation Intersection: When multiple models generate annotations for the same temporal bucket, such as character recognition “Joey” and scene detection “kitchen” overlapping in second 4, the system fuses them into a single, comprehensive record.Optimized Persistence: These newly enriched records are written back to Cassandra as distinct entities Upon receiving a user request, the system immediately initiates a query preprocessing phase, generating a structured execution plan through three core steps:Query Type Detection: Dynamically categorizes the incoming request to route it down the most efficient retrieval path.Filter Extraction: Isolates specific semantic constraints such as character names, physical objects, or environmental contexts to rapidly narrow the candidate pool.Vector Transformation: Converts raw text into high-dimensional, model-specific embeddings to enable deep, context-aware semantic matching.Once generated, the system compiles this structured plan into a highly optimized Elasticsearch query, executing it directly against the pre-fused temporal buckets to deliver instantaneous, frame-accurate results.Fine-Tuning Semantic SearchTo support the diverse workflows of different production teams, the system provides fine-grained control over search behavior through configurable parameters:Exact vs</description>
-      <pubDate>Sat, 04 Apr 2026 00:44:32 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/powering-multimodal-intelligence-for-video-search-3e0020cf1202?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
     </item>
     <item>
