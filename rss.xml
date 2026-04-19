@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 18 Apr 2026 09:44:38 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2026 09:44:28 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Unleash Your Development Superpowers: Refining the Core Coding Experience</title>
       <link>https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</link>
       <description>The Gemini Code Assist team has introduced a suite of updates focused on streamlining the core coding workflow through high-velocity tools like Agent Mode with Auto Approve and Inline Diff Views These enhancements, along with new features for precise context management and custom commands, aim to transform the AI from a general assistant into a highly tailored, seamless collaborator that adapts to your specific development style.</description>
-      <pubDate>Sat, 18 Apr 2026 09:44:35 GMT</pubDate>
+      <pubDate>Sun, 19 Apr 2026 09:44:24 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Plan mode is now available in Gemini CLI</title>
       <link>https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</link>
       <description>Gemini CLI now features Plan Mode, a read-only environment that allows the AI to analyze complex codebases and map out architectural changes without the risk of accidental execution By leveraging the new ask_user tool and expanded Model Context Protocol (MCP) support, developers can collaboratively refine strategies and pull in external data before committing to implementation.</description>
-      <pubDate>Sat, 18 Apr 2026 09:44:35 GMT</pubDate>
+      <pubDate>Sun, 19 Apr 2026 09:44:24 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Announcing the Colab MCP Server: Connect Any AI Agent to Google Colab</title>
       <link>https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</link>
       <description>When you’re prototyping locally with AI agents like Gemini CLI, Claude Code, or your own agent, thei...</description>
-      <pubDate>Sat, 18 Apr 2026 09:44:35 GMT</pubDate>
+      <pubDate>Sun, 19 Apr 2026 09:44:24 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</guid>
       <source>Google Developers</source>
     </item>
