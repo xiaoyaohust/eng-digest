@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 20 Apr 2026 10:45:52 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 10:17:12 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Unleash Your Development Superpowers: Refining the Core Coding Experience</title>
       <link>https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</link>
       <description>The Gemini Code Assist team has introduced a suite of updates focused on streamlining the core coding workflow through high-velocity tools like Agent Mode with Auto Approve and Inline Diff Views These enhancements, along with new features for precise context management and custom commands, aim to transform the AI from a general assistant into a highly tailored, seamless collaborator that adapts to your specific development style.</description>
-      <pubDate>Mon, 20 Apr 2026 10:45:49 GMT</pubDate>
+      <pubDate>Tue, 21 Apr 2026 10:17:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unleash-your-development-superpowers-refining-the-core-coding-experience/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Plan mode is now available in Gemini CLI</title>
       <link>https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</link>
       <description>Gemini CLI now features Plan Mode, a read-only environment that allows the AI to analyze complex codebases and map out architectural changes without the risk of accidental execution By leveraging the new ask_user tool and expanded Model Context Protocol (MCP) support, developers can collaboratively refine strategies and pull in external data before committing to implementation.</description>
-      <pubDate>Mon, 20 Apr 2026 10:45:49 GMT</pubDate>
+      <pubDate>Tue, 21 Apr 2026 10:17:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Announcing the Colab MCP Server: Connect Any AI Agent to Google Colab</title>
       <link>https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</link>
       <description>When you’re prototyping locally with AI agents like Gemini CLI, Claude Code, or your own agent, thei...</description>
-      <pubDate>Mon, 20 Apr 2026 10:45:49 GMT</pubDate>
+      <pubDate>Tue, 21 Apr 2026 10:17:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Changes to GitHub Copilot Individual plans</title>
+      <link>https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/</link>
+      <description>We&amp;apos;re making these changes to ensure a reliable and predictable experience for existing customers The post Changes to GitHub Copilot Individual plans appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 20 Apr 2026 18:15:28 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Highlights from Git 2.54</title>
+      <link>https://github.blog/open-source/git/highlights-from-git-2-54/</link>
+      <description>The open source Git project just released Git 2.54 Here is GitHub’s look at some of the most interesting features and changes introduced since last time The post Highlights from Git 2.54 appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 20 Apr 2026 16:43:57 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/git/highlights-from-git-2-54/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Claude Opus 4.7 in Amazon Bedrock, AWS Interconnect GA, and more (April 20, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-7-in-amazon-bedrock-aws-interconnect-ga-and-more-april-20-2026/</link>
+      <description>Claude Opus 4.7 arrives in Amazon Bedrock with improved agentic coding and a 1M token context window AWS Interconnect reaches general availability with multicloud private connectivity and a new last-mile option Plus, post-quantum TLS for Secrets Manager, new C8in/C8ib EC2 instances, and more.</description>
+      <pubDate>Mon, 20 Apr 2026 15:53:21 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-7-in-amazon-bedrock-aws-interconnect-ga-and-more-april-20-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Building an emoji list generator with the GitHub Copilot CLI</title>
@@ -38,14 +62,6 @@
       <description>See how we created an emoji list generator during the Rubber Duck Thursday stream The post Building an emoji list generator with the GitHub Copilot CLI appeared first on The GitHub Blog.</description>
       <pubDate>Fri, 17 Apr 2026 18:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/building-an-emoji-list-generator-with-the-github-copilot-cli/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Bringing more transparency to GitHub’s status page</title>
-      <link>https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/</link>
-      <description>Changes to the status page will provide more specific data, so you&amp;apos;ll have better insight into the overall health of the platform The post Bringing more transparency to GitHub’s status page appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 17 Apr 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -63,14 +79,6 @@
       <pubDate>Thu, 16 Apr 2026 16:00:34 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>How GitHub uses eBPF to improve deployment safety</title>
-      <link>https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/</link>
-      <description>Learn how Github uses eBPF to detect and prevent circular dependencies in its deployment tooling The post How GitHub uses eBPF to improve deployment safety appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 16 Apr 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/infrastructure/how-github-uses-ebpf-to-improve-deployment-safety/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways</title>
@@ -94,14 +102,6 @@
       <description>Today, we’re announcing the general availability of AWS Interconnect – multicloud, a managed private connectivity service that connects your Amazon Virtual Private Cloud (Amazon VPC) directly to VPCs on other cloud providers We’re also introducing AWS Interconnect – last mile, a new capability that simplifies how you establish high-speed, private connections to AWS from your […]</description>
       <pubDate>Tue, 14 Apr 2026 23:54:47 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-interconnect-is-now-generally-available-with-a-new-option-to-simplify-last-mile-connectivity/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Claude Mythos Preview in Amazon Bedrock, AWS Agent Registry, and more (April 13, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/</link>
-      <description>In my last Week in Review post, I mentioned how much time I’ve been spending on AI-Driven Development Lifecycle (AI-DLC) workshops with customers this year A common theme in those sessions is the need for better cost visibility Teams are moving fast with AI, but as they go from experimenting to full production, finance and […]</description>
-      <pubDate>Mon, 13 Apr 2026 16:16:20 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-mythos-preview-in-amazon-bedrock-aws-agent-registry-and-more-april-13-2026/</guid>
       <source>AWS News</source>
     </item>
     <item>
