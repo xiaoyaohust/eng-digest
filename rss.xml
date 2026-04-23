@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 22 Apr 2026 10:17:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 10:20:22 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Plan mode is now available in Gemini CLI</title>
-      <link>https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</link>
-      <description>Gemini CLI now features Plan Mode, a read-only environment that allows the AI to analyze complex codebases and map out architectural changes without the risk of accidental execution By leveraging the new ask_user tool and expanded Model Context Protocol (MCP) support, developers can collaboratively refine strategies and pull in external data before committing to implementation.</description>
-      <pubDate>Wed, 22 Apr 2026 10:17:13 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/plan-mode-now-available-in-gemini-cli/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Announcing the Colab MCP Server: Connect Any AI Agent to Google Colab</title>
       <link>https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</link>
       <description>When you’re prototyping locally with AI agents like Gemini CLI, Claude Code, or your own agent, thei...</description>
-      <pubDate>Wed, 22 Apr 2026 10:17:13 GMT</pubDate>
+      <pubDate>Thu, 23 Apr 2026 10:20:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-colab-mcp-server-connect-any-ai-agent-to-google-colab/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,8 +20,16 @@
       <title>Developer’s Guide to AI Agent Protocols</title>
       <link>https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</link>
       <description>This blog post introduces a suite of six protocols, such as MCP and A2A, designed to eliminate custom integration code by standardizing how AI agents access data and communicate Using a &amp;quot;kitchen manager&amp;quot; agent as a practical example, it demonstrates how these tools handle complex tasks like real-time inventory checks, wholesale commerce via UCP, and secure payment authorization through AP2 By leveraging the Agent Development Kit (ADK), developers can also implement A2UI and AG-UI to deliver interactive dashboards and seamless streaming interfaces to users.</description>
-      <pubDate>Wed, 22 Apr 2026 10:17:13 GMT</pubDate>
+      <pubDate>Thu, 23 Apr 2026 10:20:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Build a smart financial assistant with LlamaParse and Gemini 3.1</title>
+      <link>https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</link>
+      <description>This blog post introduces a workflow for extracting high-quality data from complex, unstructured documents by combining LlamaParse with Gemini 3.1 models It demonstrates an event-driven architecture that uses Gemini 3.1 Pro for agentic parsing of dense financial tables and Gemini 3.1 Flash for cost-effective summarization By following the provided tutorial, developers can build a personal finance assistant capable of transforming messy brokerage statements into structured, human-readable insights.</description>
+      <pubDate>Thu, 23 Apr 2026 10:20:19 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</guid>
       <source>Google Developers</source>
     </item>
     <item>
@@ -159,14 +159,6 @@
       <pubDate>Wed, 25 Mar 2026 17:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>How Stripe Radar helps prevent free trial abuse</title>
-      <link>https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse</link>
-      <description>Radar now helps prevent free trial abuse with just one click When enabled, Radar predicts the presence of abusive behavior that violates common trial terms, such as repeated trial signup or missed cancellations, with 90% accuracy.</description>
-      <pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/how-stripe-radar-helps-prevent-free-trial-abuse</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
