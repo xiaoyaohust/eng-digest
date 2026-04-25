@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 24 Apr 2026 10:19:14 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 09:50:44 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Developer’s Guide to AI Agent Protocols</title>
       <link>https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</link>
       <description>This blog post introduces a suite of six protocols, such as MCP and A2A, designed to eliminate custom integration code by standardizing how AI agents access data and communicate Using a &amp;quot;kitchen manager&amp;quot; agent as a practical example, it demonstrates how these tools handle complex tasks like real-time inventory checks, wholesale commerce via UCP, and secure payment authorization through AP2 By leveraging the Agent Development Kit (ADK), developers can also implement A2UI and AG-UI to deliver interactive dashboards and seamless streaming interfaces to users.</description>
-      <pubDate>Fri, 24 Apr 2026 10:19:11 GMT</pubDate>
+      <pubDate>Sat, 25 Apr 2026 09:50:41 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Build a smart financial assistant with LlamaParse and Gemini 3.1</title>
       <link>https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</link>
       <description>This blog post introduces a workflow for extracting high-quality data from complex, unstructured documents by combining LlamaParse with Gemini 3.1 models It demonstrates an event-driven architecture that uses Gemini 3.1 Pro for agentic parsing of dense financial tables and Gemini 3.1 Flash for cost-effective summarization By following the provided tutorial, developers can build a personal finance assistant capable of transforming messy brokerage statements into structured, human-readable insights.</description>
-      <pubDate>Fri, 24 Apr 2026 10:19:11 GMT</pubDate>
+      <pubDate>Sat, 25 Apr 2026 09:50:41 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Jump to play: Building with Gemini &amp; MediaPipe</title>
       <link>https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</link>
       <description>The provided workflow streamlines motion-controlled game development by using Gemini Canvas to rapidly prototype mechanics like the MediaPipe Pose Landmarker through high-level prompting Developers can refine these prototypes in Google AI Studio by optimizing for low-latency &amp;quot;lite&amp;quot; models and stable tracking points, such as shoulder landmarks, to ensure responsive gameplay The process concludes by using Gemini Code Assist to refactor experimental code into a modular, production-ready application capable of supporting various multimodal inputs.</description>
-      <pubDate>Fri, 24 Apr 2026 10:19:11 GMT</pubDate>
+      <pubDate>Sat, 25 Apr 2026 09:50:41 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Scaling Camera File Processing at Netflix</title>
+      <link>https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss----2615bd06b42e---4</link>
+      <description>To reduce friction and keep productions moving smoothly, we built Netflix’s Media Production Suite (MPS) with the goal of automating repeatable tasks, standardizing key workflows, and giving productions more time to focus on creative collaboration and craftsmanship.A critical part of this effort is how we handle image processing and camera metadata across the hundreds of hours and terabytes of camera footage that Netflix productions ingest on a daily basis Rather than build every component from scratch, we chose to partner where it made sense–especially in areas where the industry already had trusted, battle-tested solutions.This article explores how Netflix’s Media Production Suite integrates with FilmLight’s API (FLAPI) as the core studio media processing engine in Netflix’s cloud compute infrastructure, and how that collaboration helps us deliver smarter, more reliable workflows at scale.Why We Built MPSAs Netflix’s production slate grew, so did the complexity of file-based workflows Their FilmLight API (FLAPI) allows us to use that same media processing engine as a backend API.Rather than duplicating that work, we chose to integrate</description>
+      <pubDate>Fri, 24 Apr 2026 15:06:01 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/scaling-camera-file-processing-at-netflix-6dab2b1e80be?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>Modernizing the Facebook Groups Search to Unlock the Power of Community Knowledge</title>
@@ -129,14 +137,6 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>Stop Answering the Same Question Twice: Interval-Aware Caching for Druid at Netflix Scale</title>
-      <link>https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</link>
-      <description>Older data lingers much longer, because our confidence in its accuracy grows with time.For a 3-hour rolling window, the exponential TTL ensures the vast majority of the query is served from the cache, leaving Druid to only scan the most recent, unsettled data.BucketingIf we were to use a single-level cache key for the query and interval, similar to Druid’s existing result-level cache, we wouldn’t be able to extract only the relevant time range from cached results Without special handling, the cache would treat these empty buckets as gaps and re-query Druid for them every time.We handle this by caching empty sentinel values for time buckets where Druid returned no data Crucially, KVDAL supports independent TTLs on each inner key-value pair, eliminating the need for us to manage cache eviction manually.This two-level structure gives us efficient range queries over the inner keys, which is exactly what we need for partial cache lookups: “give me all cached buckets between time A and time B for query hash X.”ResultsThe biggest win is during high-volume events (e.g., live shows): when many users view the same dashboards, the cache serves most identical queries as full hits, so the query rate reaching Druid is essentially the same with 1 viewer or 100</description>
-      <pubDate>Mon, 06 Apr 2026 22:15:14 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/stop-answering-the-same-question-twice-interval-aware-caching-for-druid-at-netflix-scale-22fadc9b840e?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
-    </item>
-    <item>
       <title>Improving storage efficiency in Magic Pocket, our immutable blob store</title>
       <link>https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store</link>
       <description>By turning compaction into a layered, adaptive pipeline and strengthening our monitoring and controls, we made Magic Pocket more resilient to workload changes.</description>
@@ -151,14 +151,6 @@
       <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/shoptalk-2026</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Reducing our monorepo size to improve developer velocity</title>
-      <link>https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity</link>
-      <description>Monorepos will continue to grow as products evolve, but growth doesn’t have to mean friction.</description>
-      <pubDate>Wed, 25 Mar 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/infrastructure/reducing-our-monorepo-size-to-improve-developer-velocity</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
