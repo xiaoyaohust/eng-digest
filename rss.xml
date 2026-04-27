@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 26 Apr 2026 09:53:12 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 11:01:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Developer’s Guide to AI Agent Protocols</title>
       <link>https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</link>
       <description>This blog post introduces a suite of six protocols, such as MCP and A2A, designed to eliminate custom integration code by standardizing how AI agents access data and communicate Using a &amp;quot;kitchen manager&amp;quot; agent as a practical example, it demonstrates how these tools handle complex tasks like real-time inventory checks, wholesale commerce via UCP, and secure payment authorization through AP2 By leveraging the Agent Development Kit (ADK), developers can also implement A2UI and AG-UI to deliver interactive dashboards and seamless streaming interfaces to users.</description>
-      <pubDate>Sun, 26 Apr 2026 09:53:09 GMT</pubDate>
+      <pubDate>Mon, 27 Apr 2026 11:01:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Build a smart financial assistant with LlamaParse and Gemini 3.1</title>
       <link>https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</link>
       <description>This blog post introduces a workflow for extracting high-quality data from complex, unstructured documents by combining LlamaParse with Gemini 3.1 models It demonstrates an event-driven architecture that uses Gemini 3.1 Pro for agentic parsing of dense financial tables and Gemini 3.1 Flash for cost-effective summarization By following the provided tutorial, developers can build a personal finance assistant capable of transforming messy brokerage statements into structured, human-readable insights.</description>
-      <pubDate>Sun, 26 Apr 2026 09:53:09 GMT</pubDate>
+      <pubDate>Mon, 27 Apr 2026 11:01:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Jump to play: Building with Gemini &amp; MediaPipe</title>
       <link>https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</link>
       <description>The provided workflow streamlines motion-controlled game development by using Gemini Canvas to rapidly prototype mechanics like the MediaPipe Pose Landmarker through high-level prompting Developers can refine these prototypes in Google AI Studio by optimizing for low-latency &amp;quot;lite&amp;quot; models and stable tracking points, such as shoulder landmarks, to ensure responsive gameplay The process concludes by using Gemini Code Assist to refactor experimental code into a modular, production-ready application capable of supporting various multimodal inputs.</description>
-      <pubDate>Sun, 26 Apr 2026 09:53:09 GMT</pubDate>
+      <pubDate>Mon, 27 Apr 2026 11:01:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</guid>
       <source>Google Developers</source>
     </item>
