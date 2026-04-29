@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 28 Apr 2026 11:02:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 10:53:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Developer’s Guide to AI Agent Protocols</title>
       <link>https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</link>
       <description>This blog post introduces a suite of six protocols, such as MCP and A2A, designed to eliminate custom integration code by standardizing how AI agents access data and communicate Using a &amp;quot;kitchen manager&amp;quot; agent as a practical example, it demonstrates how these tools handle complex tasks like real-time inventory checks, wholesale commerce via UCP, and secure payment authorization through AP2 By leveraging the Agent Development Kit (ADK), developers can also implement A2UI and AG-UI to deliver interactive dashboards and seamless streaming interfaces to users.</description>
-      <pubDate>Tue, 28 Apr 2026 11:02:40 GMT</pubDate>
+      <pubDate>Wed, 29 Apr 2026 10:53:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-ai-agent-protocols/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Build a smart financial assistant with LlamaParse and Gemini 3.1</title>
       <link>https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</link>
       <description>This blog post introduces a workflow for extracting high-quality data from complex, unstructured documents by combining LlamaParse with Gemini 3.1 models It demonstrates an event-driven architecture that uses Gemini 3.1 Pro for agentic parsing of dense financial tables and Gemini 3.1 Flash for cost-effective summarization By following the provided tutorial, developers can build a personal finance assistant capable of transforming messy brokerage statements into structured, human-readable insights.</description>
-      <pubDate>Tue, 28 Apr 2026 11:02:40 GMT</pubDate>
+      <pubDate>Wed, 29 Apr 2026 10:53:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-a-smart-financial-assistant-with-llamaparse-and-gemini-31/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Jump to play: Building with Gemini &amp; MediaPipe</title>
       <link>https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</link>
       <description>The provided workflow streamlines motion-controlled game development by using Gemini Canvas to rapidly prototype mechanics like the MediaPipe Pose Landmarker through high-level prompting Developers can refine these prototypes in Google AI Studio by optimizing for low-latency &amp;quot;lite&amp;quot; models and stable tracking points, such as shoulder landmarks, to ensure responsive gameplay The process concludes by using Gemini Code Assist to refactor experimental code into a modular, production-ready application capable of supporting various multimodal inputs.</description>
-      <pubDate>Tue, 28 Apr 2026 11:02:40 GMT</pubDate>
+      <pubDate>Wed, 29 Apr 2026 10:53:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Top announcements of the What’s Next with AWS, 2026</title>
+      <link>https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/</link>
+      <description>At the &amp;quot;What&amp;apos;s Next with AWS&amp;quot; 2026 event, AWS launched Amazon Quick—an AI assistant for work with a desktop app and expanded integrations—and expanded Amazon Connect into four agentic AI solutions for supply chain, hiring, customer experience, and healthcare AWS also expended its partnership with OpenAI, bringing models like GPT-5.5, Codex, and Managed Agents to Amazon Bedrock in limited preview.</description>
+      <pubDate>Tue, 28 Apr 2026 18:11:39 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>GitHub for Beginners: Getting started with Markdown</title>
+      <link>https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/</link>
+      <description>Discover how to format and edit your comments and posts using Markdown The post GitHub for Beginners: Getting started with Markdown appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 28 Apr 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-markdown/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Securing the git push pipeline: Responding to a critical remote code execution vulnerability</title>
+      <link>https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/</link>
+      <description>How we validated, fixed, and investigated a critical vulnerability in under two hours, and confirmed no exploitation The post Securing the git push pipeline: Responding to a critical remote code execution vulnerability appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 28 Apr 2026 15:30:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>An update on GitHub availability</title>
@@ -38,14 +62,6 @@
       <description>Here’s what we’ve done—and what we’re still doing—to improve our availability and reliability The post An update on GitHub availability appeared first on The GitHub Blog.</description>
       <pubDate>Tue, 28 Apr 2026 10:01:37 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/news-insights/company-news/an-update-on-github-availability/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>GitHub Copilot is moving to usage-based billing</title>
-      <link>https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/</link>
-      <description>Starting June 1, your Copilot usage will consume GitHub AI Credits The post GitHub Copilot is moving to usage-based billing appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 27 Apr 2026 15:58:22 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -71,14 +87,6 @@
       <pubDate>Tue, 21 Apr 2026 16:00:19 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Changes to GitHub Copilot Individual plans</title>
-      <link>https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/</link>
-      <description>We&amp;apos;re making these changes to ensure a reliable and predictable experience for existing customers The post Changes to GitHub Copilot Individual plans appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 20 Apr 2026 18:15:28 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Claude Opus 4.7 in Amazon Bedrock, AWS Interconnect GA, and more (April 20, 2026)</title>
@@ -111,14 +119,6 @@
       <pubDate>Thu, 16 Apr 2026 14:59:44 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Introducing Anthropic’s Claude Opus 4.7 model in Amazon Bedrock</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/</link>
-      <description>AWS launches Claude Opus 4.7 in Amazon Bedrock, Anthropic&amp;apos;s most intelligent Opus model for advancing performance across coding, long-running agents, and professional work Claude Opus 4.7 is powered by Amazon Bedrock&amp;apos;s next generation inference engine, purpose-built for generative AI inferencing and fine-tuning workloads.</description>
-      <pubDate>Thu, 16 Apr 2026 14:49:33 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Evaluating Netflix Show Synopses with LLM-as-a-Judge</title>
