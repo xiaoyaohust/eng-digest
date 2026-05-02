@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 01 May 2026 10:21:03 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2026 09:56:54 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Jump to play: Building with Gemini &amp; MediaPipe</title>
       <link>https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</link>
       <description>The provided workflow streamlines motion-controlled game development by using Gemini Canvas to rapidly prototype mechanics like the MediaPipe Pose Landmarker through high-level prompting Developers can refine these prototypes in Google AI Studio by optimizing for low-latency &amp;quot;lite&amp;quot; models and stable tracking points, such as shoulder landmarks, to ensure responsive gameplay The process concludes by using Gemini Code Assist to refactor experimental code into a modular, production-ready application capable of supporting various multimodal inputs.</description>
-      <pubDate>Fri, 01 May 2026 10:21:00 GMT</pubDate>
+      <pubDate>Sat, 02 May 2026 09:56:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Closing the knowledge gap with agent skills</title>
       <link>https://developers.googleblog.com/closing-the-knowledge-gap-with-agent-skills/</link>
       <description>To bridge the gap between static model knowledge and rapidly evolving software practices, Google DeepMind developed a &amp;quot;Gemini API developer skill&amp;quot; that provides agents with live documentation and SDK guidance Evaluation results show a massive performance boost, with the gemini-3.1-pro-preview model jumping from a 28.2% to a 96.6% success rate when equipped with the skill This lightweight approach demonstrates how giving models strong reasoning capabilities and access to a &amp;quot;source of truth&amp;quot; can effectively eliminate outdated coding patterns.</description>
-      <pubDate>Fri, 01 May 2026 10:21:00 GMT</pubDate>
+      <pubDate>Sat, 02 May 2026 09:56:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/closing-the-knowledge-gap-with-agent-skills/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Announcing ADK for Java 1.0.0: Building the Future of AI Agents in Java</title>
       <link>https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</link>
       <description>Google has released version 1.0.0 of the Agent Development Kit (ADK) for Java, introducing powerful new features like Google Maps grounding, built-in URL fetching, and a standardized Agent2Agent protocol for cross-framework collaboration The update enhances agent control through a new &amp;quot;App&amp;quot; and &amp;quot;Plugin&amp;quot; architecture, which allows for global logging, automated context window management via event compaction, and &amp;quot;Human-in-the-Loop&amp;quot; workflows for action confirmations Additionally, the release provides robust session and memory services using Google Cloud integrations like Firestore and Vertex AI to manage long-term state and large data artifacts.</description>
-      <pubDate>Fri, 01 May 2026 10:21:00 GMT</pubDate>
+      <pubDate>Sat, 02 May 2026 09:56:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>State of Routing in Model Serving</title>
+      <link>https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss----2615bd06b42e---4</link>
+      <description>In this introductory blog post, we will dive into our domain-independent API abstraction and its traffic routing capabilities that the central ML model serving platform exposes to several domain-specific microservices for model inference We’ll first describe how we implemented this abstraction with Switchboard, a centralized routing service, and then discuss the operational challenges we encountered at scale and how they led us to the Lightbulb architecture.ML Model Serving Platform PrinciplesWe envisioned a central model serving platform for all of Netflix’s member-facing ML Model serving needs Because the routingKey is in a header, this determination can be made with minimal overhead.These changes retain the advantages of Switchboard, such as a single integration point, abstraction of model id from use case, context-aware routing, while addressing the challenges we observed over time.ConclusionThe evolution from Switchboard to Lightbulb marks a significant architectural refinement in our ML model serving infrastructure</description>
+      <pubDate>Fri, 01 May 2026 21:03:13 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>How Meta Is Strengthening End-to-End Encrypted Backups</title>
+      <link>https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/</link>
+      <description>The HSM-based Backup Key Vault Meta’s HSM-based Backup Key Vault provides the foundation for end-to-end encrypted backups for WhatsApp and Messenger The system allows people to protect their backed-up message history with a recovery code, ensuring that the recovery code is stored in tamper-resistant hardware security modules (HSMs) and is inaccessible to Meta, cloud storage [...] Read More The post How Meta Is Strengthening End-to-End Encrypted Backups appeared first on Engineering at Meta.</description>
+      <pubDate>Fri, 01 May 2026 16:00:58 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>GitHub Copilot CLI for Beginners: Interactive v. non-interactive mode</title>
@@ -127,22 +143,6 @@
       <pubDate>Thu, 16 Apr 2026 16:00:34 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/04/16/developer-tools/capacity-efficiency-at-meta-how-unified-ai-agents-optimize-performance-at-hyperscale/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways</title>
-      <link>https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/</link>
-      <description>We’re sharing lessons learned from Meta’s post-quantum cryptography (PQC) migration to help other organizations strengthen their resilience as industry transitions to post-quantum cryptography standards We’re proposing the idea of PQC Migration Levels to help teams within organizations manage the complexity of PQC migration for their various use cases The post Post-Quantum Cryptography Migration at Meta: Framework, Lessons, and Takeaways appeared first on Engineering at Meta.</description>
-      <pubDate>Thu, 16 Apr 2026 14:59:44 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/04/16/security/post-quantum-cryptography-migration-at-meta-framework-lessons-and-takeaways/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Evaluating Netflix Show Synopses with LLM-as-a-Judge</title>
-      <link>https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss----2615bd06b42e---4</link>
-      <description>Using recent advances in agents, reasoning, and LLM-as-a-Judge, we score four key synopsis quality dimensions, achieving 85%+ agreement with creative writers To improve reasoning accuracy, we leverage two forms of inference-time scaling:Longer rationales: increase the length of the rationale or explanation generated by the LLM prior to producing a final score.Consensus scoring: sample several outputs from the LLM and aggregate their scores to produce the final result.Tiered rationales We correlate synopsis performance (take fraction or abandonment) with LLM quality scores</description>
-      <pubDate>Fri, 10 Apr 2026 16:26:01 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/evaluating-netflix-show-synopses-with-llm-as-a-judge-6269251e6f28?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>How agents, digital wallets, and trust are rewriting checkout</title>
