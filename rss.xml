@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 02 May 2026 09:56:54 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2026 10:02:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Jump to play: Building with Gemini &amp; MediaPipe</title>
       <link>https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</link>
       <description>The provided workflow streamlines motion-controlled game development by using Gemini Canvas to rapidly prototype mechanics like the MediaPipe Pose Landmarker through high-level prompting Developers can refine these prototypes in Google AI Studio by optimizing for low-latency &amp;quot;lite&amp;quot; models and stable tracking points, such as shoulder landmarks, to ensure responsive gameplay The process concludes by using Gemini Code Assist to refactor experimental code into a modular, production-ready application capable of supporting various multimodal inputs.</description>
-      <pubDate>Sat, 02 May 2026 09:56:50 GMT</pubDate>
+      <pubDate>Sun, 03 May 2026 10:02:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/jump-to-play-building-with-gemini-mediapipe/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Closing the knowledge gap with agent skills</title>
       <link>https://developers.googleblog.com/closing-the-knowledge-gap-with-agent-skills/</link>
       <description>To bridge the gap between static model knowledge and rapidly evolving software practices, Google DeepMind developed a &amp;quot;Gemini API developer skill&amp;quot; that provides agents with live documentation and SDK guidance Evaluation results show a massive performance boost, with the gemini-3.1-pro-preview model jumping from a 28.2% to a 96.6% success rate when equipped with the skill This lightweight approach demonstrates how giving models strong reasoning capabilities and access to a &amp;quot;source of truth&amp;quot; can effectively eliminate outdated coding patterns.</description>
-      <pubDate>Sat, 02 May 2026 09:56:50 GMT</pubDate>
+      <pubDate>Sun, 03 May 2026 10:02:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/closing-the-knowledge-gap-with-agent-skills/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Announcing ADK for Java 1.0.0: Building the Future of AI Agents in Java</title>
       <link>https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</link>
       <description>Google has released version 1.0.0 of the Agent Development Kit (ADK) for Java, introducing powerful new features like Google Maps grounding, built-in URL fetching, and a standardized Agent2Agent protocol for cross-framework collaboration The update enhances agent control through a new &amp;quot;App&amp;quot; and &amp;quot;Plugin&amp;quot; architecture, which allows for global logging, automated context window management via event compaction, and &amp;quot;Human-in-the-Loop&amp;quot; workflows for action confirmations Additionally, the release provides robust session and memory services using Google Cloud integrations like Firestore and Vertex AI to manage long-term state and large data artifacts.</description>
-      <pubDate>Sat, 02 May 2026 09:56:50 GMT</pubDate>
+      <pubDate>Sun, 03 May 2026 10:02:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</guid>
       <source>Google Developers</source>
     </item>
@@ -151,14 +151,6 @@
       <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/global-checkout-trends</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Improving storage efficiency in Magic Pocket, our immutable blob store</title>
-      <link>https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store</link>
-      <description>By turning compaction into a layered, adaptive pipeline and strengthening our monitoring and controls, we made Magic Pocket more resilient to workload changes.</description>
-      <pubDate>Thu, 02 Apr 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/infrastructure/improving-storage-efficiency-in-magic-pocket-our-immutable-blob-store</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
