@@ -6,31 +6,63 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 12 May 2026 11:20:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 11:28:41 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Closing the knowledge gap with agent skills</title>
-      <link>https://developers.googleblog.com/closing-the-knowledge-gap-with-agent-skills/</link>
-      <description>To bridge the gap between static model knowledge and rapidly evolving software practices, Google DeepMind developed a &amp;quot;Gemini API developer skill&amp;quot; that provides agents with live documentation and SDK guidance Evaluation results show a massive performance boost, with the gemini-3.1-pro-preview model jumping from a 28.2% to a 96.6% success rate when equipped with the skill This lightweight approach demonstrates how giving models strong reasoning capabilities and access to a &amp;quot;source of truth&amp;quot; can effectively eliminate outdated coding patterns.</description>
-      <pubDate>Tue, 12 May 2026 11:20:17 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/closing-the-knowledge-gap-with-agent-skills/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Announcing ADK for Java 1.0.0: Building the Future of AI Agents in Java</title>
       <link>https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</link>
       <description>Google has released version 1.0.0 of the Agent Development Kit (ADK) for Java, introducing powerful new features like Google Maps grounding, built-in URL fetching, and a standardized Agent2Agent protocol for cross-framework collaboration The update enhances agent control through a new &amp;quot;App&amp;quot; and &amp;quot;Plugin&amp;quot; architecture, which allows for global logging, automated context window management via event compaction, and &amp;quot;Human-in-the-Loop&amp;quot; workflows for action confirmations Additionally, the release provides robust session and memory services using Google Cloud integrations like Firestore and Vertex AI to manage long-term state and large data artifacts.</description>
-      <pubDate>Tue, 12 May 2026 11:20:17 GMT</pubDate>
+      <pubDate>Wed, 13 May 2026 11:28:38 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>ADK Go 1.0 Arrives!</title>
+      <link>https://developers.googleblog.com/adk-go-10-arrives/</link>
+      <description>The launch of Agent Development Kit (ADK) for Go 1.0 marks a significant shift from experimental AI scripts to production-ready services by prioritizing observability, security, and extensibility Key updates include native OpenTelemetry integration for deep tracing, a new plugin system for self-healing logic, and &amp;quot;Human-in-the-Loop&amp;quot; confirmations to ensure safety during sensitive operations This framework empowers developers to build complex, reliable multi-agent systems using the high-performance engineering standards of Golang.</description>
+      <pubDate>Wed, 13 May 2026 11:28:38 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/adk-go-10-arrives/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Boost Training Goodput: How Continuous Checkpointing Optimizes Reliability in Orbax and MaxText</title>
       <link>https://developers.googleblog.com/boost-training-goodput-how-continuous-checkpointing-optimizes-reliability-in-orbax-and-maxtext/</link>
       <description>The newly introduced continuous checkpointing feature in Orbax and MaxText is designed to optimize the balance between reliability and performance during model training, addressing issues with conventional fixed-frequency checkpointing Unlike fixed intervals—which can either compromise reliability or bottleneck performance—continuous checkpointing maximizes I/O bandwidth and minimizes failure risk by asynchronously initiating a new save operation only after the previous one successfully completes Benchmarks demonstrate that this approach significantly reduces checkpoint intervals and results in substantial resource conservation, especially in large-scale training jobs where mean-time-between-failure (MTBF) is short.</description>
-      <pubDate>Tue, 12 May 2026 11:20:17 GMT</pubDate>
+      <pubDate>Wed, 13 May 2026 11:28:38 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/boost-training-goodput-how-continuous-checkpointing-optimizes-reliability-in-orbax-and-maxtext/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub Copilot individual plans: Introducing flex allotments in Pro and Pro+, and a new Max plan</title>
+      <link>https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/</link>
+      <description>Starting June 1, our lineup of individual plans will update based on your feedback The post GitHub Copilot individual plans: Introducing flex allotments in Pro and Pro+, and a new Max plan appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 12 May 2026 17:35:41 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Amazon Redshift introduces AWS Graviton-based RG instances with an integrated data lake query engine</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/</link>
+      <description>Amazon Redshift RG instances, powered by AWS Graviton, run data warehouse and data lake workloads up to 2.4x as fast as RA3 instances at 30% lower price per vCPU Its integrated data lake query engine supports open table formats such as Apache Iceberg.</description>
+      <pubDate>Tue, 12 May 2026 16:05:12 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Migrating Data Ingestion Systems at Meta Scale</title>
+      <link>https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</link>
+      <description>Meta’s data ingestion system, which our engineering teams leverage for up-to-date snapshots of the social graph, has recently undergone a significant revamp to enhance its reliability at scale Moving from our legacy system to our new architecture required a large-scale migration of our entire data ingestion system The post Migrating Data Ingestion Systems at Meta Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 12 May 2026 16:00:57 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Dungeons &amp; Desktops: Building a procedurally generated roguelike with GitHub Copilot CLI</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/</link>
+      <description>Learn how one Hubber used GitHub Copilot CLI to build an extension that turns any codebase into a unique, roguelike dungeon The post Dungeons &amp;amp; Desktops: Building a procedurally generated roguelike with GitHub Copilot CLI appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 12 May 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/dungeons-desktops-building-a-procedurally-generated-roguelike-with-github-copilot-cli/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Amazon Bedrock AgentCore payments, Agent Toolkit for AWS, and more (May 11, 2026)</title>
@@ -59,18 +91,10 @@
     <item>
       <title>Five vertical SaaS insights from Sessions 2026</title>
       <link>https://stripe.com/blog/vertical-saas-insights-sessions-2026</link>
-      <description>At Stripe Sessions and our inaugural SaaS Platform Leaders Summit, vertical SaaS leaders shared how they’re staying differentiated as AI raises the bar for software The takeaways: why payments and financial services create moats that AI can’t easily replicate, how platforms are moving from AI experimentation to monetization, and why platforms are expected to lead the way on agentic commerce.</description>
+      <description>AI is forcing platforms to expand beyond pure software See how vertical SaaS platforms are using payments, financial services, and agentic commerce to build more durable businesses.</description>
       <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/vertical-saas-insights-sessions-2026</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Why age assurance laws matter for developers</title>
-      <link>https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/</link>
-      <description>Youth safety requirements are moving down the tech stack to operating systems and app stores—raising new questions for open source developers The post Why age assurance laws matter for developers appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 08 May 2026 16:30:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/why-age-assurance-laws-matter-for-developers/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Scaling ArchUnit with Nebula ArchRules</title>
@@ -81,27 +105,11 @@
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>How researchers are using GitHub Innovation Graph data to reveal the “digital complexity” of nations</title>
-      <link>https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/</link>
-      <description>Researchers share in an interview how they used GitHub data to predict GDP, inequality, and emissions in ways that traditional economic data misses, along with our Q4 2025 data release The post How researchers are using GitHub Innovation Graph data to reveal the “digital complexity” of nations appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 08 May 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/how-researchers-are-using-github-innovation-graph-data-to-reveal-the-digital-complexity-of-nations/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>The AWS MCP Server is now generally available</title>
       <link>https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/</link>
       <description>AWS announces the general availability of the AWS MCP Server, a managed remote Model Context Protocol (MCP) server that gives AI agents and coding assistants secure, authenticated access to all AWS services The AWS MCP Server is part of the Agent Toolkit for AWS, a suite of tooling that includes the MCP Server, skills, and plugins that help coding agents build more effectively and efficiently on AWS.</description>
       <pubDate>Wed, 06 May 2026 15:36:44 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/the-aws-mcp-server-is-now-generally-available/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Modernize your workflows: Amazon WorkSpaces now gives AI agents their own desktop (preview)</title>
-      <link>https://aws.amazon.com/blogs/aws/modernize-your-workflows-amazon-workspaces-now-gives-ai-agents-their-own-desktop-preview/</link>
-      <description>Amazon WorkSpaces now lets AI agents securely operate legacy desktop applications—without APIs or modernization—using IAM authentication, MCP support, and computer vision within existing security frameworks.</description>
-      <pubDate>Tue, 05 May 2026 17:23:40 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/modernize-your-workflows-amazon-workspaces-now-gives-ai-agents-their-own-desktop-preview/</guid>
       <source>AWS News</source>
     </item>
     <item>
@@ -143,14 +151,6 @@
       <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Modernizing the Facebook Groups Search to Unlock the Power of Community Knowledge</title>
-      <link>https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/</link>
-      <description>We’ve fundamentally transformed Facebook Groups Search to help people more reliably discover, sort through, and validate community content that’s most relevant to them We’ve adopted a new hybrid retrieval architecture and implemented automated model-based evaluation to address the major friction points people experience when searching community content Under this new framework, we’ve made tangible improvements [...] Read More</description>
-      <pubDate>Tue, 21 Apr 2026 16:00:19 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/04/21/ml-applications/modernizing-the-facebook-groups-search-to-unlock-the-power-of-community-knowledge/</guid>
-      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
