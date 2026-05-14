@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 13 May 2026 11:28:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 11:11:47 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Announcing ADK for Java 1.0.0: Building the Future of AI Agents in Java</title>
       <link>https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</link>
       <description>Google has released version 1.0.0 of the Agent Development Kit (ADK) for Java, introducing powerful new features like Google Maps grounding, built-in URL fetching, and a standardized Agent2Agent protocol for cross-framework collaboration The update enhances agent control through a new &amp;quot;App&amp;quot; and &amp;quot;Plugin&amp;quot; architecture, which allows for global logging, automated context window management via event compaction, and &amp;quot;Human-in-the-Loop&amp;quot; workflows for action confirmations Additionally, the release provides robust session and memory services using Google Cloud integrations like Firestore and Vertex AI to manage long-term state and large data artifacts.</description>
-      <pubDate>Wed, 13 May 2026 11:28:38 GMT</pubDate>
+      <pubDate>Thu, 14 May 2026 11:11:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-for-java-100-building-the-future-of-ai-agents-in-java/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>ADK Go 1.0 Arrives!</title>
       <link>https://developers.googleblog.com/adk-go-10-arrives/</link>
       <description>The launch of Agent Development Kit (ADK) for Go 1.0 marks a significant shift from experimental AI scripts to production-ready services by prioritizing observability, security, and extensibility Key updates include native OpenTelemetry integration for deep tracing, a new plugin system for self-healing logic, and &amp;quot;Human-in-the-Loop&amp;quot; confirmations to ensure safety during sensitive operations This framework empowers developers to build complex, reliable multi-agent systems using the high-performance engineering standards of Golang.</description>
-      <pubDate>Wed, 13 May 2026 11:28:38 GMT</pubDate>
+      <pubDate>Thu, 14 May 2026 11:11:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/adk-go-10-arrives/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Boost Training Goodput: How Continuous Checkpointing Optimizes Reliability in Orbax and MaxText</title>
       <link>https://developers.googleblog.com/boost-training-goodput-how-continuous-checkpointing-optimizes-reliability-in-orbax-and-maxtext/</link>
       <description>The newly introduced continuous checkpointing feature in Orbax and MaxText is designed to optimize the balance between reliability and performance during model training, addressing issues with conventional fixed-frequency checkpointing Unlike fixed intervals—which can either compromise reliability or bottleneck performance—continuous checkpointing maximizes I/O bandwidth and minimizes failure risk by asynchronously initiating a new save operation only after the previous one successfully completes Benchmarks demonstrate that this approach significantly reduces checkpoint intervals and results in substantial resource conservation, especially in large-scale training jobs where mean-time-between-failure (MTBF) is short.</description>
-      <pubDate>Wed, 13 May 2026 11:28:38 GMT</pubDate>
+      <pubDate>Thu, 14 May 2026 11:11:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/boost-training-goodput-how-continuous-checkpointing-optimizes-reliability-in-orbax-and-maxtext/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Dungeons &amp; Desktops: 10 roguelikes that never die (because their communities won’t let them)</title>
+      <link>https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/</link>
+      <description>They fork, mutate, get argued over, rewritten, abandoned, and revived again The post Dungeons &amp;amp; Desktops: 10 roguelikes that never die (because their communities won’t let them) appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 13 May 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Reel Friends: Building Social Discovery that Scales to Billions</title>
+      <link>https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/</link>
+      <description>It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 13 May 2026 13:00:44 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>GitHub Copilot individual plans: Introducing flex allotments in Pro and Pro+, and a new Max plan</title>
@@ -81,14 +97,6 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>GitHub for Beginners: Getting started with OSS contributions</title>
-      <link>https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/</link>
-      <description>Learn how to find opportunities to contribute to the open source community The post GitHub for Beginners: Getting started with OSS contributions appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 11 May 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-oss-contributions/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Five vertical SaaS insights from Sessions 2026</title>
       <link>https://stripe.com/blog/vertical-saas-insights-sessions-2026</link>
       <description>AI is forcing platforms to expand beyond pure software See how vertical SaaS platforms are using payments, financial services, and agentic commerce to build more durable businesses.</description>
@@ -127,14 +135,6 @@
       <pubDate>Fri, 01 May 2026 21:03:13 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>How Meta Is Strengthening End-to-End Encrypted Backups</title>
-      <link>https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/</link>
-      <description>The HSM-based Backup Key Vault Meta’s HSM-based Backup Key Vault provides the foundation for end-to-end encrypted backups for WhatsApp and Messenger The system allows people to protect their backed-up message history with a recovery code, ensuring that the recovery code is stored in tamper-resistant hardware security modules (HSMs) and is inaccessible to Meta, cloud storage [...] Read More The post How Meta Is Strengthening End-to-End Encrypted Backups appeared first on Engineering at Meta.</description>
-      <pubDate>Fri, 01 May 2026 16:00:58 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/05/01/security/meta-strengthening-end-to-end-encrypted-backups/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Everything we announced at Sessions 2026</title>
