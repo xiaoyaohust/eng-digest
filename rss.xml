@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 15 May 2026 11:19:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 10:12:25 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>ADK Go 1.0 Arrives!</title>
       <link>https://developers.googleblog.com/adk-go-10-arrives/</link>
       <description>The launch of Agent Development Kit (ADK) for Go 1.0 marks a significant shift from experimental AI scripts to production-ready services by prioritizing observability, security, and extensibility Key updates include native OpenTelemetry integration for deep tracing, a new plugin system for self-healing logic, and &amp;quot;Human-in-the-Loop&amp;quot; confirmations to ensure safety during sensitive operations This framework empowers developers to build complex, reliable multi-agent systems using the high-performance engineering standards of Golang.</description>
-      <pubDate>Fri, 15 May 2026 11:19:53 GMT</pubDate>
+      <pubDate>Sat, 16 May 2026 10:12:21 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/adk-go-10-arrives/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Developer’s Guide to Building ADK Agents with Skills</title>
       <link>https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/</link>
       <description>The Agent Development Kit (ADK) SkillToolset introduces a &amp;quot;progressive disclosure&amp;quot; architecture that allows AI agents to load domain expertise on demand, reducing token usage by up to 90% compared to traditional monolithic prompts Through four distinct patterns—ranging from simple inline checklists to &amp;quot;skill factories&amp;quot; where agents write their own code—the system enables agents to dynamically expand their capabilities at runtime using the universal agentskills.io specification This modular approach ensures that complex instructions and external resources are only accessed when relevant, creating a scalable and self-extending framework for modern AI development.</description>
-      <pubDate>Fri, 15 May 2026 11:19:53 GMT</pubDate>
+      <pubDate>Sat, 16 May 2026 10:12:21 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Bring state-of-the-art agentic skills to the edge with Gemma 4</title>
       <link>https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/</link>
       <description>Google DeepMind has launched Gemma 4, a family of state-of-the-art open models designed to enable multi-step planning and autonomous agentic workflows directly on-device The release includes the Google AI Edge Gallery for experimenting with &amp;quot;Agent Skills&amp;quot; and the LiteRT-LM library, which offers a significant speed boost and structured output for developers Available under an Apache 2.0 license, Gemma 4 supports over 140 languages and is compatible with a wide range of hardware, including mobile devices, desktops, and IoT platforms like Raspberry Pi.</description>
-      <pubDate>Fri, 15 May 2026 11:19:53 GMT</pubDate>
+      <pubDate>Sat, 16 May 2026 10:12:21 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building a general-purpose accessibility agent—and what we learned in the process</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/</link>
+      <description>Learn about the experimental general-purpose accessibility agent that GitHub is piloting The post Building a general-purpose accessibility agent—and what we learned in the process appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 15 May 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Raising the bar: Quality, shared responsibility, and the future of GitHub’s bug bounty program</title>
+      <link>https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/</link>
+      <description>We&amp;apos;re updating our bug bounty program standards to prioritize quality submissions, clarify shared responsibility boundaries, and evolve how we reward low-risk findings The post Raising the bar: Quality, shared responsibility, and the future of GitHub’s bug bounty program appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 15 May 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Amazon Bedrock introduces new advanced prompt optimization and migration tool</title>
@@ -46,22 +62,6 @@
       <description>In April, we experienced 10 incidents that resulted in degraded performance across GitHub services The post GitHub availability report: April 2026 appeared first on The GitHub Blog.</description>
       <pubDate>Thu, 14 May 2026 22:02:43 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-april-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>From latency to instant: Modernizing GitHub Issues navigation performance</title>
-      <link>https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/</link>
-      <description>How the GitHub Issues team used client-side caching, smart prefetching, and service workers to make navigation feel instant The post From latency to instant: Modernizing GitHub Issues navigation performance appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 14 May 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/from-latency-to-instant-modernizing-github-issues-navigation-performance/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Dungeons &amp; Desktops: 10 roguelikes that never die (because their communities won’t let them)</title>
-      <link>https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/</link>
-      <description>They fork, mutate, get argued over, rewritten, abandoned, and revived again The post Dungeons &amp;amp; Desktops: 10 roguelikes that never die (because their communities won’t let them) appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 13 May 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/gaming/dungeons-desktops-10-roguelikes-that-never-die-because-their-communities-wont-let-them/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
