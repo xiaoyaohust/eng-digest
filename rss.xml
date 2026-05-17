@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 16 May 2026 10:12:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2026 10:20:53 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>ADK Go 1.0 Arrives!</title>
       <link>https://developers.googleblog.com/adk-go-10-arrives/</link>
       <description>The launch of Agent Development Kit (ADK) for Go 1.0 marks a significant shift from experimental AI scripts to production-ready services by prioritizing observability, security, and extensibility Key updates include native OpenTelemetry integration for deep tracing, a new plugin system for self-healing logic, and &amp;quot;Human-in-the-Loop&amp;quot; confirmations to ensure safety during sensitive operations This framework empowers developers to build complex, reliable multi-agent systems using the high-performance engineering standards of Golang.</description>
-      <pubDate>Sat, 16 May 2026 10:12:21 GMT</pubDate>
+      <pubDate>Sun, 17 May 2026 10:20:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/adk-go-10-arrives/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Developer’s Guide to Building ADK Agents with Skills</title>
       <link>https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/</link>
       <description>The Agent Development Kit (ADK) SkillToolset introduces a &amp;quot;progressive disclosure&amp;quot; architecture that allows AI agents to load domain expertise on demand, reducing token usage by up to 90% compared to traditional monolithic prompts Through four distinct patterns—ranging from simple inline checklists to &amp;quot;skill factories&amp;quot; where agents write their own code—the system enables agents to dynamically expand their capabilities at runtime using the universal agentskills.io specification This modular approach ensures that complex instructions and external resources are only accessed when relevant, creating a scalable and self-extending framework for modern AI development.</description>
-      <pubDate>Sat, 16 May 2026 10:12:21 GMT</pubDate>
+      <pubDate>Sun, 17 May 2026 10:20:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Bring state-of-the-art agentic skills to the edge with Gemma 4</title>
       <link>https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/</link>
       <description>Google DeepMind has launched Gemma 4, a family of state-of-the-art open models designed to enable multi-step planning and autonomous agentic workflows directly on-device The release includes the Google AI Edge Gallery for experimenting with &amp;quot;Agent Skills&amp;quot; and the LiteRT-LM library, which offers a significant speed boost and structured output for developers Available under an Apache 2.0 license, Gemma 4 supports over 140 languages and is compatible with a wide range of hardware, including mobile devices, desktops, and IoT platforms like Raspberry Pi.</description>
-      <pubDate>Sat, 16 May 2026 10:12:21 GMT</pubDate>
+      <pubDate>Sun, 17 May 2026 10:20:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/</guid>
       <source>Google Developers</source>
     </item>
