@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-05-19</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-05-19</p>
+        <div class="stats">
+            <span class="stat-item"><strong>18</strong> articles</span>
+            <span class="stat-item"><strong>6</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: AWS Transform at 1 year, Claude Platform on AWS, EC2 M3 Ultra Mac instances, and more (May 18, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-18 19:13</p>
+                    <p class="article-summary">Just a year ago, we launched AWS Transform for .NET, Mainframe and VMware workloads, the first agentic AI service purpose-built for modernizing enterprise applications at scale At re:Invent 2025, we introduced AWS Transform custom, which enables organizations to modernize and transform code at scale using AWS-managed and custom transformations You can upgrade language versions, migrate […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-introduces-new-advanced-prompt-optimization-and-migration-tool/" target="_blank" rel="noopener noreferrer">
+                                Amazon Bedrock introduces new advanced prompt optimization and migration tool
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-14 22:03</p>
+                    <p class="article-summary">Amazon Bedrock Advanced Prompt Optimization enables customers to optimize their prompts for their current model or migrate prompts to new models faster than before with built-in evaluation feedback loops Optimize your prompts and compare results for up to 5 models simultaneously.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-bedrock-introduces-new-advanced-prompt-optimization-and-migration-tool/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/" target="_blank" rel="noopener noreferrer">
+                                Amazon Redshift introduces AWS Graviton-based RG instances with an integrated data lake query engine
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-12 16:05</p>
+                    <p class="article-summary">Amazon Redshift RG instances, powered by AWS Graviton, run data warehouse and data lake workloads up to 2.4x as fast as RA3 instances at 30% lower price per vCPU Its integrated data lake query engine supports open table formats such as Apache Iceberg.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/" target="_blank" rel="noopener noreferrer">
+                                Take your local GitHub sessions anywhere
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-18 16:54</p>
+                    <p class="article-summary">Kick off work in VS Code or the CLI, finish it from your phone Remote control for GitHub Copilot sessions is now generally available on github.com and GitHub Mobile The post Take your local GitHub sessions anywhere appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/" target="_blank" rel="noopener noreferrer">
+                                Building a general-purpose accessibility agent—and what we learned in the process
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-15 16:00</p>
+                    <p class="article-summary">Learn about the experimental general-purpose accessibility agent that GitHub is piloting The post Building a general-purpose accessibility agent—and what we learned in the process appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/" target="_blank" rel="noopener noreferrer">
+                                Raising the bar: Quality, shared responsibility, and the future of GitHub’s bug bounty program
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-15 14:00</p>
+                    <p class="article-summary">We're updating our bug bounty program standards to prioritize quality submissions, clarify shared responsibility boundaries, and evolve how we reward low-risk findings The post Raising the bar: Quality, shared responsibility, and the future of GitHub’s bug bounty program appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/security/raising-the-bar-quality-shared-responsibility-and-the-future-of-githubs-bug-bounty-program/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/adk-go-10-arrives/" target="_blank" rel="noopener noreferrer">
+                                ADK Go 1.0 Arrives!
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-19 12:07</p>
+                    <p class="article-summary">The launch of Agent Development Kit (ADK) for Go 1.0 marks a significant shift from experimental AI scripts to production-ready services by prioritizing observability, security, and extensibility Key updates include native OpenTelemetry integration for deep tracing, a new plugin system for self-healing logic, and "Human-in-the-Loop" confirmations to ensure safety during sensitive operations This framework empowers developers to build complex, reliable multi-agent systems using the high-performance engineering standards of Golang.</p>
+                    
+                    <a href="https://developers.googleblog.com/adk-go-10-arrives/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/" target="_blank" rel="noopener noreferrer">
+                                Developer’s Guide to Building ADK Agents with Skills
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-19 12:07</p>
+                    <p class="article-summary">The Agent Development Kit (ADK) SkillToolset introduces a "progressive disclosure" architecture that allows AI agents to load domain expertise on demand, reducing token usage by up to 90% compared to traditional monolithic prompts Through four distinct patterns—ranging from simple inline checklists to "skill factories" where agents write their own code—the system enables agents to dynamically expand their capabilities at runtime using the universal agentskills.io specification This modular approach ensures that complex instructions and external resources are only accessed when relevant, creating a scalable and self-extending framework for modern AI development.</p>
+                    
+                    <a href="https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/" target="_blank" rel="noopener noreferrer">
+                                Bring state-of-the-art agentic skills to the edge with Gemma 4
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-19 12:07</p>
+                    <p class="article-summary">Google DeepMind has launched Gemma 4, a family of state-of-the-art open models designed to enable multi-step planning and autonomous agentic workflows directly on-device The release includes the Google AI Edge Gallery for experimenting with "Agent Skills" and the LiteRT-LM library, which offers a significant speed boost and structured output for developers Available under an Apache 2.0 license, Gemma 4 supports over 140 languages and is compatible with a wide range of hardware, including mobile devices, desktops, and IoT platforms like Raspberry Pi.</p>
+                    
+                    <a href="https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" rel="noopener noreferrer">
+                                Reel Friends: Building Social Discovery that Scales to Billions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-13 13:00</p>
+                    <p class="article-summary">It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" target="_blank" rel="noopener noreferrer">
+                                Migrating Data Ingestion Systems at Meta Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-12 16:00</p>
+                    <p class="article-summary">Meta’s data ingestion system, which our engineering teams leverage for up-to-date snapshots of the social graph, has recently undergone a significant revamp to enhance its reliability at scale Moving from our legacy system to our new architecture required a large-scale migration of our entire data ingestion system The post Migrating Data Ingestion Systems at Meta Scale appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/" target="_blank" rel="noopener noreferrer">
+                                Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-11 16:00</p>
+                    <p class="article-summary">We’re rolling out version 1.1 of Labyrinth, the encrypted storage system and protocol that secures messages and history on Messenger Labyrinth 1.1 enhances the reliability of end-to-end encrypted backups with a new sub-protocol that helps messages survive the loss of a device, a switched device, and long gaps between sign-ins The post Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Scaling ArchUnit with Nebula ArchRules
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-08 15:55</p>
+                    <p class="article-summary">The archRules will contain rules specific to the usage of that library That is because the ArchRules Runner Plugin will be able to automatically detect these rules and run them in only the source sets that use this library as a dependency In the following example, we have a Project which uses a test helper library as a testImplementation dependency, and also adds a standalone rules library to the archRules configuration</p>
+                    
+                    <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/democratizing-machine-learning-at-netflix-building-the-model-lifecycle-graph-5cc6d5828bb1?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Democratizing Machine Learning at Netflix: Building the Model Lifecycle Graph
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-04 16:01</p>
+                    <p class="article-summary">MDS is optimized for real-time ingestion of ML metadata (e.g., models, features, pipelines, experiments, datasets) and to answer cross-domain questions such as “Which experiments are running this model?” or “Which models share these features?” It is the foundation that enables discovery, ingesting events from diverse sources, enriching them with context, and materializing relationships across entities.Our vision: to make every ML asset at Netflix discoverable, understandable, and reusable by every ML practitioner, regardless of their team or domain.Core Abstractions: The Vocabulary of the SystemBefore diving into the technical implementation, it’s helpful to understand the conceptual model that underpins MDS If a new model registry were introduced, it could be added as an additional provider without changing the domain interface.We can summarize these concepts with a concrete example:This URI-based addressing scheme is crucial as it allows any service to reference any ML asset with a single string, and MDS can resolve that reference back to rich, connected metadata.From Events to Entities to GraphThe journey from raw system events to a queryable graph happens in stages Now it’s a contiguous journey in a single interface.This graph-based exploration answers questions that were previously impossible:Lineage queries: What is the complete lineage of this model, from training data to production experiments?Impact analysis: Which models will be affected if I change this feature?Usage discovery: Which A/B tests are using this model?Dependency mapping: What data sources does my pipeline transitively depend on?Deprecation planning: Which entities are no longer being used and can be retired?Every entity has deep context: its creation time, ownership, update history, and most importantly, its relationships to other entities.The Model Lifecycle Graph is surfaced to practitioners through the AIP Portal, a unified interface that provides full-text search across all entity types, detailed entity pages with navigable relationships, and personalized views for teams and individuals.A typical interaction in the AIP Portal looks like:Search: Type a model, feature, dataset, or team name into the single search box backed by Elasticsearch.Inspect: Land on an entity page that shows key metadata (description, owners, domains, tags) alongside a relationships panel.Explore: Click through to related entities (upstream datasets, downstream experiments, and sibling model versions) to navigate the Model Lifecycle Graph without leaving the portal.When new entity types are introduced into MDS, the portal automatically provides baseline search, entity pages, and relationship navigation, and we can then layer on domain-specific visualizations (such as model deployment history or dataset version timelines) over time.The Road Ahead: Open ChallengesBuilding the ML lifecycle graph is an ongoing journey</p>
+                    
+                    <a href="https://netflixtechblog.com/democratizing-machine-learning-at-netflix-building-the-model-lifecycle-graph-5cc6d5828bb1?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                State of Routing in Model Serving
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-01 21:03</p>
+                    <p class="article-summary">In this introductory blog post, we will dive into our domain-independent API abstraction and its traffic routing capabilities that the central ML model serving platform exposes to several domain-specific microservices for model inference We’ll first describe how we implemented this abstraction with Switchboard, a centralized routing service, and then discuss the operational challenges we encountered at scale and how they led us to the Lightbulb architecture.ML Model Serving Platform PrinciplesWe envisioned a central model serving platform for all of Netflix’s member-facing ML Model serving needs Because the routingKey is in a header, this determination can be made with minimal overhead.These changes retain the advantages of Switchboard, such as a single integration point, abstraction of model id from use case, context-aware routing, while addressing the challenges we observed over time.ConclusionThe evolution from Switchboard to Lightbulb marks a significant architectural refinement in our ML model serving infrastructure</p>
+                    
+                    <a href="https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/vertical-saas-insights-sessions-2026" target="_blank" rel="noopener noreferrer">
+                                Five vertical SaaS insights from Sessions 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-11 00:00</p>
+                    <p class="article-summary">AI is forcing platforms to expand beyond pure software See how vertical SaaS platforms are using payments, financial services, and agentic commerce to build more durable businesses.</p>
+                    
+                    <a href="https://stripe.com/blog/vertical-saas-insights-sessions-2026" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/giving-agents-the-ability-to-pay" target="_blank" rel="noopener noreferrer">
+                                Giving agents the ability to pay
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-29 00:00</p>
+                    <p class="article-summary">Link’s wallet for agents gives agents programmatic access to Link, including the ability to generate a one-time-use card or Shared Payment Token (SPT) backed by the cards and bank accounts already in your wallet It’s built on Stripe’s new Issuing for agents.</p>
+                    
+                    <a href="https://stripe.com/blog/giving-agents-the-ability-to-pay" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/everything-we-announced-at-sessions-2026" target="_blank" rel="noopener noreferrer">
+                                Everything we announced at Sessions 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-04-29 00:00</p>
+                    <p class="article-summary">We’re making Stripe even more programmable; protecting and propelling your business with the strength of the Stripe network; and building economic infrastructure for AI.</p>
+                    
+                    <a href="https://stripe.com/blog/everything-we-announced-at-sessions-2026" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-05-19 12:07:36</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>

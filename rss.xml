@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 18 May 2026 12:27:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 12:07:36 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>ADK Go 1.0 Arrives!</title>
       <link>https://developers.googleblog.com/adk-go-10-arrives/</link>
       <description>The launch of Agent Development Kit (ADK) for Go 1.0 marks a significant shift from experimental AI scripts to production-ready services by prioritizing observability, security, and extensibility Key updates include native OpenTelemetry integration for deep tracing, a new plugin system for self-healing logic, and &amp;quot;Human-in-the-Loop&amp;quot; confirmations to ensure safety during sensitive operations This framework empowers developers to build complex, reliable multi-agent systems using the high-performance engineering standards of Golang.</description>
-      <pubDate>Mon, 18 May 2026 12:27:13 GMT</pubDate>
+      <pubDate>Tue, 19 May 2026 12:07:32 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/adk-go-10-arrives/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Developer’s Guide to Building ADK Agents with Skills</title>
       <link>https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/</link>
       <description>The Agent Development Kit (ADK) SkillToolset introduces a &amp;quot;progressive disclosure&amp;quot; architecture that allows AI agents to load domain expertise on demand, reducing token usage by up to 90% compared to traditional monolithic prompts Through four distinct patterns—ranging from simple inline checklists to &amp;quot;skill factories&amp;quot; where agents write their own code—the system enables agents to dynamically expand their capabilities at runtime using the universal agentskills.io specification This modular approach ensures that complex instructions and external resources are only accessed when relevant, creating a scalable and self-extending framework for modern AI development.</description>
-      <pubDate>Mon, 18 May 2026 12:27:13 GMT</pubDate>
+      <pubDate>Tue, 19 May 2026 12:07:32 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/developers-guide-to-building-adk-agents-with-skills/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Bring state-of-the-art agentic skills to the edge with Gemma 4</title>
       <link>https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/</link>
       <description>Google DeepMind has launched Gemma 4, a family of state-of-the-art open models designed to enable multi-step planning and autonomous agentic workflows directly on-device The release includes the Google AI Edge Gallery for experimenting with &amp;quot;Agent Skills&amp;quot; and the LiteRT-LM library, which offers a significant speed boost and structured output for developers Available under an Apache 2.0 license, Gemma 4 supports over 140 languages and is compatible with a wide range of hardware, including mobile devices, desktops, and IoT platforms like Raspberry Pi.</description>
-      <pubDate>Mon, 18 May 2026 12:27:13 GMT</pubDate>
+      <pubDate>Tue, 19 May 2026 12:07:32 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bring-state-of-the-art-agentic-skills-to-the-edge-with-gemma-4/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Transform at 1 year, Claude Platform on AWS, EC2 M3 Ultra Mac instances, and more (May 18, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</link>
+      <description>Just a year ago, we launched AWS Transform for .NET, Mainframe and VMware workloads, the first agentic AI service purpose-built for modernizing enterprise applications at scale At re:Invent 2025, we introduced AWS Transform custom, which enables organizations to modernize and transform code at scale using AWS-managed and custom transformations You can upgrade language versions, migrate […]</description>
+      <pubDate>Mon, 18 May 2026 19:13:20 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Take your local GitHub sessions anywhere</title>
+      <link>https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/</link>
+      <description>Kick off work in VS Code or the CLI, finish it from your phone Remote control for GitHub Copilot sessions is now generally available on github.com and GitHub Mobile The post Take your local GitHub sessions anywhere appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 18 May 2026 16:54:53 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Building a general-purpose accessibility agent—and what we learned in the process</title>
@@ -57,14 +73,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>GitHub availability report: April 2026</title>
-      <link>https://github.blog/news-insights/company-news/github-availability-report-april-2026/</link>
-      <description>In April, we experienced 10 incidents that resulted in degraded performance across GitHub services The post GitHub availability report: April 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 14 May 2026 22:02:43 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-april-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Reel Friends: Building Social Discovery that Scales to Billions</title>
       <link>https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/</link>
       <description>It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</description>
@@ -87,14 +95,6 @@
       <pubDate>Tue, 12 May 2026 16:00:57 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Amazon Bedrock AgentCore payments, Agent Toolkit for AWS, and more (May 11, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agentcore-payments-agent-toolkit-for-aws-and-more-may-11-2026/</link>
-      <description>My most exciting news of last week: Amazon Bedrock AgentCore previewed the first managed payment capabilities enabling AI agents to autonomously access and pay for APIs, MCP servers, web content, and other agents Built in partnership with Coinbase and Stripe, it removes the undifferentiated heavy lifting of building customized systems for billing, credential management, and […]</description>
-      <pubDate>Mon, 11 May 2026 16:08:26 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agentcore-payments-agent-toolkit-for-aws-and-more-may-11-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable</title>
