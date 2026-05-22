@@ -6,31 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 21 May 2026 12:12:10 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 11:43:48 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Build Better AI Agents: 5 Developer Tips from the Agent Bake-Off</title>
-      <link>https://developers.googleblog.com/build-better-ai-agents-5-developer-tips-from-the-agent-bake-off/</link>
-      <description>The Google Cloud AI Agent Bake-Off highlights a shift from simple prompt engineering to rigorous agentic engineering, emphasizing that production-ready AI requires a modular, multi-agent architecture The post outlines five key developer tips, including decomposing complex tasks into specialized sub-agents and using deterministic code for execution to prevent probabilistic errors Furthermore, it advises developers to prioritize multimodality and open-source protocols like MCP to ensure agents are scalable, integrated, and future-proof against rapidly evolving model capabilities.</description>
-      <pubDate>Thu, 21 May 2026 12:12:06 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/build-better-ai-agents-5-developer-tips-from-the-agent-bake-off/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>New enhancements for merchant initiated transactions with the Google Pay API</title>
       <link>https://developers.googleblog.com/new-enhancements-for-merchant-initiated-transactions-with-the-google-pay-api/</link>
       <description>Google has introduced enhancements to the Google Pay API to provide developers with greater flexibility and control over merchant-initiated transactions (MIT) By allowing merchants to clearly define future payment terms, these changes improve transparency for users and help reduce transaction declines through better token management Developers can now implement these features to create more seamless and secure long-term payment experiences.</description>
-      <pubDate>Thu, 21 May 2026 12:12:06 GMT</pubDate>
+      <pubDate>Fri, 22 May 2026 11:43:45 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/new-enhancements-for-merchant-initiated-transactions-with-the-google-pay-api/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Subagents have arrived in Gemini CLI</title>
-      <link>https://developers.googleblog.com/subagents-have-arrived-in-gemini-cli/</link>
-      <description>Gemini CLI has introduced subagents, specialized expert agents that handle complex or high-volume tasks in isolated context windows to keep the primary session fast and focused These agents can be customized via Markdown files, run in parallel to boost productivity, and are easily invoked using the @agent syntax for targeted delegation This architecture prevents &amp;quot;context rot&amp;quot; by consolidating intricate multi-step executions into concise summaries for the main orchestrator.</description>
-      <pubDate>Thu, 21 May 2026 12:12:06 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/subagents-have-arrived-in-gemini-cli/</guid>
+      <title>MaxText Expands Post-Training Capabilities: Introducing SFT and RL on Single-Host TPUs</title>
+      <link>https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/</link>
+      <description>MaxText has introduced new support for Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) on single-host TPU configurations, leveraging JAX and the Tunix library for high-performance model refinement These features enable developers to easily adapt pre-trained models for specialized tasks and complex reasoning using efficient algorithms like GRPO and GSPO This update streamlines the post-training workflow, offering a scalable path from single-host setups to larger multi-host configurations.</description>
+      <pubDate>Fri, 22 May 2026 11:43:45 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>A2UI v0.9: The New Standard for Portable, Framework-Agnostic Generative UI</title>
+      <link>https://developers.googleblog.com/a2ui-v0-9-generative-ui/</link>
+      <description>A2UI v0.9 introduces a framework-agnostic standard designed to help AI agents generate real-time, tailored UI widgets using a company’s existing design system By decoupling UI intent from specific platforms, the release enables seamless, low-latency streaming of generative interfaces across web and mobile applications Integrating with broader ecosystems like AG2 and Vercel, A2UI v0.9 aims to move generative UI from experimental demos to production-ready digital products.</description>
+      <pubDate>Fri, 22 May 2026 11:43:45 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/a2ui-v0-9-generative-ui/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Beyond the engine: 10 open source projects shaping how games actually get made</title>
+      <link>https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/</link>
+      <description>Check out these 10 open source tools that help game developers create art, animation, levels, audio, dialogue, debug UIs, and engine-ready assets The post Beyond the engine: 10 open source projects shaping how games actually get made appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 21 May 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Introducing Nova, our internal platform for coding agents</title>
+      <link>https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents</link>
+      <description>Nova lets engineers run multiple coding sessions in parallel and lets internal systems use AI agents as part of automated workflows.</description>
+      <pubDate>Thu, 21 May 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>Building GitHub’s next chapter in accessibility</title>
+      <link>https://github.blog/open-source/building-githubs-next-chapter-in-accessibility/</link>
+      <description>Explore our update on GitHub’s accessibility strategy, and learn how you can join us in building a culture of accessibility The post Building GitHub’s next chapter in accessibility appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 21 May 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/building-githubs-next-chapter-in-accessibility/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Investigating unauthorized access to GitHub-owned repositories</title>
@@ -47,22 +71,6 @@
       <pubDate>Mon, 18 May 2026 19:13:20 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>Take your local GitHub sessions anywhere</title>
-      <link>https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/</link>
-      <description>Kick off work in VS Code or the CLI, finish it from your phone Remote control for GitHub Copilot sessions is now generally available on github.com and GitHub Mobile The post Take your local GitHub sessions anywhere appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 18 May 2026 16:54:53 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/product-news/take-your-local-github-sessions-anywhere/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Building a general-purpose accessibility agent—and what we learned in the process</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/</link>
-      <description>Learn about the experimental general-purpose accessibility agent that GitHub is piloting The post Building a general-purpose accessibility agent—and what we learned in the process appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 15 May 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/building-a-general-purpose-accessibility-agent-and-what-we-learned-in-the-process/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Amazon Bedrock introduces new advanced prompt optimization and migration tool</title>
