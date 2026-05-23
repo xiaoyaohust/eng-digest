@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 22 May 2026 11:43:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2026 10:24:54 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>New enhancements for merchant initiated transactions with the Google Pay API</title>
       <link>https://developers.googleblog.com/new-enhancements-for-merchant-initiated-transactions-with-the-google-pay-api/</link>
       <description>Google has introduced enhancements to the Google Pay API to provide developers with greater flexibility and control over merchant-initiated transactions (MIT) By allowing merchants to clearly define future payment terms, these changes improve transparency for users and help reduce transaction declines through better token management Developers can now implement these features to create more seamless and secure long-term payment experiences.</description>
-      <pubDate>Fri, 22 May 2026 11:43:45 GMT</pubDate>
+      <pubDate>Sat, 23 May 2026 10:24:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/new-enhancements-for-merchant-initiated-transactions-with-the-google-pay-api/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>MaxText Expands Post-Training Capabilities: Introducing SFT and RL on Single-Host TPUs</title>
       <link>https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/</link>
       <description>MaxText has introduced new support for Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) on single-host TPU configurations, leveraging JAX and the Tunix library for high-performance model refinement These features enable developers to easily adapt pre-trained models for specialized tasks and complex reasoning using efficient algorithms like GRPO and GSPO This update streamlines the post-training workflow, offering a scalable path from single-host setups to larger multi-host configurations.</description>
-      <pubDate>Fri, 22 May 2026 11:43:45 GMT</pubDate>
+      <pubDate>Sat, 23 May 2026 10:24:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>A2UI v0.9: The New Standard for Portable, Framework-Agnostic Generative UI</title>
       <link>https://developers.googleblog.com/a2ui-v0-9-generative-ui/</link>
       <description>A2UI v0.9 introduces a framework-agnostic standard designed to help AI agents generate real-time, tailored UI widgets using a company’s existing design system By decoupling UI intent from specific platforms, the release enables seamless, low-latency streaming of generative interfaces across web and mobile applications Integrating with broader ecosystems like AG2 and Vercel, A2UI v0.9 aims to move generative UI from experimental demos to production-ready digital products.</description>
-      <pubDate>Fri, 22 May 2026 11:43:45 GMT</pubDate>
+      <pubDate>Sat, 23 May 2026 10:24:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a2ui-v0-9-generative-ui/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/</link>
+      <description>We are committed to empowering every developer by building an open, secure, and AI-powered platform that defines the future of software development The post GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Beyond the engine: 10 open source projects shaping how games actually get made</title>
@@ -54,14 +62,6 @@
       <description>Explore our update on GitHub’s accessibility strategy, and learn how you can join us in building a culture of accessibility The post Building GitHub’s next chapter in accessibility appeared first on The GitHub Blog.</description>
       <pubDate>Thu, 21 May 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/open-source/building-githubs-next-chapter-in-accessibility/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Investigating unauthorized access to GitHub-owned repositories</title>
-      <link>https://github.blog/security/investigating-unauthorized-access-to-githubs-internal-repositories/</link>
-      <description>If any impact is discovered, customers will be notified via established incident response and notification channels The post Investigating unauthorized access to GitHub-owned repositories appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 20 May 2026 21:07:38 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/investigating-unauthorized-access-to-githubs-internal-repositories/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
