@@ -6,31 +6,71 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 25 May 2026 12:27:50 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 12:24:31 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>New enhancements for merchant initiated transactions with the Google Pay API</title>
-      <link>https://developers.googleblog.com/new-enhancements-for-merchant-initiated-transactions-with-the-google-pay-api/</link>
-      <description>Google has introduced enhancements to the Google Pay API to provide developers with greater flexibility and control over merchant-initiated transactions (MIT) By allowing merchants to clearly define future payment terms, these changes improve transparency for users and help reduce transaction declines through better token management Developers can now implement these features to create more seamless and secure long-term payment experiences.</description>
-      <pubDate>Mon, 25 May 2026 12:27:47 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/new-enhancements-for-merchant-initiated-transactions-with-the-google-pay-api/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>MaxText Expands Post-Training Capabilities: Introducing SFT and RL on Single-Host TPUs</title>
-      <link>https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/</link>
-      <description>MaxText has introduced new support for Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) on single-host TPU configurations, leveraging JAX and the Tunix library for high-performance model refinement These features enable developers to easily adapt pre-trained models for specialized tasks and complex reasoning using efficient algorithms like GRPO and GSPO This update streamlines the post-training workflow, offering a scalable path from single-host setups to larger multi-host configurations.</description>
-      <pubDate>Mon, 25 May 2026 12:27:47 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/maxtext-expands-post-training-capabilities-introducing-sft-and-rl-on-single-host-tpus/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>A2UI v0.9: The New Standard for Portable, Framework-Agnostic Generative UI</title>
       <link>https://developers.googleblog.com/a2ui-v0-9-generative-ui/</link>
       <description>A2UI v0.9 introduces a framework-agnostic standard designed to help AI agents generate real-time, tailored UI widgets using a company’s existing design system By decoupling UI intent from specific platforms, the release enables seamless, low-latency streaming of generative interfaces across web and mobile applications Integrating with broader ecosystems like AG2 and Vercel, A2UI v0.9 aims to move generative UI from experimental demos to production-ready digital products.</description>
-      <pubDate>Mon, 25 May 2026 12:27:47 GMT</pubDate>
+      <pubDate>Thu, 28 May 2026 12:24:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a2ui-v0-9-generative-ui/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Production-Ready AI Agents: 5 Lessons from Refactoring a Monolith</title>
+      <link>https://developers.googleblog.com/production-ready-ai-agents-5-lessons-from-refactoring-a-monolith/</link>
+      <description>The blog post outlines the transition of a brittle sales research prototype into a robust production agent using Google’s Agent Development Kit (ADK) By replacing monolithic scripts with orchestrated sub-agents and structured Pydantic outputs, the developers eliminated silent failures and fragile parsing Additionally, the post highlights the necessity of dynamic RAG pipelines and OpenTelemetry observability to ensure AI agents are scalable, cost-effective, and transparent in real-world applications.</description>
+      <pubDate>Thu, 28 May 2026 12:24:28 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/production-ready-ai-agents-5-lessons-from-refactoring-a-monolith/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Agents CLI in Agent Platform:  create to production in one CLI</title>
+      <link>https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</link>
+      <description>Google Cloud has introduced the Agents CLI, a specialized tool designed to bridge the gap between local development and production-grade AI agent deployment The CLI provides coding assistants with machine-readable access to the full Google Cloud stack, reducing context overload and token waste during the scaffolding process By streamlining evaluation, infrastructure provisioning, and deployment into a single programmatic backbone, the tool enables developers to move from initial concept to a live service in hours rather than weeks.</description>
+      <pubDate>Thu, 28 May 2026 12:24:28 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Meet Our Newest AWS Heroes – May 2026</title>
+      <link>https://aws.amazon.com/blogs/aws/meet-our-newest-aws-heroes-may-2026/</link>
+      <description>We’re excited to welcome four outstanding community leaders as our newest AWS Heroes These individuals embody the spirit of collaboration and knowledge sharing that makes the AWS community thrive From building AI-powered tools that help fellow builders navigate AWS re:Invent, to leading some of the largest AWS communities in Latin America, to sharing deep cloud […]</description>
+      <pubDate>Wed, 27 May 2026 16:15:05 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/meet-our-newest-aws-heroes-may-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Expanding Stripe Radar to protect more of your business</title>
+      <link>https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business</link>
+      <description>Radar now blocks high-risk transactions across all supported payment methods; defends against new fraud types like multi-account abuse and pay-as-you-go abuse, regardless of which payment processor you use; and gives platforms new tools to evaluate and mitigate merchant risk on and off Stripe.</description>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems</title>
+      <link>https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/</link>
+      <description>We’re introducing SilverTorch, a reimagining of recommendation systems that unifies all retrieval components for user generated content under a unified architecture Our research paper, “SilverTorch: A [...] Read More The post SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 26 May 2026 16:00:01 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Local Zones in Istanbul, open-source ExtendDB, Kiro Web, and more (May 25, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-local-zones-in-istanbul-open-source-extenddb-kiro-web-and-more-may-25-2026/</link>
+      <description>There’s something genuinely energizing about working with startups — something I’ve been doing intensely for more than two years now Startups operate at a different frequency: the urgency is real, the constraints are tight, and the stakes are personal Helping them navigate the challenge of proving their business model requires not just technical depth but […]</description>
+      <pubDate>Mon, 25 May 2026 20:11:10 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-local-zones-in-istanbul-open-source-extenddb-kiro-web-and-more-may-25-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>GitHub for Beginners: Getting started with Git and GitHub in VS Code</title>
+      <link>https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/</link>
+      <description>Discover how to use VS Code to interact with GitHub and maintain your projects The post GitHub for Beginners: Getting started with Git and GitHub in VS Code appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 25 May 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row</title>
@@ -57,27 +97,11 @@
       <source>Dropbox Engineering</source>
     </item>
     <item>
-      <title>Building GitHub’s next chapter in accessibility</title>
-      <link>https://github.blog/open-source/building-githubs-next-chapter-in-accessibility/</link>
-      <description>Explore our update on GitHub’s accessibility strategy, and learn how you can join us in building a culture of accessibility The post Building GitHub’s next chapter in accessibility appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 21 May 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/building-githubs-next-chapter-in-accessibility/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>AWS Weekly Roundup: AWS Transform at 1 year, Claude Platform on AWS, EC2 M3 Ultra Mac instances, and more (May 18, 2026)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</link>
       <description>Just a year ago, we launched AWS Transform for .NET, Mainframe and VMware workloads, the first agentic AI service purpose-built for modernizing enterprise applications at scale At re:Invent 2025, we introduced AWS Transform custom, which enables organizations to modernize and transform code at scale using AWS-managed and custom transformations You can upgrade language versions, migrate […]</description>
       <pubDate>Mon, 18 May 2026 19:13:20 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Amazon Bedrock introduces new advanced prompt optimization and migration tool</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-bedrock-introduces-new-advanced-prompt-optimization-and-migration-tool/</link>
-      <description>Amazon Bedrock Advanced Prompt Optimization enables customers to optimize their prompts for their current model or migrate prompts to new models faster than before with built-in evaluation feedback loops Optimize your prompts and compare results for up to 5 models simultaneously.</description>
-      <pubDate>Thu, 14 May 2026 22:03:39 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-bedrock-introduces-new-advanced-prompt-optimization-and-migration-tool/</guid>
       <source>AWS News</source>
     </item>
     <item>
@@ -89,27 +113,11 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Amazon Redshift introduces AWS Graviton-based RG instances with an integrated data lake query engine</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/</link>
-      <description>Amazon Redshift RG instances, powered by AWS Graviton, run data warehouse and data lake workloads up to 2.4x as fast as RA3 instances at 30% lower price per vCPU Its integrated data lake query engine supports open table formats such as Apache Iceberg.</description>
-      <pubDate>Tue, 12 May 2026 16:05:12 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-redshift-introduces-aws-graviton-based-rg-instances-with-an-integrated-data-lake-query-engine/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Migrating Data Ingestion Systems at Meta Scale</title>
       <link>https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</link>
       <description>Meta’s data ingestion system, which our engineering teams leverage for up-to-date snapshots of the social graph, has recently undergone a significant revamp to enhance its reliability at scale Moving from our legacy system to our new architecture required a large-scale migration of our entire data ingestion system The post Migrating Data Ingestion Systems at Meta Scale appeared first on Engineering at Meta.</description>
       <pubDate>Tue, 12 May 2026 16:00:57 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable</title>
-      <link>https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/</link>
-      <description>We’re rolling out version 1.1 of Labyrinth, the encrypted storage system and protocol that secures messages and history on Messenger Labyrinth 1.1 enhances the reliability of end-to-end encrypted backups with a new sub-protocol that helps messages survive the loss of a device, a switched device, and long gaps between sign-ins The post Labyrinth 1.1: Making End-to-End Encrypted Backups Even More Reliable appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 11 May 2026 16:00:55 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/05/11/security/labyrinth-1-1-end-to-end-encrypted-e2ee-backups-more-reliable/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
@@ -150,14 +158,6 @@
       <description>Link’s wallet for agents gives agents programmatic access to Link, including the ability to generate a one-time-use card or Shared Payment Token (SPT) backed by the cards and bank accounts already in your wallet It’s built on Stripe’s new Issuing for agents.</description>
       <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Everything we announced at Sessions 2026</title>
-      <link>https://stripe.com/blog/everything-we-announced-at-sessions-2026</link>
-      <description>We’re making Stripe even more programmable; protecting and propelling your business with the strength of the Stripe network; and building economic infrastructure for AI.</description>
-      <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/everything-we-announced-at-sessions-2026</guid>
       <source>Stripe Engineering</source>
     </item>
   </channel>
