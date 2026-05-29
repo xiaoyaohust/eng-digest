@@ -6,31 +6,71 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 28 May 2026 12:24:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2026 12:13:19 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>A2UI v0.9: The New Standard for Portable, Framework-Agnostic Generative UI</title>
-      <link>https://developers.googleblog.com/a2ui-v0-9-generative-ui/</link>
-      <description>A2UI v0.9 introduces a framework-agnostic standard designed to help AI agents generate real-time, tailored UI widgets using a company’s existing design system By decoupling UI intent from specific platforms, the release enables seamless, low-latency streaming of generative interfaces across web and mobile applications Integrating with broader ecosystems like AG2 and Vercel, A2UI v0.9 aims to move generative UI from experimental demos to production-ready digital products.</description>
-      <pubDate>Thu, 28 May 2026 12:24:28 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/a2ui-v0-9-generative-ui/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Production-Ready AI Agents: 5 Lessons from Refactoring a Monolith</title>
-      <link>https://developers.googleblog.com/production-ready-ai-agents-5-lessons-from-refactoring-a-monolith/</link>
-      <description>The blog post outlines the transition of a brittle sales research prototype into a robust production agent using Google’s Agent Development Kit (ADK) By replacing monolithic scripts with orchestrated sub-agents and structured Pydantic outputs, the developers eliminated silent failures and fragile parsing Additionally, the post highlights the necessity of dynamic RAG pipelines and OpenTelemetry observability to ensure AI agents are scalable, cost-effective, and transparent in real-world applications.</description>
-      <pubDate>Thu, 28 May 2026 12:24:28 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/production-ready-ai-agents-5-lessons-from-refactoring-a-monolith/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Agents CLI in Agent Platform:  create to production in one CLI</title>
       <link>https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</link>
       <description>Google Cloud has introduced the Agents CLI, a specialized tool designed to bridge the gap between local development and production-grade AI agent deployment The CLI provides coding assistants with machine-readable access to the full Google Cloud stack, reducing context overload and token waste during the scaffolding process By streamlining evaluation, infrastructure provisioning, and deployment into a single programmatic backbone, the tool enables developers to move from initial concept to a live service in hours rather than weeks.</description>
-      <pubDate>Thu, 28 May 2026 12:24:28 GMT</pubDate>
+      <pubDate>Fri, 29 May 2026 12:13:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building real-world on-device AI with LiteRT and NPU</title>
+      <link>https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</link>
+      <description>LiteRT is a production-ready framework designed to help mobile developers unlock the power of Neural Processing Units (NPUs), overcoming the performance and battery limitations of traditional CPU or GPU processing By providing a unified API that abstracts away hardware complexities, it allows industry leaders like Google Meet and Epic Games to deploy sophisticated AI models for real-time video, animation, and speech recognition with significantly higher efficiency The platform further supports developers through benchmarking tools and cross-platform compatibility, enabling seamless AI deployment across mobile devices, AI PCs, and industrial IoT hardware.</description>
+      <pubDate>Fri, 29 May 2026 12:13:15 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Speeding Up AI: Bringing Google Colossus to PyTorch via GCSFS and Rapid Bucket</title>
+      <link>https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</link>
+      <description>Google Cloud has introduced a high-performance integration that connects Rapid Storage directly to PyTorch via the fsspec interface to eliminate AI training bottlenecks By utilizing Google’s Colossus architecture and bidirectional gRPC streaming, the solution offers up to 15 TiB/s aggregate throughput and significant reductions in latency These improvements allow developers to speed up total training time by 23% with zero code changes required beyond updating the storage bucket type.</description>
+      <pubDate>Fri, 29 May 2026 12:13:15 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey</title>
+      <link>https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/</link>
+      <description>AWS launches the next generation of AWS Resilience Hub with a significantly expanded experience that brings together a new application model, dependency discovery assessment, generative AI-powered failure mode analysis, modular resilience policies, and organization-wide reporting.</description>
+      <pubDate>Thu, 28 May 2026 19:29:55 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications</title>
+      <link>https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/</link>
+      <description>AWS rebuilt Amazon OpenSearch Serverless from the ground up for agentic AI and dynamic workloads Get instant autoscaling and up to 60% cost savings.</description>
+      <pubDate>Thu, 28 May 2026 18:26:16 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Still a developer. Just outside. Our latest GitHub Shop collection is here.</title>
+      <link>https://github.blog/news-insights/company-news/still-a-developer-just-outside-our-latest-github-shop-collection-is-here/</link>
+      <description>The ESC collection lets you escape the confines of your desk and get out into the sun where good ideas are bound to happen The post Still a developer Our latest GitHub Shop collection is here. appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 28 May 2026 18:18:43 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/still-a-developer-just-outside-our-latest-github-shop-collection-is-here/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Beyond code generation: rethinking engineering productivity in the age of AI agents</title>
+      <link>https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents</link>
+      <description>How Dropbox is moving from AI tools that assist engineers to agentic systems that can execute scoped tasks, and how we’re building platforms to support those workflows.</description>
+      <pubDate>Thu, 28 May 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>Solo founding is at an all-time high: Top performers have these traits in common</title>
+      <link>https://stripe.com/blog/top-solo-founder-traits</link>
+      <description>In 2025, solo founders in the top decile generated 61 times the revenue of the median solo founder in their first six months We analyzed the data to understand what drives that gap.</description>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/top-solo-founder-traits</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Meet Our Newest AWS Heroes – May 2026</title>
@@ -57,14 +97,6 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: AWS Local Zones in Istanbul, open-source ExtendDB, Kiro Web, and more (May 25, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-local-zones-in-istanbul-open-source-extenddb-kiro-web-and-more-may-25-2026/</link>
-      <description>There’s something genuinely energizing about working with startups — something I’ve been doing intensely for more than two years now Startups operate at a different frequency: the urgency is real, the constraints are tight, and the stakes are personal Helping them navigate the challenge of proving their business model requires not just technical depth but […]</description>
-      <pubDate>Mon, 25 May 2026 20:11:10 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-local-zones-in-istanbul-open-source-extenddb-kiro-web-and-more-may-25-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>GitHub for Beginners: Getting started with Git and GitHub in VS Code</title>
       <link>https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/</link>
       <description>Discover how to use VS Code to interact with GitHub and maintain your projects The post GitHub for Beginners: Getting started with Git and GitHub in VS Code appeared first on The GitHub Blog.</description>
@@ -81,28 +113,12 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Beyond the engine: 10 open source projects shaping how games actually get made</title>
-      <link>https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/</link>
-      <description>Check out these 10 open source tools that help game developers create art, animation, levels, audio, dialogue, debug UIs, and engine-ready assets The post Beyond the engine: 10 open source projects shaping how games actually get made appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 21 May 2026 18:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/gaming/beyond-the-engine-10-open-source-projects-shaping-how-games-actually-get-made/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Introducing Nova, our internal platform for coding agents</title>
       <link>https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents</link>
       <description>Nova lets engineers run multiple coding sessions in parallel and lets internal systems use AI agents as part of automated workflows.</description>
       <pubDate>Thu, 21 May 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: AWS Transform at 1 year, Claude Platform on AWS, EC2 M3 Ultra Mac instances, and more (May 18, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</link>
-      <description>Just a year ago, we launched AWS Transform for .NET, Mainframe and VMware workloads, the first agentic AI service purpose-built for modernizing enterprise applications at scale At re:Invent 2025, we introduced AWS Transform custom, which enables organizations to modernize and transform code at scale using AWS-managed and custom transformations You can upgrade language versions, migrate […]</description>
-      <pubDate>Mon, 18 May 2026 19:13:20 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-transform-at-1-year-claude-platform-on-aws-ec2-m3-ultra-mac-instances-and-more-may-18-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Reel Friends: Building Social Discovery that Scales to Billions</title>
@@ -151,14 +167,6 @@
       <pubDate>Fri, 01 May 2026 21:03:13 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/state-of-routing-in-model-serving-16e22fe18741?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Giving agents the ability to pay</title>
-      <link>https://stripe.com/blog/giving-agents-the-ability-to-pay</link>
-      <description>Link’s wallet for agents gives agents programmatic access to Link, including the ability to generate a one-time-use card or Shared Payment Token (SPT) backed by the cards and bank accounts already in your wallet It’s built on Stripe’s new Issuing for agents.</description>
-      <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/giving-agents-the-ability-to-pay</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
