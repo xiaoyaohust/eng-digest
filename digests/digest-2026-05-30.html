@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-05-30</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-05-30</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/" target="_blank" rel="noopener noreferrer">
+                                Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-28 19:29</p>
+                    <p class="article-summary">AWS launches the next generation of AWS Resilience Hub with a significantly expanded experience that brings together a new application model, dependency discovery assessment, generative AI-powered failure mode analysis, modular resilience policies, and organization-wide reporting.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/" target="_blank" rel="noopener noreferrer">
+                                Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-28 18:26</p>
+                    <p class="article-summary">AWS rebuilt Amazon OpenSearch Serverless from the ground up for agentic AI and dynamic workloads Get instant autoscaling and up to 60% cost savings.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/meet-our-newest-aws-heroes-may-2026/" target="_blank" rel="noopener noreferrer">
+                                Meet Our Newest AWS Heroes – May 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-27 16:15</p>
+                    <p class="article-summary">We’re excited to welcome four outstanding community leaders as our newest AWS Heroes These individuals embody the spirit of collaboration and knowledge sharing that makes the AWS community thrive From building AI-powered tools that help fellow builders navigate AWS re:Invent, to leading some of the largest AWS communities in Latin America, to sharing deep cloud […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/meet-our-newest-aws-heroes-may-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" rel="noopener noreferrer">
+                                Beyond code generation: rethinking engineering productivity in the age of AI agents
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-28 18:00</p>
+                    <p class="article-summary">How Dropbox is moving from AI tools that assist engineers to agentic systems that can execute scoped tasks, and how we’re building platforms to support those workflows.</p>
+                    
+                    <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" rel="noopener noreferrer">
+                                Introducing Nova, our internal platform for coding agents
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-21 16:00</p>
+                    <p class="article-summary">Nova lets engineers run multiple coding sessions in parallel and lets internal systems use AI agents as part of automated workflows.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/company-news/still-a-developer-just-outside-our-latest-github-shop-collection-is-here/" target="_blank" rel="noopener noreferrer">
+                                Still a developer. Just outside. Our latest GitHub Shop collection is here.
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-28 18:18</p>
+                    <p class="article-summary">The ESC collection lets you escape the confines of your desk and get out into the sun where good ideas are bound to happen The post Still a developer Our latest GitHub Shop collection is here. appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/still-a-developer-just-outside-our-latest-github-shop-collection-is-here/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/" target="_blank" rel="noopener noreferrer">
+                                GitHub for Beginners: Getting started with Git and GitHub in VS Code
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-25 16:00</p>
+                    <p class="article-summary">Discover how to use VS Code to interact with GitHub and maintain your projects The post GitHub for Beginners: Getting started with Git and GitHub in VS Code appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/" target="_blank" rel="noopener noreferrer">
+                                GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-22 16:10</p>
+                    <p class="article-summary">We are committed to empowering every developer by building an open, secure, and AI-powered platform that defines the future of software development The post GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/" target="_blank" rel="noopener noreferrer">
+                                Agents CLI in Agent Platform:  create to production in one CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-30 10:45</p>
+                    <p class="article-summary">Google Cloud has introduced the Agents CLI, a specialized tool designed to bridge the gap between local development and production-grade AI agent deployment The CLI provides coding assistants with machine-readable access to the full Google Cloud stack, reducing context overload and token waste during the scaffolding process By streamlining evaluation, infrastructure provisioning, and deployment into a single programmatic backbone, the tool enables developers to move from initial concept to a live service in hours rather than weeks.</p>
+                    
+                    <a href="https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/" target="_blank" rel="noopener noreferrer">
+                                Building real-world on-device AI with LiteRT and NPU
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-30 10:45</p>
+                    <p class="article-summary">LiteRT is a production-ready framework designed to help mobile developers unlock the power of Neural Processing Units (NPUs), overcoming the performance and battery limitations of traditional CPU or GPU processing By providing a unified API that abstracts away hardware complexities, it allows industry leaders like Google Meet and Epic Games to deploy sophisticated AI models for real-time video, animation, and speech recognition with significantly higher efficiency The platform further supports developers through benchmarking tools and cross-platform compatibility, enabling seamless AI deployment across mobile devices, AI PCs, and industrial IoT hardware.</p>
+                    
+                    <a href="https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/" target="_blank" rel="noopener noreferrer">
+                                Speeding Up AI: Bringing Google Colossus to PyTorch via GCSFS and Rapid Bucket
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-30 10:45</p>
+                    <p class="article-summary">Google Cloud has introduced a high-performance integration that connects Rapid Storage directly to PyTorch via the fsspec interface to eliminate AI training bottlenecks By utilizing Google’s Colossus architecture and bidirectional gRPC streaming, the solution offers up to 15 TiB/s aggregate throughput and significant reductions in latency These improvements allow developers to speed up total training time by 23% with zero code changes required beyond updating the storage bucket type.</p>
+                    
+                    <a href="https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" rel="noopener noreferrer">
+                                SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-26 16:00</p>
+                    <p class="article-summary">We’re introducing SilverTorch, a reimagining of recommendation systems that unifies all retrieval components for user generated content under a unified architecture Our research paper, “SilverTorch: A [...] Read More The post SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" rel="noopener noreferrer">
+                                Reel Friends: Building Social Discovery that Scales to Billions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-13 13:00</p>
+                    <p class="article-summary">It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" target="_blank" rel="noopener noreferrer">
+                                Migrating Data Ingestion Systems at Meta Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-12 16:00</p>
+                    <p class="article-summary">Meta’s data ingestion system, which our engineering teams leverage for up-to-date snapshots of the social graph, has recently undergone a significant revamp to enhance its reliability at scale Moving from our legacy system to our new architecture required a large-scale migration of our entire data ingestion system The post Migrating Data Ingestion Systems at Meta Scale appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                High-Throughput Graph Abstraction at Netflix: Part I
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-29 18:49</p>
+                    <p class="article-summary">Looking ahead, we plan to leverage the graph schema for additional improvements, such as:Minimizing Query Fanout: By using edge cardinality within edge mappings, we aim to select the most efficient traversal paths and minimize query fanout.Improved Developer Experience: The schema will support generating a type-safe data access layer and enhance the Gremlin-like API with schema awareness.Next, let’s look at how this data is organized in a real-time index within the KV Abstraction.Real-Time Index: Key-Value StorageBefore we discuss how the data is organized into graph indexes, let’s discuss how KV organizes data within namespaces and provides idempotency guarantees:Data partitioning: A namespace is associated with a table in the underlying storage layer In order to ensure optimal performance without exerting too much memory pressure, we aim to limit the number of edges per source node within the system.Next, let’s explore the caching strategies used by the Abstraction.Caching Strategies in Graph AbstractionAlthough the Graph Abstraction already provides efficient reads and writes to durable storage, caching remains critical for the stability and performance of any graph datastore for two key reasons:Write amplification: A single write on the fronting service can result in multiple writes to the backing durable storage due to the use of multiple indexes As illustrated in the diagram below, both the caching layer and durable storage replicate data asynchronously across regions, resulting in an eventually consistent system.Now that we’ve covered storing the real-time graph index, let’s see how it enables graph traversals.Graph TraversalsThe Abstraction provides a custom gRPC traversal API, inspired by Gremlin, which enables exploration of the distributed graph by letting users chain traversals, apply filter criteria, sort results, limit results, and more.Let’s explore a hypothetical scenario where the Abstraction is used to recommend shows to users on a shared device, by considering the duration of the most recent viewing session for each show across all profiles and accounts associated with that device:TraversalRequest.newBuilder() .setNamespace("<graph-namespace>") .setTraversalQuery( TraversalQuery.newBuilder() // Given id of the 'device' node type. .setStartNode(node("device", "my-device-id")) .setTraversal( Traversal.newBuilder() // fetch the first 5 connections .setEdgeLimit(5) .setDirectionTraversal( DirectionTraversal.newBuilder() // traverse in the IN direction .setDirection(IN) // minimize data exchange: only interested in certain properties .addNodePropertiesSelections(propSelection("account", "created_at")) .addNodePropertiesSelections(propSelection("profile", "last_active")) .setDirectionFilter( DirectionFilter.newBuilder() // only interested in certain connected types .setTypeMatchingStrategy(EXCLUDE_NON_TARGETED) .addAllNodeFilters(typeFilters("account", "profile")))) // chain traversals to the intermediate result .addNextTraversals( Traversal.newBuilder() .setOrder(LATEST) // limit to 200 connections for the 2nd hop .setEdgeLimit(200) .setDirectionTraversal( DirectionTraversal.newBuilder() // now traverse in the OUT direction .setDirection(OUT) .addEdgePropertiesSelections(propSelection("watched", "view_time")) .addEdgePropertiesSelections(propSelection("has_plan", "active")) .setDirectionFilter( DirectionFilter.newBuilder() .setTypeMatchingStrategy(EXCLUDE_NON_TARGETED) .addAllNodeFilters(typeFilters("title", "plan"))))))) .build();And let’s visualize the intended results set produced by the request above:We’ll explore the design and implementation of traversal planning and execution, along with different traversal types, in the Part II of this blog series.Now let’s look at the performance metrics of Graph Abstraction based on current production use cases.Real World PerformanceAcross all applications at Netflix, Graph Abstraction ensures high availability while processing up to 10 million operations per second across all writes, individual edge / node reads and traversals at peak hours:Edge and node persistence achieve single-digit millisecond latencies (p99 shown in red, p90 shown in orange, and p50 shown in green):Traversal performance depends on the number of hops, the edge fanout at each stage, and associated filters and sort orders</p>
+                    
+                    <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-29 14:01</p>
+                    <p class="article-summary">We needed to combine multiple sources.These lessons shaped every decision we made in building Service Topology.What We Needed: A Living MapWe set out to build something specific: a living map of our infrastructure — one that updates in real-time as services deploy, as traffic patterns shift, as new dependencies form and old ones disappear.The requirements were clear:Real-time updates, not stale snapshots: In an environment where services deploy continuously, yesterday’s topology map is archaeology, not observability.Fast queries at scale: When an engineer is troubleshooting at 3am, they can’t wait minutes for a query to return This graduated approach also prevents hot spots by distributing load across multiple points even when specific applications or network intermediaries see 100x more traffic than others.Graph Storage: We persist the topology in Netflix’s graph database, an abstraction layer built on top of our distributed key-value storage infrastructure Each of our three data sources (network flows, IPC metrics, tracing) creates a separate graph that can be queried independently or merged.gRPC API: We expose the topology through a gRPC service that supports multi-hop traversal, filtering by availability tier and business domain, pagination for large result sets, and sub-second query response times.The technical details of building this at Netflix scale — handling Kafka lag, managing memory and garbage collection, optimizing distributed processing, debugging reactive streams — deserve their own discussion</p>
+                    
+                    <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Scaling ArchUnit with Nebula ArchRules
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-08 15:55</p>
+                    <p class="article-summary">The archRules will contain rules specific to the usage of that library That is because the ArchRules Runner Plugin will be able to automatically detect these rules and run them in only the source sets that use this library as a dependency In the following example, we have a Project which uses a test helper library as a testImplementation dependency, and also adds a standalone rules library to the archRules configuration</p>
+                    
+                    <a href="https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/top-solo-founder-traits" target="_blank" rel="noopener noreferrer">
+                                Solo founding is at an all-time high: Top performers have these traits in common
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-28 00:00</p>
+                    <p class="article-summary">In 2025, solo founders in the top decile generated 61 times the revenue of the median solo founder in their first six months We analyzed the data to understand what drives that gap.</p>
+                    
+                    <a href="https://stripe.com/blog/top-solo-founder-traits" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business" target="_blank" rel="noopener noreferrer">
+                                Expanding Stripe Radar to protect more of your business
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-27 00:00</p>
+                    <p class="article-summary">Radar now blocks high-risk transactions across all supported payment methods; defends against new fraud types like multi-account abuse and pay-as-you-go abuse, regardless of which payment processor you use; and gives platforms new tools to evaluate and mitigate merchant risk on and off Stripe.</p>
+                    
+                    <a href="https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/vertical-saas-insights-sessions-2026" target="_blank" rel="noopener noreferrer">
+                                Five vertical SaaS insights from Sessions 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-11 00:00</p>
+                    <p class="article-summary">AI is forcing platforms to expand beyond pure software See how vertical SaaS platforms are using payments, financial services, and agentic commerce to build more durable businesses.</p>
+                    
+                    <a href="https://stripe.com/blog/vertical-saas-insights-sessions-2026" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-05-30 10:46:01</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
