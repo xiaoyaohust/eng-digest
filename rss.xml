@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 01 Jun 2026 14:58:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 12:38:52 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Agents CLI in Agent Platform:  create to production in one CLI</title>
       <link>https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</link>
       <description>Google Cloud has introduced the Agents CLI, a specialized tool designed to bridge the gap between local development and production-grade AI agent deployment The CLI provides coding assistants with machine-readable access to the full Google Cloud stack, reducing context overload and token waste during the scaffolding process By streamlining evaluation, infrastructure provisioning, and deployment into a single programmatic backbone, the tool enables developers to move from initial concept to a live service in hours rather than weeks.</description>
-      <pubDate>Mon, 01 Jun 2026 14:58:22 GMT</pubDate>
+      <pubDate>Tue, 02 Jun 2026 12:38:48 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building real-world on-device AI with LiteRT and NPU</title>
       <link>https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</link>
       <description>LiteRT is a production-ready framework designed to help mobile developers unlock the power of Neural Processing Units (NPUs), overcoming the performance and battery limitations of traditional CPU or GPU processing By providing a unified API that abstracts away hardware complexities, it allows industry leaders like Google Meet and Epic Games to deploy sophisticated AI models for real-time video, animation, and speech recognition with significantly higher efficiency The platform further supports developers through benchmarking tools and cross-platform compatibility, enabling seamless AI deployment across mobile devices, AI PCs, and industrial IoT hardware.</description>
-      <pubDate>Mon, 01 Jun 2026 14:58:22 GMT</pubDate>
+      <pubDate>Tue, 02 Jun 2026 12:38:48 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Speeding Up AI: Bringing Google Colossus to PyTorch via GCSFS and Rapid Bucket</title>
       <link>https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</link>
       <description>Google Cloud has introduced a high-performance integration that connects Rapid Storage directly to PyTorch via the fsspec interface to eliminate AI training bottlenecks By utilizing Google’s Colossus architecture and bidirectional gRPC streaming, the solution offers up to 15 TiB/s aggregate throughput and significant reductions in latency These improvements allow developers to speed up total training time by 23% with zero code changes required beyond updating the storage bucket type.</description>
-      <pubDate>Mon, 01 Jun 2026 14:58:22 GMT</pubDate>
+      <pubDate>Tue, 02 Jun 2026 12:38:48 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Get started with OpenAI GPT-5.5, GPT-5.4 models, and Codex on Amazon Bedrock</title>
+      <link>https://aws.amazon.com/blogs/aws/get-started-with-openai-gpt-5-5-gpt-5-4-models-and-codex-on-amazon-bedrock/</link>
+      <description>OpenAI frontier models GPT-5.5 and GPT-5.4, and Codex, the OpenAI coding agent, are now generally available on Amazon Bedrock Deploy frontier models on Bedrock&amp;apos;s high performance inference engine with built-in security, governance, and pay-per-token pricing.</description>
+      <pubDate>Mon, 01 Jun 2026 21:33:28 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/get-started-with-openai-gpt-5-5-gpt-5-4-models-and-codex-on-amazon-bedrock/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Claude Opus 4.8 on AWS, Aurora MySQL with Kiro Powers, and more (June 1, 2026)</title>
@@ -62,14 +70,6 @@
       <description>AWS launches the next generation of AWS Resilience Hub with a significantly expanded experience that brings together a new application model, dependency discovery assessment, generative AI-powered failure mode analysis, modular resilience policies, and organization-wide reporting.</description>
       <pubDate>Thu, 28 May 2026 19:29:55 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Introducing the next generation of Amazon OpenSearch Serverless for building your agentic AI applications</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/</link>
-      <description>AWS rebuilt Amazon OpenSearch Serverless from the ground up for agentic AI and dynamic workloads Get instant autoscaling and up to 60% cost savings.</description>
-      <pubDate>Thu, 28 May 2026 18:26:16 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-amazon-opensearch-serverless-for-building-your-agentic-ai-applications/</guid>
       <source>AWS News</source>
     </item>
     <item>
