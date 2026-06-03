@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 02 Jun 2026 12:38:52 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 13:14:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Agents CLI in Agent Platform:  create to production in one CLI</title>
       <link>https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</link>
       <description>Google Cloud has introduced the Agents CLI, a specialized tool designed to bridge the gap between local development and production-grade AI agent deployment The CLI provides coding assistants with machine-readable access to the full Google Cloud stack, reducing context overload and token waste during the scaffolding process By streamlining evaluation, infrastructure provisioning, and deployment into a single programmatic backbone, the tool enables developers to move from initial concept to a live service in hours rather than weeks.</description>
-      <pubDate>Tue, 02 Jun 2026 12:38:48 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 13:14:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building real-world on-device AI with LiteRT and NPU</title>
       <link>https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</link>
       <description>LiteRT is a production-ready framework designed to help mobile developers unlock the power of Neural Processing Units (NPUs), overcoming the performance and battery limitations of traditional CPU or GPU processing By providing a unified API that abstracts away hardware complexities, it allows industry leaders like Google Meet and Epic Games to deploy sophisticated AI models for real-time video, animation, and speech recognition with significantly higher efficiency The platform further supports developers through benchmarking tools and cross-platform compatibility, enabling seamless AI deployment across mobile devices, AI PCs, and industrial IoT hardware.</description>
-      <pubDate>Tue, 02 Jun 2026 12:38:48 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 13:14:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Speeding Up AI: Bringing Google Colossus to PyTorch via GCSFS and Rapid Bucket</title>
       <link>https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</link>
       <description>Google Cloud has introduced a high-performance integration that connects Rapid Storage directly to PyTorch via the fsspec interface to eliminate AI training bottlenecks By utilizing Google’s Colossus architecture and bidirectional gRPC streaming, the solution offers up to 15 TiB/s aggregate throughput and significant reductions in latency These improvements allow developers to speed up total training time by 23% with zero code changes required beyond updating the storage bucket type.</description>
-      <pubDate>Tue, 02 Jun 2026 12:38:48 GMT</pubDate>
+      <pubDate>Wed, 03 Jun 2026 13:14:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads</title>
+      <link>https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4</link>
+      <description>Using these tools, we can detect cases of both over and under partitioning.Below is an example of over‑partitioning, where the TimeSeries provisioning pipeline selected very small time_bucket intervals based on user provided inputs:Provisioning selected 60s time buckets based on user inputscausing partitions to have less than 10 KB of data, leading to high read amplification and thread queueing:Histogram of the given Cassandra table showing partition size percentilesIn order to tune partition strategies efficiently, we added a background worker, which monitors partition histograms of Time Slices attached to a given application, and exposes it via a Cassandra virtual table:Histograms exposed through a Cassandra Virtual tableIt then computes an adjustment factor when it detects partition sizes not meeting a configured density Simply tolerating elevated latencies or timeouts when querying these IDs is not a desirable outcome.This is where dynamic partitioning comes into play.Solution 2: Dynamic Partitioning per IDDynamic partitioning is an asynchronous pipeline that auto-detects and splits wide partitions on a TimeSeries ID level rather than at the table level.It has three main stages:Detection: Detects wide partitions for a given TimeSeries ID during the read path.Planning &amp;amp; Splitting: Plans and executes splits of those partitions into optimal sizes asynchronously.Serving Reads: Re-routes the read queries transparently to read data from the split partitions when ready.This is how it works at a high level; we will dive into details after:Dynamic Wide Partition Split Async PipelineHere are the different stages of the pipeline:DetectionEvery TimeSeries read operation tracks how many bytes are read for a given partition For example, if EventBucketPartitionSplitStrategy is selected, we split the partition by assigning more event buckets to the same time bucket</description>
+      <pubDate>Wed, 03 Jun 2026 02:05:05 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>GitHub Copilot app: The agent-native desktop experience</title>
+      <link>https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/</link>
+      <description>At Microsoft Build 2026, GitHub introduced new tools, updates, and surfaces so agents can work the way you already work The post GitHub Copilot app: The agent-native desktop experience appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 02 Jun 2026 17:30:03 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Get started with OpenAI GPT-5.5, GPT-5.4 models, and Codex on Amazon Bedrock</title>
@@ -121,14 +137,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/</link>
-      <description>We are committed to empowering every developer by building an open, secure, and AI-powered platform that defines the future of software development The post GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 22 May 2026 16:10:21 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Introducing Nova, our internal platform for coding agents</title>
       <link>https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents</link>
       <description>Nova lets engineers run multiple coding sessions in parallel and lets internal systems use AI agents as part of automated workflows.</description>
@@ -159,14 +167,6 @@
       <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/vertical-saas-insights-sessions-2026</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Scaling ArchUnit with Nebula ArchRules</title>
-      <link>https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss----2615bd06b42e---4</link>
-      <description>The archRules will contain rules specific to the usage of that library That is because the ArchRules Runner Plugin will be able to automatically detect these rules and run them in only the source sets that use this library as a dependency In the following example, we have a Project which uses a test helper library as a testImplementation dependency, and also adds a standalone rules library to the archRules configuration</description>
-      <pubDate>Fri, 08 May 2026 15:55:59 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/scaling-archunit-with-nebula-archrules-b4642c464c5a?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
     </item>
   </channel>
 </rss>
