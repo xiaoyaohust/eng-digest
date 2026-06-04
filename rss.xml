@@ -6,39 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 03 Jun 2026 13:14:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 11:50:44 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Agents CLI in Agent Platform:  create to production in one CLI</title>
-      <link>https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</link>
-      <description>Google Cloud has introduced the Agents CLI, a specialized tool designed to bridge the gap between local development and production-grade AI agent deployment The CLI provides coding assistants with machine-readable access to the full Google Cloud stack, reducing context overload and token waste during the scaffolding process By streamlining evaluation, infrastructure provisioning, and deployment into a single programmatic backbone, the tool enables developers to move from initial concept to a live service in hours rather than weeks.</description>
-      <pubDate>Wed, 03 Jun 2026 13:14:30 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/agents-cli-in-agent-platform-create-to-production-in-one-cli/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Building real-world on-device AI with LiteRT and NPU</title>
-      <link>https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</link>
-      <description>LiteRT is a production-ready framework designed to help mobile developers unlock the power of Neural Processing Units (NPUs), overcoming the performance and battery limitations of traditional CPU or GPU processing By providing a unified API that abstracts away hardware complexities, it allows industry leaders like Google Meet and Epic Games to deploy sophisticated AI models for real-time video, animation, and speech recognition with significantly higher efficiency The platform further supports developers through benchmarking tools and cross-platform compatibility, enabling seamless AI deployment across mobile devices, AI PCs, and industrial IoT hardware.</description>
-      <pubDate>Wed, 03 Jun 2026 13:14:30 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/building-real-world-on-device-ai-with-litert-and-npu/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Speeding Up AI: Bringing Google Colossus to PyTorch via GCSFS and Rapid Bucket</title>
       <link>https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</link>
       <description>Google Cloud has introduced a high-performance integration that connects Rapid Storage directly to PyTorch via the fsspec interface to eliminate AI training bottlenecks By utilizing Google’s Colossus architecture and bidirectional gRPC streaming, the solution offers up to 15 TiB/s aggregate throughput and significant reductions in latency These improvements allow developers to speed up total training time by 23% with zero code changes required beyond updating the storage bucket type.</description>
-      <pubDate>Wed, 03 Jun 2026 13:14:30 GMT</pubDate>
+      <pubDate>Thu, 04 Jun 2026 11:50:41 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Dynamically Splitting Wide Partitions in Cassandra for Time Series Workloads</title>
+      <title>Building with Gemini Embedding 2: Agentic multimodal RAG and beyond</title>
+      <link>https://developers.googleblog.com/building-with-gemini-embedding-2/</link>
+      <description>Google has announced the general availability of Gemini Embedding 2, a unified model that maps text, images, video, audio, and documents into a single semantic space This model allows developers to process interleaved multimodal inputs in a single request, significantly improving performance for tasks like agentic RAG, visual search, and content moderation By supporting over 100 languages and offering features like task-specific prefixes and Matryoshka dimensionality reduction, the model provides a highly efficient and accurate foundation for building complex AI agents.</description>
+      <pubDate>Thu, 04 Jun 2026 11:50:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/building-with-gemini-embedding-2/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
+      <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
+      <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
+      <pubDate>Thu, 04 Jun 2026 11:50:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Improve your application resilience with Amazon Cognito multi-Region replication</title>
+      <link>https://aws.amazon.com/blogs/aws/improve-your-application-resilience-with-amazon-cognito-multi-region-replication/</link>
+      <description>Amazon Cognito now offers multi-Region replication that automatically synchronizes user data, credentials, and pool configurations to a secondary AWS Region, enabling uninterrupted authentication during regional failovers without forced password resets—plus new support for customer managed KMS keys for encryption control.</description>
+      <pubDate>Wed, 03 Jun 2026 22:37:29 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/improve-your-application-resilience-with-amazon-cognito-multi-region-replication/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Dynamic Repartitioning for Time Series Workloads</title>
       <link>https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4</link>
       <description>Using these tools, we can detect cases of both over and under partitioning.Below is an example of over‑partitioning, where the TimeSeries provisioning pipeline selected very small time_bucket intervals based on user provided inputs:Provisioning selected 60s time buckets based on user inputscausing partitions to have less than 10 KB of data, leading to high read amplification and thread queueing:Histogram of the given Cassandra table showing partition size percentilesIn order to tune partition strategies efficiently, we added a background worker, which monitors partition histograms of Time Slices attached to a given application, and exposes it via a Cassandra virtual table:Histograms exposed through a Cassandra Virtual tableIt then computes an adjustment factor when it detects partition sizes not meeting a configured density Simply tolerating elevated latencies or timeouts when querying these IDs is not a desirable outcome.This is where dynamic partitioning comes into play.Solution 2: Dynamic Partitioning per IDDynamic partitioning is an asynchronous pipeline that auto-detects and splits wide partitions on a TimeSeries ID level rather than at the table level.It has three main stages:Detection: Detects wide partitions for a given TimeSeries ID during the read path.Planning &amp;amp; Splitting: Plans and executes splits of those partitions into optimal sizes asynchronously.Serving Reads: Re-routes the read queries transparently to read data from the split partitions when ready.This is how it works at a high level; we will dive into details after:Dynamic Wide Partition Split Async PipelineHere are the different stages of the pipeline:DetectionEvery TimeSeries read operation tracks how many bytes are read for a given partition For example, if EventBucketPartitionSplitStrategy is selected, we split the partition by assigning more event buckets to the same time bucket</description>
       <pubDate>Wed, 03 Jun 2026 02:05:05 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Helping businesses optimize network costs with the Visa Digital Commerce Authentication Program (DCAP)</title>
+      <link>https://stripe.com/blog/helping-businesses-optimize-network-costs-with-visa-digital-commerce-authentication-program</link>
+      <description>We moved quickly to help Stripe businesses take advantage of DCAP and capture interchange savings while protecting authorization rates</description>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/helping-businesses-optimize-network-costs-with-visa-digital-commerce-authentication-program</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>GitHub Copilot app: The agent-native desktop experience</title>
@@ -79,14 +95,6 @@
       <pubDate>Fri, 29 May 2026 14:01:02 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Introducing the next generation of AWS Resilience Hub for generative AI-based SRE resilience journey</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/</link>
-      <description>AWS launches the next generation of AWS Resilience Hub with a significantly expanded experience that brings together a new application model, dependency discovery assessment, generative AI-powered failure mode analysis, modular resilience policies, and organization-wide reporting.</description>
-      <pubDate>Thu, 28 May 2026 19:29:55 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-the-next-generation-of-aws-resilience-hub-for-generative-ai-based-sre-resilience-journey/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Still a developer. Just outside. Our latest GitHub Shop collection is here.</title>
@@ -159,14 +167,6 @@
       <pubDate>Tue, 12 May 2026 16:00:57 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Five vertical SaaS insights from Sessions 2026</title>
-      <link>https://stripe.com/blog/vertical-saas-insights-sessions-2026</link>
-      <description>AI is forcing platforms to expand beyond pure software See how vertical SaaS platforms are using payments, financial services, and agentic commerce to build more durable businesses.</description>
-      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/vertical-saas-insights-sessions-2026</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
