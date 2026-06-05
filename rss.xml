@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 04 Jun 2026 11:50:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 12:06:30 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Speeding Up AI: Bringing Google Colossus to PyTorch via GCSFS and Rapid Bucket</title>
       <link>https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</link>
       <description>Google Cloud has introduced a high-performance integration that connects Rapid Storage directly to PyTorch via the fsspec interface to eliminate AI training bottlenecks By utilizing Google’s Colossus architecture and bidirectional gRPC streaming, the solution offers up to 15 TiB/s aggregate throughput and significant reductions in latency These improvements allow developers to speed up total training time by 23% with zero code changes required beyond updating the storage bucket type.</description>
-      <pubDate>Thu, 04 Jun 2026 11:50:41 GMT</pubDate>
+      <pubDate>Fri, 05 Jun 2026 12:06:26 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building with Gemini Embedding 2: Agentic multimodal RAG and beyond</title>
       <link>https://developers.googleblog.com/building-with-gemini-embedding-2/</link>
       <description>Google has announced the general availability of Gemini Embedding 2, a unified model that maps text, images, video, audio, and documents into a single semantic space This model allows developers to process interleaved multimodal inputs in a single request, significantly improving performance for tasks like agentic RAG, visual search, and content moderation By supporting over 100 languages and offering features like task-specific prefixes and Matryoshka dimensionality reduction, the model provides a highly efficient and accurate foundation for building complex AI agents.</description>
-      <pubDate>Thu, 04 Jun 2026 11:50:41 GMT</pubDate>
+      <pubDate>Fri, 05 Jun 2026 12:06:26 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-with-gemini-embedding-2/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,41 @@
       <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
       <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
       <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
-      <pubDate>Thu, 04 Jun 2026 11:50:41 GMT</pubDate>
+      <pubDate>Fri, 05 Jun 2026 12:06:26 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub Universe is back: All together now, in the agentic era</title>
+      <link>https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/</link>
+      <description>GitHub Universe is back: returning to the historic Fort Mason Center in San Francisco on October 28–29, 2026 The post GitHub Universe is back: All together now, in the agentic era appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 04 Jun 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>New ways to turn global demand into revenue</title>
+      <link>https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue</link>
+      <description>At Sessions 2026, Stripe unveiled dozens of products and capabilities to help businesses turn global demand into revenue See how to go global faster with localized checkout and Adaptive Pricing, smarter fraud tools, multicurrency treasury support, and automated tax compliance.</description>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>The future of agentic commerce is here</title>
+      <link>https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH</link>
+      <description>Explore how AI agents are transforming commerce at Stripe’s Agentic Commerce Next roadshow Reserve your spot in Seattle.</description>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>Rethinking risk in the age of AI</title>
+      <link>https://stripe.events/stripeforumseattle1?utm_campaign=T5QX6Eo2zn5AP8iIGrUCWB7FFhttps%3A%2F%2Fstripe.events%2Facnext_seattle%3Futm_campaign%3DTD0976N7Lv4IS9ymCxV2jTAHH</link>
+      <description>Join senior risk and payments leaders in Seattle to explore how AI is reshaping fraud strategy</description>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.events/stripeforumseattle1?utm_campaign=T5QX6Eo2zn5AP8iIGrUCWB7FFhttps%3A%2F%2Fstripe.events%2Facnext_seattle%3Futm_campaign%3DTD0976N7Lv4IS9ymCxV2jTAHH</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Improve your application resilience with Amazon Cognito multi-Region replication</title>
@@ -41,20 +73,20 @@
       <source>AWS News</source>
     </item>
     <item>
+      <title>Lights Out, Systems On: Validating Instant Power Loss Readiness</title>
+      <link>https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/</link>
+      <description>We’re introducing Instantaneous PowerLoss Storm, a new testing paradigm within Meta’s infrastructure for handling and mitigating instant or zero-notice power loss in our data centers We’re sharing: how we built readiness to tolerate instant failures into our existing systems with defense-in-depth strategies; tradeoffs made in implementing it, and how we validated our readiness The post Lights Out, Systems On: Validating Instant Power Loss Readiness appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 03 Jun 2026 17:00:44 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
       <title>Dynamic Repartitioning for Time Series Workloads</title>
       <link>https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4</link>
       <description>Using these tools, we can detect cases of both over and under partitioning.Below is an example of over‑partitioning, where the TimeSeries provisioning pipeline selected very small time_bucket intervals based on user provided inputs:Provisioning selected 60s time buckets based on user inputscausing partitions to have less than 10 KB of data, leading to high read amplification and thread queueing:Histogram of the given Cassandra table showing partition size percentilesIn order to tune partition strategies efficiently, we added a background worker, which monitors partition histograms of Time Slices attached to a given application, and exposes it via a Cassandra virtual table:Histograms exposed through a Cassandra Virtual tableIt then computes an adjustment factor when it detects partition sizes not meeting a configured density Simply tolerating elevated latencies or timeouts when querying these IDs is not a desirable outcome.This is where dynamic partitioning comes into play.Solution 2: Dynamic Partitioning per IDDynamic partitioning is an asynchronous pipeline that auto-detects and splits wide partitions on a TimeSeries ID level rather than at the table level.It has three main stages:Detection: Detects wide partitions for a given TimeSeries ID during the read path.Planning &amp;amp; Splitting: Plans and executes splits of those partitions into optimal sizes asynchronously.Serving Reads: Re-routes the read queries transparently to read data from the split partitions when ready.This is how it works at a high level; we will dive into details after:Dynamic Wide Partition Split Async PipelineHere are the different stages of the pipeline:DetectionEvery TimeSeries read operation tracks how many bytes are read for a given partition For example, if EventBucketPartitionSplitStrategy is selected, we split the partition by assigning more event buckets to the same time bucket</description>
       <pubDate>Wed, 03 Jun 2026 02:05:05 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Helping businesses optimize network costs with the Visa Digital Commerce Authentication Program (DCAP)</title>
-      <link>https://stripe.com/blog/helping-businesses-optimize-network-costs-with-visa-digital-commerce-authentication-program</link>
-      <description>We moved quickly to help Stripe businesses take advantage of DCAP and capture interchange savings while protecting authorization rates</description>
-      <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/helping-businesses-optimize-network-costs-with-visa-digital-commerce-authentication-program</guid>
-      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>GitHub Copilot app: The agent-native desktop experience</title>
@@ -113,36 +145,12 @@
       <source>Dropbox Engineering</source>
     </item>
     <item>
-      <title>Solo founding is at an all-time high: Top performers have these traits in common</title>
-      <link>https://stripe.com/blog/top-solo-founder-traits</link>
-      <description>In 2025, solo founders in the top decile generated 61 times the revenue of the median solo founder in their first six months We analyzed the data to understand what drives that gap.</description>
-      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/top-solo-founder-traits</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Expanding Stripe Radar to protect more of your business</title>
-      <link>https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business</link>
-      <description>Radar now blocks high-risk transactions across all supported payment methods; defends against new fraud types like multi-account abuse and pay-as-you-go abuse, regardless of which payment processor you use; and gives platforms new tools to evaluate and mitigate merchant risk on and off Stripe.</description>
-      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/expanding-stripe-radar-to-protect-more-of-your-business</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
       <title>SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems</title>
       <link>https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/</link>
       <description>We’re introducing SilverTorch, a reimagining of recommendation systems that unifies all retrieval components for user generated content under a unified architecture Our research paper, “SilverTorch: A [...] Read More The post SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems appeared first on Engineering at Meta.</description>
       <pubDate>Tue, 26 May 2026 16:00:01 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>GitHub for Beginners: Getting started with Git and GitHub in VS Code</title>
-      <link>https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/</link>
-      <description>Discover how to use VS Code to interact with GitHub and maintain your projects The post GitHub for Beginners: Getting started with Git and GitHub in VS Code appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 25 May 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-git-and-github-in-vs-code/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Introducing Nova, our internal platform for coding agents</title>
@@ -158,14 +166,6 @@
       <description>It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</description>
       <pubDate>Wed, 13 May 2026 13:00:44 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Migrating Data Ingestion Systems at Meta Scale</title>
-      <link>https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</link>
-      <description>Meta’s data ingestion system, which our engineering teams leverage for up-to-date snapshots of the social graph, has recently undergone a significant revamp to enhance its reliability at scale Moving from our legacy system to our new architecture required a large-scale migration of our entire data ingestion system The post Migrating Data Ingestion Systems at Meta Scale appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 12 May 2026 16:00:57 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/05/12/data-infrastructure/migrating-data-ingestion-systems-at-meta-scale/</guid>
       <source>Meta Engineering</source>
     </item>
   </channel>
