@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 06 Jun 2026 10:52:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 11:07:40 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Building with Gemini Embedding 2: Agentic multimodal RAG and beyond</title>
       <link>https://developers.googleblog.com/building-with-gemini-embedding-2/</link>
       <description>Google has announced the general availability of Gemini Embedding 2, a unified model that maps text, images, video, audio, and documents into a single semantic space This model allows developers to process interleaved multimodal inputs in a single request, significantly improving performance for tasks like agentic RAG, visual search, and content moderation By supporting over 100 languages and offering features like task-specific prefixes and Matryoshka dimensionality reduction, the model provides a highly efficient and accurate foundation for building complex AI agents.</description>
-      <pubDate>Sat, 06 Jun 2026 10:51:58 GMT</pubDate>
+      <pubDate>Sun, 07 Jun 2026 11:07:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-with-gemini-embedding-2/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
       <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
       <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
-      <pubDate>Sat, 06 Jun 2026 10:51:58 GMT</pubDate>
+      <pubDate>Sun, 07 Jun 2026 11:07:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Build Long-running AI agents that pause, resume, and never lose context with ADK</title>
       <link>https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</link>
       <description>How to transition from stateless chatbots to production-grade agents capable of managing long-running enterprise workflows, such as HR onboarding, that span days or weeks It introduces the Agent Development Kit (ADK) and its architectural shifts, specifically using durable state machines and persistent session storage to ensure an agent never loses context during &amp;quot;idle time&amp;quot; or server restarts By leveraging event-driven webhooks and multi-agent delegation, the tutorial demonstrates how to build resilient systems that &amp;quot;sleep&amp;quot; during pauses and wake up to resume complex tasks with high reasoning accuracy.</description>
-      <pubDate>Sat, 06 Jun 2026 10:51:58 GMT</pubDate>
+      <pubDate>Sun, 07 Jun 2026 11:07:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</guid>
       <source>Google Developers</source>
     </item>
