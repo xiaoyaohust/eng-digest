@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-06-09</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-06-09</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-byom-for-amazon-rds-for-sql-server-aws-iot-device-sdk-for-swift-and-more-june-8-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: BYOM for Amazon RDS for SQL Server, AWS IoT Device SDK for Swift, and more (June 8, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-08 21:27</p>
+                    <p class="article-summary">This week, the AWS IoT Device SDK for Swift reached general availability As a member of the Swift Server Workgroup (SSWG), this one caught my attention The SDK brings production-ready MQTT 5 connectivity, Device Shadow, Jobs, and fleet provisioning to Swift developers on macOS, iOS, tvOS, and Linux</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-byom-for-amazon-rds-for-sql-server-aws-iot-device-sdk-for-swift-and-more-june-8-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/" target="_blank" rel="noopener noreferrer">
+                                Try the new console experience in Amazon Bedrock, optimized for Anthropic- and OpenAI-compatible APIs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-05 19:15</p>
+                    <p class="article-summary">You can use the new console experience on Amazon Bedrock to browse and compare the latest AI models side by side, organize work into projects with streamlined evaluation workflows, and access project-aware live documentation with auto-prefilled code snippets ready to copy and run.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/try-the-new-console-experience-in-amazon-bedrock-optimized-for-anthropic-and-openai-compatible-apis/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/improve-your-application-resilience-with-amazon-cognito-multi-region-replication/" target="_blank" rel="noopener noreferrer">
+                                Improve your application resilience with Amazon Cognito multi-Region replication
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-03 22:37</p>
+                    <p class="article-summary">Amazon Cognito now offers multi-Region replication that automatically synchronizes user data, credentials, and pool configurations to a secondary AWS Region, enabling uninterrupted authentication during regional failovers without forced password resets—plus new support for customer managed KMS keys for encryption control.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/improve-your-application-resilience-with-amazon-cognito-multi-region-replication/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" target="_blank" rel="noopener noreferrer">
+                                Beyond code generation: rethinking engineering productivity in the age of AI agents
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-28 18:00</p>
+                    <p class="article-summary">How Dropbox is moving from AI tools that assist engineers to agentic systems that can execute scoped tasks, and how we’re building platforms to support those workflows.</p>
+                    
+                    <a href="https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" target="_blank" rel="noopener noreferrer">
+                                Introducing Nova, our internal platform for coding agents
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-21 16:00</p>
+                    <p class="article-summary">Nova lets engineers run multiple coding sessions in parallel and lets internal systems use AI agents as part of automated workflows.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/developer-skills/github/github-for-beginners-answers-to-some-common-questions/" target="_blank" rel="noopener noreferrer">
+                                GitHub for Beginners: Answers to some common questions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-08 16:00</p>
+                    <p class="article-summary">Find the answers to some of the most common GitHub-related questions The post GitHub for Beginners: Answers to some common questions appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/developer-skills/github/github-for-beginners-answers-to-some-common-questions/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/" target="_blank" rel="noopener noreferrer">
+                                GitHub Universe is back: All together now, in the agentic era
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-04 16:00</p>
+                    <p class="article-summary">GitHub Universe is back: returning to the historic Fort Mason Center in San Francisco on October 28–29, 2026 The post GitHub Universe is back: All together now, in the agentic era appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/github-universe-is-back-all-together-now-in-the-agentic-era/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/" target="_blank" rel="noopener noreferrer">
+                                GitHub Copilot app: The agent-native desktop experience
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-02 17:30</p>
+                    <p class="article-summary">At Microsoft Build 2026, GitHub introduced new tools, updates, and surfaces so agents can work the way you already work The post GitHub Copilot app: The agent-native desktop experience appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/building-with-gemini-embedding-2/" target="_blank" rel="noopener noreferrer">
+                                Building with Gemini Embedding 2: Agentic multimodal RAG and beyond
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-09 11:57</p>
+                    <p class="article-summary">Google has announced the general availability of Gemini Embedding 2, a unified model that maps text, images, video, audio, and documents into a single semantic space This model allows developers to process interleaved multimodal inputs in a single request, significantly improving performance for tasks like agentic RAG, visual search, and content moderation By supporting over 100 languages and offering features like task-specific prefixes and Matryoshka dimensionality reduction, the model provides a highly efficient and accurate foundation for building complex AI agents.</p>
+                    
+                    <a href="https://developers.googleblog.com/building-with-gemini-embedding-2/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/" target="_blank" rel="noopener noreferrer">
+                                Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-09 11:57</p>
+                    <p class="article-summary">Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By "painting" entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging "free" parallel verification and high-quality draft predictions for complex reasoning tasks.</p>
+                    
+                    <a href="https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/" target="_blank" rel="noopener noreferrer">
+                                Build Long-running AI agents that pause, resume, and never lose context with ADK
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-09 11:57</p>
+                    <p class="article-summary">How to transition from stateless chatbots to production-grade agents capable of managing long-running enterprise workflows, such as HR onboarding, that span days or weeks It introduces the Agent Development Kit (ADK) and its architectural shifts, specifically using durable state machines and persistent session storage to ensure an agent never loses context during "idle time" or server restarts By leveraging event-driven webhooks and multi-agent delegation, the tutorial demonstrates how to build resilient systems that "sleep" during pauses and wake up to resume complex tasks with high reasoning accuracy.</p>
+                    
+                    <a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/" target="_blank" rel="noopener noreferrer">
+                                Lights Out, Systems On: Validating Instant Power Loss Readiness
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-03 17:00</p>
+                    <p class="article-summary">We’re introducing Instantaneous PowerLoss Storm, a new testing paradigm within Meta’s infrastructure for handling and mitigating instant or zero-notice power loss in our data centers We’re sharing: how we built readiness to tolerate instant failures into our existing systems with defense-in-depth strategies; tradeoffs made in implementing it, and how we validated our readiness The post Lights Out, Systems On: Validating Instant Power Loss Readiness appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" target="_blank" rel="noopener noreferrer">
+                                SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-26 16:00</p>
+                    <p class="article-summary">We’re introducing SilverTorch, a reimagining of recommendation systems that unifies all retrieval components for user generated content under a unified architecture Our research paper, “SilverTorch: A [...] Read More The post SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" target="_blank" rel="noopener noreferrer">
+                                Reel Friends: Building Social Discovery that Scales to Billions
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-13 13:00</p>
+                    <p class="article-summary">It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Dynamic Repartitioning for Time Series Workloads
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-03 02:05</p>
+                    <p class="article-summary">Using these tools, we can detect cases of both over and under partitioning.Below is an example of over‑partitioning, where the TimeSeries provisioning pipeline selected very small time_bucket intervals based on user provided inputs:Provisioning selected 60s time buckets based on user inputscausing partitions to have less than 10 KB of data, leading to high read amplification and thread queueing:Histogram of the given Cassandra table showing partition size percentilesIn order to tune partition strategies efficiently, we added a background worker, which monitors partition histograms of Time Slices attached to a given application, and exposes it via a Cassandra virtual table:Histograms exposed through a Cassandra Virtual tableIt then computes an adjustment factor when it detects partition sizes not meeting a configured density Simply tolerating elevated latencies or timeouts when querying these IDs is not a desirable outcome.This is where dynamic partitioning comes into play.Solution 2: Dynamic Partitioning per IDDynamic partitioning is an asynchronous pipeline that auto-detects and splits wide partitions on a TimeSeries ID level rather than at the table level.It has three main stages:Detection: Detects wide partitions for a given TimeSeries ID during the read path.Planning & Splitting: Plans and executes splits of those partitions into optimal sizes asynchronously.Serving Reads: Re-routes the read queries transparently to read data from the split partitions when ready.This is how it works at a high level; we will dive into details after:Dynamic Wide Partition Split Async PipelineHere are the different stages of the pipeline:DetectionEvery TimeSeries read operation tracks how many bytes are read for a given partition For example, if EventBucketPartitionSplitStrategy is selected, we split the partition by assigning more event buckets to the same time bucket</p>
+                    
+                    <a href="https://netflixtechblog.com/dynamically-splitting-wide-partitions-in-cassandra-for-time-series-workloads-0eded064f456?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                High-Throughput Graph Abstraction at Netflix: Part I
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-29 18:49</p>
+                    <p class="article-summary">Looking ahead, we plan to leverage the graph schema for additional improvements, such as:Minimizing Query Fanout: By using edge cardinality within edge mappings, we aim to select the most efficient traversal paths and minimize query fanout.Improved Developer Experience: The schema will support generating a type-safe data access layer and enhance the Gremlin-like API with schema awareness.Next, let’s look at how this data is organized in a real-time index within the KV Abstraction.Real-Time Index: Key-Value StorageBefore we discuss how the data is organized into graph indexes, let’s discuss how KV organizes data within namespaces and provides idempotency guarantees:Data partitioning: A namespace is associated with a table in the underlying storage layer In order to ensure optimal performance without exerting too much memory pressure, we aim to limit the number of edges per source node within the system.Next, let’s explore the caching strategies used by the Abstraction.Caching Strategies in Graph AbstractionAlthough the Graph Abstraction already provides efficient reads and writes to durable storage, caching remains critical for the stability and performance of any graph datastore for two key reasons:Write amplification: A single write on the fronting service can result in multiple writes to the backing durable storage due to the use of multiple indexes As illustrated in the diagram below, both the caching layer and durable storage replicate data asynchronously across regions, resulting in an eventually consistent system.Now that we’ve covered storing the real-time graph index, let’s see how it enables graph traversals.Graph TraversalsThe Abstraction provides a custom gRPC traversal API, inspired by Gremlin, which enables exploration of the distributed graph by letting users chain traversals, apply filter criteria, sort results, limit results, and more.Let’s explore a hypothetical scenario where the Abstraction is used to recommend shows to users on a shared device, by considering the duration of the most recent viewing session for each show across all profiles and accounts associated with that device:TraversalRequest.newBuilder() .setNamespace("<graph-namespace>") .setTraversalQuery( TraversalQuery.newBuilder() // Given id of the 'device' node type. .setStartNode(node("device", "my-device-id")) .setTraversal( Traversal.newBuilder() // fetch the first 5 connections .setEdgeLimit(5) .setDirectionTraversal( DirectionTraversal.newBuilder() // traverse in the IN direction .setDirection(IN) // minimize data exchange: only interested in certain properties .addNodePropertiesSelections(propSelection("account", "created_at")) .addNodePropertiesSelections(propSelection("profile", "last_active")) .setDirectionFilter( DirectionFilter.newBuilder() // only interested in certain connected types .setTypeMatchingStrategy(EXCLUDE_NON_TARGETED) .addAllNodeFilters(typeFilters("account", "profile")))) // chain traversals to the intermediate result .addNextTraversals( Traversal.newBuilder() .setOrder(LATEST) // limit to 200 connections for the 2nd hop .setEdgeLimit(200) .setDirectionTraversal( DirectionTraversal.newBuilder() // now traverse in the OUT direction .setDirection(OUT) .addEdgePropertiesSelections(propSelection("watched", "view_time")) .addEdgePropertiesSelections(propSelection("has_plan", "active")) .setDirectionFilter( DirectionFilter.newBuilder() .setTypeMatchingStrategy(EXCLUDE_NON_TARGETED) .addAllNodeFilters(typeFilters("title", "plan"))))))) .build();And let’s visualize the intended results set produced by the request above:We’ll explore the design and implementation of traversal planning and execution, along with different traversal types, in the Part II of this blog series.Now let’s look at the performance metrics of Graph Abstraction based on current production use cases.Real World PerformanceAcross all applications at Netflix, Graph Abstraction ensures high availability while processing up to 10 million operations per second across all writes, individual edge / node reads and traversals at peak hours:Edge and node persistence achieve single-digit millisecond latencies (p99 shown in red, p90 shown in orange, and p50 shown in green):Traversal performance depends on the number of hops, the edge fanout at each stage, and associated filters and sort orders</p>
+                    
+                    <a href="https://netflixtechblog.com/high-throughput-graph-abstraction-at-netflix-part-i-e88063e6f6d5?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                From Silos to Service Topology: Why Netflix Built a Real-Time Service Map
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-05-29 14:01</p>
+                    <p class="article-summary">We needed to combine multiple sources.These lessons shaped every decision we made in building Service Topology.What We Needed: A Living MapWe set out to build something specific: a living map of our infrastructure — one that updates in real-time as services deploy, as traffic patterns shift, as new dependencies form and old ones disappear.The requirements were clear:Real-time updates, not stale snapshots: In an environment where services deploy continuously, yesterday’s topology map is archaeology, not observability.Fast queries at scale: When an engineer is troubleshooting at 3am, they can’t wait minutes for a query to return This graduated approach also prevents hot spots by distributing load across multiple points even when specific applications or network intermediaries see 100x more traffic than others.Graph Storage: We persist the topology in Netflix’s graph database, an abstraction layer built on top of our distributed key-value storage infrastructure Each of our three data sources (network flows, IPC metrics, tracing) creates a separate graph that can be queried independently or merged.gRPC API: We expose the topology through a gRPC service that supports multi-hop traversal, filtering by availability tier and business domain, pagination for large result sets, and sub-second query response times.The technical details of building this at Netflix scale — handling Kafka lag, managing memory and garbage collection, optimizing distributed processing, debugging reactive streams — deserve their own discussion</p>
+                    
+                    <a href="https://netflixtechblog.com/from-silos-to-service-topology-why-netflix-built-a-real-time-service-map-0165ba13a7bc?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue" target="_blank" rel="noopener noreferrer">
+                                New ways to turn global demand into revenue
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-04 00:00</p>
+                    <p class="article-summary">At Sessions 2026, Stripe unveiled dozens of products and capabilities to help businesses turn global demand into revenue See how to go global faster with localized checkout and Adaptive Pricing, smarter fraud tools, multicurrency treasury support, and automated tax compliance.</p>
+                    
+                    <a href="https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH" target="_blank" rel="noopener noreferrer">
+                                The future of agentic commerce is here
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-04 00:00</p>
+                    <p class="article-summary">Explore how AI agents are transforming commerce at Stripe’s Agentic Commerce Next roadshow Reserve your spot in Seattle.</p>
+                    
+                    <a href="https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.events/stripeforumseattle1?utm_campaign=T5QX6Eo2zn5AP8iIGrUCWB7FFhttps%3A%2F%2Fstripe.events%2Facnext_seattle%3Futm_campaign%3DTD0976N7Lv4IS9ymCxV2jTAHH" target="_blank" rel="noopener noreferrer">
+                                Rethinking risk in the age of AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-04 00:00</p>
+                    <p class="article-summary">Join senior risk and payments leaders in Seattle to explore how AI is reshaping fraud strategy</p>
+                    
+                    <a href="https://stripe.events/stripeforumseattle1?utm_campaign=T5QX6Eo2zn5AP8iIGrUCWB7FFhttps%3A%2F%2Fstripe.events%2Facnext_seattle%3Futm_campaign%3DTD0976N7Lv4IS9ymCxV2jTAHH" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-06-09 11:57:53</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
