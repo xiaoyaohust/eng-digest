@@ -6,13 +6,21 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 11 Jun 2026 12:43:24 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 12:17:13 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
+    <item>
+      <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
+      <link>https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</link>
+      <description>Using an agentic AI system to surface threat models during code review and spot gaps between security requirements and implementation.</description>
+      <pubDate>Fri, 12 Jun 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</guid>
+      <source>Dropbox Engineering</source>
+    </item>
     <item>
       <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
       <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
       <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
-      <pubDate>Thu, 11 Jun 2026 12:43:21 GMT</pubDate>
+      <pubDate>Fri, 12 Jun 2026 12:17:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +28,7 @@
       <title>Build Long-running AI agents that pause, resume, and never lose context with ADK</title>
       <link>https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</link>
       <description>How to transition from stateless chatbots to production-grade agents capable of managing long-running enterprise workflows, such as HR onboarding, that span days or weeks It introduces the Agent Development Kit (ADK) and its architectural shifts, specifically using durable state machines and persistent session storage to ensure an agent never loses context during &amp;quot;idle time&amp;quot; or server restarts By leveraging event-driven webhooks and multi-agent delegation, the tutorial demonstrates how to build resilient systems that &amp;quot;sleep&amp;quot; during pauses and wake up to resume complex tasks with high reasoning accuracy.</description>
-      <pubDate>Thu, 11 Jun 2026 12:43:21 GMT</pubDate>
+      <pubDate>Fri, 12 Jun 2026 12:17:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +36,33 @@
       <title>Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</title>
       <link>https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</link>
       <description>The framework utilizes a powerful middleware system that intercepts generation calls to inject custom behaviors like retries, model fallbacks, and human-in-the-loop tool approvals By attaching hooks at the generate, model, and tool layers, developers can ensure high reliability and deterministic control over model outputs Furthermore, Genkit allows for the creation and stacking of custom middleware, all of which can be inspected and debugged through a dedicated Developer UI.</description>
-      <pubDate>Thu, 11 Jun 2026 12:43:21 GMT</pubDate>
+      <pubDate>Fri, 12 Jun 2026 12:17:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub availability report: May 2026</title>
+      <link>https://github.blog/news-insights/company-news/github-availability-report-may-2026/</link>
+      <description>In May, we experienced nine incidents that resulted in degraded performance across GitHub services The post GitHub availability report: May 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 11 Jun 2026 21:30:15 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-may-2026/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Making secret scanning more trustworthy: Reducing false positives at scale</title>
+      <link>https://github.blog/security/making-secret-scanning-more-trustworthy-reducing-false-positives-at-scale/</link>
+      <description>Alerts are more trustworthy and actionable when noise is reduced See how we improved the verification step with context-aware LLM reasoning The post Making secret scanning more trustworthy: Reducing false positives at scale appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 11 Jun 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/making-secret-scanning-more-trustworthy-reducing-false-positives-at-scale/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Stripe Projects adds new agent integrations, more providers, and custom developer controls</title>
+      <link>https://stripe.com/blog/stripe-projects-adds-new-agents-providers-developer-controls</link>
+      <description>Our data shows that agents are now fully capable of independently writing code and integrating with APIs like Stripe’s And yet, many of the steps adjacent to writing code are still too hard for agents to do on their own We’re expanding Stripe Projects to solve this.</description>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/stripe-projects-adds-new-agents-providers-developer-controls</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Give GitHub Copilot CLI real code intelligence with language servers</title>
@@ -57,28 +89,12 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>From one-off prompts to workflows: How to use custom agents in GitHub Copilot CLI</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli/</link>
-      <description>Custom agents let GitHub Copilot CLI understand your stack and team workflows, turning one-off terminal prompts into repeatable, reviewable processes The post From one-off prompts to workflows: How to use custom agents in GitHub Copilot CLI appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 09 Jun 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>AWS Weekly Roundup: BYOM for Amazon RDS for SQL Server, AWS IoT Device SDK for Swift, and more (June 8, 2026)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-byom-for-amazon-rds-for-sql-server-aws-iot-device-sdk-for-swift-and-more-june-8-2026/</link>
       <description>This week, the AWS IoT Device SDK for Swift reached general availability As a member of the Swift Server Workgroup (SSWG), this one caught my attention The SDK brings production-ready MQTT 5 connectivity, Device Shadow, Jobs, and fleet provisioning to Swift developers on macOS, iOS, tvOS, and Linux</description>
       <pubDate>Mon, 08 Jun 2026 21:27:12 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-byom-for-amazon-rds-for-sql-server-aws-iot-device-sdk-for-swift-and-more-june-8-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>GitHub for Beginners: Answers to some common questions</title>
-      <link>https://github.blog/developer-skills/github/github-for-beginners-answers-to-some-common-questions/</link>
-      <description>Find the answers to some of the most common GitHub-related questions The post GitHub for Beginners: Answers to some common questions appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 08 Jun 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-answers-to-some-common-questions/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>New ways to turn global demand into revenue</title>
@@ -94,14 +110,6 @@
       <description>Explore how AI agents are transforming commerce at Stripe’s Agentic Commerce Next roadshow Reserve your spot in Seattle.</description>
       <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Rethinking risk in the age of AI</title>
-      <link>https://stripe.events/stripeforumseattle1?utm_campaign=T5QX6Eo2zn5AP8iIGrUCWB7FFhttps%3A%2F%2Fstripe.events%2Facnext_seattle%3Futm_campaign%3DTD0976N7Lv4IS9ymCxV2jTAHH</link>
-      <description>Join senior risk and payments leaders in Seattle to explore how AI is reshaping fraud strategy</description>
-      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.events/stripeforumseattle1?utm_campaign=T5QX6Eo2zn5AP8iIGrUCWB7FFhttps%3A%2F%2Fstripe.events%2Facnext_seattle%3Futm_campaign%3DTD0976N7Lv4IS9ymCxV2jTAHH</guid>
       <source>Stripe Engineering</source>
     </item>
     <item>
@@ -159,14 +167,6 @@
       <pubDate>Thu, 21 May 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/introducing-nova-our-internal-platform-for-coding-agents</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Reel Friends: Building Social Discovery that Scales to Billions</title>
-      <link>https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/</link>
-      <description>It highlights Reels your friends have watched and reacted to But sometimes the features that seem the most straightforward require the deepest engineering work The post Reel Friends: Building Social Discovery that Scales to Billions appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 13 May 2026 13:00:44 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/05/13/ml-applications/reel-friends-building-social-discovery-that-scales-to-billions/</guid>
-      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
