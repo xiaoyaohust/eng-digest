@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 12 Jun 2026 12:17:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 11:12:14 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
-      <link>https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</link>
-      <description>Using an agentic AI system to surface threat models during code review and spot gaps between security requirements and implementation.</description>
-      <pubDate>Fri, 12 Jun 2026 18:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</guid>
-      <source>Dropbox Engineering</source>
-    </item>
     <item>
       <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
       <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
       <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
-      <pubDate>Fri, 12 Jun 2026 12:17:09 GMT</pubDate>
+      <pubDate>Sat, 13 Jun 2026 11:12:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +20,7 @@
       <title>Build Long-running AI agents that pause, resume, and never lose context with ADK</title>
       <link>https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</link>
       <description>How to transition from stateless chatbots to production-grade agents capable of managing long-running enterprise workflows, such as HR onboarding, that span days or weeks It introduces the Agent Development Kit (ADK) and its architectural shifts, specifically using durable state machines and persistent session storage to ensure an agent never loses context during &amp;quot;idle time&amp;quot; or server restarts By leveraging event-driven webhooks and multi-agent delegation, the tutorial demonstrates how to build resilient systems that &amp;quot;sleep&amp;quot; during pauses and wake up to resume complex tasks with high reasoning accuracy.</description>
-      <pubDate>Fri, 12 Jun 2026 12:17:09 GMT</pubDate>
+      <pubDate>Sat, 13 Jun 2026 11:12:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</guid>
       <source>Google Developers</source>
     </item>
@@ -36,9 +28,25 @@
       <title>Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</title>
       <link>https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</link>
       <description>The framework utilizes a powerful middleware system that intercepts generation calls to inject custom behaviors like retries, model fallbacks, and human-in-the-loop tool approvals By attaching hooks at the generate, model, and tool layers, developers can ensure high reliability and deterministic control over model outputs Furthermore, Genkit allows for the creation and stacking of custom middleware, all of which can be inspected and debugged through a dedicated Developer UI.</description>
-      <pubDate>Fri, 12 Jun 2026 12:17:09 GMT</pubDate>
+      <pubDate>Sat, 13 Jun 2026 11:12:10 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How we made GitHub Copilot CLI more selective about delegation</title>
+      <link>https://github.blog/ai-and-ml/how-we-made-github-copilot-cli-more-selective-about-delegation/</link>
+      <description>Better orchestration, fewer handoffs, faster progress, without a single new knob The post How we made GitHub Copilot CLI more selective about delegation appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 12 Jun 2026 22:26:23 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/how-we-made-github-copilot-cli-more-selective-about-delegation/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
+      <link>https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</link>
+      <description>Using an agentic AI system to surface threat models during code review and spot gaps between security requirements and implementation.</description>
+      <pubDate>Fri, 12 Jun 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</guid>
+      <source>Dropbox Engineering</source>
     </item>
     <item>
       <title>GitHub availability report: May 2026</title>
@@ -63,14 +71,6 @@
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/stripe-projects-adds-new-agents-providers-developer-controls</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Give GitHub Copilot CLI real code intelligence with language servers</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/</link>
-      <description>Install and configure LSP servers for GitHub Copilot CLI, replacing brute-force grep/decompile with real code intelligence The post Give GitHub Copilot CLI real code intelligence with language servers appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 10 Jun 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Now available: Amazon EC2 M9g and M9gd instances powered by new AWS Graviton5 processors</title>
