@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 14 Jun 2026 11:28:32 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 15:11:59 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
       <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
       <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
-      <pubDate>Sun, 14 Jun 2026 11:28:28 GMT</pubDate>
+      <pubDate>Mon, 15 Jun 2026 15:11:56 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Build Long-running AI agents that pause, resume, and never lose context with ADK</title>
       <link>https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</link>
       <description>How to transition from stateless chatbots to production-grade agents capable of managing long-running enterprise workflows, such as HR onboarding, that span days or weeks It introduces the Agent Development Kit (ADK) and its architectural shifts, specifically using durable state machines and persistent session storage to ensure an agent never loses context during &amp;quot;idle time&amp;quot; or server restarts By leveraging event-driven webhooks and multi-agent delegation, the tutorial demonstrates how to build resilient systems that &amp;quot;sleep&amp;quot; during pauses and wake up to resume complex tasks with high reasoning accuracy.</description>
-      <pubDate>Sun, 14 Jun 2026 11:28:28 GMT</pubDate>
+      <pubDate>Mon, 15 Jun 2026 15:11:56 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</title>
       <link>https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</link>
       <description>The framework utilizes a powerful middleware system that intercepts generation calls to inject custom behaviors like retries, model fallbacks, and human-in-the-loop tool approvals By attaching hooks at the generate, model, and tool layers, developers can ensure high reliability and deterministic control over model outputs Furthermore, Genkit allows for the creation and stacking of custom middleware, all of which can be inspected and debugged through a dedicated Developer UI.</description>
-      <pubDate>Sun, 14 Jun 2026 11:28:28 GMT</pubDate>
+      <pubDate>Mon, 15 Jun 2026 15:11:56 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS FinOps Agent in preview, Gemma 4 on Bedrock, Kiro Pro Max, and more (June 15, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-finops-agent-in-preview-gemma-4-on-bedrock-kiro-pro-max-and-more-june-15-2026/</link>
+      <description>This week, New York City is hosting AWS Summit, bringing together builders, customers, and AWS teams for a full day of announcements, demos, and technical sessions at the Javits Center I wrote blog posts for some of the Summit launches, so I am excited to see them go live this week I just won’t be […]</description>
+      <pubDate>Mon, 15 Jun 2026 11:41:48 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-finops-agent-in-preview-gemma-4-on-bedrock-kiro-pro-max-and-more-june-15-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>How we made GitHub Copilot CLI more selective about delegation</title>
@@ -86,14 +94,6 @@
       <description>AWS announces the availability of Claude Fable 5 on Amazon Bedrock and Claude Platform on AWS Claude Fable 5 delivers Mythos-level capabilities available to all customers, with strong safeguards designed to make it safe for broader use.</description>
       <pubDate>Tue, 09 Jun 2026 17:40:31 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/anthropic-claude-fable-5-on-aws-mythos-class-capabilities-with-built-in-safeguards-now-available/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: BYOM for Amazon RDS for SQL Server, AWS IoT Device SDK for Swift, and more (June 8, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-byom-for-amazon-rds-for-sql-server-aws-iot-device-sdk-for-swift-and-more-june-8-2026/</link>
-      <description>This week, the AWS IoT Device SDK for Swift reached general availability As a member of the Swift Server Workgroup (SSWG), this one caught my attention The SDK brings production-ready MQTT 5 connectivity, Device Shadow, Jobs, and fleet provisioning to Swift developers on macOS, iOS, tvOS, and Linux</description>
-      <pubDate>Mon, 08 Jun 2026 21:27:12 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-byom-for-amazon-rds-for-sql-server-aws-iot-device-sdk-for-swift-and-more-june-8-2026/</guid>
       <source>AWS News</source>
     </item>
     <item>
