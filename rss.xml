@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 16 Jun 2026 13:26:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 12:49:56 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</title>
-      <link>https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</link>
-      <description>Researchers at UCSD have successfully implemented DFlash, a block-diffusion speculative decoding method, on Google TPUs to bypass the sequential bottlenecks of traditional autoregressive drafting By &amp;quot;painting&amp;quot; entire blocks of candidate tokens in a single forward pass rather than predicting them one-by-one, the system achieved average speedups of 3.13x, with peak performance nearly doubling that of existing methods like EAGLE-3 This open-source integration into the vLLM ecosystem optimizes TPU hardware by leveraging &amp;quot;free&amp;quot; parallel verification and high-quality draft predictions for complex reasoning tasks.</description>
-      <pubDate>Tue, 16 Jun 2026 13:26:08 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Build Long-running AI agents that pause, resume, and never lose context with ADK</title>
-      <link>https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</link>
-      <description>How to transition from stateless chatbots to production-grade agents capable of managing long-running enterprise workflows, such as HR onboarding, that span days or weeks It introduces the Agent Development Kit (ADK) and its architectural shifts, specifically using durable state machines and persistent session storage to ensure an agent never loses context during &amp;quot;idle time&amp;quot; or server restarts By leveraging event-driven webhooks and multi-agent delegation, the tutorial demonstrates how to build resilient systems that &amp;quot;sleep&amp;quot; during pauses and wake up to resume complex tasks with high reasoning accuracy.</description>
-      <pubDate>Tue, 16 Jun 2026 13:26:08 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</title>
       <link>https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</link>
       <description>The framework utilizes a powerful middleware system that intercepts generation calls to inject custom behaviors like retries, model fallbacks, and human-in-the-loop tool approvals By attaching hooks at the generate, model, and tool layers, developers can ensure high reliability and deterministic control over model outputs Furthermore, Genkit allows for the creation and stacking of custom middleware, all of which can be inspected and debugged through a dedicated Developer UI.</description>
-      <pubDate>Tue, 16 Jun 2026 13:26:08 GMT</pubDate>
+      <pubDate>Wed, 17 Jun 2026 12:49:54 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Accelerating on-device AI: A look at Arm and Google AI Edge optimization</title>
+      <link>https://developers.googleblog.com/accelerating-on-device-ai-a-look-at-arm-and-google-ai-edge-optimization/</link>
+      <description>Integration of Arm Scalable Matrix Extension 2 (SME2) and the Google AI Edge software stack enables high-performance, on-device generative AI by turning the CPU into a powerful matrix-compute accelerator Using Stability AI’s &amp;quot;stable-audio-open-small&amp;quot; model as a case study, it outlines a streamlined &amp;quot;Convert, Optimize, and Deploy&amp;quot; pipeline that utilizes LiteRT, XNNPACK, and KleidiAI to automate hardware acceleration The resulting implementation achieves over a 2x speedup in audio generation and a 4x reduction in memory usage while maintaining high audio quality on Arm-powered mobile devices and laptops.</description>
+      <pubDate>Wed, 17 Jun 2026 12:49:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/accelerating-on-device-ai-a-look-at-arm-and-google-ai-edge-optimization/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Google Tensor SDK Beta with LiteRT</title>
+      <link>https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</link>
+      <description>The Google Tensor ML SDK is graduating to its Beta phase, allowing developers to build and deploy high-performance machine learning models directly onto the TPU of Google Pixel 10 devices By integrating with LiteRT, Google&amp;apos;s edge deployment framework, the SDK provides a unified workflow for developers to convert, compile, and run PyTorch or TFLite models with robust fallback options Additionally, a new model garden offers over 100 classic and generative AI models, including Gemma 3, enabling low-latency, private features like speech recognition, computer vision, and text generation.</description>
+      <pubDate>Wed, 17 Jun 2026 12:49:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Amazon S3 annotations: attach rich, queryable context directly to your objects</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-s3-annotations-attach-rich-queryable-context-directly-to-your-objects/</link>
+      <description>Amazon S3 now lets you attach up to 1 GB of rich, mutable, and queryable context directly to your objects using annotations, purpose-built for AI agents and autonomous workflows that need to discover, understand, and act on data at scale without maintaining separate metadata systems.</description>
+      <pubDate>Tue, 16 Jun 2026 23:13:10 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-annotations-attach-rich-queryable-context-directly-to-your-objects/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>What are git worktrees, and why should I use them?</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/</link>
+      <description>Git worktrees have been around since 2015, but it wasn&amp;apos;t until recently they became popular Learn what they are, how to use them, and why you might The post What are git worktrees, and why should I use them? appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 16 Jun 2026 20:58:54 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS WAF adds AI traffic monetization capability to help content owners charge AI bots for content access</title>
@@ -65,14 +81,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>How we made GitHub Copilot CLI more selective about delegation</title>
-      <link>https://github.blog/ai-and-ml/how-we-made-github-copilot-cli-more-selective-about-delegation/</link>
-      <description>Better orchestration, fewer handoffs, faster progress, without a single new knob The post How we made GitHub Copilot CLI more selective about delegation appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 12 Jun 2026 22:26:23 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/how-we-made-github-copilot-cli-more-selective-about-delegation/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
       <link>https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</link>
       <description>Using an agentic AI system to surface threat models during code review and spot gaps between security requirements and implementation.</description>
@@ -87,14 +95,6 @@
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/stripe-projects-adds-new-agents-providers-developer-controls</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Now available: Amazon EC2 M9g and M9gd instances powered by new AWS Graviton5 processors</title>
-      <link>https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-m9g-and-m9gd-instances-powered-by-new-aws-graviton5-processors/</link>
-      <description>AWS launches Amazon EC2 M9g and M9gd instances, powered by AWS Graviton5 processors AWS Graviton5 is most powerful, and most energy eﬃcient processor AWS has ever built, and oﬀers up to 25% better compute performance compared to Graviton4-based instances.</description>
-      <pubDate>Wed, 10 Jun 2026 15:04:30 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/now-available-amazon-ec2-m9g-and-m9gd-instances-powered-by-new-aws-graviton5-processors/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>New ways to turn global demand into revenue</title>
