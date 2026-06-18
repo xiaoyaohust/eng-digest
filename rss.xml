@@ -6,38 +6,62 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 17 Jun 2026 12:49:56 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2026 12:27:01 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</title>
-      <link>https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</link>
-      <description>The framework utilizes a powerful middleware system that intercepts generation calls to inject custom behaviors like retries, model fallbacks, and human-in-the-loop tool approvals By attaching hooks at the generate, model, and tool layers, developers can ensure high reliability and deterministic control over model outputs Furthermore, Genkit allows for the creation and stacking of custom middleware, all of which can be inspected and debugged through a dedicated Developer UI.</description>
-      <pubDate>Wed, 17 Jun 2026 12:49:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Accelerating on-device AI: A look at Arm and Google AI Edge optimization</title>
-      <link>https://developers.googleblog.com/accelerating-on-device-ai-a-look-at-arm-and-google-ai-edge-optimization/</link>
-      <description>Integration of Arm Scalable Matrix Extension 2 (SME2) and the Google AI Edge software stack enables high-performance, on-device generative AI by turning the CPU into a powerful matrix-compute accelerator Using Stability AI’s &amp;quot;stable-audio-open-small&amp;quot; model as a case study, it outlines a streamlined &amp;quot;Convert, Optimize, and Deploy&amp;quot; pipeline that utilizes LiteRT, XNNPACK, and KleidiAI to automate hardware acceleration The resulting implementation achieves over a 2x speedup in audio generation and a 4x reduction in memory usage while maintaining high audio quality on Arm-powered mobile devices and laptops.</description>
-      <pubDate>Wed, 17 Jun 2026 12:49:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/accelerating-on-device-ai-a-look-at-arm-and-google-ai-edge-optimization/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Google Tensor SDK Beta with LiteRT</title>
       <link>https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</link>
       <description>The Google Tensor ML SDK is graduating to its Beta phase, allowing developers to build and deploy high-performance machine learning models directly onto the TPU of Google Pixel 10 devices By integrating with LiteRT, Google&amp;apos;s edge deployment framework, the SDK provides a unified workflow for developers to convert, compile, and run PyTorch or TFLite models with robust fallback options Additionally, a new model garden offers over 100 classic and generative AI models, including Gemma 3, enabling low-latency, private features like speech recognition, computer vision, and text generation.</description>
-      <pubDate>Wed, 17 Jun 2026 12:49:54 GMT</pubDate>
+      <pubDate>Thu, 18 Jun 2026 12:26:59 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Amazon S3 annotations: attach rich, queryable context directly to your objects</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-s3-annotations-attach-rich-queryable-context-directly-to-your-objects/</link>
-      <description>Amazon S3 now lets you attach up to 1 GB of rich, mutable, and queryable context directly to your objects using annotations, purpose-built for AI agents and autonomous workflows that need to discover, understand, and act on data at scale without maintaining separate metadata systems.</description>
-      <pubDate>Tue, 16 Jun 2026 23:13:10 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-annotations-attach-rich-queryable-context-directly-to-your-objects/</guid>
+      <title>A Smarter Google AI Edge Gallery: MCP integration, notifications, and session continuity</title>
+      <link>https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</link>
+      <description>The Google AI Edge Gallery app has expanded its on-device AI capabilities by introducing experimental support for the open-source Model Context Protocol (MCP) on Android, allowing Gemma 4 to coordinate complex tasks across external data sources like Google Workspace and Google Maps To enable more proactive and persistent user interactions, the update adds a &amp;quot;Schedule Notification&amp;quot; skill for automating routines and a persistent chat history feature that restores long session contexts nearly instantly Driven by an open-source toolkit, the platform encourages community developers to build and share custom utility-focused workflows, prompt configurations, and tool integrations via its GitHub repository.</description>
+      <pubDate>Thu, 18 Jun 2026 12:26:59 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Blazing fast on-device GenAI with LiteRT-LM</title>
+      <link>https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</link>
+      <description>Google AI Edge’s LiteRT-LM provides a production-proven, highly optimized infrastructure for running Gemma 4 across cross-platform mobile and edge environments It actively unlocks the model&amp;apos;s native multimodal and agentic features on-device by utilizing memory-efficient dynamic loading, Multi-Token Prediction for up to a 2.2x speedup, and advanced orchestration tools like Thinking Mode and Constrained Decoding Furthermore, the engine is rapidly expanding its integration surfaces beyond Android, introducing new native Swift APIs for Apple ecosystems and WebGPU-accelerated JavaScript APIs for high-performance, serverless browser inference.</description>
+      <pubDate>Thu, 18 Jun 2026 12:26:59 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Getting more from each token: How Copilot improves context handling and model routing</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/</link>
+      <description>How GitHub Copilot is making more of each session go toward useful work, so your credits go further The post Getting more from each token: How Copilot improves context handling and model routing appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 17 Jun 2026 19:41:46 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Top announcements of the AWS Summit in New York, 2026</title>
+      <link>https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/</link>
+      <description>A recap of the top announcements from AWS&amp;apos;s New York Summit 2026</description>
+      <pubDate>Wed, 17 Jun 2026 16:36:08 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications</title>
+      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/</link>
+      <description>Amazon Bedrock&amp;apos;s new Fully Managed Knowledge Bases simplifies building enterprise RAG pipelines by providing native data connectors Smart Parsing for automatic multi-format data preparation, and an Agentic Retriever for complex multi-step queries—all integrated with AgentCore Gateway so developers can focus on business outcomes rather than infrastructure management.</description>
+      <pubDate>Wed, 17 Jun 2026 15:09:20 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Announcing Web Search on Amazon Bedrock AgentCore: Ground your AI agents in current, accurate web knowledge</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/</link>
+      <description>AWS introduces Web Search on Amazon Bedrock AgentCore, a fully managed tool that enables agents to ground responses in current, cited web knowledge with zero data egress from customer&amp;apos;s secured AWS environment You can focus on building agents instead of manually adding web search to agents on Bedrock AgentCore and managing its infrastructure.</description>
+      <pubDate>Wed, 17 Jun 2026 15:00:11 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/</guid>
       <source>AWS News</source>
     </item>
     <item>
@@ -49,36 +73,12 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>AWS WAF adds AI traffic monetization capability to help content owners charge AI bots for content access</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-waf-adds-ai-traffic-monetization-capability-to-help-content-owners-charge-ai-bots-for-content-access/</link>
-      <description>AWS WAF launches AI traffic monetization, a new Bot Control capability that enables content providers and publishers price, meter, and collect payment from AI bots and agents accessing their content and APIs AWS WAF now lets you set a price for that access, accept payment through third-party providers, and grant scoped access directly at the edge.</description>
-      <pubDate>Mon, 15 Jun 2026 20:42:13 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-waf-adds-ai-traffic-monetization-capability-to-help-content-owners-charge-ai-bots-for-content-access/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>GitHub Copilot CLI for Beginners: Overview of common slash commands</title>
       <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-overview-of-common-slash-commands/</link>
       <description>GitHub Copilot CLI for Beginners: Learn how to use slash commands to control your terminal AI agent The post GitHub Copilot CLI for Beginners: Overview of common slash commands appeared first on The GitHub Blog.</description>
       <pubDate>Mon, 15 Jun 2026 20:15:31 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-overview-of-common-slash-commands/</guid>
       <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Accelerating researchers and developers building multilingual AI with a new open dataset</title>
-      <link>https://github.blog/ai-and-ml/llms/accelerating-researchers-and-developers-building-multilingual-ai-with-a-new-open-dataset/</link>
-      <description>A new repository-level dataset, published on GitHub under CC0-1.0, helps researchers and developers discover multilingual developer content across READMEs, issues, and pull requests The post Accelerating researchers and developers building multilingual AI with a new open dataset appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 15 Jun 2026 19:17:30 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/llms/accelerating-researchers-and-developers-building-multilingual-ai-with-a-new-open-dataset/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: AWS FinOps Agent in preview, Gemma 4 on Bedrock, Kiro Pro Max, and more (June 15, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-finops-agent-in-preview-gemma-4-on-bedrock-kiro-pro-max-and-more-june-15-2026/</link>
-      <description>This week, New York City is hosting AWS Summit, bringing together builders, customers, and AWS teams for a full day of announcements, demos, and technical sessions at the Javits Center I wrote blog posts for some of the Summit launches, so I am excited to see them go live this week I just won’t be […]</description>
-      <pubDate>Mon, 15 Jun 2026 11:41:48 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-finops-agent-in-preview-gemma-4-on-bedrock-kiro-pro-max-and-more-june-15-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
