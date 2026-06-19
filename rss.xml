@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 18 Jun 2026 12:27:01 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 12:47:40 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Google Tensor SDK Beta with LiteRT</title>
-      <link>https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</link>
-      <description>The Google Tensor ML SDK is graduating to its Beta phase, allowing developers to build and deploy high-performance machine learning models directly onto the TPU of Google Pixel 10 devices By integrating with LiteRT, Google&amp;apos;s edge deployment framework, the SDK provides a unified workflow for developers to convert, compile, and run PyTorch or TFLite models with robust fallback options Additionally, a new model garden offers over 100 classic and generative AI models, including Gemma 3, enabling low-latency, private features like speech recognition, computer vision, and text generation.</description>
-      <pubDate>Thu, 18 Jun 2026 12:26:59 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>A Smarter Google AI Edge Gallery: MCP integration, notifications, and session continuity</title>
       <link>https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</link>
       <description>The Google AI Edge Gallery app has expanded its on-device AI capabilities by introducing experimental support for the open-source Model Context Protocol (MCP) on Android, allowing Gemma 4 to coordinate complex tasks across external data sources like Google Workspace and Google Maps To enable more proactive and persistent user interactions, the update adds a &amp;quot;Schedule Notification&amp;quot; skill for automating routines and a persistent chat history feature that restores long session contexts nearly instantly Driven by an open-source toolkit, the platform encourages community developers to build and share custom utility-focused workflows, prompt configurations, and tool integrations via its GitHub repository.</description>
-      <pubDate>Thu, 18 Jun 2026 12:26:59 GMT</pubDate>
+      <pubDate>Fri, 19 Jun 2026 12:47:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,49 @@
       <title>Blazing fast on-device GenAI with LiteRT-LM</title>
       <link>https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</link>
       <description>Google AI Edge’s LiteRT-LM provides a production-proven, highly optimized infrastructure for running Gemma 4 across cross-platform mobile and edge environments It actively unlocks the model&amp;apos;s native multimodal and agentic features on-device by utilizing memory-efficient dynamic loading, Multi-Token Prediction for up to a 2.2x speedup, and advanced orchestration tools like Thinking Mode and Constrained Decoding Furthermore, the engine is rapidly expanding its integration surfaces beyond Android, introducing new native Swift APIs for Apple ecosystems and WebGPU-accelerated JavaScript APIs for high-performance, serverless browser inference.</description>
-      <pubDate>Thu, 18 Jun 2026 12:26:59 GMT</pubDate>
+      <pubDate>Fri, 19 Jun 2026 12:47:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>All the news from the Google I/O 2026 Developer keynote</title>
+      <link>https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</link>
+      <description>Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</description>
+      <pubDate>Fri, 19 Jun 2026 12:47:37 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/</link>
+      <description>Announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration for AI inference, graphics, and data analytics workloads.</description>
+      <pubDate>Thu, 18 Jun 2026 21:22:10 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Amazon ECS introduces new high-resolution metrics for faster service auto scaling</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/</link>
+      <description>Amazon Elastic Container Service (Amazon ECS) service auto scaling automatically adjusts task counts to meet workload demand with comprehensive scaling policies, including predictive scaling for recurring traffic patterns, scheduled scaling for planned events, and target tracking to scale dynamically on real-time metrics You can choose proactive scaling by using predictive scaling (automatic) and scheduled scaling […]</description>
+      <pubDate>Thu, 18 Jun 2026 21:06:38 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>How pull request limits are cutting down the noise</title>
+      <link>https://github.blog/open-source/maintainers/how-pull-request-limits-are-cutting-down-the-noise/</link>
+      <description>Learn how pull request limits can help manage contribution volume in your repositories, and see what’s next on the roadmap The post How pull request limits are cutting down the noise appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/how-pull-request-limits-are-cutting-down-the-noise/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>What Link data tells us about AI spending</title>
+      <link>https://stripe.com/blog/what-link-data-tells-us-about-ai-spending</link>
+      <description>We analyzed spending patterns across the 250 million customers paying with Link We found that Link customers are spending more on AI than they were three months prior, investing heavily in platforms that let them build with AI.</description>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/what-link-data-tells-us-about-ai-spending</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Getting more from each token: How Copilot improves context handling and model routing</title>
@@ -49,35 +81,11 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>Introducing Amazon Bedrock Managed Knowledge Base for faster, more accurate enterprise AI applications</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/</link>
-      <description>Amazon Bedrock&amp;apos;s new Fully Managed Knowledge Bases simplifies building enterprise RAG pipelines by providing native data connectors Smart Parsing for automatic multi-format data preparation, and an Agentic Retriever for complex multi-step queries—all integrated with AgentCore Gateway so developers can focus on business outcomes rather than infrastructure management.</description>
-      <pubDate>Wed, 17 Jun 2026 15:09:20 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Announcing Web Search on Amazon Bedrock AgentCore: Ground your AI agents in current, accurate web knowledge</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/</link>
-      <description>AWS introduces Web Search on Amazon Bedrock AgentCore, a fully managed tool that enables agents to ground responses in current, cited web knowledge with zero data egress from customer&amp;apos;s secured AWS environment You can focus on building agents instead of manually adding web search to agents on Bedrock AgentCore and managing its infrastructure.</description>
-      <pubDate>Wed, 17 Jun 2026 15:00:11 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>What are git worktrees, and why should I use them?</title>
       <link>https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/</link>
       <description>Git worktrees have been around since 2015, but it wasn&amp;apos;t until recently they became popular Learn what they are, how to use them, and why you might The post What are git worktrees, and why should I use them? appeared first on The GitHub Blog.</description>
       <pubDate>Tue, 16 Jun 2026 20:58:54 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>GitHub Copilot CLI for Beginners: Overview of common slash commands</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-overview-of-common-slash-commands/</link>
-      <description>GitHub Copilot CLI for Beginners: Learn how to use slash commands to control your terminal AI agent The post GitHub Copilot CLI for Beginners: Overview of common slash commands appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 15 Jun 2026 20:15:31 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-for-beginners-overview-of-common-slash-commands/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -102,14 +110,6 @@
       <description>At Sessions 2026, Stripe unveiled dozens of products and capabilities to help businesses turn global demand into revenue See how to go global faster with localized checkout and Adaptive Pricing, smarter fraud tools, multicurrency treasury support, and automated tax compliance.</description>
       <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>The future of agentic commerce is here</title>
-      <link>https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH</link>
-      <description>Explore how AI agents are transforming commerce at Stripe’s Agentic Commerce Next roadshow Reserve your spot in Seattle.</description>
-      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.events/acnext_seattle?utm_campaign=TD0976N7Lv4IS9ymCxV2jTAHH</guid>
       <source>Stripe Engineering</source>
     </item>
     <item>
