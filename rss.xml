@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 19 Jun 2026 12:47:40 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 11:19:36 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>A Smarter Google AI Edge Gallery: MCP integration, notifications, and session continuity</title>
       <link>https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</link>
       <description>The Google AI Edge Gallery app has expanded its on-device AI capabilities by introducing experimental support for the open-source Model Context Protocol (MCP) on Android, allowing Gemma 4 to coordinate complex tasks across external data sources like Google Workspace and Google Maps To enable more proactive and persistent user interactions, the update adds a &amp;quot;Schedule Notification&amp;quot; skill for automating routines and a persistent chat history feature that restores long session contexts nearly instantly Driven by an open-source toolkit, the platform encourages community developers to build and share custom utility-focused workflows, prompt configurations, and tool integrations via its GitHub repository.</description>
-      <pubDate>Fri, 19 Jun 2026 12:47:37 GMT</pubDate>
+      <pubDate>Sat, 20 Jun 2026 11:19:33 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Blazing fast on-device GenAI with LiteRT-LM</title>
       <link>https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</link>
       <description>Google AI Edge’s LiteRT-LM provides a production-proven, highly optimized infrastructure for running Gemma 4 across cross-platform mobile and edge environments It actively unlocks the model&amp;apos;s native multimodal and agentic features on-device by utilizing memory-efficient dynamic loading, Multi-Token Prediction for up to a 2.2x speedup, and advanced orchestration tools like Thinking Mode and Constrained Decoding Furthermore, the engine is rapidly expanding its integration surfaces beyond Android, introducing new native Swift APIs for Apple ecosystems and WebGPU-accelerated JavaScript APIs for high-performance, serverless browser inference.</description>
-      <pubDate>Fri, 19 Jun 2026 12:47:37 GMT</pubDate>
+      <pubDate>Sat, 20 Jun 2026 11:19:33 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>All the news from the Google I/O 2026 Developer keynote</title>
       <link>https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</link>
       <description>Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</description>
-      <pubDate>Fri, 19 Jun 2026 12:47:37 GMT</pubDate>
+      <pubDate>Sat, 20 Jun 2026 11:19:33 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How we built an internal data analytics agent</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-data-analytics-agent/</link>
+      <description>Qubot, our internal Copilot-powered analytics agent, allows any GitHub employee to ask questions about our data in plain language Here&amp;apos;s what we learned as we built it The post How we built an internal data analytics agent appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 19 Jun 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-data-analytics-agent/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs</title>
@@ -79,14 +87,6 @@
       <pubDate>Wed, 17 Jun 2026 16:36:08 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>What are git worktrees, and why should I use them?</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/</link>
-      <description>Git worktrees have been around since 2015, but it wasn&amp;apos;t until recently they became popular Learn what they are, how to use them, and why you might The post What are git worktrees, and why should I use them? appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 16 Jun 2026 20:58:54 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/what-are-git-worktrees-and-why-should-i-use-them/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
