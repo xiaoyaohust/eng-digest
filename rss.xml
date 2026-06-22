@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 21 Jun 2026 11:47:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 14:39:45 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>A Smarter Google AI Edge Gallery: MCP integration, notifications, and session continuity</title>
       <link>https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</link>
       <description>The Google AI Edge Gallery app has expanded its on-device AI capabilities by introducing experimental support for the open-source Model Context Protocol (MCP) on Android, allowing Gemma 4 to coordinate complex tasks across external data sources like Google Workspace and Google Maps To enable more proactive and persistent user interactions, the update adds a &amp;quot;Schedule Notification&amp;quot; skill for automating routines and a persistent chat history feature that restores long session contexts nearly instantly Driven by an open-source toolkit, the platform encourages community developers to build and share custom utility-focused workflows, prompt configurations, and tool integrations via its GitHub repository.</description>
-      <pubDate>Sun, 21 Jun 2026 11:47:37 GMT</pubDate>
+      <pubDate>Mon, 22 Jun 2026 14:39:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Blazing fast on-device GenAI with LiteRT-LM</title>
       <link>https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</link>
       <description>Google AI Edge’s LiteRT-LM provides a production-proven, highly optimized infrastructure for running Gemma 4 across cross-platform mobile and edge environments It actively unlocks the model&amp;apos;s native multimodal and agentic features on-device by utilizing memory-efficient dynamic loading, Multi-Token Prediction for up to a 2.2x speedup, and advanced orchestration tools like Thinking Mode and Constrained Decoding Furthermore, the engine is rapidly expanding its integration surfaces beyond Android, introducing new native Swift APIs for Apple ecosystems and WebGPU-accelerated JavaScript APIs for high-performance, serverless browser inference.</description>
-      <pubDate>Sun, 21 Jun 2026 11:47:37 GMT</pubDate>
+      <pubDate>Mon, 22 Jun 2026 14:39:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>All the news from the Google I/O 2026 Developer keynote</title>
       <link>https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</link>
       <description>Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</description>
-      <pubDate>Sun, 21 Jun 2026 11:47:37 GMT</pubDate>
+      <pubDate>Mon, 22 Jun 2026 14:39:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</guid>
       <source>Google Developers</source>
     </item>
