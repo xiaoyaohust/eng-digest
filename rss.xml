@@ -6,31 +6,87 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 22 Jun 2026 14:39:45 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 11:58:48 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>A Smarter Google AI Edge Gallery: MCP integration, notifications, and session continuity</title>
-      <link>https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</link>
-      <description>The Google AI Edge Gallery app has expanded its on-device AI capabilities by introducing experimental support for the open-source Model Context Protocol (MCP) on Android, allowing Gemma 4 to coordinate complex tasks across external data sources like Google Workspace and Google Maps To enable more proactive and persistent user interactions, the update adds a &amp;quot;Schedule Notification&amp;quot; skill for automating routines and a persistent chat history feature that restores long session contexts nearly instantly Driven by an open-source toolkit, the platform encourages community developers to build and share custom utility-focused workflows, prompt configurations, and tool integrations via its GitHub repository.</description>
-      <pubDate>Mon, 22 Jun 2026 14:39:42 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Blazing fast on-device GenAI with LiteRT-LM</title>
-      <link>https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</link>
-      <description>Google AI Edge’s LiteRT-LM provides a production-proven, highly optimized infrastructure for running Gemma 4 across cross-platform mobile and edge environments It actively unlocks the model&amp;apos;s native multimodal and agentic features on-device by utilizing memory-efficient dynamic loading, Multi-Token Prediction for up to a 2.2x speedup, and advanced orchestration tools like Thinking Mode and Constrained Decoding Furthermore, the engine is rapidly expanding its integration surfaces beyond Android, introducing new native Swift APIs for Apple ecosystems and WebGPU-accelerated JavaScript APIs for high-performance, serverless browser inference.</description>
-      <pubDate>Mon, 22 Jun 2026 14:39:42 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>All the news from the Google I/O 2026 Developer keynote</title>
       <link>https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</link>
       <description>Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</description>
-      <pubDate>Mon, 22 Jun 2026 14:39:42 GMT</pubDate>
+      <pubDate>Tue, 23 Jun 2026 11:58:45 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>One Year of Innovation: Celebrating 100k Members in the Google Cloud x NVIDIA Developer Community</title>
+      <link>https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</link>
+      <description>The Google Cloud and NVIDIA developer community is celebrating its first anniversary with 100,000 members and a renewed focus on providing builders with advanced AI infrastructure and resources To accelerate development, the community offers curated learning pathways for mastering LLM optimization, GPU-accelerated data analytics, and monthly expert-led webinars Moving into its second year, the initiative will expand to include hands-on labs, engineering events, and specialized content focused on the growth of agentic AI.</description>
+      <pubDate>Tue, 23 Jun 2026 11:58:45 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>An important update: Transitioning Gemini CLI to Antigravity CLI</title>
+      <link>https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</link>
+      <description>Google is unifying its AI terminal tools by transitioning the community-focused Gemini CLI into Antigravity CLI, a new agent-first platform built for complex, multi-agent workflows This new Go-based tool offers faster execution, asynchronous processing, and a unified architecture that syncs with the Antigravity 2.0 desktop application While enterprise customers will maintain existing access, individual and free users must transition to the new platform before Gemini CLI stops serving requests on June 18, 2026.</description>
+      <pubDate>Tue, 23 Jun 2026 11:58:45 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix</title>
+      <link>https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4</link>
+      <description>We believe this work can help advance the field in a way that’s both meaningful and responsible:Vera: a layered video diffusion model Vera generates only what needs to change as separate edit layers while leaving the rest of the video untouched, preserving the identities, performances, and other details from the source footage exactly as filmed.VOID: a video inpainting model for video object and interaction deletion Specifically, the counterfactual videos are generated by re-simulating the exact scene from the original video, but with the target object(s) or human removed</description>
+      <pubDate>Tue, 23 Jun 2026 00:31:01 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs</title>
+      <link>https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/</link>
+      <description>AWS launches a new serverless compute primitive, AWS Lambda MicroVMs VM-level, isolated sandboxes with no shared kernel or resources between sessions Rapid launch and resume, full lifecycle control, state preservation up to 8 hours, no infrastructure to manage.</description>
+      <pubDate>Mon, 22 Jun 2026 22:40:07 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>How Netflix Simplified Batch Compute with Kueue</title>
+      <link>https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4</link>
+      <description>Reservations are not required to use CMB, so a tenant can run out of shared capacity entirely In addition, our learnings are being leveraged by other internal teams, including those building Kubernetes-native training infrastructure, to inform their job scheduling and queuing configurations.Fair Sharing and PreemptionWith Kueue, Preemption-based Fair Sharing allows Netflix Batch to maintain reservation semantics while lending resources to other tenants when those reservations are not in use For our customers, this means that tenants can use more idle capacity from reservations, submit more jobs without the risk of starvation, and have quicker turnaround times for business-critical workloads.An example preemption configuration on a ClusterQueue that we would be using is as follows:apiVersion: kueue.x-k8s.io/v1beta2kind: ClusterQueuemetadata: name: &amp;quot;team-a-cq&amp;quot;spec: preemption: reclaimWithinCohort: Any withinClusterQueue: LowerPriorityWith these features deployed, Compute has seen a significant increase in average resource utilization.AcknowledgementThis work would not have been possible without the great work of the entire Compute team at Netflix.How Netflix Simplified Batch Compute with Kueue was originally published in Netflix TechBlog on Medium, where people are continuing the conversation by highlighting and responding to this story.</description>
+      <pubDate>Mon, 22 Jun 2026 21:35:01 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>From pledge to practice: Building a more inclusive open source ecosystem</title>
+      <link>https://github.blog/open-source/from-pledge-to-practice-building-a-more-inclusive-open-source-ecosystem/</link>
+      <description>Learn about the progress we’ve made toward our accessibility goals and how you can help make open source more inclusive The post From pledge to practice: Building a more inclusive open source ecosystem appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 22 Jun 2026 17:20:31 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/from-pledge-to-practice-building-a-more-inclusive-open-source-ecosystem/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Adopting AV1 for Real-Time Communication (RTC) at Scale</title>
+      <link>https://engineering.fb.com/2026/06/22/video-engineering/adopting-av1-for-real-time-communication-rtc-meta/</link>
+      <description>Adopting AV1 for real-time communication at Meta has been a multi-year effort spanning codec selection, device eligibility, rate control, and error resilience We’re sharing the technical and operational challenges while deploying AV1 and expanding coverage, and how we addressed them for real-time communication The post Adopting AV1 for Real-Time Communication (RTC) at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 22 Jun 2026 16:00:08 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/06/22/video-engineering/adopting-av1-for-real-time-communication-rtc-meta/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/</link>
+      <description>Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation Swami Sivasubramanian, VP of Agentic AI at AWS unveiled a stack of AI launches in his keynote, all built around one thesis: agents that compound value […]</description>
+      <pubDate>Mon, 22 Jun 2026 14:46:17 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>The Data Canary: How Netflix Validates Catalog Metadata</title>
+      <link>https://netflixtechblog.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss----2615bd06b42e---4</link>
+      <description>By Celina AmadosAt Netflix, our catalog metadata is crucial to our member experience, and a single corrupted data state can impact millions of viewers immediately Each upstream source had its own validation, but these checks didn’t catch corruption in the final transformed output.We needed to treat data deployments with the same rigor as code deployments.The Challenge: Validating Data at Short IntervalsOur catalog metadata service operates as a high-velocity data pipeline: it processes multiple input feeds, transforms them, and publishes the final catalog state that gets distributed across our infrastructure.This creates unique validation challenges that our traditional canary analysis tools aren’t designed to handle:Time Constraints: Our existing canary analysis tools require 30–60 minutes to reach statistical confidence Here’s how it works:Orchestrator Instance: A dedicated orchestrator instance of our catalog metadata service coordinates the data canary flow</description>
+      <pubDate>Fri, 19 Jun 2026 23:54:17 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>How we built an internal data analytics agent</title>
@@ -49,14 +105,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>Amazon ECS introduces new high-resolution metrics for faster service auto scaling</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/</link>
-      <description>Amazon Elastic Container Service (Amazon ECS) service auto scaling automatically adjusts task counts to meet workload demand with comprehensive scaling policies, including predictive scaling for recurring traffic patterns, scheduled scaling for planned events, and target tracking to scale dynamically on real-time metrics You can choose proactive scaling by using predictive scaling (automatic) and scheduled scaling […]</description>
-      <pubDate>Thu, 18 Jun 2026 21:06:38 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ecs-introduces-new-high-resolution-metrics-for-faster-service-auto-scaling/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>How pull request limits are cutting down the noise</title>
       <link>https://github.blog/open-source/maintainers/how-pull-request-limits-are-cutting-down-the-noise/</link>
       <description>Learn how pull request limits can help manage contribution volume in your repositories, and see what’s next on the roadmap The post How pull request limits are cutting down the noise appeared first on The GitHub Blog.</description>
@@ -71,22 +119,6 @@
       <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/what-link-data-tells-us-about-ai-spending</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Getting more from each token: How Copilot improves context handling and model routing</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/</link>
-      <description>How GitHub Copilot is making more of each session go toward useful work, so your credits go further The post Getting more from each token: How Copilot improves context handling and model routing appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 17 Jun 2026 19:41:46 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/getting-more-from-each-token-how-copilot-improves-context-handling-and-model-routing/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Top announcements of the AWS Summit in New York, 2026</title>
-      <link>https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/</link>
-      <description>A recap of the top announcements from AWS&amp;apos;s New York Summit 2026</description>
-      <pubDate>Wed, 17 Jun 2026 16:36:08 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
