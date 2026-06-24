@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 23 Jun 2026 11:58:48 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 11:43:14 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>All the news from the Google I/O 2026 Developer keynote</title>
       <link>https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</link>
       <description>Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</description>
-      <pubDate>Tue, 23 Jun 2026 11:58:45 GMT</pubDate>
+      <pubDate>Wed, 24 Jun 2026 11:43:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>One Year of Innovation: Celebrating 100k Members in the Google Cloud x NVIDIA Developer Community</title>
       <link>https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</link>
       <description>The Google Cloud and NVIDIA developer community is celebrating its first anniversary with 100,000 members and a renewed focus on providing builders with advanced AI infrastructure and resources To accelerate development, the community offers curated learning pathways for mastering LLM optimization, GPU-accelerated data analytics, and monthly expert-led webinars Moving into its second year, the initiative will expand to include hands-on labs, engineering events, and specialized content focused on the growth of agentic AI.</description>
-      <pubDate>Tue, 23 Jun 2026 11:58:45 GMT</pubDate>
+      <pubDate>Wed, 24 Jun 2026 11:43:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>An important update: Transitioning Gemini CLI to Antigravity CLI</title>
       <link>https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</link>
       <description>Google is unifying its AI terminal tools by transitioning the community-focused Gemini CLI into Antigravity CLI, a new agent-first platform built for complex, multi-agent workflows This new Go-based tool offers faster execution, asynchronous processing, and a unified architecture that syncs with the Antigravity 2.0 desktop application While enterprise customers will maintain existing access, individual and free users must transition to the new platform before Gemini CLI stops serving requests on June 18, 2026.</description>
-      <pubDate>Tue, 23 Jun 2026 11:58:45 GMT</pubDate>
+      <pubDate>Wed, 24 Jun 2026 11:43:11 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How Meta Engineered Ultra-Narrow Batteries for AI Glasses</title>
+      <link>https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/</link>
+      <description>Smart glasses like the Ray-Ban Meta and Oakley Meta Vanguards need to pack enough energy to power features like cameras, speakers, AI workloads, and even a display So how do you place a battery with enough power to run a pair of smart glasses [...] Read More The post How Meta Engineered Ultra-Narrow Batteries for AI Glasses appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 23 Jun 2026 16:00:38 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>I automated my job (and it made me a better leader)</title>
+      <link>https://github.blog/developer-skills/github/i-automated-my-job-and-it-made-me-a-better-leader/</link>
+      <description>Explore how my day as a senior leader looks now that I use 40 automations to help, and learn more about some of my favorites The post I automated my job (and it made me a better leader) appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 23 Jun 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/developer-skills/github/i-automated-my-job-and-it-made-me-a-better-leader/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>GitHub joins coalition advocating for fixes to California AI Transparency Act to protect open source</title>
+      <link>https://github.blog/news-insights/policy-news-and-insights/github-joins-coalition-advocating-for-fixes-to-california-ai-transparency-act-to-protect-open-source/</link>
+      <description>We’re calling for targeted amendments to resolve conflicts with open source licensing and align with international transparency frameworks while preserving regulatory intent The post GitHub joins coalition advocating for fixes to California AI Transparency Act to protect open source appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 23 Jun 2026 15:48:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/github-joins-coalition-advocating-for-fixes-to-california-ai-transparency-act-to-protect-open-source/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix</title>
@@ -39,6 +63,14 @@
       <pubDate>Tue, 23 Jun 2026 00:31:01 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Four travel and hospitality trends from HITEC 2026</title>
+      <link>https://stripe.com/blog/trends-from-hitec</link>
+      <description>More than 6,000 hospitality executives and operators gathered in San Antonio last week for the HITEC conference The big topic: whether the industry’s AI investment is actually working Across four days and over 50 meetings, four trends stood out.</description>
+      <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/trends-from-hitec</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs</title>
@@ -89,28 +121,12 @@
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>How we built an internal data analytics agent</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-data-analytics-agent/</link>
-      <description>Qubot, our internal Copilot-powered analytics agent, allows any GitHub employee to ask questions about our data in plain language Here&amp;apos;s what we learned as we built it The post How we built an internal data analytics agent appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 19 Jun 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-we-built-an-internal-data-analytics-agent/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs</title>
       <link>https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/</link>
       <description>Announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration for AI inference, graphics, and data analytics workloads.</description>
       <pubDate>Thu, 18 Jun 2026 21:22:10 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>How pull request limits are cutting down the noise</title>
-      <link>https://github.blog/open-source/maintainers/how-pull-request-limits-are-cutting-down-the-noise/</link>
-      <description>Learn how pull request limits can help manage contribution volume in your repositories, and see what’s next on the roadmap The post How pull request limits are cutting down the noise appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 18 Jun 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/how-pull-request-limits-are-cutting-down-the-noise/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>What Link data tells us about AI spending</title>
@@ -137,14 +153,6 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>New ways to turn global demand into revenue</title>
-      <link>https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue</link>
-      <description>At Sessions 2026, Stripe unveiled dozens of products and capabilities to help businesses turn global demand into revenue See how to go global faster with localized checkout and Adaptive Pricing, smarter fraud tools, multicurrency treasury support, and automated tax compliance.</description>
-      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/new-ways-to-turn-global-demand-into-revenue</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
       <title>Lights Out, Systems On: Validating Instant Power Loss Readiness</title>
       <link>https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/</link>
       <description>We’re introducing Instantaneous PowerLoss Storm, a new testing paradigm within Meta’s infrastructure for handling and mitigating instant or zero-notice power loss in our data centers We’re sharing: how we built readiness to tolerate instant failures into our existing systems with defense-in-depth strategies; tradeoffs made in implementing it, and how we validated our readiness The post Lights Out, Systems On: Validating Instant Power Loss Readiness appeared first on Engineering at Meta.</description>
@@ -159,14 +167,6 @@
       <pubDate>Thu, 28 May 2026 18:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/culture/beyond-code-generation-rethinking-engineering-productivity-in-the-age-of-ai-agents</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems</title>
-      <link>https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/</link>
-      <description>We’re introducing SilverTorch, a reimagining of recommendation systems that unifies all retrieval components for user generated content under a unified architecture Our research paper, “SilverTorch: A [...] Read More The post SilverTorch: Index as Model — A New Retrieval Paradigm for Recommendation Systems appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 26 May 2026 16:00:01 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/05/26/ml-applications/silvertorch-index-as-model-new-retrieval-paradigm-recommendation-systems/</guid>
-      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
