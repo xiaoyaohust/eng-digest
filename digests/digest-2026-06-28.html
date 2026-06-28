@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-06-28</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-06-28</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/" target="_blank" rel="noopener noreferrer">
+                                Run isolated sandboxes with full lifecycle control: AWS Lambda introduces MicroVMs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-22 22:40</p>
+                    <p class="article-summary">AWS launches a new serverless compute primitive, AWS Lambda MicroVMs VM-level, isolated sandboxes with no shared kernel or resources between sessions Rapid launch and resume, full lifecycle control, state preservation up to 8 hours, no infrastructure to manage.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-22 14:46</p>
+                    <p class="article-summary">Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the latest in cloud and AI innovation Swami Sivasubramanian, VP of Agentic AI at AWS unveiled a stack of AI launches in his keynote, all built around one thesis: agents that compound value […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/" target="_blank" rel="noopener noreferrer">
+                                Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-18 21:22</p>
+                    <p class="article-summary">Announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration for AI inference, graphics, and data analytics workloads.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" rel="noopener noreferrer">
+                                How we used DSPy to turn AI evaluations into better responses in Dash chat
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-25 16:30</p>
+                    <p class="article-summary">We used DSPy to improve LLM judges and optimize our chat experience, creating an evaluation-driven feedback loop that produced better outputs.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" target="_blank" rel="noopener noreferrer">
+                                How Dropbox uses MCP and Dash to close the design-to-code security gap
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-12 18:00</p>
+                    <p class="article-summary">Using an agentic AI system to surface threat models during code review and spot gaps between security requirements and implementation.</p>
+                    
+                    <a href="https://dropbox.tech/security/dropbox-mcp-dash-design-code-security" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/open-source/social-impact/github-and-undp-team-up-to-advance-development-priorities-in-ghana-with-open-source/" target="_blank" rel="noopener noreferrer">
+                                GitHub and UNDP team up to advance development priorities in Ghana with open source
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-26 16:53</p>
+                    <p class="article-summary">GitHub joined the United Nations Development Programme in Ghana to explore how open source governance can support one of West Africa's most ambitious digital reform efforts The post GitHub and UNDP team up to advance development priorities in Ghana with open source appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/open-source/social-impact/github-and-undp-team-up-to-advance-development-priorities-in-ghana-with-open-source/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/developer-skills/career-growth/transitioning-as-a-hubber/" target="_blank" rel="noopener noreferrer">
+                                Transitioning as a Hubber
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-26 12:00</p>
+                    <p class="article-summary">How GitHub's culture and benefits helped me be the best version of myself The post Transitioning as a Hubber appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/developer-skills/career-growth/transitioning-as-a-hubber/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/" target="_blank" rel="noopener noreferrer">
+                                Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-25 22:59</p>
+                    <p class="article-summary">Explore how the GitHub Copilot agentic harness delivers strong results across multiple benchmarks and leading token efficiency, while maintaining flexibility to choose among more than 20 models The post Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" target="_blank" rel="noopener noreferrer">
+                                All the news from the Google I/O 2026 Developer keynote
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-28 11:05</p>
+                    <p class="article-summary">Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</p>
+                    
+                    <a href="https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/" target="_blank" rel="noopener noreferrer">
+                                One Year of Innovation: Celebrating 100k Members in the Google Cloud x NVIDIA Developer Community
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-28 11:05</p>
+                    <p class="article-summary">The Google Cloud and NVIDIA developer community is celebrating its first anniversary with 100,000 members and a renewed focus on providing builders with advanced AI infrastructure and resources To accelerate development, the community offers curated learning pathways for mastering LLM optimization, GPU-accelerated data analytics, and monthly expert-led webinars Moving into its second year, the initiative will expand to include hands-on labs, engineering events, and specialized content focused on the growth of agentic AI.</p>
+                    
+                    <a href="https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank" rel="noopener noreferrer">
+                                An important update: Transitioning Gemini CLI to Antigravity CLI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-28 11:05</p>
+                    <p class="article-summary">Google is unifying its AI terminal tools by transitioning the community-focused Gemini CLI into Antigravity CLI, a new agent-first platform built for complex, multi-agent workflows This new Go-based tool offers faster execution, asynchronous processing, and a unified architecture that syncs with the Antigravity 2.0 desktop application While enterprise customers will maintain existing access, individual and free users must transition to the new platform before Gemini CLI stops serving requests on June 18, 2026.</p>
+                    
+                    <a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/" target="_blank" rel="noopener noreferrer">
+                                Privacy-Aware Infrastructure in the AI-Native Era: An Asset Classification Case Study
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-25 22:30</p>
+                    <p class="article-summary">Privacy controls — systems that enforce retention, access, allowed-purpose, downstream-sharing, or anonymization policies — require a reliable understanding of data to function Before such a control can operate effectively, it must know exactly what it is looking at This can be complex, as demonstrated by a field simply named “age“: In one context, it might [...] Read More</p>
+                    
+                    <a href="https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" target="_blank" rel="noopener noreferrer">
+                                How Meta Engineered Ultra-Narrow Batteries for AI Glasses
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-23 16:00</p>
+                    <p class="article-summary">Smart glasses like the Ray-Ban Meta and Oakley Meta Vanguards need to pack enough energy to power features like cameras, speakers, AI workloads, and even a display So how do you place a battery with enough power to run a pair of smart glasses [...] Read More The post How Meta Engineered Ultra-Narrow Batteries for AI Glasses appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/06/22/video-engineering/adopting-av1-for-real-time-communication-rtc-meta/" target="_blank" rel="noopener noreferrer">
+                                Adopting AV1 for Real-Time Communication (RTC) at Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-22 16:00</p>
+                    <p class="article-summary">Adopting AV1 for real-time communication at Meta has been a multi-year effort spanning codec selection, device eligibility, rate control, and error resilience We’re sharing the technical and operational challenges while deploying AV1 and expanding coverage, and how we addressed them for real-time communication The post Adopting AV1 for Real-Time Communication (RTC) at Scale appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/06/22/video-engineering/adopting-av1-for-real-time-communication-rtc-meta/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-23 00:31</p>
+                    <p class="article-summary">We believe this work can help advance the field in a way that’s both meaningful and responsible:Vera: a layered video diffusion model Vera generates only what needs to change as separate edit layers while leaving the rest of the video untouched, preserving the identities, performances, and other details from the source footage exactly as filmed.VOID: a video inpainting model for video object and interaction deletion Specifically, the counterfactual videos are generated by re-simulating the exact scene from the original video, but with the target object(s) or human removed</p>
+                    
+                    <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                How Netflix Simplified Batch Compute with Kueue
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-22 21:35</p>
+                    <p class="article-summary">Reservations are not required to use CMB, so a tenant can run out of shared capacity entirely In addition, our learnings are being leveraged by other internal teams, including those building Kubernetes-native training infrastructure, to inform their job scheduling and queuing configurations.Fair Sharing and PreemptionWith Kueue, Preemption-based Fair Sharing allows Netflix Batch to maintain reservation semantics while lending resources to other tenants when those reservations are not in use For our customers, this means that tenants can use more idle capacity from reservations, submit more jobs without the risk of starvation, and have quicker turnaround times for business-critical workloads.An example preemption configuration on a ClusterQueue that we would be using is as follows:apiVersion: kueue.x-k8s.io/v1beta2kind: ClusterQueuemetadata: name: "team-a-cq"spec: preemption: reclaimWithinCohort: Any withinClusterQueue: LowerPriorityWith these features deployed, Compute has seen a significant increase in average resource utilization.AcknowledgementThis work would not have been possible without the great work of the entire Compute team at Netflix.How Netflix Simplified Batch Compute with Kueue was originally published in Netflix TechBlog on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
+                    
+                    <a href="https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                The Data Canary: How Netflix Validates Catalog Metadata
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-19 23:54</p>
+                    <p class="article-summary">By Celina AmadosAt Netflix, our catalog metadata is crucial to our member experience, and a single corrupted data state can impact millions of viewers immediately Each upstream source had its own validation, but these checks didn’t catch corruption in the final transformed output.We needed to treat data deployments with the same rigor as code deployments.The Challenge: Validating Data at Short IntervalsOur catalog metadata service operates as a high-velocity data pipeline: it processes multiple input feeds, transforms them, and publishes the final catalog state that gets distributed across our infrastructure.This creates unique validation challenges that our traditional canary analysis tools aren’t designed to handle:Time Constraints: Our existing canary analysis tools require 30–60 minutes to reach statistical confidence Here’s how it works:Orchestrator Instance: A dedicated orchestrator instance of our catalog metadata service coordinates the data canary flow</p>
+                    
+                    <a href="https://netflixtechblog.com/the-data-canary-how-netflix-validates-catalog-metadata-18b699d58e36?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/trends-from-hitec" target="_blank" rel="noopener noreferrer">
+                                Four travel and hospitality trends from HITEC 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-23 00:00</p>
+                    <p class="article-summary">More than 6,000 hospitality executives and operators gathered in San Antonio last week for the HITEC conference The big topic: whether the industry’s AI investment is actually working Across four days and over 50 meetings, four trends stood out.</p>
+                    
+                    <a href="https://stripe.com/blog/trends-from-hitec" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/what-link-data-tells-us-about-ai-spending" target="_blank" rel="noopener noreferrer">
+                                What Link data tells us about AI spending
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-18 00:00</p>
+                    <p class="article-summary">We analyzed spending patterns across the 250 million customers paying with Link We found that Link customers are spending more on AI than they were three months prior, investing heavily in platforms that let them build with AI.</p>
+                    
+                    <a href="https://stripe.com/blog/what-link-data-tells-us-about-ai-spending" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/stripe-projects-adds-new-agents-providers-developer-controls" target="_blank" rel="noopener noreferrer">
+                                Stripe Projects adds new agent integrations, more providers, and custom developer controls
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-11 00:00</p>
+                    <p class="article-summary">Our data shows that agents are now fully capable of independently writing code and integrating with APIs like Stripe’s And yet, many of the steps adjacent to writing code are still too hard for agents to do on their own We’re expanding Stripe Projects to solve this.</p>
+                    
+                    <a href="https://stripe.com/blog/stripe-projects-adds-new-agents-providers-developer-controls" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-06-28 11:05:16</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>

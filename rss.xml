@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 27 Jun 2026 10:55:51 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 11:05:16 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>All the news from the Google I/O 2026 Developer keynote</title>
       <link>https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</link>
       <description>Google announced the transition from assistive AI to independent agents, highlighting the launch of the Gemini 3.5 series and major updates to its Antigravity agent-first development platform For mobile developers, the post introduces new Android CLI tools, the Android Bench evaluation leaderboard, and an automated Migration agent designed to rapidly convert various frameworks into native Kotlin code Web development is also being transformed through Chrome DevTools for agents, the HTML-in-Canvas API, and the proposal of WebMCP, an open web standard that enables browser-based AI agents to execute complex tasks.</description>
-      <pubDate>Sat, 27 Jun 2026 10:55:47 GMT</pubDate>
+      <pubDate>Sun, 28 Jun 2026 11:05:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>One Year of Innovation: Celebrating 100k Members in the Google Cloud x NVIDIA Developer Community</title>
       <link>https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</link>
       <description>The Google Cloud and NVIDIA developer community is celebrating its first anniversary with 100,000 members and a renewed focus on providing builders with advanced AI infrastructure and resources To accelerate development, the community offers curated learning pathways for mastering LLM optimization, GPU-accelerated data analytics, and monthly expert-led webinars Moving into its second year, the initiative will expand to include hands-on labs, engineering events, and specialized content focused on the growth of agentic AI.</description>
-      <pubDate>Sat, 27 Jun 2026 10:55:47 GMT</pubDate>
+      <pubDate>Sun, 28 Jun 2026 11:05:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>An important update: Transitioning Gemini CLI to Antigravity CLI</title>
       <link>https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</link>
       <description>Google is unifying its AI terminal tools by transitioning the community-focused Gemini CLI into Antigravity CLI, a new agent-first platform built for complex, multi-agent workflows This new Go-based tool offers faster execution, asynchronous processing, and a unified architecture that syncs with the Antigravity 2.0 desktop application While enterprise customers will maintain existing access, individual and free users must transition to the new platform before Gemini CLI stops serving requests on June 18, 2026.</description>
-      <pubDate>Sat, 27 Jun 2026 10:55:47 GMT</pubDate>
+      <pubDate>Sun, 28 Jun 2026 11:05:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</guid>
       <source>Google Developers</source>
     </item>
