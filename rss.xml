@@ -6,31 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 01 Jul 2026 12:00:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 11:31:42 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>An important update: Transitioning Gemini CLI to Antigravity CLI</title>
-      <link>https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</link>
-      <description>Google is unifying its AI terminal tools by transitioning the community-focused Gemini CLI into Antigravity CLI, a new agent-first platform built for complex, multi-agent workflows This new Go-based tool offers faster execution, asynchronous processing, and a unified architecture that syncs with the Antigravity 2.0 desktop application While enterprise customers will maintain existing access, individual and free users must transition to the new platform before Gemini CLI stops serving requests on June 18, 2026.</description>
-      <pubDate>Wed, 01 Jul 2026 12:00:51 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</guid>
+      <title>Enhancing Android Checkout with Dynamic Callbacks in Google Pay</title>
+      <link>https://developers.googleblog.com/enhancing-android-checkout-with-dynamic-callbacks-in-google-pay/</link>
+      <description>We are excited to bring Express checkout with Google Pay for Android native apps enabling developers...</description>
+      <pubDate>Thu, 02 Jul 2026 11:31:39 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/enhancing-android-checkout-with-dynamic-callbacks-in-google-pay/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Empowering Service Providers and Hardware Partners with Gemini for Home</title>
-      <link>https://developers.googleblog.com/empowering-service-providers-and-hardware-partners-with-gemini-for-home/</link>
-      <description>Google is expanding its smart home ecosystem by launching a full-stack Gemini AI offering that integrates advanced camera intelligence, natural language queries, and daily activity summaries This initiative provides service providers and hardware manufacturers with turnkey reference designs and APIs to build proactive, branded services without extensive research and development Ultimately, the program aims to move beyond basic device control toward an AI-native home that can understand context and care for users&amp;apos; needs in real time.</description>
-      <pubDate>Wed, 01 Jul 2026 12:00:51 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/empowering-service-providers-and-hardware-partners-with-gemini-for-home/</guid>
+      <title>The latest updates to Google Pay</title>
+      <link>https://developers.googleblog.com/the-latest-updates-to-google-pay/</link>
+      <description>Google Pay is evolving for &amp;quot;agentic commerce&amp;quot; by introducing the Universal Commerce Protocol and a new MCP server that allows AI agents to manage integrations and analyze trends New Android updates introduce dynamic callbacks for seamless express checkouts and extend payment support into social media apps via WebViews Additionally, the platform is launching cross-device biometric authentication and new transaction signals to help merchants reduce friction and optimize processing costs.</description>
+      <pubDate>Thu, 02 Jul 2026 11:31:39 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/the-latest-updates-to-google-pay/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Announcing ADK for Kotlin and ADK for Android 0.1.0: Building AI Agents on Android and Beyond</title>
-      <link>https://developers.googleblog.com/adk-kotlin-android-building-ai-agents/</link>
-      <description>Google has announced the launch of version 0.1.0 of the Agent Development Kit (ADK) for Kotlin, alongside a specialized ADK library for Android This open-source framework simplifies the creation of AI agents by managing complex orchestration, session sharing, and error handling across cloud and edge environments The release supports hybrid orchestration, enabling developers to build multi-agent systems where a cloud-based model can seamlessly offload specific tasks to local, on-device models like Gemini Nano to enhance user privacy.</description>
-      <pubDate>Wed, 01 Jul 2026 12:00:51 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/adk-kotlin-android-building-ai-agents/</guid>
+      <title>Supercharge your integration workflow with the Google Pay &amp; Wallet Developer MCP server</title>
+      <link>https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</link>
+      <description>Google has announced the new Google Pay &amp;amp; Wallet Developer MCP server, an open-standard tool designed to securely connect AI development assistants and IDEs with real-time API and account context The server allows developers to remain within their development environment to search official documentation, validate Wallet pass definitions, check integration status, and manage merchant accounts Ultimately, this integration aims to reduce friction and accelerate development workflows by minimizing context switching and providing up-to-date, grounded AI support.</description>
+      <pubDate>Thu, 02 Jul 2026 11:31:39 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks</title>
+      <link>https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/</link>
+      <description>Learn how Kubernetes version rollbacks for Amazon EKS let you reverse cluster upgrades within seven days This new feature provides a safety net for upgrade failures—no cluster rebuilds required—turning Kubernetes version upgrades into a reversible, low-risk operation.</description>
+      <pubDate>Wed, 01 Jul 2026 17:20:30 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Meta’s AI Storage Blueprint at Scale</title>
+      <link>https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</link>
+      <description>During the past year or so, the time between new-frontier-model releases has gone down from months to weeks Reliable and fast access to storage is important to both the speed and computational cost of this AI innovation The post Meta’s AI Storage Blueprint at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 01 Jul 2026 16:00:36 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>6 security settings every GitHub maintainer should enable this week</title>
+      <link>https://github.blog/security/6-security-settings-every-github-maintainer-should-enable-this-week/</link>
+      <description>These six free settings will not make your project unhackable Turn these on, and your project will be meaningfully harder to attack than it was before The post 6 security settings every GitHub maintainer should enable this week appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 01 Jul 2026 15:59:29 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/6-security-settings-every-github-maintainer-should-enable-this-week/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode</title>
@@ -46,14 +70,6 @@
       <description>Amazon EC2 C9g and C9gd instances, powered by AWS Graviton5, are now generally available They deliver up to 25% better compute performance than Graviton4-based instances, 5x larger cache, fastest memory of any processor instances in the cloud, and local NVMe storage options (C9gd).</description>
       <pubDate>Tue, 30 Jun 2026 20:56:44 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Automate public TLS certificate issuance with ACME support in AWS Certificate Manager</title>
-      <link>https://aws.amazon.com/blogs/aws/automate-public-tls-certificate-issuance-with-acme-support-in-aws-certificate-manager/</link>
-      <description>AWS Certificate Manager now supports the ACME protocol for public TLS certificates, enabling automated issuance and renewal through any ACMEv2-compatible client on any workload Administrators get centralized governance, IAM-based access controls, and domain scoping, reducing operational risk as certificate lifetimes continue to reduce.</description>
-      <pubDate>Tue, 30 Jun 2026 20:15:11 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/automate-public-tls-certificate-issuance-with-acme-support-in-aws-certificate-manager/</guid>
       <source>AWS News</source>
     </item>
     <item>
@@ -81,14 +97,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Inside the Advisory Database and what happens when vulnerability volume breaks records</title>
-      <link>https://github.blog/security/supply-chain-security/inside-the-advisory-database-and-what-happens-when-vulnerability-volume-breaks-records/</link>
-      <description>The GitHub Advisory Database is processing more vulnerability reports than ever before Here&amp;apos;s what&amp;apos;s driving the surge, how we&amp;apos;re responding, and how the community can help The post Inside the Advisory Database and what happens when vulnerability volume breaks records appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 29 Jun 2026 16:10:20 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/inside-the-advisory-database-and-what-happens-when-vulnerability-volume-breaks-records/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>GenPage: Towards End-to-End Generative Homepage Construction at Netflix</title>
       <link>https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss----2615bd06b42e---4</link>
       <description>This sequence includes the full structured homepage layout, with multiple rows and the entities inside them, so the model can generate the page holistically rather than scoring each row or entity in isolation.Figure 2 At a high level, WBC turns generation into token-level value prediction: given the user context and the tokens generated so far, the model learns to estimate the value of generating each possible next row or entity token.This objective is easier to optimize than page-level RL WBC post-training loss as we progressively enrich the user context tokens</description>
@@ -111,14 +119,6 @@
       <pubDate>Thu, 25 Jun 2026 16:30:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>How Meta Engineered Ultra-Narrow Batteries for AI Glasses</title>
-      <link>https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/</link>
-      <description>Smart glasses like the Ray-Ban Meta and Oakley Meta Vanguards need to pack enough energy to power features like cameras, speakers, AI workloads, and even a display So how do you place a battery with enough power to run a pair of smart glasses [...] Read More The post How Meta Engineered Ultra-Narrow Batteries for AI Glasses appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 23 Jun 2026 16:00:38 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/06/23/production-engineering/how-meta-built-ultra-narrow-batteries-for-ai-glasses-meta-tech-podcast/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix</title>
