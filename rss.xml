@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 03 Jul 2026 11:30:11 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 10:52:16 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Enhancing Android Checkout with Dynamic Callbacks in Google Pay</title>
       <link>https://developers.googleblog.com/enhancing-android-checkout-with-dynamic-callbacks-in-google-pay/</link>
       <description>We are excited to bring Express checkout with Google Pay for Android native apps enabling developers...</description>
-      <pubDate>Fri, 03 Jul 2026 11:30:08 GMT</pubDate>
+      <pubDate>Sat, 04 Jul 2026 10:52:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/enhancing-android-checkout-with-dynamic-callbacks-in-google-pay/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>The latest updates to Google Pay</title>
       <link>https://developers.googleblog.com/the-latest-updates-to-google-pay/</link>
       <description>Google Pay is evolving for &amp;quot;agentic commerce&amp;quot; by introducing the Universal Commerce Protocol and a new MCP server that allows AI agents to manage integrations and analyze trends New Android updates introduce dynamic callbacks for seamless express checkouts and extend payment support into social media apps via WebViews Additionally, the platform is launching cross-device biometric authentication and new transaction signals to help merchants reduce friction and optimize processing costs.</description>
-      <pubDate>Fri, 03 Jul 2026 11:30:08 GMT</pubDate>
+      <pubDate>Sat, 04 Jul 2026 10:52:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/the-latest-updates-to-google-pay/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Supercharge your integration workflow with the Google Pay &amp; Wallet Developer MCP server</title>
       <link>https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</link>
       <description>Google has announced the new Google Pay &amp;amp; Wallet Developer MCP server, an open-standard tool designed to securely connect AI development assistants and IDEs with real-time API and account context The server allows developers to remain within their development environment to search official documentation, validate Wallet pass definitions, check integration status, and manage merchant accounts Ultimately, this integration aims to reduce friction and accelerate development workflows by minimizing context switching and providing up-to-date, grounded AI support.</description>
-      <pubDate>Fri, 03 Jul 2026 11:30:08 GMT</pubDate>
+      <pubDate>Sat, 04 Jul 2026 10:52:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</guid>
       <source>Google Developers</source>
     </item>
