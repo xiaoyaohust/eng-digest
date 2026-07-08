@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 07 Jul 2026 11:46:13 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 11:01:54 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>The latest updates to Google Pay</title>
       <link>https://developers.googleblog.com/the-latest-updates-to-google-pay/</link>
       <description>Google Pay is evolving for &amp;quot;agentic commerce&amp;quot; by introducing the Universal Commerce Protocol and a new MCP server that allows AI agents to manage integrations and analyze trends New Android updates introduce dynamic callbacks for seamless express checkouts and extend payment support into social media apps via WebViews Additionally, the platform is launching cross-device biometric authentication and new transaction signals to help merchants reduce friction and optimize processing costs.</description>
-      <pubDate>Tue, 07 Jul 2026 11:46:10 GMT</pubDate>
+      <pubDate>Wed, 08 Jul 2026 11:01:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/the-latest-updates-to-google-pay/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Supercharge your integration workflow with the Google Pay &amp; Wallet Developer MCP server</title>
       <link>https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</link>
       <description>Google has announced the new Google Pay &amp;amp; Wallet Developer MCP server, an open-standard tool designed to securely connect AI development assistants and IDEs with real-time API and account context The server allows developers to remain within their development environment to search official documentation, validate Wallet pass definitions, check integration status, and manage merchant accounts Ultimately, this integration aims to reduce friction and accelerate development workflows by minimizing context switching and providing up-to-date, grounded AI support.</description>
-      <pubDate>Tue, 07 Jul 2026 11:46:10 GMT</pubDate>
+      <pubDate>Wed, 08 Jul 2026 11:01:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>How the community trained Gemma to &quot;Think&quot; with Tunix and TPUs</title>
       <link>https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</link>
       <description>The Google Tunix Hackathon on Kaggle challenged developers to transform small, non-reasoning base models into general reasoning engines using Kaggle TPUs and a limited compute budget The winning teams achieved this by implementing multi-stage post-training pipelines that combined Supervised Fine-Tuning (SFT) with advanced alignment techniques like GRPO and SimPO Ultimately, the competition democratized AI development by proving that highly capable, structured reasoning models can be successfully trained by the community using accessible, open-source resources.</description>
-      <pubDate>Tue, 07 Jul 2026 11:46:10 GMT</pubDate>
+      <pubDate>Wed, 08 Jul 2026 11:01:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Q1 2026 Innovation Graph update: Open source collaboration is accelerating worldwide</title>
+      <link>https://github.blog/news-insights/policy-news-and-insights/q1-2026-innovation-graph-update-open-source-collaboration-is-accelerating-worldwide/</link>
+      <description>New Innovation Graph data shows global developer communities growing faster than ever, with collaboration reaching new highs across many economies The post Q1 2026 Innovation Graph update: Open source collaboration is accelerating worldwide appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/q1-2026-innovation-graph-update-open-source-collaboration-is-accelerating-worldwide/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)</title>
@@ -79,14 +87,6 @@
       <pubDate>Tue, 30 Jun 2026 21:30:33 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>How GitHub maintains compliance for open source dependencies</title>
-      <link>https://github.blog/enterprise-software/governance-and-compliance/how-github-maintains-compliance-for-open-source-dependencies/</link>
-      <description>Explore how the Open Source Program Office uses GitHub’s new license compliance product to manage open source dependencies at scale The post How GitHub maintains compliance for open source dependencies appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 30 Jun 2026 17:28:16 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/enterprise-software/governance-and-compliance/how-github-maintains-compliance-for-open-source-dependencies/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>10 Years of Meta’s Commitment to Python</title>
