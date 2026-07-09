@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 08 Jul 2026 11:01:54 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 11:59:53 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>The latest updates to Google Pay</title>
-      <link>https://developers.googleblog.com/the-latest-updates-to-google-pay/</link>
-      <description>Google Pay is evolving for &amp;quot;agentic commerce&amp;quot; by introducing the Universal Commerce Protocol and a new MCP server that allows AI agents to manage integrations and analyze trends New Android updates introduce dynamic callbacks for seamless express checkouts and extend payment support into social media apps via WebViews Additionally, the platform is launching cross-device biometric authentication and new transaction signals to help merchants reduce friction and optimize processing costs.</description>
-      <pubDate>Wed, 08 Jul 2026 11:01:51 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/the-latest-updates-to-google-pay/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Supercharge your integration workflow with the Google Pay &amp; Wallet Developer MCP server</title>
       <link>https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</link>
       <description>Google has announced the new Google Pay &amp;amp; Wallet Developer MCP server, an open-standard tool designed to securely connect AI development assistants and IDEs with real-time API and account context The server allows developers to remain within their development environment to search official documentation, validate Wallet pass definitions, check integration status, and manage merchant accounts Ultimately, this integration aims to reduce friction and accelerate development workflows by minimizing context switching and providing up-to-date, grounded AI support.</description>
-      <pubDate>Wed, 08 Jul 2026 11:01:51 GMT</pubDate>
+      <pubDate>Thu, 09 Jul 2026 11:59:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,16 +20,40 @@
       <title>How the community trained Gemma to &quot;Think&quot; with Tunix and TPUs</title>
       <link>https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</link>
       <description>The Google Tunix Hackathon on Kaggle challenged developers to transform small, non-reasoning base models into general reasoning engines using Kaggle TPUs and a limited compute budget The winning teams achieved this by implementing multi-stage post-training pipelines that combined Supervised Fine-Tuning (SFT) with advanced alignment techniques like GRPO and SimPO Ultimately, the competition democratized AI development by proving that highly capable, structured reasoning models can be successfully trained by the community using accessible, open-source resources.</description>
-      <pubDate>Wed, 08 Jul 2026 11:01:51 GMT</pubDate>
+      <pubDate>Thu, 09 Jul 2026 11:59:50 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Q1 2026 Innovation Graph update: Open source collaboration is accelerating worldwide</title>
-      <link>https://github.blog/news-insights/policy-news-and-insights/q1-2026-innovation-graph-update-open-source-collaboration-is-accelerating-worldwide/</link>
-      <description>New Innovation Graph data shows global developer communities growing faster than ever, with collaboration reaching new highs across many economies The post Q1 2026 Innovation Graph update: Open source collaboration is accelerating worldwide appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 07 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/q1-2026-innovation-graph-update-open-source-collaboration-is-accelerating-worldwide/</guid>
+      <title>Gemma 4 12B: The Developer Guide</title>
+      <link>https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</link>
+      <description>The newly released Gemma 4 12B is a dense, multimodal model designed for high-performance local AI execution on consumer devices By introducing a novel, encoder-free architecture, it bypasses traditional visual and audio encoders to feed multimodal data directly into the LLM backbone.</description>
+      <pubDate>Thu, 09 Jul 2026 11:59:50 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Automating cross-repo documentation with GitHub Agentic Workflows</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/</link>
+      <description>Explore how the Aspire team turns merged product changes into SME-reviewed docs pull requests, closing the gap between release and documentation The post Automating cross-repo documentation with GitHub Agentic Workflows appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 08 Jul 2026 21:11:56 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>GitHub availability report: June 2026</title>
+      <link>https://github.blog/news-insights/company-news/github-availability-report-june-2026/</link>
+      <description>In June, we experienced six incidents that resulted in degraded performance across GitHub services The post GitHub availability report: June 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 08 Jul 2026 19:35:51 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-june-2026/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How GitHub Copilot enables zero DNS configuration for GitHub Pages</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/</link>
+      <description>Go from an empty repository to a live custom domain with HTTPS in about 14 minutes, without manually editing a single DNS record The post How GitHub Copilot enables zero DNS configuration for GitHub Pages appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 08 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -47,14 +63,6 @@
       <pubDate>Mon, 06 Jul 2026 15:46:43 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>How GitHub used secret scanning to reach inbox zero</title>
-      <link>https://github.blog/security/application-security/how-github-used-secret-scanning-to-reach-inbox-zero/</link>
-      <description>GitHub had 20,000+ secret scanning alerts across 15,000 repositories Here&amp;apos;s how we separated signal from noise, built remediation workflows, and reached inbox zero in nine months The post How GitHub used secret scanning to reach inbox zero appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 02 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/application-security/how-github-used-secret-scanning-to-reach-inbox-zero/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks</title>
@@ -71,14 +79,6 @@
       <pubDate>Wed, 01 Jul 2026 16:00:36 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>6 security settings every GitHub maintainer should enable this week</title>
-      <link>https://github.blog/security/6-security-settings-every-github-maintainer-should-enable-this-week/</link>
-      <description>These six free settings will not make your project unhackable Turn these on, and your project will be meaningfully harder to attack than it was before The post 6 security settings every GitHub maintainer should enable this week appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 01 Jul 2026 15:59:29 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/6-security-settings-every-github-maintainer-should-enable-this-week/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode</title>
