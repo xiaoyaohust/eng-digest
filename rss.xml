@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 09 Jul 2026 11:59:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 11:48:46 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Supercharge your integration workflow with the Google Pay &amp; Wallet Developer MCP server</title>
-      <link>https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</link>
-      <description>Google has announced the new Google Pay &amp;amp; Wallet Developer MCP server, an open-standard tool designed to securely connect AI development assistants and IDEs with real-time API and account context The server allows developers to remain within their development environment to search official documentation, validate Wallet pass definitions, check integration status, and manage merchant accounts Ultimately, this integration aims to reduce friction and accelerate development workflows by minimizing context switching and providing up-to-date, grounded AI support.</description>
-      <pubDate>Thu, 09 Jul 2026 11:59:50 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-integration-workflow-with-the-google-pay-wallet-developer-mcp-server/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>How the community trained Gemma to &quot;Think&quot; with Tunix and TPUs</title>
       <link>https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</link>
       <description>The Google Tunix Hackathon on Kaggle challenged developers to transform small, non-reasoning base models into general reasoning engines using Kaggle TPUs and a limited compute budget The winning teams achieved this by implementing multi-stage post-training pipelines that combined Supervised Fine-Tuning (SFT) with advanced alignment techniques like GRPO and SimPO Ultimately, the competition democratized AI development by proving that highly capable, structured reasoning models can be successfully trained by the community using accessible, open-source resources.</description>
-      <pubDate>Thu, 09 Jul 2026 11:59:50 GMT</pubDate>
+      <pubDate>Fri, 10 Jul 2026 11:48:43 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,25 @@
       <title>Gemma 4 12B: The Developer Guide</title>
       <link>https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</link>
       <description>The newly released Gemma 4 12B is a dense, multimodal model designed for high-performance local AI execution on consumer devices By introducing a novel, encoder-free architecture, it bypasses traditional visual and audio encoders to feed multimodal data directly into the LLM backbone.</description>
-      <pubDate>Thu, 09 Jul 2026 11:59:50 GMT</pubDate>
+      <pubDate>Fri, 10 Jul 2026 11:48:43 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</title>
+      <link>https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</link>
+      <description>Google DeepMind’s Gemma 4 12B model brings agentic, multimodal AI capabilities to everyday laptops with 16GB of RAM, enabling local data processing and visual insight generation Users can leverage this model on macOS through the Google AI Edge Gallery for dynamic Python code execution and visualization, as well as via Google AI Edge Eloquent for completely offline voice dictation and text editing Additionally, developer workflows are enhanced by the LiteRT-LM CLI&amp;apos;s new serve command, which creates an industry-compatible local endpoint to power fully-local AI tools and agents.</description>
+      <pubDate>Fri, 10 Jul 2026 11:48:43 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How GitHub gave every repository a durable owner</title>
+      <link>https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/</link>
+      <description>GitHub had over 14,000 repositories Here&amp;apos;s how we gave every active repository a validated owner in under 45 days, archived the rest, and made ownership the foundation for everything that followed The post How GitHub gave every repository a durable owner appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 09 Jul 2026 16:29:37 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Automating cross-repo documentation with GitHub Agentic Workflows</title>
@@ -46,14 +54,6 @@
       <description>In June, we experienced six incidents that resulted in degraded performance across GitHub services The post GitHub availability report: June 2026 appeared first on The GitHub Blog.</description>
       <pubDate>Wed, 08 Jul 2026 19:35:51 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-june-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>How GitHub Copilot enables zero DNS configuration for GitHub Pages</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/</link>
-      <description>Go from an empty repository to a live custom domain with HTTPS in about 14 minutes, without manually editing a single DNS record The post How GitHub Copilot enables zero DNS configuration for GitHub Pages appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 08 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
