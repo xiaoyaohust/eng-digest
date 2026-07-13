@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 12 Jul 2026 10:24:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 11:58:22 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>How the community trained Gemma to &quot;Think&quot; with Tunix and TPUs</title>
       <link>https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</link>
       <description>The Google Tunix Hackathon on Kaggle challenged developers to transform small, non-reasoning base models into general reasoning engines using Kaggle TPUs and a limited compute budget The winning teams achieved this by implementing multi-stage post-training pipelines that combined Supervised Fine-Tuning (SFT) with advanced alignment techniques like GRPO and SimPO Ultimately, the competition democratized AI development by proving that highly capable, structured reasoning models can be successfully trained by the community using accessible, open-source resources.</description>
-      <pubDate>Sun, 12 Jul 2026 10:24:47 GMT</pubDate>
+      <pubDate>Mon, 13 Jul 2026 11:58:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Gemma 4 12B: The Developer Guide</title>
       <link>https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</link>
       <description>The newly released Gemma 4 12B is a dense, multimodal model designed for high-performance local AI execution on consumer devices By introducing a novel, encoder-free architecture, it bypasses traditional visual and audio encoders to feed multimodal data directly into the LLM backbone.</description>
-      <pubDate>Sun, 12 Jul 2026 10:24:47 GMT</pubDate>
+      <pubDate>Mon, 13 Jul 2026 11:58:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</title>
       <link>https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</link>
       <description>Google DeepMind’s Gemma 4 12B model brings agentic, multimodal AI capabilities to everyday laptops with 16GB of RAM, enabling local data processing and visual insight generation Users can leverage this model on macOS through the Google AI Edge Gallery for dynamic Python code execution and visualization, as well as via Google AI Edge Eloquent for completely offline voice dictation and text editing Additionally, developer workflows are enhanced by the LiteRT-LM CLI&amp;apos;s new serve command, which creates an industry-compatible local endpoint to power fully-local AI tools and agents.</description>
-      <pubDate>Sun, 12 Jul 2026 10:24:47 GMT</pubDate>
+      <pubDate>Mon, 13 Jul 2026 11:58:19 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</guid>
       <source>Google Developers</source>
     </item>
@@ -151,14 +151,6 @@
       <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/what-link-data-tells-us-about-ai-spending</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How Dropbox uses MCP and Dash to close the design-to-code security gap</title>
-      <link>https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</link>
-      <description>Using an agentic AI system to surface threat models during code review and spot gaps between security requirements and implementation.</description>
-      <pubDate>Fri, 12 Jun 2026 18:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/security/dropbox-mcp-dash-design-code-security</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
