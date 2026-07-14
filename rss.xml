@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 13 Jul 2026 11:58:22 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 10:42:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>How the community trained Gemma to &quot;Think&quot; with Tunix and TPUs</title>
       <link>https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</link>
       <description>The Google Tunix Hackathon on Kaggle challenged developers to transform small, non-reasoning base models into general reasoning engines using Kaggle TPUs and a limited compute budget The winning teams achieved this by implementing multi-stage post-training pipelines that combined Supervised Fine-Tuning (SFT) with advanced alignment techniques like GRPO and SimPO Ultimately, the competition democratized AI development by proving that highly capable, structured reasoning models can be successfully trained by the community using accessible, open-source resources.</description>
-      <pubDate>Mon, 13 Jul 2026 11:58:19 GMT</pubDate>
+      <pubDate>Tue, 14 Jul 2026 10:42:31 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Gemma 4 12B: The Developer Guide</title>
       <link>https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</link>
       <description>The newly released Gemma 4 12B is a dense, multimodal model designed for high-performance local AI execution on consumer devices By introducing a novel, encoder-free architecture, it bypasses traditional visual and audio encoders to feed multimodal data directly into the LLM backbone.</description>
-      <pubDate>Mon, 13 Jul 2026 11:58:19 GMT</pubDate>
+      <pubDate>Tue, 14 Jul 2026 10:42:31 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,41 @@
       <title>Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</title>
       <link>https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</link>
       <description>Google DeepMind’s Gemma 4 12B model brings agentic, multimodal AI capabilities to everyday laptops with 16GB of RAM, enabling local data processing and visual insight generation Users can leverage this model on macOS through the Google AI Edge Gallery for dynamic Python code execution and visualization, as well as via Google AI Edge Eloquent for completely offline voice dictation and text editing Additionally, developer workflows are enhanced by the LiteRT-LM CLI&amp;apos;s new serve command, which creates an industry-compatible local endpoint to power fully-local AI tools and agents.</description>
-      <pubDate>Mon, 13 Jul 2026 11:58:19 GMT</pubDate>
+      <pubDate>Tue, 14 Jul 2026 10:42:31 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned</title>
+      <link>https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss----2615bd06b42e---4</link>
+      <description>Instead of batch jobs that process historical data, we continuously ingest flow records from multi-region Kafka streams and IPC metrics as Server-Sent Events, process them through reactive pipelines with backpressure handling, and provide near real-time topology updates, typically within tens of minutes, compared to the hours-old or day-old data that batch processing approaches provide.This wasn’t just about freshness, it was essential for our use cases When data arrives with the right partitioning, you can aggregate directly; when it doesn’t (like network flows requiring intermediary resolution), you need shuffle/redistribution stages.Dynamic Load Distribution: How Hashing Works with Auto-ScalingHow do we decide which instance receives which aggregator when our Auto Scaling Groups dynamically add or remove instances GC logs showed pauses consuming significant CPU time, in some cases, more than our business logic.Root Cause: Multiple factors contributed: objects accumulating in heap while waiting for 5-minute aggregation windows to complete, unnecessary conversions between different object types as data flowed through stages, and immutability overhead, following Scala best practices, we used immutable data structures for aggregators, but every update created new objects, overwhelming the garbage collector at millions of records per second.Investigation: Heap dumps and GC logs revealed flow log objects retained beyond their useful lifetime, unnecessary intermediate conversion objects, and constant creation/disposal of immutable aggregator versions</description>
+      <pubDate>Mon, 13 Jul 2026 22:44:11 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Amazon SQS turns 20: Two decades of reliable messaging at scale</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/</link>
+      <description>On July 13, 2006, we launched Amazon Simple Queue Service (Amazon SQS) as one of the first three services available to customers, alongside Amazon EC2 and Amazon S3 We had learned firsthand that distributed systems need a reliable way to pass messages between components without creating tight dependencies If one service called another directly and […]</description>
+      <pubDate>Mon, 13 Jul 2026 18:13:57 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/</link>
+      <description>AWS Builder Center turned one year old last week Launched on July 9, 2025, the platform has grown from a community hub with Wishlist voting, community profiles, and a toolbox into a full ecosystem with sandbox environments, workshops, Spaces, and a Builders’ Library To mark the anniversary, Rick Suttles published a full feature timeline covering […]</description>
+      <pubDate>Mon, 13 Jul 2026 16:18:20 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler</title>
+      <link>https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/</link>
+      <description>TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance When a Linux kernel upgrade risked regressing latency across Meta’s ad serving fleet, we turned to sched_ext — the upstream, BPF-based extensible scheduling framework — to build a scheduling policy customized to the Ads delivery [...] Read More The post Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 13 Jul 2026 16:00:50 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Better tools made Copilot code review worse. Here’s how we actually improved it.</title>
@@ -65,28 +97,12 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>Upgrade Amazon EKS clusters with confidence using Kubernetes version rollbacks</title>
-      <link>https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/</link>
-      <description>Learn how Kubernetes version rollbacks for Amazon EKS let you reverse cluster upgrades within seven days This new feature provides a safety net for upgrade failures—no cluster rebuilds required—turning Kubernetes version upgrades into a reversible, low-risk operation.</description>
-      <pubDate>Wed, 01 Jul 2026 17:20:30 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/upgrade-amazon-eks-clusters-with-confidence-using-kubernetes-version-rollbacks/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Meta’s AI Storage Blueprint at Scale</title>
       <link>https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</link>
       <description>During the past year or so, the time between new-frontier-model releases has gone down from months to weeks Reliable and fast access to storage is important to both the speed and computational cost of this AI innovation The post Meta’s AI Storage Blueprint at Scale appeared first on Engineering at Meta.</description>
       <pubDate>Wed, 01 Jul 2026 16:00:36 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Accelerate your infrastructure deployments by up to 4x with AWS CloudFormation Express mode</title>
-      <link>https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/</link>
-      <description>AWS CloudFormation speeds up infrastructure deployment with Express mode, enabling AI agents and developers to receive deployment confirmation in seconds and iterate faster Available in all commercial Regions at no additional cost.</description>
-      <pubDate>Tue, 30 Jun 2026 21:30:33 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/accelerate-your-infrastructure-deployments-by-up-to-4x-with-aws-cloudformation-express-mode/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>10 Years of Meta’s Commitment to Python</title>
@@ -103,14 +119,6 @@
       <pubDate>Mon, 29 Jun 2026 13:01:02 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Privacy-Aware Infrastructure in the AI-Native Era: An Asset Classification Case Study</title>
-      <link>https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/</link>
-      <description>Privacy controls — systems that enforce retention, access, allowed-purpose, downstream-sharing, or anonymization policies — require a reliable understanding of data to function Before such a control can operate effectively, it must know exactly what it is looking at This can be complex, as demonstrated by a field simply named “age“: In one context, it [...] Read More</description>
-      <pubDate>Thu, 25 Jun 2026 22:30:51 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/06/25/security/privacy-aware-infrastructure-in-the-ai-native-era-an-asset-classification-case-study/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>How we used DSPy to turn AI evaluations into better responses in Dash chat</title>
@@ -135,14 +143,6 @@
       <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/trends-from-hitec</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How Netflix Simplified Batch Compute with Kueue</title>
-      <link>https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4</link>
-      <description>Reservations are not required to use CMB, so a tenant can run out of shared capacity entirely In addition, our learnings are being leveraged by other internal teams, including those building Kubernetes-native training infrastructure, to inform their job scheduling and queuing configurations.Fair Sharing and PreemptionWith Kueue, Preemption-based Fair Sharing allows Netflix Batch to maintain reservation semantics while lending resources to other tenants when those reservations are not in use For our customers, this means that tenants can use more idle capacity from reservations, submit more jobs without the risk of starvation, and have quicker turnaround times for business-critical workloads.An example preemption configuration on a ClusterQueue that we would be using is as follows:apiVersion: kueue.x-k8s.io/v1beta2kind: ClusterQueuemetadata: name: &amp;quot;team-a-cq&amp;quot;spec: preemption: reclaimWithinCohort: Any withinClusterQueue: LowerPriorityWith these features deployed, Compute has seen a significant increase in average resource utilization.AcknowledgementThis work would not have been possible without the great work of the entire Compute team at Netflix.How Netflix Simplified Batch Compute with Kueue was originally published in Netflix TechBlog on Medium, where people are continuing the conversation by highlighting and responding to this story.</description>
-      <pubDate>Mon, 22 Jun 2026 21:35:01 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/how-netflix-simplified-batch-compute-with-kueue-87860682629c?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>What Link data tells us about AI spending</title>
