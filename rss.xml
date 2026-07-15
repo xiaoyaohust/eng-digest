@@ -6,30 +6,30 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 14 Jul 2026 10:42:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 10:46:44 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>How the community trained Gemma to &quot;Think&quot; with Tunix and TPUs</title>
-      <link>https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</link>
-      <description>The Google Tunix Hackathon on Kaggle challenged developers to transform small, non-reasoning base models into general reasoning engines using Kaggle TPUs and a limited compute budget The winning teams achieved this by implementing multi-stage post-training pipelines that combined Supervised Fine-Tuning (SFT) with advanced alignment techniques like GRPO and SimPO Ultimately, the competition democratized AI development by proving that highly capable, structured reasoning models can be successfully trained by the community using accessible, open-source resources.</description>
-      <pubDate>Tue, 14 Jul 2026 10:42:31 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-the-community-trained-gemma-to-think-with-tunix-and-tpus/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Gemma 4 12B: The Developer Guide</title>
-      <link>https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</link>
-      <description>The newly released Gemma 4 12B is a dense, multimodal model designed for high-performance local AI execution on consumer devices By introducing a novel, encoder-free architecture, it bypasses traditional visual and audio encoders to feed multimodal data directly into the LLM backbone.</description>
-      <pubDate>Tue, 14 Jul 2026 10:42:31 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</title>
       <link>https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</link>
       <description>Google DeepMind’s Gemma 4 12B model brings agentic, multimodal AI capabilities to everyday laptops with 16GB of RAM, enabling local data processing and visual insight generation Users can leverage this model on macOS through the Google AI Edge Gallery for dynamic Python code execution and visualization, as well as via Google AI Edge Eloquent for completely offline voice dictation and text editing Additionally, developer workflows are enhanced by the LiteRT-LM CLI&amp;apos;s new serve command, which creates an industry-compatible local endpoint to power fully-local AI tools and agents.</description>
-      <pubDate>Tue, 14 Jul 2026 10:42:31 GMT</pubDate>
+      <pubDate>Wed, 15 Jul 2026 10:46:41 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing the Google Colab CLI</title>
+      <link>https://developers.googleblog.com/introducing-the-google-colab-cli/</link>
+      <description>Google has announced the Google Colab Command-Line Interface (CLI), a new tool that allows developers and AI agents to connect local terminals to remote Colab runtimes for frictionless execution The lightweight CLI enables users to easily request high-powered GPUs, run local Python scripts remotely, and seamlessly retrieve artifact logs or models like fine-tuned Gemma 3 adapters By integrating directly into standard terminal environments, the tool is highly programmable and ready to be used by AI agents such as Antigravity or Claude Code to manage complex machine learning pipelines.</description>
+      <pubDate>Wed, 15 Jul 2026 10:46:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-google-colab-cli/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>DiffusionGemma: The Developer Guide</title>
+      <link>https://developers.googleblog.com/diffusiongemma-the-developer-guide/</link>
+      <description>DiffusionGemma is an experimental text-generation model built on the Gemma 4 architecture that uses diffusion-based parallel generation instead of token-by-token autoregression, enabling much faster inference, bidirectional context awareness, and real-time self-correction while remaining deployable on consumer GPUs Its architecture generates and refines 256-token blocks in parallel through iterative denoising, allowing it to handle complex constraint-based tasks such as Sudoku more effectively than traditional language models and demonstrating strong gains from fine-tuning The model integrates with vLLM and other popular inference frameworks, giving developers access to a new non-autoregressive approach that combines high performance, efficient long-context scaling, and straightforward customization and deployment.</description>
+      <pubDate>Wed, 15 Jul 2026 10:46:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/diffusiongemma-the-developer-guide/</guid>
       <source>Google Developers</source>
     </item>
     <item>
