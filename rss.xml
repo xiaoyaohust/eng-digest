@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 15 Jul 2026 10:46:44 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 10:56:27 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</title>
-      <link>https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</link>
-      <description>Google DeepMind’s Gemma 4 12B model brings agentic, multimodal AI capabilities to everyday laptops with 16GB of RAM, enabling local data processing and visual insight generation Users can leverage this model on macOS through the Google AI Edge Gallery for dynamic Python code execution and visualization, as well as via Google AI Edge Eloquent for completely offline voice dictation and text editing Additionally, developer workflows are enhanced by the LiteRT-LM CLI&amp;apos;s new serve command, which creates an industry-compatible local endpoint to power fully-local AI tools and agents.</description>
-      <pubDate>Wed, 15 Jul 2026 10:46:41 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Introducing the Google Colab CLI</title>
       <link>https://developers.googleblog.com/introducing-the-google-colab-cli/</link>
       <description>Google has announced the Google Colab Command-Line Interface (CLI), a new tool that allows developers and AI agents to connect local terminals to remote Colab runtimes for frictionless execution The lightweight CLI enables users to easily request high-powered GPUs, run local Python scripts remotely, and seamlessly retrieve artifact logs or models like fine-tuned Gemma 3 adapters By integrating directly into standard terminal environments, the tool is highly programmable and ready to be used by AI agents such as Antigravity or Claude Code to manage complex machine learning pipelines.</description>
-      <pubDate>Wed, 15 Jul 2026 10:46:41 GMT</pubDate>
+      <pubDate>Thu, 16 Jul 2026 10:56:24 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/introducing-the-google-colab-cli/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>DiffusionGemma: The Developer Guide</title>
       <link>https://developers.googleblog.com/diffusiongemma-the-developer-guide/</link>
       <description>DiffusionGemma is an experimental text-generation model built on the Gemma 4 architecture that uses diffusion-based parallel generation instead of token-by-token autoregression, enabling much faster inference, bidirectional context awareness, and real-time self-correction while remaining deployable on consumer GPUs Its architecture generates and refines 256-token blocks in parallel through iterative denoising, allowing it to handle complex constraint-based tasks such as Sudoku more effectively than traditional language models and demonstrating strong gains from fine-tuning The model integrates with vLLM and other popular inference frameworks, giving developers access to a new non-autoregressive approach that combines high performance, efficient long-context scaling, and straightforward customization and deployment.</description>
-      <pubDate>Wed, 15 Jul 2026 10:46:41 GMT</pubDate>
+      <pubDate>Thu, 16 Jul 2026 10:56:24 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/diffusiongemma-the-developer-guide/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Enhance Security and Trust: New Session Metadata in Sign in with Google</title>
+      <link>https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</link>
+      <description>Google is enhancing Sign in with Google by introducing new OIDC standard claims—specifically auth_time and amr (Authentication Methods Reference) to provide developers with deeper session metadata These updates allow verified apps to verify the &amp;quot;freshness&amp;quot; of a user&amp;apos;s login and the specific authentication methods used (such as MFA or hardware keys), enabling more dynamic, risk-based access controls By leveraging these federated identity signals, platforms can better prevent account takeover and fraud while implementing granular security policies like step-up authentication for sensitive actions.</description>
+      <pubDate>Thu, 16 Jul 2026 10:56:24 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub for Beginners: Your roadmap to mastering the GitHub essentials</title>
+      <link>https://github.blog/developer-skills/github/github-for-beginners-your-roadmap-to-mastering-the-github-essentials/</link>
+      <description>This beginner&amp;apos;s guide explains version control, repositories, and pull requests—plus everything else you need to start working confidently on GitHub The post GitHub for Beginners: Your roadmap to mastering the GitHub essentials appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 15 Jul 2026 17:29:31 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-your-roadmap-to-mastering-the-github-essentials/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization</title>
+      <link>https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/</link>
+      <description>Hierarchical Interest Representation is a research area for Meta Ads The innovations in Hierarchical Interest Representation are [...] Read More The post Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization appeared first on Engineering at Meta.</description>
+      <pubDate>Wed, 15 Jul 2026 17:00:52 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned</title>
@@ -81,14 +97,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Automating cross-repo documentation with GitHub Agentic Workflows</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/</link>
-      <description>Explore how the Aspire team turns merged product changes into SME-reviewed docs pull requests, closing the gap between release and documentation The post Automating cross-repo documentation with GitHub Agentic Workflows appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 08 Jul 2026 21:11:56 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)</title>
       <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/</link>
       <description>A couple of editions ago I wrote about what I find so energizing about working with startups Last week I got a fresh dose of it: I spent a few days with the AWS Startups team, listening to stories of founders talking about the problems they’re actually solving One story that stayed with me came […]</description>
@@ -102,14 +110,6 @@
       <description>During the past year or so, the time between new-frontier-model releases has gone down from months to weeks Reliable and fast access to storage is important to both the speed and computational cost of this AI innovation The post Meta’s AI Storage Blueprint at Scale appeared first on Engineering at Meta.</description>
       <pubDate>Wed, 01 Jul 2026 16:00:36 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>10 Years of Meta’s Commitment to Python</title>
-      <link>https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/</link>
-      <description>This year marks Meta’s 10th consecutive year as a sponsor of the Python Software Foundation (PSF), the charitable organization dedicated to advancing, supporting, and protecting the open-source Python programming language and the community that sustains it Python is one of the world’s most influential programming languages, and we use it across our engineering stack, from [...] Read More The post 10 Years of Meta’s Commitment to Python appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 30 Jun 2026 16:00:46 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/06/30/open-source/10-years-of-metas-commitment-to-python/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
