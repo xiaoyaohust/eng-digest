@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-07-17</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-07-17</p>
+        <div class="stats">
+            <span class="stat-item"><strong>18</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/" target="_blank" rel="noopener noreferrer">
+                                Amazon SQS turns 20: Two decades of reliable messaging at scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-13 18:13</p>
+                    <p class="article-summary">On July 13, 2006, we launched Amazon Simple Queue Service (Amazon SQS) as one of the first three services available to customers, alongside Amazon EC2 and Amazon S3 We had learned firsthand that distributed systems need a reliable way to pass messages between components without creating tight dependencies If one service called another directly and […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-13 16:18</p>
+                    <p class="article-summary">AWS Builder Center turned one year old last week Launched on July 9, 2025, the platform has grown from a community hub with Wishlist voting, community profiles, and a toolbox into a full ecosystem with sandbox environments, workshops, Spaces, and a Builders’ Library To mark the anniversary, Rick Suttles published a full feature timeline covering […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-06 15:46</p>
+                    <p class="article-summary">A couple of editions ago I wrote about what I find so energizing about working with startups Last week I got a fresh dose of it: I spent a few days with the AWS Startups team, listening to stories of founders talking about the problems they’re actually solving One story that stayed with me came […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" target="_blank" rel="noopener noreferrer">
+                                How we used DSPy to turn AI evaluations into better responses in Dash chat
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-25 16:30</p>
+                    <p class="article-summary">We used DSPy to improve LLM judges and optimize our chat experience, creating an evaluation-driven feedback loop that produced better outputs.</p>
+                    
+                    <a href="https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/developer-skills/github/github-for-beginners-your-roadmap-to-mastering-the-github-essentials/" target="_blank" rel="noopener noreferrer">
+                                GitHub for Beginners: Your roadmap to mastering the GitHub essentials
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-15 17:29</p>
+                    <p class="article-summary">This beginner's guide explains version control, repositories, and pull requests—plus everything else you need to start working confidently on GitHub The post GitHub for Beginners: Your roadmap to mastering the GitHub essentials appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/developer-skills/github/github-for-beginners-your-roadmap-to-mastering-the-github-essentials/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/" target="_blank" rel="noopener noreferrer">
+                                Better tools made Copilot code review worse. Here’s how we actually improved it.
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-10 15:57</p>
+                    <p class="article-summary">How migrating Copilot code review to shared Unix-style code exploration tools reduced review cost by reshaping agent workflows around pull request evidence The post Better tools made Copilot code review worse Here’s how we actually improved it. appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/" target="_blank" rel="noopener noreferrer">
+                                How GitHub gave every repository a durable owner
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-09 16:29</p>
+                    <p class="article-summary">GitHub had over 14,000 repositories Here's how we gave every active repository a validated owner in under 45 days, archived the rest, and made ownership the foundation for everything that followed The post How GitHub gave every repository a durable owner appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/diffusiongemma-the-developer-guide/" target="_blank" rel="noopener noreferrer">
+                                DiffusionGemma: The Developer Guide
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-17 10:44</p>
+                    <p class="article-summary">DiffusionGemma is an experimental text-generation model built on the Gemma 4 architecture that uses diffusion-based parallel generation instead of token-by-token autoregression, enabling much faster inference, bidirectional context awareness, and real-time self-correction while remaining deployable on consumer GPUs Its architecture generates and refines 256-token blocks in parallel through iterative denoising, allowing it to handle complex constraint-based tasks such as Sudoku more effectively than traditional language models and demonstrating strong gains from fine-tuning The model integrates with vLLM and other popular inference frameworks, giving developers access to a new non-autoregressive approach that combines high performance, efficient long-context scaling, and straightforward customization and deployment.</p>
+                    
+                    <a href="https://developers.googleblog.com/diffusiongemma-the-developer-guide/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/" target="_blank" rel="noopener noreferrer">
+                                Enhance Security and Trust: New Session Metadata in Sign in with Google
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-17 10:44</p>
+                    <p class="article-summary">Google is enhancing Sign in with Google by introducing new OIDC standard claims—specifically auth_time and amr (Authentication Methods Reference) to provide developers with deeper session metadata These updates allow verified apps to verify the "freshness" of a user's login and the specific authentication methods used (such as MFA or hardware keys), enabling more dynamic, risk-based access controls By leveraging these federated identity signals, platforms can better prevent account takeover and fraud while implementing granular security policies like step-up authentication for sensitive actions.</p>
+                    
+                    <a href="https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/" target="_blank" rel="noopener noreferrer">
+                                Unlocking the Power of the TPU Stack: Introducing our new Developer Hub
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-17 10:44</p>
+                    <p class="article-summary">Google has officially launched the TPU Developer Hub, a centralized educational resource designed to help model builders and developers maximize the performance of Google Cloud TPUs The hub offers code-first resources, open-source recipes, and deep-dive documentation covering hardware architecture, software optimization, debugging, parallelism, and networking These materials are tailored for both human developers and AI-assisted tools to streamline everything from large-scale training to low-latency inference workloads.</p>
+                    
+                    <a href="https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" rel="noopener noreferrer">
+                                Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-15 17:00</p>
+                    <p class="article-summary">Hierarchical Interest Representation is a research area for Meta Ads The innovations in Hierarchical Interest Representation are [...] Read More The post Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" target="_blank" rel="noopener noreferrer">
+                                Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-13 16:00</p>
+                    <p class="article-summary">TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance When a Linux kernel upgrade risked regressing latency across Meta’s ad serving fleet, we turned to sched_ext — the upstream, BPF-based extensible scheduling framework — to build a scheduling policy customized to the Ads delivery [...] Read More The post Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" target="_blank" rel="noopener noreferrer">
+                                Meta’s AI Storage Blueprint at Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-01 16:00</p>
+                    <p class="article-summary">During the past year or so, the time between new-frontier-model releases has gone down from months to weeks Reliable and fast access to storage is important to both the speed and computational cost of this AI innovation The post Meta’s AI Storage Blueprint at Scale appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-13 22:44</p>
+                    <p class="article-summary">Instead of batch jobs that process historical data, we continuously ingest flow records from multi-region Kafka streams and IPC metrics as Server-Sent Events, process them through reactive pipelines with backpressure handling, and provide near real-time topology updates, typically within tens of minutes, compared to the hours-old or day-old data that batch processing approaches provide.This wasn’t just about freshness, it was essential for our use cases When data arrives with the right partitioning, you can aggregate directly; when it doesn’t (like network flows requiring intermediary resolution), you need shuffle/redistribution stages.Dynamic Load Distribution: How Hashing Works with Auto-ScalingHow do we decide which instance receives which aggregator when our Auto Scaling Groups dynamically add or remove instances GC logs showed pauses consuming significant CPU time, in some cases, more than our business logic.Root Cause: Multiple factors contributed: objects accumulating in heap while waiting for 5-minute aggregation windows to complete, unnecessary conversions between different object types as data flowed through stages, and immutability overhead, following Scala best practices, we used immutable data structures for aggregators, but every update created new objects, overwhelming the garbage collector at millions of records per second.Investigation: Heap dumps and GC logs revealed flow log objects retained beyond their useful lifetime, unnecessary intermediate conversion objects, and constant creation/disposal of immutable aggregator versions</p>
+                    
+                    <a href="https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                GenPage: Towards End-to-End Generative Homepage Construction at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-29 13:01</p>
+                    <p class="article-summary">This sequence includes the full structured homepage layout, with multiple rows and the entities inside them, so the model can generate the page holistically rather than scoring each row or entity in isolation.Figure 2 At a high level, WBC turns generation into token-level value prediction: given the user context and the tokens generated so far, the model learns to estimate the value of generating each possible next row or entity token.This objective is easier to optimize than page-level RL WBC post-training loss as we progressively enrich the user context tokens</p>
+                    
+                    <a href="https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Toward More Controllable AI Video Editing: An Early Research Exploration at Netflix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-23 00:31</p>
+                    <p class="article-summary">We believe this work can help advance the field in a way that’s both meaningful and responsible:Vera: a layered video diffusion model Vera generates only what needs to change as separate edit layers while leaving the rest of the video untouched, preserving the identities, performances, and other details from the source footage exactly as filmed.VOID: a video inpainting model for video object and interaction deletion Specifically, the counterfactual videos are generated by re-simulating the exact scene from the original video, but with the target object(s) or human removed</p>
+                    
+                    <a href="https://netflixtechblog.com/toward-more-controllable-ai-video-editing-an-early-research-exploration-at-netflix-eb8160ed60a2?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/trends-from-hitec" target="_blank" rel="noopener noreferrer">
+                                Four travel and hospitality trends from HITEC 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-23 00:00</p>
+                    <p class="article-summary">More than 6,000 hospitality executives and operators gathered in San Antonio last week for the HITEC conference The big topic: whether the industry’s AI investment is actually working Across four days and over 50 meetings, four trends stood out.</p>
+                    
+                    <a href="https://stripe.com/blog/trends-from-hitec" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/what-link-data-tells-us-about-ai-spending" target="_blank" rel="noopener noreferrer">
+                                What Link data tells us about AI spending
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-06-18 00:00</p>
+                    <p class="article-summary">We analyzed spending patterns across the 250 million customers paying with Link We found that Link customers are spending more on AI than they were three months prior, investing heavily in platforms that let them build with AI.</p>
+                    
+                    <a href="https://stripe.com/blog/what-link-data-tells-us-about-ai-spending" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-07-17 10:44:26</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
