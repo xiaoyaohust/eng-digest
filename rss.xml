@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 18 Jul 2026 10:16:11 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 10:24:54 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>DiffusionGemma: The Developer Guide</title>
       <link>https://developers.googleblog.com/diffusiongemma-the-developer-guide/</link>
       <description>DiffusionGemma is an experimental text-generation model built on the Gemma 4 architecture that uses diffusion-based parallel generation instead of token-by-token autoregression, enabling much faster inference, bidirectional context awareness, and real-time self-correction while remaining deployable on consumer GPUs Its architecture generates and refines 256-token blocks in parallel through iterative denoising, allowing it to handle complex constraint-based tasks such as Sudoku more effectively than traditional language models and demonstrating strong gains from fine-tuning The model integrates with vLLM and other popular inference frameworks, giving developers access to a new non-autoregressive approach that combines high performance, efficient long-context scaling, and straightforward customization and deployment.</description>
-      <pubDate>Sat, 18 Jul 2026 10:16:08 GMT</pubDate>
+      <pubDate>Sun, 19 Jul 2026 10:24:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/diffusiongemma-the-developer-guide/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Enhance Security and Trust: New Session Metadata in Sign in with Google</title>
       <link>https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</link>
       <description>Google is enhancing Sign in with Google by introducing new OIDC standard claims—specifically auth_time and amr (Authentication Methods Reference) to provide developers with deeper session metadata These updates allow verified apps to verify the &amp;quot;freshness&amp;quot; of a user&amp;apos;s login and the specific authentication methods used (such as MFA or hardware keys), enabling more dynamic, risk-based access controls By leveraging these federated identity signals, platforms can better prevent account takeover and fraud while implementing granular security policies like step-up authentication for sensitive actions.</description>
-      <pubDate>Sat, 18 Jul 2026 10:16:08 GMT</pubDate>
+      <pubDate>Sun, 19 Jul 2026 10:24:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</title>
       <link>https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</link>
       <description>Google has officially launched the TPU Developer Hub, a centralized educational resource designed to help model builders and developers maximize the performance of Google Cloud TPUs The hub offers code-first resources, open-source recipes, and deep-dive documentation covering hardware architecture, software optimization, debugging, parallelism, and networking These materials are tailored for both human developers and AI-assisted tools to streamline everything from large-scale training to low-latency inference workloads.</description>
-      <pubDate>Sat, 18 Jul 2026 10:16:08 GMT</pubDate>
+      <pubDate>Sun, 19 Jul 2026 10:24:51 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</guid>
       <source>Google Developers</source>
     </item>
