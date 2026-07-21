@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 20 Jul 2026 11:42:15 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 11:05:39 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>DiffusionGemma: The Developer Guide</title>
-      <link>https://developers.googleblog.com/diffusiongemma-the-developer-guide/</link>
-      <description>DiffusionGemma is an experimental text-generation model built on the Gemma 4 architecture that uses diffusion-based parallel generation instead of token-by-token autoregression, enabling much faster inference, bidirectional context awareness, and real-time self-correction while remaining deployable on consumer GPUs Its architecture generates and refines 256-token blocks in parallel through iterative denoising, allowing it to handle complex constraint-based tasks such as Sudoku more effectively than traditional language models and demonstrating strong gains from fine-tuning The model integrates with vLLM and other popular inference frameworks, giving developers access to a new non-autoregressive approach that combines high performance, efficient long-context scaling, and straightforward customization and deployment.</description>
-      <pubDate>Mon, 20 Jul 2026 11:42:12 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/diffusiongemma-the-developer-guide/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Enhance Security and Trust: New Session Metadata in Sign in with Google</title>
       <link>https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</link>
       <description>Google is enhancing Sign in with Google by introducing new OIDC standard claims—specifically auth_time and amr (Authentication Methods Reference) to provide developers with deeper session metadata These updates allow verified apps to verify the &amp;quot;freshness&amp;quot; of a user&amp;apos;s login and the specific authentication methods used (such as MFA or hardware keys), enabling more dynamic, risk-based access controls By leveraging these federated identity signals, platforms can better prevent account takeover and fraud while implementing granular security policies like step-up authentication for sensitive actions.</description>
-      <pubDate>Mon, 20 Jul 2026 11:42:12 GMT</pubDate>
+      <pubDate>Tue, 21 Jul 2026 11:05:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</title>
       <link>https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</link>
       <description>Google has officially launched the TPU Developer Hub, a centralized educational resource designed to help model builders and developers maximize the performance of Google Cloud TPUs The hub offers code-first resources, open-source recipes, and deep-dive documentation covering hardware architecture, software optimization, debugging, parallelism, and networking These materials are tailored for both human developers and AI-assisted tools to streamline everything from large-scale training to low-latency inference workloads.</description>
-      <pubDate>Mon, 20 Jul 2026 11:42:12 GMT</pubDate>
+      <pubDate>Tue, 21 Jul 2026 11:05:37 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing the Agentic Resource Discovery specification</title>
+      <link>https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</link>
+      <description>An open specification for finding and verifying tools, skills, and agents across the web.Agents are ...</description>
+      <pubDate>Tue, 21 Jul 2026 11:05:37 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/</link>
+      <description>Last week, my team visited Seoul to meet AWS Korea User Group (AWSKRUG) leaders AWSKRUG is the largest cloud developer community in Korea, with 20 meetup groups organized by topic and area that collectively host over 100 events each year, primarily in Seoul My team regularly visits countries across the Asia-Pacific region, listens to feedback […]</description>
+      <pubDate>Mon, 20 Jul 2026 16:37:34 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-one-click-lambda-setup-prompt-openai-gpt-5-6-models-on-bedrock-and-more-july-20-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>$100 million for open source: A milestone built by the community</title>
+      <link>https://github.blog/open-source/maintainers/100-million-for-open-source-a-milestone-built-by-the-community/</link>
+      <description>Celebrating $100 million contributed by the community to the people who build and sustain open source every day The post $100 million for open source: A milestone built by the community appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 20 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/100-million-for-open-source-a-milestone-built-by-the-community/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How our universal content processing platform Riviera evolved for AI and beyond</title>
+      <link>https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond</link>
+      <description>Riviera is the Dropbox content processing platform that’s been iteratively improving content transformation in our products for roughly a decade.</description>
+      <pubDate>Mon, 20 Jul 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond</guid>
+      <source>Dropbox Engineering</source>
     </item>
     <item>
       <title>In-House LLM Serving at Netflix</title>
@@ -95,22 +119,6 @@
       <pubDate>Mon, 13 Jul 2026 16:00:50 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Better tools made Copilot code review worse. Here’s how we actually improved it.</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/</link>
-      <description>How migrating Copilot code review to shared Unix-style code exploration tools reduced review cost by reshaping agent workflows around pull request evidence The post Better tools made Copilot code review worse Here’s how we actually improved it. appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 10 Jul 2026 15:57:47 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Claude Sonnet 5 on AWS, Amazon WorkSpaces for AI agents, AWS service availability updates, and more (July 6, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/</link>
-      <description>A couple of editions ago I wrote about what I find so energizing about working with startups Last week I got a fresh dose of it: I spent a few days with the AWS Startups team, listening to stories of founders talking about the problems they’re actually solving One story that stayed with me came […]</description>
-      <pubDate>Mon, 06 Jul 2026 15:46:43 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Meta’s AI Storage Blueprint at Scale</title>
