@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 21 Jul 2026 11:05:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 11:06:33 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Enhance Security and Trust: New Session Metadata in Sign in with Google</title>
-      <link>https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</link>
-      <description>Google is enhancing Sign in with Google by introducing new OIDC standard claims—specifically auth_time and amr (Authentication Methods Reference) to provide developers with deeper session metadata These updates allow verified apps to verify the &amp;quot;freshness&amp;quot; of a user&amp;apos;s login and the specific authentication methods used (such as MFA or hardware keys), enabling more dynamic, risk-based access controls By leveraging these federated identity signals, platforms can better prevent account takeover and fraud while implementing granular security policies like step-up authentication for sensitive actions.</description>
-      <pubDate>Tue, 21 Jul 2026 11:05:37 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/enhance-security-and-trust-new-session-metadata-in-sign-in-with-google/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</title>
       <link>https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</link>
       <description>Google has officially launched the TPU Developer Hub, a centralized educational resource designed to help model builders and developers maximize the performance of Google Cloud TPUs The hub offers code-first resources, open-source recipes, and deep-dive documentation covering hardware architecture, software optimization, debugging, parallelism, and networking These materials are tailored for both human developers and AI-assisted tools to streamline everything from large-scale training to low-latency inference workloads.</description>
-      <pubDate>Tue, 21 Jul 2026 11:05:37 GMT</pubDate>
+      <pubDate>Wed, 22 Jul 2026 11:06:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Announcing the Agentic Resource Discovery specification</title>
       <link>https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</link>
       <description>An open specification for finding and verifying tools, skills, and agents across the web.Agents are ...</description>
-      <pubDate>Tue, 21 Jul 2026 11:05:37 GMT</pubDate>
+      <pubDate>Wed, 22 Jul 2026 11:06:29 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>A2UI + MCP Apps: Combining the best of declarative and custom agentic UIs</title>
+      <link>https://developers.googleblog.com/a2ui-and-mcp-apps/</link>
+      <description>This post introduces three architectural patterns designed to integrate Model Context Protocol (MCP) Apps and Agent-to-User Interface (A2UI) to solve the tradeoff between highly custom iframe environments and native, declarative rendering By combining these approaches, developers can serve native-feeling UIs directly over MCP servers, embed complex and stateful iframe apps securely inside declarative views, or inject generative UI components into legacy systems Ultimately, these hybrid frameworks empower engineering teams to deliver secure, performant, and brand-consistent agentic user experiences tailored to their specific project constraints.</description>
+      <pubDate>Wed, 22 Jul 2026 11:06:29 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/a2ui-and-mcp-apps/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How to build interactive experiences with canvases</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/</link>
+      <description>Canvases turn AI into interactive workspaces where you can visualize information, explore workflows, and take action across complex tasks The post How to build interactive experiences with canvases appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 21 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Analyzing the evidence that helps businesses win “product not received” disputes</title>
+      <link>https://stripe.com/blog/analyzing-the-evidence-that-helps-businesses-win-product-not-received-disputes</link>
+      <description>To understand what can influence win rates, we analyzed evidence packets from one million disputes over a 16-week period Here’s what the data shows and what it means for how you mitigate disputes.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/analyzing-the-evidence-that-helps-businesses-win-product-not-received-disputes</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: One-click Lambda setup prompt, OpenAI GPT-5.6 models on Bedrock, and more (July 20, 2026)</title>
@@ -70,14 +86,6 @@
       <description>The cost of writing code dropped; the cost of owning it didn&amp;apos;t A framework for deciding which changes are actually cheap in the AI era The post The cost of saying yes has changed appeared first on The GitHub Blog.</description>
       <pubDate>Fri, 17 Jul 2026 16:46:47 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/engineering/the-cost-of-saying-yes-has-changed/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>GitHub for Beginners: Your roadmap to mastering the GitHub essentials</title>
-      <link>https://github.blog/developer-skills/github/github-for-beginners-your-roadmap-to-mastering-the-github-essentials/</link>
-      <description>This beginner&amp;apos;s guide explains version control, repositories, and pull requests—plus everything else you need to start working confidently on GitHub The post GitHub for Beginners: Your roadmap to mastering the GitHub essentials appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 15 Jul 2026 17:29:31 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/github/github-for-beginners-your-roadmap-to-mastering-the-github-essentials/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
