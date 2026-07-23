@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 22 Jul 2026 11:06:33 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 11:06:31 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</title>
       <link>https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</link>
       <description>Google has officially launched the TPU Developer Hub, a centralized educational resource designed to help model builders and developers maximize the performance of Google Cloud TPUs The hub offers code-first resources, open-source recipes, and deep-dive documentation covering hardware architecture, software optimization, debugging, parallelism, and networking These materials are tailored for both human developers and AI-assisted tools to streamline everything from large-scale training to low-latency inference workloads.</description>
-      <pubDate>Wed, 22 Jul 2026 11:06:29 GMT</pubDate>
+      <pubDate>Thu, 23 Jul 2026 11:06:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Announcing the Agentic Resource Discovery specification</title>
       <link>https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</link>
       <description>An open specification for finding and verifying tools, skills, and agents across the web.Agents are ...</description>
-      <pubDate>Wed, 22 Jul 2026 11:06:29 GMT</pubDate>
+      <pubDate>Thu, 23 Jul 2026 11:06:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>A2UI + MCP Apps: Combining the best of declarative and custom agentic UIs</title>
       <link>https://developers.googleblog.com/a2ui-and-mcp-apps/</link>
       <description>This post introduces three architectural patterns designed to integrate Model Context Protocol (MCP) Apps and Agent-to-User Interface (A2UI) to solve the tradeoff between highly custom iframe environments and native, declarative rendering By combining these approaches, developers can serve native-feeling UIs directly over MCP servers, embed complex and stateful iframe apps securely inside declarative views, or inject generative UI components into legacy systems Ultimately, these hybrid frameworks empower engineering teams to deliver secure, performant, and brand-consistent agentic user experiences tailored to their specific project constraints.</description>
-      <pubDate>Wed, 22 Jul 2026 11:06:29 GMT</pubDate>
+      <pubDate>Thu, 23 Jul 2026 11:06:28 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a2ui-and-mcp-apps/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Copilot vs. raw API access: What are you actually paying for?</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/</link>
+      <description>Copilot now bills usage at listed API rates Compare direct model access with the coding workflow, policy, and harness work around it The post Copilot vs. raw API access: What are you actually paying for? appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 22 Jul 2026 19:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Next chapter: Restructuring GitHub’s bug bounty program</title>
+      <link>https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/</link>
+      <description>GitHub is making some significant changes to its bug bounty program, shifting its focus to give researchers a better experience working with the GitHub team The post Next chapter: Restructuring GitHub’s bug bounty program appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 22 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>How to build interactive experiences with canvases</title>
@@ -57,14 +73,6 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>$100 million for open source: A milestone built by the community</title>
-      <link>https://github.blog/open-source/maintainers/100-million-for-open-source-a-milestone-built-by-the-community/</link>
-      <description>Celebrating $100 million contributed by the community to the people who build and sustain open source every day The post $100 million for open source: A milestone built by the community appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 20 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/100-million-for-open-source-a-milestone-built-by-the-community/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>How our universal content processing platform Riviera evolved for AI and beyond</title>
       <link>https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond</link>
       <description>Riviera is the Dropbox content processing platform that’s been iteratively improving content transformation in our products for roughly a decade.</description>
@@ -79,14 +87,6 @@
       <pubDate>Fri, 17 Jul 2026 21:32:39 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>The cost of saying yes has changed</title>
-      <link>https://github.blog/engineering/the-cost-of-saying-yes-has-changed/</link>
-      <description>The cost of writing code dropped; the cost of owning it didn&amp;apos;t A framework for deciding which changes are actually cheap in the AI era The post The cost of saying yes has changed appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 17 Jul 2026 16:46:47 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/the-cost-of-saying-yes-has-changed/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization</title>
@@ -151,14 +151,6 @@
       <pubDate>Thu, 25 Jun 2026 16:30:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-we-turned-ai-evaluations-into-better-responses-in-dash-chat</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Four travel and hospitality trends from HITEC 2026</title>
-      <link>https://stripe.com/blog/trends-from-hitec</link>
-      <description>More than 6,000 hospitality executives and operators gathered in San Antonio last week for the HITEC conference The big topic: whether the industry’s AI investment is actually working Across four days and over 50 meetings, four trends stood out.</description>
-      <pubDate>Tue, 23 Jun 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/trends-from-hitec</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
