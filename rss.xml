@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 23 Jul 2026 11:06:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 11:01:25 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</title>
       <link>https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</link>
       <description>Google has officially launched the TPU Developer Hub, a centralized educational resource designed to help model builders and developers maximize the performance of Google Cloud TPUs The hub offers code-first resources, open-source recipes, and deep-dive documentation covering hardware architecture, software optimization, debugging, parallelism, and networking These materials are tailored for both human developers and AI-assisted tools to streamline everything from large-scale training to low-latency inference workloads.</description>
-      <pubDate>Thu, 23 Jul 2026 11:06:28 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 11:01:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Announcing the Agentic Resource Discovery specification</title>
       <link>https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</link>
       <description>An open specification for finding and verifying tools, skills, and agents across the web.Agents are ...</description>
-      <pubDate>Thu, 23 Jul 2026 11:06:28 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 11:01:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>A2UI + MCP Apps: Combining the best of declarative and custom agentic UIs</title>
       <link>https://developers.googleblog.com/a2ui-and-mcp-apps/</link>
       <description>This post introduces three architectural patterns designed to integrate Model Context Protocol (MCP) Apps and Agent-to-User Interface (A2UI) to solve the tradeoff between highly custom iframe environments and native, declarative rendering By combining these approaches, developers can serve native-feeling UIs directly over MCP servers, embed complex and stateful iframe apps securely inside declarative views, or inject generative UI components into legacy systems Ultimately, these hybrid frameworks empower engineering teams to deliver secure, performant, and brand-consistent agentic user experiences tailored to their specific project constraints.</description>
-      <pubDate>Thu, 23 Jul 2026 11:06:28 GMT</pubDate>
+      <pubDate>Fri, 24 Jul 2026 11:01:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a2ui-and-mcp-apps/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The case for a cooldown: Why Dependabot now waits before issuing version updates</title>
+      <link>https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/</link>
+      <description>A new default three-day cooldown delays version update pull requests so maintainers and security researchers can address findings in a release before it gets into your code The post The case for a cooldown: Why Dependabot now waits before issuing version updates appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Copilot vs. raw API access: What are you actually paying for?</title>
@@ -46,14 +54,6 @@
       <description>GitHub is making some significant changes to its bug bounty program, shifting its focus to give researchers a better experience working with the GitHub team The post Next chapter: Restructuring GitHub’s bug bounty program appeared first on The GitHub Blog.</description>
       <pubDate>Wed, 22 Jul 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>How to build interactive experiences with canvases</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/</link>
-      <description>Canvases turn AI into interactive workspaces where you can visualize information, explore workflows, and take action across complex tasks The post How to build interactive experiences with canvases appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 21 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-build-interactive-experiences-with-canvases/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
