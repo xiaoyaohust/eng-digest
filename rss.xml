@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 27 Jul 2026 12:19:33 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 11:14:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Announcing the Agentic Resource Discovery specification</title>
       <link>https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</link>
       <description>An open specification for finding and verifying tools, skills, and agents across the web.Agents are ...</description>
-      <pubDate>Mon, 27 Jul 2026 12:19:29 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 11:14:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>A2UI + MCP Apps: Combining the best of declarative and custom agentic UIs</title>
       <link>https://developers.googleblog.com/a2ui-and-mcp-apps/</link>
       <description>This post introduces three architectural patterns designed to integrate Model Context Protocol (MCP) Apps and Agent-to-User Interface (A2UI) to solve the tradeoff between highly custom iframe environments and native, declarative rendering By combining these approaches, developers can serve native-feeling UIs directly over MCP servers, embed complex and stateful iframe apps securely inside declarative views, or inject generative UI components into legacy systems Ultimately, these hybrid frameworks empower engineering teams to deliver secure, performant, and brand-consistent agentic user experiences tailored to their specific project constraints.</description>
-      <pubDate>Mon, 27 Jul 2026 12:19:29 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 11:14:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a2ui-and-mcp-apps/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>How A2A is Building a World of Collaborative Agents</title>
       <link>https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/</link>
       <description>Celebrating the first anniversary of the Agent-to-Agent (A2A) protocol, this blog post highlights how the framework enables autonomous AI agents to securely collaborate and hand off tasks without the rigidity of traditional APIs By delegating complex workflows to specialized peer agents, A2A prevents context pollution, ensures data privacy, and simplifies application design through modularity To demonstrate this ecosystem in action, the post spotlights FoldRun—an agentic interface for life sciences that orchestrates complex protein structure predictions—alongside diverse A2A use cases spanning commerce, data streaming, DevOps, and telecommunications.</description>
-      <pubDate>Mon, 27 Jul 2026 12:19:29 GMT</pubDate>
+      <pubDate>Tue, 28 Jul 2026 11:14:15 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The harness is all you need (mostly)</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/</link>
+      <description>A practical GitHub Copilot workflow for prototyping, planning, implementing, and reviewing software without chasing every new AI tool The post The harness is all you need (mostly) appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 27 Jul 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>GitHub Copilot app for Beginners: Getting started</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/</link>
+      <description>New to the GitHub Copilot app Learn how to start projects, work with AI agents, explore canvases, and streamline your development workflow The post GitHub Copilot app for Beginners: Getting started appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 27 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Local Zone in Athens, Claude Opus 5 on AWS, Lambda durable execution for .NET, and more (July 27, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/</link>
+      <description>Last week I had the privilege of spending three days in São Paulo with technical builders from across Latin America, brought together for a regional tech event full of deep-dive sessions, hands-on workshops, and conversations with customers and partners What struck me most wasn’t any single session, it was the energy of a technical community […]</description>
+      <pubDate>Mon, 27 Jul 2026 14:54:41 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>The case for a cooldown: Why Dependabot now waits before issuing version updates</title>
@@ -38,22 +62,6 @@
       <description>A new default three-day cooldown delays version update pull requests so maintainers and security researchers can address findings in a release before it gets into your code The post The case for a cooldown: Why Dependabot now waits before issuing version updates appeared first on The GitHub Blog.</description>
       <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Copilot vs. raw API access: What are you actually paying for?</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/</link>
-      <description>Copilot now bills usage at listed API rates Compare direct model access with the coding workflow, policy, and harness work around it The post Copilot vs. raw API access: What are you actually paying for? appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 22 Jul 2026 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Next chapter: Restructuring GitHub’s bug bounty program</title>
-      <link>https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/</link>
-      <description>GitHub is making some significant changes to its bug bounty program, shifting its focus to give researchers a better experience working with the GitHub team The post Next chapter: Restructuring GitHub’s bug bounty program appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 22 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/next-chapter-restructuring-githubs-bug-bounty-program/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -110,14 +118,6 @@
       <description>On July 13, 2006, we launched Amazon Simple Queue Service (Amazon SQS) as one of the first three services available to customers, alongside Amazon EC2 and Amazon S3 We had learned firsthand that distributed systems need a reliable way to pass messages between components without creating tight dependencies If one service called another directly and […]</description>
       <pubDate>Mon, 13 Jul 2026 18:13:57 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: AWS Builder Center at 1 year, Network Scanning in Security Hub, Loom for AWS, and more (July 13, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/</link>
-      <description>AWS Builder Center turned one year old last week Launched on July 9, 2025, the platform has grown from a community hub with Wishlist voting, community profiles, and a toolbox into a full ecosystem with sandbox environments, workshops, Spaces, and a Builders’ Library To mark the anniversary, Rick Suttles published a full feature timeline covering […]</description>
-      <pubDate>Mon, 13 Jul 2026 16:18:20 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-at-one-year-network-scanning-in-security-hub-loom-for-aws-and-more-july-13-2026/</guid>
       <source>AWS News</source>
     </item>
     <item>
