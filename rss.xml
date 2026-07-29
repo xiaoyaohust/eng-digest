@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 28 Jul 2026 11:14:18 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 11:23:36 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Announcing the Agentic Resource Discovery specification</title>
       <link>https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</link>
       <description>An open specification for finding and verifying tools, skills, and agents across the web.Agents are ...</description>
-      <pubDate>Tue, 28 Jul 2026 11:14:15 GMT</pubDate>
+      <pubDate>Wed, 29 Jul 2026 11:23:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>A2UI + MCP Apps: Combining the best of declarative and custom agentic UIs</title>
       <link>https://developers.googleblog.com/a2ui-and-mcp-apps/</link>
       <description>This post introduces three architectural patterns designed to integrate Model Context Protocol (MCP) Apps and Agent-to-User Interface (A2UI) to solve the tradeoff between highly custom iframe environments and native, declarative rendering By combining these approaches, developers can serve native-feeling UIs directly over MCP servers, embed complex and stateful iframe apps securely inside declarative views, or inject generative UI components into legacy systems Ultimately, these hybrid frameworks empower engineering teams to deliver secure, performant, and brand-consistent agentic user experiences tailored to their specific project constraints.</description>
-      <pubDate>Tue, 28 Jul 2026 11:14:15 GMT</pubDate>
+      <pubDate>Wed, 29 Jul 2026 11:23:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a2ui-and-mcp-apps/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>How A2A is Building a World of Collaborative Agents</title>
       <link>https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/</link>
       <description>Celebrating the first anniversary of the Agent-to-Agent (A2A) protocol, this blog post highlights how the framework enables autonomous AI agents to securely collaborate and hand off tasks without the rigidity of traditional APIs By delegating complex workflows to specialized peer agents, A2A prevents context pollution, ensures data privacy, and simplifies application design through modularity To demonstrate this ecosystem in action, the post spotlights FoldRun—an agentic interface for life sciences that orchestrates complex protein structure predictions—alongside diverse A2A use cases spanning commerce, data streaming, DevOps, and telecommunications.</description>
-      <pubDate>Tue, 28 Jul 2026 11:14:15 GMT</pubDate>
+      <pubDate>Wed, 29 Jul 2026 11:23:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Disrupting supply chain attacks on npm and GitHub Actions</title>
+      <link>https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/</link>
+      <description>Explore the changes we&amp;apos;ve shipped across npm and GitHub Actions over the past few months to disrupt supply chain attack techniques and limit their impact The post Disrupting supply chain attacks on npm and GitHub Actions appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 28 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>The harness is all you need (mostly)</title>
@@ -55,14 +63,6 @@
       <pubDate>Mon, 27 Jul 2026 14:54:41 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>The case for a cooldown: Why Dependabot now waits before issuing version updates</title>
-      <link>https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/</link>
-      <description>A new default three-day cooldown delays version update pull requests so maintainers and security researchers can address findings in a release before it gets into your code The post The case for a cooldown: Why Dependabot now waits before issuing version updates appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 23 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Analyzing the evidence that helps businesses win “product not received” disputes</title>
