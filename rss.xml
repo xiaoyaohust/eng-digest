@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 31 Jul 2026 11:26:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 10:38:05 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>A2UI + MCP Apps: Combining the best of declarative and custom agentic UIs</title>
-      <link>https://developers.googleblog.com/a2ui-and-mcp-apps/</link>
-      <description>This post introduces three architectural patterns designed to integrate Model Context Protocol (MCP) Apps and Agent-to-User Interface (A2UI) to solve the tradeoff between highly custom iframe environments and native, declarative rendering By combining these approaches, developers can serve native-feeling UIs directly over MCP servers, embed complex and stateful iframe apps securely inside declarative views, or inject generative UI components into legacy systems Ultimately, these hybrid frameworks empower engineering teams to deliver secure, performant, and brand-consistent agentic user experiences tailored to their specific project constraints.</description>
-      <pubDate>Fri, 31 Jul 2026 11:26:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/a2ui-and-mcp-apps/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>How A2A is Building a World of Collaborative Agents</title>
-      <link>https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/</link>
-      <description>Celebrating the first anniversary of the Agent-to-Agent (A2A) protocol, this blog post highlights how the framework enables autonomous AI agents to securely collaborate and hand off tasks without the rigidity of traditional APIs By delegating complex workflows to specialized peer agents, A2A prevents context pollution, ensures data privacy, and simplifies application design through modularity To demonstrate this ecosystem in action, the post spotlights FoldRun—an agentic interface for life sciences that orchestrates complex protein structure predictions—alongside diverse A2A use cases spanning commerce, data streaming, DevOps, and telecommunications.</description>
-      <pubDate>Fri, 31 Jul 2026 11:26:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Build Cross-Language Multi-Agent Team with Google’s Agent Development Kit and A2A</title>
       <link>https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/</link>
       <description>How a Python agent and a Go agent collaborate on contract compliance using the Agent2Agent protocolY...</description>
-      <pubDate>Fri, 31 Jul 2026 11:26:54 GMT</pubDate>
+      <pubDate>Sat, 01 Aug 2026 10:38:02 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Measuring What Matters with Jules</title>
+      <link>https://developers.googleblog.com/measuring-what-matters-with-jules/</link>
+      <description>AI coding agents are rapidly shifting from reactive assistants that complete tasks when prompted to ...</description>
+      <pubDate>Sat, 01 Aug 2026 10:38:02 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/measuring-what-matters-with-jules/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine, built-in human-in-the-loop, and dynamic orchestration</title>
+      <link>https://developers.googleblog.com/announcing-adk-go-20/</link>
+      <description>The Agent Development Kit (ADK) for Go 2.0 has been released, introducing a first-class, graph-based workflow engine to help developers compose complex, multi-agent applications This update adds built-in primitives for human-in-the-loop (HITL) orchestration, dynamic execution using plain Go code, and automated resilience features like exponential backoff retries By unifying the execution model, both single-agent applications and intricate graphs now run on the same runtime, simplifying telemetry and state persistence.</description>
+      <pubDate>Sat, 01 Aug 2026 10:38:02 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-go-20/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Modeling Device Capabilities for Analytics</title>
+      <link>https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss----2615bd06b42e---4</link>
+      <description>To ensure the best possible user experience, we rely on a deep understanding of device capabilities We use a cumulative table to process information about the device’s capabilities By relying on data-driven insights, we can make informed decisions about which features to enable on specific devices, ensuring both performance and reliability.Modeling Device Capabilities for Analytics was originally published in Netflix TechBlog on Medium, where people are continuing the conversation by highlighting and responding to this story.</description>
+      <pubDate>Fri, 31 Jul 2026 16:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Don’t stop early: Case-folding source code at memory speed</title>
+      <link>https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/</link>
+      <description>How a branch-free loop and byte-space arithmetic let GitHub case-fold every byte of code search at &amp;gt;45 GiB/s on a single core The post Don’t stop early: Case-folding source code at memory speed appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>GenRec: Towards LLM-Native Recommendation at Netflix</title>
@@ -54,14 +70,6 @@
       <description>Dependabot keeps your dependencies current, but its defaults can flood your repository with pull requests Here&amp;apos;s how grouping updates, slowing the cadence, and keeping security fixes fast cut the noise on a Microsoft open source project The post Tame Dependabot: Group your updates, slow the cadence, keep security fast appeared first on The GitHub Blog.</description>
       <pubDate>Wed, 29 Jul 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Disrupting supply chain attacks on npm and GitHub Actions</title>
-      <link>https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/</link>
-      <description>Explore the changes we&amp;apos;ve shipped across npm and GitHub Actions over the past few months to disrupt supply chain attack techniques and limit their impact The post Disrupting supply chain attacks on npm and GitHub Actions appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 28 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -113,14 +121,6 @@
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Building Service Topology at Scale: Architecture, Challenges, and Lessons Learned</title>
-      <link>https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss----2615bd06b42e---4</link>
-      <description>Instead of batch jobs that process historical data, we continuously ingest flow records from multi-region Kafka streams and IPC metrics as Server-Sent Events, process them through reactive pipelines with backpressure handling, and provide near real-time topology updates, typically within tens of minutes, compared to the hours-old or day-old data that batch processing approaches provide.This wasn’t just about freshness, it was essential for our use cases When data arrives with the right partitioning, you can aggregate directly; when it doesn’t (like network flows requiring intermediary resolution), you need shuffle/redistribution stages.Dynamic Load Distribution: How Hashing Works with Auto-ScalingHow do we decide which instance receives which aggregator when our Auto Scaling Groups dynamically add or remove instances GC logs showed pauses consuming significant CPU time, in some cases, more than our business logic.Root Cause: Multiple factors contributed: objects accumulating in heap while waiting for 5-minute aggregation windows to complete, unnecessary conversions between different object types as data flowed through stages, and immutability overhead, following Scala best practices, we used immutable data structures for aggregators, but every update created new objects, overwhelming the garbage collector at millions of records per second.Investigation: Heap dumps and GC logs revealed flow log objects retained beyond their useful lifetime, unnecessary intermediate conversion objects, and constant creation/disposal of immutable aggregator versions</description>
-      <pubDate>Mon, 13 Jul 2026 22:44:11 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/building-service-topology-at-scale-architecture-challenges-and-lessons-learned-f4b792f3f0d8?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
-    </item>
-    <item>
       <title>Amazon SQS turns 20: Two decades of reliable messaging at scale</title>
       <link>https://aws.amazon.com/blogs/aws/amazon-sqs-turns-20-two-decades-of-reliable-messaging-at-scale/</link>
       <description>On July 13, 2006, we launched Amazon Simple Queue Service (Amazon SQS) as one of the first three services available to customers, alongside Amazon EC2 and Amazon S3 We had learned firsthand that distributed systems need a reliable way to pass messages between components without creating tight dependencies If one service called another directly and […]</description>
@@ -134,14 +134,6 @@
       <description>TL; DR At Meta’s scale, a few milliseconds of latency degradation can have a significant negative impact on ads performance When a Linux kernel upgrade risked regressing latency across Meta’s ad serving fleet, we turned to sched_ext — the upstream, BPF-based extensible scheduling framework — to build a scheduling policy customized to the Ads delivery [...] Read More The post Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler appeared first on Engineering at Meta.</description>
       <pubDate>Mon, 13 Jul 2026 16:00:50 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Meta’s AI Storage Blueprint at Scale</title>
-      <link>https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</link>
-      <description>During the past year or so, the time between new-frontier-model releases has gone down from months to weeks Reliable and fast access to storage is important to both the speed and computational cost of this AI innovation The post Meta’s AI Storage Blueprint at Scale appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 01 Jul 2026 16:00:36 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/</guid>
       <source>Meta Engineering</source>
     </item>
   </channel>
