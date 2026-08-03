@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 02 Aug 2026 10:38:21 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 12:19:35 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Build Cross-Language Multi-Agent Team with Google’s Agent Development Kit and A2A</title>
       <link>https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/</link>
       <description>How a Python agent and a Go agent collaborate on contract compliance using the Agent2Agent protocolY...</description>
-      <pubDate>Sun, 02 Aug 2026 10:38:18 GMT</pubDate>
+      <pubDate>Mon, 03 Aug 2026 12:19:31 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Measuring What Matters with Jules</title>
       <link>https://developers.googleblog.com/measuring-what-matters-with-jules/</link>
       <description>AI coding agents are rapidly shifting from reactive assistants that complete tasks when prompted to ...</description>
-      <pubDate>Sun, 02 Aug 2026 10:38:18 GMT</pubDate>
+      <pubDate>Mon, 03 Aug 2026 12:19:31 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/measuring-what-matters-with-jules/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine, built-in human-in-the-loop, and dynamic orchestration</title>
       <link>https://developers.googleblog.com/announcing-adk-go-20/</link>
       <description>The Agent Development Kit (ADK) for Go 2.0 has been released, introducing a first-class, graph-based workflow engine to help developers compose complex, multi-agent applications This update adds built-in primitives for human-in-the-loop (HITL) orchestration, dynamic execution using plain Go code, and automated resilience features like exponential backoff retries By unifying the execution model, both single-agent applications and intricate graphs now run on the same runtime, simplifying telemetry and state persistence.</description>
-      <pubDate>Sun, 02 Aug 2026 10:38:18 GMT</pubDate>
+      <pubDate>Mon, 03 Aug 2026 12:19:31 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-go-20/</guid>
       <source>Google Developers</source>
     </item>
