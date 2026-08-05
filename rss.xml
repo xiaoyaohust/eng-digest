@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 04 Aug 2026 11:21:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 05 Aug 2026 11:17:45 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Measuring What Matters with Jules</title>
-      <link>https://developers.googleblog.com/measuring-what-matters-with-jules/</link>
-      <description>AI coding agents are rapidly shifting from reactive assistants that complete tasks when prompted to ...</description>
-      <pubDate>Tue, 04 Aug 2026 11:21:04 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/measuring-what-matters-with-jules/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Build reliable multi-agent applications with ADK Go 2.0. Discover our new graph-based workflow engine, built-in human-in-the-loop, and dynamic orchestration</title>
       <link>https://developers.googleblog.com/announcing-adk-go-20/</link>
       <description>The Agent Development Kit (ADK) for Go 2.0 has been released, introducing a first-class, graph-based workflow engine to help developers compose complex, multi-agent applications This update adds built-in primitives for human-in-the-loop (HITL) orchestration, dynamic execution using plain Go code, and automated resilience features like exponential backoff retries By unifying the execution model, both single-agent applications and intricate graphs now run on the same runtime, simplifying telemetry and state persistence.</description>
-      <pubDate>Tue, 04 Aug 2026 11:21:04 GMT</pubDate>
+      <pubDate>Wed, 05 Aug 2026 11:17:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-go-20/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Driving the Agent Quality Flywheel from Your Coding Agent</title>
       <link>https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/</link>
       <description>Building AI agents often leaves developers uncertain if prompt tweaks to fix single errors will accidentally cause widespread regressions in production To bridge this gap, Google has introduced a new developer skill for coding agents that automates a five-stage evaluation flywheel: preparing data, running inference, grading with adaptive AutoRaters, analyzing failure clusters, and executing targeted optimizations Running continuously against production traffic or on-demand via synthetic scenarios, this tool allows developers to describe testing goals in plain language while an independent evaluation service safely validates and counts actual performance improvements.</description>
-      <pubDate>Tue, 04 Aug 2026 11:21:04 GMT</pubDate>
+      <pubDate>Wed, 05 Aug 2026 11:17:42 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>ML Development in VS Code with Google Cloud Power: Workbench Extension Now Available</title>
+      <link>https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</link>
+      <description>The Google Cloud Workbench Notebooks extension for VS Code has officially launched, allowing developers to connect their local IDE to scalable, cloud-based Jupyter environments This integration streamlines the machine learning lifecycle by eliminating context switching and providing direct access to high-performance Google Cloud infrastructure To support transparency and community-driven innovation, the newly released extension is fully open-sourced and available on GitHub and the VS Code Marketplace.</description>
+      <pubDate>Wed, 05 Aug 2026 11:17:42 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How the GitHub legal team used Copilot CLI to streamline their workflows</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/</link>
+      <description>Learn how to build tools to simplify how you work—without writing a single line of code The post How the GitHub legal team used Copilot CLI to streamline their workflows appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 04 Aug 2026 19:02:34 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Turn one giant AI-generated pull request to a reviewable stack</title>
+      <link>https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/</link>
+      <description>Instead of one huge, un-reviewable pull request, teach coding agents to decompose work into a clean, ordered stack with GitHub stacked pull requests The post Turn one giant AI-generated pull request to a reviewable stack appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 04 Aug 2026 16:47:18 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model</title>
@@ -71,22 +87,6 @@
       <pubDate>Thu, 30 Jul 2026 20:10:15 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Stacked sessions and pull requests in the GitHub Copilot app</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/</link>
-      <description>Learn how I modernized an old codebase of mine using stacked sessions and pull requests in the GitHub Copilot app The post Stacked sessions and pull requests in the GitHub Copilot app appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 30 Jul 2026 17:30:24 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Tame Dependabot: Group your updates, slow the cadence, keep security fast</title>
-      <link>https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/</link>
-      <description>Dependabot keeps your dependencies current, but its defaults can flood your repository with pull requests Here&amp;apos;s how grouping updates, slowing the cadence, and keeping security fixes fast cut the noise on a Microsoft open source project The post Tame Dependabot: Group your updates, slow the cadence, keep security fast appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 29 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Local Zone in Athens, Claude Opus 5 on AWS, Lambda durable execution for .NET, and more (July 27, 2026)</title>
