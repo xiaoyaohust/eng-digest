@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 06 Aug 2026 11:20:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 09:58:20 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Driving the Agent Quality Flywheel from Your Coding Agent</title>
-      <link>https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/</link>
-      <description>Building AI agents often leaves developers uncertain if prompt tweaks to fix single errors will accidentally cause widespread regressions in production To bridge this gap, Google has introduced a new developer skill for coding agents that automates a five-stage evaluation flywheel: preparing data, running inference, grading with adaptive AutoRaters, analyzing failure clusters, and executing targeted optimizations Running continuously against production traffic or on-demand via synthetic scenarios, this tool allows developers to describe testing goals in plain language while an independent evaluation service safely validates and counts actual performance improvements.</description>
-      <pubDate>Thu, 06 Aug 2026 11:20:34 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>ML Development in VS Code with Google Cloud Power: Workbench Extension Now Available</title>
       <link>https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</link>
       <description>The Google Cloud Workbench Notebooks extension for VS Code has officially launched, allowing developers to connect their local IDE to scalable, cloud-based Jupyter environments This integration streamlines the machine learning lifecycle by eliminating context switching and providing direct access to high-performance Google Cloud infrastructure To support transparency and community-driven innovation, the newly released extension is fully open-sourced and available on GitHub and the VS Code Marketplace.</description>
-      <pubDate>Thu, 06 Aug 2026 11:20:34 GMT</pubDate>
+      <pubDate>Fri, 07 Aug 2026 09:58:18 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Why we built ADK 2.0</title>
       <link>https://developers.googleblog.com/why-we-built-adk-20/</link>
       <description>Answering the questions of &amp;quot;why we built ADK 2.0&amp;quot; This explains the rationale, some of the features, and why a developer should consider upgrading This will be published the day after ADK go 2.0 launches.</description>
-      <pubDate>Thu, 06 Aug 2026 11:20:34 GMT</pubDate>
+      <pubDate>Fri, 07 Aug 2026 09:58:18 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/why-we-built-adk-20/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Build agentic full-stack apps with Genkit</title>
+      <link>https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</link>
+      <description>The open-source Genkit framework has introduced the Agents API, a full-stack tool designed to simplify the complex plumbing of conversational AI by packaging message history, tool loops, and streaming into a single interface The API supports flexible, server- or client-managed state persistence—allowing for advanced workflows like history branching, long-running detached tasks, and multi-agent coordination—while seamlessly connecting backends to frontends via a unified wire protocol Currently available in preview for TypeScript and Go, it also integrates with the Genkit Developer UI to allow developers to easily test, debug, and inspect agent snapshots without writing client code.</description>
+      <pubDate>Fri, 07 Aug 2026 09:58:18 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore</title>
+      <link>https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/</link>
+      <description>Announcing runtime instances in Amazon Bedrock AgentCore—persistent, managed EC2 infrastructure for production AI agents with multi-agent collaboration, GPU support, and sessions lasting up to 14 days.</description>
+      <pubDate>Thu, 06 Aug 2026 22:58:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>A guide to slash commands in the GitHub Copilot app</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app/</link>
+      <description>Go beyond chat in the GitHub Copilot app with these slash commands They&amp;apos;ll help you plan, collaborate, automate, and customize your dev workflow The post A guide to slash commands in the GitHub Copilot app appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 06 Aug 2026 19:49:34 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How we took malware advisories beyond npm</title>
+      <link>https://github.blog/security/supply-chain-security/how-we-took-malware-advisories-beyond-npm/</link>
+      <description>GitHub malware advisories no longer stop at npm Here&amp;apos;s how we wired OpenSSF&amp;apos;s malicious-packages data into the Advisory Database, and why we built the pipeline paranoid The post How we took malware advisories beyond npm appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 06 Aug 2026 16:51:12 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/supply-chain-security/how-we-took-malware-advisories-beyond-npm/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking</title>
@@ -54,14 +78,6 @@
       <description>Learn how to build tools to simplify how you work—without writing a single line of code The post How the GitHub legal team used Copilot CLI to streamline their workflows appeared first on The GitHub Blog.</description>
       <pubDate>Tue, 04 Aug 2026 19:02:34 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Turn one giant AI-generated pull request to a reviewable stack</title>
-      <link>https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/</link>
-      <description>Instead of one huge, un-reviewable pull request, teach coding agents to decompose work into a clean, ordered stack with GitHub stacked pull requests The post Turn one giant AI-generated pull request to a reviewable stack appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 04 Aug 2026 16:47:18 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -89,28 +105,12 @@
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>Don’t stop early: Case-folding source code at memory speed</title>
-      <link>https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/</link>
-      <description>How a branch-free loop and byte-space arithmetic let GitHub case-fold every byte of code search at &amp;gt;45 GiB/s on a single core The post Don’t stop early: Case-folding source code at memory speed appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>GenRec: Towards LLM-Native Recommendation at Netflix</title>
       <link>https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss----2615bd06b42e---4</link>
       <description>Raw logs of user history, item metadata, and context are transformed via context engineering into natural-language prompts and fed into the GenRec, which runs on vLLM in prefill-only mode and outputs scores for each catalog item, yielding a recommendation ranking.At a high level, GenRec:Verbalizes user histories, item metadata, and context as text.Post‑trains a Netflix‑adapted foundation LLM for ranking.Adds a catalog‑aware scoring head over Netflix titles.Uses reward signals to align with long‑term member value and business goals.Runs in prefill‑only mode on Netflix’s LLM serving stack for cost efficiency.In a large‑scale A/B test against a well‑tuned production ranker, GenRec achieves statistically significant improvements in both short‑term and long‑term online metrics, while using only a small fraction of the Phase‑2 labeled data and input signals As we increased Phase‑2 training data and enriched the input signals, GenRec’s offline metrics continued to improve.Online, we ran a large A/B test on batch‑compute recommendation surfaces, covering ~10% of Netflix traffic over ~4 weeks By verbalizing user histories, context, and item metadata, adding a catalog‑aware ranking head, using reward‑weighted objectives aligned to long‑term satisfaction and business goals, and serving efficiently on our LLM infrastructure, we obtain a model that improves on a strong production ranker while using far fewer Phase‑2 labels and input signals.GenRec is an early but promising step toward a more LLM‑centric recommendation stack at Netflix</description>
       <pubDate>Thu, 30 Jul 2026 20:10:15 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Local Zone in Athens, Claude Opus 5 on AWS, Lambda durable execution for .NET, and more (July 27, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/</link>
-      <description>Last week I had the privilege of spending three days in São Paulo with technical builders from across Latin America, brought together for a regional tech event full of deep-dive sessions, hands-on workshops, and conversations with customers and partners What struck me most wasn’t any single session, it was the energy of a technical community […]</description>
-      <pubDate>Mon, 27 Jul 2026 14:54:41 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-july-27-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Analyzing the evidence that helps businesses win “product not received” disputes</title>
