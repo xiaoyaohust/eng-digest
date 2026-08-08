@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 07 Aug 2026 09:58:20 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 09:34:25 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>ML Development in VS Code with Google Cloud Power: Workbench Extension Now Available</title>
       <link>https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</link>
       <description>The Google Cloud Workbench Notebooks extension for VS Code has officially launched, allowing developers to connect their local IDE to scalable, cloud-based Jupyter environments This integration streamlines the machine learning lifecycle by eliminating context switching and providing direct access to high-performance Google Cloud infrastructure To support transparency and community-driven innovation, the newly released extension is fully open-sourced and available on GitHub and the VS Code Marketplace.</description>
-      <pubDate>Fri, 07 Aug 2026 09:58:18 GMT</pubDate>
+      <pubDate>Sat, 08 Aug 2026 09:34:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Why we built ADK 2.0</title>
       <link>https://developers.googleblog.com/why-we-built-adk-20/</link>
       <description>Answering the questions of &amp;quot;why we built ADK 2.0&amp;quot; This explains the rationale, some of the features, and why a developer should consider upgrading This will be published the day after ADK go 2.0 launches.</description>
-      <pubDate>Fri, 07 Aug 2026 09:58:18 GMT</pubDate>
+      <pubDate>Sat, 08 Aug 2026 09:34:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/why-we-built-adk-20/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Build agentic full-stack apps with Genkit</title>
       <link>https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</link>
       <description>The open-source Genkit framework has introduced the Agents API, a full-stack tool designed to simplify the complex plumbing of conversational AI by packaging message history, tool loops, and streaming into a single interface The API supports flexible, server- or client-managed state persistence—allowing for advanced workflows like history branching, long-running detached tasks, and multi-agent coordination—while seamlessly connecting backends to frontends via a unified wire protocol Currently available in preview for TypeScript and Go, it also integrates with the Genkit Developer UI to allow developers to easily test, debug, and inspect agent snapshots without writing client code.</description>
-      <pubDate>Fri, 07 Aug 2026 09:58:18 GMT</pubDate>
+      <pubDate>Sat, 08 Aug 2026 09:34:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…</title>
+      <link>https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4</link>
+      <description>It batches requests, runs them in parallel with graph data assembly, and degrades gracefully when an enrichment source is unavailable.When a client sends a query, the request flows through these layers in sequence: the Query Service parses the request into an execution plan, the execution engine walks the graph level by level through the Storage Abstraction Layer, and if enrichments are requested, the Enrichment Layer fetches and merges external data before the response is serialized back to the client.Now, with that mental model in place, let’s follow a query through this system and see how these choices play out in practice.Executing Queries Efficiently: Following a Query’s JourneyTo see how the RDG query layer works in practice, let’s follow a single query end-to-end and focus on one question: how do we make every step fast?We’ll reuse the deep-narrow example from above:For Account X, show me the Stranger Things viewing history across all profiles: which profiles watched it, what they watched, and when.In graph terms, this becomes a 2‑hop traversal:Account X → has_profile → ProfilesProfiles → started_watching → Content (filtered for “Stranger Things”)We’ll walk through how this query moves through the layers we described above:Reading and interpreting the requestReading from storage efficientlyExecuting traversal with breadth‑first levelsRunning many operations in parallel, but safelyFiltering smartly to keep only what mattersMaking repeat queries faster with cachingBy the end, we’ll see how a 2-hop query like our Stranger Things example, with streaming, filtering, and parallel execution, can complete in under 100ms.Step 1: Reading the Request: Deciding What the Query Really WantsEvery query starts as a gRPC request The query was:For Account X, show me the Stranger Things viewing history across all profiles: which profiles watched it, what they watched, and whenSo we still need to fetch each profile’s history and filter it down to Stranger Things sessions That’s why our Stranger Things query completes in under 100ms.Step 4: Parallel Execution: Doing Many Things at Once, SafelyBreadth-first traversal enables parallel work at each level, which is the key to low latency.At Level 2 of our Stranger Things query, we fetch started_watching edges for each profile</description>
+      <pubDate>Fri, 07 Aug 2026 16:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore</title>
@@ -127,14 +135,6 @@
       <pubDate>Mon, 20 Jul 2026 15:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>In-House LLM Serving at Netflix</title>
-      <link>https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4</link>
-      <description>Serving Architecture OverviewDesign Decisions and ImplementationFour decisions shape this platform — engine, packaging, API surface, and rollout — presented in dependency order, since each one constrains the next.vLLM as the Paved-Path EngineThe platform was originally built on TensorRT-LLM, a performant inference engine at the time and already integrated with Triton — the compute backend in use within MSS.By summer 2025, two things had shifted: open-source engines had largely closed the performance gap with specialized stacks, and our workload mix had broadened to include embedding generation, prefill-only inference for ranking and retrieval, autoregressive decoding, and custom models with non-trivial per-step constraint logic The platform has to pin compatible versions when baking the service image, and prevent model authors from overriding the vLLM version at packaging time.Custom model logic We git-subtreed and patched the frontend to translate response_format into vLLM’s guided decoding parameters at request time.Deployment StrategiesWith API surface and engine in place, the question that remains is how new versions roll out without dropping requests</description>
-      <pubDate>Fri, 17 Jul 2026 21:32:39 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/in-house-llm-serving-at-netflix-a5a8e799ea2c?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
     </item>
     <item>
       <title>Exploring Hierarchical Interest Representation For Meta Ads Deep Funnel Optimization</title>
