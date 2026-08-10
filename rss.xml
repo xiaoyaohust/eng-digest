@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 09 Aug 2026 09:35:43 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 10:13:51 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>ML Development in VS Code with Google Cloud Power: Workbench Extension Now Available</title>
       <link>https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</link>
       <description>The Google Cloud Workbench Notebooks extension for VS Code has officially launched, allowing developers to connect their local IDE to scalable, cloud-based Jupyter environments This integration streamlines the machine learning lifecycle by eliminating context switching and providing direct access to high-performance Google Cloud infrastructure To support transparency and community-driven innovation, the newly released extension is fully open-sourced and available on GitHub and the VS Code Marketplace.</description>
-      <pubDate>Sun, 09 Aug 2026 09:35:40 GMT</pubDate>
+      <pubDate>Mon, 10 Aug 2026 10:13:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Why we built ADK 2.0</title>
       <link>https://developers.googleblog.com/why-we-built-adk-20/</link>
       <description>Answering the questions of &amp;quot;why we built ADK 2.0&amp;quot; This explains the rationale, some of the features, and why a developer should consider upgrading This will be published the day after ADK go 2.0 launches.</description>
-      <pubDate>Sun, 09 Aug 2026 09:35:40 GMT</pubDate>
+      <pubDate>Mon, 10 Aug 2026 10:13:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/why-we-built-adk-20/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Build agentic full-stack apps with Genkit</title>
       <link>https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</link>
       <description>The open-source Genkit framework has introduced the Agents API, a full-stack tool designed to simplify the complex plumbing of conversational AI by packaging message history, tool loops, and streaming into a single interface The API supports flexible, server- or client-managed state persistence—allowing for advanced workflows like history branching, long-running detached tasks, and multi-agent coordination—while seamlessly connecting backends to frontends via a unified wire protocol Currently available in preview for TypeScript and Go, it also integrates with the Genkit Developer UI to allow developers to easily test, debug, and inspect agent snapshots without writing client code.</description>
-      <pubDate>Sun, 09 Aug 2026 09:35:40 GMT</pubDate>
+      <pubDate>Mon, 10 Aug 2026 10:13:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</guid>
       <source>Google Developers</source>
     </item>
