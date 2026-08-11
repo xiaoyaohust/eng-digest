@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 10 Aug 2026 10:13:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 09:57:16 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>ML Development in VS Code with Google Cloud Power: Workbench Extension Now Available</title>
       <link>https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</link>
       <description>The Google Cloud Workbench Notebooks extension for VS Code has officially launched, allowing developers to connect their local IDE to scalable, cloud-based Jupyter environments This integration streamlines the machine learning lifecycle by eliminating context switching and providing direct access to high-performance Google Cloud infrastructure To support transparency and community-driven innovation, the newly released extension is fully open-sourced and available on GitHub and the VS Code Marketplace.</description>
-      <pubDate>Mon, 10 Aug 2026 10:13:49 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 09:57:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/ml-development-in-vs-code-with-google-cloud-power-workbench-extension-now-available/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Why we built ADK 2.0</title>
       <link>https://developers.googleblog.com/why-we-built-adk-20/</link>
       <description>Answering the questions of &amp;quot;why we built ADK 2.0&amp;quot; This explains the rationale, some of the features, and why a developer should consider upgrading This will be published the day after ADK go 2.0 launches.</description>
-      <pubDate>Mon, 10 Aug 2026 10:13:49 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 09:57:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/why-we-built-adk-20/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Build agentic full-stack apps with Genkit</title>
       <link>https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</link>
       <description>The open-source Genkit framework has introduced the Agents API, a full-stack tool designed to simplify the complex plumbing of conversational AI by packaging message history, tool loops, and streaming into a single interface The API supports flexible, server- or client-managed state persistence—allowing for advanced workflows like history branching, long-running detached tasks, and multi-agent coordination—while seamlessly connecting backends to frontends via a unified wire protocol Currently available in preview for TypeScript and Go, it also integrates with the Genkit Developer UI to allow developers to easily test, debug, and inspect agent snapshots without writing client code.</description>
-      <pubDate>Mon, 10 Aug 2026 10:13:49 GMT</pubDate>
+      <pubDate>Tue, 11 Aug 2026 09:57:13 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Using the GitHub Copilot SDK for Java</title>
+      <link>https://github.blog/engineering/using-the-github-copilot-sdk-for-java/</link>
+      <description>Enterprise Java developers have a new superpower—drive GitHub Copilot from idiomatic Java code with annotations, virtual threads, and more The post Using the GitHub Copilot SDK for Java appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 10 Aug 2026 19:30:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/using-the-github-copilot-sdk-for-java/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Heroes Summit, Web Search on Amazon Bedrock, Dogwood, Kiro Crew, and more (August 10, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-heroes-summit-web-search-on-amazon-bedrock-dogwood-kiro-crew-and-more-august-10-2026/</link>
+      <description>Last week, we brought together AWS Heroes from around the world to connect, collaborate, and celebrate the builders who go above and beyond for the AWS community The AWS Heroes Summit, an invite-only annual gathering, brings global experts specializing in fields like AI, serverless, and containers together for direct collaboration, technical deep-dives, and feedback sessions […]</description>
+      <pubDate>Mon, 10 Aug 2026 15:45:03 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-heroes-summit-web-search-on-amazon-bedrock-dogwood-kiro-crew-and-more-august-10-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…</title>
@@ -81,28 +97,12 @@
       <source>AWS News</source>
     </item>
     <item>
-      <title>How the GitHub legal team used Copilot CLI to streamline their workflows</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/</link>
-      <description>Learn how to build tools to simplify how you work—without writing a single line of code The post How the GitHub legal team used Copilot CLI to streamline their workflows appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 04 Aug 2026 19:02:34 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model</title>
       <link>https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/</link>
       <description>Meta’s Generative Ads Recommendation Model (GEM), the foundation model behind ads recommendations across Instagram and Facebook, now trains at LLM scale on several thousand of the latest-generation GPUs This post goes into the details on how we achieved: doubling end-to-end (E2E) training efficiency to 20–25% Model FLOPs Utilization (MFU) while scaling training FLOPs 4x in [...] Read More The post GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model appeared first on Engineering at Meta.</description>
       <pubDate>Mon, 03 Aug 2026 18:00:17 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Price reduction of GPT models in Bedrock, CloudWatch managed collectors for Prometheus metrics, and more (August 3, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/</link>
-      <description>Last week I had the joy of participating in Amazon’s “Bring Your Kids to Work Day” with my 7 year old son We commuted together into the New York City office, his first real rush hour train ride, and spent the day exploring how Amazon uses AI, machine learning, and robotics to deliver packages to […]</description>
-      <pubDate>Mon, 03 Aug 2026 16:12:30 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-price-reduction-of-gpt-models-in-bedrock-cloudwatch-managed-collectors-for-prometheus-metrics-and-more-august-3-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Modeling Device Capabilities for Analytics</title>
