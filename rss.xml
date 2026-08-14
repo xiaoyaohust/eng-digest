@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 13 Aug 2026 10:01:06 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 09:57:12 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Build agentic full-stack apps with Genkit</title>
-      <link>https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</link>
-      <description>The open-source Genkit framework has introduced the Agents API, a full-stack tool designed to simplify the complex plumbing of conversational AI by packaging message history, tool loops, and streaming into a single interface The API supports flexible, server- or client-managed state persistence—allowing for advanced workflows like history branching, long-running detached tasks, and multi-agent coordination—while seamlessly connecting backends to frontends via a unified wire protocol Currently available in preview for TypeScript and Go, it also integrates with the Genkit Developer UI to allow developers to easily test, debug, and inspect agent snapshots without writing client code.</description>
-      <pubDate>Thu, 13 Aug 2026 10:01:03 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/build-agentic-full-stack-apps-with-genkit/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>We terminated a TPU mid-training and it recovered in seconds:  Introduction to elastic training with MaxText</title>
-      <link>https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/</link>
-      <description>Distributed AI training is notoriously fragile because losing a single machine typically crashes the entire multi-node job, forcing a time-consuming, full-workload infrastructure restart To address this, Google’s JAX ecosystem utilizes elastic training via Pathways, which converts a hardware failure into a catchable Python exception so the running process can survive When an unplanned failure occurs, the system automatically replaces only the broken worker, restores the last viable checkpoint from Cloud Storage, and resumes training in place—minimizing total downtime to under two minutes without ever restarting the main controller process.</description>
-      <pubDate>Thu, 13 Aug 2026 10:01:03 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Bridging the Domain Gap: AI Race Coach built with Antigravity and Gemini</title>
       <link>https://developers.googleblog.com/bridging-the-domain-gap-ai-race-coach-built-with-antigravity-and-gemini/</link>
       <description>On May 23, 2026, fresh off the stage at Google I/O, our Google Developer Experts (GDEs) converged on...</description>
-      <pubDate>Thu, 13 Aug 2026 10:01:03 GMT</pubDate>
+      <pubDate>Fri, 14 Aug 2026 09:57:09 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/bridging-the-domain-gap-ai-race-coach-built-with-antigravity-and-gemini/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>LiteRT.js, Google's high performance Web AI Inference</title>
+      <link>https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</link>
+      <description>We&amp;apos;re excited to introduce LiteRT.js, the newest member of the LiteRT family Built for JavaScript developers, LiteRT.js delivers state-of-the-art ML model inference performance on WebGPU and upcoming WebNN, with a fallback to WebAssembly for CPU This post provides a quick tour of LiteRT.js and gives web developers everything they need to get started.</description>
+      <pubDate>Fri, 14 Aug 2026 09:57:09 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Systems Engineering Playbook: Optimizing Qwen 3.5-397B MoE on Ironwood (TPU7x)</title>
+      <link>https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</link>
+      <description>To serve the 397B-parameter Qwen 3.5 Mixture-of-Experts (MoE) model on Ironwood TPUs, engineers developed a modular JAX/Pallas optimization stack that achieved up to a 4.7x inference speedup for prefill-heavy workloads The team bypassed severe hardware sharding constraints by deploying a hybrid Data Parallelism and Expert Parallelism (DP+EP) topology, paired with custom low-level communication fusions like a hierarchical reduce-scatter to optimize cross-device token routing Finally, by executing hardware-aware custom kernels—such as Batched Ragged Page Attention and a fully-fused Gated DeltaNet (GDN) block—they successfully saturated HBM bandwidth and TensorCore MXUs to push system throughput near its theoretical roofline limits.</description>
+      <pubDate>Fri, 14 Aug 2026 09:57:09 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Your guide to GitHub Universe 2026 is here: The schedule just launched!</title>
+      <link>https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/</link>
+      <description>The GitHub Universe session catalog is live Explore interactive workshops, community talks, demos, and panels The post Your guide to GitHub Universe 2026 is here: The schedule just launched! appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 13 Aug 2026 19:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>What 50 open source projects taught us about security in the AI era</title>
+      <link>https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/</link>
+      <description>See how the open source projects in Session 4 of the GitHub Secure Open Source Fund combined AI-assisted workflows, maintainer expertise, GitHub security tools, expert guidance, and funding to improve project security The post What 50 open source projects taught us about security in the AI era appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 13 Aug 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>GitHub availability report: July 2026</title>
@@ -38,22 +54,6 @@
       <description>In July, we experienced eight incidents that resulted in degraded performance across GitHub services The post GitHub availability report: July 2026 appeared first on The GitHub Blog.</description>
       <pubDate>Wed, 12 Aug 2026 22:17:32 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-july-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Write your first prompt with the GitHub Copilot app</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/</link>
-      <description>Learn how to write your first prompt in the GitHub Copilot app, choose the right context and model, and start your first task with confidence The post Write your first prompt with the GitHub Copilot app appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 12 Aug 2026 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Your contributors are AI-first now. Is your project?</title>
-      <link>https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project/</link>
-      <description>AI contributors are already in your queue The post Your contributors are AI-first now Is your project? appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 12 Aug 2026 18:00:08 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
