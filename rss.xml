@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 18 Aug 2026 09:29:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 09:30:12 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>LiteRT.js, Google's high performance Web AI Inference</title>
       <link>https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</link>
       <description>We&amp;apos;re excited to introduce LiteRT.js, the newest member of the LiteRT family Built for JavaScript developers, LiteRT.js delivers state-of-the-art ML model inference performance on WebGPU and upcoming WebNN, with a fallback to WebAssembly for CPU This post provides a quick tour of LiteRT.js and gives web developers everything they need to get started.</description>
-      <pubDate>Tue, 18 Aug 2026 09:29:16 GMT</pubDate>
+      <pubDate>Wed, 19 Aug 2026 09:30:08 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Systems Engineering Playbook: Optimizing Qwen 3.5-397B MoE on Ironwood (TPU7x)</title>
       <link>https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</link>
       <description>To serve the 397B-parameter Qwen 3.5 Mixture-of-Experts (MoE) model on Ironwood TPUs, engineers developed a modular JAX/Pallas optimization stack that achieved up to a 4.7x inference speedup for prefill-heavy workloads The team bypassed severe hardware sharding constraints by deploying a hybrid Data Parallelism and Expert Parallelism (DP+EP) topology, paired with custom low-level communication fusions like a hierarchical reduce-scatter to optimize cross-device token routing Finally, by executing hardware-aware custom kernels—such as Batched Ragged Page Attention and a fully-fused Gated DeltaNet (GDN) block—they successfully saturated HBM bandwidth and TensorCore MXUs to push system throughput near its theoretical roofline limits.</description>
-      <pubDate>Tue, 18 Aug 2026 09:29:16 GMT</pubDate>
+      <pubDate>Wed, 19 Aug 2026 09:30:08 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search</title>
       <link>https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</link>
       <description>Google Cloud has partnered with Parallel Web Systems to natively integrate Parallel&amp;apos;s search infrastructure as a web grounding provider on the Gemini Enterprise Agent Platform This integration enables developers to anchor their AI agents in verifiable, real-time web results, significantly improving factual accuracy for complex enterprise workflows Additionally, the partnership offers expanded architectural flexibility, allowing users to programmatically extract, permanently cache, and process web data alongside other large language models.</description>
-      <pubDate>Tue, 18 Aug 2026 09:29:16 GMT</pubDate>
+      <pubDate>Wed, 19 Aug 2026 09:30:08 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Improving infrastructure efficiency for growing demand in the age of AI</title>
+      <link>https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai</link>
+      <description>As demand for AI continues to grow, so does the infrastructure needed to support it.</description>
+      <pubDate>Tue, 18 Aug 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>In the works: AWS Builder Lofts in Berlin, Hyderabad, and São Paulo</title>
+      <link>https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/</link>
+      <description>Each location will be a permanent community space to offer free workshops, networking events, pitch nights, content creation spaces, collaboration/co-working areas, and event hosting for developers, students, or tech professionals who want to walk through the doors.</description>
+      <pubDate>Tue, 18 Aug 2026 13:58:41 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: EC2 application status checks, IAM role manager, OpenAI Daybreak on Bedrock, and more (August 17, 2026)</title>
@@ -103,14 +119,6 @@
       <pubDate>Fri, 07 Aug 2026 16:01:02 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore</title>
-      <link>https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/</link>
-      <description>Announcing runtime instances in Amazon Bedrock AgentCore—persistent, managed EC2 infrastructure for production AI agents with multi-agent collaboration, GPU support, and sessions lasting up to 14 days.</description>
-      <pubDate>Thu, 06 Aug 2026 22:58:00 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking</title>
