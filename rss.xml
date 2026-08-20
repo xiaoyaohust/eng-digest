@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 19 Aug 2026 09:30:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2026 09:30:32 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>LiteRT.js, Google's high performance Web AI Inference</title>
       <link>https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</link>
       <description>We&amp;apos;re excited to introduce LiteRT.js, the newest member of the LiteRT family Built for JavaScript developers, LiteRT.js delivers state-of-the-art ML model inference performance on WebGPU and upcoming WebNN, with a fallback to WebAssembly for CPU This post provides a quick tour of LiteRT.js and gives web developers everything they need to get started.</description>
-      <pubDate>Wed, 19 Aug 2026 09:30:08 GMT</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:30:26 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Systems Engineering Playbook: Optimizing Qwen 3.5-397B MoE on Ironwood (TPU7x)</title>
       <link>https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</link>
       <description>To serve the 397B-parameter Qwen 3.5 Mixture-of-Experts (MoE) model on Ironwood TPUs, engineers developed a modular JAX/Pallas optimization stack that achieved up to a 4.7x inference speedup for prefill-heavy workloads The team bypassed severe hardware sharding constraints by deploying a hybrid Data Parallelism and Expert Parallelism (DP+EP) topology, paired with custom low-level communication fusions like a hierarchical reduce-scatter to optimize cross-device token routing Finally, by executing hardware-aware custom kernels—such as Batched Ragged Page Attention and a fully-fused Gated DeltaNet (GDN) block—they successfully saturated HBM bandwidth and TensorCore MXUs to push system throughput near its theoretical roofline limits.</description>
-      <pubDate>Wed, 19 Aug 2026 09:30:08 GMT</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:30:26 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search</title>
       <link>https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</link>
       <description>Google Cloud has partnered with Parallel Web Systems to natively integrate Parallel&amp;apos;s search infrastructure as a web grounding provider on the Gemini Enterprise Agent Platform This integration enables developers to anchor their AI agents in verifiable, real-time web results, significantly improving factual accuracy for complex enterprise workflows Additionally, the partnership offers expanded architectural flexibility, allowing users to programmatically extract, permanently cache, and process web data alongside other large language models.</description>
-      <pubDate>Wed, 19 Aug 2026 09:30:08 GMT</pubDate>
+      <pubDate>Thu, 20 Aug 2026 09:30:26 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GitHub Copilot app for Beginners: Managing your work</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/</link>
+      <description>If you’re juggling multiple Copilot sessions, use the My work pane to track what&amp;apos;s in flight, what&amp;apos;s done, and what&amp;apos;s next The post GitHub Copilot app for Beginners: Managing your work appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 19 Aug 2026 17:50:23 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Why global workers are driving demand for stablecoin payouts</title>
+      <link>https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts</link>
+      <description>Platforms like DoorDash, Meta, and Deel already enable stablecoin payouts for global workers We surveyed 2,300 workers in 20 countries to see what&amp;apos;s driving stablecoin demand, where the opportunity is highest, and how other platforms can adapt.</description>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>Improving infrastructure efficiency for growing demand in the age of AI</title>
@@ -78,14 +94,6 @@
       <description>See how four GitHub agent apps can help you scope, secure, roll out, and ship a feature across the SDLC–all without leaving GitHub The post How to bring your software delivery workflow into GitHub with agent apps appeared first on The GitHub Blog.</description>
       <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Your guide to GitHub Universe 2026 is here: The schedule just launched!</title>
-      <link>https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/</link>
-      <description>The GitHub Universe session catalog is live Explore interactive workshops, community talks, demos, and panels The post Your guide to GitHub Universe 2026 is here: The schedule just launched! appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 13 Aug 2026 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -151,22 +159,6 @@
       <pubDate>Thu, 30 Jul 2026 20:10:15 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Analyzing the evidence that helps businesses win “product not received” disputes</title>
-      <link>https://stripe.com/blog/analyzing-the-evidence-that-helps-businesses-win-product-not-received-disputes</link>
-      <description>To understand what can influence win rates, we analyzed evidence packets from one million disputes over a 16-week period Here’s what the data shows and what it means for how you mitigate disputes.</description>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/analyzing-the-evidence-that-helps-businesses-win-product-not-received-disputes</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How our universal content processing platform Riviera evolved for AI and beyond</title>
-      <link>https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond</link>
-      <description>Riviera is the Dropbox content processing platform that’s been iteratively improving content transformation in our products for roughly a decade.</description>
-      <pubDate>Mon, 20 Jul 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/infrastructure/how-our-universal-content-processing-platform-riviera-evolved-for-ai-and-beyond</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
