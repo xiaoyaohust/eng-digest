@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 20 Aug 2026 09:30:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Aug 2026 09:33:06 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>LiteRT.js, Google's high performance Web AI Inference</title>
       <link>https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</link>
       <description>We&amp;apos;re excited to introduce LiteRT.js, the newest member of the LiteRT family Built for JavaScript developers, LiteRT.js delivers state-of-the-art ML model inference performance on WebGPU and upcoming WebNN, with a fallback to WebAssembly for CPU This post provides a quick tour of LiteRT.js and gives web developers everything they need to get started.</description>
-      <pubDate>Thu, 20 Aug 2026 09:30:26 GMT</pubDate>
+      <pubDate>Fri, 21 Aug 2026 09:33:02 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Systems Engineering Playbook: Optimizing Qwen 3.5-397B MoE on Ironwood (TPU7x)</title>
       <link>https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</link>
       <description>To serve the 397B-parameter Qwen 3.5 Mixture-of-Experts (MoE) model on Ironwood TPUs, engineers developed a modular JAX/Pallas optimization stack that achieved up to a 4.7x inference speedup for prefill-heavy workloads The team bypassed severe hardware sharding constraints by deploying a hybrid Data Parallelism and Expert Parallelism (DP+EP) topology, paired with custom low-level communication fusions like a hierarchical reduce-scatter to optimize cross-device token routing Finally, by executing hardware-aware custom kernels—such as Batched Ragged Page Attention and a fully-fused Gated DeltaNet (GDN) block—they successfully saturated HBM bandwidth and TensorCore MXUs to push system throughput near its theoretical roofline limits.</description>
-      <pubDate>Thu, 20 Aug 2026 09:30:26 GMT</pubDate>
+      <pubDate>Fri, 21 Aug 2026 09:33:02 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search</title>
       <link>https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</link>
       <description>Google Cloud has partnered with Parallel Web Systems to natively integrate Parallel&amp;apos;s search infrastructure as a web grounding provider on the Gemini Enterprise Agent Platform This integration enables developers to anchor their AI agents in verifiable, real-time web results, significantly improving factual accuracy for complex enterprise workflows Additionally, the partnership offers expanded architectural flexibility, allowing users to programmatically extract, permanently cache, and process web data alongside other large language models.</description>
-      <pubDate>Thu, 20 Aug 2026 09:30:26 GMT</pubDate>
+      <pubDate>Fri, 21 Aug 2026 09:33:02 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The August 17 outage, and the work ahead</title>
+      <link>https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/</link>
+      <description>An update on the August 17 outage and the steps we&amp;apos;re taking to improve reliability The post The August 17 outage, and the work ahead appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 20 Aug 2026 18:36:11 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>GitHub Copilot app for Beginners: Managing your work</title>
@@ -87,14 +95,6 @@
       <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/reduce-fx-costs-with-stripe</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How to bring your software delivery workflow into GitHub with agent apps</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/</link>
-      <description>See how four GitHub agent apps can help you scope, secure, roll out, and ship a feature across the SDLC–all without leaving GitHub The post How to bring your software delivery workflow into GitHub with agent apps appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 14 Aug 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees</title>
