@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-08-22</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-08-22</p>
+        <div class="stats">
+            <span class="stat-item"><strong>19</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/" target="_blank" rel="noopener noreferrer">
+                                AWS Glue 6.0 now available with 30% lower price and full Apache Iceberg v3 support
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-21 18:53</p>
+                    <p class="article-summary">AWS Glue 6.0 is built on a fully modernized runtime, Apache Spark 4.1, Python 3.12, and Scala 2.13, delivering 30% lower pricing than previous AWS Glue versions.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-glue-6-0-now-available-with-30-lower-price-and-full-apache-iceberg-v3-support/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/" target="_blank" rel="noopener noreferrer">
+                                In the works: AWS Builder Lofts in Berlin, Hyderabad, and São Paulo
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-18 13:58</p>
+                    <p class="article-summary">Each location will be a permanent community space to offer free workshops, networking events, pitch nights, content creation spaces, collaboration/co-working areas, and event hosting for developers, students, or tech professionals who want to walk through the doors.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/in-the-works-aws-builder-lofts-in-berlin-hyderabad-and-sao-paulo/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ec2-application-status-checks-iam-role-manager-openai-daybreak-on-bedrock-and-more-august-17-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: EC2 application status checks, IAM role manager, OpenAI Daybreak on Bedrock, and more (August 17, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-17 16:02</p>
+                    <p class="article-summary">Last week, AWS contributors joined the OpenSearch and Valkey communities at Open Source Summit Korea 2026 and MCP DevSummit Seoul 2026 to meet open source developers and contributors At the four-day event, community leaders and users of these Linux Foundation open source projects gathered to share knowledge, collaborate on solutions, and push the projects forward. […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ec2-application-status-checks-iam-role-manager-openai-daybreak-on-bedrock-and-more-august-17-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" rel="noopener noreferrer">
+                                Improving infrastructure efficiency for growing demand in the age of AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-18 17:00</p>
+                    <p class="article-summary">As demand for AI continues to grow, so does the infrastructure needed to support it.</p>
+                    
+                    <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" target="_blank" rel="noopener noreferrer">
+                                The August 17 outage, and the work ahead
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-20 18:36</p>
+                    <p class="article-summary">An update on the August 17 outage and the steps we're taking to improve reliability The post The August 17 outage, and the work ahead appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/" target="_blank" rel="noopener noreferrer">
+                                GitHub Copilot app for Beginners: Managing your work
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-19 17:50</p>
+                    <p class="article-summary">If you’re juggling multiple Copilot sessions, use the My work pane to track what's in flight, what's done, and what's next The post GitHub Copilot app for Beginners: Managing your work appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/" target="_blank" rel="noopener noreferrer">
+                                How canvases make agentic workflows visible, steerable, and cost-efficient
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-17 16:00</p>
+                    <p class="article-summary">Chat is great for intent, but agent work gets lost in the scroll Here is how I use canvases with my agentic workflows—and why your workflow also deserves a canvas The post How canvases make agentic workflows visible, steerable, and cost-efficient appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/" target="_blank" rel="noopener noreferrer">
+                                LiteRT.js, Google's high performance Web AI Inference
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-22 09:23</p>
+                    <p class="article-summary">We're excited to introduce LiteRT.js, the newest member of the LiteRT family Built for JavaScript developers, LiteRT.js delivers state-of-the-art ML model inference performance on WebGPU and upcoming WebNN, with a fallback to WebAssembly for CPU This post provides a quick tour of LiteRT.js and gives web developers everything they need to get started.</p>
+                    
+                    <a href="https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/" target="_blank" rel="noopener noreferrer">
+                                Systems Engineering Playbook: Optimizing Qwen 3.5-397B MoE on Ironwood (TPU7x)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-22 09:23</p>
+                    <p class="article-summary">To serve the 397B-parameter Qwen 3.5 Mixture-of-Experts (MoE) model on Ironwood TPUs, engineers developed a modular JAX/Pallas optimization stack that achieved up to a 4.7x inference speedup for prefill-heavy workloads The team bypassed severe hardware sharding constraints by deploying a hybrid Data Parallelism and Expert Parallelism (DP+EP) topology, paired with custom low-level communication fusions like a hierarchical reduce-scatter to optimize cross-device token routing Finally, by executing hardware-aware custom kernels—such as Batched Ragged Page Attention and a fully-fused Gated DeltaNet (GDN) block—they successfully saturated HBM bandwidth and TensorCore MXUs to push system throughput near its theoretical roofline limits.</p>
+                    
+                    <a href="https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/" target="_blank" rel="noopener noreferrer">
+                                Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-22 09:23</p>
+                    <p class="article-summary">Google Cloud has partnered with Parallel Web Systems to natively integrate Parallel's search infrastructure as a web grounding provider on the Gemini Enterprise Agent Platform This integration enables developers to anchor their AI agents in verifiable, real-time web results, significantly improving factual accuracy for complex enterprise workflows Additionally, the partnership offers expanded architectural flexibility, allowing users to programmatically extract, permanently cache, and process web data alongside other large language models.</p>
+                    
+                    <a href="https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/" target="_blank" rel="noopener noreferrer">
+                                How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-12 13:00</p>
+                    <p class="article-summary">WhatsApp is committed to helping people stay safe while protecting the privacy of their messages As scam tactics evolve — from impersonation to social engineering to AI-generated lures — we’re always evolving as well, so that our protections stay ahead of scammers while protecting people’s personal messages with end-to-end encryption The post How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" target="_blank" rel="noopener noreferrer">
+                                From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-05 19:20</p>
+                    <p class="article-summary">Every day, Meta’s recommendation platforms handle billions of user interactions, generating rich temporal signals that capture individual preferences and intent across products, ads, and content In our 2024 post on sequence learning for ads recommendations, we showed how modeling the order and timing of user actions (rather than relying on static, manually engineered sparse features) [...] Read More The post From User Sequences to Scaling Laws: A Multi-Stage Architecture for Meta’s Ads Ranking appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/08/05/ml-applications/from-user-sequences-to-scaling-laws-a-multi-stage-architecture-for-metas-ads-ranking/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" target="_blank" rel="noopener noreferrer">
+                                GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-03 18:00</p>
+                    <p class="article-summary">Meta’s Generative Ads Recommendation Model (GEM), the foundation model behind ads recommendations across Instagram and Facebook, now trains at LLM scale on several thousand of the latest-generation GPUs This post goes into the details on how we achieved: doubling end-to-end (E2E) training efficiency to 20–25% Model FLOPs Utilization (MFU) while scaling training FLOPs 4x in [...] Read More The post GEM Training: How Meta Doubled the Efficiency of Its LLM-Scale Ads Foundation Model appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/08/03/ml-applications/training-gem-at-llm-scale-meta-ads-recommendation-foundation-model/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                A Tale of Two Flink Autoscalers
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-21 16:01</p>
+                    <p class="article-summary">Each autoscaler node handled the metrics for a subset of Flink jobs, and we never had to write custom sharding or coordination logic to keep up with a growing Flink fleet Starting from the sources, the autoscaler walks the job graph and uses each operator’s TPR, its input/output ratios, and a target utilization to compute the parallelism every vertex needs so that no operator becomes the bottleneck, rather than resizing the whole cluster as a unit.Figure 2: Flink job DAG: current → desired parallelism per vertex, based on busynessThe two approaches make a different contract, summarized below.Table 1: Comparison of the two Flink autoscalersThe decisive difference for us is the last two rows: the OSS autoscaler can scale exactly the stateful, multi-operator jobs our homegrown system could not, and it lets each job carry its own configuration — stabilization periods, thresholds, and other scaling behavior tuned to the workload Having started supporting Flink 2.2 at Netflix, we plan on experimenting with this new state backend to see if it can help eliminate state recovery bottlenecks when scaling large stateful jobs.Looking ahead, we aim to migrate all internal scaler use cases onto the new one based on OSS autoscaler to simplify our operational surface area.Key TakeawaysAlong the way, three lessons that generalize beyond Flink:Metric choice matters more than algorithm sophistication</p>
+                    
+                    <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-07 16:01</p>
+                    <p class="article-summary">It batches requests, runs them in parallel with graph data assembly, and degrades gracefully when an enrichment source is unavailable.When a client sends a query, the request flows through these layers in sequence: the Query Service parses the request into an execution plan, the execution engine walks the graph level by level through the Storage Abstraction Layer, and if enrichments are requested, the Enrichment Layer fetches and merges external data before the response is serialized back to the client.Now, with that mental model in place, let’s follow a query through this system and see how these choices play out in practice.Executing Queries Efficiently: Following a Query’s JourneyTo see how the RDG query layer works in practice, let’s follow a single query end-to-end and focus on one question: how do we make every step fast?We’ll reuse the deep-narrow example from above:For Account X, show me the Stranger Things viewing history across all profiles: which profiles watched it, what they watched, and when.In graph terms, this becomes a 2‑hop traversal:Account X → has_profile → ProfilesProfiles → started_watching → Content (filtered for “Stranger Things”)We’ll walk through how this query moves through the layers we described above:Reading and interpreting the requestReading from storage efficientlyExecuting traversal with breadth‑first levelsRunning many operations in parallel, but safelyFiltering smartly to keep only what mattersMaking repeat queries faster with cachingBy the end, we’ll see how a 2-hop query like our Stranger Things example, with streaming, filtering, and parallel execution, can complete in under 100ms.Step 1: Reading the Request: Deciding What the Query Really WantsEvery query starts as a gRPC request The query was:For Account X, show me the Stranger Things viewing history across all profiles: which profiles watched it, what they watched, and whenSo we still need to fetch each profile’s history and filter it down to Stranger Things sessions That’s why our Stranger Things query completes in under 100ms.Step 4: Parallel Execution: Doing Many Things at Once, SafelyBreadth-first traversal enables parallel work at each level, which is the key to low latency.At Level 2 of our Stranger Things query, we fetch started_watching edges for each profile</p>
+                    
+                    <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Modeling Device Capabilities for Analytics
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-07-31 16:01</p>
+                    <p class="article-summary">To ensure the best possible user experience, we rely on a deep understanding of device capabilities We use a cumulative table to process information about the device’s capabilities By relying on data-driven insights, we can make informed decisions about which features to enable on specific devices, ensuring both performance and reliability.Modeling Device Capabilities for Analytics was originally published in Netflix TechBlog on Medium, where people are continuing the conversation by highlighting and responding to this story.</p>
+                    
+                    <a href="https://netflixtechblog.com/modeling-device-capabilities-for-analytics-e7607acebde8?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts" target="_blank" rel="noopener noreferrer">
+                                Why global workers are driving demand for stablecoin payouts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-19 00:00</p>
+                    <p class="article-summary">Platforms like DoorDash, Meta, and Deel already enable stablecoin payouts for global workers We surveyed 2,300 workers in 20 countries to see what's driving stablecoin demand, where the opportunity is highest, and how other platforms can adapt.</p>
+                    
+                    <a href="https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/reduce-fx-costs-with-stripe" target="_blank" rel="noopener noreferrer">
+                                New currency capabilities for global businesses to cut FX costs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-17 00:00</p>
+                    <p class="article-summary">Two product upgrades make it easy for global businesses to manage FX entirely on Stripe We’re expanding multicurrency settlement to more markets and currencies, and we’re introducing the ability to convert currencies instantly—all on Stripe.</p>
+                    
+                    <a href="https://stripe.com/blog/reduce-fx-costs-with-stripe" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/mapping-the-ai-economy" target="_blank" rel="noopener noreferrer">
+                                Mapping the AI economy
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-11 00:00</p>
+                    <p class="article-summary">AI companies are undergoing rapid global expansion while achieving unprecedented rates of growth We analyzed Stripe data to understand where global demand is the strongest, and how companies can build to best capture that demand.</p>
+                    
+                    <a href="https://stripe.com/blog/mapping-the-ai-economy" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-08-22 09:23:12</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
