@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 26 Aug 2026 09:37:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 19:25:06 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Systems Engineering Playbook: Optimizing Qwen 3.5-397B MoE on Ironwood (TPU7x)</title>
-      <link>https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</link>
-      <description>To serve the 397B-parameter Qwen 3.5 Mixture-of-Experts (MoE) model on Ironwood TPUs, engineers developed a modular JAX/Pallas optimization stack that achieved up to a 4.7x inference speedup for prefill-heavy workloads The team bypassed severe hardware sharding constraints by deploying a hybrid Data Parallelism and Expert Parallelism (DP+EP) topology, paired with custom low-level communication fusions like a hierarchical reduce-scatter to optimize cross-device token routing Finally, by executing hardware-aware custom kernels—such as Batched Ragged Page Attention and a fully-fused Gated DeltaNet (GDN) block—they successfully saturated HBM bandwidth and TensorCore MXUs to push system throughput near its theoretical roofline limits.</description>
-      <pubDate>Wed, 26 Aug 2026 09:37:08 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/systems-engineering-playbook-optimizing-qwen-35-397b-moe-on-ironwood-tpu7x/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Expanding Choice in Gemini Enterprise Agent Platform: Introducing Grounding with Parallel Web Search</title>
-      <link>https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</link>
-      <description>Google Cloud has partnered with Parallel Web Systems to natively integrate Parallel&amp;apos;s search infrastructure as a web grounding provider on the Gemini Enterprise Agent Platform This integration enables developers to anchor their AI agents in verifiable, real-time web results, significantly improving factual accuracy for complex enterprise workflows Additionally, the partnership offers expanded architectural flexibility, allowing users to programmatically extract, permanently cache, and process web data alongside other large language models.</description>
-      <pubDate>Wed, 26 Aug 2026 09:37:08 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Evolving Spec-Driven Development: Conductor Now Supports Antigravity</title>
       <link>https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</link>
       <description>Conductor has evolved from a Gemini CLI extension into a portable plugin, bringing conversational Spec-Driven Development (SDD) to ecosystems like Antigravity CLI and Claude Rather than relying on strict command sequences, developers can now chat naturally with their AI assistant while it dynamically manages persistent markdown artifacts (like spec.md and plan.md) in the background This update eliminates workflow friction while ensuring your repository remains a version-controlled, single source of truth for your project&amp;apos;s architecture and state across different AI tools.</description>
-      <pubDate>Wed, 26 Aug 2026 09:37:08 GMT</pubDate>
+      <pubDate>Thu, 27 Aug 2026 19:25:01 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Building scalable AI agents with modular prompt transpilation</title>
+      <link>https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</link>
+      <description>To resolve the scaling bottlenecks and runtime errors caused by monolithic system prompts, engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates By running these modular &amp;quot;skill files&amp;quot; through a transpiler, developers can enforce static validation, catch missing dependencies at build time, and integrate prompt generation directly into their CI/CD pipelines This deterministic approach prevents code drift and ultimately establishes a safe framework where agents can propose updates to their own logic via standard pull requests.</description>
+      <pubDate>Thu, 27 Aug 2026 19:25:01 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Run Ray on TPU, Part 1: The foundations</title>
+      <link>https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</link>
+      <description>Ray 2.55 introduces official, first-class support for Google Cloud TPUs, enabling developers to run distributed Python workloads on Google&amp;apos;s accelerators using the familiar Ray task-and-actor APIs To handle the strict networking requirement of keeping multi-host TPU &amp;quot;slices&amp;quot; together over their Inter-Chip Interconnect (ICI), the KubeRay Operator on GKE automatically provisions and labels the underlying hardware layout Ray Core utilizes these labels via its slice_placement_group() primitive to atomically reserve complete slices, allowing developers to deploy jobs through KubeRay, Ray Train, or Ray Serve simply by declaring a hardware topology (like &amp;quot;4x4&amp;quot;) without writing custom placement code.</description>
+      <pubDate>Thu, 27 Aug 2026 19:25:01 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>OpenClaw went viral. Meet the maintainers building and securing it.</title>
+      <link>https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/</link>
+      <description>OpenClaw is the fastest-growing project in GitHub history Peter Steinberger and several maintainers share what they learned in the project&amp;apos;s first six months Meet the maintainers building and securing it. appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 27 Aug 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>GitHub Copilot app for Beginners: Automate Dependabot pull request triage</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/</link>
+      <description>Managing library updates can be tedious at times Learn how the GitHub Copilot app can handle this type of repetitive task The post GitHub Copilot app for Beginners: Automate Dependabot pull request triage appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 26 Aug 2026 20:12:53 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
       <title>How to evaluate LLMs before production</title>
@@ -47,14 +63,6 @@
       <pubDate>Tue, 25 Aug 2026 16:11:02 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/</guid>
       <source>AWS News</source>
-    </item>
-    <item>
-      <title>Your alt text passes automated checks. That doesn’t mean it’s any good.</title>
-      <link>https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/</link>
-      <description>We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible The post Your alt text passes automated checks That doesn’t mean it’s any good. appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 24 Aug 2026 20:56:32 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet</title>
@@ -95,14 +103,6 @@
       <pubDate>Fri, 21 Aug 2026 16:01:01 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>The August 17 outage, and the work ahead</title>
-      <link>https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/</link>
-      <description>An update on the August 17 outage and the steps we&amp;apos;re taking to improve reliability The post The August 17 outage, and the work ahead appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 20 Aug 2026 18:36:11 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/</guid>
-      <source>GitHub Blog</source>
     </item>
     <item>
       <title>Five monetization trends from global pricing leaders</title>
