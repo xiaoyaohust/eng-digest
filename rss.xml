@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 29 Aug 2026 14:09:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 14:15:33 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Evolving Spec-Driven Development: Conductor Now Supports Antigravity</title>
       <link>https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</link>
       <description>Conductor has evolved from a Gemini CLI extension into a portable plugin, bringing conversational Spec-Driven Development (SDD) to ecosystems like Antigravity CLI and Claude Rather than relying on strict command sequences, developers can now chat naturally with their AI assistant while it dynamically manages persistent markdown artifacts (like spec.md and plan.md) in the background This update eliminates workflow friction while ensuring your repository remains a version-controlled, single source of truth for your project&amp;apos;s architecture and state across different AI tools.</description>
-      <pubDate>Sat, 29 Aug 2026 14:08:58 GMT</pubDate>
+      <pubDate>Sun, 30 Aug 2026 14:15:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building scalable AI agents with modular prompt transpilation</title>
       <link>https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</link>
       <description>To resolve the scaling bottlenecks and runtime errors caused by monolithic system prompts, engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates By running these modular &amp;quot;skill files&amp;quot; through a transpiler, developers can enforce static validation, catch missing dependencies at build time, and integrate prompt generation directly into their CI/CD pipelines This deterministic approach prevents code drift and ultimately establishes a safe framework where agents can propose updates to their own logic via standard pull requests.</description>
-      <pubDate>Sat, 29 Aug 2026 14:08:58 GMT</pubDate>
+      <pubDate>Sun, 30 Aug 2026 14:15:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Run Ray on TPU, Part 1: The foundations</title>
       <link>https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</link>
       <description>Ray 2.55 introduces official, first-class support for Google Cloud TPUs, enabling developers to run distributed Python workloads on Google&amp;apos;s accelerators using the familiar Ray task-and-actor APIs To handle the strict networking requirement of keeping multi-host TPU &amp;quot;slices&amp;quot; together over their Inter-Chip Interconnect (ICI), the KubeRay Operator on GKE automatically provisions and labels the underlying hardware layout Ray Core utilizes these labels via its slice_placement_group() primitive to atomically reserve complete slices, allowing developers to deploy jobs through KubeRay, Ray Train, or Ray Serve simply by declaring a hardware topology (like &amp;quot;4x4&amp;quot;) without writing custom placement code.</description>
-      <pubDate>Sat, 29 Aug 2026 14:08:58 GMT</pubDate>
+      <pubDate>Sun, 30 Aug 2026 14:15:30 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</guid>
       <source>Google Developers</source>
     </item>
