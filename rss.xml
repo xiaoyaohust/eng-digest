@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 31 Aug 2026 16:41:16 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 13:54:50 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Evolving Spec-Driven Development: Conductor Now Supports Antigravity</title>
       <link>https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</link>
       <description>Conductor has evolved from a Gemini CLI extension into a portable plugin, bringing conversational Spec-Driven Development (SDD) to ecosystems like Antigravity CLI and Claude Rather than relying on strict command sequences, developers can now chat naturally with their AI assistant while it dynamically manages persistent markdown artifacts (like spec.md and plan.md) in the background This update eliminates workflow friction while ensuring your repository remains a version-controlled, single source of truth for your project&amp;apos;s architecture and state across different AI tools.</description>
-      <pubDate>Mon, 31 Aug 2026 16:41:12 GMT</pubDate>
+      <pubDate>Tue, 01 Sep 2026 13:54:47 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Building scalable AI agents with modular prompt transpilation</title>
       <link>https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</link>
       <description>To resolve the scaling bottlenecks and runtime errors caused by monolithic system prompts, engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates By running these modular &amp;quot;skill files&amp;quot; through a transpiler, developers can enforce static validation, catch missing dependencies at build time, and integrate prompt generation directly into their CI/CD pipelines This deterministic approach prevents code drift and ultimately establishes a safe framework where agents can propose updates to their own logic via standard pull requests.</description>
-      <pubDate>Mon, 31 Aug 2026 16:41:12 GMT</pubDate>
+      <pubDate>Tue, 01 Sep 2026 13:54:47 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,25 @@
       <title>Run Ray on TPU, Part 1: The foundations</title>
       <link>https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</link>
       <description>Ray 2.55 introduces official, first-class support for Google Cloud TPUs, enabling developers to run distributed Python workloads on Google&amp;apos;s accelerators using the familiar Ray task-and-actor APIs To handle the strict networking requirement of keeping multi-host TPU &amp;quot;slices&amp;quot; together over their Inter-Chip Interconnect (ICI), the KubeRay Operator on GKE automatically provisions and labels the underlying hardware layout Ray Core utilizes these labels via its slice_placement_group() primitive to atomically reserve complete slices, allowing developers to deploy jobs through KubeRay, Ray Train, or Ray Serve simply by declaring a hardware topology (like &amp;quot;4x4&amp;quot;) without writing custom placement code.</description>
-      <pubDate>Mon, 31 Aug 2026 16:41:12 GMT</pubDate>
+      <pubDate>Tue, 01 Sep 2026 13:54:47 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/</link>
+      <description>Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 are now generally available, delivering up to 25% better compute performance than R8g, ideal for databases, in-memory caches, and real-time analytics.</description>
+      <pubDate>Mon, 31 Aug 2026 19:53:34 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Testing cookie behavior across hundreds of web surfaces with our in-house auditor</title>
+      <link>https://dropbox.tech/security/how-our-inhouse-auditor-tests-cookie-behavior-across-hundreds-of-web-surfaces</link>
+      <description>Our cookie auditor acts like a privacy-conscious user by visiting web pages and checking that they only load cookies consistent with that user’s preferences.</description>
+      <pubDate>Mon, 31 Aug 2026 17:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/security/how-our-inhouse-auditor-tests-cookie-behavior-across-hundreds-of-web-surfaces</guid>
+      <source>Dropbox Engineering</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: Welcome DuckLabs to the team, Agentic Resource Discovery (ARD), and more (August 31, 2026)</title>
@@ -95,14 +111,6 @@
       <pubDate>Mon, 24 Aug 2026 17:45:52 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/08/24/networking-traffic/mtia-300-meta-training-chip-built-in-nics/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Student Rewards on AWS Builder Center, Local Zone in Las Vegas, and more (August 24, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-student-rewards-on-aws-builder-center-local-zone-in-las-vegas-and-more-august-24-2026/</link>
-      <description>During my time at AWS, I have always looked for opportunities to work with students I have delivered over 50 talks at universities across the region, and watching the potential in the room is always a strong motivator It reminds me of why I do this work, and that the students I meet today may […]</description>
-      <pubDate>Mon, 24 Aug 2026 16:20:15 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-student-rewards-on-aws-builder-center-local-zone-in-las-vegas-and-more-august-24-2026/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>A Tale of Two Flink Autoscalers</title>
