@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 02 Sep 2026 13:12:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 13:13:48 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Evolving Spec-Driven Development: Conductor Now Supports Antigravity</title>
-      <link>https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</link>
-      <description>Conductor has evolved from a Gemini CLI extension into a portable plugin, bringing conversational Spec-Driven Development (SDD) to ecosystems like Antigravity CLI and Claude Rather than relying on strict command sequences, developers can now chat naturally with their AI assistant while it dynamically manages persistent markdown artifacts (like spec.md and plan.md) in the background This update eliminates workflow friction while ensuring your repository remains a version-controlled, single source of truth for your project&amp;apos;s architecture and state across different AI tools.</description>
-      <pubDate>Wed, 02 Sep 2026 13:12:50 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Building scalable AI agents with modular prompt transpilation</title>
       <link>https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</link>
       <description>To resolve the scaling bottlenecks and runtime errors caused by monolithic system prompts, engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates By running these modular &amp;quot;skill files&amp;quot; through a transpiler, developers can enforce static validation, catch missing dependencies at build time, and integrate prompt generation directly into their CI/CD pipelines This deterministic approach prevents code drift and ultimately establishes a safe framework where agents can propose updates to their own logic via standard pull requests.</description>
-      <pubDate>Wed, 02 Sep 2026 13:12:50 GMT</pubDate>
+      <pubDate>Thu, 03 Sep 2026 13:13:45 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,41 @@
       <title>Run Ray on TPU, Part 1: The foundations</title>
       <link>https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</link>
       <description>Ray 2.55 introduces official, first-class support for Google Cloud TPUs, enabling developers to run distributed Python workloads on Google&amp;apos;s accelerators using the familiar Ray task-and-actor APIs To handle the strict networking requirement of keeping multi-host TPU &amp;quot;slices&amp;quot; together over their Inter-Chip Interconnect (ICI), the KubeRay Operator on GKE automatically provisions and labels the underlying hardware layout Ray Core utilizes these labels via its slice_placement_group() primitive to atomically reserve complete slices, allowing developers to deploy jobs through KubeRay, Ray Train, or Ray Serve simply by declaring a hardware topology (like &amp;quot;4x4&amp;quot;) without writing custom placement code.</description>
-      <pubDate>Wed, 02 Sep 2026 13:12:50 GMT</pubDate>
+      <pubDate>Thu, 03 Sep 2026 13:13:45 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Scaling Agentic RL: High-Throughput Agentic Training with Tunix</title>
+      <link>https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix/</link>
+      <description>Tunix is Google’s new JAX-native post-training library designed to eliminate TPU idling bottlenecks when training multi-turn, tool-using LLM reasoning agents It maximizes hardware throughput by combining highly concurrent, asynchronous rollouts with a decoupled producer-consumer pipeline, ensuring the trainer is constantly fed even while agents wait on network I/O or environment steps Additionally, Tunix provides plug-and-play abstractions and continuous macro-level profiling, allowing developers to easily integrate custom open-source environments and optimize complex distributed workflows without massive code rewrites.</description>
+      <pubDate>Thu, 03 Sep 2026 13:13:45 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!</title>
+      <link>https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/</link>
+      <description>From loop engineering to harnesses, squads, and open weights, the GitHub Podcast breaks down the AI terms showing up in developer conversations The post Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my! appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 02 Sep 2026 21:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How we make AI coding more cost efficient without sacrificing task quality</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/</link>
+      <description>Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task The post How we make AI coding more cost efficient without sacrificing task quality appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 02 Sep 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>An Organizational Second Brain: Building an AI That Learns From Experts</title>
+      <link>https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/</link>
+      <description>We’ve built an AI agent that acts as a secondary expert for a given domain, making deep specialist knowledge readily available and preserved for anyone in an organization to access, share, and build upon This is not a typical domain-specific agent Its novelty comes from integrating two layers: A structured, auditable knowledge architecture separates what [...] Read More</description>
+      <pubDate>Wed, 02 Sep 2026 09:00:29 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/</guid>
+      <source>Meta Engineering</source>
     </item>
     <item>
       <title>Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available</title>
@@ -70,22 +94,6 @@
       <description>OpenClaw is the fastest-growing project in GitHub history Peter Steinberger and several maintainers share what they learned in the project&amp;apos;s first six months Meet the maintainers building and securing it. appeared first on The GitHub Blog.</description>
       <pubDate>Thu, 27 Aug 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>GitHub Copilot app for Beginners: Automate Dependabot pull request triage</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/</link>
-      <description>Managing library updates can be tedious at times Learn how the GitHub Copilot app can handle this type of repetitive task The post GitHub Copilot app for Beginners: Automate Dependabot pull request triage appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 26 Aug 2026 20:12:53 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>How to evaluate LLMs before production</title>
-      <link>https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/</link>
-      <description>These are the lessons we learned evaluating LLMs for real-world secret scanning The post How to evaluate LLMs before production appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 25 Aug 2026 21:35:11 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
@@ -151,14 +159,6 @@
       <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/reduce-fx-costs-with-stripe</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees</title>
-      <link>https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/</link>
-      <description>WhatsApp is committed to helping people stay safe while protecting the privacy of their messages As scam tactics evolve — from impersonation to social engineering to AI-generated lures — we’re always evolving as well, so that our protections stay ahead of scammers while protecting people’s personal messages with end-to-end encryption The post How We’re Building Scam Alert on WhatsApp With End-to-End Encryption and Verifiability Guarantees appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 12 Aug 2026 13:00:28 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/08/12/security/how-were-building-scam-alert-whatsapp/</guid>
-      <source>Meta Engineering</source>
     </item>
     <item>
       <title>How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…</title>
