@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-09-04</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-09-04</p>
+        <div class="stats">
+            <span class="stat-item"><strong>20</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/" target="_blank" rel="noopener noreferrer">
+                                Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-31 19:53</p>
+                    <p class="article-summary">Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 are now generally available, delivering up to 25% better compute performance than R8g, ideal for databases, in-memory caches, and real-time analytics.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-welcome-ducklabs-to-the-team-agentic-resource-discovery-ard-and-more-august-31-2026/" target="_blank" rel="noopener noreferrer">
+                                AWS Weekly Roundup: Welcome DuckLabs to the team, Agentic Resource Discovery (ARD), and more (August 31, 2026)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-31 14:45</p>
+                    <p class="article-summary">The news that interested me the most last week was the DuckLabs acquisition AWS has signed a definitive agreement to acquire DuckLabs, the Amsterdam-based company behind DuckDB, the popular open source analytical database that runs in-process and executes SQL directly against files like Parquet, CSV, and JSON DuckDB stays open source under its independent foundation […]</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-welcome-ducklabs-to-the-team-agentic-resource-discovery-ard-and-more-august-31-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/" target="_blank" rel="noopener noreferrer">
+                                Happy 20th Birthday, Amazon EC2
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-25 16:11</p>
+                    <p class="article-summary">On the 20th Anniversary, we recognize how AWS has continued to push the boundaries of what cloud computing can deliver, building custom silicon for general-purpose and AI workloads and expanding EC2 into new form factors and deployment models that our customers in 2006 could not have imagined.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/security/how-our-inhouse-auditor-tests-cookie-behavior-across-hundreds-of-web-surfaces" target="_blank" rel="noopener noreferrer">
+                                Testing cookie behavior across hundreds of web surfaces with our in-house auditor
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-31 17:00</p>
+                    <p class="article-summary">Our cookie auditor acts like a privacy-conscious user by visiting web pages and checking that they only load cookies consistent with that user’s preferences.</p>
+                    
+                    <a href="https://dropbox.tech/security/how-our-inhouse-auditor-tests-cookie-behavior-across-hundreds-of-web-surfaces" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" target="_blank" rel="noopener noreferrer">
+                                Improving infrastructure efficiency for growing demand in the age of AI
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-18 17:00</p>
+                    <p class="article-summary">As demand for AI continues to grow, so does the infrastructure needed to support it.</p>
+                    
+                    <a href="https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/" target="_blank" rel="noopener noreferrer">
+                                GitHub Copilot app for Beginners: Run several agents at once
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-03 16:00</p>
+                    <p class="article-summary">Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful The post GitHub Copilot app for Beginners: Run several agents at once appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" target="_blank" rel="noopener noreferrer">
+                                Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-02 21:00</p>
+                    <p class="article-summary">From loop engineering to harnesses, squads, and open weights, the GitHub Podcast breaks down the AI terms showing up in developer conversations The post Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my! appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" target="_blank" rel="noopener noreferrer">
+                                How we make AI coding more cost efficient without sacrificing task quality
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-02 18:00</p>
+                    <p class="article-summary">Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task The post How we make AI coding more cost efficient without sacrificing task quality appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/" target="_blank" rel="noopener noreferrer">
+                                Building scalable AI agents with modular prompt transpilation
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-04 13:07</p>
+                    <p class="article-summary">To resolve the scaling bottlenecks and runtime errors caused by monolithic system prompts, engineering teams should treat prompts as build artifacts by modularizing instructions into reusable templates By running these modular "skill files" through a transpiler, developers can enforce static validation, catch missing dependencies at build time, and integrate prompt generation directly into their CI/CD pipelines This deterministic approach prevents code drift and ultimately establishes a safe framework where agents can propose updates to their own logic via standard pull requests.</p>
+                    
+                    <a href="https://developers.googleblog.com/building-scalable-ai-agents-with-modular-prompt-transpilation/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/" target="_blank" rel="noopener noreferrer">
+                                Run Ray on TPU, Part 1: The foundations
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-04 13:07</p>
+                    <p class="article-summary">Ray 2.55 introduces official, first-class support for Google Cloud TPUs, enabling developers to run distributed Python workloads on Google's accelerators using the familiar Ray task-and-actor APIs To handle the strict networking requirement of keeping multi-host TPU "slices" together over their Inter-Chip Interconnect (ICI), the KubeRay Operator on GKE automatically provisions and labels the underlying hardware layout Ray Core utilizes these labels via its slice_placement_group() primitive to atomically reserve complete slices, allowing developers to deploy jobs through KubeRay, Ray Train, or Ray Serve simply by declaring a hardware topology (like "4x4") without writing custom placement code.</p>
+                    
+                    <a href="https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix/" target="_blank" rel="noopener noreferrer">
+                                Scaling Agentic RL: High-Throughput Agentic Training with Tunix
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-04 13:07</p>
+                    <p class="article-summary">Tunix is Google’s new JAX-native post-training library designed to eliminate TPU idling bottlenecks when training multi-turn, tool-using LLM reasoning agents It maximizes hardware throughput by combining highly concurrent, asynchronous rollouts with a decoupled producer-consumer pipeline, ensuring the trainer is constantly fed even while agents wait on network I/O or environment steps Additionally, Tunix provides plug-and-play abstractions and continuous macro-level profiling, allowing developers to easily integrate custom open-source environments and optimize complex distributed workflows without massive code rewrites.</p>
+                    
+                    <a href="https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" rel="noopener noreferrer">
+                                ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-03 16:00</p>
+                    <p class="article-summary">We’re introducing ZGateway, the proxy we are using to unify traffic through ZippyDB, Meta’s most widely-used key value store ZippyDB is the most widely used key value store at Meta, backing product metadata, counters, and configuration, and can serve billions [...] Read More The post ZGateway: Learnings from Putting a Proxy in Front of ZippyDB appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" rel="noopener noreferrer">
+                                An Organizational Second Brain: Building an AI That Learns From Experts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-02 09:00</p>
+                    <p class="article-summary">We’ve built an AI agent that acts as a secondary expert for a given domain, making deep specialist knowledge readily available and preserved for anyone in an organization to access, share, and build upon This is not a typical domain-specific agent Its novelty comes from integrating two layers: A structured, auditable knowledge architecture separates what [...] Read More</p>
+                    
+                    <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" rel="noopener noreferrer">
+                                MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-24 18:02</p>
+                    <p class="article-summary">To meet this challenge at scale, Meta designed MetaRoCE – a clean-sheet RDMA transport protocol purpose-built for AI workloads on commodity Ethernet We’re releasing the MetaRoCE specification, a reference software implementation and a compliance test [...] Read More The post MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                MAPS: Netflix’s Multimodal Asset Personalization at Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-28 16:01</p>
+                    <p class="article-summary">A single unified model can therefore pool interaction signal across every canvas, so a member’s affinity learned on a high-traffic canvas immediately informs the artwork we pick on a sparse one One unified model over all five canvases, with image embeddings in its asset representation.As the chart below shows, each idea helped exactly where we expected: on the data-starved short-panel canvas and landscape-panel canvas We have since shipped MediaFM as the default video preview embedding across all platforms.Relative offline IPS lift for the two content-aware video preview embeddings, each measured against the ID-only baseline at the zero rule</p>
+                    
+                    <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                A Tale of Two Flink Autoscalers
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-21 16:01</p>
+                    <p class="article-summary">Each autoscaler node handled the metrics for a subset of Flink jobs, and we never had to write custom sharding or coordination logic to keep up with a growing Flink fleet Starting from the sources, the autoscaler walks the job graph and uses each operator’s TPR, its input/output ratios, and a target utilization to compute the parallelism every vertex needs so that no operator becomes the bottleneck, rather than resizing the whole cluster as a unit.Figure 2: Flink job DAG: current → desired parallelism per vertex, based on busynessThe two approaches make a different contract, summarized below.Table 1: Comparison of the two Flink autoscalersThe decisive difference for us is the last two rows: the OSS autoscaler can scale exactly the stateful, multi-operator jobs our homegrown system could not, and it lets each job carry its own configuration — stabilization periods, thresholds, and other scaling behavior tuned to the workload Having started supporting Flink 2.2 at Netflix, we plan on experimenting with this new state backend to see if it can help eliminate state recovery bottlenecks when scaling large stateful jobs.Looking ahead, we aim to migrate all internal scaler use cases onto the new one based on OSS autoscaler to simplify our operational surface area.Key TakeawaysAlong the way, three lessons that generalize beyond Flink:Metric choice matters more than algorithm sophistication</p>
+                    
+                    <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                How and Why Netflix Built a Real-Time Distributed Graph: Part 3 — Querying the graph with gRPC…
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-07 16:01</p>
+                    <p class="article-summary">It batches requests, runs them in parallel with graph data assembly, and degrades gracefully when an enrichment source is unavailable.When a client sends a query, the request flows through these layers in sequence: the Query Service parses the request into an execution plan, the execution engine walks the graph level by level through the Storage Abstraction Layer, and if enrichments are requested, the Enrichment Layer fetches and merges external data before the response is serialized back to the client.Now, with that mental model in place, let’s follow a query through this system and see how these choices play out in practice.Executing Queries Efficiently: Following a Query’s JourneyTo see how the RDG query layer works in practice, let’s follow a single query end-to-end and focus on one question: how do we make every step fast?We’ll reuse the deep-narrow example from above:For Account X, show me the Stranger Things viewing history across all profiles: which profiles watched it, what they watched, and when.In graph terms, this becomes a 2‑hop traversal:Account X → has_profile → ProfilesProfiles → started_watching → Content (filtered for “Stranger Things”)We’ll walk through how this query moves through the layers we described above:Reading and interpreting the requestReading from storage efficientlyExecuting traversal with breadth‑first levelsRunning many operations in parallel, but safelyFiltering smartly to keep only what mattersMaking repeat queries faster with cachingBy the end, we’ll see how a 2-hop query like our Stranger Things example, with streaming, filtering, and parallel execution, can complete in under 100ms.Step 1: Reading the Request: Deciding What the Query Really WantsEvery query starts as a gRPC request The query was:For Account X, show me the Stranger Things viewing history across all profiles: which profiles watched it, what they watched, and whenSo we still need to fetch each profile’s history and filter it down to Stranger Things sessions That’s why our Stranger Things query completes in under 100ms.Step 4: Parallel Execution: Doing Many Things at Once, SafelyBreadth-first traversal enables parallel work at each level, which is the key to low latency.At Level 2 of our Stranger Things query, we fetch started_watching edges for each profile</p>
+                    
+                    <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-3-querying-the-graph-with-grpc-0f3468349607?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders" target="_blank" rel="noopener noreferrer">
+                                Five monetization trends from global pricing leaders
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-20 00:00</p>
+                    <p class="article-summary">As AI transforms software economics, the standard revenue playbook is breaking down Learn how leaders around the world are preparing for agent buyers, updating processes for faster pricing iteration, and building more flexible infrastructure.</p>
+                    
+                    <a href="https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts" target="_blank" rel="noopener noreferrer">
+                                Why global workers are driving demand for stablecoin payouts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-19 00:00</p>
+                    <p class="article-summary">Platforms like DoorDash, Meta, and Deel already enable stablecoin payouts for global workers We surveyed 2,300 workers in 20 countries to see what's driving stablecoin demand, where the opportunity is highest, and how other platforms can adapt.</p>
+                    
+                    <a href="https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/reduce-fx-costs-with-stripe" target="_blank" rel="noopener noreferrer">
+                                New currency capabilities for global businesses to cut FX costs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-17 00:00</p>
+                    <p class="article-summary">Two product upgrades make it easy for global businesses to manage FX entirely on Stripe We’re expanding multicurrency settlement to more markets and currencies, and we’re introducing the ability to convert currencies instantly—all on Stripe.</p>
+                    
+                    <a href="https://stripe.com/blog/reduce-fx-costs-with-stripe" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-09-04 13:08:02</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
