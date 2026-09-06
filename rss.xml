@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 05 Sep 2026 12:20:57 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 12:35:52 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Run Ray on TPU, Part 1: The foundations</title>
       <link>https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</link>
       <description>Ray 2.55 introduces official, first-class support for Google Cloud TPUs, enabling developers to run distributed Python workloads on Google&amp;apos;s accelerators using the familiar Ray task-and-actor APIs To handle the strict networking requirement of keeping multi-host TPU &amp;quot;slices&amp;quot; together over their Inter-Chip Interconnect (ICI), the KubeRay Operator on GKE automatically provisions and labels the underlying hardware layout Ray Core utilizes these labels via its slice_placement_group() primitive to atomically reserve complete slices, allowing developers to deploy jobs through KubeRay, Ray Train, or Ray Serve simply by declaring a hardware topology (like &amp;quot;4x4&amp;quot;) without writing custom placement code.</description>
-      <pubDate>Sat, 05 Sep 2026 12:20:53 GMT</pubDate>
+      <pubDate>Sun, 06 Sep 2026 12:35:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/run-ray-on-tpu-part-1-the-foundations/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Scaling Agentic RL: High-Throughput Agentic Training with Tunix</title>
       <link>https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix/</link>
       <description>Tunix is Google’s new JAX-native post-training library designed to eliminate TPU idling bottlenecks when training multi-turn, tool-using LLM reasoning agents It maximizes hardware throughput by combining highly concurrent, asynchronous rollouts with a decoupled producer-consumer pipeline, ensuring the trainer is constantly fed even while agents wait on network I/O or environment steps Additionally, Tunix provides plug-and-play abstractions and continuous macro-level profiling, allowing developers to easily integrate custom open-source environments and optimize complex distributed workflows without massive code rewrites.</description>
-      <pubDate>Sat, 05 Sep 2026 12:20:53 GMT</pubDate>
+      <pubDate>Sun, 06 Sep 2026 12:35:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-agentic-rl-high-throughput-agentic-training-with-tunix/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Run Ray on TPU, Part 2: Ray AI libraries</title>
       <link>https://developers.googleblog.com/run-ray-on-tpu-part-2-ray-ai-libraries/</link>
       <description>This second installment explores how Ray’s higher-level libraries—Serve, Data, and Train—abstract the complexities of running AI workloads on Google&amp;apos;s TPU slices Ray Serve uses a simple topology configuration to correctly gang-schedule large multi-host models, while Ray Data eliminates data-loading bottlenecks by feeding accelerators directly with native JAX batches Finally, JaxTrainer streamlines distributed training across TPUs by automatically handling cross-slice coordination, checkpointing, and fault tolerance.</description>
-      <pubDate>Sat, 05 Sep 2026 12:20:53 GMT</pubDate>
+      <pubDate>Sun, 06 Sep 2026 12:35:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/run-ray-on-tpu-part-2-ray-ai-libraries/</guid>
       <source>Google Developers</source>
     </item>
