@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 14 Sep 2026 15:38:11 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 14:08:25 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>How to use Google microbenchmarks for evaluating TPU performance</title>
       <link>https://developers.googleblog.com/how-to-use-google-microbenchmarks-for-evaluating-tpu-performance/</link>
       <description>Google&amp;apos;s open-source TPU microbenchmark suite provides developers with granular performance metrics across Network, Compute, HBM, Host Transfer, and Attention components to validate real-world hardware capabilities By leveraging these benchmarks to establish a Roofline model, engineers can accurately diagnose whether their machine learning workloads are compute-, memory-, or network-bound This empirical baseline directly guides targeted software optimizations—such as kernel tuning, mesh sharding, and rematerialization—to maximize hardware utilization for large-scale model deployments.</description>
-      <pubDate>Mon, 14 Sep 2026 15:38:09 GMT</pubDate>
+      <pubDate>Tue, 15 Sep 2026 14:08:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/how-to-use-google-microbenchmarks-for-evaluating-tpu-performance/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Agent and Model Evaluations in Gemini Enterprise Agent Platform are now GA</title>
       <link>https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/</link>
       <description>Agent Platform&amp;apos;s evaluation service is now generally available, providing developers with a unified engine to measure agent quality consistently across local development experiments and live production traffic You can evaluate agents using over 20 pre-built metrics, DeepMind-backed adaptive rubrics, or custom code-based and LLM-as-a-judge metrics stored in a centralized, versioned registry The service integrates directly into existing workflows via the Agent Platform SDK, agents-cli, and ADK, offering built-in user and environment simulators to automate complex multi-turn testing and streamline CI pipelines.</description>
-      <pubDate>Mon, 14 Sep 2026 15:38:09 GMT</pubDate>
+      <pubDate>Tue, 15 Sep 2026 14:08:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,17 @@
       <title>Enable on-demand expertise with Agent Skills in Genkit Go</title>
       <link>https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</link>
       <description>To prevent context window bloat and reduce token consumption, Genkit Go introduces Agent Skills based on a progressive disclosure architecture Developers can package specialized instructions, scripts, and references into modular SKILL.md bundles where only the frontmatter metadata is initially exposed to the agent&amp;apos;s system prompt When a task matches the skill&amp;apos;s description, Genkit&amp;apos;s middleware dynamically loads the full instruction body and associated assets, ensuring the model accesses precise workflows exactly when needed.</description>
-      <pubDate>Mon, 14 Sep 2026 15:38:09 GMT</pubDate>
+      <pubDate>Tue, 15 Sep 2026 14:08:22 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/</link>
+      <description>There’s a particular energy to mid-September in New York Pumpkin spice lattes are flowing, temperatures are dropping, and it’s nearly sweater weather This week that energy showed up in a new frontier model on Amazon Bedrock, a desktop app for Amazon […]</description>
+      <pubDate>Mon, 14 Sep 2026 15:56:33 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Marketing ops as code: Automating events from planning to follow-up on GitHub</title>
@@ -87,14 +95,6 @@
       <pubDate>Wed, 02 Sep 2026 09:00:29 GMT</pubDate>
       <guid isPermaLink="true">https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/</guid>
       <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 processors are now generally available</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/</link>
-      <description>Amazon EC2 R9g and R9gd instances powered by AWS Graviton5 are now generally available, delivering up to 25% better compute performance than R8g, ideal for databases, in-memory caches, and real-time analytics.</description>
-      <pubDate>Mon, 31 Aug 2026 19:53:34 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-ec2-r9g-and-r9gd-instances-powered-by-aws-graviton5-processors-are-now-generally-available/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>Testing cookie behavior across hundreds of web surfaces with our in-house auditor</title>
