@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://github.com/yourusername/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 15 Sep 2026 14:08:25 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 05:01:01 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>How to use Google microbenchmarks for evaluating TPU performance</title>
-      <link>https://developers.googleblog.com/how-to-use-google-microbenchmarks-for-evaluating-tpu-performance/</link>
-      <description>Google&amp;apos;s open-source TPU microbenchmark suite provides developers with granular performance metrics across Network, Compute, HBM, Host Transfer, and Attention components to validate real-world hardware capabilities By leveraging these benchmarks to establish a Roofline model, engineers can accurately diagnose whether their machine learning workloads are compute-, memory-, or network-bound This empirical baseline directly guides targeted software optimizations—such as kernel tuning, mesh sharding, and rematerialization—to maximize hardware utilization for large-scale model deployments.</description>
-      <pubDate>Tue, 15 Sep 2026 14:08:22 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-to-use-google-microbenchmarks-for-evaluating-tpu-performance/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Agent and Model Evaluations in Gemini Enterprise Agent Platform are now GA</title>
       <link>https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/</link>
       <description>Agent Platform&amp;apos;s evaluation service is now generally available, providing developers with a unified engine to measure agent quality consistently across local development experiments and live production traffic You can evaluate agents using over 20 pre-built metrics, DeepMind-backed adaptive rubrics, or custom code-based and LLM-as-a-judge metrics stored in a centralized, versioned registry The service integrates directly into existing workflows via the Agent Platform SDK, agents-cli, and ADK, offering built-in user and environment simulators to automate complex multi-turn testing and streamline CI pipelines.</description>
-      <pubDate>Tue, 15 Sep 2026 14:08:22 GMT</pubDate>
+      <pubDate>Wed, 16 Sep 2026 05:00:58 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,25 @@
       <title>Enable on-demand expertise with Agent Skills in Genkit Go</title>
       <link>https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</link>
       <description>To prevent context window bloat and reduce token consumption, Genkit Go introduces Agent Skills based on a progressive disclosure architecture Developers can package specialized instructions, scripts, and references into modular SKILL.md bundles where only the frontmatter metadata is initially exposed to the agent&amp;apos;s system prompt When a task matches the skill&amp;apos;s description, Genkit&amp;apos;s middleware dynamically loads the full instruction body and associated assets, ensuring the model accesses precise workflows exactly when needed.</description>
-      <pubDate>Tue, 15 Sep 2026 14:08:22 GMT</pubDate>
+      <pubDate>Wed, 16 Sep 2026 05:00:58 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Scaling real-time AI agents with session-aware load balancing</title>
+      <link>https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</link>
+      <description>Real-time AI agents break traditional request-response load balancing paradigms because they rely on long-lived, stateful bidirectional streams that obscure true server capacity To solve this, developers must implement application-level session tracking directly within the runtime to accurately measure the committed concurrent workload of active conversations By feeding these precise session counts alongside standard CPU utilization metrics into a hybrid routing algorithm, infrastructure can effectively distribute stateful AI traffic and prevent individual backend bottlenecks.</description>
+      <pubDate>Wed, 16 Sep 2026 05:00:58 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>What Stripe data shows about fraud at AI startups</title>
+      <link>https://stripe.com/blog/what-stripe-data-shows-about-fraud-at-ai-startups</link>
+      <description>We analyzed attempted fraud rates and customer abuse patterns on Stripe over the past year and found that AI companies faced 4.3x more fraud attempts than startups overall in Q3 2025.</description>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/what-stripe-data-shows-about-fraud-at-ai-startups</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)</title>
@@ -151,14 +159,6 @@
       <pubDate>Tue, 18 Aug 2026 17:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai</guid>
       <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>New currency capabilities for global businesses to cut FX costs</title>
-      <link>https://stripe.com/blog/reduce-fx-costs-with-stripe</link>
-      <description>Two product upgrades make it easy for global businesses to manage FX entirely on Stripe We’re expanding multicurrency settlement to more markets and currencies, and we’re introducing the ability to convert currencies instantly—all on Stripe.</description>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/reduce-fx-costs-with-stripe</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
