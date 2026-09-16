@@ -86,6 +86,13 @@ const ogImage = resolvedImage ? new URL(resolvedImage, Astro.site).toString() : 
       <slot />
     </main>
     <Footer />
+    <!-- Cloudflare Web Analytics: one beacon here tracks every Astro route by path. -->
+    <script
+      is:inline
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token":"6c70276a0fb042b6843ef447f2419e9d"}'
+    ></script>
   </body>
 </html>
 
