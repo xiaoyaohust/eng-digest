@@ -3,12 +3,10 @@ import { withBase } from "@/lib/url";
 import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "System Design", href: "/system-design/" },
+  { label: "Systems", href: "/system-design/" },
   { label: "Coding", href: "/coding/" },
   { label: "Interviews", href: "/interviews/" },
-  { label: "Engineering Digest", href: "/eng-digest/" },
-  { label: "About", href: "/about/" },
+  { label: "Digest", href: "/eng-digest/" },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -23,7 +21,13 @@ function isActive(href: string): boolean {
 
 <header class="navbar">
   <div class="wrap navbar-inner">
-    <a class="brand" href={withBase("/")}>Eng Knowledge</a>
+    <a class="brand" href={withBase("/")} aria-label="Eng Knowledge home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-copy">
+        <strong>ENG//KNOWLEDGE</strong>
+        <small>INTERVIEW WORKBENCH</small>
+      </span>
+    </a>
 
     <input id="nav-toggle" class="nav-toggle-input" type="checkbox" aria-hidden="true" />
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
@@ -38,8 +42,10 @@ function isActive(href: string): boolean {
           </a>
         ))
       }
-      <a href={withBase("/search/")} class="nav-search" aria-label="Search">
-        🔍 <span class="nav-search-label">Search</span>
+      <a href={withBase("/search/")} class="nav-search" aria-label="Search the knowledge base">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+        <span class="nav-search-label">Search</span>
+        <kbd>/</kbd>
       </a>
     </nav>
 
@@ -54,22 +60,74 @@ function isActive(href: string): boolean {
     position: sticky;
     top: 0;
     z-index: 40;
-    background: var(--color-bg);
+    background: color-mix(in srgb, var(--color-bg) 90%, transparent);
     border-bottom: 1px solid var(--color-border);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(18px);
+  }
+
+  .navbar::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent-bright) 0 18%, var(--color-signal) 18% 22%, transparent 22%);
+    content: "";
   }
 
   .navbar-inner {
     display: flex;
     align-items: center;
-    gap: 24px;
-    height: 60px;
+    gap: 30px;
+    height: 70px;
   }
 
   .brand {
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
     color: var(--color-text);
     white-space: nowrap;
+  }
+
+  .brand-mark {
+    position: relative;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--color-border-strong);
+    place-items: center;
+    transform: rotate(45deg);
+  }
+
+  .brand-mark i {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--color-accent-bright);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent-bright) 14%, transparent);
+  }
+
+  .brand-mark i:nth-child(1) { transform: translate(-7px, 7px); }
+  .brand-mark i:nth-child(2) { transform: translate(0, 0); }
+  .brand-mark i:nth-child(3) { transform: translate(7px, -7px); background: var(--color-signal); }
+
+  .brand-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .brand-copy strong {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.035em;
+  }
+
+  .brand-copy small {
+    margin-top: 5px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.52rem;
+    letter-spacing: 0.1em;
   }
   .brand:hover {
     text-decoration: none;
@@ -79,23 +137,57 @@ function isActive(href: string): boolean {
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 4px;
     flex: 1;
     font-size: 0.94rem;
   }
 
   .nav-links a {
+    padding: 8px 10px;
+    border-radius: 5px;
     color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.015em;
     white-space: nowrap;
+  }
+
+  .nav-links a:hover {
+    background: var(--color-bg-inset);
+    color: var(--color-text);
+    text-decoration: none;
   }
 
   .nav-links a[aria-current="page"] {
     color: var(--color-text);
-    font-weight: 600;
+    background: var(--color-bg-inset);
+    font-weight: 700;
   }
 
   .nav-search {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     margin-left: auto;
+    border: 1px solid var(--color-border);
+  }
+
+  .nav-search svg {
+    width: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-width: 1.8;
+  }
+
+  .nav-search kbd {
+    display: inline-grid;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 3px;
+    place-items: center;
+    font-size: 0.64rem;
   }
 
   .navbar-actions {
@@ -109,12 +201,12 @@ function isActive(href: string): boolean {
     display: none;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 900px) {
     .navbar-inner {
       flex-wrap: wrap;
       height: auto;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
 
     .nav-toggle-label {
@@ -150,10 +242,13 @@ function isActive(href: string): boolean {
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
-      gap: 12px;
-      padding-top: 12px;
+      gap: 5px;
+      padding: 12px 0 4px;
+      border-top: 1px solid var(--color-border);
       order: 3;
     }
+
+    .nav-links a { width: 100%; }
 
     .nav-search {
       margin-left: 0;
@@ -162,5 +257,9 @@ function isActive(href: string): boolean {
     .nav-toggle-input:checked ~ .nav-links {
       display: flex;
     }
+  }
+
+  @media (max-width: 420px) {
+    .brand-copy small { display: none; }
   }
 </style>

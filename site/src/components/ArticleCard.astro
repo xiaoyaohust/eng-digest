@@ -15,7 +15,10 @@ const { href, kicker, title, description, date, tags = [], featured = false } = 
 ---
 
 <a class="card article-card" class:list={{ featured }} href={withBase(href)}>
-  <span class="eyebrow">{kicker}</span>
+  <div class="article-card-top">
+    <span class="eyebrow">{kicker}</span>
+    <span class="card-arrow" aria-hidden="true">↗</span>
+  </div>
   <h3>{title}</h3>
   <p class="muted">{description}</p>
   <div class="article-card-footer">
@@ -34,16 +37,44 @@ const { href, kicker, title, description, date, tags = [], featured = false } = 
   .article-card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     height: 100%;
   }
+  .article-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 54px;
+    height: 3px;
+    background: var(--color-accent);
+    content: "";
+  }
+  .article-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .card-arrow {
+    color: var(--color-border-strong);
+    font-family: var(--font-mono);
+    transition: color 160ms ease, transform 160ms ease;
+  }
+  .article-card:hover .card-arrow {
+    color: var(--color-accent);
+    transform: translate(2px, -2px);
+  }
   .article-card h3 {
-    margin: 2px 0 0;
-    font-size: 1.08rem;
+    margin: 4px 0 0;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.18rem;
+    letter-spacing: -0.02em;
+    line-height: 1.28;
   }
   .article-card p {
     margin: 0;
-    font-size: 0.94rem;
+    font-size: 0.88rem;
     flex: 1;
   }
   .article-card-footer {
@@ -52,9 +83,17 @@ const { href, kicker, title, description, date, tags = [], featured = false } = 
     justify-content: space-between;
     gap: 10px;
     margin-top: 8px;
-    font-size: 0.85rem;
+    padding-top: 13px;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
   }
   .featured {
-    border-color: var(--color-accent);
+    border-color: color-mix(in srgb, var(--color-accent) 58%, var(--color-border));
+  }
+  .featured::before { width: 100%; background: var(--color-accent-bright); }
+
+  @media (max-width: 420px) {
+    .article-card-footer { align-items: flex-start; flex-direction: column; }
   }
 </style>

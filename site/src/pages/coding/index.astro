@@ -10,6 +10,7 @@ const articles = await published("coding");
   <div class="wrap section">
     <h1>Coding</h1>
     <p class="muted section-intro">Algorithms, patterns, and interview problems.</p>
+    <div class="section-status"><span>MODULE 02</span><span>{articles.length} NOTES</span><span>PATTERNS / COMPLEXITY / PRACTICE</span></div>
     <div class="card-grid">
       {articles.map((entry) => (
         <ArticleCard
@@ -28,9 +29,21 @@ const articles = await published("coding");
 
 <style>
   .section {
-    padding: 44px 0 64px;
+    padding: 56px 0 80px;
   }
   .section-intro {
-    margin: -6px 0 28px;
+    margin: 14px 0 24px;
+  }
+  .section-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 30px;
+    padding: 10px 12px;
+    border-block: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
   }
 </style>

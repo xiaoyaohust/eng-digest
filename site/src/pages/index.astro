@@ -35,14 +35,14 @@ interface SourceEntry {
 }
 
 function toCards(entries: SourceEntry[], base: string, kicker: Kicker): CardEntry[] {
-  return entries.map((e) => ({
-    href: `${base}/${e.id}/`,
+  return entries.map((entry) => ({
+    href: `${base}/${entry.id}/`,
     kicker,
-    title: e.data.title,
-    description: e.data.description,
-    date: e.data.date,
-    tags: e.data.tags,
-    featured: e.data.featured,
+    title: entry.data.title,
+    description: entry.data.description,
+    date: entry.data.date,
+    tags: entry.data.tags,
+    featured: entry.data.featured,
   }));
 }
 
@@ -52,33 +52,43 @@ const allArticles = [
   ...toCards(interviews, "/interviews", "Interview"),
 ].sort((a, b) => b.date.valueOf() - a.date.valueOf());
 
-const featured = allArticles.filter((a) => a.featured).slice(0, 3);
-const fallbackFeatured = allArticles.slice(0, 3);
-const featuredCards = featured.length > 0 ? featured : fallbackFeatured;
-
+const markedFeatured = allArticles.filter((article) => article.featured).slice(0, 3);
+const featuredCards = markedFeatured.length > 0 ? markedFeatured : allArticles.slice(0, 3);
 const latestArticles = allArticles.slice(0, 6);
 const latestDigest = digests[0];
 
 const sections = [
   {
+    code: "01",
     title: "System Design",
     href: "/system-design/",
-    description: "Architecture and distributed systems interview prep.",
+    description: "Architecture, trade-offs, distributed systems, and the decisions behind them.",
+    count: systemDesign.length,
+    label: "ARCHITECTURE",
   },
   {
-    title: "Coding",
+    code: "02",
+    title: "Coding Patterns",
     href: "/coding/",
-    description: "Algorithms, patterns, and interview problems.",
+    description: "Reusable problem-solving patterns, algorithms, and interview-ready practice.",
+    count: coding.length,
+    label: "ALGORITHMS",
   },
   {
-    title: "Interview Experiences",
+    code: "03",
+    title: "Interview Intel",
     href: "/interviews/",
-    description: "Real interview notes, formats, and lessons learned.",
+    description: "Real formats, company signals, debriefs, and lessons from the field.",
+    count: interviews.length,
+    label: "FIELD NOTES",
   },
   {
+    code: "04",
     title: "Engineering Digest",
     href: "/eng-digest/",
-    description: "Daily summaries from top engineering blogs.",
+    description: "A daily signal feed distilled from high-quality engineering blogs.",
+    count: digests.length,
+    label: "DAILY SIGNAL",
   },
 ];
 ---
@@ -88,49 +98,94 @@ const sections = [
   description="Practical notes on system design, coding, engineering interviews, and real-world systems."
 >
   <section class="hero">
-    <div class="wrap">
-      <h1>Engineering Interview &amp; Systems Knowledge</h1>
-      <p class="hero-sub">
-        Practical notes on system design, coding, engineering interviews, and real-world
-        systems.
-      </p>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-status"><span></span> Knowledge base online</div>
+        <h1>Build the judgment<br /><em>behind</em> the answer.</h1>
+        <p>
+          A focused engineering interview workbench for system design, coding patterns,
+          real interview signals, and production lessons.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-action" href={withBase("/system-design/")}>Start with systems <span>↗</span></a>
+          <a class="secondary-action" href={withBase("/search/")}>Search the library <span>/</span></a>
+        </div>
+        <div class="hero-metrics" aria-label="Knowledge base statistics">
+          <div><strong>{allArticles.length}</strong><span>CORE NOTES</span></div>
+          <div><strong>{digests.length}</strong><span>DAILY DIGESTS</span></div>
+          <div><strong>04</strong><span>LEARNING TRACKS</span></div>
+        </div>
+      </div>
+
+      <div class="system-map" aria-label="Knowledge map illustration">
+        <div class="map-head"><span>KNOWLEDGE_GRAPH.V1</span><i>LIVE</i></div>
+        <div class="map-canvas">
+          <span class="map-axis map-axis-x"></span>
+          <span class="map-axis map-axis-y"></span>
+          <div class="map-node node-core"><b>CORE</b><small>ENGINEERING<br />JUDGMENT</small></div>
+          <div class="map-node node-systems"><b>01</b><small>SYSTEMS</small></div>
+          <div class="map-node node-code"><b>02</b><small>CODE</small></div>
+          <div class="map-node node-intel"><b>03</b><small>INTEL</small></div>
+          <div class="map-node node-signal"><b>04</b><small>SIGNAL</small></div>
+          <span class="connector c1"></span>
+          <span class="connector c2"></span>
+          <span class="connector c3"></span>
+          <span class="connector c4"></span>
+        </div>
+        <div class="map-foot"><span>DEPTH &gt; MEMORIZATION</span><span>UPDATED CONTINUOUSLY</span></div>
+      </div>
     </div>
   </section>
 
-  {featuredCards.length > 0 && (
-    <section class="wrap section">
-      <h2>Featured</h2>
-      <div class="card-grid">
-        {featuredCards.map((card) => (
-          <ArticleCard
-            href={card.href}
-            kicker={card.kicker}
-            title={card.title}
-            description={card.description}
-            date={card.date}
-            tags={card.tags}
-          />
-        ))}
-      </div>
-    </section>
-  )}
-
-  <section class="wrap section">
-    <h2>Explore</h2>
-    <div class="card-grid">
-      {sections.map((s) => (
-        <a class="card explore-card" href={withBase(s.href)}>
-          <h3>{s.title}</h3>
-          <p class="muted">{s.description}</p>
+  <section class="wrap home-section tracks-section">
+    <header class="home-section-header">
+      <div><span class="eyebrow">CURRICULUM / 04 TRACKS</span><h2>Choose your learning vector</h2></div>
+      <p>Move through a track or cross-link ideas as your interview loop demands.</p>
+    </header>
+    <div class="track-grid">
+      {sections.map((section) => (
+        <a class="track-card" href={withBase(section.href)}>
+          <div class="track-top"><span>{section.code}</span><small>{section.label}</small></div>
+          <div class="track-glyph" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h3>{section.title}</h3>
+          <p>{section.description}</p>
+          <div class="track-foot"><span>{section.count} entries</span><strong>Explore ↗</strong></div>
         </a>
       ))}
     </div>
   </section>
 
-  {latestArticles.length > 0 && (
-    <section class="wrap section">
-      <h2>Latest Articles</h2>
-      <div class="card-grid">
+  {featuredCards.length > 0 && (
+    <section class="featured-band">
+      <div class="wrap home-section">
+        <header class="home-section-header inverse">
+          <div><span class="eyebrow">EDITOR'S ROUTE / START HERE</span><h2>High-signal reading</h2></div>
+          <p>Foundational pieces selected for strong interview leverage.</p>
+        </header>
+        <div class="card-grid featured-grid">
+          {featuredCards.map((card, index) => (
+            <ArticleCard
+              href={card.href}
+              kicker={`${String(index + 1).padStart(2, "0")} / ${card.kicker}`}
+              title={card.title}
+              description={card.description}
+              date={card.date}
+              tags={card.tags}
+              featured
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="wrap home-section latest-section">
+    <header class="home-section-header">
+      <div><span class="eyebrow">LIBRARY / RECENTLY ADDED</span><h2>Continue exploring</h2></div>
+      <a href={withBase("/search/")}>View searchable index ↗</a>
+    </header>
+    <div class="latest-layout">
+      <div class="card-grid latest-grid">
         {latestArticles.map((card) => (
           <ArticleCard
             href={card.href}
@@ -142,64 +197,213 @@ const sections = [
           />
         ))}
       </div>
-    </section>
-  )}
-
-  {latestDigest && (
-    <section class="wrap section">
-      <h2>Latest Engineering Digest</h2>
-      <div class="digest-highlight">
-        <DigestCard
-          href={`/eng-digest/${latestDigest.id}/`}
-          date={latestDigest.data.date}
-          articleCount={latestDigest.data.articleCount}
-          sourceCount={latestDigest.data.sourceCount}
-          sources={latestDigest.data.sources}
-        />
-      </div>
-    </section>
-  )}
+      {latestDigest && (
+        <aside class="digest-rail">
+          <div class="rail-label"><span></span> LATEST SIGNAL</div>
+          <DigestCard
+            href={`/eng-digest/${latestDigest.id}/`}
+            date={latestDigest.data.date}
+            articleCount={latestDigest.data.articleCount}
+            sourceCount={latestDigest.data.sourceCount}
+            sources={latestDigest.data.sources}
+          />
+          <a class="all-digests" href={withBase("/eng-digest/")}>Browse all digests →</a>
+        </aside>
+      )}
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
   .hero {
-    padding: 64px 0 40px;
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-bg-raised);
-  }
-  .hero h1 {
-    font-size: clamp(1.9rem, 4vw, 2.6rem);
-    max-width: 760px;
-    margin: 0 0 14px;
-  }
-  .hero-sub {
-    max-width: 620px;
-    font-size: 1.12rem;
-    color: var(--color-text-muted);
-    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #26364a;
+    background: #0b1320;
+    color: #edf5f8;
+    overflow: hidden;
   }
 
-  .section {
-    padding: 44px 0;
-  }
-  .section h2 {
-    margin: 0 0 20px;
-    font-size: 1.4rem;
+  .hero::before {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 19% 25%, rgba(52, 214, 195, 0.11), transparent 28%),
+      linear-gradient(rgba(119, 151, 184, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(119, 151, 184, 0.07) 1px, transparent 1px);
+    background-size: auto, 40px 40px, 40px 40px;
+    content: "";
   }
 
-  .explore-card {
+  .hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
+    gap: clamp(50px, 8vw, 110px);
+    align-items: center;
+    min-height: 610px;
+    padding-block: 74px;
+  }
+
+  .hero-status {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .explore-card h3 {
-    margin: 0;
-  }
-  .explore-card p {
-    margin: 0;
+    align-items: center;
+    gap: 9px;
+    color: #91a5bb;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
   }
 
-  .digest-highlight {
-    max-width: 420px;
+  .hero-status span,
+  .rail-label span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #34d6c3;
+    box-shadow: 0 0 0 5px rgba(52, 214, 195, 0.12);
+  }
+
+  .hero h1 {
+    max-width: 780px;
+    margin: 24px 0 22px;
+    font-family: var(--font-display);
+    font-size: clamp(3.15rem, 7vw, 6.3rem);
+    font-weight: 760;
+    letter-spacing: -0.068em;
+    line-height: 0.91;
+  }
+
+  .hero h1 em { color: #62efdb; font-style: normal; }
+
+  .hero-copy > p {
+    max-width: 620px;
+    margin: 0;
+    color: #a8b7c7;
+    font-size: clamp(1rem, 1.8vw, 1.18rem);
+    line-height: 1.7;
+  }
+
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+
+  .primary-action,
+  .secondary-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    min-width: 196px;
+    padding: 12px 15px;
+    border: 1px solid #314258;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.73rem;
+    font-weight: 700;
+  }
+
+  .primary-action { border-color: #34d6c3; background: #34d6c3; color: #071713; }
+  .secondary-action { color: #c7d2dd; }
+  .secondary-action span { color: #72859c; }
+  .primary-action:hover,
+  .secondary-action:hover { text-decoration: none; transform: translateY(-1px); }
+
+  .hero-metrics {
+    display: flex;
+    gap: 36px;
+    margin-top: 50px;
+    padding-top: 18px;
+    border-top: 1px solid #26364a;
+  }
+
+  .hero-metrics div { display: flex; flex-direction: column; }
+  .hero-metrics strong { color: #edf5f8; font-family: var(--font-display); font-size: 1.55rem; line-height: 1; }
+  .hero-metrics span { margin-top: 7px; color: #667b92; font-family: var(--font-mono); font-size: 0.59rem; letter-spacing: 0.09em; }
+
+  .system-map { border: 1px solid #314258; border-radius: 8px; background: rgba(9, 16, 27, 0.82); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35); }
+  .map-head,
+  .map-foot { display: flex; align-items: center; justify-content: space-between; padding: 10px 13px; color: #71859b; font-family: var(--font-mono); font-size: 0.57rem; letter-spacing: 0.08em; }
+  .map-head { border-bottom: 1px solid #26364a; }
+  .map-foot { border-top: 1px solid #26364a; }
+  .map-head i { color: #34d6c3; font-style: normal; }
+  .map-canvas { position: relative; height: 365px; overflow: hidden; background-image: radial-gradient(#34465a 1px, transparent 1px); background-size: 19px 19px; }
+  .map-axis { position: absolute; background: #304257; }
+  .map-axis-x { top: 50%; left: 8%; width: 84%; height: 1px; }
+  .map-axis-y { top: 8%; left: 50%; width: 1px; height: 84%; }
+
+  .map-node { position: absolute; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #3b5068; background: #101c2a; color: #d6e0e8; font-family: var(--font-mono); text-align: center; }
+  .map-node b { font-size: 0.72rem; }
+  .map-node small { margin-top: 4px; color: #72879e; font-size: 0.5rem; letter-spacing: 0.08em; }
+  .node-core { top: 50%; left: 50%; width: 112px; height: 112px; border-color: #34d6c3; transform: translate(-50%, -50%) rotate(45deg); box-shadow: 0 0 0 9px rgba(52, 214, 195, 0.04); }
+  .node-core b,
+  .node-core small { transform: rotate(-45deg); }
+  .node-core small { margin-top: 9px; color: #71d8cd; }
+  .node-systems { top: 12%; left: 8%; width: 78px; height: 58px; }
+  .node-code { top: 15%; right: 8%; width: 72px; height: 72px; border-radius: 50%; }
+  .node-intel { bottom: 11%; left: 9%; width: 72px; height: 72px; border-radius: 50%; }
+  .node-signal { right: 8%; bottom: 12%; width: 82px; height: 58px; border-color: #f2a93b; }
+  .connector { position: absolute; z-index: 1; width: 30%; height: 1px; background: #425a74; transform-origin: left center; }
+  .c1 { top: 28%; left: 23%; transform: rotate(28deg); }
+  .c2 { top: 29%; left: 56%; transform: rotate(-26deg); }
+  .c3 { top: 71%; left: 22%; transform: rotate(-27deg); }
+  .c4 { top: 67%; left: 57%; transform: rotate(26deg); }
+
+  .home-section { padding-block: 72px; }
+  .home-section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 28px; }
+  .home-section-header h2 { margin: 7px 0 0; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.15rem); letter-spacing: -0.045em; line-height: 1; }
+  .home-section-header p { max-width: 400px; margin: 0; color: var(--color-text-muted); font-size: 0.92rem; }
+  .home-section-header > a { color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.7rem; }
+
+  .track-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--color-border); border-left: 1px solid var(--color-border); }
+  .track-card { position: relative; min-height: 330px; padding: 22px; border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-bg-raised) 82%, transparent); color: var(--color-text); transition: background 180ms ease, transform 180ms ease; }
+  .track-card:hover { z-index: 1; background: var(--color-bg-raised); box-shadow: var(--shadow-card-hover); text-decoration: none; transform: translateY(-4px); }
+  .track-top,
+  .track-foot { display: flex; align-items: center; justify-content: space-between; font-family: var(--font-mono); }
+  .track-top span { color: var(--color-accent); font-weight: 750; }
+  .track-top small { color: var(--color-text-muted); font-size: 0.55rem; letter-spacing: 0.08em; }
+  .track-glyph { position: relative; width: 52px; height: 52px; margin: 39px 0 30px; border: 1px solid var(--color-border-strong); transform: rotate(45deg); }
+  .track-glyph i { position: absolute; width: 5px; height: 5px; background: var(--color-accent); }
+  .track-glyph i:nth-child(1) { top: 7px; left: 7px; }
+  .track-glyph i:nth-child(2) { top: 22px; left: 22px; }
+  .track-glyph i:nth-child(3) { right: 7px; bottom: 7px; background: var(--color-signal); }
+  .track-card h3 { margin: 0 0 9px; font-family: var(--font-display); font-size: 1.28rem; letter-spacing: -0.025em; }
+  .track-card p { margin: 0 0 28px; color: var(--color-text-muted); font-size: 0.88rem; line-height: 1.6; }
+  .track-foot { position: absolute; right: 22px; bottom: 20px; left: 22px; color: var(--color-text-muted); font-size: 0.62rem; }
+  .track-foot strong { color: var(--color-accent); }
+
+  .featured-band { border-block: 1px solid #26364a; background: #0e1724; }
+  .home-section-header.inverse h2 { color: #edf5f8; }
+  .home-section-header.inverse p { color: #8fa1b4; }
+  .featured-band :global(.article-card) { border-color: #2a3b50; background: #131e2c; box-shadow: none; }
+  .featured-band :global(.article-card h3) { color: #edf5f8; }
+  .featured-band :global(.article-card p),
+  .featured-band :global(.article-card-footer > .muted) { color: #93a5b8; }
+  .featured-band :global(.article-card:hover) { border-color: #34d6c3; }
+
+  .latest-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 28px; align-items: start; }
+  .latest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .digest-rail { position: sticky; top: 94px; padding: 16px; border: 1px solid var(--color-border); background: var(--color-bg-inset); }
+  .rail-label { display: flex; align-items: center; gap: 9px; margin: 4px 4px 14px; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.09em; }
+  .digest-rail :global(.digest-card) { box-shadow: none; }
+  .all-digests { display: block; padding: 14px 5px 2px; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; }
+
+  @media (max-width: 1000px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .system-map { width: min(100%, 560px); }
+    .track-grid { grid-template-columns: repeat(2, 1fr); }
+    .latest-layout { grid-template-columns: 1fr; }
+    .digest-rail { position: static; }
+  }
+
+  @media (max-width: 680px) {
+    .hero-grid { min-height: 0; padding-block: 55px; }
+    .hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
+    .hero-metrics { gap: 18px; justify-content: space-between; }
+    .hero-metrics span { font-size: 0.5rem; }
+    .system-map { display: none; }
+    .home-section { padding-block: 52px; }
+    .home-section-header { align-items: flex-start; flex-direction: column; gap: 12px; }
+    .track-grid,
+    .latest-grid { grid-template-columns: 1fr; }
+    .track-card { min-height: 300px; }
   }
 </style>

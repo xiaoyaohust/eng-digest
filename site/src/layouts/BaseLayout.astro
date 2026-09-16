@@ -24,7 +24,10 @@ const {
 
 const pageTitle = title === "Eng Knowledge" ? title : `${title} · Eng Knowledge`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
+// Listing and utility pages share the site's visual identity. Article pages
+// intentionally omit the generic image until they have their own artwork.
+const resolvedImage = image ?? (type === "website" ? withBase("/og.png") : undefined);
+const ogImage = resolvedImage ? new URL(resolvedImage, Astro.site).toString() : undefined;
 ---
 
 <!doctype html>
@@ -71,6 +74,7 @@ const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <Navbar />
     <!--
       data-pagefind-body switches Pagefind to opt-in indexing: only content
@@ -78,9 +82,28 @@ const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
       site, so the Navbar/Footer (siblings, not descendants, of <main>)
       never show up in search results.
     -->
-    <main data-pagefind-body>
+    <main id="main-content" data-pagefind-body>
       <slot />
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+  .skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 100;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: var(--color-accent-bright);
+    color: #061511;
+    font-weight: 700;
+    transform: translateY(-150%);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+</style>

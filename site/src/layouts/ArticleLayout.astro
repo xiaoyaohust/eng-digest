@@ -47,15 +47,18 @@ const {
   publishedTime={date}
   modifiedTime={updated}
 >
-  <article class="wrap article-page">
-    <header class="article-header">
-      {kicker && <p class="eyebrow">{kicker}</p>}
-      <h1>{title}</h1>
-      <p class="article-description muted">{description}</p>
-      <ArticleMeta date={date} updated={updated} tags={tags} readingMinutes={readingMinutes} />
+  <article class="article-page">
+    <header class="article-hero">
+      <div class="wrap article-header">
+        <a class="back-link" href={withBase("/")}>&larr; KNOWLEDGE BASE</a>
+        {kicker && <p class="eyebrow">MODULE / {kicker}</p>}
+        <h1>{title}</h1>
+        <p class="article-description">{description}</p>
+        <ArticleMeta date={date} updated={updated} tags={tags} readingMinutes={readingMinutes} />
+      </div>
     </header>
 
-    <div class="article-body">
+    <div class="wrap article-body">
       <aside class="article-toc">
         <div class="toc-sticky">
           <TableOfContents headings={headings} />
@@ -67,7 +70,7 @@ const {
     </div>
 
     {(prev || next || related.length > 0) && (
-      <footer class="article-footer">
+      <footer class="wrap article-footer">
         {(prev || next) && (
           <nav class="prev-next" aria-label="Article navigation">
             <a class:list={["prev-next-link", { disabled: !prev }]} href={prev ? withBase(prev.href) : undefined}>
@@ -107,25 +110,61 @@ const {
 
 <style>
   .article-header {
-    max-width: var(--content-width);
-    margin: 40px auto 0;
+    max-width: 980px;
+    margin: 0 auto;
+    padding-block: 46px 42px;
+  }
+  .article-hero {
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-bg-raised) 88%, transparent);
+    overflow: hidden;
+  }
+  .article-hero::after {
+    position: absolute;
+    right: max(24px, calc((100vw - var(--wide-width)) / 2));
+    bottom: -50px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid var(--color-border);
+    content: "";
+    transform: rotate(45deg);
+  }
+  .back-link {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-bottom: 34px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
   }
   .article-header h1 {
-    margin: 6px 0 4px;
-    font-size: 2.1rem;
-    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 10px 0 14px;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -0.055em;
+    line-height: 0.98;
   }
   .article-description {
-    font-size: 1.08rem;
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
     margin: 0;
+    color: var(--color-text-muted);
+    font-size: 1.08rem;
   }
 
   .article-body {
     display: grid;
-    grid-template-columns: 200px minmax(0, var(--content-width));
-    gap: 48px;
+    grid-template-columns: 220px minmax(0, var(--content-width)) 100px;
+    gap: 52px;
     justify-content: center;
-    margin-top: 28px;
+    margin-top: 44px;
   }
 
   .article-toc {
@@ -134,13 +173,15 @@ const {
 
   .toc-sticky {
     position: sticky;
-    top: 84px;
+    top: 96px;
+    padding: 16px 0 16px 16px;
+    border-left: 1px solid var(--color-border);
   }
 
   .article-footer {
     max-width: var(--content-width);
-    margin: 56px auto 0;
-    padding-top: 24px;
+    margin: 64px auto 0;
+    padding-top: 28px;
     border-top: 1px solid var(--color-border);
   }
 
@@ -155,7 +196,11 @@ const {
     gap: 4px;
     padding: 14px 16px;
     border: 1px solid var(--color-border);
-    border-radius: 10px;
+    border-radius: 7px;
+    background: var(--color-bg-raised);
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-weight: 700;
   }
   .prev-next-link:hover {
     border-color: var(--color-accent);
@@ -187,7 +232,14 @@ const {
     }
   }
 
+  @media (max-width: 1120px) {
+    .article-body { grid-template-columns: 200px minmax(0, var(--content-width)); }
+  }
+
   @media (max-width: 640px) {
+    .article-header { padding-block: 34px; }
+    .article-hero::after { display: none; }
+    .article-body { display: block; margin-top: 30px; }
     .prev-next {
       grid-template-columns: 1fr;
     }

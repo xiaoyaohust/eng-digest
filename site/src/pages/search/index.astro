@@ -51,7 +51,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <style>
   .section {
-    padding: 44px 0 64px;
+    padding: 56px 0 80px;
   }
   .section-intro {
     max-width: 620px;
@@ -59,4 +59,14 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   #pagefind-search {
     margin-top: 28px;
   }
+  #pagefind-search :global(.pagefind-ui__search-input) {
+    border: 1px solid var(--color-border-strong);
+    border-radius: 7px;
+    background: var(--color-bg-raised);
+    color: var(--color-text);
+    box-shadow: var(--shadow-card);
+    font-family: var(--font-mono);
+  }
+  #pagefind-search :global(.pagefind-ui__result) { border-color: var(--color-border); }
+  #pagefind-search :global(.pagefind-ui__result-title) { font-family: var(--font-display); }
 </style>

@@ -6,7 +6,10 @@ const year = new Date().getFullYear();
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <p>&copy; {year} Eng Knowledge. Built with Astro.</p>
+    <div class="footer-brand">
+      <span class="footer-signal" aria-hidden="true"></span>
+      <p><strong>ENG//KNOWLEDGE</strong><br />Signal over noise. Systems over trivia. &copy; {year}</p>
+    </div>
     <nav class="footer-links">
       <a href={withBase("/eng-digest/")}>Engineering Digest</a>
       <a href={withBase("/rss.xml")}>RSS</a>
@@ -20,9 +23,11 @@ const year = new Date().getFullYear();
 
 <style>
   .footer {
+    position: relative;
     border-top: 1px solid var(--color-border);
-    margin-top: 64px;
-    padding: 28px 0;
+    margin-top: 72px;
+    padding: 34px 0;
+    background: color-mix(in srgb, var(--color-bg-raised) 82%, transparent);
     color: var(--color-text-muted);
     font-size: 0.9rem;
   }
@@ -38,5 +43,33 @@ const year = new Date().getFullYear();
   .footer-links {
     display: flex;
     gap: 16px;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-brand p { margin: 0; line-height: 1.45; }
+  .footer-brand strong { color: var(--color-text); font-family: var(--font-mono); font-size: 0.74rem; }
+
+  .footer-signal {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--color-accent-bright);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--color-accent-bright) 13%, transparent);
+  }
+
+  .footer-links a {
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  @media (max-width: 620px) {
+    .footer-inner { align-items: flex-start; flex-direction: column; }
+    .footer-links { flex-wrap: wrap; }
   }
 </style>

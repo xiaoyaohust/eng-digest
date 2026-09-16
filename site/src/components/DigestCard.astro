@@ -13,6 +13,7 @@ const { href, date, articleCount, sourceCount, sources = [] } = Astro.props;
 ---
 
 <a class="card digest-card" href={withBase(href)}>
+  <div class="digest-kicker"><span></span> DAILY BUILD</div>
   <h3>{formatDate(date)}</h3>
   <div class="digest-stats muted">
     {articleCount !== undefined && <span>{articleCount} Articles</span>}
@@ -26,26 +27,59 @@ const { href, date, articleCount, sourceCount, sources = [] } = Astro.props;
       {sources.length > 8 && <span class="muted">+{sources.length - 8} more</span>}
     </div>
   )}
-  <span class="digest-read-more">Read Digest →</span>
+  <span class="digest-read-more">OPEN SIGNAL LOG <b>↗</b></span>
 </a>
 
 <style>
   .digest-card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+  }
+  .digest-card::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--color-signal);
+    content: "";
+  }
+  .digest-kicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.61rem;
+    letter-spacing: 0.08em;
+  }
+  .digest-kicker span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-signal);
   }
   .digest-card h3 {
     margin: 0;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
   }
   .digest-stats {
     display: flex;
     gap: 14px;
-    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
   }
   .digest-read-more {
     margin-top: 4px;
-    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 750;
     color: var(--color-accent);
   }
 </style>

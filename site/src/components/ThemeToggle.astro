@@ -2,8 +2,8 @@
 ---
 
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
-  <span class="icon icon-light" aria-hidden="true">☀</span>
-  <span class="icon icon-dark" aria-hidden="true">☾</span>
+  <span class="icon icon-light" aria-hidden="true">L</span>
+  <span class="icon icon-dark" aria-hidden="true">D</span>
 </button>
 
 <style>
@@ -11,14 +11,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
     border: 1px solid var(--color-border);
     background: var(--color-bg-raised);
     color: var(--color-text);
     cursor: pointer;
-    font-size: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 750;
+    letter-spacing: 0.05em;
+    transition: border-color 150ms ease, color 150ms ease;
+  }
+  .theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
   }
   .theme-toggle .icon-dark {
     display: none;
@@ -29,6 +37,14 @@
   :root[data-theme="dark"] .theme-toggle .icon-dark {
     display: inline;
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-light {
+      display: none;
+    }
+    :root:not([data-theme="light"]) .theme-toggle .icon-dark {
+      display: inline;
+    }
+  }
 </style>
 
 <script>
@@ -36,7 +52,9 @@
   const button = document.getElementById("theme-toggle");
 
   function currentTheme(): "light" | "dark" {
-    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    const explicit = document.documentElement.getAttribute("data-theme");
+    if (explicit === "dark" || explicit === "light") return explicit;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
   button?.addEventListener("click", () => {

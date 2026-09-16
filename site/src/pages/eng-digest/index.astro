@@ -20,8 +20,10 @@ const digests = await publishedDigests();
           <code>eng_digest</code> Python pipeline — no manual curation, no AI APIs.
         </p>
       </div>
-      <a class="rss-link" href={withBase("/rss.xml")}>Subscribe via RSS →</a>
+      <a class="rss-link" href={withBase("/rss.xml")}><span></span> RSS SIGNAL</a>
     </div>
+
+    <div class="section-status"><span>MODULE 04</span><span>{digests.length} DIGESTS</span><span>AUTOMATED / STATIC / DAILY</span></div>
 
     <div class="card-grid">
       {digests.map((entry) => (
@@ -46,22 +48,44 @@ const digests = await publishedDigests();
 
 <style>
   .section {
-    padding: 44px 0 64px;
+    padding: 56px 0 80px;
   }
   .section-header {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
   .section-intro {
     max-width: 640px;
-    margin: -6px 0 0;
+    margin: 14px 0 0;
   }
   .rss-link {
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 700;
     white-space: nowrap;
+  }
+  .rss-link:hover { background: var(--color-bg-raised); text-decoration: none; }
+  .rss-link span { width: 6px; height: 6px; border-radius: 50%; background: var(--color-signal); }
+  .section-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 30px;
+    padding: 10px 12px;
+    border-block: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
   }
 </style>

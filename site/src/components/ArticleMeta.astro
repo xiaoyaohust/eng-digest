@@ -32,9 +32,12 @@ const { date, updated, tags = [], readingMinutes } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 10px 0 28px;
+    margin: 22px 0 0;
   }
   .meta-line {
-    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.025em;
   }
 </style>
