@@ -1,30 +1,27 @@
-Check GitHub Pages Deployment Status
-Method 1: Actions Page
+# GitHub Pages deployment status
 
-Visit: https://github.com/xiaoyaohust/eng-digest/actions
+Public site: <https://xiaoyaohust.github.io/eng-digest/>
 
-Find the pages build and deployment workflow
+## Required Pages setting
 
-Check the latest run status (green ✓ = success, red ✗ = failed)
+Open <https://github.com/xiaoyaohust/eng-digest/settings/pages> and set:
 
-Method 2: Settings Page
+```text
+Build and deployment → Source → GitHub Actions
+```
 
-Visit: https://github.com/xiaoyaohust/eng-digest/settings/pages
+Do **not** use `main` / `(root)`. That setting publishes the legacy Python-generated
+Digest archive instead of the Astro knowledge site.
 
-Look at the top for a green notification box saying:
-"Your site is live at https://xiaoyaohust.github.io/eng-digest/
-"
+## Check a deployment
 
-If it shows "Your site is ready to be published"
+1. Open <https://github.com/xiaoyaohust/eng-digest/actions>.
+2. Open the newest **Deploy Site** run.
+3. Confirm both `deploy / build` and `deploy / deploy` are green.
+4. Open the public URL and confirm the title is **Eng Knowledge**.
 
-This means the first deployment is still pending. Please wait 5–10 minutes.
+The **Daily Engineering Digest** workflow has its own deploy job when it commits a new Digest.
+It should run on the daily schedule or manual dispatch, not on ordinary pushes.
 
-If it shows an error
-
-Possible reasons:
-
-The repository is Private (needs to be changed to Public)
-
-Incorrect branch setting (should be main)
-
-Incorrect folder setting (should be / root)
+If the public page title is still **Engineering Daily Digest Archive**, the old Pages source is
+still active or the latest Astro deployment failed. See `DEPLOYMENT.md` for troubleshooting.

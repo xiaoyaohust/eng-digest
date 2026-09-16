@@ -4,7 +4,7 @@ Unit tests for output renderers.
 
 import pytest
 from datetime import datetime
-from eng_digest.output import MarkdownRenderer, TextRenderer
+from eng_digest.output import MarkdownRenderer, RSSRenderer, TextRenderer
 from eng_digest.models import Summary
 
 
@@ -199,3 +199,22 @@ class TestTextRenderer:
         indented_lines = [line for line in lines if line.startswith("   ")]
 
         assert len(indented_lines) > 0
+
+
+class TestRSSRenderer:
+    """Test RSSRenderer output consumed by feed readers."""
+
+    def test_uses_live_site_url_and_escapes_once(self):
+        summary = Summary(
+            title="Testing & delivery",
+            summary="It's safe & readable.",
+            url="https://example.com/article",
+            source="Test Blog",
+        )
+
+        output = RSSRenderer().render([summary])
+
+        assert "<link>https://xiaoyaohust.github.io/eng-digest</link>" in output
+        assert 'href="https://xiaoyaohust.github.io/eng-digest/rss.xml"' in output
+        assert "It's safe &amp; readable." in output
+        assert "&amp;apos;" not in output

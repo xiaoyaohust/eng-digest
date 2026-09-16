@@ -154,7 +154,7 @@ def render_digest(summaries: List[Summary], config) -> dict:
     # Always generate RSS feed
     rss_renderer = RSSRenderer(
         title="Engineering Digest",
-        link="https://github.com/yourusername/eng-digest",
+        link="https://xiaoyaohust.github.io/eng-digest",
         description="Daily digest of engineering blog posts from top tech companies"
     )
     digests["rss"] = rss_renderer.render(summaries)

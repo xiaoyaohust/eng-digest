@@ -4,11 +4,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "npm run import-digests",
     "dev": "astro dev",
     "import-digests": "node scripts/import-digests.mjs",
     "prebuild": "npm run import-digests",
-    "build": "astro build && npm run search-index",
+    "build": "astro build && npm run search-index && npm run copy-legacy && npm run check-links",
     "search-index": "pagefind --site dist",
+    "copy-legacy": "node scripts/copy-legacy-artifacts.mjs",
+    "check-links": "node scripts/check-internal-links.mjs",
     "preview": "astro preview",
     "check": "astro check"
   },

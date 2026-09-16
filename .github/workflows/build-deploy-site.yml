@@ -37,7 +37,9 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # Astro 7 and @astrojs/mdx 8 require Node >=22.12. Node 20 lets
+          # npm install finish but makes `astro check` fail in CI.
+          node-version: "22"
           cache: npm
           cache-dependency-path: site/package-lock.json
 
@@ -55,17 +57,7 @@ jobs:
 
       - name: Build site
         working-directory: site
-        run: npx astro build
-
-      - name: Build search index
-        working-directory: site
-        run: npm run search-index
-
-      - name: Copy legacy Engineering Digest artifacts (backward compatibility)
-        run: |
-          cp rss.xml site/dist/rss.xml
-          mkdir -p site/dist/digests
-          cp digests/*.md digests/*.html site/dist/digests/
+        run: npm run build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

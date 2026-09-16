@@ -49,9 +49,9 @@ dev = [
 eng-digest = "eng_digest.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/eng-digest"
-Repository = "https://github.com/yourusername/eng-digest"
-Issues = "https://github.com/yourusername/eng-digest/issues"
+Homepage = "https://xiaoyaohust.github.io/eng-digest/"
+Repository = "https://github.com/xiaoyaohust/eng-digest"
+Issues = "https://github.com/xiaoyaohust/eng-digest/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

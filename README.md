@@ -98,14 +98,13 @@ npm install
 npm run dev
 ```
 
-`npm run dev` imports the committed `digests/*.md` on the fly (via a `predev`-style flow — run
-`npm run import-digests` once first if you want the Engineering Digest pages populated) and
-serves the full site at `http://localhost:4321/eng-digest/`.
+`npm run dev` first imports the committed `digests/*.md`, then serves the complete site at
+`http://localhost:4321/eng-digest/`.
 
 ```bash
 npm run import-digests   # digests/*.md -> site/src/content/generated-digests/ (gitignored)
 npm run check             # TypeScript + content schema validation
-npm run build              # import-digests -> astro build -> pagefind index
+npm run build              # import -> Astro -> Pagefind -> legacy files -> link validation
 npm run preview            # serve the production build locally, incl. search
 ```
 

@@ -24,7 +24,7 @@ class RSSRenderer(Renderer):
     def __init__(
         self,
         title: str = "Engineering Digest",
-        link: str = "https://github.com/yourusername/eng-digest",
+        link: str = "https://xiaoyaohust.github.io/eng-digest",
         description: str = "Daily digest of engineering blog posts from top tech companies",
         language: str = "en-us"
     ):
@@ -54,24 +54,6 @@ class RSSRenderer(Renderer):
         """
         # RFC 822 format: "Thu, 05 Dec 2025 12:00:00 GMT"
         return dt.strftime("%a, %d %b %Y %H:%M:%S GMT")
-
-    def _escape_cdata(self, text: str) -> str:
-        """
-        Escape text for CDATA section.
-
-        Args:
-            text: Text to escape
-
-        Returns:
-            Escaped text safe for XML
-        """
-        # Basic XML escaping
-        text = text.replace("&", "&amp;")
-        text = text.replace("<", "&lt;")
-        text = text.replace(">", "&gt;")
-        text = text.replace('"', "&quot;")
-        text = text.replace("'", "&apos;")
-        return text
 
     def render(self, summaries: List[Summary]) -> str:
         """
@@ -121,7 +103,9 @@ class RSSRenderer(Renderer):
 
             # Description (summary text)
             description = ET.SubElement(item, "description")
-            description.text = self._escape_cdata(summary.summary)
+            # ElementTree escapes XML text. Escaping it first would double-encode
+            # apostrophes and ampersands in RSS readers.
+            description.text = summary.summary
 
             # Publication date
             if summary.published:

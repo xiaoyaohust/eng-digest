@@ -55,8 +55,9 @@ A fully static site (`output: 'static'`, no SSR adapter). Three kinds of content
   never touched by Astro's build.
 
 Build pipeline: `npm run import-digests` → `astro build` → `pagefind --site dist` (static
-search index). `site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` from the environment so
-the same code deploys to a GitHub Pages project site today and a custom domain later.
+search index) → copy backward-compatible RSS/digest artifacts → validate internal links.
+`site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` from the environment so the same code
+deploys to a GitHub Pages project site today and a custom domain later.
 
 ## GitHub Actions
 
