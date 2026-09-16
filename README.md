@@ -1,98 +1,237 @@
-# Engineering Digest 📰
+# Eng Knowledge
 
-Automated daily digest of engineering blog posts from top tech companies, powered by TextRank summarization and delivered via GitHub Pages.
+An engineering interview & systems knowledge site — System Design, Coding, Interview
+Experiences, and search — with **Engineering Digest**, an automated daily digest of
+engineering blog posts, as one section of it.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-## Features
+Live site: **https://xiaoyaohust.github.io/eng-digest/**
 
-### 🎯 Core Features
-- **Automated Digest Generation**: Daily collection from 9+ top engineering blogs
+This repository is two things sharing one home:
+
+1. **The website** (`site/`) — a static [Astro](https://astro.build) site. System Design,
+   Coding, and Interview Experiences are Markdown/MDX under version control; publishing an
+   article is a git push, nothing more.
+2. **Engineering Digest** (`eng_digest/`) — a Python CLI that fetches, deduplicates, and
+   summarizes (TextRank, no AI APIs) engineering blog posts into Markdown, on a daily GitHub
+   Actions schedule. The website imports that Markdown at build time and serves it at
+   `/eng-digest/`.
+
+Both are static-only: no production database, no auth, no server. See
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for why, and
+[docs/CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md) for how to write an article.
+
+## Website
+
+- **Home** — featured System Design / Coding / Interview picks, latest articles, latest digest.
+- **System Design** (`/system-design/`) — architecture and distributed systems interview prep.
+- **Coding** (`/coding/`) — algorithms, patterns, and interview problems, with copyable,
+  Shiki-highlighted code blocks.
+- **Interview Experiences** (`/interviews/`) — real interview notes and lessons.
+- **Engineering Digest** (`/eng-digest/`) — the daily archive described below, in the site's
+  own layout (not a standalone page).
+- **Search** (`/search/`) — static full-text search (Pagefind) across all of the above.
+- **Tags** (`/tags/[tag]/`) — every article's tags, generated at build time.
+- **About** (`/about/`).
+
+Articles support Mermaid diagrams, heading anchors, a table of contents, light/dark mode, and
+are fully responsive.
+
+## Engineering Digest
+
+Every day, `eng_digest` fetches engineering blog posts (RSS/Atom, with an HTML-parsing
+fallback), deduplicates against a local SQLite database, summarizes with TextRank, and writes
+`digests/digest-YYYY-MM-DD.md` (+ `.html`, + `rss.xml`) — committed straight to this repo. The
+website reads that same Markdown at build time (`site/scripts/import-digests.mjs`) and renders
+it at `/eng-digest/YYYY-MM-DD/`; the source files under `digests/` are never modified by the
+import.
+
+The SQLite database (`eng_digest.db`) is **local-only** — it powers CLI features (search,
+read/unread, favorites, the TUI) and is never uploaded anywhere.
+
+### Digest features
+
+- **Automated Digest Generation**: Daily collection from top engineering blogs
 - **Smart Summarization**: TextRank algorithm for intelligent sentence extraction
-- **RSS Feed**: Subscribe in your favorite RSS reader
-- **Beautiful Web Interface**: GitHub Pages hosted digest archive
+- **RSS Feed**: Subscribe at `/rss.xml`
 - **Multiple Output Formats**: Markdown, HTML, RSS, and plain text
 
-### 🗄️ Local Database (CLI Only)
+### Local Database (CLI only)
+
 - **Deduplication**: Never see the same article twice
 - **History Tracking**: Search through all past articles
 - **Read/Unread Status**: Mark articles as you read them
 - **Favorites**: Save important articles for later
 - **Full-Text Search**: Find articles by keywords using SQLite FTS5
 
-### 💻 Interactive Terminal UI
-- **Rich TUI**: Beautiful terminal interface powered by Textual
+### Interactive Terminal UI
+
+- **Rich TUI**: Terminal interface powered by Textual
 - **Keyboard Navigation**: Vim-style (j/k) and arrow key support
 - **Quick Actions**: Open links, mark read, add favorites with single keypress
 - **Real-time Filtering**: Instantly filter by unread, favorites, or search query
 - **Split View**: Article list and detail panel in one screen
 
-### 📧 Email Delivery
+### Email Delivery
+
 - **SMTP Support**: Send HTML digest via email using any SMTP server
 - **Gmail Integration**: Built-in support for Gmail App Passwords
 - **Multiple Recipients**: Send to multiple email addresses
 - **Auto-send**: Optionally send email after generating digest
-- **Zero Cost**: Use free Gmail account (no paid email service needed)
 
-### 💰 Zero Cost
+### Zero Cost
+
 - No API fees (no AI services required)
-- Free GitHub Actions (2000 min/month)
+- Free GitHub Actions (2,000 min/month)
 - Free GitHub Pages hosting
 - Local SQLite database (no cloud DB costs)
 
-## Quick Start
+## Local Development
 
-### Web Access (No Installation)
-
-Visit the live digest: **https://YOUR_USERNAME.github.io/eng-digest/**
-
-Features available on the website:
-- ✅ Browse daily digests (Markdown & HTML)
-- ✅ Subscribe via RSS feed
-- ✅ Search within page (browser search)
-
-### Local CLI Installation
-
-For full features including database and search:
+### Website
 
 ```bash
-# Clone repository
-git clone https://github.com/YOUR_USERNAME/eng-digest.git
-cd eng-digest
-
-# Install dependencies
-pip install -e .
-
-# Run digest generation
-eng-digest run --config config.yml
-
-# View stats
-eng-digest stats
+cd site
+npm install
+npm run dev
 ```
 
-## Usage
-
-### Web Interface
-
-#### Browse Digests
-1. Visit https://YOUR_USERNAME.github.io/eng-digest/
-2. Click on any digest to read (Markdown or HTML version)
-
-#### Subscribe via RSS
-1. Click the "Subscribe via RSS" button on the homepage
-2. Add the feed URL to your RSS reader:
-   - Feedly
-   - NetNewsWire
-   - Inoreader
-   - Any RSS 2.0 compatible reader
-
-### CLI Commands
-
-#### Generate Digest
+`npm run dev` imports the committed `digests/*.md` on the fly (via a `predev`-style flow — run
+`npm run import-digests` once first if you want the Engineering Digest pages populated) and
+serves the full site at `http://localhost:4321/eng-digest/`.
 
 ```bash
-# Generate daily digest
+npm run import-digests   # digests/*.md -> site/src/content/generated-digests/ (gitignored)
+npm run check             # TypeScript + content schema validation
+npm run build              # import-digests -> astro build -> pagefind index
+npm run preview            # serve the production build locally, incl. search
+```
+
+### Digest Engine
+
+```bash
+pip install -e .
+eng-digest run --config config.yml    # fetch, summarize, write digests/digest-<date>.{md,html}
+eng-digest stats                       # local database stats
+eng-digest tui                         # interactive terminal UI
+```
+
+See [Digest Engine usage](#digest-engine-usage) below for the full CLI reference.
+
+## Deployment
+
+The site deploys to GitHub Pages via GitHub Actions (`.github/workflows/deploy-site.yml` and
+`.github/workflows/daily-digest.yml`, both calling the shared
+`.github/workflows/build-deploy-site.yml`) — never by committing a built `dist/` to `main`.
+
+**One-time setup**: in the repository's **Settings → Pages**, change the Source from
+"Deploy from a branch" to **"GitHub Actions"**. (It's currently set to serve `main` / root,
+which is how the old, now-superseded, root `index.html` was published.)
+
+After that:
+
+- **Human pushes to `main`** → `deploy-site.yml` builds the Astro site and deploys it.
+- **The daily digest workflow** → generates the digest, commits it, then builds and deploys
+  the site in the *same run* — so a scheduled digest is live the same day rather than waiting
+  for the next human push (a bot commit doesn't reliably re-trigger `deploy-site.yml`'s own
+  push trigger).
+
+`site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` environment variables (defaulting to
+this repo's GitHub Pages project-site URL) — switching to a custom domain later is a config
+change, not a code change.
+
+## Repository Structure
+
+```
+eng-digest/
+├── eng_digest/              # Python digest engine (CLI, fetchers, summarizer, output, db)
+├── digests/                 # Committed digest-YYYY-MM-DD.{md,html} — canonical archive
+├── rss.xml, index.html      # Legacy digest-only artifacts, kept for backward compatibility
+├── site/                    # Astro website
+│   ├── src/
+│   │   ├── content/         # system-design/, coding/, interviews/ (authored)
+│   │   │                    # generated-digests/ (gitignored, built from ../digests)
+│   │   ├── pages/           # routes: /, /system-design/, /coding/, /interviews/,
+│   │   │                    # /eng-digest/, /tags/, /search/, /about/
+│   │   ├── layouts/, components/, styles/, lib/
+│   ├── scripts/import-digests.mjs
+│   └── public/
+├── docs/                    # ARCHITECTURE.md, CONTENT_GUIDE.md
+├── tests/                   # Python test suite (pytest)
+├── .github/workflows/
+│   ├── daily-digest.yml         # scheduled digest generation + same-run deploy
+│   ├── deploy-site.yml          # website build/deploy on push
+│   └── build-deploy-site.yml    # shared build+deploy logic (reusable workflow)
+├── config.yml
+└── pyproject.toml
+```
+
+## Publishing an Article
+
+```bash
+cd site/src/content/system-design
+vim design-search-autocomplete.md
+git add .
+git commit -m "Add search autocomplete system design"
+git push
+```
+
+That's it — no database migration, no server deployment. See
+[docs/CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md) for frontmatter fields, Mermaid diagrams,
+images, tags, and drafts.
+
+## Feature Comparison: Web vs CLI (Engineering Digest)
+
+| Feature | Web (`/eng-digest/`) | CLI (Local) |
+|---------|-------------------|-------------|
+| Browse digests | ✅ | ✅ |
+| RSS subscription | ✅ | ✅ |
+| TextRank summaries | ✅ | ✅ |
+| Search articles | ✅ (site-wide Pagefind) | ✅ Full-text (SQLite FTS5) |
+| Read/unread tracking | ❌ | ✅ |
+| Favorites | ❌ | ✅ |
+| History browsing | ✅ Everything published | ✅ Complete history |
+| Interactive TUI | ❌ | ✅ |
+
+**Note**: Database features (favorites, read/unread, TUI) are CLI-only — the SQLite database is
+local and never uploaded to GitHub.
+
+---
+
+# Digest Engine Usage
+
+The rest of this document covers the `eng_digest` Python CLI in detail.
+
+## How It Works
+
+### Summarization: TextRank Algorithm
+
+Unlike simple first-paragraph extraction, TextRank uses graph-based ranking:
+
+1. **Sentence Splitting**: Parse article into sentences
+2. **Similarity Matrix**: Calculate sentence similarity using word overlap
+3. **PageRank**: Rank sentences by importance
+4. **Selection**: Extract top N sentences while preserving order
+
+### Deduplication
+
+Uses a hash of article URLs:
+- **Local CLI**: Full deduplication across all history in SQLite database
+- **GitHub Actions**: Each run starts fresh (no persistent database in CI)
+
+### RSS Feed
+
+Generated as RSS 2.0 XML with article title, link, description, publication date, source, a
+unique GUID per article, and a self-referencing `atom:link`. Located at
+`https://xiaoyaohust.github.io/eng-digest/rss.xml`.
+
+## CLI Commands
+
+### Generate Digest
+
+```bash
 eng-digest run --config config.yml
 ```
 
@@ -103,37 +242,27 @@ This will:
 4. Generate Markdown, HTML, and RSS outputs
 5. Save articles to database
 
-#### Interactive Terminal UI (TUI)
+### Interactive Terminal UI (TUI)
 
 ```bash
-# Launch interactive TUI
 eng-digest tui
 ```
 
-Features:
-- **Navigation**: Use ↑/↓ arrow keys or j/k (Vim-style) to browse articles
-- **Open Article**: Press Enter or 'o' to open article in browser
-- **Mark Read/Unread**: Press 'r' to toggle read status
-- **Add to Favorites**: Press 'f' to toggle favorite status
-- **Search**: Press '/' to open search dialog
-- **Filters**:
-  - Press 'u' to show unread articles only
-  - Press 's' to show favorites only
-  - Press 'a' to show all articles
-- **Help**: Press '?' to show keyboard shortcuts
-- **Quit**: Press 'q' to exit
+- **Navigation**: ↑/↓ or j/k (Vim-style)
+- **Open Article**: Enter or `o`
+- **Mark Read/Unread**: `r`
+- **Add to Favorites**: `f`
+- **Search**: `/`
+- **Filters**: `u` unread, `s` favorites, `a` all
+- **Help**: `?`
+- **Quit**: `q`
 
-The TUI provides a rich terminal interface for browsing, searching, and managing your article database with real-time updates.
-
-#### Email Delivery
+### Email Delivery
 
 **Setup Gmail (Recommended)**
 
 1. Enable 2-Step Verification in your Google Account
-2. Generate an App Password:
-   - Go to https://myaccount.google.com/apppasswords
-   - Select "Mail" and your device
-   - Copy the 16-character password
+2. Generate an App Password at https://myaccount.google.com/apppasswords
 3. Update `config.yml`:
 
 ```yaml
@@ -151,274 +280,96 @@ output:
     use_tls: true
 ```
 
-**Automatic Email Delivery**
-
-Once configured, emails are sent automatically when you run:
-
-```bash
-# Generate digest and auto-send email (if enabled)
-eng-digest run --config config.yml
-```
-
-The email will be sent automatically after generating the digest if `email.enabled: true`.
-
-**Manual Email Sending**
-
-You can also send emails manually for any previously generated digest:
+Once configured, `eng-digest run --config config.yml` sends email automatically if
+`email.enabled: true`. You can also send manually:
 
 ```bash
-# Send today's digest
 eng-digest send-email --config config.yml
-
-# Send specific date's digest
 eng-digest send-email --config config.yml --date 2025-12-04
 ```
 
-**Other SMTP Providers**
+Other SMTP providers: Outlook (`smtp-mail.outlook.com:587`), Yahoo
+(`smtp.mail.yahoo.com:587`), QQ Mail (`smtp.qq.com:587`), 163 Mail (`smtp.163.com:465`,
+`use_ssl: true`).
 
-The tool supports any SMTP server. Common providers:
+### Database Management
 
-- **Outlook/Hotmail**: smtp-mail.outlook.com:587
-- **Yahoo**: smtp.mail.yahoo.com:587
-- **QQ Mail**: smtp.qq.com:587
-- **163 Mail**: smtp.163.com:465 (use_ssl: true)
-
-#### Database Management
-
-**View Statistics**
 ```bash
-eng-digest stats
-# Output:
-# 📊 Database Statistics
-#   Total articles: 156
-#   Unread: 89
-#   Read: 67
-#   Favorites: 12
-#   Sources: 8
-```
-
-**List Articles**
-```bash
-# List recent articles
-eng-digest list --limit 20
-
-# List only unread
+eng-digest stats                          # totals, unread, read, favorites, sources
+eng-digest list --limit 20                # recent articles
 eng-digest list --unread --limit 10
-
-# List favorites
 eng-digest list --favorites
+eng-digest search "kubernetes"            # full-text search
+eng-digest mark-read "https://..."
+eng-digest favorite "https://..."
+eng-digest favorite "https://..." --unfavorite
 ```
 
-**Search Articles**
-```bash
-# Full-text search
-eng-digest search "kubernetes"
-eng-digest search "machine learning" --limit 15
-```
-
-**Mark as Read**
-```bash
-eng-digest mark-read "https://netflixtechblog.com/..."
-```
-
-**Add to Favorites**
-```bash
-# Add favorite
-eng-digest favorite "https://engineering.fb.com/..."
-
-# Remove favorite
-eng-digest favorite "https://engineering.fb.com/..." --unfavorite
-```
-
-#### Generate Index Page
+### Generate legacy index page
 
 ```bash
 eng-digest generate-index
 ```
 
-Generates `index.html` with links to all digests.
+Generates the root `index.html` archive page. **Deprecated for the live website** — the Astro
+site at `/eng-digest/` is now the source of truth for browsing digests — but the command is
+kept for CLI users who still want a static single-file archive.
 
 ## Configuration
 
-Edit `config.yml` to customize:
+Edit `config.yml`:
 
 ```yaml
-# Blog sources
 blogs:
   - name: Netflix TechBlog
     url: https://netflixtechblog.com/feed
     type: rss
     enabled: true
 
-# Fetch settings
 fetch:
   lookback_hours: 720  # 30 days
   max_posts_per_blog: 3
   max_total_posts: 20
 
-# Summarization
 summary:
   method: textrank  # or first_paragraph
 
-# Output
 output:
   type: markdown
   path: ./digests
 ```
 
-## Deployment (GitHub Actions + Pages)
+## Digest Engine GitHub Actions Setup
 
-### Initial Setup
-
-1. **Push to GitHub**
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/eng-digest.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**
-   - Go to repository Settings → Pages
-   - Source: `main` branch, `/ (root)` folder
-   - Click Save
-
-3. **Done!** GitHub Actions will automatically:
-   - Run daily at 9 AM UTC
-   - Generate fresh digest
-   - Update website
-   - Commit and push results
-
-### Automation Schedule
-
-The digest runs:
-- **Daily**: Every day at 9 AM UTC (5 PM Beijing Time)
-- **On Push**: When you push to main branch
-- **Manual**: Trigger via GitHub Actions tab
-
-To change schedule, edit `.github/workflows/daily-digest.yml`:
-```yaml
-schedule:
-  - cron: '0 9 * * *'  # Change this
-```
+1. **Push to GitHub** and, in Settings → Pages, set Source to **GitHub Actions** (see
+   [Deployment](#deployment) above).
+2. **Done** — `daily-digest.yml` runs at 9 AM UTC, generates the digest, commits it, and
+   deploys the site.
 
 ### Email Delivery in GitHub Actions
 
-To enable automatic email delivery in GitHub Actions:
+Add repository secrets (Settings → Secrets and variables → Actions):
+- `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM_EMAIL`, `SMTP_TO_EMAILS` (comma-separated)
 
-1. **Add GitHub Secrets**
-   - Go to repository Settings → Secrets and variables → Actions
-   - Add the following secrets:
-     - `SMTP_USER`: Your email address (e.g., your-email@gmail.com)
-     - `SMTP_PASSWORD`: Your Gmail App Password (16 characters)
-     - `SMTP_FROM_EMAIL`: Sender email (usually same as SMTP_USER)
-     - `SMTP_TO_EMAILS`: Recipient email(s), comma-separated (e.g., email1@gmail.com,email2@gmail.com)
-
-2. **Done!** The workflow will automatically:
-   - Configure email from secrets
-   - Generate digest
-   - Send email to recipients
-   - Update website
-
-**Note**: Emails are sent only when secrets are configured. If secrets are not set, the workflow runs normally without email delivery.
-
-## Feature Comparison: Web vs CLI
-
-| Feature | Web (GitHub Pages) | CLI (Local) |
-|---------|-------------------|-------------|
-| Browse digests | ✅ | ✅ |
-| RSS subscription | ✅ | ✅ |
-| TextRank summaries | ✅ | ✅ |
-| Article deduplication | ⚠️ Per workflow run | ✅ Full history |
-| Search articles | ❌ | ✅ Full-text search |
-| Read/unread tracking | ❌ | ✅ |
-| Favorites | ❌ | ✅ |
-| History browsing | ✅ Limited to published | ✅ Complete history |
-| Interactive TUI | ❌ | ✅ |
-| Keyboard navigation | ❌ | ✅ |
-| Real-time filtering | ❌ | ✅ |
-
-**Note**: Database features (search, favorites, read/unread, TUI) are CLI-only because the SQLite database is local and not uploaded to GitHub.
-
-## How It Works
-
-### Summarization: TextRank Algorithm
-
-Unlike simple first-paragraph extraction, TextRank uses graph-based ranking:
-
-1. **Sentence Splitting**: Parse article into sentences
-2. **Similarity Matrix**: Calculate sentence similarity using word overlap
-3. **PageRank**: Rank sentences by importance
-4. **Selection**: Extract top N sentences while preserving order
-
-**Example Output:**
-```
-Today, AV1 powers approximately 30% of all Netflix viewing,
-marking a major milestone... In March 2025, we launched AV1
-HDR streaming... As we reflect on our AV1 journey, it's clear
-that the codec has already transformed the streaming experience...
-```
-
-### Deduplication
-
-Uses SHA256 hash of article URLs:
-- **Local CLI**: Full deduplication across all history in SQLite database
-- **GitHub Actions**: Each run starts fresh (no persistent database)
-
-### RSS Feed
-
-Generated as RSS 2.0 XML with:
-- Article title, link, description
-- Publication date and source
-- Unique GUID per article
-- Self-referencing atom:link
-- Located at: `https://YOUR_USERNAME.github.io/eng-digest/rss.xml`
-
-## Architecture
-
-```
-eng-digest/
-├── eng_digest/
-│   ├── cli.py              # Main CLI entry point
-│   ├── fetcher/            # RSS/HTML fetchers
-│   ├── summarizer/         # TextRank implementation
-│   ├── output/             # Renderers (MD, HTML, RSS)
-│   ├── database/           # SQLite manager
-│   └── models.py           # Data models
-├── .github/workflows/
-│   └── daily-digest.yml    # GitHub Actions workflow
-├── digests/                # Generated digest files
-├── config.yml              # Configuration
-├── rss.xml                 # RSS feed
-└── index.html              # Archive homepage
-```
+Emails are sent only when secrets are configured; otherwise the workflow runs normally without
+email delivery.
 
 ## Technology Stack
 
-- **Python 3.8+**: Core language
-- **SQLite**: Local database (zero-cost, file-based)
-- **TextRank**: Graph-based summarization (no AI needed)
-- **GitHub Actions**: Free CI/CD (2000 min/month)
-- **GitHub Pages**: Free static hosting
-- **Libraries**:
-  - `feedparser`: RSS/Atom parsing
-  - `beautifulsoup4`: HTML fallback
-  - `numpy`: TextRank calculations
-  - `nltk`: NLP utilities
-  - `PyYAML`: Configuration
-  - `requests`: HTTP fetching
-  - `textual`: Interactive Terminal UI framework
+- **Python 3.8+** — digest engine
+- **SQLite** — local database (zero-cost, file-based)
+- **TextRank** — graph-based summarization (no AI needed)
+- **Astro** — static website
+- **Pagefind** — static full-text search
+- **GitHub Actions** — free CI/CD (2,000 min/month)
+- **GitHub Pages** — free static hosting
 
 ## Development
-
-### Run Tests
 
 ```bash
 pip install -e ".[dev]"
 pytest
-```
 
-### Code Style
-
-```bash
 black eng_digest/
 flake8 eng_digest/
 mypy eng_digest/
@@ -426,7 +377,6 @@ mypy eng_digest/
 
 ### Add New Blog Source
 
-Edit `config.yml`:
 ```yaml
 blogs:
   - name: Your Blog
@@ -439,37 +389,38 @@ blogs:
 
 ### GitHub Actions Fails
 
-**Check workflow logs**: Repository → Actions → Latest run
-
-Common issues:
-- Missing dependencies → Check `pyproject.toml`
-- Blog RSS down → Will skip that blog
-- Rate limiting → Reduce `max_total_posts`
+Check Repository → Actions → latest run. Common issues:
+- Missing dependencies → check `pyproject.toml`
+- Blog RSS down → that blog is skipped
+- Rate limiting → reduce `max_total_posts`
 
 ### Database Issues
 
-**Database locked**:
 ```bash
-# Close any running eng-digest processes
-pkill -f eng-digest
-```
-
-**Reset database**:
-```bash
-rm eng_digest.db
-eng-digest run --config config.yml  # Rebuilds from scratch
+pkill -f eng-digest              # database locked: close running processes
+rm eng_digest.db                 # reset: rebuilds from scratch on next run
+eng-digest run --config config.yml
 ```
 
 ### No Articles Found
 
-**Check configuration**:
 - Verify `lookback_hours` is large enough (e.g., 720 for 30 days)
-- Check if blogs are `enabled: true`
+- Check blogs are `enabled: true`
 - Confirm RSS feeds are accessible: `curl <feed-url>`
+
+### Website build fails
+
+```bash
+cd site
+npm run check     # TypeScript + content schema errors
+npm run build      # full build incl. digest import + Pagefind
+```
+
+Most build failures are a frontmatter field that doesn't match the schema in
+`site/src/content.config.ts` — see [docs/CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md).
 
 ## Supported Blogs
 
-Currently configured sources:
 - **Meta Engineering**: https://engineering.fb.com/feed/
 - **Netflix TechBlog**: https://netflixtechblog.com/feed
 - **Google Developers**: https://developers.googleblog.com/feeds/posts/default
@@ -483,36 +434,28 @@ The tool works with any blog that provides RSS or Atom feeds.
 
 ## Contributing
 
-Contributions welcome! Please:
 1. Fork the repository
 2. Create a feature branch
-3. Add tests for new features
+3. Add tests for new features (`pytest` for `eng_digest/`, `npm run check` for `site/`)
 4. Submit a pull request
 
 ## Roadmap
 
-Future enhancements:
-- [ ] Web-based search interface (static site generator)
-- [ ] Email digest delivery (SMTP)
-- [ ] Slack/Discord notifications
-- [ ] PDF export (reportlab)
-- [ ] EPUB e-book format
+- [ ] Manually-written articles RSS feed (`/articles.xml`), separate from `/rss.xml`
+- [ ] PDF/EPUB export
 - [ ] Custom blog scraping for non-RSS sites
 - [ ] Multi-language support
-- [ ] Tag/category filtering
+
+Explicitly **not** planned for this static architecture (see
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)): accounts/auth, a production database, premium
+content, or an AI chatbot — all possible later, but not designed for now.
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file
+MIT License — see [LICENSE](LICENSE)
 
 ## Acknowledgments
 
 - TextRank algorithm based on Mihalcea & Tarau (2004)
 - Blog sources: Netflix, Meta, Google, AWS, Stripe, GitHub, Dropbox, LinkedIn
-- Built with Python and ❤️
-
----
-
-**Made with Claude Code** 🤖
-
-For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md)
+- Website built with [Astro](https://astro.build)

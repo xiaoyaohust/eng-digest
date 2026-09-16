@@ -1,0 +1,53 @@
+---
+import type { MarkdownHeading } from "astro";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+// Only show top-level structure (h2/h3) so the TOC stays scannable.
+const items = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
+---
+
+{items.length > 0 && (
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-title eyebrow">On this page</p>
+    <ul>
+      {items.map((heading) => (
+        <li class:list={{ "toc-sub": heading.depth === 3 }}>
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc {
+    font-size: 0.88rem;
+  }
+  .toc-title {
+    margin: 0 0 10px;
+  }
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .toc li a {
+    color: var(--color-text-muted);
+    display: block;
+    line-height: 1.4;
+  }
+  .toc li a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  .toc-sub {
+    padding-left: 14px;
+  }
+</style>

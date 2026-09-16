@@ -1,0 +1,51 @@
+---
+import { withBase, formatDate } from "@/lib/url";
+
+interface Props {
+  href: string;
+  date: Date;
+  articleCount?: number;
+  sourceCount?: number;
+  sources?: string[];
+}
+
+const { href, date, articleCount, sourceCount, sources = [] } = Astro.props;
+---
+
+<a class="card digest-card" href={withBase(href)}>
+  <h3>{formatDate(date)}</h3>
+  <div class="digest-stats muted">
+    {articleCount !== undefined && <span>{articleCount} Articles</span>}
+    {sourceCount !== undefined && <span>{sourceCount} Sources</span>}
+  </div>
+  {sources.length > 0 && (
+    <div class="tag-list">
+      {sources.slice(0, 8).map((source) => (
+        <span class="tag">{source}</span>
+      ))}
+      {sources.length > 8 && <span class="muted">+{sources.length - 8} more</span>}
+    </div>
+  )}
+  <span class="digest-read-more">Read Digest →</span>
+</a>
+
+<style>
+  .digest-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .digest-card h3 {
+    margin: 0;
+  }
+  .digest-stats {
+    display: flex;
+    gap: 14px;
+    font-size: 0.9rem;
+  }
+  .digest-read-more {
+    margin-top: 4px;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+</style>

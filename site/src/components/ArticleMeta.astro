@@ -1,0 +1,40 @@
+---
+import { formatDate } from "@/lib/url";
+import Tag from "./Tag.astro";
+
+interface Props {
+  date: Date;
+  updated?: Date;
+  tags?: string[];
+  readingMinutes?: number;
+}
+
+const { date, updated, tags = [], readingMinutes } = Astro.props;
+---
+
+<div class="article-meta">
+  <div class="meta-line muted">
+    <time datetime={date.toISOString()}>{formatDate(date)}</time>
+    {updated && updated.getTime() !== date.getTime() && (
+      <span> · Updated <time datetime={updated.toISOString()}>{formatDate(updated)}</time></span>
+    )}
+    {readingMinutes && <span> · {readingMinutes} min read</span>}
+  </div>
+  {tags.length > 0 && (
+    <div class="tag-list">
+      {tags.map((tag) => <Tag tag={tag} />)}
+    </div>
+  )}
+</div>
+
+<style>
+  .article-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 28px;
+  }
+  .meta-line {
+    font-size: 0.92rem;
+  }
+</style>

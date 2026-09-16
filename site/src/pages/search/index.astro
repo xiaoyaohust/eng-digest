@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Search"
+  description="Search System Design, Coding, Interview Experiences, and Engineering Digest content."
+>
+  <div class="wrap section">
+    <h1>Search</h1>
+    <p class="muted section-intro">
+      Static full-text search across System Design, Coding, Interview Experiences, and
+      Engineering Digest — indexed at build time, no server involved.
+    </p>
+    <div id="pagefind-search"></div>
+    <p id="search-fallback" class="muted" hidden>
+      Search index not found. It's only built as part of <code>npm run build</code>
+      (which runs Pagefind) — try <code>npm run build &amp;&amp; npm run preview</code>
+      to test search locally; it works normally once deployed.
+    </p>
+  </div>
+</BaseLayout>
+
+<script>
+  function loadScript(src: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error(`Failed to load ${src}`));
+      document.head.appendChild(script);
+    });
+  }
+
+  const base = import.meta.env.BASE_URL;
+
+  const cssLink = document.createElement("link");
+  cssLink.rel = "stylesheet";
+  cssLink.href = `${base}pagefind/pagefind-ui.css`;
+  document.head.appendChild(cssLink);
+
+  loadScript(`${base}pagefind/pagefind-ui.js`)
+    .then(() => {
+      // @ts-expect-error — PagefindUI is loaded onto window by the script above.
+      new window.PagefindUI({ element: "#pagefind-search", showSubResults: true });
+    })
+    .catch(() => {
+      document.getElementById("search-fallback")?.removeAttribute("hidden");
+    });
+</script>
+
+<style>
+  .section {
+    padding: 44px 0 64px;
+  }
+  .section-intro {
+    max-width: 620px;
+  }
+  #pagefind-search {
+    margin-top: 28px;
+  }
+</style>

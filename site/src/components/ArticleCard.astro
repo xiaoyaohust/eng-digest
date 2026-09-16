@@ -1,0 +1,60 @@
+---
+import { withBase, formatDate } from "@/lib/url";
+
+interface Props {
+  href: string;
+  kicker: string;
+  title: string;
+  description: string;
+  date?: Date;
+  tags?: string[];
+  featured?: boolean;
+}
+
+const { href, kicker, title, description, date, tags = [], featured = false } = Astro.props;
+---
+
+<a class="card article-card" class:list={{ featured }} href={withBase(href)}>
+  <span class="eyebrow">{kicker}</span>
+  <h3>{title}</h3>
+  <p class="muted">{description}</p>
+  <div class="article-card-footer">
+    {date && <span class="muted">{formatDate(date)}</span>}
+    {tags.length > 0 && (
+      <span class="tag-list">
+        {tags.slice(0, 3).map((tag) => (
+          <span class="tag">{tag}</span>
+        ))}
+      </span>
+    )}
+  </div>
+</a>
+
+<style>
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+  }
+  .article-card h3 {
+    margin: 2px 0 0;
+    font-size: 1.08rem;
+  }
+  .article-card p {
+    margin: 0;
+    font-size: 0.94rem;
+    flex: 1;
+  }
+  .article-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 0.85rem;
+  }
+  .featured {
+    border-color: var(--color-accent);
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import DigestCard from "@/components/DigestCard.astro";
+import { withBase } from "@/lib/url";
+import { publishedDigests } from "@/lib/content";
+
+const digests = await publishedDigests();
+---
+
+<BaseLayout
+  title="Engineering Digest"
+  description="Daily, automatically generated summaries of engineering blog posts from top tech companies."
+>
+  <div class="wrap section">
+    <div class="section-header">
+      <div>
+        <h1>Engineering Digest</h1>
+        <p class="muted section-intro">
+          A daily digest of engineering blog posts, generated automatically by the
+          <code>eng_digest</code> Python pipeline — no manual curation, no AI APIs.
+        </p>
+      </div>
+      <a class="rss-link" href={withBase("/rss.xml")}>Subscribe via RSS →</a>
+    </div>
+
+    <div class="card-grid">
+      {digests.map((entry) => (
+        <DigestCard
+          href={`/eng-digest/${entry.id}/`}
+          date={entry.data.date}
+          articleCount={entry.data.articleCount}
+          sourceCount={entry.data.sourceCount}
+          sources={entry.data.sources}
+        />
+      ))}
+    </div>
+
+    {digests.length === 0 && (
+      <p class="muted">
+        No digests found. Run <code>npm run import-digests</code> to import
+        <code>../digests/digest-*.md</code>.
+      </p>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .section {
+    padding: 44px 0 64px;
+  }
+  .section-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .section-intro {
+    max-width: 640px;
+    margin: -6px 0 0;
+  }
+  .rss-link {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+</style>

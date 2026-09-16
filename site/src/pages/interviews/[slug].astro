@@ -1,0 +1,57 @@
+---
+import { render } from "astro:content";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import { published, findRelated, allCandidates } from "@/lib/content";
+import { readingTime } from "@/lib/url";
+
+export async function getStaticPaths() {
+  const entries = await published("interviews");
+  return entries.map((entry, index, all) => ({
+    params: { slug: entry.id },
+    props: {
+      entry,
+      prevEntry: all[index + 1],
+      nextEntry: all[index - 1],
+    },
+  }));
+}
+
+const { entry, prevEntry, nextEntry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const candidates = await allCandidates();
+const related = findRelated(entry.data.tags, candidates, `/interviews/${entry.id}/`);
+const kicker = entry.data.company ? `${entry.data.company} Interview` : "Interview";
+---
+
+<ArticleLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  kicker={kicker}
+  date={entry.data.date}
+  updated={entry.data.updated}
+  tags={entry.data.tags}
+  readingMinutes={readingTime(entry.body ?? "")}
+  headings={headings}
+  prev={prevEntry && { title: prevEntry.data.title, href: `/interviews/${prevEntry.id}/` }}
+  next={nextEntry && { title: nextEntry.data.title, href: `/interviews/${nextEntry.id}/` }}
+  related={related}
+>
+  {entry.data.sample && (
+    <p class="sample-notice">
+      <strong>Sample content.</strong> This is a placeholder interview write-up to demonstrate
+      the article format — it is not a real interview experience.
+    </p>
+  )}
+  <Content />
+</ArticleLayout>
+
+<style>
+  .sample-notice {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: var(--color-bg-inset);
+    border: 1px solid var(--color-border);
+    font-size: 0.92em;
+  }
+</style>

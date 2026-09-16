@@ -1,0 +1,57 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About"
+  description="What this site is, how it's built, and how Engineering Digest fits in."
+>
+  <div class="wrap prose about-page">
+    <h1>About</h1>
+    <p>
+      This site collects practical, interview-oriented engineering notes: system design
+      write-ups, coding patterns, and real interview experiences, alongside an automated
+      daily digest of engineering blog posts from top tech companies.
+    </p>
+
+    <h2>What's here</h2>
+    <ul>
+      <li><strong>System Design</strong> — architecture and distributed systems interview prep.</li>
+      <li><strong>Coding</strong> — algorithms, patterns, and interview problems.</li>
+      <li><strong>Interview Experiences</strong> — real interview notes, formats, and lessons.</li>
+      <li>
+        <strong>Engineering Digest</strong> — a daily, automatically generated summary of posts
+        from engineering blogs (AWS, GitHub, Dropbox, Netflix, and others), unrelated to the
+        manually written sections above.
+      </li>
+    </ul>
+
+    <h2>How it's built</h2>
+    <p>
+      The site is a static <a href="https://astro.build" target="_blank" rel="noreferrer">Astro</a>
+      site. All manually written content is Markdown/MDX under version control — publishing an
+      article is a git push, nothing more. The Engineering Digest is produced by a separate
+      Python pipeline that fetches, summarizes, and commits Markdown on a daily schedule; the
+      website imports that Markdown at build time. There is no server, no production database,
+      and no user accounts — see
+      <a href="https://github.com/xiaoyaohust/eng-digest/blob/main/docs/ARCHITECTURE.md">
+        docs/ARCHITECTURE.md
+      </a>
+      for the full picture.
+    </p>
+
+    <h2>Source</h2>
+    <p>
+      The repository, including the digest engine and this site, is at
+      <a href="https://github.com/xiaoyaohust/eng-digest" target="_blank" rel="noreferrer">
+        github.com/xiaoyaohust/eng-digest
+      </a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding: 48px 0 64px;
+  }
+</style>

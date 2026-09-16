@@ -111,8 +111,12 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
+# Astro website build output / deps / generated content
+# (the site itself, under site/src, IS tracked)
+site/node_modules/
+site/dist/
+site/.astro/
+site/src/content/generated-digests/
 
 # mypy
 .mypy_cache/

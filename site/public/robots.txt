@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xiaoyaohust.github.io/eng-digest/sitemap-index.xml

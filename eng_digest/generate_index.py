@@ -2,6 +2,11 @@
 Generate index.html for GitHub Pages.
 
 Lists all generated digests with links to both Markdown and HTML versions.
+
+Deprecated for the live website: the Astro site under site/ (see
+docs/ARCHITECTURE.md) is now the deployed homepage and digest archive
+(/eng-digest/). This module is kept for CLI users who still want a
+standalone static index.html, and is unaffected by the website build.
 """
 
 import os

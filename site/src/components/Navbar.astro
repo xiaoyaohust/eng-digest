@@ -1,0 +1,166 @@
+---
+import { withBase } from "@/lib/url";
+import ThemeToggle from "./ThemeToggle.astro";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "System Design", href: "/system-design/" },
+  { label: "Coding", href: "/coding/" },
+  { label: "Interviews", href: "/interviews/" },
+  { label: "Engineering Digest", href: "/eng-digest/" },
+  { label: "About", href: "/about/" },
+];
+
+const currentPath = Astro.url.pathname;
+function isActive(href: string): boolean {
+  const base = withBase(href);
+  if (href === "/") {
+    return currentPath === base;
+  }
+  return currentPath.startsWith(base);
+}
+---
+
+<header class="navbar">
+  <div class="wrap navbar-inner">
+    <a class="brand" href={withBase("/")}>Eng Knowledge</a>
+
+    <input id="nav-toggle" class="nav-toggle-input" type="checkbox" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+      <span></span>
+    </label>
+
+    <nav class="nav-links">
+      {
+        navItems.map((item) => (
+          <a href={withBase(item.href)} aria-current={isActive(item.href) ? "page" : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+      <a href={withBase("/search/")} class="nav-search" aria-label="Search">
+        🔍 <span class="nav-search-label">Search</span>
+      </a>
+    </nav>
+
+    <div class="navbar-actions">
+      <ThemeToggle />
+    </div>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(6px);
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 60px;
+  }
+
+  .brand {
+    font-weight: 700;
+    color: var(--color-text);
+    white-space: nowrap;
+  }
+  .brand:hover {
+    text-decoration: none;
+    color: var(--color-accent);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+    font-size: 0.94rem;
+  }
+
+  .nav-links a {
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .nav-links a[aria-current="page"] {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .nav-search {
+    margin-left: auto;
+  }
+
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-toggle-input,
+  .nav-toggle-label {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .navbar-inner {
+      flex-wrap: wrap;
+      height: auto;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .nav-toggle-label {
+      display: flex;
+      margin-left: auto;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--color-text);
+      position: relative;
+    }
+    .nav-toggle-label span::before {
+      position: absolute;
+      top: -6px;
+    }
+    .nav-toggle-label span::after {
+      position: absolute;
+      top: 6px;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 12px;
+      padding-top: 12px;
+      order: 3;
+    }
+
+    .nav-search {
+      margin-left: 0;
+    }
+
+    .nav-toggle-input:checked ~ .nav-links {
+      display: flex;
+    }
+  }
+</style>

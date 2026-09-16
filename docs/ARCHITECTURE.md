@@ -1,0 +1,88 @@
+# Architecture
+
+This repository is a monorepo with two independent applications that only meet at build time,
+through a directory of committed Markdown files.
+
+```
+                     writes digests/digest-YYYY-MM-DD.md
+  eng_digest (Python)  ───────────────────────────────►  digests/  (git-tracked)
+                                                                │
+                                                                │ read-only, at build time
+                                                                ▼
+                                          site/scripts/import-digests.mjs
+                                                                │
+                                                                ▼
+                                    site/src/content/generated-digests/*.md
+                                                  (gitignored, rebuilt every build)
+                                                                │
+                                                                ▼
+                                                   astro build  →  site/dist/
+                                                                │
+                                                                ▼
+                                                      GitHub Pages (static)
+```
+
+## The Python digest engine (`eng_digest/`)
+
+Unchanged by this migration. `eng-digest run --config config.yml`:
+
+1. Fetches articles (RSS/Atom via `feedparser`, HTML fallback via `beautifulsoup4`).
+2. Deduplicates against `eng_digest.db`, a **local-only SQLite database**.
+3. Summarizes with TextRank (`eng_digest/summarizer/textrank.py`) — a classical graph-ranking
+   algorithm, not an LLM/AI API call.
+4. Renders Markdown, HTML, RSS (`eng_digest/output/`) and writes them to `digests/`.
+
+Its CLI (`stats`, `list`, `search`, `favorite`, `tui`, `send-email`, ...) all depend on that
+local SQLite database and only work against the machine that ran `eng-digest run`. None of
+this is exposed to, or needed by, the website.
+
+`eng_digest/generate_index.py` still generates the legacy root `index.html` archive page for
+CLI users who want it, but it is **no longer the website's homepage** — that role now belongs
+to `site/src/pages/index.astro`.
+
+## The Astro website (`site/`)
+
+A fully static site (`output: 'static'`, no SSR adapter). Three kinds of content feed it:
+
+- **Manually authored Markdown/MDX** under `site/src/content/{system-design,coding,interviews}/`
+  — the source of truth for everything except the digest. Schemas live in
+  `site/src/content.config.ts`.
+- **Generated digest Markdown** under `site/src/content/generated-digests/` — never
+  hand-written, never committed (see `.gitignore`), rebuilt from `digests/*.md` by
+  `site/scripts/import-digests.mjs` on every `npm run build` (via the `prebuild` script).
+- **Legacy artifacts** (`rss.xml`, `digests/*.html`, `digests/*.md`) — copied into `site/dist/`
+  as-is by the deploy workflow, alongside the new site, so old links keep working. They are
+  never touched by Astro's build.
+
+Build pipeline: `npm run import-digests` → `astro build` → `pagefind --site dist` (static
+search index). `site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` from the environment so
+the same code deploys to a GitHub Pages project site today and a custom domain later.
+
+## GitHub Actions
+
+Three workflows, kept deliberately non-overlapping:
+
+- **`daily-digest.yml`** — schedule + manual trigger. Runs the Python pipeline, commits
+  `digests/`, `index.html`, `rss.xml` if changed, and — only when something changed — calls
+  `build-deploy-site.yml` in the *same run* to build and deploy the site with the fresh
+  digest. This exists because a commit made with the default `GITHUB_TOKEN` does not reliably
+  re-trigger other workflows' `push` events, so relying on `deploy-site.yml` alone would leave
+  a freshly generated digest undeployed until the next human push.
+- **`deploy-site.yml`** — runs on every push to `main` (i.e. every manually authored article),
+  and on `workflow_dispatch`. Calls `build-deploy-site.yml`.
+- **`build-deploy-site.yml`** — a reusable workflow (`on: workflow_call`) holding the actual
+  build/deploy steps once, so the logic isn't duplicated between the two trigger paths.
+
+GitHub Pages must be configured to deploy from **GitHub Actions** (Settings → Pages), not
+"Deploy from a branch" — the previous setup, since the site is no longer a checked-in
+`index.html` at the repo root.
+
+## Why there is no production database
+
+Every requirement so far — articles, tags, digest archive, search — is knowable entirely at
+build time from files in the repository. A database would add infrastructure, cost, and an
+attack surface for no capability this site currently needs. If/when user accounts, saved
+articles, or premium content are added, that's a deliberate, separate architectural decision —
+this repo intentionally doesn't pre-build abstractions for it today. The local SQLite database
+that already exists is a CLI convenience for `eng_digest`, not a step toward a website
+database; it's never uploaded and the website never queries it.

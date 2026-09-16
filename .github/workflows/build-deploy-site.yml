@@ -1,0 +1,84 @@
+name: Build and Deploy Site
+
+# Reusable workflow: builds the Astro site (importing the committed
+# digests/*.md as it goes) and deploys it to GitHub Pages. Called from
+# deploy-site.yml (normal pushes) and daily-digest.yml (right after a
+# scheduled digest commit), so a fresh digest is deployed the same run
+# instead of waiting for the next human push.
+on:
+  workflow_call:
+    inputs:
+      # Left empty for a normal push-triggered run (checks out github.sha).
+      # Set to "main" by callers that just pushed a commit of their own, so
+      # the build picks up that commit instead of the original trigger sha.
+      ref:
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install site dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Import Engineering Digest markdown
+        working-directory: site
+        run: npm run import-digests
+
+      - name: Type-check and validate content schemas
+        working-directory: site
+        run: npm run check
+
+      - name: Build site
+        working-directory: site
+        run: npx astro build
+
+      - name: Build search index
+        working-directory: site
+        run: npm run search-index
+
+      - name: Copy legacy Engineering Digest artifacts (backward compatibility)
+        run: |
+          cp rss.xml site/dist/rss.xml
+          mkdir -p site/dist/digests
+          cp digests/*.md digests/*.html site/dist/digests/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

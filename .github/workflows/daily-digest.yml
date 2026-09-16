@@ -69,8 +69,34 @@ jobs:
           eng-digest generate-index
 
       - name: Commit and push if changed
+        id: commit
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
           git add digests/ index.html rss.xml
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Daily digest $(date +%Y-%m-%d)" && git push)
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Daily digest $(date +%Y-%m-%d)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+
+  # Runs in the same workflow run right after a digest commit, so the new
+  # digest is live the same day instead of waiting for the next human push
+  # (a commit made with the default GITHUB_TOKEN doesn't reliably trigger
+  # deploy-site.yml's own push trigger). Skipped entirely when there was
+  # nothing new to commit, so an unchanged day doesn't redeploy for no reason.
+  deploy:
+    needs: generate-digest
+    if: needs.generate-digest.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/build-deploy-site.yml
+    with:
+      ref: main

@@ -1,0 +1,42 @@
+---
+import { withBase } from "@/lib/url";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>&copy; {year} Eng Knowledge. Built with Astro.</p>
+    <nav class="footer-links">
+      <a href={withBase("/eng-digest/")}>Engineering Digest</a>
+      <a href={withBase("/rss.xml")}>RSS</a>
+      <a href={withBase("/about/")}>About</a>
+      <a href="https://github.com/xiaoyaohust/eng-digest" target="_blank" rel="noreferrer">
+        GitHub
+      </a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--color-border);
+    margin-top: 64px;
+    padding: 28px 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 16px;
+  }
+</style>

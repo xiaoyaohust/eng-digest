@@ -1,0 +1,98 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
+import { published } from "@/lib/content";
+import { slugifyTag } from "@/lib/url";
+
+export async function getStaticPaths() {
+  const [systemDesign, coding, interviews] = await Promise.all([
+    published("system-design"),
+    published("coding"),
+    published("interviews"),
+  ]);
+
+  type Card = {
+    href: string;
+    kicker: string;
+    title: string;
+    description: string;
+    date: Date;
+    tags: string[];
+  };
+
+  const all: Card[] = [
+    ...systemDesign.map((e) => ({
+      href: `/system-design/${e.id}/`,
+      kicker: "System Design",
+      title: e.data.title,
+      description: e.data.description,
+      date: e.data.date,
+      tags: e.data.tags,
+    })),
+    ...coding.map((e) => ({
+      href: `/coding/${e.id}/`,
+      kicker: "Coding",
+      title: e.data.title,
+      description: e.data.description,
+      date: e.data.date,
+      tags: e.data.tags,
+    })),
+    ...interviews.map((e) => ({
+      href: `/interviews/${e.id}/`,
+      kicker: "Interview",
+      title: e.data.title,
+      description: e.data.description,
+      date: e.data.date,
+      tags: e.data.tags,
+    })),
+  ];
+
+  const bySlug = new Map<string, { label: string; entries: Card[] }>();
+  for (const entry of all) {
+    for (const tag of entry.tags) {
+      const slug = slugifyTag(tag);
+      const bucket = bySlug.get(slug) ?? { label: tag, entries: [] };
+      bucket.entries.push(entry);
+      bySlug.set(slug, bucket);
+    }
+  }
+
+  return Array.from(bySlug.entries()).map(([slug, { label, entries }]) => ({
+    params: { tag: slug },
+    props: {
+      label,
+      entries: entries.sort((a, b) => b.date.valueOf() - a.date.valueOf()),
+    },
+  }));
+}
+
+const { label, entries } = Astro.props;
+---
+
+<BaseLayout title={`Tag: ${label}`} description={`Articles tagged "${label}".`}>
+  <div class="wrap section">
+    <p class="eyebrow">Tag</p>
+    <h1>{label}</h1>
+    <div class="card-grid">
+      {entries.map((entry) => (
+        <ArticleCard
+          href={entry.href}
+          kicker={entry.kicker}
+          title={entry.title}
+          description={entry.description}
+          date={entry.date}
+          tags={entry.tags}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .section {
+    padding: 44px 0 64px;
+  }
+  h1 {
+    margin-top: 4px;
+  }
+</style>

@@ -1,0 +1,11 @@
+---
+import { withBase, slugifyTag } from "@/lib/url";
+
+interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.props;
+---
+
+<a class="tag" href={withBase(`/tags/${slugifyTag(tag)}/`)}>{tag}</a>
