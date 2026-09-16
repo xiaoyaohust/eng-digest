@@ -23,6 +23,10 @@ companies:                 # optional
   - stripe
 featured: true              # optional, default false — shows on the homepage
 draft: false                 # optional, default false — true hides it from all listings
+practice:                    # optional — enables Interview Question Mode
+  - question: "How would you make the shared counter update atomic?"
+    hint: "Think about where the read-modify-write operation executes."
+    answer: "Use a Redis Lua script so increment, expiry, and checking are atomic."
 ---
 ```
 
@@ -52,6 +56,10 @@ tags:
   - data-structures
 featured: false
 draft: false
+practice:                    # optional — enables Interview Question Mode
+  - question: "Why is a doubly linked list needed?"
+    hint: "Consider removing an arbitrary node in O(1)."
+    answer: "Its previous and next pointers let a known node be unlinked in O(1)."
 ---
 ```
 
@@ -132,9 +140,21 @@ them out), so they don't build a public URL either.
 CI) fails the build if a required field is missing or a field has the wrong type — check there
 first if a new article won't build.
 
+## Interview Question Mode
+
+Add a `practice` list to any System Design, Coding, or Interview Experience frontmatter. Each
+entry requires `question`, `hint`, and `answer`. The article page then gets four client-side
+modes: regular reading, questions only, hints expanded, and answers visible. No account,
+database, or additional route is involved.
+
 ## Engineering Digest content
 
 Digest pages under `/eng-digest/` are **not** manually authored — they're generated from
 `digests/digest-YYYY-MM-DD.md`, which the `eng_digest` Python pipeline writes on its own
 schedule. Don't add files to `site/src/content/generated-digests/` directly; it's rebuilt by
 `npm run import-digests` on every build and is gitignored.
+
+Weekly reports under `/eng-digest/weekly/` are generated automatically during the same import
+step. The build de-duplicates daily articles by URL, classifies them with a deterministic topic
+taxonomy, and writes the generated collection to `site/src/content/generated-weekly/`. Do not
+edit that directory by hand.

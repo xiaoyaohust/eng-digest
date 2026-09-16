@@ -1,0 +1,56 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import WeeklyDigestCard from "@/components/WeeklyDigestCard.astro";
+import { publishedWeeklyDigests } from "@/lib/content";
+
+const weeks = await publishedWeeklyDigests();
+---
+
+<BaseLayout
+  title="Weekly Engineering Trends"
+  description="Build-time weekly summaries of engineering topics, sources, and representative articles."
+>
+  <div class="wrap section">
+    <h1>Weekly Engineering Trends</h1>
+    <p class="muted section-intro">
+      Seven days of engineering signals, automatically de-duplicated and organized into
+      topic trends, source activity, and representative reading.
+    </p>
+    <div class="section-status">
+      <span>WEEKLY INDEX</span><span>{weeks.length} REPORTS</span><span>BUILD-TIME / NO DATABASE</span>
+    </div>
+    <div class="weekly-grid">
+      {weeks.map((entry) => (
+        <WeeklyDigestCard
+          href={`/eng-digest/weekly/${entry.id}/`}
+          weekStart={entry.data.weekStart}
+          weekEnd={entry.data.weekEnd}
+          articleCount={entry.data.articleCount}
+          digestCount={entry.data.digestCount}
+          topTopics={entry.data.topTopics}
+          complete={entry.data.complete}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .weekly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 18px;
+  }
+  .section-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 30px;
+    padding: 10px 12px;
+    border-block: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+</style>

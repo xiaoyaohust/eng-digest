@@ -1,0 +1,218 @@
+---
+interface PracticeQuestion {
+  question: string;
+  hint: string;
+  answer: string;
+}
+
+interface Props {
+  questions: PracticeQuestion[];
+}
+
+const { questions } = Astro.props;
+---
+
+<section class="practice-shell" data-practice-root data-mode="read" aria-labelledby="practice-title">
+  <div class="practice-header">
+    <div>
+      <span class="practice-kicker"><i></i> INTERVIEW QUESTION MODE</span>
+      <h2 id="practice-title">Test your reasoning before reading the answer.</h2>
+      <p>{questions.length} prompts · no account · progress stays in this tab</p>
+    </div>
+    <span class="practice-status" data-practice-status aria-live="polite">READING MODE</span>
+  </div>
+
+  <div class="practice-controls" role="group" aria-label="Choose interview practice mode">
+    <button type="button" data-practice-mode="questions" aria-pressed="false">Questions only</button>
+    <button type="button" data-practice-mode="hints" aria-pressed="false">Expand hints</button>
+    <button type="button" data-practice-mode="answers" aria-pressed="false">Show answers</button>
+    <button class="read-button" type="button" data-practice-mode="read" aria-pressed="true">Read article</button>
+  </div>
+
+  <div class="practice-deck">
+    {questions.map((item, index) => (
+      <article class="practice-question">
+        <div class="question-number">Q{String(index + 1).padStart(2, "0")}</div>
+        <h3>{item.question}</h3>
+        <div class="practice-hint">
+          <span>HINT</span>
+          <p>{item.hint}</p>
+        </div>
+        <div class="practice-answer">
+          <span>ANSWER</span>
+          <p>{item.answer}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .practice-shell {
+    width: min(100% - 48px, 980px);
+    margin: 26px auto 0;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 9px;
+    background: var(--color-bg-raised);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+  .practice-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 20px 22px;
+    background:
+      linear-gradient(rgba(71, 100, 133, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(71, 100, 133, 0.06) 1px, transparent 1px),
+      var(--color-bg-inset);
+    background-size: 22px 22px;
+  }
+  .practice-kicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 750;
+    letter-spacing: 0.09em;
+  }
+  .practice-kicker i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-signal);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-signal) 15%, transparent);
+  }
+  h2 {
+    margin: 9px 0 5px;
+    font-family: var(--font-display);
+    font-size: 1.28rem;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+  }
+  .practice-header p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+  }
+  .practice-status {
+    padding: 5px 7px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 4px;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    white-space: nowrap;
+  }
+  .practice-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--color-border);
+  }
+  button {
+    padding: 11px 10px;
+    border: 0;
+    border-right: 1px solid var(--color-border);
+    background: var(--color-bg-raised);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+  }
+  button:last-child { border-right: 0; }
+  button:hover,
+  button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-accent-contrast); }
+  .practice-deck {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 18px;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-bg-inset);
+  }
+  .practice-shell:not([data-mode="read"]) .practice-deck { display: grid; }
+  .practice-question {
+    position: relative;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: var(--color-bg-raised);
+  }
+  .question-number {
+    margin-bottom: 18px;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 750;
+  }
+  .practice-question h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+  }
+  .practice-hint,
+  .practice-answer {
+    display: none;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--color-border);
+  }
+  [data-mode="hints"] .practice-hint,
+  [data-mode="answers"] .practice-hint,
+  [data-mode="answers"] .practice-answer { display: block; }
+  .practice-hint > span,
+  .practice-answer > span {
+    color: var(--color-signal);
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+  }
+  .practice-answer > span { color: var(--color-accent); }
+  .practice-hint p,
+  .practice-answer p { margin: 6px 0 0; color: var(--color-text-muted); font-size: 0.86rem; line-height: 1.6; }
+  :global(.article-page.practice-active .article-body),
+  :global(.article-page.practice-active .article-footer) { display: none; }
+
+  @media (max-width: 680px) {
+    .practice-shell { width: min(100% - 32px, 980px); }
+    .practice-header { flex-direction: column; }
+    .practice-controls { grid-template-columns: 1fr 1fr; }
+    button:nth-child(2) { border-right: 0; }
+    button:nth-child(-n + 2) { border-bottom: 1px solid var(--color-border); }
+    .practice-deck { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  const labels = {
+    read: "READING MODE",
+    questions: "QUESTIONS ONLY",
+    hints: "HINTS EXPANDED",
+    answers: "ANSWERS VISIBLE",
+  } as const;
+
+  document.querySelectorAll<HTMLElement>("[data-practice-root]").forEach((root) => {
+    const article = root.closest<HTMLElement>(".article-page");
+    const status = root.querySelector<HTMLElement>("[data-practice-status]");
+    const buttons = root.querySelectorAll<HTMLButtonElement>("[data-practice-mode]");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const mode = button.dataset.practiceMode as keyof typeof labels;
+        root.dataset.mode = mode;
+        article?.classList.toggle("practice-active", mode !== "read");
+        if (status) status.textContent = labels[mode];
+        buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        if (mode !== "read") root.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  });
+</script>

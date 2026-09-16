@@ -10,6 +10,15 @@ const baseFields = {
   tags: z.array(z.string()).default([]),
   featured: z.boolean().default(false),
   draft: z.boolean().default(false),
+  practice: z
+    .array(
+      z.object({
+        question: z.string(),
+        hint: z.string(),
+        answer: z.string(),
+      })
+    )
+    .optional(),
 };
 
 const systemDesign = defineCollection({
@@ -57,9 +66,35 @@ const generatedDigests = defineCollection({
   }),
 });
 
+const generatedWeekly = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/generated-weekly" }),
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    weekStart: z.coerce.date(),
+    weekEnd: z.coerce.date(),
+    digestCount: z.number(),
+    articleCount: z.number(),
+    sourceCount: z.number(),
+    complete: z.boolean(),
+    topTopics: z.array(z.object({ name: z.string(), count: z.number() })),
+    topSources: z.array(z.object({ name: z.string(), count: z.number() })),
+    representativeArticles: z.array(
+      z.object({
+        title: z.string(),
+        url: z.string(),
+        source: z.string(),
+        topic: z.string(),
+        summary: z.string(),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   "system-design": systemDesign,
   coding,
   interviews,
   "generated-digests": generatedDigests,
+  "generated-weekly": generatedWeekly,
 };

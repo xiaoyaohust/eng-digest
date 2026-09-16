@@ -14,6 +14,11 @@ export async function publishedDigests() {
   return entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 
+export async function publishedWeeklyDigests() {
+  const entries = await getCollection("generated-weekly");
+  return entries.sort((a, b) => b.data.weekStart.valueOf() - a.data.weekStart.valueOf());
+}
+
 interface RelatedCandidate {
   slug: string;
   href: string;

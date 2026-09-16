@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "npm run import-digests",
     "dev": "astro dev",
-    "import-digests": "node scripts/import-digests.mjs",
+    "import-digests": "node scripts/import-digests.mjs && node scripts/generate-weekly-digests.mjs",
     "prebuild": "npm run import-digests",
     "build": "astro build && npm run search-index && npm run copy-legacy && npm run check-links",
     "search-index": "pagefind --site dist",

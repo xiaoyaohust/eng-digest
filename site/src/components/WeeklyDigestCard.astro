@@ -1,0 +1,143 @@
+---
+import { withBase, formatDate } from "@/lib/url";
+
+interface Trend {
+  name: string;
+  count: number;
+}
+
+interface Props {
+  href: string;
+  weekStart: Date;
+  weekEnd: Date;
+  articleCount: number;
+  digestCount: number;
+  topTopics: Trend[];
+  complete: boolean;
+}
+
+const { href, weekStart, weekEnd, articleCount, digestCount, topTopics, complete } = Astro.props;
+---
+
+<a class="weekly-card" href={withBase(href)}>
+  <div class="weekly-top">
+    <span class="weekly-kicker"><i></i> WEEKLY SIGNAL</span>
+    <span class:list={["weekly-state", { rolling: !complete }]}>{complete ? "COMPLETE" : "ROLLING"}</span>
+  </div>
+  <h3>{formatDate(weekStart)} <span>→</span> {formatDate(weekEnd)}</h3>
+  <div class="weekly-stats">
+    <span><strong>{articleCount}</strong> unique articles</span>
+    <span><strong>{digestCount}</strong> daily builds</span>
+  </div>
+  <ol class="trend-list">
+    {topTopics.slice(0, 3).map((topic) => (
+      <li><span>{topic.name}</span><strong>{topic.count}</strong></li>
+    ))}
+  </ol>
+  <div class="weekly-foot">OPEN TREND REPORT <b>↗</b></div>
+</a>
+
+<style>
+  .weekly-card {
+    position: relative;
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    padding: 24px;
+    border: 1px solid #314258;
+    border-radius: 9px;
+    background:
+      linear-gradient(rgba(66, 89, 116, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(66, 89, 116, 0.08) 1px, transparent 1px),
+      #101a28;
+    background-size: 24px 24px;
+    color: #edf5f8;
+    box-shadow: 0 18px 45px rgba(5, 12, 22, 0.24);
+    overflow: hidden;
+    transition: border-color 180ms ease, transform 180ms ease;
+  }
+  .weekly-card::before {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--color-accent-bright);
+    content: "";
+  }
+  .weekly-card:hover {
+    border-color: #34d6c3;
+    text-decoration: none;
+    transform: translateY(-3px);
+  }
+  .weekly-top,
+  .weekly-stats,
+  .weekly-foot,
+  .trend-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .weekly-kicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #7fe6d8;
+    font-family: var(--font-mono);
+    font-size: 0.63rem;
+    letter-spacing: 0.09em;
+  }
+  .weekly-kicker i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #34d6c3;
+    box-shadow: 0 0 0 5px rgba(52, 214, 195, 0.12);
+  }
+  .weekly-state {
+    padding: 3px 6px;
+    border: 1px solid #38546b;
+    border-radius: 3px;
+    color: #9eb0c2;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+  }
+  .weekly-state.rolling { border-color: #876b39; color: #ffc05c; }
+  h3 {
+    margin: 30px 0 22px;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    letter-spacing: -0.03em;
+  }
+  h3 span { color: #34d6c3; }
+  .weekly-stats {
+    justify-content: flex-start;
+    color: #8194a8;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+  }
+  .weekly-stats strong { color: #dce7ed; }
+  .trend-list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    margin: 22px 0;
+    padding: 0;
+    list-style: none;
+  }
+  .trend-list li {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #27394d;
+    color: #a8b8c8;
+    font-size: 0.76rem;
+  }
+  .trend-list strong { color: #34d6c3; font-family: var(--font-mono); }
+  .weekly-foot {
+    padding-top: 13px;
+    border-top: 1px solid #314258;
+    color: #5fe3d2;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    font-weight: 750;
+  }
+</style>

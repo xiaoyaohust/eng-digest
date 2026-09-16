@@ -12,6 +12,16 @@ level:
   - staff
 featured: true
 draft: false
+practice:
+  - question: "The product must allow short bursts but enforce a stable long-term rate. Which rate-limiting algorithm would you choose, and why?"
+    hint: "Separate the maximum burst size from the sustained refill rate."
+    answer: "Use a token bucket. The bucket capacity controls the allowed burst, while the token refill rate enforces the long-term average. A fixed window is simpler but creates boundary bursts, and a sliding log is exact but more expensive."
+  - question: "How do you prevent two service instances from both allowing the same final request under a shared limit?"
+    hint: "The increment, expiry setup, and limit check must behave as one operation."
+    answer: "Store the counter in a shared system such as Redis and execute increment, expiry, and comparison atomically—typically with a Lua script. A separate read followed by a write introduces a race condition."
+  - question: "Should the limiter fail open or fail closed when Redis is unavailable?"
+    hint: "There is no universal answer; identify what the protected backend and product can tolerate."
+    answer: "Choose explicitly by risk. Most general APIs fail open briefly to preserve availability while shedding load elsewhere and alerting. Security-sensitive or cost-sensitive operations may fail closed to protect the backend."
 ---
 
 # Problem

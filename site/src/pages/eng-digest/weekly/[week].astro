@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from "astro:content";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = (await getCollection("generated-weekly")).sort(
+    (a, b) => b.data.weekStart.valueOf() - a.data.weekStart.valueOf()
+  );
+  return entries.map((entry, index, all) => ({
+    params: { week: entry.id },
+    props: {
+      entry,
+      prevEntry: all[index + 1],
+      nextEntry: all[index - 1],
+    },
+  }));
+}
+
+const { entry, prevEntry, nextEntry } = Astro.props;
+const { Content, headings } = await render(entry);
+const description = `${entry.data.articleCount} unique articles from ${entry.data.sourceCount} sources, summarized into this week's engineering topic trends.`;
+---
+
+<ArticleLayout
+  title={entry.data.title}
+  description={description}
+  kicker={entry.data.complete ? "Weekly Trends" : "Weekly Trends · Rolling"}
+  date={entry.data.weekStart}
+  headings={headings}
+  prev={prevEntry && { title: prevEntry.data.title, href: `/eng-digest/weekly/${prevEntry.id}/` }}
+  next={nextEntry && { title: nextEntry.data.title, href: `/eng-digest/weekly/${nextEntry.id}/` }}
+>
+  <div class="weekly-summary" aria-label="Weekly report summary">
+    <div><strong>{entry.data.articleCount}</strong><span>UNIQUE ARTICLES</span></div>
+    <div><strong>{entry.data.sourceCount}</strong><span>SOURCES</span></div>
+    <div><strong>{entry.data.digestCount}</strong><span>DAILY BUILDS</span></div>
+  </div>
+  <Content />
+</ArticleLayout>
+
+<style>
+  .weekly-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-bottom: 32px;
+    border: 1px solid var(--color-border);
+    background: var(--color-border);
+  }
+  .weekly-summary div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 17px;
+    background: var(--color-bg-raised);
+  }
+  .weekly-summary strong { font-family: var(--font-display); font-size: 1.55rem; line-height: 1; }
+  .weekly-summary span { color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.06em; }
+  @media (max-width: 520px) { .weekly-summary { grid-template-columns: 1fr; } }
+</style>

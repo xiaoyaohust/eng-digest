@@ -35,6 +35,7 @@ const related = findRelated(entry.data.tags, candidates, `/system-design/${entry
   prev={prevEntry && { title: prevEntry.data.title, href: `/system-design/${prevEntry.id}/` }}
   next={nextEntry && { title: nextEntry.data.title, href: `/system-design/${nextEntry.id}/` }}
   related={related}
+  practice={entry.data.practice}
 >
   <Content />
 </ArticleLayout>

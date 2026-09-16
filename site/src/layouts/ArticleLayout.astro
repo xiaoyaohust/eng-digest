@@ -3,12 +3,19 @@ import type { MarkdownHeading } from "astro";
 import BaseLayout from "./BaseLayout.astro";
 import ArticleMeta from "@/components/ArticleMeta.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
+import PracticeMode from "@/components/PracticeMode.astro";
 import { withBase } from "@/lib/url";
 
 interface RelatedLink {
   title: string;
   href: string;
   kicker?: string;
+}
+
+interface PracticeQuestion {
+  question: string;
+  hint: string;
+  answer: string;
 }
 
 interface Props {
@@ -23,6 +30,7 @@ interface Props {
   prev?: RelatedLink;
   next?: RelatedLink;
   related?: RelatedLink[];
+  practice?: PracticeQuestion[];
 }
 
 const {
@@ -37,6 +45,7 @@ const {
   prev,
   next,
   related = [],
+  practice = [],
 } = Astro.props;
 ---
 
@@ -57,6 +66,8 @@ const {
         <ArticleMeta date={date} updated={updated} tags={tags} readingMinutes={readingMinutes} />
       </div>
     </header>
+
+    {practice.length > 0 && <PracticeMode questions={practice} />}
 
     <div class="wrap article-body">
       <aside class="article-toc">

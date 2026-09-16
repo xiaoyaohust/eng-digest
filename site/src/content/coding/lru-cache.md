@@ -14,6 +14,16 @@ tags:
   - cache
 featured: false
 draft: false
+practice:
+  - question: "Which two data structures are needed to make both get and put O(1), and what does each one provide?"
+    hint: "One structure finds an entry immediately; the other changes recency order immediately."
+    answer: "Use a hash map from key to node for O(1) lookup and a doubly linked list for O(1) removal, insertion, and eviction-order maintenance."
+  - question: "What exact operations happen when get finds an existing key?"
+    hint: "A successful read also changes recency."
+    answer: "Look up the node in the hash map, unlink it from its current list position, insert it at the most-recently-used end, and return its value. Each step is O(1)."
+  - question: "When capacity is exceeded after inserting a new key, how is the evicted entry removed consistently?"
+    hint: "The map and linked list must be updated together."
+    answer: "Remove the node at the least-recently-used end of the list, then delete that node's key from the hash map. Sentinel head and tail nodes make the boundary operations uniform."
 ---
 
 # Problem

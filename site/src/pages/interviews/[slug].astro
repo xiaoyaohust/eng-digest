@@ -36,6 +36,7 @@ const kicker = entry.data.company ? `${entry.data.company} Interview` : "Intervi
   prev={prevEntry && { title: prevEntry.data.title, href: `/interviews/${prevEntry.id}/` }}
   next={nextEntry && { title: nextEntry.data.title, href: `/interviews/${nextEntry.id}/` }}
   related={related}
+  practice={entry.data.practice}
 >
   {entry.data.sample && (
     <p class="sample-notice">
