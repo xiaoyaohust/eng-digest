@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Digest</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>📰 Engineering Digest</h1>
+    <div class="header-actions">
+      <button id="refresh-btn" title="Refresh">🔄</button>
+      <button id="settings-btn" title="Settings">⚙️</button>
+    </div>
+  </div>
+
+  <div class="stats">
+    <span id="article-count">Loading...</span>
+    <span id="unread-count"></span>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="unread">Unread</button>
+    <button class="filter-btn" data-filter="today">Today</button>
+  </div>
+
+  <div id="loading" class="loading hidden">
+    <div class="spinner"></div>
+    <p>Loading articles...</p>
+  </div>
+
+  <div id="error" class="error hidden">
+    <p id="error-message"></p>
+    <button id="retry-btn">Retry</button>
+  </div>
+
+  <div id="article-list" class="article-list"></div>
+
+  <div class="footer">
+    <a href="https://github.com/xiaoyaohust/eng-digest" target="_blank">
+      View on GitHub
+    </a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

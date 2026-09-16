@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Digest - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📰 Engineering Digest Settings</h1>
+    </header>
+
+    <main>
+      <section class="settings-section">
+        <h2>RSS Feed Configuration</h2>
+        <div class="form-group">
+          <label for="rss-url">RSS Feed URL</label>
+          <input
+            type="url"
+            id="rss-url"
+            placeholder="https://your-username.github.io/eng-digest/rss.xml"
+            required
+          >
+          <p class="help-text">
+            Enter the URL of your Engineering Digest RSS feed.
+            Default: <code>https://xiaoyaohust.github.io/eng-digest/rss.xml</code>
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="enable-notifications">
+            Enable notifications for new articles
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="check-interval">Check for new articles every (minutes)</label>
+          <select id="check-interval">
+            <option value="15">15 minutes</option>
+            <option value="30">30 minutes</option>
+            <option value="60" selected>1 hour</option>
+            <option value="120">2 hours</option>
+            <option value="360">6 hours</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <h2>Data Management</h2>
+        <div class="form-group">
+          <button id="clear-read" class="btn btn-secondary">Clear Read Articles</button>
+          <p class="help-text">Remove all read article markers</p>
+        </div>
+
+        <div class="form-group">
+          <button id="force-check" class="btn btn-secondary">Check Now</button>
+          <p class="help-text">Manually check for new articles</p>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="save-btn" class="btn btn-primary">Save Settings</button>
+        <button id="reset-btn" class="btn btn-secondary">Reset to Defaults</button>
+      </div>
+
+      <div id="status" class="status hidden"></div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/xiaoyaohust/eng-digest" target="_blank">
+          View Project on GitHub
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
