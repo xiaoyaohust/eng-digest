@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://xiaoyaohust.github.io/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 16 Sep 2026 15:54:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 14:04:59 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Agent and Model Evaluations in Gemini Enterprise Agent Platform are now GA</title>
-      <link>https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/</link>
-      <description>Agent Platform's evaluation service is now generally available, providing developers with a unified engine to measure agent quality consistently across local development experiments and live production traffic You can evaluate agents using over 20 pre-built metrics, DeepMind-backed adaptive rubrics, or custom code-based and LLM-as-a-judge metrics stored in a centralized, versioned registry The service integrates directly into existing workflows via the Agent Platform SDK, agents-cli, and ADK, offering built-in user and environment simulators to automate complex multi-turn testing and streamline CI pipelines.</description>
-      <pubDate>Wed, 16 Sep 2026 15:54:42 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Enable on-demand expertise with Agent Skills in Genkit Go</title>
       <link>https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</link>
       <description>To prevent context window bloat and reduce token consumption, Genkit Go introduces Agent Skills based on a progressive disclosure architecture Developers can package specialized instructions, scripts, and references into modular SKILL.md bundles where only the frontmatter metadata is initially exposed to the agent's system prompt When a task matches the skill's description, Genkit's middleware dynamically loads the full instruction body and associated assets, ensuring the model accesses precise workflows exactly when needed.</description>
-      <pubDate>Wed, 16 Sep 2026 15:54:42 GMT</pubDate>
+      <pubDate>Thu, 17 Sep 2026 14:04:56 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Scaling real-time AI agents with session-aware load balancing</title>
       <link>https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</link>
       <description>Real-time AI agents break traditional request-response load balancing paradigms because they rely on long-lived, stateful bidirectional streams that obscure true server capacity To solve this, developers must implement application-level session tracking directly within the runtime to accurately measure the committed concurrent workload of active conversations By feeding these precise session counts alongside standard CPU utilization metrics into a hybrid routing algorithm, infrastructure can effectively distribute stateful AI traffic and prevent individual backend bottlenecks.</description>
-      <pubDate>Wed, 16 Sep 2026 15:54:42 GMT</pubDate>
+      <pubDate>Thu, 17 Sep 2026 14:04:56 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Model routing with Google Cloud API Gateway</title>
+      <link>https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</link>
+      <description>Google Cloud API Gateway now offers a model routing feature in Public Preview, allowing developers to dynamically route traffic to models like Gemini, Claude, or OpenAI OSS-GPT without hardcoding endpoints or managing open-source proxies Developers can easily configure these routing rules directly within their OpenAPI 3.x specifications by mapping virtual model names to specific backend targets on a shared host Once deployed, the Gateway acts as a serverless ingress layer that accepts standard OpenAI-compatible requests, automatically transcodes the payload to the native schema of the target model, and routes the traffic on the fly.</description>
+      <pubDate>Thu, 17 Sep 2026 14:04:56 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Migrating the GitHub Copilot runtime to Rust, using Copilot</title>
+      <link>https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/</link>
+      <description>A rewrite this size wasn't affordable before agents Here's what porting the Copilot agent runtime to 800,000 lines of production Rust actually took The post Migrating the GitHub Copilot runtime to Rust, using Copilot appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 17 Sep 2026 00:26:43 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>AWS reimagines the getting started experience</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/</link>
+      <description>AWS has reimagined the getting started experience with smart and sensible defaults to help developers get started fast so that they can focus on building New customers can sign up and get started right away with $100 in Free Tier credits, managed project environments, and simplified team and resource permissions If their workload evolves, customers can activate advanced features to access the full breadth and depth of AWS in one step, with no migration required.</description>
+      <pubDate>Wed, 16 Sep 2026 17:50:14 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>What Stripe data shows about fraud at AI startups</title>
@@ -65,27 +81,11 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>GitHub availability report: August 2026</title>
-      <link>https://github.blog/news-insights/company-news/github-availability-report-august-2026/</link>
-      <description>In August, we experienced five incidents that resulted in degraded performance across GitHub services The post GitHub availability report: August 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 10 Sep 2026 02:05:17 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-august-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>Introducing Amazon EBS Volume Clones across AWS accounts</title>
       <link>https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/</link>
       <description>AWS introduces Amazon EBS Volume Clones with cross-account copy, so you can create copies of your EBS volumes into other AWS accounts and optionally re-encrypt them with an AWS Key Management Service (AWS KMS) key in the target account.</description>
       <pubDate>Wed, 09 Sep 2026 22:01:47 GMT</pubDate>
       <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>AWS Weekly Roundup: Claude Fable 5.1 on AWS, Amazon Linux 2027 preview, AWS Certified AI Business Strategist, and more (September 7, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-fable-5-1-on-aws-amazon-linux-2027-preview-aws-certified-ai-business-strategist-and-more-september-7-2026/</link>
-      <description>Last week, Claude Fable 5.1 became available on AWS According to Anthropic, Claude Fable 5.1 delivers frontier intelligence for ambitious tasks across coding, scientific research, and enterprise workflows Claude Fable 5.1 is built for long-running, high-stakes work that runs for hours and spans many applications</description>
-      <pubDate>Mon, 07 Sep 2026 14:24:08 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-fable-5-1-on-aws-amazon-linux-2027-preview-aws-certified-ai-business-strategist-and-more-september-7-2026/</guid>
       <source>AWS News</source>
     </item>
     <item>
