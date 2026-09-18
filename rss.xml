@@ -6,21 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://xiaoyaohust.github.io/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 17 Sep 2026 14:04:59 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 13:22:42 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
-    <item>
-      <title>Enable on-demand expertise with Agent Skills in Genkit Go</title>
-      <link>https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</link>
-      <description>To prevent context window bloat and reduce token consumption, Genkit Go introduces Agent Skills based on a progressive disclosure architecture Developers can package specialized instructions, scripts, and references into modular SKILL.md bundles where only the frontmatter metadata is initially exposed to the agent's system prompt When a task matches the skill's description, Genkit's middleware dynamically loads the full instruction body and associated assets, ensuring the model accesses precise workflows exactly when needed.</description>
-      <pubDate>Thu, 17 Sep 2026 14:04:56 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/enable-on-demand-expertise-with-agent-skills-in-genkit-go/</guid>
-      <source>Google Developers</source>
-    </item>
     <item>
       <title>Scaling real-time AI agents with session-aware load balancing</title>
       <link>https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</link>
       <description>Real-time AI agents break traditional request-response load balancing paradigms because they rely on long-lived, stateful bidirectional streams that obscure true server capacity To solve this, developers must implement application-level session tracking directly within the runtime to accurately measure the committed concurrent workload of active conversations By feeding these precise session counts alongside standard CPU utilization metrics into a hybrid routing algorithm, infrastructure can effectively distribute stateful AI traffic and prevent individual backend bottlenecks.</description>
-      <pubDate>Thu, 17 Sep 2026 14:04:56 GMT</pubDate>
+      <pubDate>Fri, 18 Sep 2026 13:22:39 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +20,33 @@
       <title>Model routing with Google Cloud API Gateway</title>
       <link>https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</link>
       <description>Google Cloud API Gateway now offers a model routing feature in Public Preview, allowing developers to dynamically route traffic to models like Gemini, Claude, or OpenAI OSS-GPT without hardcoding endpoints or managing open-source proxies Developers can easily configure these routing rules directly within their OpenAPI 3.x specifications by mapping virtual model names to specific backend targets on a shared host Once deployed, the Gateway acts as a serverless ingress layer that accepts standard OpenAI-compatible requests, automatically transcodes the payload to the native schema of the target model, and routes the traffic on the fly.</description>
-      <pubDate>Thu, 17 Sep 2026 14:04:56 GMT</pubDate>
+      <pubDate>Fri, 18 Sep 2026 13:22:39 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Scaling AI Agent Infrastructure with the MCP Stateless updates</title>
+      <link>https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/</link>
+      <description>The 2026-07-28 Model Context Protocol (MCP) specification replaces legacy stateful constraints with a fully stateless core, enabling cloud-native horizontal scaling, serverless deployments, and standard round-robin load balancing This architectural shift introduces standardized HTTP headers for efficient routing without deep packet inspection, caching controls, and Multi Round-Trip Requests (MRTR) to handle interactive and long-running tasks without blocking connections Developers can immediately begin migrating their agentic applications to this highly scalable infrastructure using the newly available beta SDKs for Python, TypeScript, Go, and C#.</description>
+      <pubDate>Fri, 18 Sep 2026 13:22:39 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>New low-cost burstable Amazon EC2 T8i instances are generally available</title>
+      <link>https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/</link>
+      <description>AWS introduces new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids), available only on AWS T8i instances are among the lowest-cost EC2 instances and deliver up to 30% better price performance over previous generation T3 instances.</description>
+      <pubDate>Thu, 17 Sep 2026 21:11:48 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>AWS Elastic Beanstalk introduces Cluster Mode</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/</link>
+      <description>Run an application on AWS Elastic Beanstalk Cluster Mode without provisioning or operating the compute underneath it You provide a container image or source code; Elastic Beanstalk with service-operated compute creates and operates the environment that runs it.</description>
+      <pubDate>Thu, 17 Sep 2026 19:20:21 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/</guid>
+      <source>AWS News</source>
     </item>
     <item>
       <title>Migrating the GitHub Copilot runtime to Rust, using Copilot</title>
@@ -39,6 +55,14 @@
       <pubDate>Thu, 17 Sep 2026 00:26:43 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/</guid>
       <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>SaaS platforms are surging despite the SaaSpocalypse</title>
+      <link>https://stripe.com/blog/saas-platforms-are-surging-despite-the-saaspocalypse</link>
+      <description>The SaaSpocalypse was a useful warning for the software industry, but SaaS platforms that help businesses run core operations are more deeply embedded New platform businesses on Stripe are up 182% year over year.</description>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/saas-platforms-are-surging-despite-the-saaspocalypse</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>AWS reimagines the getting started experience</title>
@@ -57,14 +81,6 @@
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: OpenAI GPT-6 Astra on Amazon Bedrock, Amazon Quick desktop GA, Kiro for students, and more (September 14, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/</link>
-      <description>There’s a particular energy to mid-September in New York Pumpkin spice lattes are flowing, temperatures are dropping, and it’s nearly sweater weather This week that energy showed up in a new frontier model on Amazon Bedrock, a desktop app for Amazon […]</description>
-      <pubDate>Mon, 14 Sep 2026 15:56:33 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-openai-gpt-6-astra-on-amazon-bedrock-amazon-quick-desktop-ga-kiro-for-students-and-more-september-14-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
       <title>Marketing ops as code: Automating events from planning to follow-up on GitHub</title>
       <link>https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/</link>
       <description>If you can write down how you do your work, you can automate it Here's what I did to support GitHub's APAC marketing team The post Marketing ops as code: Automating events from planning to follow-up on GitHub appeared first on The GitHub Blog.</description>
@@ -79,14 +95,6 @@
       <pubDate>Thu, 10 Sep 2026 21:31:19 GMT</pubDate>
       <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/</guid>
       <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Introducing Amazon EBS Volume Clones across AWS accounts</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/</link>
-      <description>AWS introduces Amazon EBS Volume Clones with cross-account copy, so you can create copies of your EBS volumes into other AWS accounts and optionally re-encrypt them with an AWS Key Management Service (AWS KMS) key in the target account.</description>
-      <pubDate>Wed, 09 Sep 2026 22:01:47 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-ebs-volume-clones-across-aws-accounts/</guid>
-      <source>AWS News</source>
     </item>
     <item>
       <title>ZGateway: Learnings from Putting a Proxy in Front of ZippyDB</title>
@@ -143,22 +151,6 @@
       <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="true">https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders</guid>
       <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Why global workers are driving demand for stablecoin payouts</title>
-      <link>https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts</link>
-      <description>Platforms like DoorDash, Meta, and Deel already enable stablecoin payouts for global workers We surveyed 2,300 workers in 20 countries to see what's driving stablecoin demand, where the opportunity is highest, and how other platforms can adapt.</description>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/why-global-workers-are-driving-demand-for-stablecoin-payouts</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Improving infrastructure efficiency for growing demand in the age of AI</title>
-      <link>https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai</link>
-      <description>As demand for AI continues to grow, so does the infrastructure needed to support it.</description>
-      <pubDate>Tue, 18 Aug 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/infrastructure/improving-infrastructure-efficiency-for-growing-demand-in-the-age-of-ai</guid>
-      <source>Dropbox Engineering</source>
     </item>
   </channel>
 </rss>
