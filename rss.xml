@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://xiaoyaohust.github.io/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 18 Sep 2026 13:22:42 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 12:51:52 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Scaling real-time AI agents with session-aware load balancing</title>
       <link>https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</link>
       <description>Real-time AI agents break traditional request-response load balancing paradigms because they rely on long-lived, stateful bidirectional streams that obscure true server capacity To solve this, developers must implement application-level session tracking directly within the runtime to accurately measure the committed concurrent workload of active conversations By feeding these precise session counts alongside standard CPU utilization metrics into a hybrid routing algorithm, infrastructure can effectively distribute stateful AI traffic and prevent individual backend bottlenecks.</description>
-      <pubDate>Fri, 18 Sep 2026 13:22:39 GMT</pubDate>
+      <pubDate>Sat, 19 Sep 2026 12:51:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Model routing with Google Cloud API Gateway</title>
       <link>https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</link>
       <description>Google Cloud API Gateway now offers a model routing feature in Public Preview, allowing developers to dynamically route traffic to models like Gemini, Claude, or OpenAI OSS-GPT without hardcoding endpoints or managing open-source proxies Developers can easily configure these routing rules directly within their OpenAPI 3.x specifications by mapping virtual model names to specific backend targets on a shared host Once deployed, the Gateway acts as a serverless ingress layer that accepts standard OpenAI-compatible requests, automatically transcodes the payload to the native schema of the target model, and routes the traffic on the fly.</description>
-      <pubDate>Fri, 18 Sep 2026 13:22:39 GMT</pubDate>
+      <pubDate>Sat, 19 Sep 2026 12:51:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,9 +28,33 @@
       <title>Scaling AI Agent Infrastructure with the MCP Stateless updates</title>
       <link>https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/</link>
       <description>The 2026-07-28 Model Context Protocol (MCP) specification replaces legacy stateful constraints with a fully stateless core, enabling cloud-native horizontal scaling, serverless deployments, and standard round-robin load balancing This architectural shift introduces standardized HTTP headers for efficient routing without deep packet inspection, caching controls, and Multi Round-Trip Requests (MRTR) to handle interactive and long-running tasks without blocking connections Developers can immediately begin migrating their agentic applications to this highly scalable infrastructure using the newly available beta SDKs for Python, TypeScript, Go, and C#.</description>
-      <pubDate>Fri, 18 Sep 2026 13:22:39 GMT</pubDate>
+      <pubDate>Sat, 19 Sep 2026 12:51:49 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Leave the Class Path in the Rearview Mirror</title>
+      <link>https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss----2615bd06b42e---4</link>
+      <description>The module descriptor consequently became just another description of the project to keep in agreement.We’re excited to announce a preview of ja and its family of composable tools, that build on the capabilities of the Java Module System to provide a modern command line development experience for Java We take the module descriptor and make it a complete description of a project, with dependency versions sitting naturally beside its requires directives and module metadata provided through documentation tags:/** * @mainClass com.example.application.Main */module com.example.application { requires com.example.framework; // @1.2.3}Combined with command line ergonomics you’re used to in other languages, creating and consuming Java modules has never been easier.Composable ToolsJava developers have long been exceptionally well served by graphical tools The module proxy in jig presents resolved modules using the filename based conventions for module naming, making even automatic modules without stable names safe when used with these tools.These conventions and location strategies allow the majority of existing artifacts to be discovered using only the module name and version.Integrity by defaultALL-UNNAMED has become unfortunately common in Java access options, because of the heavy use of the class path</description>
+      <pubDate>Fri, 18 Sep 2026 16:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Should you read the code, is RAG dead, and did Skills kill MCP?</title>
+      <link>https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/</link>
+      <description>We dive into these questions and other AI hot takes on the latest episode of the GitHub Podcast The post Should you read the code, is RAG dead, and did Skills kill MCP? appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 18 Sep 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Analyzing rising fraud attempts among travel and leisure businesses on Stripe</title>
+      <link>https://stripe.com/blog/analyzing-rising-fraud-attempts-among-travel-and-leisure-businesses-on-stripe</link>
+      <description>Last year, Stripe data shows fraud attempts against travel and leisure businesses hit a four-year high We analyzed payment activity from more than 200,000 active travel and leisure businesses on Stripe to understand where fraud is rising, how effectively it’s being blocked, and what businesses can do in response.</description>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/analyzing-rising-fraud-attempts-among-travel-and-leisure-businesses-on-stripe</guid>
+      <source>Stripe Engineering</source>
     </item>
     <item>
       <title>New low-cost burstable Amazon EC2 T8i instances are generally available</title>
@@ -89,14 +113,6 @@
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>GitHub Copilot app for Beginners: Using the diff, terminal, and browser</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/</link>
-      <description>Checking agent-generated code usually means hopping between tabs Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app The post GitHub Copilot app for Beginners: Using the diff, terminal, and browser appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 10 Sep 2026 21:31:19 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
       <title>ZGateway: Learnings from Putting a Proxy in Front of ZippyDB</title>
       <link>https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/</link>
       <description>We’re introducing ZGateway, the proxy we are using to unify traffic through ZippyDB, Meta’s most widely-used key value store ZippyDB is the most widely used key value store at Meta, backing product metadata, counters, and configuration, and can serve billions [...] Read More The post ZGateway: Learnings from Putting a Proxy in Front of ZippyDB appeared first on Engineering at Meta.</description>
@@ -143,14 +159,6 @@
       <pubDate>Fri, 21 Aug 2026 16:01:01 GMT</pubDate>
       <guid isPermaLink="true">https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Five monetization trends from global pricing leaders</title>
-      <link>https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders</link>
-      <description>As AI transforms software economics, the standard revenue playbook is breaking down Learn how leaders around the world are preparing for agent buyers, updating processes for faster pricing iteration, and building more flexible infrastructure.</description>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/five-monetization-trends-from-global-pricing-leaders</guid>
-      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
