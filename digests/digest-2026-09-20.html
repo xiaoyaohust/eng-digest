@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-09-20</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-09-20</p>
+        <div class="stats">
+            <span class="stat-item"><strong>19</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/" target="_blank" rel="noopener noreferrer">
+                                New low-cost burstable Amazon EC2 T8i instances are generally available
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-17 21:11</p>
+                    <p class="article-summary">AWS introduces new low-cost burstable Amazon EC2 T8i instances powered by custom sixth generation Intel Xeon Scalable Processors (Granite Rapids), available only on AWS T8i instances are among the lowest-cost EC2 instances and deliver up to 30% better price performance over previous generation T3 instances.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/new-low-cost-burstable-amazon-ec2-t8i-instances-are-generally-available/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/" target="_blank" rel="noopener noreferrer">
+                                AWS Elastic Beanstalk introduces Cluster Mode
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-17 19:20</p>
+                    <p class="article-summary">Run an application on AWS Elastic Beanstalk Cluster Mode without provisioning or operating the compute underneath it You provide a container image or source code; Elastic Beanstalk with service-operated compute creates and operates the environment that runs it.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-elastic-beanstalk-introduces-cluster-mode/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/" target="_blank" rel="noopener noreferrer">
+                                AWS reimagines the getting started experience
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-16 17:50</p>
+                    <p class="article-summary">AWS has reimagined the getting started experience with smart and sensible defaults to help developers get started fast so that they can focus on building New customers can sign up and get started right away with $100 in Free Tier credits, managed project environments, and simplified team and resource permissions If their workload evolves, customers can activate advanced features to access the full breadth and depth of AWS in one step, with no migration required.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/aws-reimagines-the-getting-started-experience/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/security/how-our-inhouse-auditor-tests-cookie-behavior-across-hundreds-of-web-surfaces" target="_blank" rel="noopener noreferrer">
+                                Testing cookie behavior across hundreds of web surfaces with our in-house auditor
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-31 17:00</p>
+                    <p class="article-summary">Our cookie auditor acts like a privacy-conscious user by visiting web pages and checking that they only load cookies consistent with that user’s preferences.</p>
+                    
+                    <a href="https://dropbox.tech/security/how-our-inhouse-auditor-tests-cookie-behavior-across-hundreds-of-web-surfaces" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/" target="_blank" rel="noopener noreferrer">
+                                Should you read the code, is RAG dead, and did Skills kill MCP?
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-18 15:00</p>
+                    <p class="article-summary">We dive into these questions and other AI hot takes on the latest episode of the GitHub Podcast The post Should you read the code, is RAG dead, and did Skills kill MCP? appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/" target="_blank" rel="noopener noreferrer">
+                                Migrating the GitHub Copilot runtime to Rust, using Copilot
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-17 00:26</p>
+                    <p class="article-summary">A rewrite this size wasn't affordable before agents Here's what porting the Copilot agent runtime to 800,000 lines of production Rust actually took The post Migrating the GitHub Copilot runtime to Rust, using Copilot appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/" target="_blank" rel="noopener noreferrer">
+                                Marketing ops as code: Automating events from planning to follow-up on GitHub
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-11 18:26</p>
+                    <p class="article-summary">If you can write down how you do your work, you can automate it Here's what I did to support GitHub's APAC marketing team The post Marketing ops as code: Automating events from planning to follow-up on GitHub appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/" target="_blank" rel="noopener noreferrer">
+                                Scaling real-time AI agents with session-aware load balancing
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-20 13:26</p>
+                    <p class="article-summary">Real-time AI agents break traditional request-response load balancing paradigms because they rely on long-lived, stateful bidirectional streams that obscure true server capacity To solve this, developers must implement application-level session tracking directly within the runtime to accurately measure the committed concurrent workload of active conversations By feeding these precise session counts alongside standard CPU utilization metrics into a hybrid routing algorithm, infrastructure can effectively distribute stateful AI traffic and prevent individual backend bottlenecks.</p>
+                    
+                    <a href="https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/a-unified-api-for-ai-model-routing/" target="_blank" rel="noopener noreferrer">
+                                Model routing with Google Cloud API Gateway
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-20 13:26</p>
+                    <p class="article-summary">Google Cloud API Gateway now offers a model routing feature in Public Preview, allowing developers to dynamically route traffic to models like Gemini, Claude, or OpenAI OSS-GPT without hardcoding endpoints or managing open-source proxies Developers can easily configure these routing rules directly within their OpenAPI 3.x specifications by mapping virtual model names to specific backend targets on a shared host Once deployed, the Gateway acts as a serverless ingress layer that accepts standard OpenAI-compatible requests, automatically transcodes the payload to the native schema of the target model, and routes the traffic on the fly.</p>
+                    
+                    <a href="https://developers.googleblog.com/a-unified-api-for-ai-model-routing/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/" target="_blank" rel="noopener noreferrer">
+                                Scaling AI Agent Infrastructure with the MCP Stateless updates
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-20 13:26</p>
+                    <p class="article-summary">The 2026-07-28 Model Context Protocol (MCP) specification replaces legacy stateful constraints with a fully stateless core, enabling cloud-native horizontal scaling, serverless deployments, and standard round-robin load balancing This architectural shift introduces standardized HTTP headers for efficient routing without deep packet inspection, caching controls, and Multi Round-Trip Requests (MRTR) to handle interactive and long-running tasks without blocking connections Developers can immediately begin migrating their agentic applications to this highly scalable infrastructure using the newly available beta SDKs for Python, TypeScript, Go, and C#.</p>
+                    
+                    <a href="https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" rel="noopener noreferrer">
+                                ZGateway: Learnings from Putting a Proxy in Front of ZippyDB
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-03 16:00</p>
+                    <p class="article-summary">We’re introducing ZGateway, the proxy we are using to unify traffic through ZippyDB, Meta’s most widely-used key value store ZippyDB is the most widely used key value store at Meta, backing product metadata, counters, and configuration, and can serve billions [...] Read More The post ZGateway: Learnings from Putting a Proxy in Front of ZippyDB appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" target="_blank" rel="noopener noreferrer">
+                                An Organizational Second Brain: Building an AI That Learns From Experts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-02 09:00</p>
+                    <p class="article-summary">We’ve built an AI agent that acts as a secondary expert for a given domain, making deep specialist knowledge readily available and preserved for anyone in an organization to access, share, and build upon This is not a typical domain-specific agent Its novelty comes from integrating two layers: A structured, auditable knowledge architecture separates what [...] Read More</p>
+                    
+                    <a href="https://engineering.fb.com/2026/09/02/ml-applications/organizational-second-brain-ai-learns-from-experts/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" target="_blank" rel="noopener noreferrer">
+                                MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-24 18:02</p>
+                    <p class="article-summary">To meet this challenge at scale, Meta designed MetaRoCE – a clean-sheet RDMA transport protocol purpose-built for AI workloads on commodity Ethernet We’re releasing the MetaRoCE specification, a reference software implementation and a compliance test [...] Read More The post MetaRoCE: A New RDMA Transport Built for AI-Scale Ethernet appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/08/24/networking-traffic/metaroce-rdma-transport-ai-ethernet/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Leave the Class Path in the Rearview Mirror
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-18 16:01</p>
+                    <p class="article-summary">The module descriptor consequently became just another description of the project to keep in agreement.We’re excited to announce a preview of ja and its family of composable tools, that build on the capabilities of the Java Module System to provide a modern command line development experience for Java We take the module descriptor and make it a complete description of a project, with dependency versions sitting naturally beside its requires directives and module metadata provided through documentation tags:/** * @mainClass com.example.application.Main */module com.example.application { requires com.example.framework; // @1.2.3}Combined with command line ergonomics you’re used to in other languages, creating and consuming Java modules has never been easier.Composable ToolsJava developers have long been exceptionally well served by graphical tools The module proxy in jig presents resolved modules using the filename based conventions for module naming, making even automatic modules without stable names safe when used with these tools.These conventions and location strategies allow the majority of existing artifacts to be discovered using only the module name and version.Integrity by defaultALL-UNNAMED has become unfortunately common in Java access options, because of the heavy use of the class path</p>
+                    
+                    <a href="https://netflixtechblog.com/leave-the-class-path-in-the-rearview-mirror-67a85b15b6be?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                MAPS: Netflix’s Multimodal Asset Personalization at Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-28 16:01</p>
+                    <p class="article-summary">A single unified model can therefore pool interaction signal across every canvas, so a member’s affinity learned on a high-traffic canvas immediately informs the artwork we pick on a sparse one One unified model over all five canvases, with image embeddings in its asset representation.As the chart below shows, each idea helped exactly where we expected: on the data-starved short-panel canvas and landscape-panel canvas We have since shipped MediaFM as the default video preview embedding across all platforms.Relative offline IPS lift for the two content-aware video preview embeddings, each measured against the ID-only baseline at the zero rule</p>
+                    
+                    <a href="https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                A Tale of Two Flink Autoscalers
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-21 16:01</p>
+                    <p class="article-summary">Each autoscaler node handled the metrics for a subset of Flink jobs, and we never had to write custom sharding or coordination logic to keep up with a growing Flink fleet Starting from the sources, the autoscaler walks the job graph and uses each operator’s TPR, its input/output ratios, and a target utilization to compute the parallelism every vertex needs so that no operator becomes the bottleneck, rather than resizing the whole cluster as a unit.Figure 2: Flink job DAG: current → desired parallelism per vertex, based on busynessThe two approaches make a different contract, summarized below.Table 1: Comparison of the two Flink autoscalersThe decisive difference for us is the last two rows: the OSS autoscaler can scale exactly the stateful, multi-operator jobs our homegrown system could not, and it lets each job carry its own configuration — stabilization periods, thresholds, and other scaling behavior tuned to the workload Having started supporting Flink 2.2 at Netflix, we plan on experimenting with this new state backend to see if it can help eliminate state recovery bottlenecks when scaling large stateful jobs.Looking ahead, we aim to migrate all internal scaler use cases onto the new one based on OSS autoscaler to simplify our operational surface area.Key TakeawaysAlong the way, three lessons that generalize beyond Flink:Metric choice matters more than algorithm sophistication</p>
+                    
+                    <a href="https://netflixtechblog.com/a-tale-of-two-flink-autoscalers-e9f6a1b1492b?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/analyzing-rising-fraud-attempts-among-travel-and-leisure-businesses-on-stripe" target="_blank" rel="noopener noreferrer">
+                                Analyzing rising fraud attempts among travel and leisure businesses on Stripe
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-18 00:00</p>
+                    <p class="article-summary">Last year, Stripe data shows fraud attempts against travel and leisure businesses hit a four-year high We analyzed payment activity from more than 200,000 active travel and leisure businesses on Stripe to understand where fraud is rising, how effectively it’s being blocked, and what businesses can do in response.</p>
+                    
+                    <a href="https://stripe.com/blog/analyzing-rising-fraud-attempts-among-travel-and-leisure-businesses-on-stripe" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://stripe.com/blog/saas-platforms-are-surging-despite-the-saaspocalypse" target="_blank" rel="noopener noreferrer">
+                                SaaS platforms are surging despite the SaaSpocalypse
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-17 00:00</p>
+                    <p class="article-summary">The SaaSpocalypse was a useful warning for the software industry, but SaaS platforms that help businesses run core operations are more deeply embedded New platform businesses on Stripe are up 182% year over year.</p>
+                    
+                    <a href="https://stripe.com/blog/saas-platforms-are-surging-despite-the-saaspocalypse" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://stripe.com/blog/what-stripe-data-shows-about-fraud-at-ai-startups" target="_blank" rel="noopener noreferrer">
+                                What Stripe data shows about fraud at AI startups
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-15 00:00</p>
+                    <p class="article-summary">We analyzed attempted fraud rates and customer abuse patterns on Stripe over the past year and found that AI companies faced 4.3x more fraud attempts than startups overall in Q3 2025.</p>
+                    
+                    <a href="https://stripe.com/blog/what-stripe-data-shows-about-fraud-at-ai-startups" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-09-20 13:26:18</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>

@@ -6,13 +6,13 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://xiaoyaohust.github.io/eng-digest/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 19 Sep 2026 12:51:52 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 13:26:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
       <title>Scaling real-time AI agents with session-aware load balancing</title>
       <link>https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</link>
       <description>Real-time AI agents break traditional request-response load balancing paradigms because they rely on long-lived, stateful bidirectional streams that obscure true server capacity To solve this, developers must implement application-level session tracking directly within the runtime to accurately measure the committed concurrent workload of active conversations By feeding these precise session counts alongside standard CPU utilization metrics into a hybrid routing algorithm, infrastructure can effectively distribute stateful AI traffic and prevent individual backend bottlenecks.</description>
-      <pubDate>Sat, 19 Sep 2026 12:51:49 GMT</pubDate>
+      <pubDate>Sun, 20 Sep 2026 13:26:14 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-real-time-ai-agents-with-session-aware-load-balancing/</guid>
       <source>Google Developers</source>
     </item>
@@ -20,7 +20,7 @@
       <title>Model routing with Google Cloud API Gateway</title>
       <link>https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</link>
       <description>Google Cloud API Gateway now offers a model routing feature in Public Preview, allowing developers to dynamically route traffic to models like Gemini, Claude, or OpenAI OSS-GPT without hardcoding endpoints or managing open-source proxies Developers can easily configure these routing rules directly within their OpenAPI 3.x specifications by mapping virtual model names to specific backend targets on a shared host Once deployed, the Gateway acts as a serverless ingress layer that accepts standard OpenAI-compatible requests, automatically transcodes the payload to the native schema of the target model, and routes the traffic on the fly.</description>
-      <pubDate>Sat, 19 Sep 2026 12:51:49 GMT</pubDate>
+      <pubDate>Sun, 20 Sep 2026 13:26:14 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/a-unified-api-for-ai-model-routing/</guid>
       <source>Google Developers</source>
     </item>
@@ -28,7 +28,7 @@
       <title>Scaling AI Agent Infrastructure with the MCP Stateless updates</title>
       <link>https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/</link>
       <description>The 2026-07-28 Model Context Protocol (MCP) specification replaces legacy stateful constraints with a fully stateless core, enabling cloud-native horizontal scaling, serverless deployments, and standard round-robin load balancing This architectural shift introduces standardized HTTP headers for efficient routing without deep packet inspection, caching controls, and Multi Round-Trip Requests (MRTR) to handle interactive and long-running tasks without blocking connections Developers can immediately begin migrating their agentic applications to this highly scalable infrastructure using the newly available beta SDKs for Python, TypeScript, Go, and C#.</description>
-      <pubDate>Sat, 19 Sep 2026 12:51:49 GMT</pubDate>
+      <pubDate>Sun, 20 Sep 2026 13:26:14 GMT</pubDate>
       <guid isPermaLink="true">https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/</guid>
       <source>Google Developers</source>
     </item>
