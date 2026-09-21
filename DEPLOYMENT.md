@@ -9,7 +9,25 @@ to publish the repository root: root-branch publishing is the legacy Digest-only
 2. Under **Build and deployment → Source**, select **GitHub Actions**.
 3. Do not select `main` / `(root)`.
 
-The public URL remains <https://xiaoyaohust.github.io/eng-digest/>.
+## Custom domain
+
+The site is served at <https://systemcraftlab.com/>, from the **root** of that domain.
+`xiaoyaohust.github.io/eng-digest/` 301-redirects to it.
+
+Two things have to agree, or the site deploys broken:
+
+1. **Settings → Pages → Custom domain** is `systemcraftlab.com`, and the apex A records point
+   at GitHub's `185.199.108–111.153`.
+2. **`BASE_PATH` is `/`** (the default in `site/astro.config.mjs`). A custom domain serves the
+   site from the root, so the project-site base `/eng-digest` no longer applies.
+
+Getting (2) wrong is silent and total: Astro emits every asset as `/eng-digest/_astro/….css`,
+which 404s on the new domain, and the whole site renders as unstyled HTML with working links.
+The build itself still succeeds, and `check-internal-links` still passes, because both are
+consistent with the *configured* base — they cannot know where the site is actually served.
+
+`site/public/CNAME` is published with the site so the custom domain survives a Pages settings
+reset. Keep it in sync with the domain above.
 
 ## What deploys
 
@@ -38,11 +56,11 @@ internal link.
 
 The deployment defaults are:
 
-- `SITE_URL=https://xiaoyaohust.github.io`
-- `BASE_PATH=/eng-digest`
+- `SITE_URL=https://systemcraftlab.com`
+- `BASE_PATH=/`
 
-Set both environment variables for another host. A root-domain deployment uses
-`BASE_PATH=/`.
+Set both environment variables to deploy elsewhere. A GitHub Pages *project* site (served at
+`<user>.github.io/<repo>/`) needs `BASE_PATH=/<repo>`; a root domain or user site needs `/`.
 
 ## Publishing content
 
@@ -60,6 +78,13 @@ No database or server migration is involved. See `docs/CONTENT_GUIDE.md` for sch
 
 Pages is still using the old branch-based deployment. Change **Settings → Pages → Source** to
 **GitHub Actions**, then run **Deploy Site** manually or push a commit.
+
+### The live site renders as unstyled HTML
+
+`BASE_PATH` does not match where the site is served. Load the page, view source, and look at
+a stylesheet `href`: if it starts with `/eng-digest/_astro/` but the site is served from the
+root of a domain, the base is wrong. Fix the default in `site/astro.config.mjs` (and the
+matching default in `site/scripts/check-internal-links.mjs`) and redeploy.
 
 ### The Astro workflow fails before build
 

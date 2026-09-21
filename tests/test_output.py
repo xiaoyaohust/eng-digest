@@ -214,7 +214,8 @@ class TestRSSRenderer:
 
         output = RSSRenderer().render([summary])
 
-        assert "<link>https://xiaoyaohust.github.io/eng-digest</link>" in output
-        assert 'href="https://xiaoyaohust.github.io/eng-digest/rss.xml"' in output
+        assert "<link>https://systemcraftlab.com/eng-digest/</link>" in output
+        # The feed lives at the site root, not under the archive page's path.
+        assert 'href="https://systemcraftlab.com/rss.xml"' in output
         assert "It's safe &amp; readable." in output
         assert "&amp;apos;" not in output

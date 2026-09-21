@@ -24,9 +24,10 @@ class RSSRenderer(Renderer):
     def __init__(
         self,
         title: str = "Engineering Digest",
-        link: str = "https://xiaoyaohust.github.io/eng-digest",
+        link: str = "https://systemcraftlab.com/eng-digest/",
         description: str = "Daily digest of engineering blog posts from top tech companies",
-        language: str = "en-us"
+        language: str = "en-us",
+        feed_url: str = "https://systemcraftlab.com/rss.xml",
     ):
         """
         Initialize RSS renderer.
@@ -41,6 +42,10 @@ class RSSRenderer(Renderer):
         self.link = link
         self.description = description
         self.language = language
+        # The feed is served from the site root, not from under `link` (the
+        # human-facing digest archive page), so it needs its own URL rather
+        # than `link + "/rss.xml"`.
+        self.feed_url = feed_url
 
     def _format_rfc822_date(self, dt: datetime) -> str:
         """
@@ -80,7 +85,7 @@ class RSSRenderer(Renderer):
 
         # Add self-referencing atom:link (RSS best practice)
         atom_link = ET.SubElement(channel, "atom:link")
-        atom_link.set("href", f"{self.link}/rss.xml")
+        atom_link.set("href", self.feed_url)
         atom_link.set("rel", "self")
         atom_link.set("type", "application/rss+xml")
 

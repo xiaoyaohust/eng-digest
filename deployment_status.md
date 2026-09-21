@@ -1,6 +1,6 @@
 # GitHub Pages deployment status
 
-Public site: <https://xiaoyaohust.github.io/eng-digest/>
+Public site: <https://systemcraftlab.com/>
 
 ## Required Pages setting
 

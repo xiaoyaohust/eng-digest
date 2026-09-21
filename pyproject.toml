@@ -49,7 +49,7 @@ dev = [
 eng-digest = "eng_digest.cli:main"
 
 [project.urls]
-Homepage = "https://xiaoyaohust.github.io/eng-digest/"
+Homepage = "https://systemcraftlab.com/"
 Repository = "https://github.com/xiaoyaohust/eng-digest"
 Issues = "https://github.com/xiaoyaohust/eng-digest/issues"
 

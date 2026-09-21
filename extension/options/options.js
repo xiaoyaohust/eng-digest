@@ -1,6 +1,6 @@
 // Default values
 const DEFAULTS = {
-  rssUrl: 'https://xiaoyaohust.github.io/eng-digest/rss.xml',
+  rssUrl: 'https://systemcraftlab.com/rss.xml',
   enableNotifications: true,
   checkInterval: 60
 };

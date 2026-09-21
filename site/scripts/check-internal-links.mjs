@@ -7,7 +7,8 @@ import path from "node:path";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(scriptDir, "..", "dist");
-const configuredBase = process.env.BASE_PATH ?? "/eng-digest";
+// Keep this default in sync with site/astro.config.mjs.
+const configuredBase = process.env.BASE_PATH ?? "/";
 const basePath = `/${configuredBase.split("/").filter(Boolean).join("/")}`;
 const attributePattern = /\b(?:href|src)\s*=\s*["']([^"']+)["']/gi;
 const skippedSchemes = /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i;

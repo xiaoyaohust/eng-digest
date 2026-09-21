@@ -1,5 +1,5 @@
 // Configuration
-const DEFAULT_RSS_URL = 'https://xiaoyaohust.github.io/eng-digest/rss.xml';
+const DEFAULT_RSS_URL = 'https://systemcraftlab.com/rss.xml';
 const CHECK_INTERVAL = 60; // Check every 60 minutes
 const ALARM_NAME = 'checkNewArticles';
 

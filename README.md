@@ -7,7 +7,7 @@ engineering blog posts, as one section of it.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-Live site: **https://xiaoyaohust.github.io/eng-digest/**
+Live site: **https://systemcraftlab.com/**
 
 This repository is two things sharing one home:
 
@@ -103,7 +103,7 @@ npm run dev
 ```
 
 `npm run dev` first imports the committed `digests/*.md`, then serves the complete site at
-`http://localhost:4321/eng-digest/`.
+`http://localhost:4321/`.
 
 ```bash
 npm run import-digests   # digests/*.md -> site/src/content/generated-digests/ (gitignored)
@@ -129,9 +129,9 @@ The site deploys to GitHub Pages via GitHub Actions (`.github/workflows/deploy-s
 `.github/workflows/daily-digest.yml`, both calling the shared
 `.github/workflows/build-deploy-site.yml`) — never by committing a built `dist/` to `main`.
 
-**One-time setup**: in the repository's **Settings → Pages**, change the Source from
-"Deploy from a branch" to **"GitHub Actions"**. (It's currently set to serve `main` / root,
-which is how the old, now-superseded, root `index.html` was published.)
+**Pages settings**: Source is **GitHub Actions** (not "Deploy from a branch"), and the custom
+domain is `systemcraftlab.com`. The old `xiaoyaohust.github.io/eng-digest/` URL 301-redirects
+to it.
 
 After that:
 
@@ -141,9 +141,11 @@ After that:
   for the next human push (a bot commit doesn't reliably re-trigger `deploy-site.yml`'s own
   push trigger).
 
-`site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` environment variables (defaulting to
-this repo's GitHub Pages project-site URL) — switching to a custom domain later is a config
-change, not a code change.
+`site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` environment variables, defaulting to
+`https://systemcraftlab.com` and `/`. **`BASE_PATH` must match where the site is actually
+served**: a root domain uses `/`, a GitHub Pages *project* site uses `/<repo>`. A mismatch is
+silent — the build succeeds and the link check passes, but every asset 404s at runtime and the
+site renders as unstyled HTML. See [DEPLOYMENT.md](DEPLOYMENT.md#custom-domain).
 
 ## Repository Structure
 
@@ -249,7 +251,7 @@ Because a second run on the same day would now pick a *different* set of article
 
 Generated as RSS 2.0 XML with article title, link, description, publication date, source, a
 unique GUID per article, and a self-referencing `atom:link`. Located at
-`https://xiaoyaohust.github.io/eng-digest/rss.xml`.
+`https://systemcraftlab.com/rss.xml`.
 
 ## CLI Commands
 

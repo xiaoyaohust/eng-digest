@@ -51,7 +51,7 @@ If you have design skills, create 4 PNG files (16x16, 32x32, 48x48, 128x128) and
 2. **Click ⚙️ (Settings)** button
 3. **Enter RSS URL**:
    ```
-   https://xiaoyaohust.github.io/eng-digest/rss.xml
+   https://systemcraftlab.com/rss.xml
    ```
    (Replace `xiaoyaohust` with your GitHub username)
 

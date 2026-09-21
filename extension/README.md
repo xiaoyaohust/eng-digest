@@ -55,7 +55,7 @@ A Chrome/Firefox extension for viewing engineering blog digests directly in your
 
 By default, the extension uses:
 ```
-https://xiaoyaohust.github.io/eng-digest/rss.xml
+https://systemcraftlab.com/rss.xml
 ```
 
 To use your own feed:
@@ -226,7 +226,7 @@ Future enhancements:
 ## Related Projects
 
 - **Main Project**: [eng-digest](https://github.com/xiaoyaohust/eng-digest)
-- **Web Version**: [GitHub Pages](https://xiaoyaohust.github.io/eng-digest/)
+- **Web Version**: [systemcraftlab.com](https://systemcraftlab.com/)
 
 ## License
 
