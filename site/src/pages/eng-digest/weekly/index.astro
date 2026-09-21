@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import WeeklyDigestCard from "@/components/WeeklyDigestCard.astro";
 import { publishedWeeklyDigests } from "@/lib/content";
+import NewsletterSignup from "@/components/NewsletterSignup.astro";
 
 const weeks = await publishedWeeklyDigests();
 ---
@@ -19,6 +20,7 @@ const weeks = await publishedWeeklyDigests();
     <div class="section-status">
       <span>WEEKLY INDEX</span><span>{weeks.length} REPORTS</span><span>BUILD-TIME / NO DATABASE</span>
     </div>
+    <NewsletterSignup />
     <div class="weekly-grid">
       {weeks.map((entry) => (
         <WeeklyDigestCard

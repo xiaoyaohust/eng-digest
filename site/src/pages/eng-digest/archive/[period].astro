@@ -1,0 +1,63 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import DigestCard from "@/components/DigestCard.astro";
+import { withBase } from "@/lib/url";
+import { publishedDigests } from "@/lib/content";
+
+export async function getStaticPaths() {
+  const digests = await publishedDigests();
+  const monthGroups = new Map();
+  const yearGroups = new Map();
+  for (const entry of digests) {
+    const month = entry.data.date.toISOString().slice(0,7);
+    const year = month.slice(0,4);
+    monthGroups.set(month, [...(monthGroups.get(month) ?? []),entry]);
+    yearGroups.set(year, [...(yearGroups.get(year) ?? []),entry]);
+  }
+  const months = [...monthGroups.keys()];
+  const years = [...yearGroups.keys()];
+  return [
+    ...months.map((period,index) => ({ params:{ period }, props:{ period, kind:"month", entries:monthGroups.get(period), newer:months[index - 1], older:months[index + 1], yearMonths:[] } })),
+    ...years.map((period,index) => ({ params:{ period }, props:{ period, kind:"year", entries:yearGroups.get(period), newer:years[index - 1], older:years[index + 1], yearMonths:months.filter((month) => month.startsWith(period)).map((month) => ({ month, count:monthGroups.get(month).length })) } })),
+  ];
+}
+const { period, kind, entries, newer, older, yearMonths = [] } = Astro.props;
+const label = kind === "month"
+  ? new Intl.DateTimeFormat("en", { month:"long", year:"numeric", timeZone:"UTC" }).format(new Date(`${period}-01T12:00:00Z`))
+  : period;
+const PAGE_SIZE = 36;
+const visibleEntries = entries.slice(0,PAGE_SIZE);
+---
+
+<BaseLayout title={`${label} Engineering Digest`} description={`Engineering Digest entries published in ${label}.`}>
+  <div class="wrap section">
+    <a class="eyebrow" href={withBase("/eng-digest/")}>← ALL DAILY DIGESTS</a>
+    <h1>{label}</h1>
+    <div class="section-status"><span>{kind.toUpperCase()} ARCHIVE</span><span>{entries.length} BUILDS</span><span>{period}</span></div>
+    {kind === "year" && (
+      <nav class="year-months" aria-label={`Months in ${period}`}>
+        {yearMonths.map((item: any) => <a href={withBase(`/eng-digest/archive/${item.month}/`)}><span>{item.month}</span><small>{item.count} builds →</small></a>)}
+      </nav>
+    )}
+    <div class="card-grid">
+      {visibleEntries.map((entry: any) => <DigestCard href={`/eng-digest/${entry.id}/`} date={entry.data.date} articleCount={entry.data.articleCount} sourceCount={entry.data.sourceCount} sources={entry.data.sources} />)}
+    </div>
+    {kind === "year" && entries.length > PAGE_SIZE && <p class="year-note">Showing the newest {PAGE_SIZE} builds. Use a monthly archive for the full daily list.</p>}
+    <nav class="period-nav" aria-label={`Adjacent ${kind}s`}>
+      {newer ? <a href={withBase(`/eng-digest/archive/${newer}/`)}>← {newer}</a> : <span></span>}
+      {older ? <a href={withBase(`/eng-digest/archive/${older}/`)}>{older} →</a> : <span></span>}
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .section { padding:56px 0 80px; }
+  h1 { margin:10px 0 22px; }
+  .section-status { display:flex; flex-wrap:wrap; gap:8px 24px; margin-bottom:30px; padding:10px 12px; border-block:1px solid var(--color-border); color:var(--color-text-muted); font-family:var(--font-mono); font-size:.62rem; letter-spacing:.06em; }
+  .period-nav { display:flex; justify-content:space-between; margin-top:36px; font-family:var(--font-mono); font-size:.68rem; }
+  .year-months { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:8px; margin:0 0 30px; }
+  .year-months a { display:flex; justify-content:space-between; gap:8px; padding:10px; border:1px solid var(--color-border); background:var(--color-bg-inset); font-family:var(--font-mono); font-size:.62rem; }
+  .year-months a:hover { border-color:var(--color-accent); text-decoration:none; }
+  .year-months small { color:var(--color-text-muted); }
+  .year-note { margin:26px 0 0; color:var(--color-text-muted); font-size:.8rem; }
+</style>

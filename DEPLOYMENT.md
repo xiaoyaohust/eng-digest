@@ -62,6 +62,14 @@ The deployment defaults are:
 Set both environment variables to deploy elsewhere. A GitHub Pages *project* site (served at
 `<user>.github.io/<repo>/`) needs `BASE_PATH=/<repo>`; a root domain or user site needs `/`.
 
+## Weekly email subscription
+
+The Digest pages include a provider-neutral newsletter form. Add a GitHub Actions repository
+variable named `PUBLIC_NEWSLETTER_FORM_URL` containing the public POST endpoint from your
+newsletter provider (for example, Buttondown or ConvertKit). Astro reads it at build time.
+Without this variable the component deliberately shows an RSS subscription link instead of a
+form that cannot deliver email.
+
 ## Publishing content
 
 Add or edit Markdown/MDX under one of these directories, then commit and push:

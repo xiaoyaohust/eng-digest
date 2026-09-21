@@ -3,216 +3,234 @@ interface PracticeQuestion {
   question: string;
   hint: string;
   answer: string;
+  topic?: string;
 }
 
 interface Props {
   questions: PracticeQuestion[];
+  storageKey: string;
 }
 
-const { questions } = Astro.props;
+const { questions, storageKey } = Astro.props;
 ---
 
-<section class="practice-shell" data-practice-root data-mode="read" aria-labelledby="practice-title">
+<section
+  class="practice-shell"
+  data-practice-root
+  data-mode="read"
+  data-storage-key={storageKey}
+  aria-labelledby="practice-title"
+>
   <div class="practice-header">
     <div>
-      <span class="practice-kicker"><i></i> INTERVIEW QUESTION MODE</span>
-      <h2 id="practice-title">Test your reasoning before reading the answer.</h2>
-      <p>{questions.length} prompts · no account · progress stays in this tab</p>
+      <span class="practice-kicker"><i></i> PRACTICE MODE 2.0</span>
+      <h2 id="practice-title">Turn this article into a mock interview.</h2>
+      <p>{questions.length} prompts · saved locally · no account required</p>
     </div>
     <span class="practice-status" data-practice-status aria-live="polite">READING MODE</span>
   </div>
 
-  <div class="practice-controls" role="group" aria-label="Choose interview practice mode">
-    <button type="button" data-practice-mode="questions" aria-pressed="false">Questions only</button>
-    <button type="button" data-practice-mode="hints" aria-pressed="false">Expand hints</button>
-    <button type="button" data-practice-mode="answers" aria-pressed="false">Show answers</button>
-    <button class="read-button" type="button" data-practice-mode="read" aria-pressed="true">Read article</button>
+  <div class="practice-toolbar">
+    <div class="practice-controls" role="group" aria-label="Choose interview practice mode">
+      <button type="button" data-practice-mode="questions" aria-pressed="false">Questions</button>
+      <button type="button" data-practice-mode="hints" aria-pressed="false">All hints</button>
+      <button type="button" data-practice-mode="answers" aria-pressed="false">All answers</button>
+      <button type="button" data-practice-mode="read" aria-pressed="true">Read article</button>
+    </div>
+    <div class="session-controls">
+      <button type="button" data-shuffle>↝ Randomize</button>
+      <div class="timer" aria-label="Interview timer">
+        <span data-timer>15:00</span>
+        <button type="button" data-timer-toggle>Start</button>
+        <button type="button" data-timer-reset>Reset</button>
+      </div>
+    </div>
   </div>
 
-  <div class="practice-deck">
+  <div class="practice-deck" data-practice-deck>
     {questions.map((item, index) => (
-      <article class="practice-question">
-        <div class="question-number">Q{String(index + 1).padStart(2, "0")}</div>
+      <article class="practice-question" data-question-index={index}>
+        <div class="question-topline">
+          <span class="question-number">Q{String(index + 1).padStart(2, "0")}</span>
+          <span class="question-topic">{item.topic ?? "General"}</span>
+          <button class="favorite" type="button" data-favorite aria-pressed="false" aria-label="Save question">☆</button>
+        </div>
         <h3>{item.question}</h3>
-        <div class="practice-hint">
+        <div class="reveal-controls">
+          <button type="button" data-reveal="hint" aria-expanded="false">Show hint</button>
+          <button type="button" data-reveal="answer" aria-expanded="false">Show answer</button>
+        </div>
+        <div class="practice-hint" data-panel="hint">
           <span>HINT</span>
           <p>{item.hint}</p>
         </div>
-        <div class="practice-answer">
+        <div class="practice-answer" data-panel="answer">
           <span>ANSWER</span>
           <p>{item.answer}</p>
+        </div>
+        <div class="self-rating" role="group" aria-label="Rate this answer">
+          <span>SELF CHECK</span>
+          <button type="button" data-rating="know" aria-pressed="false">I know it</button>
+          <button type="button" data-rating="unsure" aria-pressed="false">Unsure</button>
+          <button type="button" data-rating="review" aria-pressed="false">Need work</button>
         </div>
       </article>
     ))}
   </div>
+
+  <div class="practice-summary" data-practice-summary hidden>
+    <div><span>SCORE</span><strong data-score>0%</strong></div>
+    <div><span>RATED</span><strong data-rated>0 / {questions.length}</strong></div>
+    <div class="weak-topics"><span>WEAK TOPICS</span><strong data-weak-topics>Rate questions to find a focus area.</strong></div>
+    <button type="button" data-reset-session>Reset session</button>
+  </div>
 </section>
 
 <style>
-  .practice-shell {
-    width: min(100% - 48px, 980px);
-    margin: 26px auto 0;
-    border: 1px solid var(--color-border-strong);
-    border-radius: 9px;
-    background: var(--color-bg-raised);
-    box-shadow: var(--shadow-card);
-    overflow: hidden;
-  }
-  .practice-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 20px 22px;
-    background:
-      linear-gradient(rgba(71, 100, 133, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(71, 100, 133, 0.06) 1px, transparent 1px),
-      var(--color-bg-inset);
-    background-size: 22px 22px;
-  }
-  .practice-kicker {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--color-accent);
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    font-weight: 750;
-    letter-spacing: 0.09em;
-  }
-  .practice-kicker i {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--color-signal);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-signal) 15%, transparent);
-  }
-  h2 {
-    margin: 9px 0 5px;
-    font-family: var(--font-display);
-    font-size: 1.28rem;
-    letter-spacing: -0.025em;
-    line-height: 1.25;
-  }
-  .practice-header p {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-  }
-  .practice-status {
-    padding: 5px 7px;
-    border: 1px solid var(--color-border-strong);
-    border-radius: 4px;
-    color: var(--color-text-muted);
-    font-family: var(--font-mono);
-    font-size: 0.56rem;
-    white-space: nowrap;
-  }
-  .practice-controls {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--color-border);
-  }
-  button {
-    padding: 11px 10px;
-    border: 0;
-    border-right: 1px solid var(--color-border);
-    background: var(--color-bg-raised);
-    color: var(--color-text-muted);
-    cursor: pointer;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 700;
-  }
-  button:last-child { border-right: 0; }
-  button:hover,
-  button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-accent-contrast); }
-  .practice-deck {
-    display: none;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    padding: 18px;
-    border-top: 1px solid var(--color-border);
-    background: var(--color-bg-inset);
-  }
-  .practice-shell:not([data-mode="read"]) .practice-deck { display: grid; }
-  .practice-question {
-    position: relative;
-    padding: 20px;
-    border: 1px solid var(--color-border);
-    border-radius: 7px;
-    background: var(--color-bg-raised);
-  }
-  .question-number {
-    margin-bottom: 18px;
-    color: var(--color-accent);
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 750;
-  }
-  .practice-question h3 {
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: 1.08rem;
-    letter-spacing: -0.02em;
-    line-height: 1.4;
-  }
-  .practice-hint,
-  .practice-answer {
-    display: none;
-    margin-top: 18px;
-    padding-top: 14px;
-    border-top: 1px solid var(--color-border);
-  }
-  [data-mode="hints"] .practice-hint,
-  [data-mode="answers"] .practice-hint,
-  [data-mode="answers"] .practice-answer { display: block; }
-  .practice-hint > span,
-  .practice-answer > span {
-    color: var(--color-signal);
-    font-family: var(--font-mono);
-    font-size: 0.58rem;
-    font-weight: 750;
-    letter-spacing: 0.08em;
-  }
-  .practice-answer > span { color: var(--color-accent); }
-  .practice-hint p,
-  .practice-answer p { margin: 6px 0 0; color: var(--color-text-muted); font-size: 0.86rem; line-height: 1.6; }
-  :global(.article-page.practice-active .article-body),
-  :global(.article-page.practice-active .article-footer) { display: none; }
-
-  @media (max-width: 680px) {
-    .practice-shell { width: min(100% - 32px, 980px); }
-    .practice-header { flex-direction: column; }
-    .practice-controls { grid-template-columns: 1fr 1fr; }
-    button:nth-child(2) { border-right: 0; }
-    button:nth-child(-n + 2) { border-bottom: 1px solid var(--color-border); }
-    .practice-deck { grid-template-columns: 1fr; }
-  }
+  .practice-shell { width:min(100% - 48px, 1080px); margin:26px auto 0; border:1px solid var(--color-border-strong); border-radius:9px; background:var(--color-bg-raised); box-shadow:var(--shadow-card); overflow:hidden; }
+  .practice-header { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:20px 22px; background:linear-gradient(rgba(71,100,133,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(71,100,133,.06) 1px,transparent 1px),var(--color-bg-inset); background-size:22px 22px; }
+  .practice-kicker { display:flex; align-items:center; gap:8px; color:var(--color-accent); font-family:var(--font-mono); font-size:.62rem; font-weight:750; letter-spacing:.09em; }
+  .practice-kicker i { width:7px; height:7px; border-radius:50%; background:var(--color-signal); box-shadow:0 0 0 4px color-mix(in srgb,var(--color-signal) 15%,transparent); }
+  h2 { margin:9px 0 5px; font-family:var(--font-display); font-size:1.28rem; letter-spacing:-.025em; line-height:1.25; }
+  .practice-header p { margin:0; color:var(--color-text-muted); font-family:var(--font-mono); font-size:.62rem; }
+  .practice-status { padding:5px 7px; border:1px solid var(--color-border-strong); border-radius:4px; color:var(--color-text-muted); font-family:var(--font-mono); font-size:.56rem; white-space:nowrap; }
+  button { border:0; background:transparent; color:var(--color-text-muted); cursor:pointer; font-family:var(--font-mono); font-size:.65rem; font-weight:700; }
+  .practice-toolbar { display:grid; grid-template-columns:minmax(0,1fr) auto; border-top:1px solid var(--color-border); }
+  .practice-controls { display:grid; grid-template-columns:repeat(4,1fr); }
+  .practice-controls button { min-height:44px; padding:10px; border-right:1px solid var(--color-border); }
+  .practice-controls button:hover,.practice-controls button[aria-pressed="true"] { background:var(--color-accent); color:var(--color-accent-contrast); }
+  .session-controls { display:flex; align-items:center; gap:8px; padding:6px 10px; }
+  .session-controls > button,.timer { padding:7px 9px; border:1px solid var(--color-border); border-radius:5px; }
+  .timer { display:flex; align-items:center; gap:7px; }
+  .timer > span { min-width:40px; color:var(--color-text); font-family:var(--font-mono); font-size:.66rem; font-weight:800; }
+  .timer button { padding:0; }
+  .practice-deck { display:none; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; padding:18px; border-top:1px solid var(--color-border); background:var(--color-bg-inset); }
+  .practice-shell:not([data-mode="read"]) .practice-deck { display:grid; }
+  .practice-question { position:relative; padding:20px; border:1px solid var(--color-border); border-radius:7px; background:var(--color-bg-raised); }
+  .practice-question.is-favorite { border-color:var(--color-signal); }
+  .question-topline { display:flex; align-items:center; gap:9px; margin-bottom:18px; }
+  .question-number,.question-topic { color:var(--color-accent); font-family:var(--font-mono); font-size:.61rem; font-weight:750; }
+  .question-topic { padding:3px 6px; border:1px solid var(--color-border); border-radius:999px; color:var(--color-text-muted); }
+  .favorite { margin-left:auto; padding:0; color:var(--color-signal); font-size:1.25rem; line-height:1; }
+  .practice-question h3 { margin:0; font-family:var(--font-display); font-size:1.08rem; letter-spacing:-.02em; line-height:1.4; }
+  .reveal-controls { display:flex; gap:8px; margin-top:17px; }
+  .reveal-controls button { padding:7px 9px; border:1px solid var(--color-border); border-radius:4px; }
+  .reveal-controls button:hover { border-color:var(--color-accent); color:var(--color-accent); }
+  .practice-hint,.practice-answer { display:none; margin-top:15px; padding-top:13px; border-top:1px solid var(--color-border); }
+  .practice-hint.is-open,.practice-answer.is-open,[data-mode="hints"] .practice-hint,[data-mode="answers"] .practice-hint,[data-mode="answers"] .practice-answer { display:block; }
+  .practice-hint > span,.practice-answer > span { color:var(--color-signal); font-family:var(--font-mono); font-size:.58rem; font-weight:750; letter-spacing:.08em; }
+  .practice-answer > span { color:var(--color-accent); }
+  .practice-hint p,.practice-answer p { margin:6px 0 0; color:var(--color-text-muted); font-size:.86rem; line-height:1.6; }
+  .self-rating { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:18px; padding-top:13px; border-top:1px solid var(--color-border); }
+  .self-rating > span { margin-right:auto; color:var(--color-text-faint); font-family:var(--font-mono); font-size:.56rem; }
+  .self-rating button { padding:6px 8px; border:1px solid var(--color-border); border-radius:4px; }
+  .self-rating button[aria-pressed="true"] { border-color:var(--color-accent); background:color-mix(in srgb,var(--color-accent) 12%,transparent); color:var(--color-accent); }
+  .practice-summary { grid-template-columns:110px 130px minmax(0,1fr) auto; gap:16px; align-items:center; padding:18px 22px; border-top:1px solid var(--color-border); background:var(--color-bg-inset); }
+  .practice-summary:not([hidden]) { display:grid; }
+  .practice-summary div { display:flex; flex-direction:column; gap:4px; }
+  .practice-summary span { color:var(--color-text-faint); font-family:var(--font-mono); font-size:.55rem; }
+  .practice-summary strong { color:var(--color-text); font-family:var(--font-display); font-size:.88rem; }
+  .practice-summary [data-score] { color:var(--color-accent); font-size:1.35rem; }
+  .practice-summary > button { padding:8px 10px; border:1px solid var(--color-border); border-radius:4px; }
+  :global(.article-page.practice-active .article-body),:global(.article-page.practice-active .article-footer) { display:none; }
+  @media (max-width:820px) { .practice-toolbar { grid-template-columns:1fr; } .session-controls { border-top:1px solid var(--color-border); justify-content:space-between; } .practice-deck { grid-template-columns:1fr; } .practice-summary { grid-template-columns:1fr 1fr; } .weak-topics { grid-column:1 / -1; } }
+  @media (max-width:560px) { .practice-shell { width:min(100% - 32px,1080px); } .practice-header { flex-direction:column; } .practice-controls { grid-template-columns:1fr 1fr; } .practice-controls button:nth-child(-n+2) { border-bottom:1px solid var(--color-border); } .practice-summary { grid-template-columns:1fr; } .weak-topics { grid-column:auto; } }
 </style>
 
 <script>
-  const labels = {
-    read: "READING MODE",
-    questions: "QUESTIONS ONLY",
-    hints: "HINTS EXPANDED",
-    answers: "ANSWERS VISIBLE",
-  } as const;
+  type Rating = "know" | "unsure" | "review";
+  interface SavedPractice { ratings: Record<string, Rating>; favorites: string[]; order: string[]; }
+  const labels = { read:"READING MODE", questions:"QUESTIONS ONLY", hints:"HINTS EXPANDED", answers:"ANSWERS VISIBLE" } as const;
 
   document.querySelectorAll<HTMLElement>("[data-practice-root]").forEach((root) => {
     const article = root.closest<HTMLElement>(".article-page");
-    const status = root.querySelector<HTMLElement>("[data-practice-status]");
-    const buttons = root.querySelectorAll<HTMLButtonElement>("[data-practice-mode]");
+    const deck = root.querySelector<HTMLElement>("[data-practice-deck]");
+    const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-question-index]"));
+    const storageKey = `eng-knowledge-practice:v2:${root.dataset.storageKey ?? "article"}`;
+    const defaultState: SavedPractice = { ratings:{}, favorites:[], order:cards.map((card) => card.dataset.questionIndex ?? "") };
+    let saved: SavedPractice = defaultState;
+    try { saved = { ...defaultState, ...JSON.parse(localStorage.getItem(storageKey) ?? "{}") }; } catch { saved = defaultState; }
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const mode = button.dataset.practiceMode as keyof typeof labels;
-        root.dataset.mode = mode;
-        article?.classList.toggle("practice-active", mode !== "read");
-        if (status) status.textContent = labels[mode];
-        buttons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
-        if (mode !== "read") root.scrollIntoView({ behavior: "smooth", block: "start" });
+    const persist = () => localStorage.setItem(storageKey, JSON.stringify(saved));
+    const renderSummary = () => {
+      const values = Object.values(saved.ratings);
+      const points = values.reduce((sum, value) => sum + (value === "know" ? 2 : value === "unsure" ? 1 : 0), 0);
+      const score = Math.round((points / Math.max(cards.length * 2, 1)) * 100);
+      const weak = cards.filter((card) => {
+        const rating = saved.ratings[card.dataset.questionIndex ?? ""];
+        return rating === "unsure" || rating === "review";
+      }).map((card) => card.querySelector<HTMLElement>(".question-topic")?.textContent?.trim() ?? "General");
+      const summary = root.querySelector<HTMLElement>("[data-practice-summary]");
+      if (summary) summary.hidden = values.length === 0 && root.dataset.mode === "read";
+      const scoreNode = root.querySelector<HTMLElement>("[data-score]");
+      const ratedNode = root.querySelector<HTMLElement>("[data-rated]");
+      const weakNode = root.querySelector<HTMLElement>("[data-weak-topics]");
+      if (scoreNode) scoreNode.textContent = `${score}%`;
+      if (ratedNode) ratedNode.textContent = `${values.length} / ${cards.length}`;
+      if (weakNode) weakNode.textContent = weak.length ? [...new Set(weak)].join(" · ") : values.length ? "No weak topic yet." : "Rate questions to find a focus area.";
+    };
+
+    const applySavedState = () => {
+      if (deck) saved.order.forEach((index) => { const card = cards.find((item) => item.dataset.questionIndex === index); if (card) deck.append(card); });
+      cards.forEach((card) => {
+        const index = card.dataset.questionIndex ?? "";
+        const favorite = saved.favorites.includes(index);
+        card.classList.toggle("is-favorite", favorite);
+        const favoriteButton = card.querySelector<HTMLButtonElement>("[data-favorite]");
+        if (favoriteButton) { favoriteButton.textContent = favorite ? "★" : "☆"; favoriteButton.setAttribute("aria-pressed", String(favorite)); }
+        card.querySelectorAll<HTMLButtonElement>("[data-rating]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.rating === saved.ratings[index])));
       });
+      renderSummary();
+    };
+
+    root.querySelectorAll<HTMLButtonElement>("[data-practice-mode]").forEach((button) => button.addEventListener("click", () => {
+      const mode = button.dataset.practiceMode as keyof typeof labels;
+      root.dataset.mode = mode;
+      article?.classList.toggle("practice-active", mode !== "read");
+      root.querySelectorAll<HTMLButtonElement>("[data-practice-mode]").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+      const status = root.querySelector<HTMLElement>("[data-practice-status]");
+      if (status) status.textContent = labels[mode];
+      const summary = root.querySelector<HTMLElement>("[data-practice-summary]");
+      if (summary && mode !== "read") summary.hidden = false;
+      if (mode !== "read") root.scrollIntoView({ behavior:"smooth", block:"start" });
+    }));
+
+    root.querySelectorAll<HTMLButtonElement>("[data-reveal]").forEach((button) => button.addEventListener("click", () => {
+      const card = button.closest<HTMLElement>("[data-question-index]");
+      const panel = card?.querySelector<HTMLElement>(`[data-panel="${button.dataset.reveal}"]`);
+      const open = panel?.classList.toggle("is-open") ?? false;
+      button.setAttribute("aria-expanded", String(open));
+      button.textContent = `${open ? "Hide" : "Show"} ${button.dataset.reveal}`;
+    }));
+
+    cards.forEach((card) => {
+      const index = card.dataset.questionIndex ?? "";
+      card.querySelector<HTMLButtonElement>("[data-favorite]")?.addEventListener("click", () => {
+        saved.favorites = saved.favorites.includes(index) ? saved.favorites.filter((value) => value !== index) : [...saved.favorites,index];
+        persist(); applySavedState();
+      });
+      card.querySelectorAll<HTMLButtonElement>("[data-rating]").forEach((button) => button.addEventListener("click", () => {
+        saved.ratings[index] = button.dataset.rating as Rating;
+        persist(); applySavedState();
+      }));
     });
+
+    root.querySelector<HTMLButtonElement>("[data-shuffle]")?.addEventListener("click", () => {
+      saved.order = [...saved.order].sort(() => Math.random() - .5); persist(); applySavedState();
+    });
+
+    let seconds = 900;
+    let interval: number | undefined;
+    const timerNode = root.querySelector<HTMLElement>("[data-timer]");
+    const timerToggle = root.querySelector<HTMLButtonElement>("[data-timer-toggle]");
+    const renderTimer = () => { if (timerNode) timerNode.textContent = `${String(Math.floor(seconds/60)).padStart(2,"0")}:${String(seconds%60).padStart(2,"0")}`; };
+    timerToggle?.addEventListener("click", () => {
+      if (interval) { window.clearInterval(interval); interval = undefined; if (timerToggle) timerToggle.textContent = "Start"; return; }
+      if (timerToggle) timerToggle.textContent = "Pause";
+      interval = window.setInterval(() => { seconds = Math.max(0,seconds-1); renderTimer(); if (seconds === 0 && interval) { window.clearInterval(interval); interval=undefined; if (timerToggle) timerToggle.textContent="Done"; } },1000);
+    });
+    root.querySelector<HTMLButtonElement>("[data-timer-reset]")?.addEventListener("click", () => { if (interval) window.clearInterval(interval); interval=undefined; seconds=900; renderTimer(); if (timerToggle) timerToggle.textContent="Start"; });
+    root.querySelector<HTMLButtonElement>("[data-reset-session]")?.addEventListener("click", () => { saved={ ...defaultState, ratings:{}, favorites:[], order:[...defaultState.order] }; persist(); applySavedState(); });
+    applySavedState();
   });
 </script>

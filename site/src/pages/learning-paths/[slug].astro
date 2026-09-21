@@ -1,0 +1,160 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { learningPaths, learningPathDuration } from "@/data/learningPaths";
+import { withBase } from "@/lib/url";
+
+export function getStaticPaths() {
+  return learningPaths.map((path) => ({ params: { slug: path.slug }, props: { path } }));
+}
+
+const { path } = Astro.props;
+const totalMinutes = learningPathDuration(path);
+---
+
+<BaseLayout title={path.title} description={path.description}>
+  <div class="path-page" data-learning-path={path.slug}>
+    <header class="path-hero">
+      <div class="wrap path-hero-inner">
+        <a class="back-link" href={withBase("/learning-paths/")}>&larr; ALL LEARNING PATHS</a>
+        <span class="eyebrow">{path.code} / {path.audience}</span>
+        <h1>{path.title}</h1>
+        <p>{path.description}</p>
+        <div class="path-meta">
+          <span>{path.steps.length} STEPS</span>
+          <span>{totalMinutes} MINUTES</span>
+          <span>DEVICE-LOCAL PROGRESS</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap path-workbench">
+      <aside class="path-meter">
+        <span class="eyebrow">YOUR PROGRESS</span>
+        <strong><span data-completed-count>0</span> / {path.steps.length}</strong>
+        <div class="meter-track"><span data-progress-bar></span></div>
+        <p data-progress-message>Start with the first step.</p>
+        <button type="button" data-reset-progress>Reset this path</button>
+      </aside>
+
+      <ol class="path-steps">
+        {path.steps.map((step, index) => (
+          <li data-step={step.id}>
+            <label class="step-check">
+              <input type="checkbox" data-step-check={step.id} />
+              <span aria-hidden="true"></span>
+              <span class="sr-label">Mark {step.title} complete</span>
+            </label>
+            <div class="step-index">{String(index + 1).padStart(2, "0")}</div>
+            <div class="step-copy">
+              <div class="step-kind"><span>{step.kind}</span><span>{step.duration} min</span></div>
+              <h2>{step.title}</h2>
+              <p>{step.description}</p>
+              <a href={withBase(step.href)}>Open step →</a>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ pathSlug: path.slug, stepIds: path.steps.map((step) => step.id) }}>
+  const STORAGE_KEY = "eng-knowledge-learning-progress:v1";
+  const root = document.querySelector(`[data-learning-path="${pathSlug}"]`);
+
+  function readProgress() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
+    catch { return {}; }
+  }
+
+  function writeProgress(progress) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); }
+    catch { /* Progress remains available for the current page session. */ }
+  }
+
+  let progress = readProgress();
+
+  function render() {
+    let completed = 0;
+    stepIds.forEach((stepId) => {
+      const key = `${pathSlug}:${stepId}`;
+      const checked = Boolean(progress[key]);
+      const input = root?.querySelector(`[data-step-check="${stepId}"]`);
+      const row = root?.querySelector(`[data-step="${stepId}"]`);
+      if (input) input.checked = checked;
+      row?.classList.toggle("complete", checked);
+      if (checked) completed += 1;
+    });
+
+    const percent = stepIds.length ? Math.round((completed / stepIds.length) * 100) : 0;
+    const count = root?.querySelector("[data-completed-count]");
+    const bar = root?.querySelector("[data-progress-bar]");
+    const message = root?.querySelector("[data-progress-message]");
+    if (count) count.textContent = String(completed);
+    if (bar) bar.style.width = `${percent}%`;
+    if (message) {
+      message.textContent = completed === stepIds.length
+        ? "Path complete. Revisit any step whenever you want."
+        : completed === 0
+          ? "Start with the first step."
+          : `${percent}% complete · ${stepIds.length - completed} steps remaining.`;
+    }
+  }
+
+  root?.querySelectorAll("[data-step-check]").forEach((input) => {
+    input.addEventListener("change", () => {
+      const stepId = input.dataset.stepCheck;
+      if (!stepId) return;
+      progress[`${pathSlug}:${stepId}`] = input.checked;
+      writeProgress(progress);
+      render();
+    });
+  });
+
+  root?.querySelector("[data-reset-progress]")?.addEventListener("click", () => {
+    stepIds.forEach((stepId) => delete progress[`${pathSlug}:${stepId}`]);
+    writeProgress(progress);
+    render();
+  });
+
+  render();
+</script>
+
+<style>
+  .path-hero { border-bottom: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-bg-raised) 88%, transparent); }
+  .path-hero-inner { padding: 44px 0 38px; }
+  .back-link { display: inline-block; margin-bottom: 30px; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.07em; }
+  .path-hero h1 { max-width: 900px; margin: 10px 0 14px; font-family: var(--font-display); font-size: clamp(2.7rem, 7vw, 5.2rem); letter-spacing: -0.06em; line-height: 0.96; }
+  .path-hero p { max-width: 740px; margin: 0; color: var(--color-text-muted); font-size: 1.05rem; }
+  .path-meta { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; }
+  .path-workbench { display: grid; grid-template-columns: 260px minmax(0, 760px); gap: 52px; justify-content: center; padding: 48px 0 80px; }
+  .path-meter { position: sticky; top: 96px; height: fit-content; padding: 20px; border: 1px solid var(--color-border); background: var(--color-bg-raised); }
+  .path-meter > strong { display: block; margin: 18px 0 12px; font-family: var(--font-display); font-size: 2.4rem; line-height: 1; }
+  .meter-track { height: 5px; background: var(--color-bg-inset); overflow: hidden; }
+  .meter-track span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--color-accent), var(--color-accent-bright)); transition: width 220ms ease; }
+  .path-meter p { min-height: 44px; color: var(--color-text-muted); font-size: 0.82rem; }
+  .path-meter button { padding: 0; border: 0; background: none; color: var(--color-text-muted); cursor: pointer; font-family: var(--font-mono); font-size: 0.64rem; text-decoration: underline; text-underline-offset: 3px; }
+  .path-steps { display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; list-style: none; }
+  .path-steps > li { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; padding: 24px 24px 24px 76px; border: 1px solid var(--color-border); border-radius: 9px; background: var(--color-bg-raised); transition: opacity 160ms ease, border-color 160ms ease; }
+  .path-steps > li.complete { border-color: color-mix(in srgb, var(--color-accent) 48%, var(--color-border)); opacity: 0.68; }
+  .step-check { position: absolute; top: 24px; left: 24px; cursor: pointer; }
+  .step-check input { position: absolute; opacity: 0; }
+  .step-check > span[aria-hidden] { display: grid; width: 26px; height: 26px; border: 1px solid var(--color-border-strong); border-radius: 50%; background: var(--color-bg-inset); place-items: center; }
+  .step-check input:focus-visible + span { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+  .step-check input:checked + span { border-color: var(--color-accent); background: var(--color-accent); }
+  .step-check input:checked + span::after { color: var(--color-accent-contrast); content: "✓"; font-weight: 800; }
+  .sr-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .step-index { color: var(--color-accent); font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; }
+  .step-kind { display: flex; gap: 16px; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.61rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .step-copy h2 { margin: 9px 0 6px; font-family: var(--font-display); font-size: 1.35rem; letter-spacing: -0.025em; }
+  .step-copy p { margin: 0 0 12px; color: var(--color-text-muted); }
+  .step-copy a { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 750; }
+  @media (max-width: 820px) {
+    .path-workbench { grid-template-columns: 1fr; gap: 24px; }
+    .path-meter { position: static; }
+  }
+  @media (max-width: 520px) {
+    .path-steps > li { grid-template-columns: 1fr; padding: 22px 20px 22px 66px; }
+    .step-index { display: none; }
+  }
+</style>

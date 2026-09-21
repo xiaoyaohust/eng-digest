@@ -24,6 +24,7 @@ const baseFields = {
         question: z.string(),
         hint: z.string(),
         answer: z.string(),
+        topic: z.string().optional(),
       })
     )
     .optional(),
@@ -33,6 +34,7 @@ const systemDesign = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/system-design" }),
   schema: z.object({
     ...baseFields,
+    topic: z.string().optional(),
     level: z.array(z.string()).optional(),
     companies: z.array(z.string()).optional(),
   }),

@@ -53,10 +53,14 @@ jobs:
 
       - name: Type-check and validate content schemas
         working-directory: site
+        env:
+          PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
         run: npm run check
 
       - name: Build site
         working-directory: site
+        env:
+          PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
         run: npm run build
 
       - name: Upload Pages artifact

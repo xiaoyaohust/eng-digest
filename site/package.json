@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "npm run import-digests",
+    "predev": "npm run import-digests && npm run generate-social-cards",
     "dev": "astro dev",
     "import-digests": "node scripts/import-digests.mjs && node scripts/generate-weekly-digests.mjs",
-    "prebuild": "npm run import-digests",
+    "generate-social-cards": "node scripts/generate-social-cards.mjs",
+    "prebuild": "npm run import-digests && npm run generate-social-cards",
     "build": "astro build && npm run search-index && npm run copy-legacy && npm run check-links",
     "search-index": "pagefind --site dist",
     "copy-legacy": "node scripts/copy-legacy-artifacts.mjs",
@@ -22,7 +23,9 @@
     "astro": "^7.3.2",
     "mermaid": "^12.0.0",
     "rehype-autolink-headings": "^7.1.0",
-    "rehype-slug": "^6.0.0"
+    "rehype-slug": "^6.0.0",
+    "sharp": "^0.35.4",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",

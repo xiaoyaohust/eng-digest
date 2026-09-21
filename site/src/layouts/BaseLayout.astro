@@ -14,6 +14,9 @@ interface Props {
   type?: "website" | "article";
   publishedTime?: Date;
   modifiedTime?: Date;
+  articleSection?: string;
+  tags?: string[];
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -26,14 +29,30 @@ const {
   type = "website",
   publishedTime,
   modifiedTime,
+  articleSection,
+  tags = [],
+  structuredData,
 } = Astro.props;
 
 const pageTitle = title === "Eng Knowledge" ? title : `${title} · Eng Knowledge`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // Listing and utility pages share the site's visual identity. Article pages
 // intentionally omit the generic image until they have their own artwork.
-const resolvedImage = image ?? (type === "website" ? withBase("/og.png") : undefined);
+const resolvedImage = image
+  ? (image.startsWith("/") ? withBase(image) : image)
+  : (type === "website" ? withBase("/og.png") : undefined);
 const ogImage = resolvedImage ? new URL(resolvedImage, Astro.site).toString() : undefined;
+const rssURL = new URL(withBase("/rss.xml"), Astro.site).toString();
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Eng Knowledge",
+  alternateName: "System Craft Lab",
+  url: new URL(withBase("/"), Astro.site).toString(),
+  description: "An engineering interview workbench for system design, coding, and production judgment.",
+};
+const schemas = [websiteSchema, ...(structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [])];
+const schemaJson = JSON.stringify(schemas).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
@@ -45,6 +64,7 @@ const ogImage = resolvedImage ? new URL(resolvedImage, Astro.site).toString() : 
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Eng Knowledge RSS" href={rssURL} />
 
     <meta property="og:type" content={type} />
     <meta property="og:title" content={pageTitle} />
@@ -69,6 +89,9 @@ const ogImage = resolvedImage ? new URL(resolvedImage, Astro.site).toString() : 
     {modifiedTime && (
       <meta property="article:modified_time" content={modifiedTime.toISOString()} />
     )}
+    {articleSection && <meta property="article:section" content={articleSection} />}
+    {tags.map((tag) => <meta property="article:tag" content={tag} />)}
+    <script type="application/ld+json" is:inline set:html={schemaJson}></script>
 
     <script is:inline>
       // Runs before paint to avoid a light/dark flash. Falls back to system

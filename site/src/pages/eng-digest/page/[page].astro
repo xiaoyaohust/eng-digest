@@ -1,0 +1,36 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import DigestCard from "@/components/DigestCard.astro";
+import Pagination from "@/components/Pagination.astro";
+import { publishedDigests } from "@/lib/content";
+import { withBase } from "@/lib/url";
+
+export async function getStaticPaths() {
+  const pageSize = 24;
+  const digests = await publishedDigests();
+  const totalPages = Math.ceil(digests.length / pageSize);
+  return Array.from({ length: Math.max(totalPages - 1, 0) }, (_, index) => {
+    const page = index + 2;
+    return { params: { page:String(page) }, props:{ page, totalPages, entries:digests.slice((page - 1) * pageSize, page * pageSize) } };
+  });
+}
+const { page, totalPages, entries } = Astro.props;
+---
+
+<BaseLayout title={`Engineering Digest · Page ${page}`} description={`Daily engineering digest archive, page ${page} of ${totalPages}.`}>
+  <div class="wrap section">
+    <a class="eyebrow" href={withBase("/eng-digest/")}>← DAILY DIGEST</a>
+    <h1>Daily signal logs</h1>
+    <div class="section-status"><span>PAGE {String(page).padStart(2,"0")}</span><span>{entries.length} BUILDS</span><span>NEWEST TO OLDEST</span></div>
+    <div class="card-grid">
+      {entries.map((entry: any) => <DigestCard href={`/eng-digest/${entry.id}/`} date={entry.data.date} articleCount={entry.data.articleCount} sourceCount={entry.data.sourceCount} sources={entry.data.sources} />)}
+    </div>
+    <Pagination currentPage={page} totalPages={totalPages} />
+  </div>
+</BaseLayout>
+
+<style>
+  .section { padding:56px 0 80px; }
+  h1 { margin:10px 0 22px; }
+  .section-status { display:flex; flex-wrap:wrap; gap:8px 24px; margin-bottom:30px; padding:10px 12px; border-block:1px solid var(--color-border); color:var(--color-text-muted); font-family:var(--font-mono); font-size:.62rem; letter-spacing:.06em; }
+</style>

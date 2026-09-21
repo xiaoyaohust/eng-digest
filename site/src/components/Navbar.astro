@@ -6,6 +6,8 @@ const navItems = [
   { label: "Systems", href: "/system-design/" },
   { label: "Coding", href: "/coding/" },
   { label: "Interviews", href: "/interviews/" },
+  { label: "Paths", href: "/learning-paths/" },
+  { label: "Lab", href: "/architecture-lab/" },
   { label: "Digest", href: "/eng-digest/" },
 ];
 
@@ -76,7 +78,7 @@ function isActive(href: string): boolean {
   .navbar-inner {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     height: 70px;
   }
 
@@ -147,7 +149,7 @@ function isActive(href: string): boolean {
     border-radius: 5px;
     color: var(--color-text-muted);
     font-family: var(--font-mono);
-    font-size: 0.74rem;
+    font-size: 0.7rem;
     letter-spacing: 0.015em;
     white-space: nowrap;
   }

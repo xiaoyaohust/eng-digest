@@ -1,0 +1,135 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { learningPaths, learningPathDuration } from "@/data/learningPaths";
+import { withBase } from "@/lib/url";
+---
+
+<BaseLayout
+  title="Learning Paths"
+  description="Structured engineering interview study routes with private, device-local progress tracking."
+>
+  <div class="wrap section paths-page" data-path-index>
+    <header class="paths-hero">
+      <div>
+        <span class="eyebrow">GUIDED STUDY / LOCAL PROGRESS</span>
+        <h1>Learning Paths</h1>
+        <p>
+          Follow a focused route instead of collecting disconnected notes. Completion stays
+          on this device—no account, tracking profile, or backend required.
+        </p>
+      </div>
+      <div class="paths-summary" aria-label="Learning path totals">
+        <strong>{String(learningPaths.length).padStart(2, "0")}</strong>
+        <span>ACTIVE PATHS</span>
+      </div>
+    </header>
+
+    <div class="path-grid">
+      {learningPaths.map((path) => {
+        const minutes = learningPathDuration(path);
+        return (
+          <article class="path-card" data-path-card={path.slug}>
+            <div class="path-card-top">
+              <span>{path.code}</span>
+              <span>{path.audience}</span>
+            </div>
+            <h2>{path.title}</h2>
+            <p>{path.description}</p>
+            <div class="path-progress" aria-label={`Progress for ${path.title}`}>
+              <div><span data-path-progress-bar></span></div>
+              <p><strong data-path-progress-count>0</strong> / {path.steps.length} complete</p>
+            </div>
+            <div class="path-card-foot">
+              <span>{path.steps.length} steps · {minutes} min</span>
+              <a href={withBase(`/learning-paths/${path.slug}/`)}>Open path →</a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline define:vars={{ paths: learningPaths.map((path) => ({ slug: path.slug, steps: path.steps.map((step) => step.id) })) }}>
+  const STORAGE_KEY = "eng-knowledge-learning-progress:v1";
+
+  function readProgress() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  const progress = readProgress();
+  paths.forEach((path) => {
+    const card = document.querySelector(`[data-path-card="${path.slug}"]`);
+    if (!card) return;
+    const completed = path.steps.filter((step) => progress[`${path.slug}:${step}`]).length;
+    const percent = path.steps.length ? Math.round((completed / path.steps.length) * 100) : 0;
+    const count = card.querySelector("[data-path-progress-count]");
+    const bar = card.querySelector("[data-path-progress-bar]");
+    if (count) count.textContent = String(completed);
+    if (bar) bar.style.width = `${percent}%`;
+  });
+</script>
+
+<style>
+  .paths-page { padding: 60px 0 84px; }
+  .paths-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 36px;
+    align-items: end;
+    margin-bottom: 42px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .paths-hero h1 {
+    margin: 9px 0 14px;
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 7vw, 5.2rem);
+    letter-spacing: -0.06em;
+    line-height: 0.95;
+  }
+  .paths-hero p { max-width: 720px; margin: 0; color: var(--color-text-muted); font-size: 1.05rem; }
+  .paths-summary {
+    display: flex;
+    min-width: 150px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 28px;
+    border-left: 1px solid var(--color-border);
+  }
+  .paths-summary strong { font-family: var(--font-display); font-size: 3.6rem; line-height: 1; }
+  .paths-summary span { color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; }
+  .path-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .path-card {
+    display: flex;
+    min-height: 320px;
+    flex-direction: column;
+    padding: 26px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-bg-raised);
+    box-shadow: var(--shadow-card);
+  }
+  .path-card:nth-child(1), .path-card:nth-child(5) { grid-column: span 2; }
+  .path-card-top, .path-card-foot { display: flex; justify-content: space-between; gap: 16px; }
+  .path-card-top { color: var(--color-accent); font-family: var(--font-mono); font-size: 0.61rem; letter-spacing: 0.07em; text-transform: uppercase; }
+  .path-card h2 { margin: 34px 0 10px; font-family: var(--font-display); font-size: clamp(1.65rem, 3vw, 2.35rem); letter-spacing: -0.04em; line-height: 1; }
+  .path-card > p { max-width: 680px; margin: 0; color: var(--color-text-muted); }
+  .path-progress { margin-top: auto; padding-top: 32px; }
+  .path-progress > div { height: 4px; background: var(--color-bg-inset); overflow: hidden; }
+  .path-progress > div span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--color-accent), var(--color-accent-bright)); transition: width 240ms ease; }
+  .path-progress p { margin: 8px 0 18px; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.65rem; }
+  .path-card-foot { align-items: center; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.68rem; }
+  .path-card-foot a { font-weight: 750; }
+  @media (max-width: 760px) {
+    .paths-hero { grid-template-columns: 1fr; }
+    .paths-summary { align-items: flex-start; padding: 18px 0 0; border-top: 1px solid var(--color-border); border-left: 0; }
+    .path-grid { grid-template-columns: 1fr; }
+    .path-card:nth-child(1), .path-card:nth-child(5) { grid-column: span 1; }
+    .path-card { min-height: 290px; }
+  }
+</style>

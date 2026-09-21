@@ -1,0 +1,27 @@
+---
+import { withBase } from "@/lib/url";
+interface Props { currentPage: number; totalPages: number; }
+const { currentPage, totalPages } = Astro.props;
+const pageHref = (page: number) => page === 1 ? "/eng-digest/" : `/eng-digest/page/${page}/`;
+---
+
+{totalPages > 1 && (
+  <nav class="pagination" aria-label="Digest pages">
+    {currentPage > 1 ? <a href={withBase(pageHref(currentPage - 1))}>← Newer</a> : <span></span>}
+    <div>
+      {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+        <a href={withBase(pageHref(page))} aria-current={page === currentPage ? "page" : undefined}>{page}</a>
+      ))}
+    </div>
+    {currentPage < totalPages ? <a href={withBase(pageHref(currentPage + 1))}>Older →</a> : <span></span>}
+  </nav>
+)}
+
+<style>
+  .pagination { display:grid; grid-template-columns:100px minmax(0,1fr) 100px; gap:14px; align-items:center; margin:38px 0 12px; font-family:var(--font-mono); font-size:.66rem; }
+  .pagination > a:last-child { text-align:right; }
+  .pagination div { display:flex; flex-wrap:wrap; justify-content:center; gap:5px; }
+  .pagination div a { display:grid; min-width:30px; height:30px; padding:0 6px; border:1px solid var(--color-border); border-radius:4px; place-items:center; }
+  .pagination a:hover,.pagination a[aria-current="page"] { border-color:var(--color-accent); background:var(--color-accent); color:var(--color-accent-contrast); text-decoration:none; }
+  @media (max-width:560px) { .pagination { grid-template-columns:1fr 1fr; } .pagination div { grid-column:1 / -1; grid-row:1; } }
+</style>

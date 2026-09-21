@@ -16,6 +16,7 @@ updated: 2026-09-15       # optional
 tags:
   - distributed-systems
   - redis
+topic: "Traffic Management" # optional — groups the article on the System Design index
 level:                     # optional
   - senior
   - staff
@@ -25,6 +26,7 @@ featured: true              # optional, default false — shows on the homepage
 draft: false                 # optional, default false — true hides it from all listings
 practice:                    # optional — enables Interview Question Mode
   - question: "How would you make the shared counter update atomic?"
+    topic: "Consistency"      # optional — used by the weak-topic practice summary
     hint: "Think about where the read-modify-write operation executes."
     answer: "Use a Redis Lua script so increment, expiry, and checking are atomic."
 ---
@@ -58,6 +60,7 @@ featured: false
 draft: false
 practice:                    # optional — enables Interview Question Mode
   - question: "Why is a doubly linked list needed?"
+    topic: "Data Structures"  # optional
     hint: "Consider removing an arbitrary node in O(1)."
     answer: "Its previous and next pointers let a known node be unlinked in O(1)."
 ---
@@ -97,12 +100,16 @@ Put image files under `site/public/images/` and reference them with an absolute 
 from the site base, e.g. in Markdown:
 
 ```md
-![Rate limiter architecture](/eng-digest/images/rate-limiter-arch.png)
+![Architecture diagram](/images/architecture-diagram.png)
 ```
 
-(The `/eng-digest` prefix matches this deployment's `BASE_PATH` — see
-`site/astro.config.mjs`. If that changes, e.g. to a custom domain with no prefix, update the
-prefix here too.)
+The current custom domain serves from `/`, so public assets use root-relative paths. Astro
+components use `withBase()` when links must also support a GitHub project-site base.
+
+Every published System Design, Coding, and Interview article automatically receives a
+1200×627 PNG share card during `npm run build`. The file is generated under
+`public/social/auto/` from the title, description, collection, and tags. To override it with
+bespoke art, add `socialImage: { src, alt, width, height }` to frontmatter.
 
 ## Mermaid diagrams
 
@@ -143,9 +150,10 @@ first if a new article won't build.
 ## Interview Question Mode
 
 Add a `practice` list to any System Design, Coding, or Interview Experience frontmatter. Each
-entry requires `question`, `hint`, and `answer`. The article page then gets four client-side
-modes: regular reading, questions only, hints expanded, and answers visible. No account,
-database, or additional route is involved.
+entry requires `question`, `hint`, and `answer`; `topic` is optional. Practice Mode 2.0 adds
+per-question hints and answers, self-rating, a timer, random order, saved questions, a score,
+and a weak-topic summary. Results stay in browser `localStorage`; no account, database, or
+additional route is involved.
 
 ## Engineering Digest content
 
@@ -158,3 +166,8 @@ Weekly reports under `/eng-digest/weekly/` are generated automatically during th
 step. The build de-duplicates daily articles by URL, classifies them with a deterministic topic
 taxonomy, and writes the generated collection to `site/src/content/generated-weekly/`. Do not
 edit that directory by hand.
+
+The daily index is paginated at 24 entries and automatically creates year/month archive URLs.
+Weekly email signup is provider-neutral: set `PUBLIC_NEWSLETTER_FORM_URL` at build time to the
+public POST endpoint from your newsletter service. Until configured, the component offers RSS
+instead of displaying a form that cannot deliver email.

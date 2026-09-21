@@ -2,8 +2,15 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
+import { withBase } from "@/lib/url";
 
 const articles = await published("system-design");
+const clusters = [...articles.reduce((groups, entry) => {
+  const topic = entry.data.topic ?? "Architecture Foundations";
+  groups.set(topic, [...(groups.get(topic) ?? []), entry]);
+  return groups;
+}, new Map<string, typeof articles>()).entries()];
+const clusterId = (topic: string) => topic.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 ---
 
 <BaseLayout
@@ -14,18 +21,23 @@ const articles = await published("system-design");
     <h1>System Design</h1>
     <p class="muted section-intro">Architecture and distributed systems interview prep.</p>
     <div class="section-status"><span>MODULE 01</span><span>{articles.length} NOTES</span><span>ARCHITECTURE / TRADE-OFFS / SCALE</span></div>
-    <div class="card-grid">
-      {articles.map((entry) => (
-        <ArticleCard
-          href={`/system-design/${entry.id}/`}
-          kicker="System Design"
-          title={entry.data.title}
-          description={entry.data.description}
-          date={entry.data.date}
-          tags={entry.data.tags}
-        />
-      ))}
-    </div>
+    <nav class="cluster-nav" aria-label="System design topic clusters">
+      <span>TOPIC CLUSTERS</span>
+      {clusters.map(([topic, entries]) => <a href={`#${clusterId(topic)}`}>{topic} <small>{entries.length}</small></a>)}
+    </nav>
+    <a class="lab-banner" href={withBase("/architecture-lab/")}>
+      <span><small>INTERACTIVE TOOL / CLIENT-SIDE</small><strong>Architecture Decision Lab</strong></span>
+      <p>Enter workload constraints and compare storage, caching, streaming, and replication trade-offs.</p>
+      <b>OPEN LAB →</b>
+    </a>
+    {clusters.map(([topic, entries], index) => (
+      <section class="topic-cluster" id={clusterId(topic)}>
+        <header><span>CLUSTER {String(index + 1).padStart(2,"0")}</span><h2>{topic}</h2><small>{entries.length} {entries.length === 1 ? "note" : "notes"}</small></header>
+        <div class="card-grid">
+          {entries.map((entry) => <ArticleCard href={`/system-design/${entry.id}/`} kicker={topic} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />)}
+        </div>
+      </section>
+    ))}
     {articles.length === 0 && <p class="muted">No articles yet.</p>}
   </div>
 </BaseLayout>
@@ -49,4 +61,19 @@ const articles = await published("system-design");
     font-size: 0.62rem;
     letter-spacing: 0.06em;
   }
+  .cluster-nav { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:24px; }
+  .cluster-nav > span { margin-right:4px; color:var(--color-text-faint); font-family:var(--font-mono); font-size:.58rem; }
+  .cluster-nav a { padding:6px 8px; border:1px solid var(--color-border); border-radius:4px; font-family:var(--font-mono); font-size:.62rem; }
+  .cluster-nav small { color:var(--color-text-faint); }
+  .lab-banner { display:grid; grid-template-columns:minmax(210px,.7fr) minmax(260px,1fr) auto; gap:24px; align-items:center; margin:0 0 46px; padding:22px; border:1px solid var(--color-border-strong); background:var(--color-bg-inset); color:var(--color-text); }
+  .lab-banner:hover { border-color:var(--color-accent); text-decoration:none; }
+  .lab-banner span { display:flex; flex-direction:column; gap:5px; }
+  .lab-banner small,.lab-banner b { color:var(--color-accent); font-family:var(--font-mono); font-size:.59rem; }
+  .lab-banner strong { font-family:var(--font-display); font-size:1.25rem; }
+  .lab-banner p { margin:0; color:var(--color-text-muted); font-size:.87rem; }
+  .topic-cluster { margin:0 0 58px; scroll-margin-top:90px; }
+  .topic-cluster > header { display:grid; grid-template-columns:105px 1fr auto; align-items:end; gap:16px; margin-bottom:18px; padding-bottom:11px; border-bottom:1px solid var(--color-border); }
+  .topic-cluster header span,.topic-cluster header small { color:var(--color-text-muted); font-family:var(--font-mono); font-size:.59rem; }
+  .topic-cluster h2 { margin:0; font-family:var(--font-display); font-size:1.7rem; letter-spacing:-.035em; }
+  @media (max-width:760px) { .lab-banner { grid-template-columns:1fr; } .topic-cluster > header { grid-template-columns:1fr auto; } .topic-cluster header span { grid-column:1 / -1; } }
 </style>

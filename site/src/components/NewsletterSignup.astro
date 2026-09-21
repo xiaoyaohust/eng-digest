@@ -1,0 +1,39 @@
+---
+import { withBase } from "@/lib/url";
+
+interface Props { compact?: boolean; }
+const { compact = false } = Astro.props;
+const formURL = import.meta.env.PUBLIC_NEWSLETTER_FORM_URL;
+---
+
+<aside class:list={["newsletter", { compact }]} aria-labelledby="newsletter-title">
+  <div>
+    <span class="eyebrow">WEEKLY SIGNAL / INBOX</span>
+    <h2 id="newsletter-title">One useful engineering brief, once a week.</h2>
+    <p>Top topics, active sources, and representative reads. No account is required for the site.</p>
+  </div>
+  {formURL ? (
+    <form action={formURL} method="post" target="_blank">
+      <label><span>Email address</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label>
+      <button type="submit">Subscribe →</button>
+    </form>
+  ) : (
+    <a class="rss-fallback" href={withBase("/rss.xml")}>Follow the RSS feed →</a>
+  )}
+</aside>
+
+<style>
+  .newsletter { display:grid; grid-template-columns:minmax(0,1fr) minmax(280px,.8fr); gap:28px; align-items:center; margin:36px 0; padding:28px; border:1px solid var(--color-border); background:var(--color-bg-inset); }
+  .newsletter.compact { grid-template-columns:1fr; margin:32px 0; }
+  h2 { margin:8px 0; font-family:var(--font-display); font-size:clamp(1.45rem,3vw,2.2rem); letter-spacing:-.04em; }
+  p { margin:0; color:var(--color-text-muted); }
+  form { display:flex; align-items:flex-end; gap:8px; }
+  label { flex:1; }
+  label span { display:block; margin-bottom:6px; color:var(--color-text-muted); font-family:var(--font-mono); font-size:.58rem; }
+  input,button,.rss-fallback { min-height:42px; border:1px solid var(--color-border-strong); border-radius:5px; font-family:var(--font-mono); }
+  input { width:100%; padding:9px 10px; background:var(--color-bg-raised); color:var(--color-text); }
+  button,.rss-fallback { display:inline-flex; align-items:center; padding:9px 12px; background:var(--color-accent); color:var(--color-accent-contrast); cursor:pointer; font-size:.66rem; font-weight:800; white-space:nowrap; }
+  .rss-fallback { justify-self:start; text-decoration:none; }
+  @media (max-width:760px) { .newsletter { grid-template-columns:1fr; } }
+  @media (max-width:480px) { form { align-items:stretch; flex-direction:column; } button { justify-content:center; } }
+</style>

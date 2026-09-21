@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import NewsletterSignup from "@/components/NewsletterSignup.astro";
 
 export async function getStaticPaths() {
   const entries = (await getCollection("generated-weekly")).sort(
@@ -27,6 +28,7 @@ const description = `${entry.data.articleCount} unique articles from ${entry.dat
   kicker={entry.data.complete ? "Weekly Trends" : "Weekly Trends · Rolling"}
   date={entry.data.weekStart}
   headings={headings}
+  sectionHref="/eng-digest/weekly/"
   prev={prevEntry && { title: prevEntry.data.title, href: `/eng-digest/weekly/${prevEntry.id}/` }}
   next={nextEntry && { title: nextEntry.data.title, href: `/eng-digest/weekly/${nextEntry.id}/` }}
 >
@@ -36,6 +38,7 @@ const description = `${entry.data.articleCount} unique articles from ${entry.dat
     <div><strong>{entry.data.digestCount}</strong><span>DAILY BUILDS</span></div>
   </div>
   <Content />
+  <NewsletterSignup compact />
 </ArticleLayout>
 
 <style>

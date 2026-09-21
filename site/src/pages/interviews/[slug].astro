@@ -3,6 +3,7 @@ import { render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { published, findRelated, allCandidates } from "@/lib/content";
 import { readingTime } from "@/lib/url";
+import { findLearningPathForHref } from "@/data/learningPaths";
 
 export async function getStaticPaths() {
   const entries = await published("interviews");
@@ -22,6 +23,14 @@ const { Content, headings } = await render(entry);
 const candidates = await allCandidates();
 const related = findRelated(entry.data.tags, candidates, `/interviews/${entry.id}/`);
 const kicker = entry.data.company ? `${entry.data.company} Interview` : "Interview";
+const articleHref = `/interviews/${entry.id}/`;
+const path = findLearningPathForHref(articleHref);
+const socialImage = entry.data.socialImage ?? {
+  src: `/social/auto/interviews/${entry.id}.png`,
+  alt: `${entry.data.title} social preview`,
+  width: 1200,
+  height: 627,
+};
 ---
 
 <ArticleLayout
@@ -37,7 +46,10 @@ const kicker = entry.data.company ? `${entry.data.company} Interview` : "Intervi
   next={nextEntry && { title: nextEntry.data.title, href: `/interviews/${nextEntry.id}/` }}
   related={related}
   practice={entry.data.practice}
-  socialImage={entry.data.socialImage}
+  practiceKey={`interviews/${entry.id}`}
+  socialImage={socialImage}
+  sectionHref="/interviews/"
+  relatedPath={path && { title: path.title, href: `/learning-paths/${path.slug}/` }}
 >
   {entry.data.sample && (
     <p class="sample-notice">

@@ -4,6 +4,7 @@ import BaseLayout from "./BaseLayout.astro";
 import ArticleMeta from "@/components/ArticleMeta.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
 import PracticeMode from "@/components/PracticeMode.astro";
+import ArticleActions from "@/components/ArticleActions.astro";
 import { withBase } from "@/lib/url";
 
 interface RelatedLink {
@@ -16,6 +17,7 @@ interface PracticeQuestion {
   question: string;
   hint: string;
   answer: string;
+  topic?: string;
 }
 
 interface SocialImage {
@@ -39,6 +41,9 @@ interface Props {
   related?: RelatedLink[];
   practice?: PracticeQuestion[];
   socialImage?: SocialImage;
+  sectionHref?: string;
+  practiceKey?: string;
+  relatedPath?: { title: string; href: string };
 }
 
 const {
@@ -55,7 +60,37 @@ const {
   related = [],
   practice = [],
   socialImage,
+  sectionHref = "/",
+  practiceKey,
+  relatedPath,
 } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const imageURL = socialImage ? new URL(socialImage.src, Astro.site).toString() : undefined;
+const sectionName = kicker ?? "Knowledge Base";
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    datePublished: date.toISOString(),
+    dateModified: (updated ?? date).toISOString(),
+    mainEntityOfPage: canonical,
+    ...(imageURL ? { image: [imageURL] } : {}),
+    articleSection: sectionName,
+    keywords: tags.join(", "),
+    publisher: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: new URL(withBase("/"), Astro.site).toString() },
+      { "@type": "ListItem", position: 2, name: sectionName, item: new URL(withBase(sectionHref), Astro.site).toString() },
+      { "@type": "ListItem", position: 3, name: title, item: canonical },
+    ],
+  },
+];
 ---
 
 <BaseLayout
@@ -68,6 +103,9 @@ const {
   type="article"
   publishedTime={date}
   modifiedTime={updated}
+  articleSection={sectionName}
+  tags={tags}
+  structuredData={structuredData}
 >
   <article class="article-page">
     <header class="article-hero">
@@ -80,7 +118,7 @@ const {
       </div>
     </header>
 
-    {practice.length > 0 && <PracticeMode questions={practice} />}
+    {practice.length > 0 && practiceKey && <PracticeMode questions={practice} storageKey={practiceKey} />}
 
     <div class="wrap article-body">
       <aside class="article-toc">
@@ -93,8 +131,8 @@ const {
       </div>
     </div>
 
-    {(prev || next || related.length > 0) && (
-      <footer class="wrap article-footer">
+    <footer class="wrap article-footer">
+        <ArticleActions title={title} description={description} canonical={canonical} relatedPath={relatedPath} />
         {(prev || next) && (
           <nav class="prev-next" aria-label="Article navigation">
             <a class:list={["prev-next-link", { disabled: !prev }]} href={prev ? withBase(prev.href) : undefined}>
@@ -128,7 +166,6 @@ const {
           </div>
         )}
       </footer>
-    )}
   </article>
 </BaseLayout>
 

@@ -1,0 +1,50 @@
+---
+import { withBase } from "@/lib/url";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  relatedPath?: { title: string; href: string };
+}
+
+const { title, description, canonical, relatedPath } = Astro.props;
+const linkedInURL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonical)}`;
+const linkedInSummary = `${title}\n\n${description}\n\n${canonical}\n\n#SystemDesign #Engineering #TechInterview`;
+---
+
+<section class="article-actions" aria-labelledby="share-heading" data-article-actions data-summary={linkedInSummary}>
+  <div>
+    <span class="eyebrow">KEEP THE SIGNAL MOVING</span>
+    <h2 id="share-heading">Share or continue learning</h2>
+  </div>
+  <div class="action-buttons">
+    <button type="button" data-copy-value={canonical}>Copy link</button>
+    <a href={linkedInURL} target="_blank" rel="noreferrer">Share on LinkedIn ↗</a>
+    <button type="button" data-copy-summary>Copy LinkedIn summary</button>
+    {relatedPath && <a class="path-action" href={withBase(relatedPath.href)}>Related path: {relatedPath.title} →</a>}
+  </div>
+  <p class="copy-status" data-copy-status aria-live="polite"></p>
+</section>
+
+<style>
+  .article-actions { margin-bottom:28px; padding:22px; border:1px solid var(--color-border); border-radius:8px; background:var(--color-bg-inset); }
+  .article-actions h2 { margin:7px 0 16px; font-family:var(--font-display); font-size:1.35rem; letter-spacing:-.03em; }
+  .action-buttons { display:flex; flex-wrap:wrap; gap:8px; }
+  .action-buttons a,.action-buttons button { padding:9px 11px; border:1px solid var(--color-border-strong); border-radius:5px; background:var(--color-bg-raised); color:var(--color-text); cursor:pointer; font-family:var(--font-mono); font-size:.64rem; font-weight:700; }
+  .action-buttons a:hover,.action-buttons button:hover { border-color:var(--color-accent); color:var(--color-accent); text-decoration:none; }
+  .action-buttons .path-action { border-color:color-mix(in srgb,var(--color-accent) 55%,var(--color-border)); }
+  .copy-status { min-height:1em; margin:10px 0 0; color:var(--color-accent); font-family:var(--font-mono); font-size:.6rem; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-article-actions]").forEach((root) => {
+    const status = root.querySelector<HTMLElement>("[data-copy-status]");
+    const copy = async (value: string, message: string) => {
+      try { await navigator.clipboard.writeText(value); if (status) status.textContent = message; }
+      catch { if (status) status.textContent = "Copy failed — select the browser URL instead."; }
+    };
+    root.querySelector<HTMLButtonElement>("[data-copy-value]")?.addEventListener("click", (event) => copy((event.currentTarget as HTMLButtonElement).dataset.copyValue ?? location.href, "Link copied."));
+    root.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", () => copy(root.dataset.summary ?? "", "LinkedIn summary copied."));
+  });
+</script>

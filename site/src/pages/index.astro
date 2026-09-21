@@ -4,6 +4,7 @@ import ArticleCard from "@/components/ArticleCard.astro";
 import DigestCard from "@/components/DigestCard.astro";
 import { withBase } from "@/lib/url";
 import { published, publishedDigests } from "@/lib/content";
+import { learningPaths, learningPathDuration } from "@/data/learningPaths";
 
 const [systemDesign, coding, interviews, digests] = await Promise.all([
   published("system-design"),
@@ -108,12 +109,12 @@ const sections = [
         </p>
         <div class="hero-actions">
           <a class="primary-action" href={withBase("/system-design/")}>Start with systems <span>↗</span></a>
-          <a class="secondary-action" href={withBase("/search/")}>Search the library <span>/</span></a>
+          <a class="secondary-action" href={withBase("/learning-paths/")}>Follow a learning path <span>→</span></a>
         </div>
         <div class="hero-metrics" aria-label="Knowledge base statistics">
           <div><strong>{allArticles.length}</strong><span>CORE NOTES</span></div>
           <div><strong>{digests.length}</strong><span>DAILY DIGESTS</span></div>
-          <div><strong>04</strong><span>LEARNING TRACKS</span></div>
+          <div><strong>05</strong><span>LEARNING PATHS</span></div>
         </div>
       </div>
 
@@ -152,6 +153,23 @@ const sections = [
           <div class="track-foot"><span>{section.count} entries</span><strong>Explore ↗</strong></div>
         </a>
       ))}
+    </div>
+  </section>
+
+  <section class="path-band">
+    <div class="wrap home-section">
+      <header class="home-section-header">
+        <div><span class="eyebrow">GUIDED PRACTICE / LOCAL PROGRESS</span><h2>Turn reading into a plan</h2></div>
+        <a href={withBase("/architecture-lab/")}>Open Architecture Decision Lab ↗</a>
+      </header>
+      <div class="path-preview-grid">
+        {learningPaths.map((path) => (
+          <a href={withBase(`/learning-paths/${path.slug}/`)}>
+            <span>{path.code}</span><h3>{path.shortTitle}</h3><p>{path.description}</p>
+            <small>{path.steps.length} steps · {learningPathDuration(path)} min →</small>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -370,6 +388,15 @@ const sections = [
   .track-foot { position: absolute; right: 22px; bottom: 20px; left: 22px; color: var(--color-text-muted); font-size: 0.62rem; }
   .track-foot strong { color: var(--color-accent); }
 
+  .path-band { border-block:1px solid var(--color-border); background:var(--color-bg-inset); }
+  .path-preview-grid { display:grid; grid-template-columns:repeat(5,1fr); border-top:1px solid var(--color-border); border-left:1px solid var(--color-border); }
+  .path-preview-grid > a { display:flex; min-height:240px; flex-direction:column; padding:19px; border-right:1px solid var(--color-border); border-bottom:1px solid var(--color-border); background:var(--color-bg-raised); color:var(--color-text); }
+  .path-preview-grid > a:hover { border-color:var(--color-accent); text-decoration:none; transform:translateY(-2px); }
+  .path-preview-grid span,.path-preview-grid small { color:var(--color-accent); font-family:var(--font-mono); font-size:.58rem; }
+  .path-preview-grid h3 { margin:30px 0 8px; font-family:var(--font-display); font-size:1.08rem; line-height:1.15; }
+  .path-preview-grid p { margin:0 0 20px; color:var(--color-text-muted); font-size:.79rem; line-height:1.55; }
+  .path-preview-grid small { margin-top:auto; }
+
   .featured-band { border-block: 1px solid #26364a; background: #0e1724; }
   .home-section-header.inverse h2 { color: #edf5f8; }
   .home-section-header.inverse p { color: #8fa1b4; }
@@ -392,6 +419,7 @@ const sections = [
     .track-grid { grid-template-columns: repeat(2, 1fr); }
     .latest-layout { grid-template-columns: 1fr; }
     .digest-rail { position: static; }
+    .path-preview-grid { grid-template-columns:repeat(2,1fr); }
   }
 
   @media (max-width: 680px) {
@@ -405,5 +433,7 @@ const sections = [
     .track-grid,
     .latest-grid { grid-template-columns: 1fr; }
     .track-card { min-height: 300px; }
+    .path-preview-grid { grid-template-columns:1fr; }
+    .path-preview-grid > a { min-height:210px; }
   }
 </style>

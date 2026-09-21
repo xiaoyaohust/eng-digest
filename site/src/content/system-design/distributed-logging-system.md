@@ -11,6 +11,7 @@ tags:
 level:
   - staff
   - principal
+topic: "Observability & Data Platforms"
 featured: true
 draft: false
 socialImage:
@@ -20,18 +21,23 @@ socialImage:
   height: 627
 practice:
   - question: "At what point should the ingestion service acknowledge a batch to the log agent?"
+    topic: "Durability"
     hint: "The acknowledgement should not depend on either the search cluster or object storage."
     answer: "Acknowledge after the batch has been durably appended to Kafka with replication, for example acks=all with an adequate minimum in-sync replica count. Indexing and archival remain asynchronous."
   - question: "Why should object storage, rather than OpenSearch, be the long-term source of truth?"
+    topic: "Storage"
     hint: "Compare durability, cost, rebuildability, and the write amplification of a search index."
     answer: "Object storage is cheaper, highly durable, and suitable for petabyte-scale retention. OpenSearch is an expensive serving index optimized for interactive queries; it should be rebuildable from archived data if the cluster is corrupted or mappings change."
   - question: "How would you partition Kafka without creating a hot partition for a very large tenant?"
+    topic: "Partitioning"
     hint: "Tenant identity alone is too coarse, while a random event ID loses all useful source ordering."
     answer: "Hash tenant_id together with source_id so sources from the same tenant spread across partitions while preserving best-effort per-source order. Stripe an exceptionally hot source with sequence_no modulo N when scale matters more than strict order."
   - question: "How do you support arbitrary structured attributes without causing OpenSearch mapping explosion?"
+    topic: "Indexing"
     hint: "Stored fields and indexed fields do not have to be the same set."
     answer: "Archive the complete attribute map in object storage, but index only a typed allowlist of frequently queried fields. Other attributes remain stored but unindexed or use a flattened representation, preventing millions of dynamic mappings."
   - question: "Why should live tail consume the streaming path instead of polling OpenSearch?"
+    topic: "Streaming"
     hint: "Consider 100,000 connected users polling once per second."
     answer: "Polling turns live tail into a large search workload and adds refresh latency. A finite pool of tail workers can consume normalized Kafka partitions once, route events to matching tenant and service subscriptions, and fan them out over SSE or WebSockets."
 ---

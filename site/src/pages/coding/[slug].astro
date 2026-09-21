@@ -3,6 +3,7 @@ import { render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { published, findRelated, allCandidates } from "@/lib/content";
 import { readingTime } from "@/lib/url";
+import { findLearningPathForHref } from "@/data/learningPaths";
 
 export async function getStaticPaths() {
   const entries = await published("coding");
@@ -21,6 +22,14 @@ const { Content, headings } = await render(entry);
 
 const candidates = await allCandidates();
 const related = findRelated(entry.data.tags, candidates, `/coding/${entry.id}/`);
+const articleHref = `/coding/${entry.id}/`;
+const path = findLearningPathForHref(articleHref);
+const socialImage = entry.data.socialImage ?? {
+  src: `/social/auto/coding/${entry.id}.png`,
+  alt: `${entry.data.title} social preview`,
+  width: 1200,
+  height: 627,
+};
 ---
 
 <ArticleLayout
@@ -36,7 +45,10 @@ const related = findRelated(entry.data.tags, candidates, `/coding/${entry.id}/`)
   next={nextEntry && { title: nextEntry.data.title, href: `/coding/${nextEntry.id}/` }}
   related={related}
   practice={entry.data.practice}
-  socialImage={entry.data.socialImage}
+  practiceKey={`coding/${entry.id}`}
+  socialImage={socialImage}
+  sectionHref="/coding/"
+  relatedPath={path && { title: path.title, href: `/learning-paths/${path.slug}/` }}
 >
   <Content />
 </ArticleLayout>

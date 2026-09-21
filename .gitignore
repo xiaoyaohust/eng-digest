@@ -118,6 +118,7 @@ site/dist/
 site/.astro/
 site/src/content/generated-digests/
 site/src/content/generated-weekly/
+site/public/social/auto/
 
 # mypy
 .mypy_cache/
