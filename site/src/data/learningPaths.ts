@@ -81,11 +81,11 @@ export const learningPaths: LearningPath[] = [
     audience: "Senior · Interview loop",
     steps: [
       {
-        id: "lru-cache",
-        title: "Refresh an interview-ready data structure",
-        description: "Review LRU cache operations, invariants, complexity, and common follow-up questions.",
-        href: "/coding/lru-cache/",
-        duration: 25,
+        id: "versioned-social-graph",
+        title: "Build a versioned social graph",
+        description: "Practice logical time, edge-history intervals, historical queries, recommendations, and snapshot diffs.",
+        href: "/coding/versioned-social-graph/",
+        duration: 40,
         kind: "read",
       },
       {
@@ -235,7 +235,7 @@ export const learningPaths: LearningPath[] = [
     steps: [
       { id: "day-01", title: "Day 1 · Requirements", description: "Frame functional and non-functional requirements.", href: "/system-design/distributed-logging-system/#scope-and-requirements", duration: 25, kind: "read" },
       { id: "day-02", title: "Day 2 · Estimation", description: "Recalculate capacity without looking at the worked answer.", href: "/system-design/distributed-logging-system/#capacity-estimation", duration: 25, kind: "practice" },
-      { id: "day-03", title: "Day 3 · Coding pattern", description: "Implement or explain the LRU cache invariants.", href: "/coding/lru-cache/", duration: 35, kind: "practice" },
+      { id: "day-03", title: "Day 3 · Versioned graph", description: "Implement O(1) snapshots with logical time and edge-history intervals.", href: "/coding/versioned-social-graph/", duration: 40, kind: "practice" },
       { id: "day-04", title: "Day 4 · Architecture", description: "Redraw the logging architecture from memory.", href: "/system-design/distributed-logging-system/#high-level-architecture", duration: 30, kind: "practice" },
       { id: "day-05", title: "Day 5 · Delivery semantics", description: "Explain acknowledgement, retry, and deduplication.", href: "/system-design/distributed-logging-system/#reliable-ingestion-and-acknowledgement", duration: 25, kind: "read" },
       { id: "day-06", title: "Day 6 · Decision lab", description: "Tune a high-throughput API scenario.", href: "/architecture-lab/?preset=api", duration: 25, kind: "lab" },
