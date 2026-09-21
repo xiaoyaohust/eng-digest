@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-09-21</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-09-21</p>
+        <div class="stats">
+            <span class="stat-item"><strong>17</strong> articles</span>
+            <span class="stat-item"><strong>7</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Airbnb Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://medium.com/airbnb-engineering/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon-8f1582578553?source=rss----53c7c27702d5---4" target="_blank" rel="noopener noreferrer">
+                                The guest journey, updated in real time: extending Airbnb’s sequence recommender with Chronon
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-17 17:01</p>
+                    <p class="article-summary">Offline, the sequence encoder would run as a scheduled batch job: each night, it would process the previous day’s guest activity and write a fresh embedding to a low-latency store for any guest who had something new to show for it NRT Model Transform lets Chronon call an already-deployed model — in our case, the same Transformer sequence encoder from the batch pipeline — directly from within the streaming flow, and write the result back as a feature value that is immediately available for serving.IntegrationCombining the two, our new pipeline works like this: a guest’s activity event, such as a page view or a new search, is captured by a streaming job that merges it with the guest’s existing long-term and short-term sequence data This post closes the remaining gap: making sure that understanding reflects a guest’s most recent activity, not just what they did as of last night’s batch run.By combining Push Mode’s event-driven triggering with NRT Model Transform’s in-pipeline model inference, we turned a daily batch process into a near-real-time one, cutting effective staleness from roughly two days to less than a minute, and improving offline ranking quality by +1.67% NDCG in the process</p>
+                    
+                    <a href="https://medium.com/airbnb-engineering/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon-8f1582578553?source=rss----53c7c27702d5---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5---4" target="_blank" rel="noopener noreferrer">
+                                Beyond the model: Engineering AI infra with scientific judgement
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-15 17:06</p>
+                    <p class="article-summary">That is the idea behind the agent harness we built for data science: the methodology itself, built as infrastructure around the model Because the mechanical parts of investigations can scale and parallelize, we are able to spend more time on the careful parts of an investigation: directly inspecting the most ambiguous or strategic data that helps us deeply understand the product, testing hypotheses and groupings, and building a robust qualitative and quantitative understanding of our data and products These systems form a larger agentic environment reshaping our day to day work in domains well beyond just data science.A harness can be useful wherever experts carry a methodology worth encoding: legal review, policy analysis, any field where the method is as much the product as the answer</p>
+                    
+                    <a href="https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb?source=rss----53c7c27702d5---4" target="_blank" rel="noopener noreferrer">
+                                Project Lighthouse — Part 3: Introducing project-lighthouse-anonymize
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-08-25 17:01</p>
+                    <p class="article-summary">We’ve put this code into open source, and published two new technical papers detailing the scalable algorithms and data quality frameworks behind it.By: Adam BloomstonIntroductionIn 2020, we launched Project Lighthouse, which we developed in partnership with leading civil rights and privacy organizations Our results, shared in 2024, demonstrate how we use these analyses to measure our progress in mitigating those disparities.Earlier this year, we open-sourced project-lighthouse-anonymize, the Python library that powers Project Lighthouse’s anonymization process Together with our original 2020 paper, these three papers form a complete story: the foundational methodology, the scalable implementation, and the quality validation framework.The foundational methodology (2020)Our original 2020 paper established the privacy-by-design approach for Project Lighthouse and provides the rationale for choosing k-anonymity as the technical privacy model to prevent sensitive attribute disclosure at scale</p>
+                    
+                    <a href="https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb?source=rss----53c7c27702d5---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Cloudflare Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener noreferrer">
+                                Python Workers are now generally available
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-21 13:00</p>
+                    <p class="article-summary">Python Workers allow developers to run Python web frameworks and AI orchestration libraries natively in the Cloudflare Workers runtime You can seamlessly integrate with Cloudflare's ecosystem including D1, R2, and Workers AI without writing any JavaScript glue code.</p>
+                    
+                    <a href="https://blog.cloudflare.com/python-workers-ga/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" rel="noopener noreferrer">
+                                Saving another 100TB of RAM with math (and Rust)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-18 17:23</p>
+                    <p class="article-summary">Cloudflare's global network is immense but not limitless As we look for small ways to trim our resource usage, we sometimes get lucky and we can cut significantly more Here’s how we reduced one of our Pingora-based service's RAM usage with statistics.</p>
+                    
+                    <a href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/" target="_blank" rel="noopener noreferrer">
+                                When scanners miss the attack: how Cloudflare Client-Side Security protects storefronts
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-16 20:06</p>
+                    <p class="article-summary">A modern storefront can look healthy while malicious JavaScript quietly siphons revenue, hijacks clicks, or rewrites analytics See how Cloudflare's machine learning models surface evasive client-side attacks for analyst investigation.</p>
+                    
+                    <a href="https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Dropbox Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://dropbox.tech/developers/new-dropbox-api-documentation" target="_blank" rel="noopener noreferrer">
+                                Introducing Our New Dropbox API Documentation
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-21 14:30</p>
+                    <p class="article-summary">Learn about the newly launched version of the Dropbox API documentation and its modern design and features.</p>
+                    
+                    <a href="https://dropbox.tech/developers/new-dropbox-api-documentation" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/" target="_blank" rel="noopener noreferrer">
+                                Agent Plugins package your skills, tools, and more
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-21 15:38</p>
+                    <p class="article-summary">Agent Plugins 1.0.0 is a new, vendor-neutral directory specification—backed by Google, Amazon, Microsoft, and others—for packaging Agent Skills and MCP servers into a single portable unit By standardizing the manifest (plugin.json) and utilizing a fixed directory layout, it eliminates the need for developers to maintain separate wrappers or configurations to support different AI coding agents and IDEs Google has officially joined as a Core Maintainer and already rolled out support in the Agents CLI and Data Agent Kit, allowing developers to start building and distributing interoperable plugins today.</p>
+                    
+                    <a href="https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/" target="_blank" rel="noopener noreferrer">
+                                Mastering Edge AI on Raspberry Pi with LiteRT and Gemma
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-21 15:38</p>
+                    <p class="article-summary">Deploying secure, real-time Edge AI on Raspberry Pi is now simplified using LiteRT and lightweight Gemma open models LiteRT optimizes CPU and GPU performance, delivering fast token speeds for models like Gemma4, enabling real-time local reasoning for robotics Developers can quickly convert, quantize, and run these models using the lightweight LiteRT CLI tool</p>
+                    
+                    <a href="https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/" target="_blank" rel="noopener noreferrer">
+                                Why Go is an Ideal Language for AI-Assisted Software Engineering
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-21 15:38</p>
+                    <p class="article-summary">As AI coding assistants shift the developer's primary role from writing boilerplate to reviewing and maintaining systems, language choice becomes critical for long-term architectural integrity Go directly addresses this new paradigm by utilizing its strict compiler, integrated toolchain, and uncompromising readability to provide deterministic guardrails that help AI models self-correct and generate highly standardized code By enforcing ecosystem-wide consistency and strict backward compatibility, the Go platform empowers engineering teams to efficiently verify, optimize, and maintain high-velocity, AI-generated output in production environments.</p>
+                    
+                    <a href="https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" target="_blank" rel="noopener noreferrer">
+                                Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-21 12:00</p>
+                    <p class="article-summary">Petal, the next step in Meta’s subsea innovation, will be the first subsea cable to deliver petabit capacity at transoceanic distances, connecting France and the United States over approximately 7,000 km (4,300 mi) Expected to enter service in 2029, it will be the first subsea cable system to deploy multi-core fiber technology at scale, doubling [...] Read More The post Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Shopify Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://shopify.engineering/shop-app-migration" target="_blank" rel="noopener noreferrer">
+                                Migrating Shop app from React Native to native
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-10 12:27</p>
+                    <p class="article-summary">We migrated the Shop app from React Native to Swift and Kotlin Assisted by AI, the team was able to go from a proof of concept to a fully rebuilt native app published in the app stores in just 12 weeks.</p>
+                    
+                    <a href="https://shopify.engineering/shop-app-migration" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://shopify.engineering/back-to-native" target="_blank" rel="noopener noreferrer">
+                                Native is now the future of mobile at Shopify
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-10 12:25</p>
+                    <p class="article-summary">Coding agents changed what it costs to build mobile apps twice Here’s why Shopify is moving from React Native back to Swift and Kotlin.</p>
+                    
+                    <a href="https://shopify.engineering/back-to-native" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://shopify.engineering/river-vulnerability-remediation" target="_blank" rel="noopener noreferrer">
+                                How River takes security work from a fix to merge
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-02 16:30</p>
+                    <p class="article-summary">River, Shopify’s AI agent in Slack, enables autonomous vulnerability remediation, not just detection.</p>
+                    
+                    <a href="https://shopify.engineering/river-vulnerability-remediation" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Spotify Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" target="_blank" rel="noopener noreferrer">
+                                AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-16 19:13</p>
+                    <p class="article-summary">Quality and reliability have always been a point of pride for Spotify The post AI Changed How Spotify Builds What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</p>
+                    
+                    <a href="https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" rel="noopener noreferrer">
+                                Why Spotify Is Not Using Bayesian A/B Testing
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-08 13:18</p>
+                    <p class="article-summary">Clearing the confusion about what Bayesian A/B testing is The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</p>
+                    
+                    <a href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" rel="noopener noreferrer">
+                                Portal by Spotify cut my Claude Code token usage by 90%
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-03 16:06</p>
+                    <p class="article-summary">Most of what an AI coding agent does for me isn't thinking It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</p>
+                    
+                    <a href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-09-21 15:38:22</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
