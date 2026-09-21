@@ -3,15 +3,14 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import DigestCard from "@/components/DigestCard.astro";
 import WeeklyDigestCard from "@/components/WeeklyDigestCard.astro";
 import { withBase } from "@/lib/url";
-import { publishedDigests, publishedWeeklyDigests } from "@/lib/content";
+import { publishedDigests, publishedWeeklyDigests, DIGEST_PAGE_SIZE } from "@/lib/content";
 import Pagination from "@/components/Pagination.astro";
 import NewsletterSignup from "@/components/NewsletterSignup.astro";
 
 const [digests, weeklyDigests] = await Promise.all([publishedDigests(), publishedWeeklyDigests()]);
 const latestWeek = weeklyDigests[0];
-const PAGE_SIZE = 24;
-const pageDigests = digests.slice(0, PAGE_SIZE);
-const totalPages = Math.ceil(digests.length / PAGE_SIZE);
+const pageDigests = digests.slice(0, DIGEST_PAGE_SIZE);
+const totalPages = Math.ceil(digests.length / DIGEST_PAGE_SIZE);
 const monthCounts = digests.reduce((map, entry) => {
   const month = entry.data.date.toISOString().slice(0, 7);
   map.set(month, (map.get(month) ?? 0) + 1);

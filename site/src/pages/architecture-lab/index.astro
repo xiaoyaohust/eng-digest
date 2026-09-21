@@ -93,16 +93,26 @@ import { withBase } from "@/lib/url";
         </div>
       </section>
 
-      <section class="result-panel" aria-labelledby="recommendation-title" aria-live="polite">
+      <!--
+        No aria-live on this panel: it re-renders in full on every slider tick,
+        so a live region here makes a screen reader read out four metrics, six
+        decisions and two lists dozens of times during one drag. A short,
+        debounced status line below carries the headline numbers instead.
+      -->
+      <section class="result-panel" aria-labelledby="recommendation-title">
         <div class="panel-head">
           <div><span class="eyebrow">02 / DECISIONS</span><h2 id="recommendation-title">Recommended starting point</h2></div>
           <button type="button" class="copy-button-lab" data-copy-summary>Copy design brief</button>
         </div>
 
+        <p class="lab-live-status" data-lab-status aria-live="polite"></p>
+
         <div class="metric-grid">
-          <article><span>INGRESS</span><strong data-metric="ingress">20 MB/s</strong><small>uncompressed peak</small></article>
-          <article><span>DAILY DATA</span><strong data-metric="daily">1.73 TB</strong><small>before compression</small></article>
-          <article><span>RETENTION</span><strong data-metric="stored">51.8 TB</strong><small>raw logical volume</small></article>
+          <!-- Placeholders match what recommend() computes for the default
+               state, so the panel is still correct with JS disabled. -->
+          <article><span>INGRESS</span><strong data-metric="ingress">19.5 MB/s</strong><small>uncompressed peak</small></article>
+          <article><span>DAILY DATA</span><strong data-metric="daily">1.6 TB</strong><small>before compression</small></article>
+          <article><span>RETENTION</span><strong data-metric="stored">48.3 TB</strong><small>raw logical volume</small></article>
           <article><span>PARTITIONS</span><strong data-metric="partitions">3</strong><small>starting stream width</small></article>
         </div>
 
@@ -213,9 +223,33 @@ import { withBase } from "@/lib/url";
     };
   }
 
+  // A lab URL is meant to be shared, so it will arrive hand-edited, truncated
+  // by a chat client, or carrying values from an older version of this page.
+  // Assigning an unknown value to a <select> blanks the control and makes the
+  // state read back as 0 / "", which silently changes the recommendation
+  // instead of failing visibly — so every incoming value is checked first.
+  function sanitizeValue(key, value) {
+    const input = inputs[key];
+    if (!input) return null;
+    const raw = String(value);
+    if (input.tagName === "SELECT") {
+      return Array.from(input.options).some((option) => option.value === raw) ? raw : null;
+    }
+    const numeric = Number(raw);
+    if (!Number.isFinite(numeric)) return null;
+    const min = Number(input.min);
+    const max = Number(input.max);
+    const clamped = Math.min(
+      Math.max(numeric, Number.isFinite(min) ? min : numeric),
+      Number.isFinite(max) ? max : numeric
+    );
+    return String(clamped);
+  }
+
   function applyState(state) {
     Object.entries(state).forEach(([key, value]) => {
-      if (inputs[key]) inputs[key].value = String(value);
+      const safe = sanitizeValue(key, value);
+      if (safe !== null) inputs[key].value = safe;
     });
     update();
   }
@@ -293,10 +327,33 @@ import { withBase } from "@/lib/url";
     return { ingressMb, dailyTb, storedTb, partitions, database, databaseReason, cache, cacheReason, stream, streamReason, storage, storageReason, replication, replicationReason, readPath, readPathReason, pressures, tradeoffs, highScale, longRetention };
   }
 
-  function updateUrl(state) {
+  function buildQuery(state) {
     const params = new URLSearchParams();
     Object.entries(state).forEach(([key, value]) => params.set(key, String(value)));
-    history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
+    return params.toString();
+  }
+
+  let urlTimer;
+  let pendingAnnouncement = "";
+  function announce(message) {
+    const status = root?.querySelector("[data-lab-status]");
+    if (status) status.textContent = message;
+  }
+
+  function updateUrl(query) {
+    // Range inputs fire `input` continuously while dragging, and Safari throws
+    // a SecurityError after roughly 100 history calls in 30 seconds — which
+    // would kill the update loop part-way through a single slider drag. The
+    // visible panel still updates on every tick; only the address bar waits.
+    clearTimeout(urlTimer);
+    urlTimer = setTimeout(() => {
+      try {
+        history.replaceState(null, "", `${location.pathname}?${query}`);
+      } catch {
+        /* History throttled or unavailable; the lab itself is unaffected. */
+      }
+      announce(pendingAnnouncement);
+    }, 250);
   }
 
   function update() {
@@ -321,7 +378,12 @@ import { withBase } from "@/lib/url";
     setList("[data-pressure-list]", result.pressures);
     setList("[data-tradeoff-list]", result.tradeoffs);
     root.dataset.scale = result.highScale ? "high" : "standard";
-    updateUrl(state);
+    // Built here rather than read back from location.href: the address bar is
+    // written on a debounce, so reading it would put a stale link in the brief.
+    const query = buildQuery(state);
+    const shareUrl = `${location.origin}${location.pathname}?${query}`;
+    pendingAnnouncement = `${formatNumber(state.qps)} QPS, ${state.consistency} consistency, ${state.regions} region(s): ${result.database}, ${result.stream}, ${result.storage}. Ingress ${formatNumber(result.ingressMb)} megabytes per second, ${result.partitions} partitions.`;
+    updateUrl(query);
     root._summary = [
       "Architecture Decision Lab — Design Brief",
       `Peak traffic: ${formatNumber(state.qps)} QPS`,
@@ -340,7 +402,7 @@ import { withBase } from "@/lib/url";
       `Storage: ${result.storage}`,
       `Replication: ${result.replication}`,
       "",
-      `Explore: ${location.href}`,
+      `Explore: ${shareUrl}`,
     ].join("\n");
   }
 
@@ -394,6 +456,9 @@ import { withBase } from "@/lib/url";
   .control-panel, .result-panel { border: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-bg-raised) 94%, transparent); box-shadow: var(--shadow-card); }
   .control-panel { position: sticky; top: 92px; }
   .panel-head { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; padding: 20px 22px; border-bottom: 1px solid var(--color-border); }
+  /* Visually hidden: this exists only to give screen readers a short, debounced
+     summary in place of a live region over the whole re-rendering panel. */
+  .lab-live-status { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
   .panel-head h2 { margin: 5px 0 0; font-family: var(--font-display); font-size: 1.55rem; letter-spacing: -0.035em; }
   .reset-button, .copy-button-lab { padding: 7px 9px; border: 1px solid var(--color-border-strong); border-radius: 4px; background: var(--color-bg-inset); color: var(--color-text-muted); cursor: pointer; font-family: var(--font-mono); font-size: 0.62rem; }
   .presets { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border-bottom: 1px solid var(--color-border); background: var(--color-border); }

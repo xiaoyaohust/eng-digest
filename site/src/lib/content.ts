@@ -1,5 +1,13 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 
+/** Digests per page of the daily archive.
+ *
+ * Page 1 is rendered by pages/eng-digest/index.astro and pages 2..n by
+ * pages/eng-digest/page/[page].astro. Both slice the same sorted list, so if
+ * they disagree the archive silently repeats or skips whole days at the
+ * boundary — hence one constant rather than a literal in each file. */
+export const DIGEST_PAGE_SIZE = 24;
+
 /** Non-draft entries, newest first. Draft filtering happens once, here,
  * so no page template has to remember to do it itself. */
 export async function published<C extends "system-design" | "coding" | "interviews">(

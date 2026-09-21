@@ -75,10 +75,14 @@ const structuredData = [
     description,
     datePublished: date.toISOString(),
     dateModified: (updated ?? date).toISOString(),
-    mainEntityOfPage: canonical,
+    // Google expects mainEntityOfPage as a node, not a bare URL string, and
+    // reports a missing `author` as a warning in the Rich Results test — which
+    // is the whole point of emitting this.
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     ...(imageURL ? { image: [imageURL] } : {}),
     articleSection: sectionName,
     keywords: tags.join(", "),
+    author: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
     publisher: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
   },
   {

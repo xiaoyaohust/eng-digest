@@ -147,11 +147,32 @@ const { questions, storageKey } = Astro.props;
     const deck = root.querySelector<HTMLElement>("[data-practice-deck]");
     const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-question-index]"));
     const storageKey = `eng-knowledge-practice:v2:${root.dataset.storageKey ?? "article"}`;
-    const defaultState: SavedPractice = { ratings:{}, favorites:[], order:cards.map((card) => card.dataset.questionIndex ?? "") };
-    let saved: SavedPractice = defaultState;
-    try { saved = { ...defaultState, ...JSON.parse(localStorage.getItem(storageKey) ?? "{}") }; } catch { saved = defaultState; }
+    const questionIds = cards.map((card) => card.dataset.questionIndex ?? "");
+    // A factory, not a shared object: a spread of it would alias `ratings` and
+    // `favorites`, so rating a question would also mutate the "empty" state
+    // that reset and the parse-failure path fall back to.
+    const makeDefaultState = (): SavedPractice => ({ ratings:{}, favorites:[], order:[...questionIds] });
+    let saved: SavedPractice = makeDefaultState();
+    try { saved = { ...makeDefaultState(), ...JSON.parse(localStorage.getItem(storageKey) ?? "{}") }; } catch { saved = makeDefaultState(); }
 
-    const persist = () => localStorage.setItem(storageKey, JSON.stringify(saved));
+    // Saved state is keyed by question position, so it only stays meaningful
+    // while the article has the same questions. When a prompt is added,
+    // removed, or reordered, a stale order would drop new cards out of the
+    // shuffle and pin old ratings onto different questions — so any saved
+    // state whose question set no longer matches is discarded.
+    const sameQuestionSet = (order: unknown) =>
+      Array.isArray(order)
+      && order.length === questionIds.length
+      && [...order].sort().join(" ") === [...questionIds].sort().join(" ");
+    if (!sameQuestionSet(saved.order)) saved = makeDefaultState();
+
+    const persist = () => {
+      // Storage can be unavailable or full (private browsing, blocked site
+      // data, quota). Practice still works for this page view; only the
+      // saving is lost, so a throw here must not break the click handler.
+      try { localStorage.setItem(storageKey, JSON.stringify(saved)); }
+      catch { /* Ratings remain in memory for the current page session. */ }
+    };
     const renderSummary = () => {
       const values = Object.values(saved.ratings);
       const points = values.reduce((sum, value) => sum + (value === "know" ? 2 : value === "unsure" ? 1 : 0), 0);
@@ -216,7 +237,15 @@ const { questions, storageKey } = Astro.props;
     });
 
     root.querySelector<HTMLButtonElement>("[data-shuffle]")?.addEventListener("click", () => {
-      saved.order = [...saved.order].sort(() => Math.random() - .5); persist(); applySavedState();
+      // Fisher-Yates. `sort(() => Math.random() - 0.5)` is not a shuffle: the
+      // comparator is inconsistent, so the result is biased towards the
+      // original order and some permutations never occur.
+      const order = [...saved.order];
+      for (let i = order.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      saved.order = order; persist(); applySavedState();
     });
 
     let seconds = 900;
@@ -230,7 +259,7 @@ const { questions, storageKey } = Astro.props;
       interval = window.setInterval(() => { seconds = Math.max(0,seconds-1); renderTimer(); if (seconds === 0 && interval) { window.clearInterval(interval); interval=undefined; if (timerToggle) timerToggle.textContent="Done"; } },1000);
     });
     root.querySelector<HTMLButtonElement>("[data-timer-reset]")?.addEventListener("click", () => { if (interval) window.clearInterval(interval); interval=undefined; seconds=900; renderTimer(); if (timerToggle) timerToggle.textContent="Start"; });
-    root.querySelector<HTMLButtonElement>("[data-reset-session]")?.addEventListener("click", () => { saved={ ...defaultState, ratings:{}, favorites:[], order:[...defaultState.order] }; persist(); applySavedState(); });
+    root.querySelector<HTMLButtonElement>("[data-reset-session]")?.addEventListener("click", () => { saved = makeDefaultState(); persist(); applySavedState(); });
     applySavedState();
   });
 </script>

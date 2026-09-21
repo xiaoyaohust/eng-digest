@@ -2,11 +2,10 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import DigestCard from "@/components/DigestCard.astro";
 import Pagination from "@/components/Pagination.astro";
-import { publishedDigests } from "@/lib/content";
+import { publishedDigests, DIGEST_PAGE_SIZE as pageSize } from "@/lib/content";
 import { withBase } from "@/lib/url";
 
 export async function getStaticPaths() {
-  const pageSize = 24;
   const digests = await publishedDigests();
   const totalPages = Math.ceil(digests.length / pageSize);
   return Array.from({ length: Math.max(totalPages - 1, 0) }, (_, index) => {
