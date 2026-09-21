@@ -42,9 +42,13 @@ the normal website deployment and avoids generating a Digest for ordinary conten
 
 ## Local production check
 
+Node 22.19 or newer is required; `npm ci` refuses to run on anything older
+(`engines` in `site/package.json`, enforced by `engine-strict` in `site/.npmrc`).
+
 ```bash
 cd site
 npm ci
+npm test
 npm run check
 npm run build
 npm run preview

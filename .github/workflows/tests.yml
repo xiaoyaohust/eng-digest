@@ -23,6 +23,8 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
+          # Keep in step with build-deploy-site.yml; site/package.json's
+          # `engines` field holds the actual floor (Node >=22.19).
           node-version: "22"
           cache: npm
           cache-dependency-path: site/package-lock.json
@@ -34,6 +36,27 @@ jobs:
       - name: Test client-side feature logic
         working-directory: site
         run: npm test
+
+      # build-deploy-site.yml type-checks and builds, but it only runs on a
+      # push to main — so without these two steps a pull request could pass
+      # every check here and still break the site the moment it merged. The
+      # build also runs check-internal-links, which is the only thing that
+      # catches a broken route or asset path.
+      - name: Import Engineering Digest markdown
+        working-directory: site
+        run: npm run import-digests
+
+      - name: Type-check and validate content schemas
+        working-directory: site
+        env:
+          PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
+        run: npm run check
+
+      - name: Build site
+        working-directory: site
+        env:
+          PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
+        run: npm run build
 
   pytest:
     runs-on: ubuntu-latest

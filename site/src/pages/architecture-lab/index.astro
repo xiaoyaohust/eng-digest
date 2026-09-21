@@ -180,7 +180,6 @@ import { withBase } from "@/lib/url";
 </BaseLayout>
 
 <script>
-  // @ts-nocheck -- DOM elements are fixed by this page's static template.
   import {
     buildLabQuery,
     labDefaults,
@@ -188,23 +187,27 @@ import { withBase } from "@/lib/url";
     parseLabParams,
     recommendArchitecture,
     sanitizeLabValue,
+    type LabState,
   } from "@/lib/architectureLab";
 
-  const root = document.querySelector("[data-architecture-lab]");
-  const inputs = Object.fromEntries(
-    Array.from(root?.querySelectorAll("[data-input]") || []).map((input) => [input.dataset.input, input])
+  type LabControl = HTMLInputElement | HTMLSelectElement;
+  const labKeys = Object.keys(labDefaults) as (keyof LabState)[];
+
+  const root = document.querySelector<HTMLElement>("[data-architecture-lab]");
+  const inputs: Partial<Record<keyof LabState, LabControl>> = Object.fromEntries(
+    Array.from(root?.querySelectorAll<LabControl>("[data-input]") ?? []).map((input) => [input.dataset.input, input])
   );
 
-  function formatNumber(value) {
+  function formatNumber(value: number): string {
     return new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(value);
   }
 
-  function setText(selector, value) {
+  function setText(selector: string, value: string): void {
     const element = root?.querySelector(selector);
     if (element) element.textContent = value;
   }
 
-  function setList(selector, items) {
+  function setList(selector: string, items: string[]): void {
     const list = root?.querySelector(selector);
     if (!list) return;
     list.replaceChildren(...items.map((item) => {
@@ -214,33 +217,45 @@ import { withBase } from "@/lib/url";
     }));
   }
 
-  function readState() {
-    return {
-      qps: Number(inputs.qps.value),
-      sizeKb: Number(inputs.sizeKb.value),
-      latency: Number(inputs.latency.value),
-      consistency: inputs.consistency.value,
-      retention: Number(inputs.retention.value),
-      regions: Number(inputs.regions.value),
-    };
+  /** Read the controls back as a valid LabState.
+   *
+   * The DOM normally constrains these (a range clamps, a select only holds its
+   * own options), but this is the one path that reaches recommendArchitecture
+   * without passing through sanitizeLabValue — so anything unexpected, from a
+   * restored form state to an extension rewriting a control, would otherwise
+   * produce a confident recommendation from nonsense input. Falling back to
+   * the default for that field keeps the panel honest. */
+  function readState(): LabState {
+    const state = { ...labDefaults };
+    labKeys.forEach((key) => {
+      const input = inputs[key];
+      if (!input) return;
+      const value = sanitizeLabValue(key, input.value);
+      if (value !== null) (state[key] as LabState[typeof key]) = value;
+    });
+    return state;
   }
 
-  function applyState(state) {
-    Object.entries(state).forEach(([key, value]) => {
-      const safe = sanitizeLabValue(key, value);
-      if (safe !== null && inputs[key]) inputs[key].value = String(safe);
+  function applyState(state: LabState): void {
+    labKeys.forEach((key) => {
+      const input = inputs[key];
+      const safe = sanitizeLabValue(key, state[key]);
+      if (safe !== null && input) input.value = String(safe);
     });
     update();
   }
 
-  let urlTimer;
+  let urlTimer: ReturnType<typeof setTimeout> | undefined;
   let pendingAnnouncement = "";
-  function announce(message) {
+  // The design brief lives here rather than on the DOM node, so it is typed
+  // and cannot be clobbered by anything else touching the element.
+  let designBrief = "";
+  function announce(message: string): void {
     const status = root?.querySelector("[data-lab-status]");
     if (status) status.textContent = message;
   }
 
-  function updateUrl(query) {
+  function updateUrl(query: string): void {
     // Range inputs fire `input` continuously while dragging, and Safari throws
     // a SecurityError after roughly 100 history calls in 30 seconds — which
     // would kill the update loop part-way through a single slider drag. The
@@ -256,7 +271,7 @@ import { withBase } from "@/lib/url";
     }, 250);
   }
 
-  function update() {
+  function update(): void {
     const state = readState();
     const result = recommendArchitecture(state);
     setText("[data-qps-output]", formatNumber(state.qps));
@@ -267,9 +282,16 @@ import { withBase } from "@/lib/url";
     setText('[data-metric="stored"]', `${formatNumber(result.storedTb)} TB`);
     setText('[data-metric="partitions"]', String(result.partitions));
 
-    ["database", "cache", "stream", "storage", "replication", "readPath"].forEach((key) => {
-      setText(`[data-decision="${key}"]`, result[key]);
-      setText(`[data-reason="${key}"]`, result[`${key}Reason`]);
+    ([
+      ["database", result.database, result.databaseReason],
+      ["cache", result.cache, result.cacheReason],
+      ["stream", result.stream, result.streamReason],
+      ["storage", result.storage, result.storageReason],
+      ["replication", result.replication, result.replicationReason],
+      ["readPath", result.readPath, result.readPathReason],
+    ] as const).forEach(([key, decision, reason]) => {
+      setText(`[data-decision="${key}"]`, decision);
+      setText(`[data-reason="${key}"]`, reason);
     });
     setText('[data-node="edge"]', state.regions > 1 ? "Geo Router" : "Load Balancer");
     setText('[data-node="compute"]', result.highScale ? "Autoscaled Services" : "Stateless Service");
@@ -277,14 +299,14 @@ import { withBase } from "@/lib/url";
     setText('[data-node="state"]', result.database);
     setList("[data-pressure-list]", result.pressures);
     setList("[data-tradeoff-list]", result.tradeoffs);
-    root.dataset.scale = result.highScale ? "high" : "standard";
+    if (root) root.dataset.scale = result.highScale ? "high" : "standard";
     // Built here rather than read back from location.href: the address bar is
     // written on a debounce, so reading it would put a stale link in the brief.
     const query = buildLabQuery(state);
     const shareUrl = `${location.origin}${location.pathname}?${query}`;
     pendingAnnouncement = `${formatNumber(state.qps)} QPS, ${state.consistency} consistency, ${state.regions} region(s): ${result.database}, ${result.stream}, ${result.storage}. Ingress ${formatNumber(result.ingressMb)} megabytes per second, ${result.partitions} partitions.`;
     updateUrl(query);
-    root._summary = [
+    designBrief = [
       "Architecture Decision Lab — Design Brief",
       `Peak traffic: ${formatNumber(state.qps)} QPS`,
       `Payload: ${formatNumber(state.sizeKb)} KB`,
@@ -306,16 +328,16 @@ import { withBase } from "@/lib/url";
     ].join("\n");
   }
 
-  root?.querySelectorAll("[data-input]").forEach((input) => input.addEventListener("input", update));
-  root?.querySelectorAll("[data-preset]").forEach((button) => button.addEventListener("click", () => {
-    const preset = labPresets[button.dataset.preset];
+  root?.querySelectorAll<LabControl>("[data-input]").forEach((input) => input.addEventListener("input", update));
+  root?.querySelectorAll<HTMLButtonElement>("[data-preset]").forEach((button) => button.addEventListener("click", () => {
+    const preset = labPresets[button.dataset.preset ?? ""];
     if (preset) applyState(preset);
   }));
   root?.querySelector("[data-reset]")?.addEventListener("click", () => applyState(labDefaults));
-  root?.querySelector("[data-copy-summary]")?.addEventListener("click", async (event) => {
-    const button = event.currentTarget;
+  root?.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", async (event) => {
+    const button = event.currentTarget as HTMLButtonElement;
     try {
-      await navigator.clipboard.writeText(root._summary || "");
+      await navigator.clipboard.writeText(designBrief);
       button.textContent = "Copied";
       setTimeout(() => { button.textContent = "Copy design brief"; }, 1600);
     } catch { button.textContent = "Copy unavailable"; }
@@ -325,7 +347,7 @@ import { withBase } from "@/lib/url";
   const preset = params.get("preset");
   if (preset && labPresets[preset]) {
     applyState(labPresets[preset]);
-  } else if ([...params.keys()].some((key) => inputs[key])) {
+  } else if (labKeys.some((key) => params.has(key))) {
     applyState(parseLabParams(params));
   } else {
     update();

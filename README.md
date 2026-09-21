@@ -96,6 +96,12 @@ read/unread, favorites, the TUI) and is never uploaded anywhere.
 
 ### Website
 
+Requires **Node 22.19 or newer** (`site/package.json` → `engines`). Astro 7 asks for 22.12,
+but astro's own transitive `undici` needs 22.19, so that is the real floor. `site/.npmrc`
+sets `engine-strict=true`, so an older Node fails at `npm install` with a single
+`EBADENGINE` line instead of surfacing later as TypeScript syntax errors from `npm test` or
+an opaque Astro build failure.
+
 ```bash
 cd site
 npm install
@@ -107,6 +113,7 @@ npm run dev
 
 ```bash
 npm run import-digests   # digests/*.md -> site/src/content/generated-digests/ (gitignored)
+npm test                  # unit tests for the client-side feature logic (src/lib/*)
 npm run check             # TypeScript + content schema validation
 npm run build              # import -> Astro -> Pagefind -> legacy files -> link validation
 npm run preview            # serve the production build locally, incl. search

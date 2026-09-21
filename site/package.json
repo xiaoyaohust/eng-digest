@@ -3,6 +3,9 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
     "predev": "npm run import-digests && npm run generate-social-cards",
     "dev": "astro dev",

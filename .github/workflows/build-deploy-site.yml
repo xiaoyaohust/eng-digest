@@ -37,8 +37,12 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          # Astro 7 and @astrojs/mdx 8 require Node >=22.12. Node 20 lets
-          # npm install finish but makes `astro check` fail in CI.
+          # The floor is Node >=22.19, declared in site/package.json's
+          # `engines` and enforced by engine-strict in site/.npmrc. Astro 7
+          # and @astrojs/mdx 8 ask for >=22.12, but astro's own transitive
+          # undici needs >=22.19, so that is the binding constraint.
+          # Pinned to the 22 major (latest patch) rather than the engines
+          # range, so a new Node major never lands here unreviewed.
           node-version: "22"
           cache: npm
           cache-dependency-path: site/package-lock.json
