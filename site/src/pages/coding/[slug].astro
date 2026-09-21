@@ -36,6 +36,7 @@ const related = findRelated(entry.data.tags, candidates, `/coding/${entry.id}/`)
   next={nextEntry && { title: nextEntry.data.title, href: `/coding/${nextEntry.id}/` }}
   related={related}
   practice={entry.data.practice}
+  socialImage={entry.data.socialImage}
 >
   <Content />
 </ArticleLayout>

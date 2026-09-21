@@ -8,6 +8,9 @@ interface Props {
   title: string;
   description: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: "website" | "article";
   publishedTime?: Date;
   modifiedTime?: Date;
@@ -17,6 +20,9 @@ const {
   title,
   description,
   image,
+  imageAlt,
+  imageWidth,
+  imageHeight,
   type = "website",
   publishedTime,
   modifiedTime,
@@ -45,11 +51,17 @@ const ogImage = resolvedImage ? new URL(resolvedImage, Astro.site).toString() : 
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImage && <meta property="og:image:secure_url" content={ogImage} />}
+    {ogImage && <meta property="og:image:type" content="image/png" />}
+    {ogImage && imageWidth && <meta property="og:image:width" content={String(imageWidth)} />}
+    {ogImage && imageHeight && <meta property="og:image:height" content={String(imageHeight)} />}
+    {ogImage && <meta property="og:image:alt" content={imageAlt ?? title} />}
 
     <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     {ogImage && <meta name="twitter:image" content={ogImage} />}
+    {ogImage && <meta name="twitter:image:alt" content={imageAlt ?? title} />}
 
     {publishedTime && (
       <meta property="article:published_time" content={publishedTime.toISOString()} />

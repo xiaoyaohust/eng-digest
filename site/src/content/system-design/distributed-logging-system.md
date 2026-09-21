@@ -13,6 +13,11 @@ level:
   - principal
 featured: true
 draft: false
+socialImage:
+  src: "/social/distributed-logging-system.png"
+  alt: "Distributed logging pipeline flowing from applications through Kafka to search and object storage"
+  width: 1200
+  height: 627
 practice:
   - question: "At what point should the ingestion service acknowledge a batch to the log agent?"
     hint: "The acknowledgement should not depend on either the search cluster or object storage."

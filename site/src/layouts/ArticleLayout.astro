@@ -18,6 +18,13 @@ interface PracticeQuestion {
   answer: string;
 }
 
+interface SocialImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -31,6 +38,7 @@ interface Props {
   next?: RelatedLink;
   related?: RelatedLink[];
   practice?: PracticeQuestion[];
+  socialImage?: SocialImage;
 }
 
 const {
@@ -46,12 +54,17 @@ const {
   next,
   related = [],
   practice = [],
+  socialImage,
 } = Astro.props;
 ---
 
 <BaseLayout
   title={title}
   description={description}
+  image={socialImage?.src}
+  imageAlt={socialImage?.alt}
+  imageWidth={socialImage?.width}
+  imageHeight={socialImage?.height}
   type="article"
   publishedTime={date}
   modifiedTime={updated}
