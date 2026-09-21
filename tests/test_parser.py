@@ -3,9 +3,10 @@ Unit tests for article parser.
 """
 
 import pytest
-from datetime import datetime, timedelta
+from datetime import timedelta
 from eng_digest.parser import ArticleParser
 from eng_digest.models import Article
+from eng_digest.timeutil import utcnow
 
 
 class TestArticleParser:
@@ -23,7 +24,7 @@ class TestArticleParser:
 
     def test_filter_by_blog_limit(self):
         """Test limiting articles per blog."""
-        now = datetime.now()
+        now = utcnow()
 
         # Create 5 articles from the same blog
         articles = [
@@ -51,7 +52,7 @@ class TestArticleParser:
 
     def test_filter_by_total_limit(self):
         """Test limiting total number of articles."""
-        now = datetime.now()
+        now = utcnow()
 
         # Create 10 articles from different blogs
         articles = [
@@ -84,7 +85,7 @@ class TestArticleParser:
 
     def test_all_articles_too_old(self):
         """Test when all articles are older than lookback window."""
-        now = datetime.now()
+        now = utcnow()
 
         # Create articles all older than 24 hours
         articles = [
@@ -117,7 +118,7 @@ class TestArticleParser:
 
     def test_sorting_by_date(self):
         """Test that articles are sorted by date (newest first)."""
-        now = datetime.now()
+        now = utcnow()
 
         # Create articles in random order
         articles = [

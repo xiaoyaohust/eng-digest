@@ -3,10 +3,11 @@ Article parser for filtering and processing articles.
 """
 
 import logging
-from datetime import datetime, timedelta
+from datetime import timedelta
 from typing import List
 
 from eng_digest.models import Article
+from eng_digest.timeutil import utcnow
 
 logger = logging.getLogger(__name__)
 
@@ -63,7 +64,9 @@ class ArticleParser:
         Returns:
             Articles published within lookback window
         """
-        cutoff_time = datetime.now() - timedelta(hours=self.lookback_hours)
+        # Article dates are naive UTC (see eng_digest.timeutil), so the cutoff
+        # has to be too — otherwise the window shifts by the runner's offset.
+        cutoff_time = utcnow() - timedelta(hours=self.lookback_hours)
 
         filtered = [article for article in articles if article.published >= cutoff_time]
 

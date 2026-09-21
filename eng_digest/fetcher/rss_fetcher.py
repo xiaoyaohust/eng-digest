@@ -14,6 +14,7 @@ import requests
 from dateutil import parser as date_parser
 
 from eng_digest.models import Article, BlogSource
+from eng_digest.timeutil import to_utc_naive, utcnow
 from .base import Fetcher
 
 logger = logging.getLogger(__name__)
@@ -145,7 +146,7 @@ class RSSFetcher(Fetcher):
             entry: Feed entry
 
         Returns:
-            datetime object
+            Naive UTC datetime
         """
         # Try different date fields
         date_fields = ["published", "updated", "created"]
@@ -153,7 +154,7 @@ class RSSFetcher(Fetcher):
         for field in date_fields:
             if field in entry:
                 try:
-                    # feedparser provides parsed dates
+                    # feedparser normalizes *_parsed structs to UTC already.
                     if f"{field}_parsed" in entry and entry[f"{field}_parsed"]:
                         time_struct = entry[f"{field}_parsed"]
                         return datetime(*time_struct[:6])
@@ -163,13 +164,16 @@ class RSSFetcher(Fetcher):
                 # Try parsing the raw date string
                 try:
                     date_str = entry[field]
-                    return date_parser.parse(date_str)
+                    return to_utc_naive(date_parser.parse(date_str))
                 except Exception:
                     pass
 
-        # Default to current time if no date found
+        # Some feeds (Google Developers, for one) ship entries with no date at
+        # all. Treating them as "now" is the only thing that keeps them in the
+        # lookback window; digest-history deduplication is what stops them from
+        # being republished every single day. See eng_digest.history.
         logger.warning(f"No date found for entry: {entry.get('title', 'Unknown')}")
-        return datetime.now()
+        return utcnow()
 
     def _extract_content(self, entry) -> str:
         """

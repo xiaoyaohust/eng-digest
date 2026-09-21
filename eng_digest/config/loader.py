@@ -21,6 +21,10 @@ class FetchConfig:
     lookback_hours: int = 24
     max_posts_per_blog: int = 3
     max_total_posts: int = 10
+    # Skip articles that already appeared in a committed digest under
+    # output.path. On by default: without it, a CI run (where eng_digest.db is
+    # never persisted) republishes the whole lookback window every single day.
+    dedupe_against_digests: bool = True
 
 
 @dataclass
@@ -123,6 +127,7 @@ def load_config(config_path: str) -> Config:
         lookback_hours=fetch_data.get("lookback_hours", 24),
         max_posts_per_blog=fetch_data.get("max_posts_per_blog", 3),
         max_total_posts=fetch_data.get("max_total_posts", 10),
+        dedupe_against_digests=fetch_data.get("dedupe_against_digests", True),
     )
 
     # Parse summary config

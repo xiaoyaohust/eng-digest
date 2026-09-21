@@ -3,8 +3,9 @@ Pytest fixtures and configuration for tests.
 """
 
 import pytest
-from datetime import datetime, timedelta
+from datetime import timedelta
 from eng_digest.models import Article, Summary, BlogSource
+from eng_digest.timeutil import utcnow
 
 
 @pytest.fixture
@@ -24,7 +25,7 @@ def sample_article():
     return Article(
         title="Test Article",
         url="https://example.com/article",
-        published=datetime.now(),
+        published=utcnow(),
         content="This is a test article. It has multiple sentences. This is for testing purposes.",
         source="Test Blog",
         author="Test Author",
@@ -35,7 +36,8 @@ def sample_article():
 @pytest.fixture
 def sample_articles():
     """Create multiple sample articles for testing."""
-    now = datetime.now()
+    # Article dates are naive UTC throughout the pipeline (eng_digest.timeutil).
+    now = utcnow()
 
     articles = [
         Article(
@@ -80,14 +82,15 @@ def sample_summary():
         url="https://example.com/article",
         source="Test Blog",
         keywords=["test", "summary"],
-        published=datetime.now()
+        published=utcnow()
     )
 
 
 @pytest.fixture
 def sample_summaries():
     """Create multiple sample summaries for testing."""
-    now = datetime.now()
+    # Article dates are naive UTC throughout the pipeline (eng_digest.timeutil).
+    now = utcnow()
 
     return [
         Summary(

@@ -42,11 +42,15 @@ are fully responsive.
 ## Engineering Digest
 
 Every day, `eng_digest` fetches engineering blog posts (RSS/Atom, with an HTML-parsing
-fallback), deduplicates against a local SQLite database, summarizes with TextRank, and writes
+fallback), deduplicates, summarizes with TextRank, and writes
 `digests/digest-YYYY-MM-DD.md` (+ `.html`, + `rss.xml`) — committed straight to this repo. The
 website reads that same Markdown at build time (`site/scripts/import-digests.mjs`) and renders
 it at `/eng-digest/YYYY-MM-DD/`; the source files under `digests/` are never modified by the
 import.
+
+Deduplication happens twice: against the local SQLite database, and against the URLs already
+present in the committed `digests/*.md`. The second pass is the one that works in CI, where
+the database is never restored — see [Deduplication](#deduplication).
 
 The SQLite database (`eng_digest.db`) is **local-only** — it powers CLI features (search,
 read/unread, favorites, the TUI) and is never uploaded anywhere.
@@ -160,6 +164,7 @@ eng-digest/
 ├── docs/                    # ARCHITECTURE.md, CONTENT_GUIDE.md
 ├── tests/                   # Python test suite (pytest)
 ├── .github/workflows/
+│   ├── tests.yml                # pytest + config.yml validation on push/PR
 │   ├── daily-digest.yml         # scheduled digest generation + same-run deploy
 │   ├── deploy-site.yml          # website build/deploy on push
 │   └── build-deploy-site.yml    # shared build+deploy logic (reusable workflow)
@@ -216,9 +221,29 @@ Unlike simple first-paragraph extraction, TextRank uses graph-based ranking:
 
 ### Deduplication
 
-Uses a hash of article URLs:
-- **Local CLI**: Full deduplication across all history in SQLite database
-- **GitHub Actions**: Each run starts fresh (no persistent database in CI)
+Two independent passes, both keyed on the article URL:
+
+1. **SQLite** (`eng_digest.db`) — every article ever seen on *this machine*. Local only; the
+   file is gitignored and never restored in CI, so a scheduled run always starts empty.
+2. **Digest history** (`eng_digest/history.py`) — the `**URL:** …` lines of every committed
+   `digests/digest-*.md`. This is what actually holds the line in GitHub Actions, because
+   `digests/` travels with the repository and the database does not.
+
+URLs are canonicalized before comparison: the scheme and host are lowercased, the fragment and
+tracking parameters (`utm_*`, Medium's `?source=rss----…`, `fbclid`, …) are dropped, and a
+trailing slash is ignored — so the same post arriving with a different referral tag is still
+recognized as a duplicate.
+
+Turn the second pass off with `fetch.dedupe_against_digests: false` in `config.yml` if you want
+the old behaviour.
+
+> **History**: before this existed, CI republished the whole lookback window every day — the
+> archive holds 5,263 article entries but only 537 distinct URLs, and 87 pairs of consecutive
+> days are byte-for-byte identical. Digests written from 2026-09-17 onwards are deduplicated;
+> the older files are left as they were.
+
+Because a second run on the same day would now pick a *different* set of articles,
+`eng-digest run` leaves an existing digest for today alone unless you pass `--force`.
 
 ### RSS Feed
 
@@ -236,8 +261,10 @@ eng-digest run --config config.yml
 
 This will:
 1. Fetch articles from configured blogs
-2. Deduplicate against local database
+2. Deduplicate against the local database *and* the already-committed digests
 3. Summarize using TextRank algorithm
+
+Add `--force` to regenerate today's digest when one already exists (it is overwritten).
 4. Generate Markdown, HTML, and RSS outputs
 5. Save articles to database
 
@@ -312,7 +339,9 @@ eng-digest generate-index
 
 Generates the root `index.html` archive page. **Deprecated for the live website** — the Astro
 site at `/eng-digest/` is now the source of truth for browsing digests — but the command is
-kept for CLI users who still want a static single-file archive.
+kept for CLI users who still want a static single-file archive. The daily workflow no longer
+runs it: nothing deploys the root `index.html`, and rewriting it with a fresh timestamp made
+every scheduled run look "changed" and forced a full rebuild even on empty days.
 
 ## Configuration
 
@@ -426,8 +455,19 @@ Most build failures are a frontmatter field that doesn't match the schema in
 - **AWS News**: https://aws.amazon.com/blogs/aws/feed/
 - **Dropbox Engineering**: https://dropbox.tech/feed
 - **Stripe Engineering**: https://stripe.com/blog/feed.rss
-- **LinkedIn Engineering**: https://www.linkedin.com/blog/engineering/feed
 - **GitHub Blog**: https://github.blog/feed/
+- **Cloudflare Engineering**: https://blog.cloudflare.com/rss/
+- **Slack Engineering**: https://slack.engineering/feed/
+- **Spotify Engineering**: https://engineering.atspotify.com/feed
+- **Airbnb Engineering**: https://medium.com/feed/airbnb-engineering
+- **Shopify Engineering**: https://shopify.engineering/blog.atom
+
+Disabled in `config.yml`, kept there so the reason travels with the entry:
+
+- **Uber Engineering** — the feed answers 404/406 to non-browser clients, and the HTML
+  fallback is blocked too.
+- **LinkedIn Engineering** — serves malformed XML that `feedparser` rejects; the HTML fallback
+  only ever produced one bogus entry pointing back at the feed URL itself.
 
 The tool works with any blog that provides RSS or Atom feeds.
 
@@ -456,5 +496,6 @@ MIT License — see [LICENSE](LICENSE)
 ## Acknowledgments
 
 - TextRank algorithm based on Mihalcea & Tarau (2004)
-- Blog sources: Netflix, Meta, Google, AWS, Stripe, GitHub, Dropbox, LinkedIn
+- Blog sources: Netflix, Meta, Google, AWS, Stripe, GitHub, Dropbox, Cloudflare, Slack,
+  Spotify, Airbnb, Shopify
 - Website built with [Astro](https://astro.build)

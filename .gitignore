@@ -135,10 +135,14 @@ dmypy.json
 *~
 
 # Project specific
-*.yml
-!config.yml
-!examples/*.yml
-!.github/**/*.yml
+# Local config copies, which may carry real SMTP credentials. This used to be a
+# blanket `*.yml` with negations for config.yml / examples / .github, which
+# silently swallowed any other YAML added anywhere in the repo (a new workflow
+# in a subdirectory, a site config, a linter config) — ignore only the local
+# variants instead.
+config.local.yml
+config.*.local.yml
+*.secret.yml
 
 # Database
 *.db

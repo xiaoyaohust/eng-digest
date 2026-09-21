@@ -13,7 +13,9 @@ from html import unescape
 import requests
 from bs4 import BeautifulSoup
 
+from eng_digest.history import normalize_url
 from eng_digest.models import Article
+from eng_digest.timeutil import to_utc_naive, utcnow
 from .base import Fetcher
 
 
@@ -63,14 +65,28 @@ class HTMLFetcher(Fetcher):
         3. Common blog structures
         """
         articles = []
+        seen_urls = set()
+
+        def collect(tag) -> None:
+            article = self._parse_article_tag(tag)
+            if not article:
+                return
+            key = normalize_url(article.url)
+            # A listing page whose only link points back at itself is the page
+            # itself, not an article — that is how the feed URL used to end up
+            # in the digest as "Feed blog posts", with the whole nav as content.
+            if key == normalize_url(self.source.url):
+                return
+            if key in seen_urls:
+                return
+            seen_urls.add(key)
+            articles.append(article)
 
         # Strategy 1: Look for <article> tags
         article_tags = soup.find_all('article')
         if article_tags:
             for tag in article_tags[:10]:  # Limit to first 10
-                article = self._parse_article_tag(tag)
-                if article:
-                    articles.append(article)
+                collect(tag)
 
         # Strategy 2: Look for common blog post patterns
         if not articles:
@@ -85,9 +101,7 @@ class HTMLFetcher(Fetcher):
                 posts = soup.find_all(['div', 'section'], pattern)
                 if posts:
                     for post in posts[:10]:
-                        article = self._parse_article_tag(post)
-                        if article:
-                            articles.append(article)
+                        collect(post)
                     break
 
         return articles
@@ -119,9 +133,9 @@ class HTMLFetcher(Fetcher):
                 url = base_url + url
 
             # Extract publication date
-            published = self._extract_date(tag)
+            published = to_utc_naive(self._extract_date(tag))
             if not published:
-                published = datetime.now()  # Fallback to now
+                published = utcnow()  # Fallback to now
 
             # Extract content/description
             content = self._extract_content(tag)

@@ -9,11 +9,13 @@ blogs:
     type: rss
     enabled: true
 
-  # Uber Engineering
+  # Uber Engineering — disabled: the feed has been returning 404/406 to
+  # non-browser clients for a long time, and the HTML fallback is blocked too.
+  # Re-enable if Uber publishes a working feed again.
   - name: Uber Engineering
     url: https://www.uber.com/blog/rss/
     type: rss
-    enabled: true
+    enabled: false
 
   # Netflix Tech Blog
   - name: Netflix TechBlog
@@ -39,10 +41,42 @@ blogs:
     type: rss
     enabled: true
 
-  # LinkedIn Engineering
+  # LinkedIn Engineering — disabled: the endpoint serves malformed XML that
+  # feedparser rejects, and the HTML fallback only ever produced a single
+  # bogus "Feed blog posts" entry pointing back at the feed URL itself.
   - name: LinkedIn Engineering
     url: https://www.linkedin.com/blog/engineering/feed
     type: rss
+    enabled: false
+
+  # Cloudflare Blog
+  - name: Cloudflare Engineering
+    url: https://blog.cloudflare.com/rss/
+    type: rss
+    enabled: true
+
+  # Slack Engineering
+  - name: Slack Engineering
+    url: https://slack.engineering/feed/
+    type: rss
+    enabled: true
+
+  # Spotify Engineering
+  - name: Spotify Engineering
+    url: https://engineering.atspotify.com/feed
+    type: rss
+    enabled: true
+
+  # Airbnb Engineering
+  - name: Airbnb Engineering
+    url: https://medium.com/feed/airbnb-engineering
+    type: rss
+    enabled: true
+
+  # Shopify Engineering
+  - name: Shopify Engineering
+    url: https://shopify.engineering/blog.atom
+    type: atom
     enabled: true
 
   # GitHub Blog
@@ -67,6 +101,11 @@ fetch:
 
   # Maximum total articles across all blogs
   max_total_posts: 20
+
+  # Skip articles that already appeared in a committed digest under
+  # output.path. Keep this on: eng_digest.db is gitignored and never restored
+  # in CI, so without it every run republishes the whole lookback window.
+  dedupe_against_digests: true
 
 # Summarization configuration
 summary:

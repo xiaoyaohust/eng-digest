@@ -27,10 +27,25 @@ through a directory of committed Markdown files.
 Unchanged by this migration. `eng-digest run --config config.yml`:
 
 1. Fetches articles (RSS/Atom via `feedparser`, HTML fallback via `beautifulsoup4`).
-2. Deduplicates against `eng_digest.db`, a **local-only SQLite database**.
+2. Deduplicates, in two passes:
+   - against `eng_digest.db`, a **local-only SQLite database**, and
+   - against **the committed digests themselves** (`eng_digest/history.py` reads the
+     `**URL:** …` lines out of `digests/digest-*.md`).
 3. Summarizes with TextRank (`eng_digest/summarizer/textrank.py`) — a classical graph-ranking
    algorithm, not an LLM/AI API call.
 4. Renders Markdown, HTML, RSS (`eng_digest/output/`) and writes them to `digests/`.
+
+The second deduplication pass is the one that matters in CI. `eng_digest.db` is gitignored and
+never restored by the workflow, so a scheduled run always starts from an empty database and
+catches nothing; with a 30-day lookback window that meant every run republished the same
+articles. (The archive still shows it: 5,263 article entries across the digests written before
+this was fixed, but only 537 distinct URLs.) `digests/` is the record that actually travels
+with the repository, so that is the authority on what has already gone out — the same
+"the repo is the state" principle as the rest of this architecture.
+
+For the same reason, `eng-digest run` refuses to overwrite a digest that already exists for
+today unless given `--force`: a re-run now selects a *different* set of articles, so
+overwriting would silently drop the ones already published that morning.
 
 Its CLI (`stats`, `list`, `search`, `favorite`, `tui`, `send-email`, ...) all depend on that
 local SQLite database and only work against the machine that ran `eng-digest run`. None of
@@ -38,7 +53,10 @@ this is exposed to, or needed by, the website.
 
 `eng_digest/generate_index.py` still generates the legacy root `index.html` archive page for
 CLI users who want it, but it is **no longer the website's homepage** — that role now belongs
-to `site/src/pages/index.astro`.
+to `site/src/pages/index.astro`, and nothing deploys the root `index.html` any more. The daily
+workflow therefore no longer runs `generate-index`; it used to rewrite that 238 KB file with a
+fresh timestamp on every run, which made every run look "changed" and forced a full rebuild
+and deploy even on days with no new articles.
 
 ## The Astro website (`site/`)
 
@@ -61,10 +79,14 @@ deploys to a GitHub Pages project site today and a custom domain later.
 
 ## GitHub Actions
 
-Three workflows, kept deliberately non-overlapping:
+Four workflows, kept deliberately non-overlapping:
 
+- **`tests.yml`** — push, pull request, manual. Runs `pytest` on Python 3.9/3.11/3.12 and
+  validates that `config.yml` still parses and still has at least one enabled source. Nothing
+  else runs the test suite, so without this a break in the digest pipeline would only surface
+  as a silently wrong digest the next morning.
 - **`daily-digest.yml`** — schedule + manual trigger. Runs the Python pipeline, commits
-  `digests/`, `index.html`, `rss.xml` if changed, and — only when something changed — calls
+  `digests/` and `rss.xml` if changed, and — only when something changed — calls
   `build-deploy-site.yml` in the *same run* to build and deploy the site with the fresh
   digest. This exists because a commit made with the default `GITHUB_TOKEN` does not reliably
   re-trigger other workflows' `push` events, so relying on `deploy-site.yml` alone would leave

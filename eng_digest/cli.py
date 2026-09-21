@@ -11,6 +11,7 @@ from typing import List
 
 from eng_digest.config import load_config
 from eng_digest.fetcher import RSSFetcher, HTMLFetcher
+from eng_digest.history import filter_already_published, load_published_urls
 from eng_digest.models import Article, Summary
 from eng_digest.output import MarkdownRenderer, TextRenderer, HTMLRenderer, RSSRenderer
 from eng_digest.parser import ArticleParser
@@ -215,12 +216,13 @@ def save_digest(digests: dict, config) -> List[str]:
     return saved_files
 
 
-def run_pipeline(config_path: str):
+def run_pipeline(config_path: str, force: bool = False):
     """
     Run the complete digest pipeline.
 
     Args:
         config_path: Path to configuration file
+        force: Regenerate today's digest even if one already exists
     """
     logger.info("Starting Eng Digest pipeline")
 
@@ -228,6 +230,17 @@ def run_pipeline(config_path: str):
         # Load configuration
         config = load_config(config_path)
         logger.info(f"Configuration loaded from {config_path}")
+
+        # A digest is written to a date-stamped file, so a second run on the
+        # same day overwrites the first. Now that articles are deduplicated
+        # against the published archive, the second run picks a *different*
+        # set, and overwriting would drop the morning's articles for good.
+        today_digest = Path(config.output.path) / f"digest-{datetime.now():%Y-%m-%d}.md"
+        if today_digest.exists() and not force:
+            logger.info(f"Digest already exists for today: {today_digest}")
+            print(f"✓ Today's digest already exists: {today_digest}")
+            print("  Nothing to do. Use --force to regenerate it.")
+            return
 
         # Initialize database
         db = ArticleDatabase()
@@ -249,6 +262,19 @@ def run_pipeline(config_path: str):
         logger.info("Deduplicating articles...")
         new_articles = db.deduplicate_articles(articles)
         logger.info(f"Found {len(new_articles)} new articles (filtered {len(articles) - len(new_articles)} duplicates)")
+
+        # Deduplicate against the committed digests. The database above is
+        # local-only and gitignored, so in CI it is always empty and catches
+        # nothing; the digests/ directory is the record that actually travels
+        # with the repository.
+        if config.fetch.dedupe_against_digests:
+            before = len(new_articles)
+            published_urls = load_published_urls(config.output.path)
+            new_articles = filter_already_published(new_articles, published_urls)
+            logger.info(
+                f"After digest history: {len(new_articles)} new articles "
+                f"(filtered {before - len(new_articles)} already published)"
+            )
 
         if not new_articles:
             logger.info("No new articles to process")
@@ -359,6 +385,11 @@ Examples:
         required=True,
         help="Path to configuration file",
     )
+    run_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Regenerate today's digest even if one already exists (it is overwritten)",
+    )
 
     # Generate index command
     index_parser = subparsers.add_parser("generate-index", help="Generate index.html for GitHub Pages")
@@ -403,7 +434,7 @@ Examples:
 
     # Execute command
     if args.command == "run":
-        run_pipeline(args.config)
+        run_pipeline(args.config, force=args.force)
     elif args.command == "generate-index":
         generate_index()
     elif args.command == "stats":
