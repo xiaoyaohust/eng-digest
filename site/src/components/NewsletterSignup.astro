@@ -4,6 +4,7 @@ import { withBase } from "@/lib/url";
 interface Props { compact?: boolean; }
 const { compact = false } = Astro.props;
 const formURL = import.meta.env.PUBLIC_NEWSLETTER_FORM_URL;
+const isButtondown = typeof formURL === "string" && formURL.startsWith("https://buttondown.com/api/emails/embed-subscribe/");
 ---
 
 <aside class:list={["newsletter", { compact }]} aria-labelledby="newsletter-title">
@@ -15,6 +16,7 @@ const formURL = import.meta.env.PUBLIC_NEWSLETTER_FORM_URL;
   {formURL ? (
     <form action={formURL} method="post" target="_blank">
       <label><span>Email address</span><input type="email" name="email" autocomplete="email" placeholder="you@example.com" required /></label>
+      {isButtondown && <input type="hidden" name="embed" value="1" />}
       <button type="submit">Subscribe →</button>
     </form>
   ) : (

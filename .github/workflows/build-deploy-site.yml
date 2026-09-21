@@ -51,6 +51,10 @@ jobs:
         working-directory: site
         run: npm run import-digests
 
+      - name: Test client-side feature logic
+        working-directory: site
+        run: npm test
+
       - name: Type-check and validate content schemas
         working-directory: site
         env:

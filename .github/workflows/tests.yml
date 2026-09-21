@@ -14,6 +14,27 @@ permissions:
   contents: read
 
 jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install site dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Test client-side feature logic
+        working-directory: site
+        run: npm test
+
   pytest:
     runs-on: ubuntu-latest
     strategy:

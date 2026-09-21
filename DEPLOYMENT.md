@@ -66,9 +66,19 @@ Set both environment variables to deploy elsewhere. A GitHub Pages *project* sit
 
 The Digest pages include a provider-neutral newsletter form. Add a GitHub Actions repository
 variable named `PUBLIC_NEWSLETTER_FORM_URL` containing the public POST endpoint from your
-newsletter provider (for example, Buttondown or ConvertKit). Astro reads it at build time.
-Without this variable the component deliberately shows an RSS subscription link instead of a
-form that cannot deliver email.
+newsletter provider. Astro reads it at build time. Without this variable the component
+deliberately shows an RSS subscription link instead of a form that cannot deliver email.
+
+For Buttondown, create a newsletter and use this value, replacing the final segment with your
+Buttondown username:
+
+```text
+https://buttondown.com/api/emails/embed-subscribe/YOUR-BUTTONDOWN-USERNAME
+```
+
+Then open the repository's **Settings → Secrets and variables → Actions → Variables**, create
+`PUBLIC_NEWSLETTER_FORM_URL`, and run **Deploy Site**. No source-code change is required. For
+local verification, copy `site/.env.example` to `site/.env` and set the same value.
 
 ## Publishing content
 

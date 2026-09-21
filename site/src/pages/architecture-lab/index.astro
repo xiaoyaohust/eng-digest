@@ -179,19 +179,21 @@ import { withBase } from "@/lib/url";
   </div>
 </BaseLayout>
 
-<script is:inline>
+<script>
+  // @ts-nocheck -- DOM elements are fixed by this page's static template.
+  import {
+    buildLabQuery,
+    labDefaults,
+    labPresets,
+    parseLabParams,
+    recommendArchitecture,
+    sanitizeLabValue,
+  } from "@/lib/architectureLab";
+
   const root = document.querySelector("[data-architecture-lab]");
   const inputs = Object.fromEntries(
     Array.from(root?.querySelectorAll("[data-input]") || []).map((input) => [input.dataset.input, input])
   );
-
-  const defaults = { qps: 10000, sizeKb: 2, latency: "50", consistency: "strong", retention: 30, regions: "1" };
-  const presets = {
-    api: { qps: 50000, sizeKb: 4, latency: "50", consistency: "read-your-writes", retention: 7, regions: "2" },
-    logs: { qps: 500000, sizeKb: 1, latency: "250", consistency: "eventual", retention: 90, regions: "3" },
-    ledger: { qps: 8000, sizeKb: 3, latency: "100", consistency: "strong", retention: 365, regions: "2" },
-    feed: { qps: 200000, sizeKb: 6, latency: "100", consistency: "eventual", retention: 30, regions: "3" },
-  };
 
   function formatNumber(value) {
     return new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(value);
@@ -223,114 +225,12 @@ import { withBase } from "@/lib/url";
     };
   }
 
-  // A lab URL is meant to be shared, so it will arrive hand-edited, truncated
-  // by a chat client, or carrying values from an older version of this page.
-  // Assigning an unknown value to a <select> blanks the control and makes the
-  // state read back as 0 / "", which silently changes the recommendation
-  // instead of failing visibly — so every incoming value is checked first.
-  function sanitizeValue(key, value) {
-    const input = inputs[key];
-    if (!input) return null;
-    const raw = String(value);
-    if (input.tagName === "SELECT") {
-      return Array.from(input.options).some((option) => option.value === raw) ? raw : null;
-    }
-    const numeric = Number(raw);
-    if (!Number.isFinite(numeric)) return null;
-    const min = Number(input.min);
-    const max = Number(input.max);
-    const clamped = Math.min(
-      Math.max(numeric, Number.isFinite(min) ? min : numeric),
-      Number.isFinite(max) ? max : numeric
-    );
-    return String(clamped);
-  }
-
   function applyState(state) {
     Object.entries(state).forEach(([key, value]) => {
-      const safe = sanitizeValue(key, value);
-      if (safe !== null) inputs[key].value = safe;
+      const safe = sanitizeLabValue(key, value);
+      if (safe !== null && inputs[key]) inputs[key].value = String(safe);
     });
     update();
-  }
-
-  function recommend(state) {
-    const ingressMb = (state.qps * state.sizeKb) / 1024;
-    const dailyTb = (ingressMb * 86400) / 1024 / 1024;
-    const storedTb = dailyTb * state.retention;
-    const partitions = Math.max(3, Math.ceil(ingressMb / 10), Math.ceil(state.qps / 10000));
-    const highScale = state.qps >= 50000 || ingressMb >= 100;
-    const lowLatency = state.latency <= 50;
-    const longRetention = state.retention > 14 || storedTb > 5;
-    const multiRegion = state.regions > 1;
-
-    const database = state.consistency === "strong"
-      ? (multiRegion ? "Distributed SQL / globally consistent database" : "Relational database with synchronous replicas")
-      : (highScale ? "Partitioned NoSQL serving store" : "Relational database with read replicas");
-    const databaseReason = state.consistency === "strong"
-      ? "Transactions and invariant protection matter more than the lowest write latency."
-      : "The workload can trade immediate agreement for horizontal write scale and regional availability.";
-
-    const cache = lowLatency || highScale ? "Distributed cache + local hot cache" : "Selective cache-aside layer";
-    const cacheReason = lowLatency
-      ? `A ${state.latency} ms p99 target leaves little room for repeated database round trips.`
-      : "Cache only expensive or frequently repeated reads; keep invalidation scope explicit.";
-
-    const stream = highScale ? "Partitioned Kafka-compatible event log" : "Durable queue with replay";
-    const streamReason = highScale
-      ? `${partitions} partitions provide a conservative starting point for throughput and consumer parallelism.`
-      : "A smaller durable queue decouples spikes without adding unnecessary cluster complexity.";
-
-    const storage = longRetention ? "Object storage as the durable archive" : "Primary store with scheduled snapshots";
-    const storageReason = longRetention
-      ? `${formatNumber(storedTb)} TB of logical retention favors cheap immutable storage and rebuildable serving indexes.`
-      : "The retained volume is modest enough to begin with the primary data store and reliable backups.";
-
-    let replication = "Synchronous replicas inside one region";
-    let replicationReason = "Keep quorum latency local and spread replicas across availability zones.";
-    if (multiRegion && state.consistency === "strong") {
-      replication = "Regional quorum + deliberate cross-region consistency boundary";
-      replicationReason = "Global synchronous writes protect invariants but add WAN latency; scope them to data that truly needs it.";
-    } else if (multiRegion) {
-      replication = "Asynchronous active-active replication";
-      replicationReason = "Eventual consistency allows local writes and better regional availability, with conflict handling required.";
-    }
-
-    const readPath = lowLatency ? "Edge routing → cache → regional read model" : "Regional service → indexed serving store";
-    const readPathReason = lowLatency
-      ? "Serve hot reads close to users and keep the durable write path independent."
-      : "A dedicated read model avoids expensive scans while preserving a simpler request path.";
-
-    const pressures = [];
-    if (ingressMb > 500) pressures.push("Network and broker throughput dominate; compression and batching are mandatory.");
-    if (partitions > 100) pressures.push("Partition ownership, rebalance time, and hot keys become operational risks.");
-    if (storedTb > 100) pressures.push("Retention cost and small-file compaction matter more than raw disk capacity.");
-    if (lowLatency) pressures.push("Tail latency requires bounded queues, local caches, and strict downstream timeouts.");
-    if (multiRegion) pressures.push("Failover, duplicate writes, data residency, and region-aware routing must be designed explicitly.");
-    if (!pressures.length) pressures.push("The workload can begin with a small regional architecture and scale after measurement.");
-
-    const tradeoffs = [
-      state.consistency === "strong"
-        ? "Strong consistency protects invariants but reduces write availability during partitions."
-        : "Eventual consistency improves availability but requires conflict resolution and stale-read tolerance.",
-      longRetention
-        ? "Cheap object storage lowers retention cost but makes historical queries asynchronous or slower."
-        : "Keeping data in the serving store simplifies queries but raises cost as retention grows.",
-      highScale
-        ? "A streaming backbone absorbs spikes but introduces partitioning, replay, and consumer-lag operations."
-        : "Starting without a large streaming cluster is simpler, but the queue boundary should remain replaceable.",
-      multiRegion
-        ? "Regional autonomy improves resilience while making ordering and failover semantics more complex."
-        : "A single region is easier to operate but needs a tested recovery plan for regional failure.",
-    ];
-
-    return { ingressMb, dailyTb, storedTb, partitions, database, databaseReason, cache, cacheReason, stream, streamReason, storage, storageReason, replication, replicationReason, readPath, readPathReason, pressures, tradeoffs, highScale, longRetention };
-  }
-
-  function buildQuery(state) {
-    const params = new URLSearchParams();
-    Object.entries(state).forEach(([key, value]) => params.set(key, String(value)));
-    return params.toString();
   }
 
   let urlTimer;
@@ -358,7 +258,7 @@ import { withBase } from "@/lib/url";
 
   function update() {
     const state = readState();
-    const result = recommend(state);
+    const result = recommendArchitecture(state);
     setText("[data-qps-output]", formatNumber(state.qps));
     setText("[data-size-output]", state.sizeKb >= 1024 ? "1 MB" : `${formatNumber(state.sizeKb)} KB`);
     setText("[data-retention-output]", `${state.retention} days`);
@@ -380,7 +280,7 @@ import { withBase } from "@/lib/url";
     root.dataset.scale = result.highScale ? "high" : "standard";
     // Built here rather than read back from location.href: the address bar is
     // written on a debounce, so reading it would put a stale link in the brief.
-    const query = buildQuery(state);
+    const query = buildLabQuery(state);
     const shareUrl = `${location.origin}${location.pathname}?${query}`;
     pendingAnnouncement = `${formatNumber(state.qps)} QPS, ${state.consistency} consistency, ${state.regions} region(s): ${result.database}, ${result.stream}, ${result.storage}. Ingress ${formatNumber(result.ingressMb)} megabytes per second, ${result.partitions} partitions.`;
     updateUrl(query);
@@ -408,10 +308,10 @@ import { withBase } from "@/lib/url";
 
   root?.querySelectorAll("[data-input]").forEach((input) => input.addEventListener("input", update));
   root?.querySelectorAll("[data-preset]").forEach((button) => button.addEventListener("click", () => {
-    const preset = presets[button.dataset.preset];
+    const preset = labPresets[button.dataset.preset];
     if (preset) applyState(preset);
   }));
-  root?.querySelector("[data-reset]")?.addEventListener("click", () => applyState(defaults));
+  root?.querySelector("[data-reset]")?.addEventListener("click", () => applyState(labDefaults));
   root?.querySelector("[data-copy-summary]")?.addEventListener("click", async (event) => {
     const button = event.currentTarget;
     try {
@@ -423,14 +323,10 @@ import { withBase } from "@/lib/url";
 
   const params = new URLSearchParams(location.search);
   const preset = params.get("preset");
-  if (preset && presets[preset]) {
-    applyState(presets[preset]);
+  if (preset && labPresets[preset]) {
+    applyState(labPresets[preset]);
   } else if ([...params.keys()].some((key) => inputs[key])) {
-    const state = { ...defaults };
-    Object.keys(defaults).forEach((key) => {
-      if (params.has(key)) state[key] = params.get(key);
-    });
-    applyState(state);
+    applyState(parseLabParams(params));
   } else {
     update();
   }

@@ -1,17 +1,18 @@
 ---
-interface PracticeQuestion {
-  question: string;
-  hint: string;
-  answer: string;
-  topic?: string;
-}
+import {
+  buildPracticeQuestionRecords,
+  practiceSignature,
+  type PracticeQuestionData,
+} from "@/lib/practiceState";
 
 interface Props {
-  questions: PracticeQuestion[];
+  questions: PracticeQuestionData[];
   storageKey: string;
 }
 
 const { questions, storageKey } = Astro.props;
+const questionRecords = buildPracticeQuestionRecords(questions);
+const signature = practiceSignature(questions);
 ---
 
 <section
@@ -19,6 +20,7 @@ const { questions, storageKey } = Astro.props;
   data-practice-root
   data-mode="read"
   data-storage-key={storageKey}
+  data-question-signature={signature}
   aria-labelledby="practice-title"
 >
   <div class="practice-header">
@@ -48,8 +50,8 @@ const { questions, storageKey } = Astro.props;
   </div>
 
   <div class="practice-deck" data-practice-deck>
-    {questions.map((item, index) => (
-      <article class="practice-question" data-question-index={index}>
+    {questionRecords.map((item, index) => (
+      <article class="practice-question" data-question-id={item.id}>
         <div class="question-topline">
           <span class="question-number">Q{String(index + 1).padStart(2, "0")}</span>
           <span class="question-topic">{item.topic ?? "General"}</span>
@@ -138,33 +140,26 @@ const { questions, storageKey } = Astro.props;
 </style>
 
 <script>
-  type Rating = "know" | "unsure" | "review";
-  interface SavedPractice { ratings: Record<string, Rating>; favorites: string[]; order: string[]; }
+  import {
+    makeDefaultPracticeState,
+    parsePracticeState,
+    shuffleOrder,
+    type PracticeRating,
+  } from "@/lib/practiceState";
+
   const labels = { read:"READING MODE", questions:"QUESTIONS ONLY", hints:"HINTS EXPANDED", answers:"ANSWERS VISIBLE" } as const;
 
   document.querySelectorAll<HTMLElement>("[data-practice-root]").forEach((root) => {
     const article = root.closest<HTMLElement>(".article-page");
     const deck = root.querySelector<HTMLElement>("[data-practice-deck]");
-    const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-question-index]"));
+    const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-question-id]"));
     const storageKey = `eng-knowledge-practice:v2:${root.dataset.storageKey ?? "article"}`;
-    const questionIds = cards.map((card) => card.dataset.questionIndex ?? "");
-    // A factory, not a shared object: a spread of it would alias `ratings` and
-    // `favorites`, so rating a question would also mutate the "empty" state
-    // that reset and the parse-failure path fall back to.
-    const makeDefaultState = (): SavedPractice => ({ ratings:{}, favorites:[], order:[...questionIds] });
-    let saved: SavedPractice = makeDefaultState();
-    try { saved = { ...makeDefaultState(), ...JSON.parse(localStorage.getItem(storageKey) ?? "{}") }; } catch { saved = makeDefaultState(); }
-
-    // Saved state is keyed by question position, so it only stays meaningful
-    // while the article has the same questions. When a prompt is added,
-    // removed, or reordered, a stale order would drop new cards out of the
-    // shuffle and pin old ratings onto different questions — so any saved
-    // state whose question set no longer matches is discarded.
-    const sameQuestionSet = (order: unknown) =>
-      Array.isArray(order)
-      && order.length === questionIds.length
-      && [...order].sort().join(" ") === [...questionIds].sort().join(" ");
-    if (!sameQuestionSet(saved.order)) saved = makeDefaultState();
+    const signature = root.dataset.questionSignature ?? "";
+    const questionIds = cards.map((card) => card.dataset.questionId ?? "");
+    let storedPracticeState: string | null = null;
+    try { storedPracticeState = localStorage.getItem(storageKey); }
+    catch { /* Practice remains usable when browser storage is blocked. */ }
+    let saved = parsePracticeState(storedPracticeState, questionIds, signature);
 
     const persist = () => {
       // Storage can be unavailable or full (private browsing, blocked site
@@ -178,7 +173,7 @@ const { questions, storageKey } = Astro.props;
       const points = values.reduce((sum, value) => sum + (value === "know" ? 2 : value === "unsure" ? 1 : 0), 0);
       const score = Math.round((points / Math.max(cards.length * 2, 1)) * 100);
       const weak = cards.filter((card) => {
-        const rating = saved.ratings[card.dataset.questionIndex ?? ""];
+        const rating = saved.ratings[card.dataset.questionId ?? ""];
         return rating === "unsure" || rating === "review";
       }).map((card) => card.querySelector<HTMLElement>(".question-topic")?.textContent?.trim() ?? "General");
       const summary = root.querySelector<HTMLElement>("[data-practice-summary]");
@@ -192,14 +187,14 @@ const { questions, storageKey } = Astro.props;
     };
 
     const applySavedState = () => {
-      if (deck) saved.order.forEach((index) => { const card = cards.find((item) => item.dataset.questionIndex === index); if (card) deck.append(card); });
+      if (deck) saved.order.forEach((questionId) => { const card = cards.find((item) => item.dataset.questionId === questionId); if (card) deck.append(card); });
       cards.forEach((card) => {
-        const index = card.dataset.questionIndex ?? "";
-        const favorite = saved.favorites.includes(index);
+        const questionId = card.dataset.questionId ?? "";
+        const favorite = saved.favorites.includes(questionId);
         card.classList.toggle("is-favorite", favorite);
         const favoriteButton = card.querySelector<HTMLButtonElement>("[data-favorite]");
         if (favoriteButton) { favoriteButton.textContent = favorite ? "★" : "☆"; favoriteButton.setAttribute("aria-pressed", String(favorite)); }
-        card.querySelectorAll<HTMLButtonElement>("[data-rating]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.rating === saved.ratings[index])));
+        card.querySelectorAll<HTMLButtonElement>("[data-rating]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.rating === saved.ratings[questionId])));
       });
       renderSummary();
     };
@@ -217,7 +212,7 @@ const { questions, storageKey } = Astro.props;
     }));
 
     root.querySelectorAll<HTMLButtonElement>("[data-reveal]").forEach((button) => button.addEventListener("click", () => {
-      const card = button.closest<HTMLElement>("[data-question-index]");
+      const card = button.closest<HTMLElement>("[data-question-id]");
       const panel = card?.querySelector<HTMLElement>(`[data-panel="${button.dataset.reveal}"]`);
       const open = panel?.classList.toggle("is-open") ?? false;
       button.setAttribute("aria-expanded", String(open));
@@ -225,27 +220,19 @@ const { questions, storageKey } = Astro.props;
     }));
 
     cards.forEach((card) => {
-      const index = card.dataset.questionIndex ?? "";
+      const questionId = card.dataset.questionId ?? "";
       card.querySelector<HTMLButtonElement>("[data-favorite]")?.addEventListener("click", () => {
-        saved.favorites = saved.favorites.includes(index) ? saved.favorites.filter((value) => value !== index) : [...saved.favorites,index];
+        saved.favorites = saved.favorites.includes(questionId) ? saved.favorites.filter((value) => value !== questionId) : [...saved.favorites,questionId];
         persist(); applySavedState();
       });
       card.querySelectorAll<HTMLButtonElement>("[data-rating]").forEach((button) => button.addEventListener("click", () => {
-        saved.ratings[index] = button.dataset.rating as Rating;
+        saved.ratings[questionId] = button.dataset.rating as PracticeRating;
         persist(); applySavedState();
       }));
     });
 
     root.querySelector<HTMLButtonElement>("[data-shuffle]")?.addEventListener("click", () => {
-      // Fisher-Yates. `sort(() => Math.random() - 0.5)` is not a shuffle: the
-      // comparator is inconsistent, so the result is biased towards the
-      // original order and some permutations never occur.
-      const order = [...saved.order];
-      for (let i = order.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [order[i], order[j]] = [order[j], order[i]];
-      }
-      saved.order = order; persist(); applySavedState();
+      saved.order = shuffleOrder(saved.order); persist(); applySavedState();
     });
 
     let seconds = 900;
@@ -259,7 +246,7 @@ const { questions, storageKey } = Astro.props;
       interval = window.setInterval(() => { seconds = Math.max(0,seconds-1); renderTimer(); if (seconds === 0 && interval) { window.clearInterval(interval); interval=undefined; if (timerToggle) timerToggle.textContent="Done"; } },1000);
     });
     root.querySelector<HTMLButtonElement>("[data-timer-reset]")?.addEventListener("click", () => { if (interval) window.clearInterval(interval); interval=undefined; seconds=900; renderTimer(); if (timerToggle) timerToggle.textContent="Start"; });
-    root.querySelector<HTMLButtonElement>("[data-reset-session]")?.addEventListener("click", () => { saved = makeDefaultState(); persist(); applySavedState(); });
+    root.querySelector<HTMLButtonElement>("[data-reset-session]")?.addEventListener("click", () => { saved = makeDefaultPracticeState(questionIds, signature); persist(); applySavedState(); });
     applySavedState();
   });
 </script>
