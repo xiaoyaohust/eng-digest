@@ -179,12 +179,12 @@ import { withBase } from "@/lib/url";
             <strong data-finding-count>1 RISK</strong>
           </div>
           <div class="finding-list" data-finding-list>
-            <article class="finding warning"><span>WARNING</span><h3>Availability depends on one region</h3><p>A regional event exceeds this availability posture.</p></article>
+            <article class="finding warning"><span>WARNING</span><h3>Availability depends on one region</h3><p>A multi-zone design may meet normal failures, but a regional event exceeds the requested availability posture.</p></article>
           </div>
         </div>
 
         <div class="metric-grid">
-          <article><span>PEAK READ / WRITE</span><strong data-metric="rw">16K / 4K</strong><small>requests per second</small></article>
+          <article><span>PEAK READ / WRITE</span><strong data-metric="rw">16,000 / 4,000</strong><small>requests per second</small></article>
           <article><span>WRITE INGRESS</span><strong data-metric="ingress">7.8 MB/s</strong><small>peak, uncompressed</small></article>
           <article><span>DAILY LOGICAL</span><strong data-metric="daily">0.3 TB</strong><small>baseline writes</small></article>
           <article><span>PHYSICAL DATA</span><strong data-metric="stored">17.4 TB</strong><small>compression + replicas + 20%</small></article>
@@ -195,17 +195,17 @@ import { withBase } from "@/lib/url";
         <div class="architecture-flow" aria-label="Recommended architecture flow">
           <div class="flow-node"><small>EDGE</small><strong data-node="edge">Load Balancer</strong></div><span>→</span>
           <div class="flow-node"><small>COMPUTE</small><strong data-node="compute">Stateless Service</strong></div><span>→</span>
-          <div class="flow-node"><small>BUFFER</small><strong data-node="buffer">Durable Queue</strong></div><span>→</span>
-          <div class="flow-node"><small>STATE</small><strong data-node="state">Relational Database</strong></div>
+          <div class="flow-node"><small>BUFFER</small><strong data-node="buffer">Durable queue with replay</strong></div><span>→</span>
+          <div class="flow-node"><small>STATE</small><strong data-node="state">Relational database with synchronous replicas</strong></div>
         </div>
 
         <div class="decision-grid">
-          <article><span class="decision-code">D01 / DATA</span><h3 data-decision="database">Relational database</h3><p data-reason="database"></p></article>
+          <article><span class="decision-code">D01 / DATA</span><h3 data-decision="database">Relational database with synchronous replicas</h3><p data-reason="database"></p></article>
           <article><span class="decision-code">D02 / CACHE</span><h3 data-decision="cache">Versioned read-through cache</h3><p data-reason="cache"></p></article>
           <article><span class="decision-code">D03 / STREAM</span><h3 data-decision="stream">Durable queue with replay</h3><p data-reason="stream"></p></article>
-          <article><span class="decision-code">D04 / STORAGE</span><h3 data-decision="storage">Object storage archive</h3><p data-reason="storage"></p></article>
-          <article><span class="decision-code">D05 / REPLICATION</span><h3 data-decision="replication">Synchronous zonal replicas</h3><p data-reason="replication"></p></article>
-          <article><span class="decision-code">D06 / READ PATH</span><h3 data-decision="readPath">Regional read model</h3><p data-reason="readPath"></p></article>
+          <article><span class="decision-code">D04 / STORAGE</span><h3 data-decision="storage">Object storage as durable archive</h3><p data-reason="storage"></p></article>
+          <article><span class="decision-code">D05 / REPLICATION</span><h3 data-decision="replication">Synchronous replicas across availability zones</h3><p data-reason="replication"></p></article>
+          <article><span class="decision-code">D06 / READ PATH</span><h3 data-decision="readPath">Edge routing → cache → regional read model</h3><p data-reason="readPath"></p></article>
         </div>
 
         <section class="candidate-section" aria-labelledby="candidate-title">
@@ -213,6 +213,7 @@ import { withBase } from "@/lib/url";
             <div><span class="eyebrow">03 / OPTION SPACE</span><h2 id="candidate-title">Compare, do not guess</h2></div>
             <p>Fit is deterministic and relative to the current constraints.</p>
           </div>
+          <p class="blocked-notice" data-blocked-notice hidden></p>
           <div class="candidate-grid">
             {[0, 1, 2].map(() => (
               <article class="candidate-card" data-candidate-card>
@@ -280,6 +281,7 @@ import { withBase } from "@/lib/url";
   interface SavedScenario { id:string; name:string; savedAt:string; state:LabState; }
   const labKeys = Object.keys(labDefaults) as (keyof LabState)[];
   const storageKey = "eng-knowledge:architecture-lab:v2:scenarios";
+  const SCENARIO_LIMIT = 12;
   const root = document.querySelector<HTMLElement>("[data-architecture-lab]");
   const inputs: Partial<Record<keyof LabState, LabControl>> = Object.fromEntries(
     Array.from(root?.querySelectorAll<LabControl>("[data-input]") ?? []).map((input) => [input.dataset.input, input])
@@ -297,12 +299,26 @@ import { withBase } from "@/lib/url";
     return value < 0.1 ? `${formatNumber(value * 1024)} GB` : `${formatNumber(value)} TB`;
   }
 
+  // update() runs on every `input` event, and a slider drag fires dozens per
+  // second. The metric readouts genuinely change that often; the findings,
+  // option cards and defence prompts almost never do, and re-rendering them
+  // costs ~50 DOM writes plus layout each time. Skip the work when the content
+  // is identical to what is already on screen.
+  const renderedSignatures = new Map<string, string>();
+  function changedSince(key: string, value: unknown): boolean {
+    const signature = JSON.stringify(value);
+    if (renderedSignatures.get(key) === signature) return false;
+    renderedSignatures.set(key, signature);
+    return true;
+  }
+
   function setText(selector: string, value: string): void {
     const element = root?.querySelector(selector);
-    if (element) element.textContent = value;
+    if (element && element.textContent !== value) element.textContent = value;
   }
 
   function setList(selector: string, items: string[]): void {
+    if (!changedSince(`list:${selector}`, items)) return;
     const list = root?.querySelector(selector);
     if (!list) return;
     list.replaceChildren(...items.map((item) => {
@@ -334,6 +350,7 @@ import { withBase } from "@/lib/url";
   }
 
   function renderFindings(findings: LabFinding[]): void {
+    if (!changedSince("findings", findings)) return;
     const list = root?.querySelector("[data-finding-list]");
     if (!list) return;
     list.replaceChildren(...findings.map((finding) => {
@@ -354,13 +371,24 @@ import { withBase } from "@/lib/url";
     if (root) root.dataset.risk = blockers ? "blocker" : warnings ? "warning" : "clear";
   }
 
-  function renderCandidates(candidates: ArchitectureCandidate[]): void {
+  function renderCandidates(candidates: ArchitectureCandidate[], blockerCount: number): void {
+    if (!changedSince("candidates", [candidates, blockerCount])) return;
+    // With an unresolved blocker the ranking is "least bad", not a design to
+    // build — say so next to the fit percentages rather than letting a big
+    // "RECOMMENDED / 88% FIT" badge imply the constraints are satisfiable.
+    const notice = root?.querySelector<HTMLElement>("[data-blocked-notice]");
+    if (notice) {
+      notice.hidden = blockerCount === 0;
+      notice.textContent = blockerCount === 0
+        ? ""
+        : `${blockerCount} blocking conflict${blockerCount > 1 ? "s" : ""} above must be resolved first. These options are ranked least-bad under constraints that cannot all hold at once — none of them makes the combination work.`;
+    }
     root?.querySelectorAll<HTMLElement>("[data-candidate-card]").forEach((card, index) => {
       const candidate = candidates[index];
       if (!candidate) return;
       card.classList.toggle("recommended", index === 0);
       const write = (selector: string, value: string) => { const node = card.querySelector(selector); if (node) node.textContent = value; };
-      write("[data-candidate-label]", index === 0 ? `RECOMMENDED / ${candidate.label}` : candidate.label);
+      write("[data-candidate-label]", index === 0 ? `${blockerCount ? "LEAST BAD" : "RECOMMENDED"} / ${candidate.label}` : candidate.label);
       write("[data-candidate-fit]", `${candidate.fit}% FIT`);
       write("[data-candidate-title]", candidate.title);
       write("[data-candidate-summary]", candidate.summary);
@@ -376,15 +404,23 @@ import { withBase } from "@/lib/url";
   }
 
   function renderDefense(prompts: { question:string; talkingPoint:string }[]): void {
+    if (!changedSince("defense", prompts)) return;
     root?.querySelectorAll<HTMLElement>("[data-defense-card]").forEach((card, index) => {
       const prompt = prompts[index];
       if (!prompt) return;
       const question = card.querySelector("[data-defense-question]");
       const answer = card.querySelector<HTMLElement>("[data-defense-answer]");
       const button = card.querySelector<HTMLButtonElement>("[data-defense-toggle]");
+      // update() runs on every slider tick, so unconditionally re-hiding the
+      // talking point made it impossible to read one while adjusting anything.
+      // Only collapse when the prompt itself actually changed.
+      const changed = question?.textContent !== prompt.question;
       if (question) question.textContent = prompt.question;
-      if (answer) { answer.textContent = prompt.talkingPoint; answer.hidden = true; }
-      if (button) { button.textContent = "Reveal talking point"; button.setAttribute("aria-expanded", "false"); }
+      if (answer) {
+        answer.textContent = prompt.talkingPoint;
+        if (changed) answer.hidden = true;
+      }
+      if (button && changed) { button.textContent = "Reveal talking point"; button.setAttribute("aria-expanded", "false"); }
     });
   }
 
@@ -429,12 +465,12 @@ import { withBase } from "@/lib/url";
     setList("[data-pressure-list]", result.pressures);
     setList("[data-tradeoff-list]", result.tradeoffs);
     renderFindings(result.findings);
-    renderCandidates(result.candidates);
+    renderCandidates(result.candidates, result.blockerCount);
     renderDefense(result.defensePrompts);
     const query = buildLabQuery(state);
     currentShareUrl = `${location.origin}${location.pathname}?${query}`;
     designBrief = buildDesignBrief(state, result, currentShareUrl);
-    pendingAnnouncement = `${formatNumber(result.peakQps)} peak requests per second. ${result.findings.length} constraint finding(s). Recommended option: ${result.recommendedCandidate.title} at ${result.recommendedCandidate.fit}% fit.`;
+    pendingAnnouncement = `${formatNumber(result.peakQps)} peak requests per second. ${result.findings.length} constraint finding(s)${result.feasible ? "" : `, including ${result.blockerCount} blocker(s) that must be resolved first`}. ${result.feasible ? "Recommended option" : "Least-bad option"}: ${result.recommendedCandidate.title} at ${result.recommendedCandidate.fit}% fit.`;
     updateUrl(query);
   }
 
@@ -446,6 +482,16 @@ import { withBase } from "@/lib/url";
     } else button.textContent = "Copy unavailable";
   }
 
+  // Date.now() alone collides when two saves land in the same millisecond, and
+  // delete filters by id — so a collision would remove both entries at once.
+  let scenarioCounter = 0;
+  function newScenarioId(): string {
+    const unique = globalThis.crypto?.randomUUID?.();
+    if (unique) return unique;
+    scenarioCounter += 1;
+    return `${Date.now()}-${scenarioCounter}`;
+  }
+
   function loadScenarios(): SavedScenario[] {
     try {
       const parsed = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
@@ -455,7 +501,7 @@ import { withBase } from "@/lib/url";
         const params = new URLSearchParams();
         labKeys.forEach((key) => params.set(key, String(item.state[key] ?? "")));
         return [{ id:item.id, name:item.name.slice(0, 40), savedAt:typeof item.savedAt === "string" ? item.savedAt : "", state:parseLabParams(params) }];
-      }).slice(0, 12);
+      }).slice(0, SCENARIO_LIMIT);
     } catch { return []; }
   }
 
@@ -490,13 +536,27 @@ import { withBase } from "@/lib/url";
   root?.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", (event) => copyText(designBrief, event.currentTarget as HTMLButtonElement, "Brief copied"));
   root?.querySelector<HTMLButtonElement>("[data-download]")?.addEventListener("click", () => {
     const url = URL.createObjectURL(new Blob([designBrief], { type:"text/markdown;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = "architecture-design-brief.md"; link.click(); URL.revokeObjectURL(url);
+    const link = document.createElement("a"); link.href = url; link.download = "architecture-design-brief.md"; link.click();
+    // Revoking in the same tick can cancel the download before the browser has
+    // finished reading the blob (Firefox in particular); let the click settle.
+    setTimeout(() => URL.revokeObjectURL(url), 10_000);
   });
   root?.querySelector("[data-save-scenario]")?.addEventListener("click", () => {
     const nameInput = root.querySelector<HTMLInputElement>("[data-scenario-name]");
-    const name = nameInput?.value.trim() || `Scenario ${savedScenarios.length + 1}`;
-    savedScenarios = [{ id:String(Date.now()), name:name.slice(0, 40), savedAt:new Date().toISOString(), state:readState() }, ...savedScenarios].slice(0, 12);
-    persistScenarios(); renderSavedScenarios(); if (nameInput) nameInput.value = "";
+    const name = (nameInput?.value.trim() || `Scenario ${savedScenarios.length + 1}`).slice(0, 40);
+    const saved: SavedScenario = { id:newScenarioId(), name, savedAt:new Date().toISOString(), state:readState() };
+    const next = [saved, ...savedScenarios];
+    const dropped = next.length - SCENARIO_LIMIT;
+    savedScenarios = next.slice(0, SCENARIO_LIMIT);
+    persistScenarios();
+    // Silently discarding the oldest design is how someone loses work they
+    // meant to keep, so name what went.
+    if (dropped > 0) {
+      const removed = next.slice(SCENARIO_LIMIT);
+      setText("[data-storage-note]", `Keeping the newest ${SCENARIO_LIMIT}. Removed: ${removed.map((item) => item.name).join(", ")}.`);
+    }
+    renderSavedScenarios();
+    if (nameInput) nameInput.value = "";
   });
   root?.querySelectorAll<HTMLButtonElement>("[data-defense-toggle]").forEach((button) => button.addEventListener("click", () => {
     const answer = button.closest("[data-defense-card]")?.querySelector<HTMLElement>("[data-defense-answer]");
@@ -569,6 +629,7 @@ import { withBase } from "@/lib/url";
   .section-heading.compact { align-items:center; padding-bottom:14px; }
   .section-heading > p { max-width:340px; margin:0; color:var(--color-text-muted); font-size:.77rem; text-align:right; }
   .section-heading > strong { color:var(--lab-amber); font-family:var(--font-mono); font-size:.62rem; letter-spacing:.08em; }
+  .blocked-notice { margin:0 22px 18px; padding:11px 13px; border:1px solid color-mix(in srgb, var(--lab-amber) 55%, var(--color-border)); border-left-width:3px; border-radius:4px; background:color-mix(in srgb, var(--lab-amber) 9%, transparent); color:var(--color-text); font-size:.79rem; line-height:1.5; }
   [data-risk="blocker"] .section-heading > strong { color:#d86363; }
   [data-risk="clear"] .section-heading > strong { color:var(--lab-teal); }
   .finding-list { display:grid; gap:8px; padding:0 22px 22px; }

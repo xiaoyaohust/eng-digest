@@ -28,6 +28,14 @@ export interface LabFinding {
   detail: string;
 }
 
+export interface CandidateScores {
+  latency: number;
+  consistency: number;
+  availability: number;
+  cost: number;
+  simplicity: number;
+}
+
 export interface ArchitectureCandidate {
   id: "lean" | "balanced" | "resilient";
   title: string;
@@ -35,13 +43,7 @@ export interface ArchitectureCandidate {
   summary: string;
   topology: string;
   fit: number;
-  scores: {
-    latency: number;
-    consistency: number;
-    availability: number;
-    cost: number;
-    simplicity: number;
-  };
+  scores: CandidateScores;
   strength: string;
   risk: string;
 }
@@ -77,6 +79,11 @@ export interface ArchitectureRecommendation {
   pressures: string[];
   tradeoffs: string[];
   findings: LabFinding[];
+  blockerCount: number;
+  /** False when a finding says the constraints cannot all hold at once. No
+   * architecture resolves that — the constraints themselves have to change —
+   * so the candidate ranking is "least bad", not an endorsement. */
+  feasible: boolean;
   candidates: ArchitectureCandidate[];
   recommendedCandidate: ArchitectureCandidate;
   defensePrompts: DefensePrompt[];
@@ -189,18 +196,156 @@ export function buildLabQuery(state: LabState): string {
 }
 
 function clampScore(value: number): number {
-  return Math.max(35, Math.min(98, Math.round(value)));
+  // Floor deliberately low. An earlier version clamped at 35, which made three
+  // very different workloads all report "Lean Regional 42%" — the floor was
+  // eating the discrimination the score is supposed to provide.
+  return Math.max(4, Math.min(98, Math.round(value)));
 }
 
-function buildCandidates(state: LabState, database: string, stream: string, highScale: boolean): ArchitectureCandidate[] {
+function clampBar(value: number): number {
+  return Math.max(1, Math.min(5, Math.round(value)));
+}
+
+const SCORE_KEYS = ["latency", "consistency", "availability", "cost", "simplicity"] as const;
+
+/** How much this workload cares about each quality, on a 1-6 scale.
+ *
+ * These weights are what turn the same five bars into a single number: a
+ * ledger and a log platform can score a strategy identically on latency and
+ * still rank it differently, because they do not value latency the same. */
+function constraintWeights(state: LabState, highScale: boolean): CandidateScores {
   const multiRegion = state.regions > 1;
+  return {
+    latency: state.latency <= 20 ? 6 : state.latency <= 50 ? 5 : state.latency <= 100 ? 3 : 2,
+    consistency: clampBar(
+      (state.consistency === "strong" ? 5 : state.consistency === "read-your-writes" ? 3 : 2)
+      + (state.ordering === "global" ? 1 : 0)
+      + (state.durability === "zero-loss" ? 1 : 0),
+    ),
+    availability:
+      (state.availability === "99.999" ? 6 : state.availability === "99.99" ? 3 : 2)
+      + (multiRegion ? 1 : 0),
+    // Cost and operability matter most when nothing else is screaming. A
+    // modest workload should not be told to build a global cell architecture,
+    // but a five-nines or zero-loss requirement is exactly the case where
+    // "but it is simpler" stops being a valid argument.
+    cost: highScale ? 4 : 3,
+    simplicity: isDemanding(state, highScale) ? 2 : 5,
+  };
+}
+
+/** True when some requirement is strict enough that cheap and simple stop
+ * being tie-breakers. */
+function isDemanding(state: LabState, highScale: boolean): boolean {
+  return highScale
+    || state.regions > 1
+    || state.availability === "99.999"
+    || state.durability === "zero-loss"
+    || state.ordering === "global";
+}
+
+/** Multiplier for a strategy that structurally cannot meet a stated
+ * requirement. Such a strategy is not a partial fit — it is the wrong shape —
+ * so it must not ride high cost and simplicity marks to the top of the
+ * ranking. Without this, asking for five nines recommended the single-region
+ * option, because simplicity outweighed the availability it cannot deliver. */
+function viability(id: ArchitectureCandidate["id"], state: LabState, highScale: boolean): number {
+  if (id !== "lean") return 1;
+  const cannotSpanRegions = state.regions > 1;
+  const cannotReachAvailability = state.availability === "99.999";
+  const cannotAbsorbScale = highScale;
+  return cannotSpanRegions || cannotReachAvailability || cannotAbsorbScale ? 0.55 : 1;
+}
+
+/** Collapse the five bars into one percentage using the workload's weights.
+ *
+ * fit used to be three hand-written formulas living beside an unrelated table
+ * of scores, so the headline number and the bars underneath it could disagree
+ * with each other. Deriving one from the other makes that impossible. */
+function weightedFit(scores: CandidateScores, weights: CandidateScores): number {
+  let total = 0;
+  let weightSum = 0;
+  for (const key of SCORE_KEYS) {
+    total += scores[key] * weights[key];
+    weightSum += weights[key];
+  }
+  return ((total / weightSum) / 5) * 100;
+}
+
+/** How well each strategy serves the *current* constraints, on the 1-5 scale
+ * the comparison bars render.
+ *
+ * These used to be per-candidate constants, which made the bars decorative:
+ * a log platform and a financial ledger drew exactly the same chart. Scoring
+ * against the live state is the whole point of the comparison panel. */
+function scoreCandidates(state: LabState, highScale: boolean): Record<ArchitectureCandidate["id"], CandidateScores> {
+  const multiRegion = state.regions > 1;
+  const wideRegions = state.regions >= 3;
+  const strong = state.consistency === "strong";
+  const lowLatency = state.latency <= 50;
   const demandingAvailability = state.availability === "99.999";
   const strictDurability = state.durability === "zero-loss";
-  const modest = state.qps < 20_000 && !multiRegion;
+  const globalOrder = state.ordering === "global";
 
-  const leanFit = clampScore(82 + (modest ? 10 : 0) - (highScale ? 24 : 0) - (multiRegion ? 16 : 0) - (demandingAvailability ? 18 : 0) - (strictDurability ? 12 : 0));
-  const balancedFit = clampScore(82 + (highScale ? 6 : 2) + (state.regions === 2 ? 6 : 0) - (demandingAvailability ? 5 : 0));
-  const resilientFit = clampScore(62 + (multiRegion ? 13 : 0) + (demandingAvailability ? 15 : 0) + (strictDurability ? 10 : 0) + (state.consistency === "strong" ? 6 : 0) + (highScale ? 5 : 0) - (modest ? 12 : 0));
+  return {
+    lean: {
+      // One region keeps every hop local, so latency is excellent for nearby
+      // users and poor for distant ones the design never reaches.
+      latency: clampBar(5 - (multiRegion ? 2 : 0) - (wideRegions ? 1 : 0) - (highScale ? 1 : 0)),
+      // A single primary makes strong consistency trivial, until write volume
+      // outgrows one leader.
+      consistency: clampBar((strong ? 5 : 4) - (highScale ? 2 : 0) - (globalOrder ? 0 : 0)),
+      // One region with several availability zones covers ordinary failures
+      // and nothing more, so the ceiling here is the availability target the
+      // design can honestly reach — not the one that was asked for.
+      availability: clampBar(
+        (multiRegion ? 1 : 3)
+        - (demandingAvailability ? 2 : 0)
+        - (state.availability === "99.99" ? 1 : 0),
+      ),
+      cost: clampBar(5 - (highScale ? 1 : 0)),
+      simplicity: 5,
+    },
+    balanced: {
+      latency: clampBar(4 + (lowLatency ? 0 : 1) - (wideRegions && strong ? 1 : 0)),
+      consistency: clampBar(strong ? (multiRegion ? 3 : 4) : 4),
+      availability: clampBar(3 + (multiRegion ? 1 : 0) - (demandingAvailability ? 1 : 0)),
+      cost: clampBar(3 + (highScale ? 0 : 1)),
+      simplicity: clampBar(3 - (highScale ? 1 : 0)),
+    },
+    resilient: {
+      // Cross-region quorum is the price of continuity: it shows up as tail
+      // latency exactly when consistency is strict and regions are far apart.
+      latency: clampBar(4 - (strong && multiRegion ? 2 : 0) - (strong && wideRegions ? 1 : 0)),
+      consistency: clampBar(5 - (globalOrder && highScale ? 1 : 0)),
+      availability: clampBar(4 + (multiRegion ? 1 : 0)),
+      cost: clampBar(1 + (multiRegion ? 0 : 1)),
+      simplicity: clampBar(1 + (strictDurability ? 0 : 1) - (wideRegions ? 1 : 0)),
+    },
+  };
+}
+
+function buildCandidates(
+  state: LabState,
+  database: string,
+  stream: string,
+  highScale: boolean,
+  blockerCount: number,
+): ArchitectureCandidate[] {
+  const multiRegion = state.regions > 1;
+  const scores = scoreCandidates(state, highScale);
+  const weights = constraintWeights(state, highScale);
+  // A blocker means the constraints contradict each other, and none of these
+  // strategies can resolve that — only changing an input can. Damping every
+  // fit equally keeps the ranking (still useful as "least bad") while stopping
+  // the headline number from reading as approval of an impossible design.
+  const blockerPenalty = blockerCount * 18;
+  const fitFor = (id: ArchitectureCandidate["id"]) =>
+    clampScore(weightedFit(scores[id], weights) * viability(id, state, highScale) - blockerPenalty);
+
+  const leanFit = fitFor("lean");
+  const balancedFit = fitFor("balanced");
+  const resilientFit = fitFor("resilient");
 
   const candidates: ArchitectureCandidate[] = [
     {
@@ -208,7 +353,7 @@ function buildCandidates(state: LabState, database: string, stream: string, high
       summary:"Start inside one region with managed building blocks and a deliberately replaceable queue boundary.",
       topology:`Regional load balancer → stateless service → ${state.consistency === "strong" ? "relational primary + replicas" : "managed serving store"}`,
       fit:leanFit,
-      scores:{ latency:4, consistency:4, availability:2, cost:5, simplicity:5 },
+      scores:scores.lean,
       strength:"Fastest path to production with the smallest operational surface.",
       risk:multiRegion ? "Does not satisfy regional continuity without an explicit failover design." : "Regional failure remains the dominant recovery scenario.",
     },
@@ -217,7 +362,7 @@ function buildCandidates(state: LabState, database: string, stream: string, high
       summary:"Separate serving, buffering, and durable history so each layer can scale on its own curve.",
       topology:`Geo-aware edge → autoscaled services → ${stream} → ${database}`,
       fit:balancedFit,
-      scores:{ latency:4, consistency:4, availability:4, cost:3, simplicity:3 },
+      scores:scores.balanced,
       strength:"Good throughput headroom without committing every subsystem to maximum complexity.",
       risk:"Requires disciplined partitioning, replay procedures, and cache invalidation ownership.",
     },
@@ -226,7 +371,7 @@ function buildCandidates(state: LabState, database: string, stream: string, high
       summary:"Favor regional autonomy, redundant write paths, and tested recovery boundaries over cost and simplicity.",
       topology:`Global traffic manager → regional cells → durable log → replicated ${database}`,
       fit:resilientFit,
-      scores:{ latency:4, consistency:5, availability:5, cost:1, simplicity:1 },
+      scores:scores.resilient,
       strength:"Best fit for strict recovery objectives and continued operation through a regional failure.",
       risk:"Highest cost and operational burden; cross-region correctness must be tested continuously.",
     },
@@ -252,7 +397,10 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   const brokers = hasWrites ? Math.max(state.replicas, Math.ceil((partitions * state.replicas) / 120), Math.ceil(hotPhysicalTb / 2.8)) : 0;
   const highScale = peakQps >= 50_000 || ingressMb >= 100;
   const lowLatency = state.latency <= 50;
-  const longRetention = state.retention > 14 || physicalStoredTb > 5;
+  // Retention only implies an archive if something is actually being written.
+  // A read-only workload kept "365 days" of nothing and was still told to buy
+  // object storage for 0.0 TB.
+  const longRetention = hasWrites && (state.retention > 14 || physicalStoredTb > 5);
   const multiRegion = state.regions > 1;
 
   let database = "Relational database with read replicas";
@@ -296,10 +444,14 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     : highScale
       ? `${partitions} partitions at roughly 70% target utilization leave burst and rebalance headroom.`
       : "A smaller durable queue decouples spikes without adding unnecessary cluster complexity.";
-  const storage = longRetention ? "Object storage as durable archive" : "Serving store + scheduled snapshots";
-  const storageReason = longRetention
-    ? `${physicalStoredTb.toFixed(1)} TB provisioned after compression, replication, and index overhead favors cheap immutable storage.`
-    : "The retained volume is modest enough to begin with the serving store and verified backups.";
+  const storage = !hasWrites
+    ? "Read-only serving store"
+    : longRetention ? "Object storage as durable archive" : "Serving store + scheduled snapshots";
+  const storageReason = !hasWrites
+    ? "This workload writes nothing, so retention is inherited from whatever system produces the data; size that system, not this one."
+    : longRetention
+      ? `${physicalStoredTb.toFixed(1)} TB provisioned after compression, replication, and index overhead favors cheap immutable storage.`
+      : "The retained volume is modest enough to begin with the serving store and verified backups.";
 
   let replication = "Synchronous replicas across availability zones";
   let replicationReason = "Keep quorum latency regional and test automatic zone failover.";
@@ -367,7 +519,8 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
       : "A single region is easier to operate but needs a tested regional recovery plan.",
   ];
 
-  const candidates = buildCandidates(state, database, stream, highScale);
+  const blockerCount = findings.filter((finding) => finding.severity === "blocker").length;
+  const candidates = buildCandidates(state, database, stream, highScale, blockerCount);
   const defensePrompts: DefensePrompt[] = [
     { question:"Why is this database model a better fit than the closest alternative?", talkingPoint:`Tie the answer to ${state.workload} access patterns, ${state.consistency} consistency, and ${Math.round(peakWriteQps).toLocaleString("en-US")} peak writes per second.` },
     { question:"How will you choose a partition key and detect hot partitions?", talkingPoint:`Explain cardinality, ownership, skew metrics, and how ${partitions} starting partitions can be split without changing external identifiers.` },
@@ -379,7 +532,8 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     baselineWriteQps, peakQps, peakReadQps, peakWriteQps, ingressMb, dailyTb, logicalStoredTb,
     physicalStoredTb, partitions, brokers, database, databaseReason, cache, cacheReason, stream,
     streamReason, storage, storageReason, replication, replicationReason, readPath, readPathReason,
-    pressures, tradeoffs, findings, candidates, recommendedCandidate:candidates[0], defensePrompts,
+    pressures, tradeoffs, findings, blockerCount, feasible:blockerCount === 0,
+    candidates, recommendedCandidate:candidates[0], defensePrompts,
     highScale, longRetention,
   };
 }
@@ -412,6 +566,9 @@ export function buildDesignBrief(state: LabState, result: ArchitectureRecommenda
     `- Estimated brokers: ${result.brokers}`,
     "",
     "## Recommended architecture",
+    ...(result.feasible
+      ? []
+      : [`> **${result.blockerCount} blocking conflict(s) unresolved.** The strategy below is the least-bad ranking under constraints that cannot all hold at once — change an input before treating it as a design.`, ""]),
     `- Strategy: ${result.recommendedCandidate.title} (${result.recommendedCandidate.fit}% fit)`,
     `- Database: ${result.database}`,
     `- Cache: ${result.cache}`,
