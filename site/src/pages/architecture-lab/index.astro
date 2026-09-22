@@ -4,24 +4,25 @@ import { withBase } from "@/lib/url";
 ---
 
 <BaseLayout
-  title="Architecture Decision Lab"
-  description="Explore how scale, latency, consistency, retention, and geography change a distributed system design."
+  title="Architecture Decision Lab 2.0"
+  description="Compare architecture strategies, detect conflicting constraints, and estimate capacity without AI or a backend."
 >
   <div class="lab-page" data-architecture-lab>
     <header class="lab-hero">
       <div class="wrap lab-hero-grid">
         <div>
-          <span class="eyebrow">INTERACTIVE / TRADE-OFF ENGINE</span>
-          <h1>Architecture<br />Decision Lab</h1>
+          <span class="eyebrow">INTERACTIVE / DETERMINISTIC RULE ENGINE</span>
+          <h1>Architecture<br />Decision Lab <em>2.0</em></h1>
           <p>
-            Change the constraints. Watch the architecture move. The output is a starting
-            hypothesis—not a substitute for workload-specific measurement.
+            Shape a workload, expose impossible combinations, and compare three defensible
+            architectures. Everything runs locally in your browser—no AI, account, or backend.
           </p>
         </div>
         <div class="signal-panel" aria-hidden="true">
-          <span>MODEL / V1</span>
-          <div class="signal-line"><i></i><i></i><i></i><i></i><i></i></div>
-          <strong>INPUT → PRESSURE → DECISION</strong>
+          <div><span>MODEL</span><strong>V2.0</strong></div>
+          <div><span>EXECUTION</span><strong>LOCAL</strong></div>
+          <div><span>OUTPUT</span><strong>EXPLAINABLE</strong></div>
+          <small>CONSTRAINTS → RISKS → OPTIONS → DECISION</small>
         </div>
       </div>
     </header>
@@ -30,148 +31,230 @@ import { withBase } from "@/lib/url";
       <section class="control-panel" aria-labelledby="constraints-title">
         <div class="panel-head">
           <div><span class="eyebrow">01 / CONSTRAINTS</span><h2 id="constraints-title">Shape the workload</h2></div>
-          <button type="button" class="reset-button" data-reset>Reset</button>
+          <button type="button" class="quiet-button" data-reset>Reset</button>
         </div>
 
         <div class="presets" aria-label="Architecture presets">
-          <button type="button" data-preset="api">High-traffic API</button>
-          <button type="button" data-preset="logs">Log platform</button>
-          <button type="button" data-preset="ledger">Financial ledger</button>
-          <button type="button" data-preset="feed">Global feed</button>
+          <button type="button" data-preset="api" aria-pressed="false">High-traffic API</button>
+          <button type="button" data-preset="logs" aria-pressed="false">Log platform</button>
+          <button type="button" data-preset="ledger" aria-pressed="false">Financial ledger</button>
+          <button type="button" data-preset="feed" aria-pressed="false">Global feed</button>
         </div>
 
-        <div class="controls-grid">
-          <label>
-            <span>Peak requests / second</span>
-            <strong data-qps-output>10,000</strong>
-            <input type="range" min="100" max="1000000" step="100" value="10000" data-input="qps" />
-            <small>100 → 1,000,000 QPS</small>
-          </label>
+        <div class="control-group">
+          <p>TRAFFIC SHAPE</p>
+          <div class="controls-grid">
+            <label>
+              <span>Baseline requests / second</span>
+              <strong data-qps-output>10,000</strong>
+              <input type="range" min="100" max="1000000" step="100" value="10000" data-input="qps" />
+              <small>100 → 1,000,000 requests/second</small>
+            </label>
+            <label>
+              <span>Read / write mix</span>
+              <strong data-read-output>80% / 20%</strong>
+              <input type="range" min="0" max="100" step="5" value="80" data-input="readPercent" />
+              <small>Reads on the left, writes on the right</small>
+            </label>
+            <label>
+              <span>Burst multiplier</span>
+              <select data-input="burstFactor">
+                <option value="1">1× steady</option><option value="2" selected>2×</option>
+                <option value="3">3×</option><option value="5">5×</option><option value="10">10×</option>
+              </select>
+            </label>
+            <label>
+              <span>Average payload size</span>
+              <strong data-size-output>2 KB</strong>
+              <input type="range" min="1" max="1024" step="1" value="2" data-input="sizeKb" />
+              <small>1 KB → 1 MB per write</small>
+            </label>
+            <label>
+              <span>Workload shape</span>
+              <select data-input="workload">
+                <option value="transactional" selected>Transactional</option>
+                <option value="key-value">Key-value access</option>
+                <option value="event-stream">Event stream</option>
+                <option value="analytics">Analytical scans</option>
+              </select>
+            </label>
+            <label>
+              <span>Target p99 latency</span>
+              <select data-input="latency">
+                <option value="20">20 ms</option><option value="50" selected>50 ms</option>
+                <option value="100">100 ms</option><option value="250">250 ms</option><option value="1000">1 second</option>
+              </select>
+            </label>
+          </div>
+        </div>
 
-          <label>
-            <span>Average payload size</span>
-            <strong data-size-output>2 KB</strong>
-            <input type="range" min="1" max="1024" step="1" value="2" data-input="sizeKb" />
-            <small>1 KB → 1 MB per event</small>
-          </label>
+        <div class="control-group">
+          <p>CORRECTNESS + RESILIENCE</p>
+          <div class="controls-grid">
+            <label>
+              <span>Consistency</span>
+              <select data-input="consistency">
+                <option value="eventual">Eventual</option>
+                <option value="read-your-writes">Read your writes</option>
+                <option value="strong" selected>Strong</option>
+              </select>
+            </label>
+            <label>
+              <span>Availability target</span>
+              <select data-input="availability">
+                <option value="99.9">99.9%</option><option value="99.99" selected>99.99%</option><option value="99.999">99.999%</option>
+              </select>
+            </label>
+            <label>
+              <span>Durability target</span>
+              <select data-input="durability">
+                <option value="standard">Standard</option><option value="high" selected>High</option><option value="zero-loss">Zero acknowledged loss</option>
+              </select>
+            </label>
+            <label>
+              <span>Ordering requirement</span>
+              <select data-input="ordering">
+                <option value="none">No ordering</option><option value="per-key" selected>Per-key ordering</option><option value="global">Global ordering</option>
+              </select>
+            </label>
+            <label>
+              <span>Geographic footprint</span>
+              <select data-input="regions">
+                <option value="1" selected>Single region</option><option value="2">Primary + failover</option><option value="3">Active in 3+ regions</option>
+              </select>
+            </label>
+            <label>
+              <span>Replica factor</span>
+              <select data-input="replicas">
+                <option value="1">1 replica</option><option value="2">2 replicas</option><option value="3" selected>3 replicas</option><option value="5">5 replicas</option>
+              </select>
+            </label>
+          </div>
+        </div>
 
-          <label>
-            <span>Target p99 latency</span>
-            <select data-input="latency">
-              <option value="20">20 ms</option>
-              <option value="50" selected>50 ms</option>
-              <option value="100">100 ms</option>
-              <option value="250">250 ms</option>
-              <option value="1000">1 second</option>
-            </select>
-          </label>
+        <div class="control-group">
+          <p>DATA ECONOMICS</p>
+          <div class="controls-grid">
+            <label>
+              <span>Retention period</span>
+              <strong data-retention-output>30 days</strong>
+              <input type="range" min="1" max="365" step="1" value="30" data-input="retention" />
+              <small>1 → 365 days</small>
+            </label>
+            <label>
+              <span>Expected compression</span>
+              <select data-input="compression">
+                <option value="1">None</option><option value="2" selected>2×</option><option value="3">3×</option><option value="4">4×</option>
+              </select>
+            </label>
+          </div>
+        </div>
 
-          <label>
-            <span>Consistency requirement</span>
-            <select data-input="consistency">
-              <option value="eventual">Eventual</option>
-              <option value="read-your-writes">Read your writes</option>
-              <option value="strong" selected>Strong</option>
-            </select>
-          </label>
-
-          <label>
-            <span>Retention period</span>
-            <strong data-retention-output>30 days</strong>
-            <input type="range" min="1" max="365" step="1" value="30" data-input="retention" />
-            <small>1 → 365 days</small>
-          </label>
-
-          <label>
-            <span>Geographic footprint</span>
-            <select data-input="regions">
-              <option value="1" selected>Single region</option>
-              <option value="2">Primary + failover</option>
-              <option value="3">Active in 3+ regions</option>
-            </select>
-          </label>
+        <div class="scenario-store">
+          <span class="eyebrow">SAVED LOCALLY</span>
+          <div class="save-row">
+            <input type="text" maxlength="40" placeholder="Scenario name" aria-label="Scenario name" data-scenario-name />
+            <button type="button" data-save-scenario>Save</button>
+          </div>
+          <p data-storage-note>Saved designs stay in this browser.</p>
+          <div class="saved-list" data-saved-list></div>
         </div>
       </section>
 
-      <!--
-        No aria-live on this panel: it re-renders in full on every slider tick,
-        so a live region here makes a screen reader read out four metrics, six
-        decisions and two lists dozens of times during one drag. A short,
-        debounced status line below carries the headline numbers instead.
-      -->
       <section class="result-panel" aria-labelledby="recommendation-title">
-        <div class="panel-head">
-          <div><span class="eyebrow">02 / DECISIONS</span><h2 id="recommendation-title">Recommended starting point</h2></div>
-          <button type="button" class="copy-button-lab" data-copy-summary>Copy design brief</button>
+        <div class="panel-head result-head">
+          <div><span class="eyebrow">02 / DECISION OUTPUT</span><h2 id="recommendation-title">Recommended starting point</h2></div>
+          <div class="output-actions">
+            <button type="button" class="quiet-button" data-copy-link>Copy link</button>
+            <button type="button" class="quiet-button" data-copy-summary>Copy brief</button>
+            <button type="button" class="quiet-button" data-download>Download .md</button>
+          </div>
         </div>
 
         <p class="lab-live-status" data-lab-status aria-live="polite"></p>
 
+        <div class="constraint-review" data-constraint-review>
+          <div class="section-heading compact">
+            <div><span class="eyebrow">CONSTRAINT CHECK</span><h2>Feasibility before architecture</h2></div>
+            <strong data-finding-count>1 RISK</strong>
+          </div>
+          <div class="finding-list" data-finding-list>
+            <article class="finding warning"><span>WARNING</span><h3>Availability depends on one region</h3><p>A regional event exceeds this availability posture.</p></article>
+          </div>
+        </div>
+
         <div class="metric-grid">
-          <!-- Placeholders match what recommend() computes for the default
-               state, so the panel is still correct with JS disabled. -->
-          <article><span>INGRESS</span><strong data-metric="ingress">19.5 MB/s</strong><small>uncompressed peak</small></article>
-          <article><span>DAILY DATA</span><strong data-metric="daily">1.6 TB</strong><small>before compression</small></article>
-          <article><span>RETENTION</span><strong data-metric="stored">48.3 TB</strong><small>raw logical volume</small></article>
-          <article><span>PARTITIONS</span><strong data-metric="partitions">3</strong><small>starting stream width</small></article>
+          <article><span>PEAK READ / WRITE</span><strong data-metric="rw">16K / 4K</strong><small>requests per second</small></article>
+          <article><span>WRITE INGRESS</span><strong data-metric="ingress">7.8 MB/s</strong><small>peak, uncompressed</small></article>
+          <article><span>DAILY LOGICAL</span><strong data-metric="daily">0.3 TB</strong><small>baseline writes</small></article>
+          <article><span>PHYSICAL DATA</span><strong data-metric="stored">17.4 TB</strong><small>compression + replicas + 20%</small></article>
+          <article><span>PARTITIONS</span><strong data-metric="partitions">3</strong><small>at ~70% utilization</small></article>
+          <article><span>BROKERS</span><strong data-metric="brokers">3</strong><small>throughput + hot storage</small></article>
         </div>
 
         <div class="architecture-flow" aria-label="Recommended architecture flow">
-          <div class="flow-node"><small>EDGE</small><strong data-node="edge">Load Balancer</strong></div>
-          <span>→</span>
-          <div class="flow-node"><small>COMPUTE</small><strong data-node="compute">Stateless Service</strong></div>
-          <span>→</span>
-          <div class="flow-node"><small>BUFFER</small><strong data-node="buffer">Durable Queue</strong></div>
-          <span>→</span>
-          <div class="flow-node"><small>STATE</small><strong data-node="state">Distributed SQL</strong></div>
+          <div class="flow-node"><small>EDGE</small><strong data-node="edge">Load Balancer</strong></div><span>→</span>
+          <div class="flow-node"><small>COMPUTE</small><strong data-node="compute">Stateless Service</strong></div><span>→</span>
+          <div class="flow-node"><small>BUFFER</small><strong data-node="buffer">Durable Queue</strong></div><span>→</span>
+          <div class="flow-node"><small>STATE</small><strong data-node="state">Relational Database</strong></div>
         </div>
 
         <div class="decision-grid">
-          <article>
-            <span class="decision-code">D01 / DATA</span>
-            <h3 data-decision="database">Distributed SQL / NewSQL</h3>
-            <p data-reason="database"></p>
-          </article>
-          <article>
-            <span class="decision-code">D02 / CACHE</span>
-            <h3 data-decision="cache">Distributed cache</h3>
-            <p data-reason="cache"></p>
-          </article>
-          <article>
-            <span class="decision-code">D03 / STREAM</span>
-            <h3 data-decision="stream">Kafka-compatible event log</h3>
-            <p data-reason="stream"></p>
-          </article>
-          <article>
-            <span class="decision-code">D04 / STORAGE</span>
-            <h3 data-decision="storage">Object storage archive</h3>
-            <p data-reason="storage"></p>
-          </article>
-          <article>
-            <span class="decision-code">D05 / REPLICATION</span>
-            <h3 data-decision="replication">Synchronous regional replicas</h3>
-            <p data-reason="replication"></p>
-          </article>
-          <article>
-            <span class="decision-code">D06 / READ PATH</span>
-            <h3 data-decision="readPath">Cache-aside reads</h3>
-            <p data-reason="readPath"></p>
-          </article>
+          <article><span class="decision-code">D01 / DATA</span><h3 data-decision="database">Relational database</h3><p data-reason="database"></p></article>
+          <article><span class="decision-code">D02 / CACHE</span><h3 data-decision="cache">Versioned read-through cache</h3><p data-reason="cache"></p></article>
+          <article><span class="decision-code">D03 / STREAM</span><h3 data-decision="stream">Durable queue with replay</h3><p data-reason="stream"></p></article>
+          <article><span class="decision-code">D04 / STORAGE</span><h3 data-decision="storage">Object storage archive</h3><p data-reason="storage"></p></article>
+          <article><span class="decision-code">D05 / REPLICATION</span><h3 data-decision="replication">Synchronous zonal replicas</h3><p data-reason="replication"></p></article>
+          <article><span class="decision-code">D06 / READ PATH</span><h3 data-decision="readPath">Regional read model</h3><p data-reason="readPath"></p></article>
         </div>
+
+        <section class="candidate-section" aria-labelledby="candidate-title">
+          <div class="section-heading">
+            <div><span class="eyebrow">03 / OPTION SPACE</span><h2 id="candidate-title">Compare, do not guess</h2></div>
+            <p>Fit is deterministic and relative to the current constraints.</p>
+          </div>
+          <div class="candidate-grid">
+            {[0, 1, 2].map(() => (
+              <article class="candidate-card" data-candidate-card>
+                <div class="candidate-top"><span data-candidate-label>OPTION</span><strong data-candidate-fit>0%</strong></div>
+                <h3 data-candidate-title>Architecture option</h3>
+                <p data-candidate-summary></p>
+                <code data-candidate-topology></code>
+                <div class="score-list">
+                  {(["latency", "consistency", "availability", "cost", "simplicity"] as const).map((score) => (
+                    <div><span>{score}</span><b class="score-bar"><i data-score-bar={score}></i></b><strong data-score-value={score}>0/5</strong></div>
+                  ))}
+                </div>
+                <dl><div><dt>STRENGTH</dt><dd data-candidate-strength></dd></div><div><dt>RISK</dt><dd data-candidate-risk></dd></div></dl>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <div class="tradeoffs">
-          <div>
-            <span class="eyebrow">PRESSURE POINTS</span>
-            <ul data-pressure-list></ul>
-          </div>
-          <div>
-            <span class="eyebrow">EXPLICIT TRADE-OFFS</span>
-            <ul data-tradeoff-list></ul>
-          </div>
+          <div><span class="eyebrow">PRESSURE POINTS</span><ul data-pressure-list></ul></div>
+          <div><span class="eyebrow">EXPLICIT TRADE-OFFS</span><ul data-tradeoff-list></ul></div>
         </div>
 
+        <section class="defense-section" aria-labelledby="defense-title">
+          <div class="section-heading">
+            <div><span class="eyebrow">04 / INTERVIEW DEFENSE</span><h2 id="defense-title">Defend the design</h2></div>
+            <p>Prompts change with the workload. Reveal the talking point only after answering.</p>
+          </div>
+          <div class="defense-grid">
+            {[0, 1, 2, 3].map((_, index) => (
+              <article data-defense-card>
+                <span>Q{String(index + 1).padStart(2, "0")}</span>
+                <h3 data-defense-question>Architecture defense question</h3>
+                <button type="button" data-defense-toggle aria-expanded="false">Reveal talking point</button>
+                <p data-defense-answer hidden></p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <div class="lab-next">
-          <div><span class="eyebrow">NEXT STEP</span><h2>Defend the choices in an interview.</h2></div>
+          <div><span class="eyebrow">NEXT STEP</span><h2>Validate assumptions with measurements.</h2></div>
           <a href={withBase("/learning-paths/system-design-fundamentals/")}>Open the fundamentals path →</a>
         </div>
       </section>
@@ -181,25 +264,37 @@ import { withBase } from "@/lib/url";
 
 <script>
   import {
+    buildDesignBrief,
     buildLabQuery,
     labDefaults,
     labPresets,
     parseLabParams,
     recommendArchitecture,
     sanitizeLabValue,
+    type ArchitectureCandidate,
+    type LabFinding,
     type LabState,
   } from "@/lib/architectureLab";
 
   type LabControl = HTMLInputElement | HTMLSelectElement;
+  interface SavedScenario { id:string; name:string; savedAt:string; state:LabState; }
   const labKeys = Object.keys(labDefaults) as (keyof LabState)[];
-
+  const storageKey = "eng-knowledge:architecture-lab:v2:scenarios";
   const root = document.querySelector<HTMLElement>("[data-architecture-lab]");
   const inputs: Partial<Record<keyof LabState, LabControl>> = Object.fromEntries(
     Array.from(root?.querySelectorAll<LabControl>("[data-input]") ?? []).map((input) => [input.dataset.input, input])
   );
+  let activePreset: string | null = null;
+  let designBrief = "";
+  let currentShareUrl = "";
+  let savedScenarios: SavedScenario[] = [];
 
   function formatNumber(value: number): string {
-    return new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(value);
+    return new Intl.NumberFormat("en-US", { maximumFractionDigits:1, notation:value >= 100_000 ? "compact" : "standard" }).format(value);
+  }
+
+  function formatTb(value: number): string {
+    return value < 0.1 ? `${formatNumber(value * 1024)} GB` : `${formatNumber(value)} TB`;
   }
 
   function setText(selector: string, value: string): void {
@@ -217,14 +312,6 @@ import { withBase } from "@/lib/url";
     }));
   }
 
-  /** Read the controls back as a valid LabState.
-   *
-   * The DOM normally constrains these (a range clamps, a select only holds its
-   * own options), but this is the one path that reaches recommendArchitecture
-   * without passing through sanitizeLabValue — so anything unexpected, from a
-   * restored form state to an extension rewriting a control, would otherwise
-   * produce a confident recommendation from nonsense input. Falling back to
-   * the default for that field keeps the panel honest. */
   function readState(): LabState {
     const state = { ...labDefaults };
     labKeys.forEach((key) => {
@@ -236,59 +323,101 @@ import { withBase } from "@/lib/url";
     return state;
   }
 
-  function applyState(state: LabState): void {
+  function applyState(state: LabState, preset: string | null = null): void {
     labKeys.forEach((key) => {
       const input = inputs[key];
       const safe = sanitizeLabValue(key, state[key]);
       if (safe !== null && input) input.value = String(safe);
     });
+    activePreset = preset;
     update();
+  }
+
+  function renderFindings(findings: LabFinding[]): void {
+    const list = root?.querySelector("[data-finding-list]");
+    if (!list) return;
+    list.replaceChildren(...findings.map((finding) => {
+      const article = document.createElement("article");
+      article.className = `finding ${finding.severity}`;
+      const severity = document.createElement("span");
+      severity.textContent = finding.severity.toUpperCase();
+      const title = document.createElement("h3");
+      title.textContent = finding.title;
+      const detail = document.createElement("p");
+      detail.textContent = finding.detail;
+      article.append(severity, title, detail);
+      return article;
+    }));
+    const blockers = findings.filter((item) => item.severity === "blocker").length;
+    const warnings = findings.filter((item) => item.severity === "warning").length;
+    setText("[data-finding-count]", blockers ? `${blockers} BLOCKER${blockers > 1 ? "S" : ""}` : warnings ? `${warnings} RISK${warnings > 1 ? "S" : ""}` : "PLAUSIBLE");
+    if (root) root.dataset.risk = blockers ? "blocker" : warnings ? "warning" : "clear";
+  }
+
+  function renderCandidates(candidates: ArchitectureCandidate[]): void {
+    root?.querySelectorAll<HTMLElement>("[data-candidate-card]").forEach((card, index) => {
+      const candidate = candidates[index];
+      if (!candidate) return;
+      card.classList.toggle("recommended", index === 0);
+      const write = (selector: string, value: string) => { const node = card.querySelector(selector); if (node) node.textContent = value; };
+      write("[data-candidate-label]", index === 0 ? `RECOMMENDED / ${candidate.label}` : candidate.label);
+      write("[data-candidate-fit]", `${candidate.fit}% FIT`);
+      write("[data-candidate-title]", candidate.title);
+      write("[data-candidate-summary]", candidate.summary);
+      write("[data-candidate-topology]", candidate.topology);
+      write("[data-candidate-strength]", candidate.strength);
+      write("[data-candidate-risk]", candidate.risk);
+      Object.entries(candidate.scores).forEach(([key, score]) => {
+        const bar = card.querySelector<HTMLElement>(`[data-score-bar="${key}"]`);
+        if (bar) bar.style.width = `${score * 20}%`;
+        write(`[data-score-value="${key}"]`, `${score}/5`);
+      });
+    });
+  }
+
+  function renderDefense(prompts: { question:string; talkingPoint:string }[]): void {
+    root?.querySelectorAll<HTMLElement>("[data-defense-card]").forEach((card, index) => {
+      const prompt = prompts[index];
+      if (!prompt) return;
+      const question = card.querySelector("[data-defense-question]");
+      const answer = card.querySelector<HTMLElement>("[data-defense-answer]");
+      const button = card.querySelector<HTMLButtonElement>("[data-defense-toggle]");
+      if (question) question.textContent = prompt.question;
+      if (answer) { answer.textContent = prompt.talkingPoint; answer.hidden = true; }
+      if (button) { button.textContent = "Reveal talking point"; button.setAttribute("aria-expanded", "false"); }
+    });
   }
 
   let urlTimer: ReturnType<typeof setTimeout> | undefined;
   let pendingAnnouncement = "";
-  // The design brief lives here rather than on the DOM node, so it is typed
-  // and cannot be clobbered by anything else touching the element.
-  let designBrief = "";
-  function announce(message: string): void {
-    const status = root?.querySelector("[data-lab-status]");
-    if (status) status.textContent = message;
-  }
-
   function updateUrl(query: string): void {
-    // Range inputs fire `input` continuously while dragging, and Safari throws
-    // a SecurityError after roughly 100 history calls in 30 seconds — which
-    // would kill the update loop part-way through a single slider drag. The
-    // visible panel still updates on every tick; only the address bar waits.
     clearTimeout(urlTimer);
     urlTimer = setTimeout(() => {
-      try {
-        history.replaceState(null, "", `${location.pathname}?${query}`);
-      } catch {
-        /* History throttled or unavailable; the lab itself is unaffected. */
-      }
-      announce(pendingAnnouncement);
+      try { history.replaceState(null, "", `${location.pathname}?${query}`); } catch { /* Lab still works if History is unavailable. */ }
+      const status = root?.querySelector("[data-lab-status]");
+      if (status) status.textContent = pendingAnnouncement;
     }, 250);
   }
 
   function update(): void {
     const state = readState();
     const result = recommendArchitecture(state);
+    root?.querySelectorAll<HTMLButtonElement>("[data-preset]").forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.preset === activePreset)));
     setText("[data-qps-output]", formatNumber(state.qps));
+    setText("[data-read-output]", `${state.readPercent}% / ${100 - state.readPercent}%`);
     setText("[data-size-output]", state.sizeKb >= 1024 ? "1 MB" : `${formatNumber(state.sizeKb)} KB`);
     setText("[data-retention-output]", `${state.retention} days`);
+    setText('[data-metric="rw"]', `${formatNumber(result.peakReadQps)} / ${formatNumber(result.peakWriteQps)}`);
     setText('[data-metric="ingress"]', `${formatNumber(result.ingressMb)} MB/s`);
-    setText('[data-metric="daily"]', `${formatNumber(result.dailyTb)} TB`);
-    setText('[data-metric="stored"]', `${formatNumber(result.storedTb)} TB`);
+    setText('[data-metric="daily"]', formatTb(result.dailyTb));
+    setText('[data-metric="stored"]', formatTb(result.physicalStoredTb));
     setText('[data-metric="partitions"]', String(result.partitions));
+    setText('[data-metric="brokers"]', String(result.brokers));
 
     ([
-      ["database", result.database, result.databaseReason],
-      ["cache", result.cache, result.cacheReason],
-      ["stream", result.stream, result.streamReason],
-      ["storage", result.storage, result.storageReason],
-      ["replication", result.replication, result.replicationReason],
-      ["readPath", result.readPath, result.readPathReason],
+      ["database", result.database, result.databaseReason], ["cache", result.cache, result.cacheReason],
+      ["stream", result.stream, result.streamReason], ["storage", result.storage, result.storageReason],
+      ["replication", result.replication, result.replicationReason], ["readPath", result.readPath, result.readPathReason],
     ] as const).forEach(([key, decision, reason]) => {
       setText(`[data-decision="${key}"]`, decision);
       setText(`[data-reason="${key}"]`, reason);
@@ -299,130 +428,206 @@ import { withBase } from "@/lib/url";
     setText('[data-node="state"]', result.database);
     setList("[data-pressure-list]", result.pressures);
     setList("[data-tradeoff-list]", result.tradeoffs);
-    if (root) root.dataset.scale = result.highScale ? "high" : "standard";
-    // Built here rather than read back from location.href: the address bar is
-    // written on a debounce, so reading it would put a stale link in the brief.
+    renderFindings(result.findings);
+    renderCandidates(result.candidates);
+    renderDefense(result.defensePrompts);
     const query = buildLabQuery(state);
-    const shareUrl = `${location.origin}${location.pathname}?${query}`;
-    pendingAnnouncement = `${formatNumber(state.qps)} QPS, ${state.consistency} consistency, ${state.regions} region(s): ${result.database}, ${result.stream}, ${result.storage}. Ingress ${formatNumber(result.ingressMb)} megabytes per second, ${result.partitions} partitions.`;
+    currentShareUrl = `${location.origin}${location.pathname}?${query}`;
+    designBrief = buildDesignBrief(state, result, currentShareUrl);
+    pendingAnnouncement = `${formatNumber(result.peakQps)} peak requests per second. ${result.findings.length} constraint finding(s). Recommended option: ${result.recommendedCandidate.title} at ${result.recommendedCandidate.fit}% fit.`;
     updateUrl(query);
-    designBrief = [
-      "Architecture Decision Lab — Design Brief",
-      `Peak traffic: ${formatNumber(state.qps)} QPS`,
-      `Payload: ${formatNumber(state.sizeKb)} KB`,
-      `Target p99: ${state.latency} ms`,
-      `Consistency: ${state.consistency}`,
-      `Retention: ${state.retention} days`,
-      `Regions: ${state.regions}`,
-      "",
-      `Ingress: ${formatNumber(result.ingressMb)} MB/s`,
-      `Daily data: ${formatNumber(result.dailyTb)} TB`,
-      `Starting partitions: ${result.partitions}`,
-      `Database: ${result.database}`,
-      `Cache: ${result.cache}`,
-      `Stream: ${result.stream}`,
-      `Storage: ${result.storage}`,
-      `Replication: ${result.replication}`,
-      "",
-      `Explore: ${shareUrl}`,
-    ].join("\n");
   }
 
-  root?.querySelectorAll<LabControl>("[data-input]").forEach((input) => input.addEventListener("input", update));
+  function copyText(text: string, button: HTMLButtonElement, success: string): void {
+    const original = button.textContent ?? "Copy";
+    const done = () => { button.textContent = success; setTimeout(() => { button.textContent = original; }, 1600); };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => button.textContent = "Copy unavailable");
+    } else button.textContent = "Copy unavailable";
+  }
+
+  function loadScenarios(): SavedScenario[] {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
+      if (!Array.isArray(parsed)) return [];
+      return parsed.flatMap((item): SavedScenario[] => {
+        if (!item || typeof item !== "object" || typeof item.id !== "string" || typeof item.name !== "string" || !item.state) return [];
+        const params = new URLSearchParams();
+        labKeys.forEach((key) => params.set(key, String(item.state[key] ?? "")));
+        return [{ id:item.id, name:item.name.slice(0, 40), savedAt:typeof item.savedAt === "string" ? item.savedAt : "", state:parseLabParams(params) }];
+      }).slice(0, 12);
+    } catch { return []; }
+  }
+
+  function persistScenarios(): void {
+    try { localStorage.setItem(storageKey, JSON.stringify(savedScenarios)); setText("[data-storage-note]", "Saved designs stay in this browser."); }
+    catch { setText("[data-storage-note]", "Browser storage is unavailable; this design was not saved."); }
+  }
+
+  function renderSavedScenarios(): void {
+    const list = root?.querySelector("[data-saved-list]");
+    if (!list) return;
+    if (!savedScenarios.length) {
+      const empty = document.createElement("span"); empty.className = "saved-empty"; empty.textContent = "No saved scenarios yet."; list.replaceChildren(empty); return;
+    }
+    list.replaceChildren(...savedScenarios.map((scenario) => {
+      const row = document.createElement("div");
+      const load = document.createElement("button"); load.type = "button"; load.className = "saved-name"; load.textContent = scenario.name;
+      load.addEventListener("click", () => applyState(scenario.state));
+      const remove = document.createElement("button"); remove.type = "button"; remove.className = "saved-remove"; remove.textContent = "Delete"; remove.setAttribute("aria-label", `Delete ${scenario.name}`);
+      remove.addEventListener("click", () => { savedScenarios = savedScenarios.filter((item) => item.id !== scenario.id); persistScenarios(); renderSavedScenarios(); });
+      row.append(load, remove); return row;
+    }));
+  }
+
+  root?.querySelectorAll<LabControl>("[data-input]").forEach((input) => input.addEventListener("input", () => { activePreset = null; update(); }));
   root?.querySelectorAll<HTMLButtonElement>("[data-preset]").forEach((button) => button.addEventListener("click", () => {
-    const preset = labPresets[button.dataset.preset ?? ""];
-    if (preset) applyState(preset);
+    const key = button.dataset.preset ?? "";
+    if (labPresets[key]) applyState(labPresets[key], key);
   }));
   root?.querySelector("[data-reset]")?.addEventListener("click", () => applyState(labDefaults));
-  root?.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", async (event) => {
-    const button = event.currentTarget as HTMLButtonElement;
-    try {
-      await navigator.clipboard.writeText(designBrief);
-      button.textContent = "Copied";
-      setTimeout(() => { button.textContent = "Copy design brief"; }, 1600);
-    } catch { button.textContent = "Copy unavailable"; }
+  root?.querySelector<HTMLButtonElement>("[data-copy-link]")?.addEventListener("click", (event) => copyText(currentShareUrl, event.currentTarget as HTMLButtonElement, "Link copied"));
+  root?.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", (event) => copyText(designBrief, event.currentTarget as HTMLButtonElement, "Brief copied"));
+  root?.querySelector<HTMLButtonElement>("[data-download]")?.addEventListener("click", () => {
+    const url = URL.createObjectURL(new Blob([designBrief], { type:"text/markdown;charset=utf-8" }));
+    const link = document.createElement("a"); link.href = url; link.download = "architecture-design-brief.md"; link.click(); URL.revokeObjectURL(url);
   });
+  root?.querySelector("[data-save-scenario]")?.addEventListener("click", () => {
+    const nameInput = root.querySelector<HTMLInputElement>("[data-scenario-name]");
+    const name = nameInput?.value.trim() || `Scenario ${savedScenarios.length + 1}`;
+    savedScenarios = [{ id:String(Date.now()), name:name.slice(0, 40), savedAt:new Date().toISOString(), state:readState() }, ...savedScenarios].slice(0, 12);
+    persistScenarios(); renderSavedScenarios(); if (nameInput) nameInput.value = "";
+  });
+  root?.querySelectorAll<HTMLButtonElement>("[data-defense-toggle]").forEach((button) => button.addEventListener("click", () => {
+    const answer = button.closest("[data-defense-card]")?.querySelector<HTMLElement>("[data-defense-answer]");
+    if (!answer) return;
+    answer.hidden = !answer.hidden;
+    button.setAttribute("aria-expanded", String(!answer.hidden));
+    button.textContent = answer.hidden ? "Reveal talking point" : "Hide talking point";
+  }));
 
+  savedScenarios = loadScenarios();
+  renderSavedScenarios();
   const params = new URLSearchParams(location.search);
   const preset = params.get("preset");
-  if (preset && labPresets[preset]) {
-    applyState(labPresets[preset]);
-  } else if (labKeys.some((key) => params.has(key))) {
-    applyState(parseLabParams(params));
-  } else {
-    update();
-  }
+  if (preset && labPresets[preset]) applyState(labPresets[preset], preset);
+  else if (labKeys.some((key) => params.has(key))) applyState(parseLabParams(params));
+  else update();
 </script>
 
 <style>
-  .lab-hero { position: relative; border-bottom: 1px solid #243347; background: #0a121e; color: #edf5f8; overflow: hidden; }
-  .lab-hero::before { position: absolute; inset: 0; background-image: linear-gradient(rgba(93, 137, 175, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(93, 137, 175, 0.08) 1px, transparent 1px); background-size: 36px 36px; content: ""; }
-  .lab-hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 64px; align-items: center; padding: 64px 0; }
-  .lab-hero h1 { margin: 10px 0 18px; color: #f4f8fb; font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6.2rem); letter-spacing: -0.065em; line-height: 0.88; }
-  .lab-hero p { max-width: 680px; margin: 0; color: #9eb0c4; font-size: 1.06rem; }
-  .signal-panel { padding: 26px; border: 1px solid #29425c; background: rgba(11, 24, 39, 0.82); font-family: var(--font-mono); }
-  .signal-panel > span { color: #62efdb; font-size: 0.62rem; letter-spacing: 0.08em; }
-  .signal-line { display: flex; align-items: flex-end; gap: 8px; height: 110px; padding: 18px 0; }
-  .signal-line i { width: 18%; background: #18334a; }
-  .signal-line i:nth-child(1) { height: 28%; }
-  .signal-line i:nth-child(2) { height: 54%; }
-  .signal-line i:nth-child(3) { height: 42%; background: #f2a93b; }
-  .signal-line i:nth-child(4) { height: 80%; background: #19c6b3; }
-  .signal-line i:nth-child(5) { height: 66%; }
-  .signal-panel strong { color: #c6d3df; font-size: 0.67rem; }
-  .lab-workbench { display: grid; grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.45fr); gap: 24px; align-items: start; padding: 42px 0 80px; }
-  .control-panel, .result-panel { border: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-bg-raised) 94%, transparent); box-shadow: var(--shadow-card); }
-  .control-panel { position: sticky; top: 92px; }
-  .panel-head { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; padding: 20px 22px; border-bottom: 1px solid var(--color-border); }
-  /* Visually hidden: this exists only to give screen readers a short, debounced
-     summary in place of a live region over the whole re-rendering panel. */
-  .lab-live-status { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
-  .panel-head h2 { margin: 5px 0 0; font-family: var(--font-display); font-size: 1.55rem; letter-spacing: -0.035em; }
-  .reset-button, .copy-button-lab { padding: 7px 9px; border: 1px solid var(--color-border-strong); border-radius: 4px; background: var(--color-bg-inset); color: var(--color-text-muted); cursor: pointer; font-family: var(--font-mono); font-size: 0.62rem; }
-  .presets { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border-bottom: 1px solid var(--color-border); background: var(--color-border); }
-  .presets button { padding: 10px; border: 0; background: var(--color-bg-raised); color: var(--color-text-muted); cursor: pointer; font-family: var(--font-mono); font-size: 0.63rem; }
-  .presets button:hover { background: var(--color-bg-inset); color: var(--color-accent); }
-  .controls-grid { display: grid; gap: 1px; background: var(--color-border); }
-  .controls-grid label { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 9px 14px; padding: 17px 20px; background: var(--color-bg-raised); }
-  .controls-grid label > span { font-size: 0.84rem; font-weight: 700; }
-  .controls-grid label > strong { color: var(--color-accent); font-family: var(--font-mono); font-size: 0.72rem; }
-  .controls-grid input, .controls-grid select { grid-column: 1 / -1; width: 100%; accent-color: var(--color-accent); }
-  .controls-grid select { padding: 8px 10px; border: 1px solid var(--color-border); border-radius: 5px; background: var(--color-bg-inset); color: var(--color-text); }
-  .controls-grid small { grid-column: 1 / -1; color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.58rem; }
-  .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--color-border); border-bottom: 1px solid var(--color-border); }
-  .metric-grid article { display: flex; min-width: 0; flex-direction: column; gap: 6px; padding: 18px; background: var(--color-bg-raised); }
-  .metric-grid span, .metric-grid small { color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.56rem; letter-spacing: 0.05em; }
-  .metric-grid strong { font-family: var(--font-display); font-size: 1.35rem; line-height: 1; }
-  .architecture-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr) auto); align-items: center; gap: 8px; padding: 26px 22px; border-bottom: 1px solid var(--color-border); background: var(--color-bg-inset); overflow-x: auto; }
-  .architecture-flow > span { color: var(--color-accent); font-weight: 800; }
-  .flow-node { min-width: 120px; padding: 13px; border: 1px solid var(--color-border-strong); background: var(--color-bg-raised); }
-  .flow-node small { display: block; margin-bottom: 6px; color: var(--color-accent); font-family: var(--font-mono); font-size: 0.55rem; }
-  .flow-node strong { display: block; font-size: 0.77rem; line-height: 1.35; }
-  .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--color-border); }
-  .decision-grid article { min-height: 188px; padding: 22px; background: var(--color-bg-raised); }
-  .decision-code { color: var(--color-accent); font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.08em; }
-  .decision-grid h3 { margin: 24px 0 9px; font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -0.025em; line-height: 1.15; }
-  .decision-grid p { margin: 0; color: var(--color-text-muted); font-size: 0.84rem; }
-  .tradeoffs { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; padding-top: 1px; background: var(--color-border); }
-  .tradeoffs > div { padding: 24px; background: var(--color-bg-inset); }
-  .tradeoffs ul { margin: 14px 0 0; padding-left: 18px; color: var(--color-text-muted); font-size: 0.84rem; }
-  .tradeoffs li + li { margin-top: 9px; }
-  .lab-next { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 28px 24px; border-top: 1px solid var(--color-border); }
-  .lab-next h2 { margin: 5px 0 0; font-family: var(--font-display); font-size: 1.45rem; }
-  .lab-next a { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 750; }
-  @media (max-width: 1040px) {
-    .lab-workbench { grid-template-columns: 1fr; }
-    .control-panel { position: static; }
-  }
-  @media (max-width: 760px) {
-    .lab-hero-grid { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; }
-    .signal-panel { display: none; }
-    .metric-grid, .decision-grid, .tradeoffs { grid-template-columns: 1fr 1fr; }
-    .lab-next { align-items: flex-start; flex-direction: column; }
-  }
-  @media (max-width: 520px) {
-    .metric-grid, .decision-grid, .tradeoffs { grid-template-columns: 1fr; }
-    .architecture-flow { grid-template-columns: 1fr; }
-    .architecture-flow > span { transform: rotate(90deg); justify-self: center; }
-  }
+  .lab-page { --lab-teal:#19b8aa; --lab-amber:#d99127; }
+  .lab-hero { position:relative; overflow:hidden; border-bottom:1px solid #243347; background:#0a121e; color:#edf5f8; }
+  .lab-hero::before { position:absolute; inset:0; background-image:radial-gradient(circle at 18% 40%,rgba(25,184,170,.13),transparent 32%),linear-gradient(rgba(93,137,175,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(93,137,175,.08) 1px,transparent 1px); background-size:auto,36px 36px,36px 36px; content:""; }
+  .lab-hero-grid { position:relative; display:grid; grid-template-columns:minmax(0,1fr) 350px; gap:64px; align-items:center; padding:64px 0; }
+  .lab-hero h1 { margin:10px 0 18px; color:#f4f8fb; font-family:var(--font-display); font-size:clamp(3rem,7vw,6.2rem); letter-spacing:-.065em; line-height:.88; }
+  .lab-hero h1 em { color:#62efdb; font-size:.42em; font-style:normal; letter-spacing:-.02em; vertical-align:top; }
+  .lab-hero p { max-width:720px; margin:0; color:#9eb0c4; font-size:1.06rem; }
+  .eyebrow { color:var(--color-accent); font-family:var(--font-mono); font-size:.59rem; font-weight:800; letter-spacing:.09em; }
+  .lab-hero .eyebrow { color:#62efdb; }
+  .signal-panel { border:1px solid #29425c; background:rgba(11,24,39,.82); font-family:var(--font-mono); }
+  .signal-panel div { display:flex; justify-content:space-between; padding:13px 16px; border-bottom:1px solid #213750; }
+  .signal-panel span { color:#6e879f; font-size:.59rem; }
+  .signal-panel strong { color:#d8e4ed; font-size:.65rem; }
+  .signal-panel div:first-child strong { color:#62efdb; }
+  .signal-panel small { display:block; padding:18px 16px; color:#f2b85b; font-size:.57rem; }
+
+  .lab-workbench { display:grid; grid-template-columns:minmax(320px,.7fr) minmax(0,1.5fr); gap:24px; align-items:start; padding:42px 0 80px; }
+  .control-panel,.result-panel { border:1px solid var(--color-border); background:color-mix(in srgb,var(--color-bg-raised) 94%,transparent); box-shadow:var(--shadow-card); }
+  .panel-head { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; padding:20px 22px; border-bottom:1px solid var(--color-border); }
+  .panel-head h2,.section-heading h2 { margin:5px 0 0; font-family:var(--font-display); font-size:1.55rem; letter-spacing:-.035em; }
+  .quiet-button,.save-row button { padding:7px 9px; border:1px solid var(--color-border-strong); border-radius:4px; background:var(--color-bg-inset); color:var(--color-text-muted); cursor:pointer; font-family:var(--font-mono); font-size:.6rem; font-weight:750; }
+  .quiet-button:hover,.save-row button:hover { border-color:var(--color-accent); color:var(--color-accent); }
+  .presets { display:grid; grid-template-columns:1fr 1fr; gap:1px; border-bottom:1px solid var(--color-border); background:var(--color-border); }
+  .presets button { padding:11px 8px; border:0; background:var(--color-bg-raised); color:var(--color-text-muted); cursor:pointer; font-family:var(--font-mono); font-size:.61rem; }
+  .presets button:hover,.presets button[aria-pressed="true"] { background:var(--color-accent); color:var(--color-accent-contrast); }
+  .control-group { border-bottom:1px solid var(--color-border); }
+  .control-group > p { margin:0; padding:11px 20px; background:var(--color-bg-inset); color:var(--color-text-faint); font-family:var(--font-mono); font-size:.56rem; font-weight:800; letter-spacing:.09em; }
+  .controls-grid { display:grid; gap:1px; background:var(--color-border); }
+  .controls-grid label { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:9px 14px; padding:15px 20px; background:var(--color-bg-raised); }
+  .controls-grid label > span { font-size:.8rem; font-weight:700; }
+  .controls-grid label > strong { color:var(--color-accent); font-family:var(--font-mono); font-size:.7rem; }
+  .controls-grid input,.controls-grid select { grid-column:1 / -1; width:100%; accent-color:var(--color-accent); }
+  .controls-grid select,.save-row input { padding:8px 10px; border:1px solid var(--color-border); border-radius:5px; background:var(--color-bg-inset); color:var(--color-text); }
+  .controls-grid small { grid-column:1 / -1; color:var(--color-text-muted); font-family:var(--font-mono); font-size:.55rem; }
+  .scenario-store { padding:18px 20px; }
+  .save-row { display:grid; grid-template-columns:1fr auto; gap:7px; margin-top:10px; }
+  .save-row input { min-width:0; font-size:.75rem; }
+  .scenario-store > p { margin:8px 0 0; color:var(--color-text-faint); font-size:.65rem; }
+  .saved-list { display:grid; gap:6px; margin-top:12px; }
+  .saved-list > div { display:flex; gap:8px; align-items:center; justify-content:space-between; border-top:1px solid var(--color-border); padding-top:6px; }
+  .saved-list button { border:0; background:transparent; cursor:pointer; font-family:var(--font-mono); }
+  .saved-name { color:var(--color-text); font-size:.65rem; text-align:left; }
+  .saved-remove { color:var(--color-text-faint); font-size:.55rem; }
+  .saved-empty { color:var(--color-text-faint); font-family:var(--font-mono); font-size:.59rem; }
+
+  .result-head { align-items:center; }
+  .output-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px; }
+  .lab-live-status { position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; }
+  .constraint-review { border-bottom:1px solid var(--color-border); background:var(--color-bg-inset); }
+  .section-heading { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; padding:26px 22px 18px; }
+  .section-heading.compact { align-items:center; padding-bottom:14px; }
+  .section-heading > p { max-width:340px; margin:0; color:var(--color-text-muted); font-size:.77rem; text-align:right; }
+  .section-heading > strong { color:var(--lab-amber); font-family:var(--font-mono); font-size:.62rem; letter-spacing:.08em; }
+  [data-risk="blocker"] .section-heading > strong { color:#d86363; }
+  [data-risk="clear"] .section-heading > strong { color:var(--lab-teal); }
+  .finding-list { display:grid; gap:8px; padding:0 22px 22px; }
+  .finding { display:grid; grid-template-columns:75px minmax(150px,.7fr) 1.3fr; gap:16px; align-items:start; padding:13px 14px; border:1px solid var(--color-border); border-left:3px solid var(--lab-amber); background:var(--color-bg-raised); }
+  .finding.blocker { border-left-color:#d86363; }
+  .finding.note { border-left-color:var(--lab-teal); }
+  .finding span { color:var(--lab-amber); font-family:var(--font-mono); font-size:.54rem; font-weight:800; }
+  .finding.blocker span { color:#d86363; }
+  .finding.note span { color:var(--lab-teal); }
+  .finding h3 { margin:0; font-family:var(--font-display); font-size:.88rem; }
+  .finding p { margin:0; color:var(--color-text-muted); font-size:.76rem; }
+  .metric-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--color-border); border-bottom:1px solid var(--color-border); }
+  .metric-grid article { display:flex; min-width:0; flex-direction:column; gap:6px; padding:17px; background:var(--color-bg-raised); }
+  .metric-grid span,.metric-grid small { color:var(--color-text-muted); font-family:var(--font-mono); font-size:.53rem; letter-spacing:.05em; }
+  .metric-grid strong { font-family:var(--font-display); font-size:1.25rem; line-height:1; }
+  .architecture-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr) auto); align-items:center; gap:8px; padding:25px 22px; border-bottom:1px solid var(--color-border); background:var(--color-bg-inset); overflow-x:auto; }
+  .architecture-flow > span { color:var(--color-accent); font-weight:800; }
+  .flow-node { min-width:115px; padding:13px; border:1px solid var(--color-border-strong); background:var(--color-bg-raised); }
+  .flow-node small { display:block; margin-bottom:6px; color:var(--color-accent); font-family:var(--font-mono); font-size:.52rem; }
+  .flow-node strong { display:block; font-size:.72rem; line-height:1.35; }
+  .decision-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--color-border); }
+  .decision-grid article { min-height:178px; padding:22px; background:var(--color-bg-raised); }
+  .decision-code { color:var(--color-accent); font-family:var(--font-mono); font-size:.56rem; letter-spacing:.08em; }
+  .decision-grid h3 { margin:22px 0 9px; font-family:var(--font-display); font-size:1.2rem; letter-spacing:-.025em; line-height:1.15; }
+  .decision-grid p { margin:0; color:var(--color-text-muted); font-size:.82rem; }
+
+  .candidate-section,.defense-section { border-top:1px solid var(--color-border); }
+  .candidate-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:0 22px 26px; }
+  .candidate-card { min-width:0; padding:18px; border:1px solid var(--color-border); background:var(--color-bg-raised); }
+  .candidate-card.recommended { border-color:var(--color-accent); box-shadow:inset 0 3px var(--color-accent); }
+  .candidate-top { display:flex; justify-content:space-between; gap:10px; color:var(--color-text-faint); font-family:var(--font-mono); font-size:.52rem; font-weight:800; }
+  .candidate-card.recommended .candidate-top { color:var(--color-accent); }
+  .candidate-card h3 { margin:16px 0 7px; font-family:var(--font-display); font-size:1.18rem; }
+  .candidate-card > p { min-height:72px; margin:0; color:var(--color-text-muted); font-size:.76rem; }
+  .candidate-card code { display:block; min-height:68px; margin:15px 0; padding:10px; background:var(--color-bg-inset); color:var(--color-text-muted); font-family:var(--font-mono); font-size:.56rem; white-space:normal; }
+  .score-list { display:grid; gap:6px; padding:12px 0; border-block:1px solid var(--color-border); }
+  .score-list > div { display:grid; grid-template-columns:62px 1fr 24px; gap:7px; align-items:center; }
+  .score-list span,.score-list strong { color:var(--color-text-faint); font-family:var(--font-mono); font-size:.49rem; font-weight:600; text-transform:uppercase; }
+  .score-bar { height:3px; background:var(--color-border); }
+  .score-bar i { display:block; height:100%; background:var(--color-accent); }
+  .candidate-card dl { display:grid; gap:9px; margin:13px 0 0; }
+  .candidate-card dl div { display:grid; gap:3px; }
+  .candidate-card dt { color:var(--color-text-faint); font-family:var(--font-mono); font-size:.5rem; }
+  .candidate-card dd { margin:0; color:var(--color-text-muted); font-size:.67rem; }
+  .tradeoffs { display:grid; grid-template-columns:1fr 1fr; gap:1px; padding-top:1px; background:var(--color-border); }
+  .tradeoffs > div { padding:24px; background:var(--color-bg-inset); }
+  .tradeoffs ul { margin:14px 0 0; padding-left:18px; color:var(--color-text-muted); font-size:.8rem; }
+  .tradeoffs li + li { margin-top:9px; }
+  .defense-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:0 22px 27px; }
+  .defense-grid article { padding:18px; border:1px solid var(--color-border); background:var(--color-bg-raised); }
+  .defense-grid article > span { color:var(--color-accent); font-family:var(--font-mono); font-size:.55rem; font-weight:800; }
+  .defense-grid h3 { margin:12px 0 16px; font-family:var(--font-display); font-size:1rem; line-height:1.35; }
+  .defense-grid button { padding:7px 9px; border:1px solid var(--color-border); border-radius:4px; background:transparent; color:var(--color-text-muted); cursor:pointer; font-family:var(--font-mono); font-size:.56rem; }
+  .defense-grid p { margin:13px 0 0; padding-top:12px; border-top:1px solid var(--color-border); color:var(--color-text-muted); font-size:.76rem; }
+  .lab-next { display:flex; justify-content:space-between; gap:24px; align-items:center; padding:28px 24px; border-top:1px solid var(--color-border); }
+  .lab-next h2 { margin:5px 0 0; font-family:var(--font-display); font-size:1.4rem; }
+  .lab-next a { font-family:var(--font-mono); font-size:.65rem; font-weight:750; }
+
+  @media (max-width:1120px) { .lab-workbench { grid-template-columns:1fr; } .controls-grid { grid-template-columns:1fr 1fr; } }
+  @media (max-width:820px) { .lab-hero-grid { grid-template-columns:1fr; gap:32px; padding:48px 0; } .signal-panel { display:none; } .candidate-grid { grid-template-columns:1fr; } .candidate-card > p,.candidate-card code { min-height:0; } }
+  @media (max-width:680px) { .controls-grid,.metric-grid,.decision-grid,.tradeoffs,.defense-grid { grid-template-columns:1fr; } .result-head,.section-heading,.finding { align-items:flex-start; flex-direction:column; } .section-heading { display:flex; } .section-heading > p { text-align:left; } .finding { display:grid; grid-template-columns:1fr; gap:7px; } .output-actions { justify-content:flex-start; } .architecture-flow { grid-template-columns:1fr; } .architecture-flow > span { justify-self:center; transform:rotate(90deg); } .lab-next { align-items:flex-start; flex-direction:column; } }
 </style>
