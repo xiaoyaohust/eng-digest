@@ -6,143 +6,79 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 21 Sep 2026 15:38:22 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 13:53:08 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Agent Plugins package your skills, tools, and more</title>
-      <link>https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/</link>
-      <description>Agent Plugins 1.0.0 is a new, vendor-neutral directory specification—backed by Google, Amazon, Microsoft, and others—for packaging Agent Skills and MCP servers into a single portable unit By standardizing the manifest (plugin.json) and utilizing a fixed directory layout, it eliminates the need for developers to maintain separate wrappers or configurations to support different AI coding agents and IDEs Google has officially joined as a Core Maintainer and already rolled out support in the Agents CLI and Data Agent Kit, allowing developers to start building and distributing interoperable plugins today.</description>
-      <pubDate>Mon, 21 Sep 2026 15:38:19 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/</guid>
+      <title>Introducing Credentio: Open Source C++ Library for C2PA Content Credentials from Google</title>
+      <link>https://developers.googleblog.com/introducing-credentio-open-source-c-library-for-c2pa-content-credentials-from-google/</link>
+      <description>Credentio is a newly released, open-source C++ library from Google that allows developers to integrate high-performance, local-first validation of C2PA Content Credentials into their client and server applications By processing assets entirely locally with a highly optimized memory footprint, the library delivers instant validation verdicts for multi-gigabyte media files without incurring cloud latency, bandwidth costs, or data privacy risks The library currently features deep manifest parsing alongside configurable trust list integration, and is available now on Google Source with future plans to support full credential generation and embedding.</description>
+      <pubDate>Tue, 22 Sep 2026 13:53:06 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/introducing-credentio-open-source-c-library-for-c2pa-content-credentials-from-google/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Mastering Edge AI on Raspberry Pi with LiteRT and Gemma</title>
-      <link>https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/</link>
-      <description>Deploying secure, real-time Edge AI on Raspberry Pi is now simplified using LiteRT and lightweight Gemma open models LiteRT optimizes CPU and GPU performance, delivering fast token speeds for models like Gemma4, enabling real-time local reasoning for robotics Developers can quickly convert, quantize, and run these models using the lightweight LiteRT CLI tool</description>
-      <pubDate>Mon, 21 Sep 2026 15:38:19 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/mastering-edge-ai-on-raspberry-pi-with-litert-and-gemma/</guid>
+      <title>HeyGen x Google Cloud: Bringing Avatar IV to TPUs</title>
+      <link>https://developers.googleblog.com/heygen-x-google-cloud-bringing-avatar-iv-to-tpus/</link>
+      <description>HeyGen ported their 18B+ parameter Avatar IV video generation model to Google Cloud's Trillium (v6e) TPUs via torchax and XLA, utilizing FSDP and Ulysses sequence parallelism across an eight-chip mesh To achieve a 1.86x speedup for real-time streaming, the engineering team pipelined exposed all-to-all collectives, aligned sparse attention block sizes to eliminate mask padding, and bypassed softmax serial dependencies using a precomputed Cauchy-Schwarz upper bound These custom Pallas kernel and compiler optimizations were deployed only after passing rigorous two-tier quality gates to guarantee byte-identical or mathematically equivalent pixel outputs.</description>
+      <pubDate>Tue, 22 Sep 2026 13:53:06 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/heygen-x-google-cloud-bringing-avatar-iv-to-tpus/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Why Go is an Ideal Language for AI-Assisted Software Engineering</title>
-      <link>https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/</link>
-      <description>As AI coding assistants shift the developer's primary role from writing boilerplate to reviewing and maintaining systems, language choice becomes critical for long-term architectural integrity Go directly addresses this new paradigm by utilizing its strict compiler, integrated toolchain, and uncompromising readability to provide deterministic guardrails that help AI models self-correct and generate highly standardized code By enforcing ecosystem-wide consistency and strict backward compatibility, the Go platform empowers engineering teams to efficiently verify, optimize, and maintain high-velocity, AI-generated output in production environments.</description>
-      <pubDate>Mon, 21 Sep 2026 15:38:19 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/</guid>
+      <title>Build zero-trust AI agents with Google's Agent Development Kit</title>
+      <link>https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/</link>
+      <description>Building autonomous AI agents that mutate production state requires moving beyond soft system prompts to a robust zero-trust architecture To secure Google Agent Development Kit (ADK) workflows against prompt injections and malicious execution, developers must implement hardware-backed cryptographic signatures for database writes, kernel-level sandboxing with gVisor for dynamic code, and deterministic semantic gateways for I/O validation By enforcing these hard security boundaries at the infrastructure level, you can safely deploy multi-tool AI agents without risking unauthorized data manipulation or server compromise.</description>
+      <pubDate>Tue, 22 Sep 2026 13:53:06 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Introducing Our New Dropbox API Documentation</title>
-      <link>https://dropbox.tech/developers/new-dropbox-api-documentation</link>
-      <description>Learn about the newly launched version of the Dropbox API documentation and its modern design and features.</description>
-      <pubDate>Mon, 21 Sep 2026 14:30:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/developers/new-dropbox-api-documentation</guid>
-      <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Python Workers are now generally available</title>
-      <link>https://blog.cloudflare.com/python-workers-ga/</link>
-      <description>Python Workers allow developers to run Python web frameworks and AI orchestration libraries natively in the Cloudflare Workers runtime You can seamlessly integrate with Cloudflare's ecosystem including D1, R2, and Workers AI without writing any JavaScript glue code.</description>
-      <pubDate>Mon, 21 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/python-workers-ga/</guid>
+      <title>Introducing Worker Previews: isolated preview environments for every change your agent makes</title>
+      <link>https://blog.cloudflare.com/worker-previews/</link>
+      <description>Worker Previews gives every branch its own URL, configuration, state, and observability, so you and your agents can test changes in parallel without affecting production.</description>
+      <pubDate>Tue, 22 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/worker-previews/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable</title>
-      <link>https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/</link>
-      <description>Petal, the next step in Meta’s subsea innovation, will be the first subsea cable to deliver petabit capacity at transoceanic distances, connecting France and the United States over approximately 7,000 km (4,300 mi) Expected to enter service in 2029, it will be the first subsea cable system to deploy multi-core fiber technology at scale, doubling [...] Read More The post Inside Petal: Building the World’s First Petabit-Class Transoceanic Subsea Cable appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 21 Sep 2026 12:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/09/21/connectivity/petal-petabit-transoceanic-subsea-cable/</guid>
+      <title>Helix: The internal tool powering our Shopify app's native migration</title>
+      <link>https://shopify.engineering/helix</link>
+      <description>We built Helix to help LLMs rebuild the Shopify app in Swift and Kotlin, using small checkpoints and strict quality gates to keep the code shippable.</description>
+      <pubDate>Mon, 21 Sep 2026 21:12:33 GMT</pubDate>
+      <guid isPermaLink="true">https://shopify.engineering/helix</guid>
+      <source>Shopify Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Builder Center mobile apps, Amazon Connect Talent GA, Amazon Corretto 27, and more (September 21, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-mobile-apps-amazon-connect-talent-ga-amazon-corretto-27-and-more-september-14-2026/</link>
+      <description>Living in the Netherlands, I spend a fair amount of time on trains, and that is usually where I catch up on what the builder community is writing Until now, that meant opening a laptop or squinting at a browser tab on my phone This week I found myself scrolling through trending articles and checking […]</description>
+      <pubDate>Mon, 21 Sep 2026 16:11:24 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-builder-center-mobile-apps-amazon-connect-talent-ga-amazon-corretto-27-and-more-september-14-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems</title>
+      <link>https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/</link>
+      <description>We’re open-sourcing Rebalancer, the assignment-problem solver that has been used to solve resource allocation problems throughout Meta for over nine years Rebalancer separates several related concerns: how to specify an assignment problem, how to store it efficiently in memory, how to solve it, and how to debug it The post Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 21 Sep 2026 16:00:37 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/</guid>
       <source>Meta Engineering</source>
     </item>
     <item>
-      <title>Saving another 100TB of RAM with math (and Rust)</title>
-      <link>https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/</link>
-      <description>Cloudflare's global network is immense but not limitless As we look for small ways to trim our resource usage, we sometimes get lucky and we can cut significantly more Here’s how we reduced one of our Pingora-based service's RAM usage with statistics.</description>
-      <pubDate>Fri, 18 Sep 2026 17:23:58 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/</guid>
+      <title>Have it both ways: stay discoverable in search while disallowing AI training</title>
+      <link>https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/</link>
+      <description>Cloudflare is giving site owners a way to stay discoverable while disallowing AI training New controls and an Accountable designation establish a shared model with Apple, Google, and Microsoft.</description>
+      <pubDate>Tue, 15 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>The guest journey, updated in real time: extending Airbnb’s sequence recommender with Chronon</title>
-      <link>https://medium.com/airbnb-engineering/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon-8f1582578553?source=rss----53c7c27702d5---4</link>
-      <description>Offline, the sequence encoder would run as a scheduled batch job: each night, it would process the previous day’s guest activity and write a fresh embedding to a low-latency store for any guest who had something new to show for it NRT Model Transform lets Chronon call an already-deployed model — in our case, the same Transformer sequence encoder from the batch pipeline — directly from within the streaming flow, and write the result back as a feature value that is immediately available for serving.IntegrationCombining the two, our new pipeline works like this: a guest’s activity event, such as a page view or a new search, is captured by a streaming job that merges it with the guest’s existing long-term and short-term sequence data This post closes the remaining gap: making sure that understanding reflects a guest’s most recent activity, not just what they did as of last night’s batch run.By combining Push Mode’s event-driven triggering with NRT Model Transform’s in-pipeline model inference, we turned a daily batch process into a near-real-time one, cutting effective staleness from roughly two days to less than a minute, and improving offline ranking quality by +1.67% NDCG in the process</description>
-      <pubDate>Thu, 17 Sep 2026 17:01:02 GMT</pubDate>
-      <guid isPermaLink="true">https://medium.com/airbnb-engineering/the-guest-journey-updated-in-real-time-extending-airbnbs-sequence-recommender-with-chronon-8f1582578553?source=rss----53c7c27702d5---4</guid>
-      <source>Airbnb Engineering</source>
-    </item>
-    <item>
-      <title>When scanners miss the attack: how Cloudflare Client-Side Security protects storefronts</title>
-      <link>https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/</link>
-      <description>A modern storefront can look healthy while malicious JavaScript quietly siphons revenue, hijacks clicks, or rewrites analytics See how Cloudflare's machine learning models surface evasive client-side attacks for analyst investigation.</description>
-      <pubDate>Wed, 16 Sep 2026 20:06:17 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/client-side-security-finds-4-malicious-campaigns/</guid>
+      <title>Give every teammate and agent the right level of access to your Workers</title>
+      <link>https://blog.cloudflare.com/workers-granular-authorization/</link>
+      <description>You can now scope access to individual Workers and assign narrower Developer Platform roles, so teammates, CI tokens, and agents get only the access they need to debug, deploy, or monitor safely.</description>
+      <pubDate>Tue, 15 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/workers-granular-authorization/</guid>
       <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>AI Changed How Spotify Builds. What We Learned (and Fixed) About Quality at Higher Velocity</title>
-      <link>https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/</link>
-      <description>Quality and reliability have always been a point of pride for Spotify The post AI Changed How Spotify Builds What We Learned (and Fixed) About Quality at Higher Velocity appeared first on Spotify Engineering.</description>
-      <pubDate>Wed, 16 Sep 2026 19:13:53 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.atspotify.com/2026/9/ai-changed-how-spotify-builds-what-we-learned-and-fixed-about-quality-at-higher-velocity/</guid>
-      <source>Spotify Engineering</source>
-    </item>
-    <item>
-      <title>Beyond the model: Engineering AI infra with scientific judgement</title>
-      <link>https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5---4</link>
-      <description>That is the idea behind the agent harness we built for data science: the methodology itself, built as infrastructure around the model Because the mechanical parts of investigations can scale and parallelize, we are able to spend more time on the careful parts of an investigation: directly inspecting the most ambiguous or strategic data that helps us deeply understand the product, testing hypotheses and groupings, and building a robust qualitative and quantitative understanding of our data and products These systems form a larger agentic environment reshaping our day to day work in domains well beyond just data science.A harness can be useful wherever experts carry a methodology worth encoding: legal review, policy analysis, any field where the method is as much the product as the answer</description>
-      <pubDate>Tue, 15 Sep 2026 17:06:18 GMT</pubDate>
-      <guid isPermaLink="true">https://medium.com/airbnb-engineering/beyond-the-model-engineering-ai-infra-with-scientific-judgement-371316d43261?source=rss----53c7c27702d5---4</guid>
-      <source>Airbnb Engineering</source>
-    </item>
-    <item>
-      <title>Migrating Shop app from React Native to native</title>
-      <link>https://shopify.engineering/shop-app-migration</link>
-      <description>We migrated the Shop app from React Native to Swift and Kotlin Assisted by AI, the team was able to go from a proof of concept to a fully rebuilt native app published in the app stores in just 12 weeks.</description>
-      <pubDate>Thu, 10 Sep 2026 12:27:06 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/shop-app-migration</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>Native is now the future of mobile at Shopify</title>
-      <link>https://shopify.engineering/back-to-native</link>
-      <description>Coding agents changed what it costs to build mobile apps twice Here’s why Shopify is moving from React Native back to Swift and Kotlin.</description>
-      <pubDate>Thu, 10 Sep 2026 12:25:28 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/back-to-native</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>Why Spotify Is Not Using Bayesian A/B Testing</title>
-      <link>https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/</link>
-      <description>Clearing the confusion about what Bayesian A/B testing is The post Why Spotify Is Not Using Bayesian A/B Testing appeared first on Spotify Engineering.</description>
-      <pubDate>Tue, 08 Sep 2026 13:18:44 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/</guid>
-      <source>Spotify Engineering</source>
-    </item>
-    <item>
-      <title>Portal by Spotify cut my Claude Code token usage by 90%</title>
-      <link>https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/</link>
-      <description>Most of what an AI coding agent does for me isn't thinking It's I/O. The post Portal by Spotify cut my Claude Code token usage by 90% appeared first on Spotify Engineering.</description>
-      <pubDate>Thu, 03 Sep 2026 16:06:40 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/</guid>
-      <source>Spotify Engineering</source>
-    </item>
-    <item>
-      <title>How River takes security work from a fix to merge</title>
-      <link>https://shopify.engineering/river-vulnerability-remediation</link>
-      <description>River, Shopify’s AI agent in Slack, enables autonomous vulnerability remediation, not just detection.</description>
-      <pubDate>Wed, 02 Sep 2026 16:30:45 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/river-vulnerability-remediation</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>Project Lighthouse — Part 3: Introducing project-lighthouse-anonymize</title>
-      <link>https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb?source=rss----53c7c27702d5---4</link>
-      <description>We’ve put this code into open source, and published two new technical papers detailing the scalable algorithms and data quality frameworks behind it.By: Adam BloomstonIntroductionIn 2020, we launched Project Lighthouse, which we developed in partnership with leading civil rights and privacy organizations Our results, shared in 2024, demonstrate how we use these analyses to measure our progress in mitigating those disparities.Earlier this year, we open-sourced project-lighthouse-anonymize, the Python library that powers Project Lighthouse’s anonymization process Together with our original 2020 paper, these three papers form a complete story: the foundational methodology, the scalable implementation, and the quality validation framework.The foundational methodology (2020)Our original 2020 paper established the privacy-by-design approach for Project Lighthouse and provides the rationale for choosing k-anonymity as the technical privacy model to prevent sensitive attribute disclosure at scale</description>
-      <pubDate>Tue, 25 Aug 2026 17:01:02 GMT</pubDate>
-      <guid isPermaLink="true">https://medium.com/airbnb-engineering/project-lighthouse-part-3-introducing-project-lighthouse-anonymize-74f8b26653fb?source=rss----53c7c27702d5---4</guid>
-      <source>Airbnb Engineering</source>
     </item>
   </channel>
 </rss>
