@@ -49,7 +49,7 @@ const websiteSchema = {
   name: "Eng Knowledge",
   alternateName: "System Craft Lab",
   url: new URL(withBase("/"), Astro.site).toString(),
-  description: "An engineering interview workbench for system design, coding, and production judgment.",
+  description: "An engineering workbench for system design, coding, field notes, and production judgment.",
 };
 const schemas = [websiteSchema, ...(structuredData ? (Array.isArray(structuredData) ? structuredData : [structuredData]) : [])];
 const schemaJson = JSON.stringify(schemas).replace(/</g, "\\u003c");

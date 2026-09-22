@@ -1,0 +1,223 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withBase } from "@/lib/url";
+---
+
+<BaseLayout
+  title="Engineering Field Notes"
+  description="Production lessons, technical deep dives, and engineering decisions from real-world work."
+>
+  <section class="field-notes-hero">
+    <div class="wrap field-notes-grid">
+      <div class="field-notes-copy">
+        <a class="back-link" href={withBase("/")}>&larr; KNOWLEDGE BASE</a>
+        <p class="eyebrow"><span></span> MODULE 03 / IN DEVELOPMENT</p>
+        <h1>Engineering<br /><em>Field Notes</em></h1>
+        <p class="intro">
+          Practical write-ups on production systems, technical decisions, incidents,
+          migrations, and the lessons that only appear after software meets reality.
+        </p>
+
+        <div class="coming-soon" role="status">
+          <span>COMING SOON</span>
+          <p>The first field note is being prepared. No filler, no placeholder posts.</p>
+        </div>
+
+        <div class="field-actions">
+          <a class="primary" href={withBase("/system-design/")}>Explore system design <span>↗</span></a>
+          <a href={withBase("/eng-digest/")}>Read the engineering digest <span>→</span></a>
+        </div>
+      </div>
+
+      <aside class="signal-panel" aria-label="Field Notes editorial signal">
+        <div class="panel-head"><span>FIELD_SIGNAL</span><i>STANDBY</i></div>
+        <div class="signal-grid" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <b></b><b></b><b></b>
+        </div>
+        <dl>
+          <div><dt>FOCUS</dt><dd>REAL SYSTEMS</dd></div>
+          <div><dt>FORMAT</dt><dd>DECISIONS + LESSONS</dd></div>
+          <div><dt>STATUS</dt><dd>BUILDING THE FIRST NOTE</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .field-notes-hero {
+    position: relative;
+    min-height: calc(100vh - 210px);
+    border-bottom: 1px solid #26364a;
+    background: #0b1320;
+    color: #edf5f8;
+    overflow: hidden;
+  }
+
+  .field-notes-hero::before {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 25% 30%, rgba(52, 214, 195, 0.12), transparent 30%),
+      linear-gradient(rgba(119, 151, 184, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(119, 151, 184, 0.07) 1px, transparent 1px);
+    background-size: auto, 40px 40px, 40px 40px;
+    content: "";
+  }
+
+  .field-notes-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+    gap: clamp(48px, 8vw, 110px);
+    align-items: center;
+    min-height: 650px;
+    padding-block: 70px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 42px;
+    color: #91a5bb;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    color: #62efdb;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+  }
+
+  .eyebrow span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #62efdb;
+    box-shadow: 0 0 0 5px rgba(98, 239, 219, 0.12);
+  }
+
+  h1 {
+    margin: 18px 0 24px;
+    font-family: var(--font-display);
+    font-size: clamp(3.8rem, 8vw, 7.3rem);
+    letter-spacing: -0.065em;
+    line-height: 0.86;
+  }
+
+  h1 em { color: #62efdb; font-style: normal; }
+
+  .intro {
+    max-width: 700px;
+    margin: 0;
+    color: #a7b8c9;
+    font-size: 1.08rem;
+  }
+
+  .coming-soon {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    max-width: 720px;
+    margin-top: 34px;
+    padding: 17px 18px;
+    border: 1px solid #2c4963;
+    background: rgba(10, 25, 40, 0.72);
+  }
+
+  .coming-soon span {
+    color: #ffc05c;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+
+  .coming-soon p { margin: 0; color: #91a5bb; font-size: 0.86rem; }
+
+  .field-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .field-actions a {
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    min-height: 43px;
+    padding: 9px 13px;
+    border: 1px solid #36516b;
+    border-radius: 5px;
+    color: #c4d1dc;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 750;
+  }
+  .field-actions a:hover { border-color: #62efdb; color: #62efdb; text-decoration: none; }
+  .field-actions .primary { border-color: #62efdb; background: #62efdb; color: #071410; }
+  .field-actions .primary:hover { color: #071410; }
+
+  .signal-panel {
+    border: 1px solid #2c4963;
+    background: rgba(8, 20, 33, 0.78);
+    box-shadow: 20px 20px 0 rgba(4, 11, 19, 0.28);
+  }
+
+  .panel-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 15px;
+    border-bottom: 1px solid #2c4963;
+    color: #91a5bb;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+  .panel-head i { color: #ffc05c; font-style: normal; }
+
+  .signal-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    align-items: end;
+    height: 210px;
+    padding: 34px 26px 26px;
+    background-image: linear-gradient(rgba(93, 137, 175, 0.08) 1px, transparent 1px);
+    background-size: 100% 30px;
+  }
+  .signal-grid span { height: 24%; background: #17314a; }
+  .signal-grid span:nth-child(2) { height: 45%; }
+  .signal-grid span:nth-child(3) { height: 37%; }
+  .signal-grid span:nth-child(4) { height: 68%; background: #1d766f; }
+  .signal-grid span:nth-child(5) { height: 54%; }
+  .signal-grid span:nth-child(6) { height: 82%; background: #b27c31; }
+  .signal-grid b { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #62efdb; }
+  .signal-grid b:nth-of-type(1) { top: 39%; left: 24%; }
+  .signal-grid b:nth-of-type(2) { top: 26%; left: 59%; }
+  .signal-grid b:nth-of-type(3) { top: 17%; right: 12%; background: #ffc05c; }
+
+  dl { margin: 0; border-top: 1px solid #2c4963; }
+  dl div { display: flex; justify-content: space-between; gap: 20px; padding: 10px 15px; border-bottom: 1px solid #20384f; }
+  dl div:last-child { border-bottom: 0; }
+  dt, dd { margin: 0; font-family: var(--font-mono); font-size: 0.59rem; }
+  dt { color: #637b92; }
+  dd { color: #bfd0de; text-align: right; }
+
+  @media (max-width: 850px) {
+    .field-notes-grid { grid-template-columns: 1fr; padding-block: 52px 70px; }
+    .signal-panel { max-width: 560px; }
+  }
+
+  @media (max-width: 520px) {
+    .field-notes-grid { min-height: auto; }
+    .coming-soon { grid-template-columns: 1fr; gap: 6px; }
+    .field-actions { flex-direction: column; }
+    .field-actions a { justify-content: space-between; }
+  }
+</style>

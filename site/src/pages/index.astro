@@ -6,14 +6,13 @@ import { withBase } from "@/lib/url";
 import { published, publishedDigests } from "@/lib/content";
 import { learningPaths, learningPathDuration } from "@/data/learningPaths";
 
-const [systemDesign, coding, interviews, digests] = await Promise.all([
+const [systemDesign, coding, digests] = await Promise.all([
   published("system-design"),
   published("coding"),
-  published("interviews"),
   publishedDigests(),
 ]);
 
-type Kicker = "System Design" | "Coding" | "Interview";
+type Kicker = "System Design" | "Coding";
 interface CardEntry {
   href: string;
   kicker: Kicker;
@@ -50,7 +49,6 @@ function toCards(entries: SourceEntry[], base: string, kicker: Kicker): CardEntr
 const allArticles = [
   ...toCards(systemDesign, "/system-design", "System Design"),
   ...toCards(coding, "/coding", "Coding"),
-  ...toCards(interviews, "/interviews", "Interview"),
 ].sort((a, b) => b.date.valueOf() - a.date.valueOf());
 
 const markedFeatured = allArticles.filter((article) => article.featured).slice(0, 3);
@@ -64,39 +62,43 @@ const sections = [
     title: "System Design",
     href: "/system-design/",
     description: "Architecture, trade-offs, distributed systems, and the decisions behind them.",
-    count: systemDesign.length,
+    meta: `${systemDesign.length} entries`,
     label: "ARCHITECTURE",
+    action: "Explore ↗",
   },
   {
     code: "02",
     title: "Coding Patterns",
     href: "/coding/",
     description: "Reusable problem-solving patterns, algorithms, and interview-ready practice.",
-    count: coding.length,
+    meta: `${coding.length} entries`,
     label: "ALGORITHMS",
+    action: "Explore ↗",
   },
   {
     code: "03",
-    title: "Interview Intel",
-    href: "/interviews/",
-    description: "Real formats, company signals, debriefs, and lessons from the field.",
-    count: interviews.length,
-    label: "FIELD NOTES",
+    title: "Engineering Field Notes",
+    href: "/field-notes/",
+    description: "Production lessons, technical deep dives, and decisions from real engineering work.",
+    meta: "Coming soon",
+    label: "PRACTICE / EXPERIENCE",
+    action: "Preview ↗",
   },
   {
     code: "04",
     title: "Engineering Digest",
     href: "/eng-digest/",
     description: "A daily signal feed distilled from high-quality engineering blogs.",
-    count: digests.length,
+    meta: `${digests.length} entries`,
     label: "DAILY SIGNAL",
+    action: "Explore ↗",
   },
 ];
 ---
 
 <BaseLayout
   title="Eng Knowledge"
-  description="Practical notes on system design, coding, engineering interviews, and real-world systems."
+  description="Practical notes on system design, coding, engineering practice, and real-world systems."
 >
   <section class="hero">
     <div class="wrap hero-grid">
@@ -104,17 +106,17 @@ const sections = [
         <div class="hero-status"><span></span> Knowledge base online</div>
         <h1>Build the judgment<br /><em>behind</em> the answer.</h1>
         <p>
-          A focused engineering interview workbench for system design, coding patterns,
-          real interview signals, and production lessons.
+          A focused engineering workbench for system design, coding patterns,
+          engineering field notes, and production lessons.
         </p>
         <div class="hero-actions">
           <a class="primary-action" href={withBase("/system-design/")}>Start with systems <span>↗</span></a>
-          <a class="secondary-action" href={withBase("/learning-paths/")}>Follow a learning path <span>→</span></a>
+          <a class="secondary-action" href={withBase("/field-notes/")}>Explore field notes <span>→</span></a>
         </div>
         <div class="hero-metrics" aria-label="Knowledge base statistics">
           <div><strong>{allArticles.length}</strong><span>CORE NOTES</span></div>
           <div><strong>{digests.length}</strong><span>DAILY DIGESTS</span></div>
-          <div><strong>05</strong><span>LEARNING PATHS</span></div>
+          <div><strong>04</strong><span>KNOWLEDGE TRACKS</span></div>
         </div>
       </div>
 
@@ -126,7 +128,7 @@ const sections = [
           <div class="map-node node-core"><b>CORE</b><small>ENGINEERING<br />JUDGMENT</small></div>
           <div class="map-node node-systems"><b>01</b><small>SYSTEMS</small></div>
           <div class="map-node node-code"><b>02</b><small>CODE</small></div>
-          <div class="map-node node-intel"><b>03</b><small>INTEL</small></div>
+          <div class="map-node node-intel"><b>03</b><small>FIELD<br />NOTES</small></div>
           <div class="map-node node-signal"><b>04</b><small>SIGNAL</small></div>
           <span class="connector c1"></span>
           <span class="connector c2"></span>
@@ -150,7 +152,7 @@ const sections = [
           <div class="track-glyph" aria-hidden="true"><i></i><i></i><i></i></div>
           <h3>{section.title}</h3>
           <p>{section.description}</p>
-          <div class="track-foot"><span>{section.count} entries</span><strong>Explore ↗</strong></div>
+          <div class="track-foot"><span>{section.meta}</span><strong>{section.action}</strong></div>
         </a>
       ))}
     </div>
