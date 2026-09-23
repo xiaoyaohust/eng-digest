@@ -58,6 +58,7 @@ export interface ArchitectureRecommendation {
   peakQps: number;
   peakReadQps: number;
   peakWriteQps: number;
+  readEgressMb: number;
   ingressMb: number;
   dailyTb: number;
   logicalStoredTb: number;
@@ -120,7 +121,7 @@ export const labPresets: Record<string, LabState> = {
     ordering:"per-key", compression:4, replicas:3,
   },
   ledger: {
-    qps:8_000, sizeKb:3, latency:100, consistency:"strong", retention:365, regions:2,
+    qps:8_000, sizeKb:3, latency:100, consistency:"strong", retention:365, regions:3,
     readPercent:60, burstFactor:2, workload:"transactional", availability:"99.999", durability:"zero-loss",
     ordering:"per-key", compression:2, replicas:3,
   },
@@ -215,12 +216,13 @@ const SCORE_KEYS = ["latency", "consistency", "availability", "cost", "simplicit
  * still rank it differently, because they do not value latency the same. */
 function constraintWeights(state: LabState, highScale: boolean): CandidateScores {
   const multiRegion = state.regions > 1;
+  const hasWrites = state.readPercent < 100;
   return {
     latency: state.latency <= 20 ? 6 : state.latency <= 50 ? 5 : state.latency <= 100 ? 3 : 2,
     consistency: clampBar(
       (state.consistency === "strong" ? 5 : state.consistency === "read-your-writes" ? 3 : 2)
-      + (state.ordering === "global" ? 1 : 0)
-      + (state.durability === "zero-loss" ? 1 : 0),
+      + (hasWrites && state.ordering === "global" ? 1 : 0)
+      + (hasWrites && state.durability === "zero-loss" ? 1 : 0),
     ),
     availability:
       (state.availability === "99.999" ? 6 : state.availability === "99.99" ? 3 : 2)
@@ -237,11 +239,12 @@ function constraintWeights(state: LabState, highScale: boolean): CandidateScores
 /** True when some requirement is strict enough that cheap and simple stop
  * being tie-breakers. */
 function isDemanding(state: LabState, highScale: boolean): boolean {
+  const hasWrites = state.readPercent < 100;
   return highScale
     || state.regions > 1
     || state.availability === "99.999"
-    || state.durability === "zero-loss"
-    || state.ordering === "global";
+    || (hasWrites && state.durability === "zero-loss")
+    || (hasWrites && state.ordering === "global");
 }
 
 /** Multiplier for a strategy that structurally cannot meet a stated
@@ -289,16 +292,21 @@ function weightedFit(scores: CandidateScores, weights: CandidateScores): number 
  * a log platform and a financial ledger drew exactly the same chart. Scoring
  * against the live state is the whole point of the comparison panel. */
 function scoreCandidates(state: LabState, highScale: boolean): Record<ArchitectureCandidate["id"], CandidateScores> {
+  const hasWrites = state.readPercent < 100;
   const multiRegion = state.regions > 1;
   const wideRegions = state.regions >= 3;
   const strong = state.consistency === "strong";
   const lowLatency = state.latency <= 50;
   const demandingAvailability = state.availability === "99.999";
-  const strictDurability = state.durability === "zero-loss";
-  const globalOrder = state.ordering === "global";
+  const strictDurability = hasWrites && state.durability === "zero-loss";
+  const globalOrder = hasWrites && state.ordering === "global";
   // Below three copies availability degrades; above three it buys real
   // headroom, so 5 must not score the same as 3 or the control is half inert.
   const replicaPenalty = state.replicas >= 5 ? -1 : state.replicas >= 3 ? 0 : state.replicas === 2 ? 1 : 2;
+  // More copies improve failure tolerance but are not free. Reflect both ends
+  // of the control instead of rewarding five copies without charging for the
+  // extra storage, quorum traffic, and operational surface.
+  const replicaCostAdjustment = state.replicas === 1 ? 1 : state.replicas >= 5 ? -1 : 0;
 
   return {
     lean: {
@@ -317,14 +325,14 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
         - (state.availability === "99.99" ? 1 : 0)
         - replicaPenalty,
       ),
-      cost: clampBar(5 - (highScale ? 1 : 0)),
+      cost: clampBar(5 - (highScale ? 1 : 0) + replicaCostAdjustment),
       simplicity: 5,
     },
     balanced: {
       latency: clampBar(4 + (lowLatency ? 0 : 1) - (wideRegions && strong ? 1 : 0)),
       consistency: clampBar(strong ? (multiRegion ? 3 : 4) : 4),
       availability: clampBar(3 + (multiRegion ? 1 : 0) - (demandingAvailability ? 1 : 0) - replicaPenalty),
-      cost: clampBar(3 + (highScale ? 0 : 1)),
+      cost: clampBar(3 + (highScale ? 0 : 1) + replicaCostAdjustment),
       simplicity: clampBar(3 - (highScale ? 1 : 0)),
     },
     resilient: {
@@ -333,7 +341,7 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
       latency: clampBar(4 - (strong && multiRegion ? 2 : 0) - (strong && wideRegions ? 1 : 0)),
       consistency: clampBar(5 - (globalOrder && highScale ? 1 : 0)),
       availability: clampBar(4 + (multiRegion ? 1 : 0) - replicaPenalty),
-      cost: clampBar(1 + (multiRegion ? 0 : 1)),
+      cost: clampBar(1 + (multiRegion ? 0 : 1) + replicaCostAdjustment),
       simplicity: clampBar(1 + (strictDurability ? 0 : 1) - (wideRegions ? 1 : 0)),
     },
   };
@@ -423,6 +431,7 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   const peakQps = state.qps * state.burstFactor;
   const peakReadQps = peakQps * (state.readPercent / 100);
   const peakWriteQps = peakQps * writeFraction;
+  const readEgressMb = (peakReadQps * state.sizeKb) / 1024;
   const ingressMb = (peakWriteQps * state.sizeKb) / 1024;
   const dailyTb = (baselineWriteQps * state.sizeKb * 86400) / 1024 / 1024 / 1024;
   const logicalStoredTb = dailyTb * state.retention;
@@ -433,7 +442,7 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   const hotRetentionDays = Math.min(state.retention, 3);
   const hotPhysicalTb = (dailyTb * hotRetentionDays / state.compression) * state.replicas;
   const brokers = hasWrites ? Math.max(state.replicas, Math.ceil((partitions * state.replicas) / 120), Math.ceil(hotPhysicalTb / 2.8)) : 0;
-  const highScale = peakQps >= 50_000 || ingressMb >= 100;
+  const highScale = peakQps >= 50_000 || ingressMb >= 100 || readEgressMb >= 100;
   const highWriteScale = peakWriteQps >= 50_000 || ingressMb >= 100;
   const lowLatency = state.latency <= 50;
   // Retention only implies an archive if something is actually being written.
@@ -510,8 +519,8 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     // Keep the output honest even when another constraint asks for a topology
     // that one copy cannot implement. The blocker below explains how to fix it.
   } else if (multiRegion && state.consistency === "strong") {
-    replication = `${state.replicas}-copy regional quorum + scoped synchronous global writes`;
-    replicationReason = "Pay WAN coordination only for invariants that truly require global agreement; replicate other data asynchronously.";
+    replication = `${state.replicas}-copy cross-region quorum + scoped synchronous writes`;
+    replicationReason = "Place voting copies in distinct regional failure domains. Pay WAN coordination only for invariants that require global agreement; replicate other data asynchronously.";
   } else if (multiRegion) {
     replication = `${state.replicas}-copy asynchronous cross-region replication`;
     replicationReason = "Local writes improve regional availability, but conflict resolution and replay must be explicit.";
@@ -532,6 +541,8 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   }
   if (state.availability === "99.999" && state.regions === 1) {
     findings.push({ severity:"blocker", title:"Five nines needs regional failure coverage", detail:"One region cannot credibly meet the target even with multiple availability zones. Add a tested regional failover path." });
+  } else if (state.availability === "99.999" && state.consistency === "strong" && state.regions === 2) {
+    findings.push({ severity:"blocker", title:"A two-region quorum cannot survive either regional loss", detail:"With voting copies split across only two regional failure domains, one side must hold the majority; losing that side stops strongly consistent writes. Add a third voting region or relax the availability or consistency target." });
   } else if (state.availability === "99.99" && state.regions === 1) {
     findings.push({ severity:"warning", title:"Availability depends on one region", detail:"A multi-zone design may meet normal failures, but a regional event exceeds the requested availability posture." });
   }
@@ -546,13 +557,15 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   if (state.ordering === "global" && capacityPartitions > 1) {
     findings.push({ severity:"blocker", title:"Global ordering limits horizontal throughput", detail:`Capacity calls for about ${capacityPartitions} partitions, while a total order needs one sequencing authority. Narrow ordering to a key or accept a sequencer bottleneck.` });
   }
-  if (state.durability === "zero-loss" && state.consistency === "eventual") {
+  if (hasWrites && state.durability === "zero-loss" && state.consistency === "eventual") {
     findings.push({ severity:"warning", title:"Zero-loss requires a durable acknowledgement boundary", detail:"Eventual visibility is compatible with zero loss only if writes are acknowledged after durable replicated logging, not after an in-memory regional write." });
   }
-  if (state.durability === "zero-loss" && state.replicas < 3) {
+  if (hasWrites && state.durability === "zero-loss" && state.replicas < 3) {
     findings.push({ severity:"blocker", title:"Zero acknowledged loss needs a durable quorum", detail:"One or two copies cannot safely acknowledge writes through a failure. Use at least three independent copies plus verified backups." });
-  } else if (state.durability === "high" && state.replicas < 3) {
+  } else if (hasWrites && state.durability === "high" && state.replicas < 3) {
     findings.push({ severity:"warning", title:"Replica count is below the durability target", detail:"Use at least three independent replicas and verify restore procedures; replication is not a backup." });
+  } else if (!hasWrites && state.durability !== "standard") {
+    findings.push({ severity:"note", title:"Write durability belongs to the upstream source", detail:"This scenario performs no writes, so acknowledgement and loss guarantees must be enforced by the system that produces the data. Size these replicas for read availability and failover instead." });
   }
   if (state.consistency === "strong" && (state.workload === "analytics" || state.workload === "event-stream")) {
     findings.push({ severity:"warning", title:"The serving view is not the authoritative store", detail:"Strong reads and invariant-changing writes must use the transactional source of truth. The analytical or time-series view is rebuilt asynchronously and may lag." });
@@ -566,6 +579,7 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
 
   const pressures: string[] = [];
   if (ingressMb > 500) pressures.push("Network and broker throughput dominate; compression, batching, and quotas are mandatory.");
+  if (readEgressMb > 500) pressures.push("Read bandwidth dominates; cache hit rate, response compression, egress cost, and origin protection need explicit budgets.");
   if (partitions > 100) pressures.push("Partition ownership, rebalance time, and hot keys become operational risks.");
   if (physicalStoredTb > 100) pressures.push("Retention cost, compaction, restore time, and lifecycle policies dominate the storage design.");
   if (state.burstFactor >= 5) pressures.push(hasWrites
@@ -619,7 +633,7 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   ];
 
   return {
-    baselineWriteQps, peakQps, peakReadQps, peakWriteQps, ingressMb, dailyTb, logicalStoredTb,
+    baselineWriteQps, peakQps, peakReadQps, peakWriteQps, readEgressMb, ingressMb, dailyTb, logicalStoredTb,
     physicalStoredTb, partitions, brokers, database, databaseReason, cache, cacheReason, stream,
     streamReason, storage, storageReason, replication, replicationReason, readPath, readPathReason,
     pressures, tradeoffs, findings, blockerCount, feasible:blockerCount === 0,
@@ -648,6 +662,7 @@ export function buildDesignBrief(state: LabState, result: ArchitectureRecommenda
     `- Regions: ${state.regions}`,
     "",
     "## Capacity starting point",
+    `- Peak read payload egress: ${fmt(result.readEgressMb)} MB/s`,
     `- Peak write ingress: ${fmt(result.ingressMb)} MB/s`,
     `- Daily logical data: ${fmt(result.dailyTb)} TB`,
     `- Retained logical data: ${fmt(result.logicalStoredTb)} TB`,

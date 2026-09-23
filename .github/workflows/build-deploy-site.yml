@@ -15,6 +15,13 @@ on:
         required: false
         type: string
         default: ""
+      # Human-authored site changes must pass browser interactions before they
+      # publish. Daily digest runs leave this false so unrelated browser setup
+      # cannot delay fresh content.
+      run_e2e:
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -59,12 +66,6 @@ jobs:
         working-directory: site
         run: npm test
 
-      # The Playwright suite deliberately does NOT run here. This workflow is
-      # also the publish path for daily-digest.yml, which runs unattended at
-      # 09:00 UTC — putting a Chromium download and a browser suite in front of
-      # it means one browser flake blocks a digest that has nothing to do with
-      # the lab, and it duplicates the same suite tests.yml already runs on this
-      # push. The fast unit tests above stay, since they cost nothing.
       - name: Type-check and validate content schemas
         working-directory: site
         env:
@@ -76,6 +77,16 @@ jobs:
         env:
           PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
         run: npm run build
+
+      - name: Install Chromium for interaction tests
+        if: inputs.run_e2e
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
+      - name: Test browser interactions
+        if: inputs.run_e2e
+        working-directory: site
+        run: npm run test:e2e
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

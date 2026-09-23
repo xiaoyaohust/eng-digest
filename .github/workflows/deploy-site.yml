@@ -16,3 +16,5 @@ jobs:
       pages: write
       id-token: write
     uses: ./.github/workflows/build-deploy-site.yml
+    with:
+      run_e2e: true

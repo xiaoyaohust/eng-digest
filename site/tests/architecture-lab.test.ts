@@ -82,6 +82,28 @@ describe("Architecture Decision Lab", () => {
     assert.doesNotMatch(result.readPathReason, /write path/i);
   });
 
+  it("does not apply write acknowledgement blockers to a read-only workload", () => {
+    const state = {
+      ...labDefaults,
+      readPercent:100,
+      durability:"zero-loss",
+      consistency:"eventual",
+      availability:"99.9",
+      replicas:1,
+      ordering:"global",
+    } as const;
+    const result = recommendArchitecture(state);
+    const ordinaryRead = recommendArchitecture({ ...state, durability:"standard", ordering:"none" });
+
+    assert.equal(result.feasible, true);
+    assert.ok(result.findings.some((item) => /durability belongs to the upstream source/.test(item.title)));
+    assert.ok(result.findings.every((item) => !/acknowledged loss|acknowledgement boundary/.test(item.title)));
+    assert.deepEqual(
+      result.candidates.map((candidate) => ({ id:candidate.id, fit:candidate.fit, scores:candidate.scores })),
+      ordinaryRead.candidates.map((candidate) => ({ id:candidate.id, fit:candidate.fit, scores:candidate.scores })),
+    );
+  });
+
   it("treats replica factor as an availability and placement constraint", () => {
     const singleCopy = recommendArchitecture({
       ...labDefaults,
@@ -119,6 +141,8 @@ describe("Architecture Decision Lab", () => {
 
   it("recommends resilience first for strict recovery requirements", () => {
     const result = recommendArchitecture(labPresets.ledger);
+    assert.equal(result.feasible, true);
+    assert.equal(labPresets.ledger.regions, 3);
     assert.equal(result.recommendedCandidate.id, "resilient");
     assert.equal(result.candidates.length, 3);
     assert.ok(result.candidates[0].fit >= result.candidates[1].fit);
@@ -179,14 +203,32 @@ describe("Architecture Decision Lab", () => {
   });
 
   it("rewards replica factors above the durability floor", () => {
-    const availabilityFor = (replicas: number) =>
+    const scoresFor = (replicas: number) =>
       recommendArchitecture({ ...labDefaults, replicas })
-        .candidates.find((candidate) => candidate.id === "resilient")!.scores.availability;
+        .candidates.find((candidate) => candidate.id === "resilient")!.scores;
 
-    assert.ok(availabilityFor(1) < availabilityFor(2));
-    assert.ok(availabilityFor(2) < availabilityFor(3));
+    assert.ok(scoresFor(1).availability < scoresFor(2).availability);
+    assert.ok(scoresFor(2).availability < scoresFor(3).availability);
     // Five copies used to score identically to three, leaving half the control inert.
-    assert.ok(availabilityFor(3) < availabilityFor(5));
+    assert.ok(scoresFor(3).availability < scoresFor(5).availability);
+    // Availability headroom must be presented as a trade-off, not a free win.
+    assert.ok(scoresFor(1).cost > scoresFor(3).cost);
+    assert.ok(scoresFor(3).cost > scoresFor(5).cost);
+  });
+
+  it("rejects two-region strong quorums as a five-nines topology", () => {
+    const result = recommendArchitecture({
+      ...labDefaults,
+      regions:2,
+      replicas:5,
+      availability:"99.999",
+      consistency:"strong",
+      latency:100,
+    });
+
+    assert.equal(result.feasible, false);
+    assert.ok(result.findings.some((item) => item.severity === "blocker" && /two-region quorum/.test(item.title)));
+    assert.match(result.replication, /cross-region quorum/);
   });
 
   it("scores each option against the live constraints, not a fixed table", () => {
@@ -257,6 +299,25 @@ describe("Architecture Decision Lab", () => {
     assert.doesNotMatch(result.storageReason, /0\.0 TB/);
   });
 
+  it("includes read bandwidth when deciding whether a workload is high scale", () => {
+    const result = recommendArchitecture({
+      ...labDefaults,
+      qps:40_000,
+      sizeKb:1_024,
+      burstFactor:1,
+      readPercent:100,
+      availability:"99.9",
+      durability:"standard",
+      consistency:"eventual",
+    });
+
+    assert.equal(result.readEgressMb, 40_000);
+    assert.equal(result.ingressMb, 0);
+    assert.equal(result.highScale, true);
+    assert.ok(result.pressures.some((item) => /Read bandwidth dominates/.test(item)));
+    assert.notEqual(result.recommendedCandidate.id, "lean");
+  });
+
   it("ships static placeholders that match the default state", () => {
     // The page renders real values from JS, but the markup it ships has to be
     // correct on its own — and those literals have silently drifted from the
@@ -277,6 +338,7 @@ describe("Architecture Decision Lab", () => {
     }
     assert.equal(placeholder("data-node", "buffer"), result.stream);
     assert.equal(placeholder("data-node", "state"), result.database);
+    assert.equal(placeholder("data-metric", "throughput"), `${result.readEgressMb.toFixed(1)} / ${result.ingressMb.toFixed(1)} MB/s`);
     assert.equal(placeholder("data-metric", "partitions"), String(result.partitions));
     assert.equal(placeholder("data-metric", "brokers"), String(result.brokers));
   });
@@ -286,6 +348,7 @@ describe("Architecture Decision Lab", () => {
     const result = recommendArchitecture(state);
     const brief = buildDesignBrief(state, result, "https://example.com/architecture-lab/?qps=50000");
     assert.match(brief, /## Workload/);
+    assert.match(brief, /Peak read payload egress/);
     assert.match(brief, /## Constraint review/);
     assert.match(brief, new RegExp(result.recommendedCandidate.title));
     assert.match(brief, /https:\/\/example\.com\/architecture-lab/);

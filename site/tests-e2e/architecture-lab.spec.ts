@@ -99,3 +99,27 @@ test("read-only scenarios remove the write buffer from the architecture flow", a
   await expect(page.locator("[data-flow-buffer]").nth(1)).toBeHidden();
   await expect(page.locator("[data-pressure-list]")).not.toContainText("duplicate writes");
 });
+
+test("financial ledger uses a survivable three-region quorum", async ({ page }) => {
+  await page.goto("/architecture-lab/");
+  await page.getByRole("button", { name: "Financial ledger" }).click();
+
+  await expect(page.locator('[data-input="regions"]')).toHaveValue("3");
+  await expect(page.locator('[data-decision="replication"]')).toHaveText("3-copy cross-region quorum + scoped synchronous writes");
+  await expect(page.locator("[data-blocked-notice]")).toBeHidden();
+});
+
+test("read throughput updates the capacity model", async ({ page }) => {
+  await page.goto("/architecture-lab/");
+  for (const [key, value] of [["qps", "40000"], ["sizeKb", "1024"], ["readPercent", "100"]] as const) {
+    await page.locator(`[data-input="${key}"]`).evaluate((element: HTMLInputElement, next) => {
+      element.value = next;
+      element.dispatchEvent(new Event("input", { bubbles:true }));
+    }, value);
+  }
+  await page.locator('[data-input="burstFactor"]').selectOption("1");
+
+  await expect(page.locator('[data-metric="throughput"]')).toHaveText("40,000 / 0 MB/s");
+  await expect(page.locator('[data-node="compute"]')).toHaveText("Autoscaled Services");
+  await expect(page.locator("[data-pressure-list]")).toContainText("Read bandwidth dominates");
+});

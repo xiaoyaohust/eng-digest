@@ -61,13 +61,13 @@ jobs:
       # Browser tests run last, against dist/ from the step above rather than a
       # dev server, so they exercise the bundled assets that actually ship.
       - name: Install Chromium for interaction tests
+        if: github.event_name != 'push'
         working-directory: site
         run: npx playwright install --with-deps chromium
 
       - name: Test browser interactions
+        if: github.event_name != 'push'
         working-directory: site
-        env:
-          PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
         run: npm run test:e2e
 
   pytest:

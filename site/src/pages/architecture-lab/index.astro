@@ -67,7 +67,7 @@ import { withBase } from "@/lib/url";
               <span>Average payload size</span>
               <strong data-size-output>2 KB</strong>
               <input type="range" min="1" max="1024" step="1" value="2" data-input="sizeKb" />
-              <small>1 KB → 1 MB per write</small>
+              <small>1 KB → 1 MB per request or event</small>
             </label>
             <label>
               <span>Workload shape</span>
@@ -185,7 +185,7 @@ import { withBase } from "@/lib/url";
 
         <div class="metric-grid">
           <article><span>PEAK READ / WRITE</span><strong data-metric="rw">16,000 / 4,000</strong><small>requests per second</small></article>
-          <article><span>WRITE INGRESS</span><strong data-metric="ingress">7.8 MB/s</strong><small>peak, uncompressed</small></article>
+          <article><span>READ / WRITE DATA</span><strong data-metric="throughput">31.3 / 7.8 MB/s</strong><small>peak payload throughput</small></article>
           <article><span>DAILY LOGICAL</span><strong data-metric="daily">0.3 TB</strong><small>baseline writes</small></article>
           <article><span>PHYSICAL DATA</span><strong data-metric="stored">17.4 TB</strong><small>compression + replicas + 20%</small></article>
           <article><span>PARTITIONS</span><strong data-metric="partitions">3</strong><small>at ~70% utilization</small></article>
@@ -444,7 +444,7 @@ import { withBase } from "@/lib/url";
     setText("[data-size-output]", state.sizeKb >= 1024 ? "1 MB" : `${formatNumber(state.sizeKb)} KB`);
     setText("[data-retention-output]", `${state.retention} days`);
     setText('[data-metric="rw"]', `${formatNumber(result.peakReadQps)} / ${formatNumber(result.peakWriteQps)}`);
-    setText('[data-metric="ingress"]', `${formatNumber(result.ingressMb)} MB/s`);
+    setText('[data-metric="throughput"]', `${formatNumber(result.readEgressMb)} / ${formatNumber(result.ingressMb)} MB/s`);
     setText('[data-metric="daily"]', formatTb(result.dailyTb));
     setText('[data-metric="stored"]', formatTb(result.physicalStoredTb));
     setText('[data-metric="partitions"]', String(result.partitions));
