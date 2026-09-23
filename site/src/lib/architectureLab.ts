@@ -214,9 +214,8 @@ const SCORE_KEYS = ["latency", "consistency", "availability", "cost", "simplicit
  * These weights are what turn the same five bars into a single number: a
  * ledger and a log platform can score a strategy identically on latency and
  * still rank it differently, because they do not value latency the same. */
-function constraintWeights(state: LabState, highScale: boolean): CandidateScores {
+function constraintWeights(state: LabState, highScale: boolean, hasWrites: boolean): CandidateScores {
   const multiRegion = state.regions > 1;
-  const hasWrites = state.readPercent < 100;
   return {
     latency: state.latency <= 20 ? 6 : state.latency <= 50 ? 5 : state.latency <= 100 ? 3 : 2,
     consistency: clampBar(
@@ -232,14 +231,13 @@ function constraintWeights(state: LabState, highScale: boolean): CandidateScores
     // but a five-nines or zero-loss requirement is exactly the case where
     // "but it is simpler" stops being a valid argument.
     cost: highScale ? 4 : 3,
-    simplicity: isDemanding(state, highScale) ? 2 : 5,
+    simplicity: isDemanding(state, highScale, hasWrites) ? 2 : 5,
   };
 }
 
 /** True when some requirement is strict enough that cheap and simple stop
  * being tie-breakers. */
-function isDemanding(state: LabState, highScale: boolean): boolean {
-  const hasWrites = state.readPercent < 100;
+function isDemanding(state: LabState, highScale: boolean, hasWrites: boolean): boolean {
   return highScale
     || state.regions > 1
     || state.availability === "99.999"
@@ -252,7 +250,7 @@ function isDemanding(state: LabState, highScale: boolean): boolean {
  * so it must not ride high cost and simplicity marks to the top of the
  * ranking. Without this, asking for five nines recommended the single-region
  * option, because simplicity outweighed the availability it cannot deliver. */
-function viability(id: ArchitectureCandidate["id"], state: LabState, highScale: boolean): number {
+function viability(id: ArchitectureCandidate["id"], state: LabState, highScale: boolean, hasWrites: boolean): number {
   if (id === "lean") {
     // Cannot deliver what was asked for.
     const cannotSpanRegions = state.regions > 1;
@@ -265,7 +263,7 @@ function viability(id: ArchitectureCandidate["id"], state: LabState, highScale: 
     // continuous failover testing are the wrong shape for a workload nothing
     // is stressing. The cost and operability marks alone were not enough —
     // a 200 QPS internal tool still rated this option around 60%.
-    return isDemanding(state, highScale) ? 1 : 0.7;
+    return isDemanding(state, highScale, hasWrites) ? 1 : 0.7;
   }
   return 1;
 }
@@ -291,8 +289,7 @@ function weightedFit(scores: CandidateScores, weights: CandidateScores): number 
  * These used to be per-candidate constants, which made the bars decorative:
  * a log platform and a financial ledger drew exactly the same chart. Scoring
  * against the live state is the whole point of the comparison panel. */
-function scoreCandidates(state: LabState, highScale: boolean): Record<ArchitectureCandidate["id"], CandidateScores> {
-  const hasWrites = state.readPercent < 100;
+function scoreCandidates(state: LabState, highScale: boolean, hasWrites: boolean): Record<ArchitectureCandidate["id"], CandidateScores> {
   const multiRegion = state.regions > 1;
   const wideRegions = state.regions >= 3;
   const strong = state.consistency === "strong";
@@ -357,8 +354,8 @@ function buildCandidates(
   blockerCount: number,
 ): ArchitectureCandidate[] {
   const multiRegion = state.regions > 1;
-  const scores = scoreCandidates(state, highScale);
-  const weights = constraintWeights(state, highScale);
+  const scores = scoreCandidates(state, highScale, hasWrites);
+  const weights = constraintWeights(state, highScale, hasWrites);
   // A blocker means the constraints contradict each other, and none of these
   // strategies can resolve that — only changing an input can. Damping every
   // fit keeps the ranking (still useful as "least bad") while stopping the
@@ -371,7 +368,7 @@ function buildCandidates(
   // at any blocker count.
   const blockerScale = Math.max(0.25, 1 - blockerCount * 0.22);
   const fitFor = (id: ArchitectureCandidate["id"]) =>
-    clampScore(weightedFit(scores[id], weights) * viability(id, state, highScale) * blockerScale);
+    clampScore(weightedFit(scores[id], weights) * viability(id, state, highScale, hasWrites) * blockerScale);
 
   const leanFit = fitFor("lean");
   const balancedFit = fitFor("balanced");
@@ -518,6 +515,13 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   if (state.replicas === 1) {
     // Keep the output honest even when another constraint asks for a topology
     // that one copy cannot implement. The blocker below explains how to fix it.
+  } else if (!hasWrites) {
+    // Nothing is written here, so there is no quorum to form: every copy is a
+    // read replica refreshed from the upstream source.
+    replication = `${state.replicas}-copy read replicas across ${multiRegion ? "regions" : "availability zones"}`;
+    replicationReason = multiRegion
+      ? "No writes are accepted here, so each region serves from its own copy and refreshes from the upstream source; the freshness contract, not a quorum, defines consistency."
+      : "No writes are accepted here, so copies exist for read capacity and zone failover; refresh them from the upstream source.";
   } else if (multiRegion && state.consistency === "strong") {
     replication = `${state.replicas}-copy cross-region quorum + scoped synchronous writes`;
     replicationReason = "Place voting copies in distinct regional failure domains. Pay WAN coordination only for invariants that require global agreement; replicate other data asynchronously.";
@@ -534,15 +538,22 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     : "A dedicated read model avoids expensive scans without forcing every read through a global quorum.";
 
   const findings: LabFinding[] = [];
-  if (state.regions >= 3 && state.consistency === "strong" && state.latency <= 50) {
+  // Cross-region quorum latency and regional-majority loss are write-path
+  // constraints. A read-only scenario has no quorum to form, so it must not
+  // inherit these blockers.
+  if (hasWrites && state.regions >= 3 && state.consistency === "strong" && state.latency <= 50) {
     findings.push({ severity:"blocker", title:"WAN latency conflicts with the p99 target", detail:`Strong writes across ${state.regions}+ regions are unlikely to fit inside ${state.latency} ms. Use regional ownership, relax consistency, or raise the latency budget.` });
-  } else if (multiRegion && state.consistency === "strong" && state.latency === 20) {
+  } else if (hasWrites && multiRegion && state.consistency === "strong" && state.latency === 20) {
     findings.push({ severity:"blocker", title:"The latency budget is not physically credible", detail:"A 20 ms p99 leaves too little time for cross-region quorum. Keep synchronous consensus within one region." });
+  } else if (!hasWrites && multiRegion && state.consistency === "strong" && lowLatency) {
+    findings.push({ severity:"warning", title:"Strong reads must not cross the WAN per request", detail:`A per-read trip to the authoritative region will not fit inside ${state.latency} ms. Serve from the regional copy and enforce freshness with version fencing or a bounded-staleness contract.` });
   }
   if (state.availability === "99.999" && state.regions === 1) {
     findings.push({ severity:"blocker", title:"Five nines needs regional failure coverage", detail:"One region cannot credibly meet the target even with multiple availability zones. Add a tested regional failover path." });
-  } else if (state.availability === "99.999" && state.consistency === "strong" && state.regions === 2) {
+  } else if (hasWrites && state.availability === "99.999" && state.consistency === "strong" && state.regions === 2) {
     findings.push({ severity:"blocker", title:"A two-region quorum cannot survive either regional loss", detail:"With voting copies split across only two regional failure domains, one side must hold the majority; losing that side stops strongly consistent writes. Add a third voting region or relax the availability or consistency target." });
+  } else if (hasWrites && state.availability === "99.99" && state.consistency === "strong" && state.regions === 2) {
+    findings.push({ severity:"warning", title:"Losing the majority region stops strong writes", detail:"With two regions, one side must hold the quorum majority; if that region fails, strongly consistent writes stop until it recovers or the quorum is manually reconfigured. Budget that outage against the 99.99% target or add a third voting region." });
   } else if (state.availability === "99.99" && state.regions === 1) {
     findings.push({ severity:"warning", title:"Availability depends on one region", detail:"A multi-zone design may meet normal failures, but a regional event exceeds the requested availability posture." });
   }

@@ -15,13 +15,6 @@ on:
         required: false
         type: string
         default: ""
-      # Human-authored site changes must pass browser interactions before they
-      # publish. Daily digest runs leave this false so unrelated browser setup
-      # cannot delay fresh content.
-      run_e2e:
-        required: false
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -78,13 +71,15 @@ jobs:
           PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
         run: npm run build
 
+      # Every publish path runs the browser gate, including the daily digest.
+      # Both callers deploy main's HEAD, so skipping it on either one would let
+      # a change that failed the gate on its own push go live the next morning.
+      # Playwright retries twice in CI to absorb ordinary browser flakes.
       - name: Install Chromium for interaction tests
-        if: inputs.run_e2e
         working-directory: site
         run: npx playwright install --with-deps chromium
 
       - name: Test browser interactions
-        if: inputs.run_e2e
         working-directory: site
         run: npm run test:e2e
 

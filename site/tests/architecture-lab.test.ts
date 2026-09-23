@@ -104,6 +104,45 @@ describe("Architecture Decision Lab", () => {
     );
   });
 
+  it("does not apply write-quorum topology blockers to a read-only workload", () => {
+    const twoRegion = recommendArchitecture({
+      ...labDefaults,
+      readPercent:100,
+      regions:2,
+      replicas:3,
+      consistency:"strong",
+      availability:"99.999",
+      latency:100,
+    });
+    assert.equal(twoRegion.feasible, true);
+    assert.ok(twoRegion.findings.every((item) => !/two-region quorum|majority region/.test(item.title)));
+    assert.equal(twoRegion.replication, "3-copy read replicas across regions");
+    assert.doesNotMatch(`${twoRegion.replication} ${twoRegion.replicationReason}`, /quorum \+|synchronous writes/);
+
+    const wide = recommendArchitecture({
+      ...labDefaults,
+      readPercent:100,
+      regions:3,
+      replicas:3,
+      consistency:"strong",
+      latency:20,
+    });
+    assert.ok(wide.findings.every((item) => item.severity !== "blocker"));
+    assert.ok(wide.findings.some((item) => item.severity === "warning" && /must not cross the WAN/.test(item.title)));
+  });
+
+  it("warns that a two-region strong quorum loses writes with its majority region", () => {
+    const state = { ...labDefaults, regions:2, replicas:3, consistency:"strong", availability:"99.99", latency:100 } as const;
+    const result = recommendArchitecture(state);
+    assert.equal(result.feasible, true);
+    assert.ok(result.findings.some((item) => item.severity === "warning" && /majority region/.test(item.title)));
+
+    const threeRegions = recommendArchitecture({ ...state, regions:3 });
+    assert.ok(threeRegions.findings.every((item) => !/majority region/.test(item.title)));
+    const relaxed = recommendArchitecture({ ...state, consistency:"eventual" });
+    assert.ok(relaxed.findings.every((item) => !/majority region/.test(item.title)));
+  });
+
   it("treats replica factor as an availability and placement constraint", () => {
     const singleCopy = recommendArchitecture({
       ...labDefaults,

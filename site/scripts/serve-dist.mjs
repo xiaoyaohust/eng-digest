@@ -2,19 +2,31 @@ import { createReadStream } from "node:fs";
 import { stat } from "node:fs/promises";
 import { createServer } from "node:http";
 import { extname, resolve, sep } from "node:path";
+import { previewHost as host, previewPort as port } from "./preview-target.mjs";
 
 const root = resolve(process.cwd(), "dist");
-const host = "127.0.0.1";
-const port = 4322;
+// Browsers enforce some of these strictly: module scripts need a JavaScript
+// type, and WebAssembly.instantiateStreaming rejects .wasm without
+// application/wasm. Anything unlisted is served as application/octet-stream.
 const contentTypes = new Map([
   [".css", "text/css; charset=utf-8"],
+  [".gif", "image/gif"],
   [".html", "text/html; charset=utf-8"],
   [".ico", "image/x-icon"],
+  [".jpeg", "image/jpeg"],
+  [".jpg", "image/jpeg"],
   [".js", "text/javascript; charset=utf-8"],
   [".json", "application/json; charset=utf-8"],
+  [".md", "text/markdown; charset=utf-8"],
+  [".mjs", "text/javascript; charset=utf-8"],
   [".png", "image/png"],
   [".svg", "image/svg+xml"],
+  [".txt", "text/plain; charset=utf-8"],
+  [".wasm", "application/wasm"],
+  [".webmanifest", "application/manifest+json"],
   [".webp", "image/webp"],
+  [".woff", "font/woff"],
+  [".woff2", "font/woff2"],
   [".xml", "application/xml; charset=utf-8"],
 ]);
 

@@ -96,7 +96,7 @@ Four workflows with deliberately separated responsibilities:
 - **`tests.yml`** — push, pull request, manual. Runs the site unit/type/build checks, `pytest`
   on Python 3.9/3.11/3.12, and validates that `config.yml` still parses and still has at least
   one enabled source. Pull requests and manual runs also exercise the production build in
-  Chromium; main-branch pushes run that browser gate in the deployment workflow instead.
+  Chromium; main-branch pushes run that browser gate in `build-deploy-site.yml` instead.
 - **`daily-digest.yml`** — schedule + manual trigger. Runs the Python pipeline, commits
   `digests/` and `rss.xml` if changed, and — only when something changed — calls
   `build-deploy-site.yml` in the *same run* to build and deploy the site with the fresh
@@ -104,11 +104,11 @@ Four workflows with deliberately separated responsibilities:
   re-trigger other workflows' `push` events, so relying on `deploy-site.yml` alone would leave
   a freshly generated digest undeployed until the next human push.
 - **`deploy-site.yml`** — runs on every push to `main` (i.e. every manually authored article),
-  and on `workflow_dispatch`. Calls `build-deploy-site.yml` with the production browser gate
-  enabled, so a broken interaction cannot publish.
+  and on `workflow_dispatch`. Calls `build-deploy-site.yml`.
 - **`build-deploy-site.yml`** — a reusable workflow (`on: workflow_call`) holding the actual
-  build/deploy steps once. Its browser gate is opt-in: human site releases enable it, while
-  the daily digest path skips it so an unrelated browser failure cannot delay new content.
+  build/deploy steps once, including the Chromium browser gate against the built `dist/`.
+  Both callers run it: they both deploy `main`'s HEAD, so exempting the digest path would let
+  a change that failed the gate on its own push go live with the next morning's digest.
 
 GitHub Pages must be configured to deploy from **GitHub Actions** (Settings → Pages), not
 "Deploy from a branch" — the previous setup, since the site is no longer a checked-in

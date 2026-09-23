@@ -1,7 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
+import { previewHost, previewPort } from "./scripts/preview-target.mjs";
 
-const previewHost = "127.0.0.1";
-const previewPort = 4322;
 const previewCommand = "npm run preview:test";
 
 export default defineConfig({
