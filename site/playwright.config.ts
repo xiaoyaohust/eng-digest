@@ -12,10 +12,18 @@ export default defineConfig({
     trace: "on-first-retry",
   },
   webServer: {
-    command: "npm run dev",
+    // `astro preview` serves dist/, so these tests exercise the same bundled,
+    // minified assets that get deployed. Running them against `astro dev`
+    // instead would miss anything that only breaks after bundling — which is
+    // precisely the class of bug an interaction test is there to catch.
+    //
+    // Requires a build first. The build is part of the command so a local run
+    // is self-contained; CI builds in its own step and reuses that output
+    // because `npm run build` is idempotent.
+    command: "npm run build && npm run preview",
     url: "http://localhost:4321/architecture-lab/",
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 180_000,
   },
   projects: [
     {

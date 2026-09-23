@@ -250,11 +250,21 @@ function isDemanding(state: LabState, highScale: boolean): boolean {
  * ranking. Without this, asking for five nines recommended the single-region
  * option, because simplicity outweighed the availability it cannot deliver. */
 function viability(id: ArchitectureCandidate["id"], state: LabState, highScale: boolean): number {
-  if (id !== "lean") return 1;
-  const cannotSpanRegions = state.regions > 1;
-  const cannotReachAvailability = state.availability === "99.999";
-  const cannotAbsorbScale = highScale;
-  return cannotSpanRegions || cannotReachAvailability || cannotAbsorbScale ? 0.55 : 1;
+  if (id === "lean") {
+    // Cannot deliver what was asked for.
+    const cannotSpanRegions = state.regions > 1;
+    const cannotReachAvailability = state.availability === "99.999";
+    const cannotAbsorbScale = highScale;
+    return cannotSpanRegions || cannotReachAvailability || cannotAbsorbScale ? 0.55 : 1;
+  }
+  if (id === "resilient") {
+    // The opposite mismatch: regional cells, redundant write paths and
+    // continuous failover testing are the wrong shape for a workload nothing
+    // is stressing. The cost and operability marks alone were not enough —
+    // a 200 QPS internal tool still rated this option around 60%.
+    return isDemanding(state, highScale) ? 1 : 0.7;
+  }
+  return 1;
 }
 
 /** Collapse the five bars into one percentage using the workload's weights.
@@ -286,7 +296,9 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
   const demandingAvailability = state.availability === "99.999";
   const strictDurability = state.durability === "zero-loss";
   const globalOrder = state.ordering === "global";
-  const replicaPenalty = state.replicas >= 3 ? 0 : state.replicas === 2 ? 1 : 2;
+  // Below three copies availability degrades; above three it buys real
+  // headroom, so 5 must not score the same as 3 or the control is half inert.
+  const replicaPenalty = state.replicas >= 5 ? -1 : state.replicas >= 3 ? 0 : state.replicas === 2 ? 1 : 2;
 
   return {
     lean: {
@@ -341,11 +353,17 @@ function buildCandidates(
   const weights = constraintWeights(state, highScale);
   // A blocker means the constraints contradict each other, and none of these
   // strategies can resolve that — only changing an input can. Damping every
-  // fit equally keeps the ranking (still useful as "least bad") while stopping
-  // the headline number from reading as approval of an impossible design.
-  const blockerPenalty = blockerCount * 18;
+  // fit keeps the ranking (still useful as "least bad") while stopping the
+  // headline number from reading as approval of an impossible design.
+  //
+  // Scaled, not subtracted: a flat penalty big enough to signal "not buildable"
+  // pushed every option past the clamp floor, where they tied and sort() fell
+  // back to declaration order — so three regions at five nines with one replica
+  // recommended the single-region option. A multiplier preserves the ordering
+  // at any blocker count.
+  const blockerScale = Math.max(0.25, 1 - blockerCount * 0.22);
   const fitFor = (id: ArchitectureCandidate["id"]) =>
-    clampScore(weightedFit(scores[id], weights) * viability(id, state, highScale) - blockerPenalty);
+    clampScore(weightedFit(scores[id], weights) * viability(id, state, highScale) * blockerScale);
 
   const leanFit = fitFor("lean");
   const balancedFit = fitFor("balanced");

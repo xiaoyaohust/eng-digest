@@ -77,6 +77,18 @@ search index) → copy backward-compatible RSS/digest artifacts → validate int
 `site/astro.config.mjs` reads `SITE_URL` / `BASE_PATH` from the environment so the same code
 deploys to a GitHub Pages project site today and a custom domain later.
 
+### Pinned dependencies
+
+**`mermaid` is held at `^11.17.2` on purpose — do not "upgrade" it to 12.** mermaid 12 pulls
+`chevrotain` → `lodash-es <= 4.17.23`, which carries two high-severity advisories
+([GHSA-r5fr-rjxr-66jc](https://github.com/advisories/GHSA-r5fr-rjxr-66jc) code injection via
+`_.template`, [GHSA-f23m-r3pf-42rh](https://github.com/advisories/GHSA-f23m-r3pf-42rh)
+prototype pollution in `_.unset`/`_.omit`). `npm audit` reports zero vulnerabilities on 11 and
+five on 12. Neither advisory is reachable from this site — the only diagram source is the
+repository's own committed Markdown, never visitor input — but there is no reason to carry
+them, and the 11.x renderer draws every diagram used here. Revisit when mermaid 12 ships a
+`chevrotain` bump.
+
 ## GitHub Actions
 
 Four workflows, kept deliberately non-overlapping:

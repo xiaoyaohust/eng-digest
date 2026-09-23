@@ -142,6 +142,53 @@ describe("Architecture Decision Lab", () => {
     assert.ok(blocked.candidates[0].fit >= blocked.candidates[1].fit);
   });
 
+  it("marks down both the option that cannot deliver and the one nothing justifies", () => {
+    const modest = { ...labDefaults, qps:200, availability:"99.9", latency:1_000, consistency:"eventual", durability:"standard" } as const;
+    const relaxed = recommendArchitecture(modest);
+    const fitFor = (result: ReturnType<typeof recommendArchitecture>, id: string) =>
+      result.candidates.find((candidate) => candidate.id === id)!.fit;
+
+    // Nothing here is stressed, so global cells are the wrong shape — the cost
+    // and simplicity marks alone still left this option around 60%.
+    assert.equal(relaxed.recommendedCandidate.id, "lean");
+    assert.ok(fitFor(relaxed, "resilient") < 50, `resilient over-scored at ${fitFor(relaxed, "resilient")}`);
+
+    // The markdown must not apply once a requirement justifies the complexity.
+    const strict = recommendArchitecture(labPresets.ledger);
+    assert.equal(strict.recommendedCandidate.id, "resilient");
+    assert.ok(fitFor(strict, "resilient") > fitFor(relaxed, "resilient"));
+  });
+
+  it("keeps the ranking meaningful no matter how many blockers stack", () => {
+    // A flat per-blocker subtraction used to drive every option past the clamp
+    // floor, where they tied and sort() fell back to declaration order — so the
+    // most over-constrained design recommended the single-region option.
+    const overConstrained = recommendArchitecture({
+      ...labDefaults,
+      regions:3, availability:"99.999", replicas:1, durability:"zero-loss",
+      ordering:"global", qps:500_000, readPercent:0, latency:20,
+    });
+
+    assert.ok(overConstrained.blockerCount >= 3);
+    assert.notEqual(overConstrained.recommendedCandidate.id, "lean");
+    // Distinct fits, so the ordering still carries information.
+    const fits = overConstrained.candidates.map((candidate) => candidate.fit);
+    assert.ok(Math.max(...fits) > Math.min(...fits), `all fits collapsed to ${fits.join(",")}`);
+    // And it still reads as "do not build this".
+    assert.ok(overConstrained.recommendedCandidate.fit < 40);
+  });
+
+  it("rewards replica factors above the durability floor", () => {
+    const availabilityFor = (replicas: number) =>
+      recommendArchitecture({ ...labDefaults, replicas })
+        .candidates.find((candidate) => candidate.id === "resilient")!.scores.availability;
+
+    assert.ok(availabilityFor(1) < availabilityFor(2));
+    assert.ok(availabilityFor(2) < availabilityFor(3));
+    // Five copies used to score identically to three, leaving half the control inert.
+    assert.ok(availabilityFor(3) < availabilityFor(5));
+  });
+
   it("scores each option against the live constraints, not a fixed table", () => {
     const ledger = recommendArchitecture(labPresets.ledger);
     const feed = recommendArchitecture(labPresets.feed);

@@ -37,19 +37,11 @@ jobs:
         working-directory: site
         run: npm test
 
-      - name: Install Chromium for interaction tests
-        working-directory: site
-        run: npx playwright install --with-deps chromium
-
-      - name: Test browser interactions
-        working-directory: site
-        run: npm run test:e2e
-
       # build-deploy-site.yml type-checks and builds, but it only runs on a
-      # push to main — so without these two steps a pull request could pass
-      # every check here and still break the site the moment it merged. The
-      # build also runs check-internal-links, which is the only thing that
-      # catches a broken route or asset path.
+      # push to main — so without these steps a pull request could pass every
+      # check here and still break the site the moment it merged. The build
+      # also runs check-internal-links, which is the only thing that catches a
+      # broken route or asset path.
       - name: Import Engineering Digest markdown
         working-directory: site
         run: npm run import-digests
@@ -65,6 +57,18 @@ jobs:
         env:
           PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
         run: npm run build
+
+      # Browser tests run last, against dist/ from the step above rather than a
+      # dev server, so they exercise the bundled assets that actually ship.
+      - name: Install Chromium for interaction tests
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
+      - name: Test browser interactions
+        working-directory: site
+        env:
+          PUBLIC_NEWSLETTER_FORM_URL: ${{ vars.PUBLIC_NEWSLETTER_FORM_URL }}
+        run: npm run test:e2e
 
   pytest:
     runs-on: ubuntu-latest
