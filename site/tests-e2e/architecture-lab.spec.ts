@@ -115,6 +115,27 @@ test("strong read-only scenarios do not recommend stale regional cache reads", a
   await expect(page.locator("[data-blocked-notice]")).toBeVisible();
 });
 
+test("strong read-only copy stays coherent at 60k peak reads", async ({ page }) => {
+  await page.goto("/architecture-lab/?qps=30000&readPercent=100&regions=3&latency=50&consistency=strong");
+
+  await expect(page.locator('[data-metric="rw"]')).toHaveText("60,000 / 0");
+  await expect(page.locator('[data-decision="cache"]')).toHaveText("Immutable-only cache");
+  const balanced = page.locator("[data-candidate-card]").first();
+  await expect(balanced.locator("[data-candidate-title]")).toHaveText("Scale-Ready");
+  await expect(balanced.locator("[data-candidate-summary]")).toContainText("authoritative or verified linearizable read path");
+  await expect(page.locator("[data-pressure-list]")).not.toContainText(/local caches|cache stampedes/i);
+  await expect(page.locator("[data-tradeoff-list]")).not.toContainText(/cache fill|stale-read policy/i);
+  await expect(page.locator("[data-defense-card]").filter({ hasText:/jittered TTLs/i })).toHaveCount(0);
+});
+
+test("two-region five-nines strong reads warn about upstream availability", async ({ page }) => {
+  await page.goto("/architecture-lab/?readPercent=100&regions=2&replicas=3&consistency=strong&availability=99.999&latency=100");
+
+  await expect(page.locator("[data-finding-list]")).toContainText("Strong-read availability depends on the upstream authority");
+  await expect(page.locator("[data-finding-list]")).not.toContainText("A two-region quorum cannot survive either regional loss");
+  await expect(page.locator("[data-blocked-notice]")).toBeHidden();
+});
+
 test("financial ledger uses a survivable three-region quorum", async ({ page }) => {
   await page.goto("/architecture-lab/");
   await page.getByRole("button", { name: "Financial ledger" }).click();

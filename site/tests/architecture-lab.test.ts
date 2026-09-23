@@ -116,6 +116,7 @@ describe("Architecture Decision Lab", () => {
     });
     assert.equal(twoRegion.feasible, true);
     assert.ok(twoRegion.findings.every((item) => !/two-region quorum|majority region/.test(item.title)));
+    assert.ok(twoRegion.findings.some((item) => item.severity === "warning" && /Strong-read availability depends on the upstream authority/.test(item.title)));
     assert.equal(twoRegion.replication, "3-copy read replicas across regions");
     assert.doesNotMatch(`${twoRegion.replication} ${twoRegion.replicationReason}`, /quorum \+|synchronous writes/);
     assert.match(twoRegion.replicationReason, /asynchronously refreshed copy cannot independently guarantee strong reads/i);
@@ -140,6 +141,69 @@ describe("Architecture Decision Lab", () => {
     assert.equal(relaxed.feasible, true);
     assert.match(relaxed.readPath, /cache/);
     assert.ok(relaxed.findings.every((item) => !/Strong read freshness/.test(item.title)));
+    assert.ok(relaxed.findings.every((item) => !/Strong-read availability depends/.test(item.title)));
+  });
+
+  it("keeps every strong read-only recommendation on a verified read path", () => {
+    // 30k baseline × 2 burst = 60k peak reads, matching the reported case.
+    const state = { ...labDefaults, qps:30_000, readPercent:100, regions:3, consistency:"strong", latency:50 } as const;
+    const result = recommendArchitecture(state);
+    assert.equal(result.peakReadQps, 60_000);
+    assert.equal(result.recommendedCandidate.id, "balanced");
+    assert.equal(result.cache, "Immutable-only cache");
+    const narrative = [
+      ...result.candidates.flatMap(({ summary, topology, strength, risk }) => [summary, topology, strength, risk]),
+      ...result.pressures,
+      ...result.tradeoffs,
+      ...result.defensePrompts.flatMap(({ question, talkingPoint }) => [question, talkingPoint]),
+    ].join("\n");
+    assert.doesNotMatch(narrative, /cache invalidation|cache stampede|local caches|jittered TTL|stale-read policy|cache fill|cache hit rate/i);
+    assert.match(result.recommendedCandidate.summary, /authoritative or verified linearizable read path/i);
+    assert.match(result.candidates.find(({ id }) => id === "resilient")!.strength, /only if the upstream authority or read quorum also survives/i);
+    assert.match(narrative, /Coalesce immutable reads only/i);
+
+    const brief = buildDesignBrief(state, result, "https://systemcraftlab.com/architecture-lab/");
+    assert.doesNotMatch(brief, /cache fill|stale-read policy|jittered TTL/i);
+
+    // Preserve this contract across low/high load, latency, region count, and
+    // serving model so a later copy edit cannot reintroduce TTL advice.
+    for (const regions of [1, 2, 3] as const) {
+      for (const latency of [20, 50, 100, 250] as const) {
+        for (const workload of ["transactional", "analytics"] as const) {
+          const variant = recommendArchitecture({ ...state, regions, latency, workload });
+          const copy = [
+            ...variant.candidates.flatMap(({ summary, topology, strength, risk }) => [summary, topology, strength, risk]),
+            ...variant.pressures, ...variant.tradeoffs,
+            ...variant.defensePrompts.flatMap(({ question, talkingPoint }) => [question, talkingPoint]),
+          ].join("\n");
+          assert.doesNotMatch(copy, /cache invalidation|cache stampede|local caches|jittered TTL|stale-read policy|cache fill|cache hit rate/i);
+        }
+      }
+    }
+  });
+
+  it("keeps strict read-only advice coherent under bandwidth and burst pressure", () => {
+    const result = recommendArchitecture({
+      ...labDefaults, qps:30_000, burstFactor:5, sizeKb:10, readPercent:100,
+      regions:3, consistency:"strong", latency:50,
+    });
+    assert.ok(result.readEgressMb > 500);
+    assert.ok(result.pressures.some((item) => /verified-replica throughput/.test(item)));
+    assert.ok(result.pressures.some((item) => /verified-read capacity/.test(item)));
+    assert.ok(result.pressures.every((item) => !/cache hit rate|cache headroom|cache stampede|local caches/i.test(item)));
+  });
+
+  it("flags upstream failure-domain uncertainty without inventing a read-only write quorum", () => {
+    const base = { ...labDefaults, readPercent:100, consistency:"strong", availability:"99.999", latency:100, replicas:3 } as const;
+    for (const regions of [2, 3] as const) {
+      const result = recommendArchitecture({ ...base, regions });
+      assert.equal(result.feasible, true);
+      assert.equal(result.blockerCount, 0);
+      assert.ok(result.findings.some((item) => item.severity === "warning" && /Strong-read availability depends/.test(item.title)));
+      assert.ok(result.findings.every((item) => !/two-region quorum|strong writes/i.test(item.title)));
+    }
+    const relaxed = recommendArchitecture({ ...base, regions:2, consistency:"eventual" });
+    assert.ok(relaxed.findings.every((item) => !/Strong-read availability depends/.test(item.title)));
   });
 
   it("warns that a two-region strong quorum loses writes with its majority region", () => {

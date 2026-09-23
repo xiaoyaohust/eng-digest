@@ -351,6 +351,7 @@ function buildCandidates(
   replication: string,
   highScale: boolean,
   hasWrites: boolean,
+  strictReadOnly: boolean,
   blockerCount: number,
 ): ArchitectureCandidate[] {
   const multiRegion = state.regions > 1;
@@ -392,35 +393,47 @@ function buildCandidates(
       id:"balanced", title:"Scale-Ready", label:"BALANCED",
       summary:hasWrites
         ? "Separate serving, buffering, and durable history so each layer can scale on its own curve."
-        : "Scale reads independently with geo routing, caching, and a dedicated serving model.",
+        : strictReadOnly
+          ? "Scale regional read handlers while mutable data stays on an authoritative or verified linearizable read path."
+          : "Scale reads independently with geo routing, caching, and a dedicated serving model.",
       topology:hasWrites
         ? `Geo-aware edge → autoscaled services → ${stream} → ${database}`
-        : state.consistency === "strong"
-          ? `Geo-aware edge → autoscaled read services → authoritative or verified read → ${database}`
+        : strictReadOnly
+          ? "Geo-aware edge → autoscaled read services → authoritative source / verified replicas"
           : `Geo-aware edge → autoscaled read services → cache → ${database}`,
       fit:balancedFit,
       scores:scores.balanced,
-      strength:"Good throughput headroom without committing every subsystem to maximum complexity.",
+      strength:strictReadOnly
+        ? "Scales read handlers; verified read capacity must still be proven at the authority or its replicas."
+        : "Good throughput headroom without committing every subsystem to maximum complexity.",
       risk:hasWrites
         ? "Requires disciplined partitioning, replay procedures, and cache invalidation ownership."
-        : "Requires disciplined cache invalidation, freshness monitoring, and origin-capacity ownership.",
+        : strictReadOnly
+          ? "Authority throughput and verification may bottleneck reads; failover must preserve linearizability."
+          : "Requires disciplined cache invalidation, freshness monitoring, and origin-capacity ownership.",
     },
     {
       id:"resilient", title:"Resilience-First", label:"MAXIMUM CONTINUITY",
       summary:hasWrites
         ? "Favor regional autonomy, redundant write paths, and tested recovery boundaries over cost and simplicity."
-        : "Place independently recoverable read cells near users and make origin failover explicit.",
+        : strictReadOnly
+          ? "Design regional read cells around a survivable authority and a tested linearizable failover path."
+          : "Place independently recoverable read cells near users and make origin failover explicit.",
       topology:hasWrites
         ? `Global traffic manager → regional cells → durable log → ${replication} → ${database}`
-        : state.consistency === "strong"
-          ? `Global traffic manager → regional read cells → linearizable read protocol → ${database}`
+        : strictReadOnly
+          ? "Global traffic manager → regional read cells → linearizable read protocol → survivable authority"
           : `Global traffic manager → regional read cells → ${replication} → ${database}`,
       fit:resilientFit,
       scores:scores.resilient,
-      strength:"Best fit for strict recovery objectives and continued operation through a regional failure.",
+      strength:strictReadOnly
+        ? "Can preserve strict reads through a region failure only if the upstream authority or read quorum also survives."
+        : "Best fit for strict recovery objectives and continued operation through a regional failure.",
       risk:hasWrites
         ? "Highest cost and operational burden; cross-region correctness must be tested continuously."
-        : "Cache coherence, stale reads, and origin failover still require continuous testing.",
+        : strictReadOnly
+          ? "If the authority or read quorum loses its failure domain, regional read cells cannot serve mutable data safely."
+          : "Cache coherence, stale reads, and origin failover still require continuous testing.",
     },
   ];
   return candidates.sort((a, b) => b.fit - a.fit);
@@ -574,6 +587,8 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     findings.push({ severity:"blocker", title:"Five nines needs regional failure coverage", detail:"One region cannot credibly meet the target even with multiple availability zones. Add a tested regional failover path." });
   } else if (hasWrites && state.availability === "99.999" && state.consistency === "strong" && state.regions === 2) {
     findings.push({ severity:"blocker", title:"A two-region quorum cannot survive either regional loss", detail:"With voting copies split across only two regional failure domains, one side must hold the majority; losing that side stops strongly consistent writes. Add a third voting region or relax the availability or consistency target." });
+  } else if (strictReadOnly && state.availability === "99.999" && multiRegion) {
+    findings.push({ severity:"warning", title:"Strong-read availability depends on the upstream authority", detail:"Serving copies across regions do not establish five-nines strong-read availability. If the authority or read quorum fails with one region, strict reads stop. Verify independent failure domains, linearizable failover, and the upstream availability budget; otherwise relax the target." });
   } else if (hasWrites && state.availability === "99.99" && state.consistency === "strong" && state.regions === 2) {
     findings.push({ severity:"warning", title:"Losing the majority region stops strong writes", detail:"With two regions, one side must hold the quorum majority; if that region fails, strongly consistent writes stop until it recovers or the quorum is manually reconfigured. Budget that outage against the 99.99% target or add a third voting region." });
   } else if (state.availability === "99.99" && state.regions === 1) {
@@ -612,25 +627,40 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
 
   const pressures: string[] = [];
   if (ingressMb > 500) pressures.push("Network and broker throughput dominate; compression, batching, and quotas are mandatory.");
-  if (readEgressMb > 500) pressures.push("Read bandwidth dominates; cache hit rate, response compression, egress cost, and origin protection need explicit budgets.");
+  if (readEgressMb > 500) pressures.push(strictReadOnly
+    ? "Read bandwidth dominates; budget authoritative or verified-replica throughput, response compression, egress cost, and upstream protection."
+    : "Read bandwidth dominates; cache hit rate, response compression, egress cost, and origin protection need explicit budgets.");
   if (partitions > 100) pressures.push("Partition ownership, rebalance time, and hot keys become operational risks.");
   if (physicalStoredTb > 100) pressures.push("Retention cost, compaction, restore time, and lifecycle policies dominate the storage design.");
   if (state.burstFactor >= 5) pressures.push(hasWrites
     ? `${state.burstFactor}× bursts require queue headroom, admission control, and autoscaling that reacts before saturation.`
-    : `${state.burstFactor}× read bursts require cache and origin headroom, request coalescing, admission control, and responsive autoscaling.`);
+    : strictReadOnly
+      ? `${state.burstFactor}× read bursts require verified-read capacity, admission control, and responsive autoscaling; coalesce immutable reads only.`
+      : `${state.burstFactor}× read bursts require cache and origin headroom, request coalescing, admission control, and responsive autoscaling.`);
   if (lowLatency) pressures.push(hasWrites
     ? "Tail latency requires bounded queues, local caches, strict downstream timeouts, and load shedding."
-    : "Tail latency requires local caches, strict origin timeouts, request coalescing, and load shedding.");
+    : strictReadOnly
+      ? "Tail latency requires measured authoritative or linearizable-replica reads, bounded concurrency, strict upstream timeouts, and load shedding."
+      : "Tail latency requires local caches, strict origin timeouts, request coalescing, and load shedding.");
   if (multiRegion) pressures.push(hasWrites
     ? "Failover, duplicate writes, data residency, and region-aware routing must be designed explicitly."
-    : "Read failover, freshness, data residency, and region-aware routing must be designed explicitly.");
-  if (!hasWrites && peakReadQps >= 50_000) pressures.push("Read fan-out, cache stampedes, hot keys, and origin protection dominate this workload.");
+    : strictReadOnly
+      ? "Read failover depends on the upstream authority or read quorum; test failure domains, linearizable routing, and data residency."
+      : "Read failover, freshness, data residency, and region-aware routing must be designed explicitly.");
+  if (!hasWrites && peakReadQps >= 50_000) pressures.push(strictReadOnly
+    ? "Read fan-out, hot keys, authority capacity, and replica-verification cost dominate this workload."
+    : "Read fan-out, cache stampedes, hot keys, and origin protection dominate this workload.");
   if (!pressures.length) pressures.push("The workload can begin with a small regional architecture and scale after measurement.");
 
-  const tradeoffs = !hasWrites ? [
-    state.consistency === "strong"
-      ? "Strong reads avoid stale results but may require authoritative-store or quorum access, increasing tail latency."
-      : "Relaxed reads improve availability and cacheability but need an explicit staleness contract.",
+  const tradeoffs = strictReadOnly ? [
+    "Strong reads prevent stale results but couple latency and availability to the upstream authority or a proven linearizable replica protocol.",
+    "Retention size cannot be derived without the upstream data volume; capacity the producing system separately.",
+    "Read-only traffic shifts capacity risk to authoritative throughput, verification cost, hot keys, and origin fan-out; cache only immutable data.",
+    multiRegion
+      ? "Regional read cells improve proximity, but strict reads survive a region failure only if the upstream authority or read quorum does too."
+      : "A single region is easier to operate but needs a tested recovery path for the authoritative source.",
+  ] : !hasWrites ? [
+    "Relaxed reads improve availability and cacheability but need an explicit staleness contract.",
     "Retention size cannot be derived without the upstream data volume; capacity the producing system separately.",
     "Read-only traffic shifts capacity risk to cache fill, origin fan-out, hot keys, and stale-read policy; no write queue is required.",
     multiRegion
@@ -652,16 +682,19 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   ];
 
   const blockerCount = findings.filter((finding) => finding.severity === "blocker").length;
-  const candidates = buildCandidates(state, database, stream, replication, highScale, hasWrites, blockerCount);
+  const candidates = buildCandidates(state, database, stream, replication, highScale, hasWrites, strictReadOnly, blockerCount);
   const defensePrompts: DefensePrompt[] = hasWrites ? [
     { question:"Why is this database model a better fit than the closest alternative?", talkingPoint:`Tie the answer to ${state.workload} access patterns, ${state.consistency} consistency, and ${Math.round(peakWriteQps).toLocaleString("en-US")} peak writes per second.` },
     { question:"How will you choose a partition key and detect hot partitions?", talkingPoint:`Explain cardinality, ownership, skew metrics, and how ${partitions} starting partitions can be split without changing external identifiers.` },
     { question:"What happens during a regional network partition?", talkingPoint:multiRegion ? `State which region accepts writes, how conflicts are handled, and how the ${state.consistency} contract changes during failover.` : "Describe zone failover first, then the recovery-time and recovery-point objectives for a full regional loss." },
     { question:"Which estimate would you validate first with a load test?", talkingPoint:`Challenge the ${state.burstFactor}× burst assumption, payload distribution, compression ratio, and per-partition throughput before buying capacity.` },
+  ] : strictReadOnly ? [
+    { question:"Where does the authoritative data come from, and how do reads remain strong?", talkingPoint:"Name the upstream owner and prove how every mutable read sees the latest committed version; asynchronous refresh alone cannot provide strong consistency." },
+    { question:"How will you control hot keys and authoritative read amplification?", talkingPoint:`Coalesce immutable reads only, cap fan-out, admit load deliberately, and cache only immutable objects for ${Math.round(peakReadQps).toLocaleString("en-US")} peak reads per second. Mutable reads still need fresh authoritative or linearizable verification.` },
+    { question:"What happens to strict reads during a regional partition?", talkingPoint:multiRegion ? "Identify which authority or read quorum remains reachable and whether failover stays linearizable; reject mutable reads rather than serve an unverified local copy." : "Describe authoritative-source failover and the recovery-time objective; reject mutable reads if freshness cannot be proven." },
+    { question:"Which estimate would you validate first with a load test?", talkingPoint:"Measure authority throughput, replica read-verification latency, hot-key skew, and regional failover time before sizing the read fleet." },
   ] : [
-    { question:"Where does the authoritative data come from, and how fresh must this read model be?", talkingPoint:strictReadOnly
-      ? "Name the upstream owner and prove how every read sees the latest committed version; an asynchronously refreshed copy alone does not provide strong consistency."
-      : `Name the upstream owner, refresh mechanism, and the user-visible staleness contract for ${state.consistency} reads.` },
+    { question:"Where does the authoritative data come from, and how fresh must this read model be?", talkingPoint:`Name the upstream owner, refresh mechanism, and the user-visible staleness contract for ${state.consistency} reads.` },
     { question:"How will you prevent hot keys and cache stampedes?", talkingPoint:`Plan request coalescing, jittered TTLs, admission policy, and origin load shedding for ${Math.round(peakReadQps).toLocaleString("en-US")} peak reads per second.` },
     { question:"What happens to reads during a regional network partition?", talkingPoint:multiRegion ? "Define whether a region serves stale local data, fails closed, or reaches another region, and connect that choice to the consistency contract." : "Describe zone failover first, then the recovery-time objective for a full regional loss." },
     { question:"Which estimate would you validate first with a load test?", talkingPoint:"Measure cache hit ratio, hot-key skew, object-size distribution, and origin fan-out before sizing the read fleet." },
