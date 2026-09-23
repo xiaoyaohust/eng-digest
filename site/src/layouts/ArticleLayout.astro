@@ -365,8 +365,20 @@ const structuredData = [
         const { svg } = await mermaid.render(id, source);
         const container = document.createElement("div");
         container.className = "mermaid-diagram";
+        container.tabIndex = 0;
+        container.setAttribute("role", "group");
+        container.setAttribute("aria-label", "Architecture diagram, scroll horizontally to explore");
         container.innerHTML = svg;
         pre.replaceWith(container);
+        const diagram = container.querySelector("svg");
+        if (diagram) {
+          // Mermaid's default max-width shrinks large diagrams until labels are unreadable.
+          // Preserve a useful scale and let the containing panel scroll instead.
+          const naturalWidth = diagram.viewBox.baseVal.width || container.clientWidth;
+          diagram.style.maxWidth = "none";
+          diagram.style.width = `${Math.max(container.clientWidth - 32, Math.min(1800, Math.ceil(naturalWidth * 0.75)))}px`;
+          diagram.style.height = "auto";
+        }
       } catch {
         // Leave the original code block in place if rendering fails.
       }

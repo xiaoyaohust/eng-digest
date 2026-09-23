@@ -215,6 +215,23 @@ img {
   line-height: 1.6;
 }
 
+.prose .mermaid-diagram {
+  max-width: 100%;
+  margin: 1.7em 0;
+  padding: 16px;
+  overflow-x: auto;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 10px;
+  background: var(--color-bg-raised);
+}
+
+.prose .mermaid-diagram svg { display: block; }
+
+.prose .mermaid-diagram:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 2px;
+}
+
 .prose :not(pre) > code {
   padding: 0.12em 0.42em;
   border: 1px solid var(--color-border);
