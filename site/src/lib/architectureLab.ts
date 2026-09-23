@@ -395,7 +395,9 @@ function buildCandidates(
         : "Scale reads independently with geo routing, caching, and a dedicated serving model.",
       topology:hasWrites
         ? `Geo-aware edge → autoscaled services → ${stream} → ${database}`
-        : `Geo-aware edge → autoscaled read services → cache → ${database}`,
+        : state.consistency === "strong"
+          ? `Geo-aware edge → autoscaled read services → authoritative or verified read → ${database}`
+          : `Geo-aware edge → autoscaled read services → cache → ${database}`,
       fit:balancedFit,
       scores:scores.balanced,
       strength:"Good throughput headroom without committing every subsystem to maximum complexity.",
@@ -410,7 +412,9 @@ function buildCandidates(
         : "Place independently recoverable read cells near users and make origin failover explicit.",
       topology:hasWrites
         ? `Global traffic manager → regional cells → durable log → ${replication} → ${database}`
-        : `Global traffic manager → regional read cells → ${replication} → ${database}`,
+        : state.consistency === "strong"
+          ? `Global traffic manager → regional read cells → linearizable read protocol → ${database}`
+          : `Global traffic manager → regional read cells → ${replication} → ${database}`,
       fit:resilientFit,
       scores:scores.resilient,
       strength:"Best fit for strict recovery objectives and continued operation through a regional failure.",
@@ -434,6 +438,10 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   const logicalStoredTb = dailyTb * state.retention;
   const physicalStoredTb = (logicalStoredTb / state.compression) * state.replicas * 1.2;
   const hasWrites = peakWriteQps > 0;
+  // A read-only API can still consume data written by an upstream system.
+  // No local write quorum is needed, but strict reads still need a freshness
+  // guarantee; an asynchronously refreshed copy alone is not enough.
+  const strictReadOnly = !hasWrites && state.consistency === "strong";
   const capacityPartitions = hasWrites ? Math.max(1, Math.ceil(ingressMb / 7), Math.ceil(peakWriteQps / 7_000)) : 0;
   const partitions = hasWrites ? (state.ordering === "global" ? capacityPartitions : Math.max(3, capacityPartitions)) : 0;
   const hotRetentionDays = Math.min(state.retention, 3);
@@ -450,7 +458,10 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
 
   let database = "Relational database with read replicas";
   let databaseReason = "The workload can begin with a familiar relational model and indexed read replicas.";
-  if (state.workload === "analytics") {
+  if (strictReadOnly && (state.workload === "transactional" || state.workload === "key-value")) {
+    database = "Authoritative source + verified read replicas";
+    databaseReason = "This API accepts no writes, but upstream data can still change. Serve strict reads from the authority or a replica with a proven linearizable read protocol.";
+  } else if (state.workload === "analytics") {
     database = state.consistency === "strong"
       ? "Transactional source of truth + columnar analytical store"
       : "Columnar analytical store + object storage";
@@ -474,7 +485,10 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
 
   let cache = "Selective cache-aside layer";
   let cacheReason = "Cache only expensive or frequently repeated reads; keep invalidation scope explicit.";
-  if (state.readPercent < 30) {
+  if (strictReadOnly) {
+    cache = "Immutable-only cache";
+    cacheReason = "An unchecked cache of mutable upstream data can return stale values. Use the authoritative or a verified linearizable path for strict reads.";
+  } else if (state.readPercent < 30) {
     cache = "Metadata cache only";
     cacheReason = "A write-heavy workload receives little value from a broad data cache and pays a high invalidation cost.";
   } else if (state.consistency === "strong") {
@@ -519,9 +533,11 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     // Nothing is written here, so there is no quorum to form: every copy is a
     // read replica refreshed from the upstream source.
     replication = `${state.replicas}-copy read replicas across ${multiRegion ? "regions" : "availability zones"}`;
-    replicationReason = multiRegion
-      ? "No writes are accepted here, so each region serves from its own copy and refreshes from the upstream source; the freshness contract, not a quorum, defines consistency."
-      : "No writes are accepted here, so copies exist for read capacity and zone failover; refresh them from the upstream source.";
+    replicationReason = strictReadOnly
+      ? "The upstream source may change. Copies help failover, but an asynchronously refreshed copy cannot independently guarantee strong reads; verify a linearizable version or read from the authority."
+      : state.consistency === "read-your-writes"
+        ? "Refresh copies from the upstream source and serve a session only after its observed version is present; otherwise read from the authority."
+        : "Refresh copies from the upstream source for read capacity and failover; define a bounded freshness contract.";
   } else if (multiRegion && state.consistency === "strong") {
     replication = `${state.replicas}-copy cross-region quorum + scoped synchronous writes`;
     replicationReason = "Place voting copies in distinct regional failure domains. Pay WAN coordination only for invariants that require global agreement; replicate other data asynchronously.";
@@ -530,8 +546,12 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     replicationReason = "Local writes improve regional availability, but conflict resolution and replay must be explicit.";
   }
 
-  const readPath = lowLatency ? "Edge routing → cache → regional read model" : "Regional service → indexed serving store";
-  const readPathReason = lowLatency
+  const readPath = strictReadOnly
+    ? "Regional service → authoritative or verified linearizable read"
+    : lowLatency ? "Edge routing → cache → regional read model" : "Regional service → indexed serving store";
+  const readPathReason = strictReadOnly
+    ? "A read-only API still observes upstream updates. Strict reads must contact the authority or use a replica protocol that proves the latest committed version; an ordinary regional cache is insufficient."
+    : lowLatency
     ? hasWrites
       ? "Serve hot reads near users while keeping the durable write path independent."
       : "Serve hot reads near users and protect the authoritative origin from fan-out and cache stampedes."
@@ -545,8 +565,10 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     findings.push({ severity:"blocker", title:"WAN latency conflicts with the p99 target", detail:`Strong writes across ${state.regions}+ regions are unlikely to fit inside ${state.latency} ms. Use regional ownership, relax consistency, or raise the latency budget.` });
   } else if (hasWrites && multiRegion && state.consistency === "strong" && state.latency === 20) {
     findings.push({ severity:"blocker", title:"The latency budget is not physically credible", detail:"A 20 ms p99 leaves too little time for cross-region quorum. Keep synchronous consensus within one region." });
-  } else if (!hasWrites && multiRegion && state.consistency === "strong" && lowLatency) {
-    findings.push({ severity:"warning", title:"Strong reads must not cross the WAN per request", detail:`A per-read trip to the authoritative region will not fit inside ${state.latency} ms. Serve from the regional copy and enforce freshness with version fencing or a bounded-staleness contract.` });
+  } else if (strictReadOnly && multiRegion && state.latency === 20) {
+    findings.push({ severity:"blocker", title:"Strong read freshness conflicts with the p99 target", detail:"A mutable upstream source cannot guarantee 20 ms global p99 strong reads using asynchronously refreshed regional copies. Prove a locality-aware linearizable read protocol and measured latency, or relax the latency or consistency target." });
+  } else if (strictReadOnly && multiRegion && lowLatency) {
+    findings.push({ severity:"warning", title:"Strong regional reads require verified freshness", detail:`A ${state.latency} ms p99 target may not leave time to consult the authoritative region. Validate a linearizable replica-read protocol and measured WAN latency; if bounded staleness is acceptable, select eventual consistency instead.` });
   }
   if (state.availability === "99.999" && state.regions === 1) {
     findings.push({ severity:"blocker", title:"Five nines needs regional failure coverage", detail:"One region cannot credibly meet the target even with multiple availability zones. Add a tested regional failover path." });
@@ -637,7 +659,9 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     { question:"What happens during a regional network partition?", talkingPoint:multiRegion ? `State which region accepts writes, how conflicts are handled, and how the ${state.consistency} contract changes during failover.` : "Describe zone failover first, then the recovery-time and recovery-point objectives for a full regional loss." },
     { question:"Which estimate would you validate first with a load test?", talkingPoint:`Challenge the ${state.burstFactor}× burst assumption, payload distribution, compression ratio, and per-partition throughput before buying capacity.` },
   ] : [
-    { question:"Where does the authoritative data come from, and how fresh must this read model be?", talkingPoint:`Name the upstream owner, refresh mechanism, and the user-visible staleness contract for ${state.consistency} reads.` },
+    { question:"Where does the authoritative data come from, and how fresh must this read model be?", talkingPoint:strictReadOnly
+      ? "Name the upstream owner and prove how every read sees the latest committed version; an asynchronously refreshed copy alone does not provide strong consistency."
+      : `Name the upstream owner, refresh mechanism, and the user-visible staleness contract for ${state.consistency} reads.` },
     { question:"How will you prevent hot keys and cache stampedes?", talkingPoint:`Plan request coalescing, jittered TTLs, admission policy, and origin load shedding for ${Math.round(peakReadQps).toLocaleString("en-US")} peak reads per second.` },
     { question:"What happens to reads during a regional network partition?", talkingPoint:multiRegion ? "Define whether a region serves stale local data, fails closed, or reaches another region, and connect that choice to the consistency contract." : "Describe zone failover first, then the recovery-time objective for a full regional loss." },
     { question:"Which estimate would you validate first with a load test?", talkingPoint:"Measure cache hit ratio, hot-key skew, object-size distribution, and origin fan-out before sizing the read fleet." },

@@ -100,6 +100,21 @@ test("read-only scenarios remove the write buffer from the architecture flow", a
   await expect(page.locator("[data-pressure-list]")).not.toContainText("duplicate writes");
 });
 
+test("strong read-only scenarios do not recommend stale regional cache reads", async ({ page }) => {
+  await page.goto("/architecture-lab/");
+  await page.locator('[data-input="readPercent"]').evaluate((element: HTMLInputElement) => {
+    element.value = "100";
+    element.dispatchEvent(new Event("input", { bubbles:true }));
+  });
+  await page.locator('[data-input="regions"]').selectOption("3");
+  await page.locator('[data-input="latency"]').selectOption("20");
+
+  await expect(page.locator('[data-decision="cache"]')).toHaveText("Immutable-only cache");
+  await expect(page.locator('[data-decision="readPath"]')).toContainText("authoritative or verified linearizable read");
+  await expect(page.locator("[data-finding-list]")).toContainText("Strong read freshness conflicts with the p99 target");
+  await expect(page.locator("[data-blocked-notice]")).toBeVisible();
+});
+
 test("financial ledger uses a survivable three-region quorum", async ({ page }) => {
   await page.goto("/architecture-lab/");
   await page.getByRole("button", { name: "Financial ledger" }).click();

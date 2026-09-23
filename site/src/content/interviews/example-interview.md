@@ -10,7 +10,7 @@ tags:
   - sample
   - system-design
   - staff
-draft: false
+draft: true
 sample: true
 ---
 

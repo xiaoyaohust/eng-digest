@@ -118,6 +118,11 @@ describe("Architecture Decision Lab", () => {
     assert.ok(twoRegion.findings.every((item) => !/two-region quorum|majority region/.test(item.title)));
     assert.equal(twoRegion.replication, "3-copy read replicas across regions");
     assert.doesNotMatch(`${twoRegion.replication} ${twoRegion.replicationReason}`, /quorum \+|synchronous writes/);
+    assert.match(twoRegion.replicationReason, /asynchronously refreshed copy cannot independently guarantee strong reads/i);
+    assert.equal(twoRegion.cache, "Immutable-only cache");
+    assert.match(twoRegion.readPath, /authoritative or verified linearizable read/i);
+    assert.match(twoRegion.databaseReason, /upstream data can still change/i);
+    assert.match(twoRegion.defensePrompts[0].talkingPoint, /latest committed version/i);
 
     const wide = recommendArchitecture({
       ...labDefaults,
@@ -127,8 +132,14 @@ describe("Architecture Decision Lab", () => {
       consistency:"strong",
       latency:20,
     });
-    assert.ok(wide.findings.every((item) => item.severity !== "blocker"));
-    assert.ok(wide.findings.some((item) => item.severity === "warning" && /must not cross the WAN/.test(item.title)));
+    assert.equal(wide.feasible, false);
+    assert.ok(wide.findings.some((item) => item.severity === "blocker" && /Strong read freshness/.test(item.title)));
+    assert.ok(wide.findings.every((item) => !/two-region quorum|majority region/.test(item.title)));
+
+    const relaxed = recommendArchitecture({ ...labDefaults, readPercent:100, regions:3, consistency:"eventual", latency:20 });
+    assert.equal(relaxed.feasible, true);
+    assert.match(relaxed.readPath, /cache/);
+    assert.ok(relaxed.findings.every((item) => !/Strong read freshness/.test(item.title)));
   });
 
   it("warns that a two-region strong quorum loses writes with its majority region", () => {
