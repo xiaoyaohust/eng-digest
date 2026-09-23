@@ -37,6 +37,14 @@ jobs:
         working-directory: site
         run: npm test
 
+      - name: Install Chromium for interaction tests
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
+      - name: Test browser interactions
+        working-directory: site
+        run: npm run test:e2e
+
       # build-deploy-site.yml type-checks and builds, but it only runs on a
       # push to main — so without these two steps a pull request could pass
       # every check here and still break the site the moment it merged. The

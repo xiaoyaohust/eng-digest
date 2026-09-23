@@ -51,7 +51,7 @@ describe("Architecture Decision Lab", () => {
     assert.equal(result.database, "Time-series or wide-column serving store");
     assert.match(result.stream, /Kafka-compatible/);
     assert.equal(result.storage, "Object storage as durable archive");
-    assert.equal(result.replication, "Asynchronous active-active replication");
+    assert.equal(result.replication, "3-copy asynchronous cross-region replication");
   });
 
   it("detects physically conflicting multi-region constraints", () => {
@@ -75,6 +75,46 @@ describe("Architecture Decision Lab", () => {
     assert.equal(result.partitions, 0);
     assert.equal(result.brokers, 0);
     assert.equal(result.stream, "No write stream required");
+    assert.ok(result.tradeoffs.every((item) => !/streaming backbone|absorbs spikes|partitioning, replay|a small queue/i.test(item)));
+    assert.ok(result.defensePrompts.every((item) => !/partition key|starting partitions/i.test(`${item.question} ${item.talkingPoint}`)));
+    assert.ok(result.pressures.every((item) => !/queue headroom|duplicate writes|bounded queues/i.test(item)));
+    assert.ok(result.candidates.every((candidate) => !/durable log|write stream|replay procedures/i.test(`${candidate.topology} ${candidate.risk}`)));
+    assert.doesNotMatch(result.readPathReason, /write path/i);
+  });
+
+  it("treats replica factor as an availability and placement constraint", () => {
+    const singleCopy = recommendArchitecture({
+      ...labDefaults,
+      availability:"99.999",
+      regions:3,
+      replicas:1,
+      consistency:"eventual",
+      latency:250,
+    });
+
+    assert.equal(singleCopy.feasible, false);
+    assert.equal(singleCopy.replication, "Single copy; no replication");
+    assert.ok(singleCopy.findings.some((item) => item.severity === "blocker" && /every active region/.test(item.title)));
+    assert.ok(singleCopy.findings.some((item) => item.severity === "blocker" && /three independent copies/.test(item.title)));
+
+    const oneCopyAvailability = singleCopy.candidates.find((candidate) => candidate.id === "resilient")!.scores.availability;
+    const threeCopies = recommendArchitecture({ ...labDefaults, availability:"99.999", regions:3, replicas:3, consistency:"eventual", latency:250 });
+    const threeCopyAvailability = threeCopies.candidates.find((candidate) => candidate.id === "resilient")!.scores.availability;
+    assert.ok(oneCopyAvailability < threeCopyAvailability);
+  });
+
+  it("requires a durable quorum before promising zero acknowledged loss", () => {
+    const result = recommendArchitecture({ ...labDefaults, durability:"zero-loss", replicas:2 });
+    assert.ok(result.findings.some((item) => item.severity === "blocker" && /durable quorum/.test(item.title)));
+  });
+
+  it("keeps strong analytics and event views behind an authoritative store", () => {
+    for (const workload of ["analytics", "event-stream"] as const) {
+      const result = recommendArchitecture({ ...labDefaults, workload, consistency:"strong" });
+      assert.match(result.database, /source of truth/);
+      assert.match(result.databaseReason, /authoritative transactional store/i);
+      assert.ok(result.findings.some((item) => /serving view is not the authoritative store/.test(item.title)));
+    }
   });
 
   it("recommends resilience first for strict recovery requirements", () => {

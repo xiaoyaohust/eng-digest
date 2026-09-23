@@ -116,6 +116,8 @@ venv.bak/
 site/node_modules/
 site/dist/
 site/.astro/
+site/playwright-report/
+site/test-results/
 site/src/content/generated-digests/
 site/src/content/generated-weekly/
 site/public/social/auto/

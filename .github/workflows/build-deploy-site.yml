@@ -59,6 +59,14 @@ jobs:
         working-directory: site
         run: npm test
 
+      - name: Install Chromium for interaction tests
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
+      - name: Test browser interactions
+        working-directory: site
+        run: npm run test:e2e
+
       - name: Type-check and validate content schemas
         working-directory: site
         env:

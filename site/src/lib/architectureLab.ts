@@ -286,6 +286,7 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
   const demandingAvailability = state.availability === "99.999";
   const strictDurability = state.durability === "zero-loss";
   const globalOrder = state.ordering === "global";
+  const replicaPenalty = state.replicas >= 3 ? 0 : state.replicas === 2 ? 1 : 2;
 
   return {
     lean: {
@@ -301,7 +302,8 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
       availability: clampBar(
         (multiRegion ? 1 : 3)
         - (demandingAvailability ? 2 : 0)
-        - (state.availability === "99.99" ? 1 : 0),
+        - (state.availability === "99.99" ? 1 : 0)
+        - replicaPenalty,
       ),
       cost: clampBar(5 - (highScale ? 1 : 0)),
       simplicity: 5,
@@ -309,7 +311,7 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
     balanced: {
       latency: clampBar(4 + (lowLatency ? 0 : 1) - (wideRegions && strong ? 1 : 0)),
       consistency: clampBar(strong ? (multiRegion ? 3 : 4) : 4),
-      availability: clampBar(3 + (multiRegion ? 1 : 0) - (demandingAvailability ? 1 : 0)),
+      availability: clampBar(3 + (multiRegion ? 1 : 0) - (demandingAvailability ? 1 : 0) - replicaPenalty),
       cost: clampBar(3 + (highScale ? 0 : 1)),
       simplicity: clampBar(3 - (highScale ? 1 : 0)),
     },
@@ -318,7 +320,7 @@ function scoreCandidates(state: LabState, highScale: boolean): Record<Architectu
       // latency exactly when consistency is strict and regions are far apart.
       latency: clampBar(4 - (strong && multiRegion ? 2 : 0) - (strong && wideRegions ? 1 : 0)),
       consistency: clampBar(5 - (globalOrder && highScale ? 1 : 0)),
-      availability: clampBar(4 + (multiRegion ? 1 : 0)),
+      availability: clampBar(4 + (multiRegion ? 1 : 0) - replicaPenalty),
       cost: clampBar(1 + (multiRegion ? 0 : 1)),
       simplicity: clampBar(1 + (strictDurability ? 0 : 1) - (wideRegions ? 1 : 0)),
     },
@@ -329,7 +331,9 @@ function buildCandidates(
   state: LabState,
   database: string,
   stream: string,
+  replication: string,
   highScale: boolean,
+  hasWrites: boolean,
   blockerCount: number,
 ): ArchitectureCandidate[] {
   const multiRegion = state.regions > 1;
@@ -350,8 +354,12 @@ function buildCandidates(
   const candidates: ArchitectureCandidate[] = [
     {
       id:"lean", title:"Lean Regional", label:"LOWER COMPLEXITY",
-      summary:"Start inside one region with managed building blocks and a deliberately replaceable queue boundary.",
-      topology:`Regional load balancer → stateless service → ${state.consistency === "strong" ? "relational primary + replicas" : "managed serving store"}`,
+      summary:hasWrites
+        ? "Start inside one region with managed building blocks and a deliberately replaceable queue boundary."
+        : "Serve the existing data set through a regional read service with the smallest operational surface.",
+      topology:hasWrites
+        ? `Regional load balancer → stateless service → ${state.consistency === "strong" ? "relational primary + replicas" : "managed serving store"}`
+        : `Regional load balancer → read service → ${database}`,
       fit:leanFit,
       scores:scores.lean,
       strength:"Fastest path to production with the smallest operational surface.",
@@ -359,21 +367,33 @@ function buildCandidates(
     },
     {
       id:"balanced", title:"Scale-Ready", label:"BALANCED",
-      summary:"Separate serving, buffering, and durable history so each layer can scale on its own curve.",
-      topology:`Geo-aware edge → autoscaled services → ${stream} → ${database}`,
+      summary:hasWrites
+        ? "Separate serving, buffering, and durable history so each layer can scale on its own curve."
+        : "Scale reads independently with geo routing, caching, and a dedicated serving model.",
+      topology:hasWrites
+        ? `Geo-aware edge → autoscaled services → ${stream} → ${database}`
+        : `Geo-aware edge → autoscaled read services → cache → ${database}`,
       fit:balancedFit,
       scores:scores.balanced,
       strength:"Good throughput headroom without committing every subsystem to maximum complexity.",
-      risk:"Requires disciplined partitioning, replay procedures, and cache invalidation ownership.",
+      risk:hasWrites
+        ? "Requires disciplined partitioning, replay procedures, and cache invalidation ownership."
+        : "Requires disciplined cache invalidation, freshness monitoring, and origin-capacity ownership.",
     },
     {
       id:"resilient", title:"Resilience-First", label:"MAXIMUM CONTINUITY",
-      summary:"Favor regional autonomy, redundant write paths, and tested recovery boundaries over cost and simplicity.",
-      topology:`Global traffic manager → regional cells → durable log → replicated ${database}`,
+      summary:hasWrites
+        ? "Favor regional autonomy, redundant write paths, and tested recovery boundaries over cost and simplicity."
+        : "Place independently recoverable read cells near users and make origin failover explicit.",
+      topology:hasWrites
+        ? `Global traffic manager → regional cells → durable log → ${replication} → ${database}`
+        : `Global traffic manager → regional read cells → ${replication} → ${database}`,
       fit:resilientFit,
       scores:scores.resilient,
       strength:"Best fit for strict recovery objectives and continued operation through a regional failure.",
-      risk:"Highest cost and operational burden; cross-region correctness must be tested continuously.",
+      risk:hasWrites
+        ? "Highest cost and operational burden; cross-region correctness must be tested continuously."
+        : "Cache coherence, stale reads, and origin failover still require continuous testing.",
     },
   ];
   return candidates.sort((a, b) => b.fit - a.fit);
@@ -396,6 +416,7 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   const hotPhysicalTb = (dailyTb * hotRetentionDays / state.compression) * state.replicas;
   const brokers = hasWrites ? Math.max(state.replicas, Math.ceil((partitions * state.replicas) / 120), Math.ceil(hotPhysicalTb / 2.8)) : 0;
   const highScale = peakQps >= 50_000 || ingressMb >= 100;
+  const highWriteScale = peakWriteQps >= 50_000 || ingressMb >= 100;
   const lowLatency = state.latency <= 50;
   // Retention only implies an archive if something is actually being written.
   // A read-only workload kept "365 days" of nothing and was still told to buy
@@ -406,11 +427,19 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   let database = "Relational database with read replicas";
   let databaseReason = "The workload can begin with a familiar relational model and indexed read replicas.";
   if (state.workload === "analytics") {
-    database = "Columnar analytical store + object storage";
-    databaseReason = "Scan-heavy analytical queries benefit from column pruning, compression, and immutable source data.";
+    database = state.consistency === "strong"
+      ? "Transactional source of truth + columnar analytical store"
+      : "Columnar analytical store + object storage";
+    databaseReason = state.consistency === "strong"
+      ? "Keep invariant-changing writes in an authoritative transactional store, then feed a scan-optimized columnar model through CDC. Analytical views may lag; strong reads must use the source of truth."
+      : "Scan-heavy analytical queries benefit from column pruning, compression, and immutable source data.";
   } else if (state.workload === "event-stream") {
-    database = "Time-series or wide-column serving store";
-    databaseReason = "Append-heavy events and time-window queries favor partitioned writes and retention-aware storage.";
+    database = state.consistency === "strong"
+      ? "Durable event log + transactional source of truth + time-series view"
+      : "Time-series or wide-column serving store";
+    databaseReason = state.consistency === "strong"
+      ? "Use the log for durable ordered delivery, an authoritative transactional store for invariants, and a rebuildable time-series view for queries."
+      : "Append-heavy events and time-window queries favor partitioned writes and retention-aware storage.";
   } else if (state.consistency === "strong") {
     database = multiRegion ? "Distributed SQL with scoped global transactions" : "Relational database with synchronous replicas";
     databaseReason = "Transactions and invariant protection matter more than the lowest write latency.";
@@ -436,12 +465,12 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     ? "No write stream required"
     : state.ordering === "global"
     ? "Global sequencer + partitioned durable log"
-    : highScale ? "Partitioned Kafka-compatible event log" : "Durable queue with replay";
+    : highWriteScale ? "Partitioned Kafka-compatible event log" : "Durable queue with replay";
   const streamReason = !hasWrites
     ? "The selected workload is read-only, so introduce a durable stream only when a write or change-data-capture path appears."
     : state.ordering === "global"
     ? "A sequencing boundary defines total order, but it is also a throughput and availability bottleneck."
-    : highScale
+    : highWriteScale
       ? `${partitions} partitions at roughly 70% target utilization leave burst and rebalance headroom.`
       : "A smaller durable queue decouples spikes without adding unnecessary cluster complexity.";
   const storage = !hasWrites
@@ -453,19 +482,28 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
       ? `${physicalStoredTb.toFixed(1)} TB provisioned after compression, replication, and index overhead favors cheap immutable storage.`
       : "The retained volume is modest enough to begin with the serving store and verified backups.";
 
-  let replication = "Synchronous replicas across availability zones";
-  let replicationReason = "Keep quorum latency regional and test automatic zone failover.";
-  if (multiRegion && state.consistency === "strong") {
-    replication = "Regional quorum + scoped synchronous global writes";
+  let replication = state.replicas === 1
+    ? "Single copy; no replication"
+    : `${state.replicas}-copy synchronous replication across availability zones`;
+  let replicationReason = state.replicas === 1
+    ? "One copy cannot survive storage or node loss. Increase the replica factor before treating this as a resilient design."
+    : `Keep the ${state.replicas}-copy quorum regional and test automatic zone failover.`;
+  if (state.replicas === 1) {
+    // Keep the output honest even when another constraint asks for a topology
+    // that one copy cannot implement. The blocker below explains how to fix it.
+  } else if (multiRegion && state.consistency === "strong") {
+    replication = `${state.replicas}-copy regional quorum + scoped synchronous global writes`;
     replicationReason = "Pay WAN coordination only for invariants that truly require global agreement; replicate other data asynchronously.";
   } else if (multiRegion) {
-    replication = "Asynchronous active-active replication";
+    replication = `${state.replicas}-copy asynchronous cross-region replication`;
     replicationReason = "Local writes improve regional availability, but conflict resolution and replay must be explicit.";
   }
 
   const readPath = lowLatency ? "Edge routing → cache → regional read model" : "Regional service → indexed serving store";
   const readPathReason = lowLatency
-    ? "Serve hot reads near users while keeping the durable write path independent."
+    ? hasWrites
+      ? "Serve hot reads near users while keeping the durable write path independent."
+      : "Serve hot reads near users and protect the authoritative origin from fan-out and cache stampedes."
     : "A dedicated read model avoids expensive scans without forcing every read through a global quorum.";
 
   const findings: LabFinding[] = [];
@@ -479,14 +517,27 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   } else if (state.availability === "99.99" && state.regions === 1) {
     findings.push({ severity:"warning", title:"Availability depends on one region", detail:"A multi-zone design may meet normal failures, but a regional event exceeds the requested availability posture." });
   }
+  if (multiRegion && state.replicas < state.regions) {
+    findings.push({ severity:"blocker", title:"Replica factor cannot cover every active region", detail:`${state.regions} active regions with only ${state.replicas} data ${state.replicas === 1 ? "copy" : "copies"} cannot provide a local copy in each region. Raise the replica factor or reduce the regional footprint.` });
+  }
+  if (state.availability === "99.999" && state.replicas < 3) {
+    findings.push({ severity:"blocker", title:"Five nines needs at least three independent copies", detail:"The availability target cannot be defended with fewer than three copies placed in independent failure domains." });
+  } else if (state.availability === "99.99" && state.replicas < 2) {
+    findings.push({ severity:"warning", title:"One copy cannot meet the availability posture", detail:"A single node or disk loss becomes an outage. Add at least one independent copy and test failover." });
+  }
   if (state.ordering === "global" && capacityPartitions > 1) {
     findings.push({ severity:"blocker", title:"Global ordering limits horizontal throughput", detail:`Capacity calls for about ${capacityPartitions} partitions, while a total order needs one sequencing authority. Narrow ordering to a key or accept a sequencer bottleneck.` });
   }
   if (state.durability === "zero-loss" && state.consistency === "eventual") {
     findings.push({ severity:"warning", title:"Zero-loss requires a durable acknowledgement boundary", detail:"Eventual visibility is compatible with zero loss only if writes are acknowledged after durable replicated logging, not after an in-memory regional write." });
   }
-  if ((state.durability === "high" || state.durability === "zero-loss") && state.replicas < 3) {
+  if (state.durability === "zero-loss" && state.replicas < 3) {
+    findings.push({ severity:"blocker", title:"Zero acknowledged loss needs a durable quorum", detail:"One or two copies cannot safely acknowledge writes through a failure. Use at least three independent copies plus verified backups." });
+  } else if (state.durability === "high" && state.replicas < 3) {
     findings.push({ severity:"warning", title:"Replica count is below the durability target", detail:"Use at least three independent replicas and verify restore procedures; replication is not a backup." });
+  }
+  if (state.consistency === "strong" && (state.workload === "analytics" || state.workload === "event-stream")) {
+    findings.push({ severity:"warning", title:"The serving view is not the authoritative store", detail:"Strong reads and invariant-changing writes must use the transactional source of truth. The analytical or time-series view is rebuilt asynchronously and may lag." });
   }
   if (state.workload === "transactional" && peakWriteQps > 100_000) {
     findings.push({ severity:"warning", title:"Transactional write scale needs a partition key", detail:"A single relational write leader is unlikely to absorb this peak. Partition by ownership boundary or use distributed SQL deliberately." });
@@ -499,19 +550,35 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   if (ingressMb > 500) pressures.push("Network and broker throughput dominate; compression, batching, and quotas are mandatory.");
   if (partitions > 100) pressures.push("Partition ownership, rebalance time, and hot keys become operational risks.");
   if (physicalStoredTb > 100) pressures.push("Retention cost, compaction, restore time, and lifecycle policies dominate the storage design.");
-  if (state.burstFactor >= 5) pressures.push(`${state.burstFactor}× bursts require queue headroom, admission control, and autoscaling that reacts before saturation.`);
-  if (lowLatency) pressures.push("Tail latency requires bounded queues, local caches, strict downstream timeouts, and load shedding.");
-  if (multiRegion) pressures.push("Failover, duplicate writes, data residency, and region-aware routing must be designed explicitly.");
+  if (state.burstFactor >= 5) pressures.push(hasWrites
+    ? `${state.burstFactor}× bursts require queue headroom, admission control, and autoscaling that reacts before saturation.`
+    : `${state.burstFactor}× read bursts require cache and origin headroom, request coalescing, admission control, and responsive autoscaling.`);
+  if (lowLatency) pressures.push(hasWrites
+    ? "Tail latency requires bounded queues, local caches, strict downstream timeouts, and load shedding."
+    : "Tail latency requires local caches, strict origin timeouts, request coalescing, and load shedding.");
+  if (multiRegion) pressures.push(hasWrites
+    ? "Failover, duplicate writes, data residency, and region-aware routing must be designed explicitly."
+    : "Read failover, freshness, data residency, and region-aware routing must be designed explicitly.");
+  if (!hasWrites && peakReadQps >= 50_000) pressures.push("Read fan-out, cache stampedes, hot keys, and origin protection dominate this workload.");
   if (!pressures.length) pressures.push("The workload can begin with a small regional architecture and scale after measurement.");
 
-  const tradeoffs = [
+  const tradeoffs = !hasWrites ? [
+    state.consistency === "strong"
+      ? "Strong reads avoid stale results but may require authoritative-store or quorum access, increasing tail latency."
+      : "Relaxed reads improve availability and cacheability but need an explicit staleness contract.",
+    "Retention size cannot be derived without the upstream data volume; capacity the producing system separately.",
+    "Read-only traffic shifts capacity risk to cache fill, origin fan-out, hot keys, and stale-read policy; no write queue is required.",
+    multiRegion
+      ? "Regional read cells improve latency and continuity but need explicit freshness and failover semantics."
+      : "A single region is easier to operate but needs a tested regional recovery plan.",
+  ] : [
     state.consistency === "strong"
       ? "Strong consistency protects invariants but reduces write availability during partitions."
       : "Relaxed consistency improves availability but requires conflict handling and stale-read tolerance.",
     longRetention
       ? "Object storage lowers retention cost but makes historical queries asynchronous or slower."
       : "Keeping data in the serving store simplifies queries but raises cost as retention grows.",
-    highScale
+    highWriteScale
       ? "A streaming backbone absorbs spikes but introduces partitioning, replay, and consumer-lag operations."
       : "A small queue is simpler, but preserve a boundary that can evolve if traffic grows.",
     multiRegion
@@ -520,12 +587,17 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
   ];
 
   const blockerCount = findings.filter((finding) => finding.severity === "blocker").length;
-  const candidates = buildCandidates(state, database, stream, highScale, blockerCount);
-  const defensePrompts: DefensePrompt[] = [
+  const candidates = buildCandidates(state, database, stream, replication, highScale, hasWrites, blockerCount);
+  const defensePrompts: DefensePrompt[] = hasWrites ? [
     { question:"Why is this database model a better fit than the closest alternative?", talkingPoint:`Tie the answer to ${state.workload} access patterns, ${state.consistency} consistency, and ${Math.round(peakWriteQps).toLocaleString("en-US")} peak writes per second.` },
     { question:"How will you choose a partition key and detect hot partitions?", talkingPoint:`Explain cardinality, ownership, skew metrics, and how ${partitions} starting partitions can be split without changing external identifiers.` },
     { question:"What happens during a regional network partition?", talkingPoint:multiRegion ? `State which region accepts writes, how conflicts are handled, and how the ${state.consistency} contract changes during failover.` : "Describe zone failover first, then the recovery-time and recovery-point objectives for a full regional loss." },
     { question:"Which estimate would you validate first with a load test?", talkingPoint:`Challenge the ${state.burstFactor}× burst assumption, payload distribution, compression ratio, and per-partition throughput before buying capacity.` },
+  ] : [
+    { question:"Where does the authoritative data come from, and how fresh must this read model be?", talkingPoint:`Name the upstream owner, refresh mechanism, and the user-visible staleness contract for ${state.consistency} reads.` },
+    { question:"How will you prevent hot keys and cache stampedes?", talkingPoint:`Plan request coalescing, jittered TTLs, admission policy, and origin load shedding for ${Math.round(peakReadQps).toLocaleString("en-US")} peak reads per second.` },
+    { question:"What happens to reads during a regional network partition?", talkingPoint:multiRegion ? "Define whether a region serves stale local data, fails closed, or reaches another region, and connect that choice to the consistency contract." : "Describe zone failover first, then the recovery-time objective for a full regional loss." },
+    { question:"Which estimate would you validate first with a load test?", talkingPoint:"Measure cache hit ratio, hot-key skew, object-size distribution, and origin fan-out before sizing the read fleet." },
   ];
 
   return {

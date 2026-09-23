@@ -195,7 +195,7 @@ import { withBase } from "@/lib/url";
         <div class="architecture-flow" aria-label="Recommended architecture flow">
           <div class="flow-node"><small>EDGE</small><strong data-node="edge">Load Balancer</strong></div><span>→</span>
           <div class="flow-node"><small>COMPUTE</small><strong data-node="compute">Stateless Service</strong></div><span>→</span>
-          <div class="flow-node"><small>BUFFER</small><strong data-node="buffer">Durable queue with replay</strong></div><span>→</span>
+          <div class="flow-node" data-flow-buffer><small>BUFFER</small><strong data-node="buffer">Durable queue with replay</strong></div><span data-flow-buffer>→</span>
           <div class="flow-node"><small>STATE</small><strong data-node="state">Relational database with synchronous replicas</strong></div>
         </div>
 
@@ -204,7 +204,7 @@ import { withBase } from "@/lib/url";
           <article><span class="decision-code">D02 / CACHE</span><h3 data-decision="cache">Versioned read-through cache</h3><p data-reason="cache"></p></article>
           <article><span class="decision-code">D03 / STREAM</span><h3 data-decision="stream">Durable queue with replay</h3><p data-reason="stream"></p></article>
           <article><span class="decision-code">D04 / STORAGE</span><h3 data-decision="storage">Object storage as durable archive</h3><p data-reason="storage"></p></article>
-          <article><span class="decision-code">D05 / REPLICATION</span><h3 data-decision="replication">Synchronous replicas across availability zones</h3><p data-reason="replication"></p></article>
+          <article><span class="decision-code">D05 / REPLICATION</span><h3 data-decision="replication">3-copy synchronous replication across availability zones</h3><p data-reason="replication"></p></article>
           <article><span class="decision-code">D06 / READ PATH</span><h3 data-decision="readPath">Edge routing → cache → regional read model</h3><p data-reason="readPath"></p></article>
         </div>
 
@@ -462,6 +462,7 @@ import { withBase } from "@/lib/url";
     setText('[data-node="compute"]', result.highScale ? "Autoscaled Services" : "Stateless Service");
     setText('[data-node="buffer"]', result.stream);
     setText('[data-node="state"]', result.database);
+    root?.querySelectorAll<HTMLElement>("[data-flow-buffer]").forEach((element) => { element.hidden = result.peakWriteQps === 0; });
     setList("[data-pressure-list]", result.pressures);
     setList("[data-tradeoff-list]", result.tradeoffs);
     renderFindings(result.findings);
@@ -647,6 +648,7 @@ import { withBase } from "@/lib/url";
   .metric-grid strong { font-family:var(--font-display); font-size:1.25rem; line-height:1; }
   .architecture-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr) auto); align-items:center; gap:8px; padding:25px 22px; border-bottom:1px solid var(--color-border); background:var(--color-bg-inset); overflow-x:auto; }
   .architecture-flow > span { color:var(--color-accent); font-weight:800; }
+  [data-flow-buffer][hidden] { display:none; }
   .flow-node { min-width:115px; padding:13px; border:1px solid var(--color-border-strong); background:var(--color-bg-raised); }
   .flow-node small { display:block; margin-bottom:6px; color:var(--color-accent); font-family:var(--font-mono); font-size:.52rem; }
   .flow-node strong { display:block; font-size:.72rem; line-height:1.35; }
