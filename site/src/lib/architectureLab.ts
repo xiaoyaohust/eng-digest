@@ -289,7 +289,7 @@ function weightedFit(scores: CandidateScores, weights: CandidateScores): number 
  * These used to be per-candidate constants, which made the bars decorative:
  * a log platform and a financial ledger drew exactly the same chart. Scoring
  * against the live state is the whole point of the comparison panel. */
-function scoreCandidates(state: LabState, highScale: boolean, hasWrites: boolean): Record<ArchitectureCandidate["id"], CandidateScores> {
+function scoreCandidates(state: LabState, highScale: boolean, hasWrites: boolean, strictReadOnly: boolean): Record<ArchitectureCandidate["id"], CandidateScores> {
   const multiRegion = state.regions > 1;
   const wideRegions = state.regions >= 3;
   const strong = state.consistency === "strong";
@@ -297,6 +297,10 @@ function scoreCandidates(state: LabState, highScale: boolean, hasWrites: boolean
   const demandingAvailability = state.availability === "99.999";
   const strictDurability = hasWrites && state.durability === "zero-loss";
   const globalOrder = hasWrites && state.ordering === "global";
+  // A regional handler cannot turn a mutable, strongly consistent read into
+  // a local cache hit. It must reach the authority or prove a replica's
+  // linearizable version; that extra coordination matters most at tight p99s.
+  const verifiedReadPenalty = strictReadOnly && multiRegion ? (lowLatency ? 2 : 1) : 0;
   // Below three copies availability degrades; above three it buys real
   // headroom, so 5 must not score the same as 3 or the control is half inert.
   const replicaPenalty = state.replicas >= 5 ? -1 : state.replicas >= 3 ? 0 : state.replicas === 2 ? 1 : 2;
@@ -326,7 +330,7 @@ function scoreCandidates(state: LabState, highScale: boolean, hasWrites: boolean
       simplicity: 5,
     },
     balanced: {
-      latency: clampBar(4 + (lowLatency ? 0 : 1) - (wideRegions && strong ? 1 : 0)),
+      latency: clampBar(4 + (lowLatency ? 0 : 1) - (wideRegions && strong ? 1 : 0) - verifiedReadPenalty),
       consistency: clampBar(strong ? (multiRegion ? 3 : 4) : 4),
       availability: clampBar(3 + (multiRegion ? 1 : 0) - (demandingAvailability ? 1 : 0) - replicaPenalty),
       cost: clampBar(3 + (highScale ? 0 : 1) + replicaCostAdjustment),
@@ -355,7 +359,7 @@ function buildCandidates(
   blockerCount: number,
 ): ArchitectureCandidate[] {
   const multiRegion = state.regions > 1;
-  const scores = scoreCandidates(state, highScale, hasWrites);
+  const scores = scoreCandidates(state, highScale, hasWrites, strictReadOnly);
   const weights = constraintWeights(state, highScale, hasWrites);
   // A blocker means the constraints contradict each other, and none of these
   // strategies can resolve that — only changing an input can. Damping every
@@ -587,8 +591,8 @@ export function recommendArchitecture(state: LabState): ArchitectureRecommendati
     findings.push({ severity:"blocker", title:"Five nines needs regional failure coverage", detail:"One region cannot credibly meet the target even with multiple availability zones. Add a tested regional failover path." });
   } else if (hasWrites && state.availability === "99.999" && state.consistency === "strong" && state.regions === 2) {
     findings.push({ severity:"blocker", title:"A two-region quorum cannot survive either regional loss", detail:"With voting copies split across only two regional failure domains, one side must hold the majority; losing that side stops strongly consistent writes. Add a third voting region or relax the availability or consistency target." });
-  } else if (strictReadOnly && state.availability === "99.999" && multiRegion) {
-    findings.push({ severity:"warning", title:"Strong-read availability depends on the upstream authority", detail:"Serving copies across regions do not establish five-nines strong-read availability. If the authority or read quorum fails with one region, strict reads stop. Verify independent failure domains, linearizable failover, and the upstream availability budget; otherwise relax the target." });
+  } else if (strictReadOnly && multiRegion && (state.availability === "99.999" || (state.availability === "99.99" && state.regions === 2))) {
+    findings.push({ severity:"warning", title:"Strong-read availability depends on the upstream authority", detail:`Serving copies across regions do not establish ${state.availability}% strong-read availability. If the authority or read quorum fails with one region, strict reads stop. Verify independent failure domains, linearizable failover, and the upstream availability budget; otherwise relax the target.` });
   } else if (hasWrites && state.availability === "99.99" && state.consistency === "strong" && state.regions === 2) {
     findings.push({ severity:"warning", title:"Losing the majority region stops strong writes", detail:"With two regions, one side must hold the quorum majority; if that region fails, strongly consistent writes stop until it recovers or the quorum is manually reconfigured. Budget that outage against the 99.99% target or add a third voting region." });
   } else if (state.availability === "99.99" && state.regions === 1) {

@@ -120,8 +120,8 @@ test("strong read-only copy stays coherent at 60k peak reads", async ({ page }) 
 
   await expect(page.locator('[data-metric="rw"]')).toHaveText("60,000 / 0");
   await expect(page.locator('[data-decision="cache"]')).toHaveText("Immutable-only cache");
-  const balanced = page.locator("[data-candidate-card]").first();
-  await expect(balanced.locator("[data-candidate-title]")).toHaveText("Scale-Ready");
+  await expect(page.locator("[data-candidate-card]").first().locator("[data-candidate-title]")).toHaveText("Resilience-First");
+  const balanced = page.locator("[data-candidate-card]").filter({ has:page.locator('[data-candidate-title]:text-is("Scale-Ready")') });
   await expect(balanced.locator("[data-candidate-summary]")).toContainText("authoritative or verified linearizable read path");
   await expect(page.locator("[data-pressure-list]")).not.toContainText(/local caches|cache stampedes/i);
   await expect(page.locator("[data-tradeoff-list]")).not.toContainText(/cache fill|stale-read policy/i);
@@ -133,6 +133,14 @@ test("two-region five-nines strong reads warn about upstream availability", asyn
 
   await expect(page.locator("[data-finding-list]")).toContainText("Strong-read availability depends on the upstream authority");
   await expect(page.locator("[data-finding-list]")).not.toContainText("A two-region quorum cannot survive either regional loss");
+  await expect(page.locator("[data-blocked-notice]")).toBeHidden();
+});
+
+test("two-region four-nines strong reads warn about upstream availability", async ({ page }) => {
+  await page.goto("/architecture-lab/?readPercent=100&regions=2&replicas=3&consistency=strong&availability=99.99&latency=100");
+
+  await expect(page.locator("[data-finding-list]")).toContainText("Strong-read availability depends on the upstream authority");
+  await expect(page.locator("[data-finding-list]")).not.toContainText("Losing the majority region stops strong writes");
   await expect(page.locator("[data-blocked-notice]")).toBeHidden();
 });
 

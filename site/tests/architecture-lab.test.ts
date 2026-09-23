@@ -149,7 +149,7 @@ describe("Architecture Decision Lab", () => {
     const state = { ...labDefaults, qps:30_000, readPercent:100, regions:3, consistency:"strong", latency:50 } as const;
     const result = recommendArchitecture(state);
     assert.equal(result.peakReadQps, 60_000);
-    assert.equal(result.recommendedCandidate.id, "balanced");
+    assert.equal(result.recommendedCandidate.id, "resilient");
     assert.equal(result.cache, "Immutable-only cache");
     const narrative = [
       ...result.candidates.flatMap(({ summary, topology, strength, risk }) => [summary, topology, strength, risk]),
@@ -158,9 +158,16 @@ describe("Architecture Decision Lab", () => {
       ...result.defensePrompts.flatMap(({ question, talkingPoint }) => [question, talkingPoint]),
     ].join("\n");
     assert.doesNotMatch(narrative, /cache invalidation|cache stampede|local caches|jittered TTL|stale-read policy|cache fill|cache hit rate/i);
-    assert.match(result.recommendedCandidate.summary, /authoritative or verified linearizable read path/i);
+    assert.match(result.candidates.find(({ id }) => id === "balanced")!.summary, /authoritative or verified linearizable read path/i);
     assert.match(result.candidates.find(({ id }) => id === "resilient")!.strength, /only if the upstream authority or read quorum also survives/i);
     assert.match(narrative, /Coalesce immutable reads only/i);
+
+    const fitFor = (recommendation: typeof result, id: "balanced" | "resilient") =>
+      recommendation.candidates.find((candidate) => candidate.id === id)!.scores.latency;
+    const relaxed = recommendArchitecture({ ...state, consistency:"eventual" });
+    assert.ok(fitFor(result, "balanced") < fitFor(relaxed, "balanced"));
+    const localStrong = recommendArchitecture({ ...state, regions:1 });
+    assert.ok(fitFor(result, "balanced") < fitFor(localStrong, "balanced"));
 
     const brief = buildDesignBrief(state, result, "https://systemcraftlab.com/architecture-lab/");
     assert.doesNotMatch(brief, /cache fill|stale-read policy|jittered TTL/i);
@@ -204,6 +211,13 @@ describe("Architecture Decision Lab", () => {
     }
     const relaxed = recommendArchitecture({ ...base, regions:2, consistency:"eventual" });
     assert.ok(relaxed.findings.every((item) => !/Strong-read availability depends/.test(item.title)));
+
+    const fourNines = recommendArchitecture({ ...base, availability:"99.99", regions:2 });
+    assert.equal(fourNines.feasible, true);
+    assert.ok(fourNines.findings.some((item) => item.severity === "warning" && /Strong-read availability depends/.test(item.title) && /99\.99%/.test(item.detail)));
+    assert.ok(fourNines.findings.every((item) => !/majority region stops strong writes/i.test(item.title)));
+    const threeRegionFourNines = recommendArchitecture({ ...base, availability:"99.99", regions:3 });
+    assert.ok(threeRegionFourNines.findings.every((item) => !/Strong-read availability depends/.test(item.title)));
   });
 
   it("warns that a two-region strong quorum loses writes with its majority region", () => {
