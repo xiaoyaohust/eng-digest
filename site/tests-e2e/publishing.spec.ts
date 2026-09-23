@@ -1,8 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 test("public learning paths never lead to the sample interview draft", async ({ page, request }) => {
-  const retiredIndex = await request.get("/interviews/");
-  expect(retiredIndex.status()).toBe(404);
+  const retiredIndex = await page.request.get("/interviews/");
+  expect(retiredIndex.ok()).toBe(true);
+  expect(await retiredIndex.text()).toContain('http-equiv="refresh"');
+  await page.goto("/interviews/");
+  await expect(page).toHaveURL(/\/field-notes\/$/);
   const sample = await request.get("/interviews/example-interview/");
   expect(sample.status()).toBe(404);
   const sitemap = await request.get("/sitemap-0.xml");

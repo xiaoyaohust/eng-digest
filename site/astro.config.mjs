@@ -21,6 +21,12 @@ export default defineConfig({
   site: siteUrl,
   base: basePath,
   trailingSlash: "always",
+  // The Interview Experiences index was retired; send old links and bookmarks
+  // to the section that replaced it instead of a 404. The source is resolved
+  // under `base`, but the destination is emitted verbatim, so prefix it here.
+  redirects: {
+    "/interviews": `${basePath.replace(/\/$/, "")}/field-notes/`,
+  },
   integrations: [mdx(), sitemap()],
   markdown: {
     processor: unified({

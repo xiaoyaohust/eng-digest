@@ -11,9 +11,9 @@ Live site: **https://systemcraftlab.com/**
 
 This repository is two things sharing one home:
 
-1. **The website** (`site/`) — a static [Astro](https://astro.build) site. System Design,
-   Coding, and Interview Experiences are Markdown/MDX under version control; publishing an
-   article is a git push, nothing more.
+1. **The website** (`site/`) — a static [Astro](https://astro.build) site. System Design
+   and Coding articles are Markdown/MDX under version control; publishing an article is a
+   git push, nothing more.
 2. **Engineering Digest** (`eng_digest/`) — a Python CLI that fetches, deduplicates, and
    summarizes (TextRank, no AI APIs) engineering blog posts into Markdown, on a daily GitHub
    Actions schedule. The website imports that Markdown at build time and serves it at
@@ -25,11 +25,13 @@ Both are static-only: no production database, no auth, no server. See
 
 ## Website
 
-- **Home** — featured System Design / Coding / Interview picks, latest articles, latest digest.
+- **Home** — featured System Design / Coding picks, latest articles, latest digest.
 - **System Design** (`/system-design/`) — architecture and distributed systems interview prep.
 - **Coding** (`/coding/`) — algorithms, patterns, and interview problems, with copyable,
   Shiki-highlighted code blocks.
-- **Interview Experiences** (`/interviews/`) — real interview notes and lessons.
+- **Engineering Field Notes** (`/field-notes/`) — production lessons and engineering
+  decisions (in development). The retired `/interviews/` index redirects here; the
+  `interviews` collection remains for drafts and has no public listing.
 - **Engineering Digest** (`/eng-digest/`) — the daily archive described below, in the site's
   own layout (not a standalone page).
 - **Search** (`/search/`) — static full-text search (Pagefind) across all of the above.
@@ -165,7 +167,7 @@ eng-digest/
 │   ├── src/
 │   │   ├── content/         # system-design/, coding/, interviews/ (authored)
 │   │   │                    # generated-digests/ (gitignored, built from ../digests)
-│   │   ├── pages/           # routes: /, /system-design/, /coding/, /interviews/,
+│   │   ├── pages/           # routes: /, /system-design/, /coding/, /field-notes/,
 │   │   │                    # /eng-digest/, /tags/, /search/, /about/
 │   │   ├── layouts/, components/, styles/, lib/
 │   ├── scripts/import-digests.mjs
