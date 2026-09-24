@@ -5,10 +5,11 @@ import { published } from "@/lib/content";
 import { slugifyTag } from "@/lib/url";
 
 export async function getStaticPaths() {
-  const [systemDesign, coding, interviews] = await Promise.all([
+  const [systemDesign, coding, interviews, fieldNotes] = await Promise.all([
     published("system-design"),
     published("coding"),
     published("interviews"),
+    published("field-notes"),
   ]);
 
   type Card = {
@@ -40,6 +41,14 @@ export async function getStaticPaths() {
     ...interviews.map((e) => ({
       href: `/interviews/${e.id}/`,
       kicker: "Interview",
+      title: e.data.title,
+      description: e.data.description,
+      date: e.data.date,
+      tags: e.data.tags,
+    })),
+    ...fieldNotes.map((e) => ({
+      href: `/field-notes/${e.id}/`,
+      kicker: "Engineering Field Notes",
       title: e.data.title,
       description: e.data.description,
       date: e.data.date,

@@ -6,7 +6,7 @@ import YAML from "yaml";
 const root = process.cwd();
 const contentRoot = path.join(root, "src", "content");
 const outputRoot = path.join(root, "public", "social", "auto");
-const collections = ["system-design", "coding", "interviews"];
+const collections = ["system-design", "coding", "interviews", "field-notes"];
 
 const escapeXml = (value = "") => String(value).replace(/[<>&'\"]/g, (character) => ({
   "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;",
@@ -44,7 +44,7 @@ function cardSvg(data, collection) {
   const titleLines = wrap(data.title, 31).slice(0, 3);
   const descriptionLines = wrap(data.description ?? "", 72).slice(0, 2);
   const tags = (data.tags ?? []).slice(0, 4).join("  /  ");
-  const label = collection.replace("-", " ").toUpperCase();
+  const label = collection === "field-notes" ? "ENGINEERING" : collection.replace("-", " ").toUpperCase();
   return `
     <svg width="1200" height="627" viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="627" fill="#07111f"/>

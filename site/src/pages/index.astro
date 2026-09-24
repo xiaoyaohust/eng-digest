@@ -6,13 +6,14 @@ import { withBase } from "@/lib/url";
 import { published, publishedDigests } from "@/lib/content";
 import { learningPaths, learningPathDuration } from "@/data/learningPaths";
 
-const [systemDesign, coding, digests] = await Promise.all([
+const [systemDesign, coding, fieldNotes, digests] = await Promise.all([
   published("system-design"),
   published("coding"),
+  published("field-notes"),
   publishedDigests(),
 ]);
 
-type Kicker = "System Design" | "Coding";
+type Kicker = "System Design" | "Coding" | "Engineering Field Notes";
 interface CardEntry {
   href: string;
   kicker: Kicker;
@@ -49,6 +50,7 @@ function toCards(entries: SourceEntry[], base: string, kicker: Kicker): CardEntr
 const allArticles = [
   ...toCards(systemDesign, "/system-design", "System Design"),
   ...toCards(coding, "/coding", "Coding"),
+  ...toCards(fieldNotes, "/field-notes", "Engineering Field Notes"),
 ].sort((a, b) => b.date.valueOf() - a.date.valueOf());
 
 const markedFeatured = allArticles.filter((article) => article.featured).slice(0, 3);
@@ -80,9 +82,9 @@ const sections = [
     title: "Engineering Field Notes",
     href: "/field-notes/",
     description: "Production lessons, technical deep dives, and decisions from real engineering work.",
-    meta: "Coming soon",
+    meta: `${fieldNotes.length} entries`,
     label: "PRACTICE / EXPERIENCE",
-    action: "Preview ↗",
+    action: "Explore ↗",
   },
   {
     code: "04",
