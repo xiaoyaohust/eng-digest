@@ -6,94 +6,70 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 23 Sep 2026 14:03:40 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 14:00:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>How to Evaluate Live &amp; Voice Agents in ADK</title>
-      <link>https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/</link>
-      <description>Moving live voice agents from demo to production requires rigorous, automated testing to handle the unpredictability of real multi-turn conversations ADK now provides native live evaluation, allowing developers to test graph-based agent workflows against LLM-driven simulated users that generate actual audio via Gemini TTS By defining evaluation scenarios and natural-language rubrics, you can automatically score audio responses and tool executions, inspect the resulting transcripts in ADK Web, or run the CLI directly in your CI/CD pipeline.</description>
-      <pubDate>Wed, 23 Sep 2026 14:03:37 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/</guid>
+      <title>4 engineering patterns behind the strongest AI Agents Challenge submissions</title>
+      <link>https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/</link>
+      <description>The recent Google for Startups AI Agents Challenge revealed that the most successful multi-agent systems rely on foundational software engineering patterns rather than just raw model power Winning architectures consistently implemented bidirectional MCP for seamless inter-agent communication, async event buses for parallel execution, strict unified validation for model fallbacks, and tiered routing to minimize expensive inference calls By prioritizing these structural practices over simple linear prompt chains, developers can build more resilient, low-latency, and cost-effective agentic workflows.</description>
+      <pubDate>Thu, 24 Sep 2026 14:00:14 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Enterprise-Grade Precision for Long-Context Multimodal Embedding Inference on Cloud TPU</title>
-      <link>https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/</link>
-      <description>Google Cloud has natively integrated TPU support into the vLLM serving engine, allowing developers to elastically scale high-demand embedding pipelines using Google Kubernetes Engine (GKE) To handle massive 15K+ token contexts for models like Qwen3-Embedding-8B, the engineering team implemented TPU-specific optimizations such as hardware-safe tensor alignment, JAX/XLA compilation pre-warming, and a hybrid StepPool architecture for chunked prefill management These enhancements achieve near-perfect numerical parity with reference GPU baselines, and developers can immediately leverage the open-sourced setup recipes on the AI-Hypercomputer GitHub to build their own high-throughput semantic retrieval applications.</description>
-      <pubDate>Wed, 23 Sep 2026 14:03:37 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/enterprise-grade-precision-for-long-context-multimodal-embedding-inference-on-cloud-tpu/</guid>
+      <title>Driving Developer Excellence: Inside the Program Sprints</title>
+      <link>https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/</link>
+      <description>The Gemini Enterprise Developer Experience (DevEx) program conducts ongoing sprint testing of end-to-end developer workflows to identify and rapidly resolve friction points without relying on internal shortcuts This recent sprint focused on optimizing enterprise AI governance, including refining setup prerequisites, securing extension configurations, and clarifying policy enforcement mechanics to ensure a smoother, more reliable deployment Developers can now leverage updated documentation and standardized code samples to improve their experience with Agent Gateway and Semantic Governance configurations.</description>
+      <pubDate>Thu, 24 Sep 2026 14:00:14 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Decoding cosmic signals with deep learning and Keras</title>
-      <link>https://developers.googleblog.com/decoding-cosmic-signals-with-deep-learning-and-keras/</link>
-      <description>Astroparticle physics sits at the exciting intersection of astrophysics and particle physics and stu...</description>
-      <pubDate>Wed, 23 Sep 2026 14:03:37 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/decoding-cosmic-signals-with-deep-learning-and-keras/</guid>
+      <title>Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond</title>
+      <link>https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/</link>
+      <description>Google has officially released version 1.0 of the Agent Development Kit (ADK) for Kotlin, achieving full feature parity with the Python and Java ADK cores to enable idiomatic, multi-agent AI development Built on Kotlin Multiplatform (KMP), the framework leverages Kotlin Symbol Processing (KSP) for zero-reflection, type-safe function calling, alongside advanced orchestration capabilities like human-in-the-loop workflows and context compaction Additionally, the release introduces a robust suite of Android-first extensions, allowing mobile developers to integrate local models via LiteRT-LM, cloud reasoning through Firebase AI, session persistence using Room, and semantic memory powered by AppSearch.</description>
+      <pubDate>Thu, 24 Sep 2026 14:00:14 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Developers want more efficient software. Here’s what over 1000 GitHub users told us they need.</title>
-      <link>https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/</link>
-      <description>New research from GitHub and Yale Program on Climate Change Communication finds strong demand for tools, measurement, and practical guidance that can help developers reduce wasted compute The post Developers want more efficient software Here’s what over 1000 GitHub users told us they need. appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 23 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/</guid>
+      <title>Bringing Private Processing to Meta AI Glasses</title>
+      <link>https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/</link>
+      <description>We believe glasses are the best form factor for having AI help throughout your day Most of the time, glasses are helping you see well, protecting your eyes and complementing your look, and [...] Read More The post Bringing Private Processing to Meta AI Glasses appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Rendering huge pull requests in the GitHub Copilot app</title>
+      <link>https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/</link>
+      <description>How we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of inline review comments The post Rendering huge pull requests in the GitHub Copilot app appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 23 Sep 2026 18:29:49 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>What Dropbox has learned from deploying AI at company scale</title>
-      <link>https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale</link>
-      <description>Learnings from deploying AI at company scale, and what organizations need to consider as they move from AI adoption to broader transformation.</description>
-      <pubDate>Wed, 23 Sep 2026 07:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/culture/learnings-from-deploying-ai-at-company-scale</guid>
-      <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Introducing Amazon CloudWatch Omni: collaborative AI-powered observability for your applications</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/</link>
-      <description>Amazon CloudWatch Omni is the next evolution of CloudWatch — unified observability that brings your applications and AI agents into one reimagined experience, with auto-discovered topology, natural language queries, and AI-guided investigation powered by AWS DevOps Agent.</description>
-      <pubDate>Tue, 22 Sep 2026 22:23:14 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-collaborative-ai-powered-observability-for-your-applications/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Introducing Amazon CloudWatch Omni: AI-powered observability for generative AI and agentic workloads</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/</link>
-      <description>Learn how Amazon CloudWatch Omni delivers AI-powered observability purpose-built for generative AI and agentic workloads Trace, evaluate, and experiment with AI agents across any framework—directly from your IDE or a standalone web experience—using open standards and built-in evaluators for quality, correctness, and coherence.</description>
-      <pubDate>Tue, 22 Sep 2026 22:21:13 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>We just shipped support for the ugliest part of HTTP: Vary</title>
-      <link>https://blog.cloudflare.com/vary-support/</link>
-      <description>Vary support is now available in Cache Rules on every plan You can normalize known negotiation headers, pass exact values through to the origin when those small differences matter, or bypass cache when the variation is too unpredictable.</description>
-      <pubDate>Tue, 22 Sep 2026 14:04:31 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/vary-support/</guid>
+      <title>How we rebuilt Cloudflare Workers’ module registry for Node.js compatibility</title>
+      <link>https://blog.cloudflare.com/workers-module-registry-nodejs/</link>
+      <description>Workers now enables Node.js compatibility by default, supports applications up to 64 mebibytes, and adds a URL-based module registry with import.meta, lazy compilation, shared code caches, and clearer errors.</description>
+      <pubDate>Wed, 09 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/workers-module-registry-nodejs/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>New trends in global card fraud: How 3D Secure and regional mandates are affecting risk</title>
-      <link>https://stripe.com/blog/new-trends-in-global-card-fraud-how-3d-secure-and-regional-mandates-are-affecting-risk</link>
-      <description>We analyzed billions of transactions on Stripe from January 2022 to March 2026 to understand how card fraud patterns differ by region and country, what's driving those differences, and how businesses can respond.</description>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/new-trends-in-global-card-fraud-how-3d-secure-and-regional-mandates-are-affecting-risk</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Introducing automatic remediation policies with Cloudflare CASB</title>
-      <link>https://blog.cloudflare.com/casb-policies/</link>
-      <description>Cloudflare CASB policies introduce a native automation engine built directly on the Cloudflare developer platform to remediate SaaS risks automatically Security teams can now design event-driven logic to revoke risky file shares and send webhooks without manual intervention.</description>
-      <pubDate>Fri, 11 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/casb-policies/</guid>
+      <title>Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)</title>
+      <link>https://blog.cloudflare.com/automatic-key-exchange-for-origins/</link>
+      <description>Automatic Key Exchange probes TLS 1.3-capable customer origins to learn which key agreement algorithms they support We then lead with the most secure algorithm when connecting to the origin, preferring post-quantum connections wherever the origin supports it.</description>
+      <pubDate>Tue, 08 Sep 2026 13:10:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/automatic-key-exchange-for-origins/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>1.1.1.1 now supports post-quantum DNSSEC, all 2,420 bytes of it</title>
-      <link>https://blog.cloudflare.com/post-quantum-dnssec-1111/</link>
-      <description>1.1.1.1 now validates DNSSEC signatures using NIST’s post-quantum ML-DSA-44 algorithm Here is how we manage 2,420-byte signatures and downgrade risks at scale.</description>
-      <pubDate>Thu, 10 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/post-quantum-dnssec-1111/</guid>
+      <title>Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak models</title>
+      <link>https://blog.cloudflare.com/vulnerability-discovery-remediation/</link>
+      <description>Use production traffic and security signals to prioritize findings, prepare edge mitigations when safe, and propose code patches By combining WAF data with OpenAI Daybreak models, Vulnerability Discovery and Remediation helps teams identify and patch the most critical threats first.</description>
+      <pubDate>Thu, 03 Sep 2026 21:03:02 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/vulnerability-discovery-remediation/</guid>
       <source>Cloudflare Engineering</source>
     </item>
   </channel>
