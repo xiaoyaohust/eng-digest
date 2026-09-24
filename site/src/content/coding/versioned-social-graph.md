@@ -36,7 +36,7 @@ practice:
     answer: "Follow and unfollow are O(1) amortized, snapshot is O(1), and a historical following query is O(d log k), plus the cost of producing or sorting its result."
 ---
 
-## Problem statement (English translation)
+## Problem
 
 Design a social graph that supports the following operations:
 

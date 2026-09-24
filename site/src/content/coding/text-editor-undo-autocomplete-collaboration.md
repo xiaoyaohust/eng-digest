@@ -20,7 +20,7 @@ featured: false
 draft: false
 ---
 
-## Problem statement (English translation)
+## Problem
 
 Design a text editor in four stages:
 
