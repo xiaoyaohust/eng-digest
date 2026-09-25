@@ -6,70 +6,78 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 24 Sep 2026 14:00:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 14:24:25 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>4 engineering patterns behind the strongest AI Agents Challenge submissions</title>
-      <link>https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/</link>
-      <description>The recent Google for Startups AI Agents Challenge revealed that the most successful multi-agent systems rely on foundational software engineering patterns rather than just raw model power Winning architectures consistently implemented bidirectional MCP for seamless inter-agent communication, async event buses for parallel execution, strict unified validation for model fallbacks, and tiered routing to minimize expensive inference calls By prioritizing these structural practices over simple linear prompt chains, developers can build more resilient, low-latency, and cost-effective agentic workflows.</description>
-      <pubDate>Thu, 24 Sep 2026 14:00:14 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/4-engineering-patterns-behind-the-strongest-ai-agents-challenge-submissions/</guid>
+      <title>The Anatomy of Harness Engineering: How to Evaluate, Iterate, and Guard AI Coding Agents</title>
+      <link>https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/</link>
+      <description>While end-to-end benchmarks like SWE-bench provide broad performance scores for AI agents, they are often expensive, slow, and lack the root-cause diagnostics needed to explain exactly where an agent's logic broke down To solve this, developers should adopt behavioral evaluations—fast, local, unit-style tests that assert on discrete intermediate actions, such as verifying specific tool calls or file modifications rather than final string equality By building these inexpensive micro-checks alongside macro benchmarks, engineering teams can confidently iterate on system prompts and upgrade models without the risk of regressions.</description>
+      <pubDate>Fri, 25 Sep 2026 14:24:21 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/the-anatomy-of-harness-engineering-how-to-evaluate-iterate-and-guard-ai-coding-agents/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Driving Developer Excellence: Inside the Program Sprints</title>
-      <link>https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/</link>
-      <description>The Gemini Enterprise Developer Experience (DevEx) program conducts ongoing sprint testing of end-to-end developer workflows to identify and rapidly resolve friction points without relying on internal shortcuts This recent sprint focused on optimizing enterprise AI governance, including refining setup prerequisites, securing extension configurations, and clarifying policy enforcement mechanics to ensure a smoother, more reliable deployment Developers can now leverage updated documentation and standardized code samples to improve their experience with Agent Gateway and Semantic Governance configurations.</description>
-      <pubDate>Thu, 24 Sep 2026 14:00:14 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/driving-developer-excellence-inside-the-program-sprints/</guid>
+      <title>Autonomous LLM post-training with Tunix on TPUs</title>
+      <link>https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/</link>
+      <description>The &quot;autofinetune&quot; project introduces an autonomous research loop that fully automates LLM post-training workflows, including Supervised Fine-Tuning (SFT) and Reinforcement Learning via GRPO By defining boundary conditions and evaluation metrics in a single Markdown specification, developers can deploy an AI agent to iteratively edit training scripts, launch experiments, and automatically commit verified hyperparameter optimizations to Git Built on Google’s AI stack—including Tunix, Gemma, and Cloud TPUs—this framework eliminates manual tuning cycles, successfully demonstrating hands-off performance gains in both function calling and math reasoning models.</description>
+      <pubDate>Fri, 25 Sep 2026 14:24:21 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/autonomous-llm-post-training-with-tunix-on-tpus/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Announcing ADK for Kotlin 1.0: Building Production-Ready AI Agents in Kotlin, Android, and Beyond</title>
-      <link>https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/</link>
-      <description>Google has officially released version 1.0 of the Agent Development Kit (ADK) for Kotlin, achieving full feature parity with the Python and Java ADK cores to enable idiomatic, multi-agent AI development Built on Kotlin Multiplatform (KMP), the framework leverages Kotlin Symbol Processing (KSP) for zero-reflection, type-safe function calling, alongside advanced orchestration capabilities like human-in-the-loop workflows and context compaction Additionally, the release introduces a robust suite of Android-first extensions, allowing mobile developers to integrate local models via LiteRT-LM, cloud reasoning through Firebase AI, session persistence using Room, and semantic memory powered by AppSearch.</description>
-      <pubDate>Thu, 24 Sep 2026 14:00:14 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-adk-for-kotlin-10-building-production-ready-ai-agents-in-kotlin-android-and-beyond/</guid>
+      <title>Build zero-trust AI agents that judge intent, not just syntax</title>
+      <link>https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/</link>
+      <description>This blog post explores how to transition AI agents from static, build-time security controls to dynamic runtime governance using the Gemini Enterprise Agent Platform It highlights three primary managed defenses: Model Armor for screening edge prompts, Semantic Governance Policies for evaluating tool intent against business rules, and Agent Anomaly Detection for catching multi-turn exploits By shifting these capabilities to the platform level, security administrators can dynamically enforce policies and neutralize complex attacks without needing to modify or redeploy the agent's underlying code.</description>
+      <pubDate>Fri, 25 Sep 2026 14:24:21 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-zero-trust-ai-agents-that-judge-intent-not-just-syntax/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Bringing Private Processing to Meta AI Glasses</title>
-      <link>https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/</link>
-      <description>We believe glasses are the best form factor for having AI help throughout your day Most of the time, glasses are helping you see well, protecting your eyes and complementing your look, and [...] Read More The post Bringing Private Processing to Meta AI Glasses appeared first on Engineering at Meta.</description>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/09/23/security/private-processing-meta-ai-glasses/</guid>
-      <source>Meta Engineering</source>
+      <title>Agents can now set up your website’s security with Turnstile Spin</title>
+      <link>https://blog.cloudflare.com/turnstile-spin/</link>
+      <description>Misconfiguring Turnstile by skipping backend validation leaves sites exposed to bots Turnstile Spin fixes incomplete setups by using your preferred AI coding agent to wire up server-side verification.</description>
+      <pubDate>Fri, 25 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/turnstile-spin/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Rendering huge pull requests in the GitHub Copilot app</title>
-      <link>https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/</link>
-      <description>How we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of inline review comments The post Rendering huge pull requests in the GitHub Copilot app appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 23 Sep 2026 18:29:49 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/</guid>
+      <title>Introducing enhanced custom event buses in Amazon EventBridge for enterprise-scale event-driven applications</title>
+      <link>https://aws.amazon.com/blogs/aws/introducing-enhanced-custom-event-buses-in-amazon-eventbridge-for-enterprise-scale-event-driven-applications/</link>
+      <description>Amazon EventBridge announces an enhanced custom event bus for organizations scaling event-driven applications across teams and accounts Deploy a single event bus shared across all AWS accounts in your organization, with ordering guarantees, a simplified Subscriber resource, and improved economics at scale.</description>
+      <pubDate>Thu, 24 Sep 2026 20:58:46 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-enhanced-custom-event-buses-in-amazon-eventbridge-for-enterprise-scale-event-driven-applications/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>When chat is the wrong UI</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/</link>
+      <description>What is a developer to do when they need something more tangible than a chat box The post When chat is the wrong UI appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 24 Sep 2026 20:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>How we rebuilt Cloudflare Workers’ module registry for Node.js compatibility</title>
-      <link>https://blog.cloudflare.com/workers-module-registry-nodejs/</link>
-      <description>Workers now enables Node.js compatibility by default, supports applications up to 64 mebibytes, and adds a URL-based module registry with import.meta, lazy compilation, shared code caches, and clearer errors.</description>
-      <pubDate>Wed, 09 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/workers-module-registry-nodejs/</guid>
+      <title>AI-powered fuzzing with the GitHub Security Lab Taskflow Agent</title>
+      <link>https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/</link>
+      <description>In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework The post AI-powered fuzzing with the GitHub Security Lab Taskflow Agent appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 24 Sep 2026 18:26:12 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How Cloudflare addressed a cross-tenant data exposure vulnerability in Containers</title>
+      <link>https://blog.cloudflare.com/containers-cross-tenant-vulnerability/</link>
+      <description>External security researchers at Accomplish identified a vulnerability in Cloudflare Containers that could expose residual disk data from previous workloads We explain how the issue worked, how we investigated it, and the steps we took to remediate it.</description>
+      <pubDate>Thu, 24 Sep 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/containers-cross-tenant-vulnerability/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Automatic Key Exchange: faster, post-quantum secure origin handshakes for 45 billion daily connections (and counting)</title>
-      <link>https://blog.cloudflare.com/automatic-key-exchange-for-origins/</link>
-      <description>Automatic Key Exchange probes TLS 1.3-capable customer origins to learn which key agreement algorithms they support We then lead with the most secure algorithm when connecting to the origin, preferring post-quantum connections wherever the origin supports it.</description>
-      <pubDate>Tue, 08 Sep 2026 13:10:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/automatic-key-exchange-for-origins/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>Introducing context-aware vulnerability discovery and remediation with Cloudflare Managed Defense and OpenAI Daybreak models</title>
-      <link>https://blog.cloudflare.com/vulnerability-discovery-remediation/</link>
-      <description>Use production traffic and security signals to prioritize findings, prepare edge mitigations when safe, and propose code patches By combining WAF data with OpenAI Daybreak models, Vulnerability Discovery and Remediation helps teams identify and patch the most critical threats first.</description>
-      <pubDate>Thu, 03 Sep 2026 21:03:02 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/vulnerability-discovery-remediation/</guid>
+      <title>How we could save petabytes of cache storage with Zstandard and Pingora</title>
+      <link>https://blog.cloudflare.com/cache-transcoding/</link>
+      <description>Could we get more cache space with the same hardware We prototyped compression inside Cloudflare's cache to find out.</description>
+      <pubDate>Tue, 01 Sep 2026 12:59:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/cache-transcoding/</guid>
       <source>Cloudflare Engineering</source>
     </item>
   </channel>
