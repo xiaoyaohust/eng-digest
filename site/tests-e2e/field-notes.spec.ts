@@ -24,9 +24,9 @@ test("Field Notes publishes its first article without a coming-soon state", asyn
   expect(png.readUInt32BE(20)).toBe(627);
 });
 
-test("home and tags link to the Field Note", async ({ page }) => {
+test("home links to Field Notes and tags link to the article", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(`a[href="${articlePath}"]`).first()).toBeVisible();
+  await expect(page.locator('a[href="/field-notes/"]').first()).toBeVisible();
   await expect(page.getByText("Coming soon", { exact: true })).toHaveCount(0);
   await page.goto("/tags/reliability/");
   await expect(page.locator(`a[href="${articlePath}"]`).first()).toBeVisible();
