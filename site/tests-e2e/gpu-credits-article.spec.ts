@@ -7,7 +7,7 @@ test("GPU credits article publishes both solutions and a social preview", async 
   await page.locator(`a[href="${articlePath}"]`).first().click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-    "GPU Credits II: Out-of-Order Grants and Expiring Credits",
+    "GPU Credits: Out-of-Order Grants and Expiring Credits",
   );
   await expect(page.locator('.prose pre[data-language="java"]')).toHaveCount(1);
   await expect(page.locator('.prose pre[data-language="python"]')).toHaveCount(1);

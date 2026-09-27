@@ -1,5 +1,5 @@
 ---
-title: "GPU Credits II: Out-of-Order Grants and Expiring Credits"
+title: "GPU Credits: Out-of-Order Grants and Expiring Credits"
 description: "Replay timestamped credit events with an expiry-ordered heap, then cache balances across a bounded time horizon. Includes tested Java and Python solutions."
 date: 2026-09-27
 difficulty: hard
