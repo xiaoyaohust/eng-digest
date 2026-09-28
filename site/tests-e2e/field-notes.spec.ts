@@ -74,3 +74,27 @@ test("reliability Field Note publishes its recovery diagrams and share image", a
   expect(png.readUInt32BE(16)).toBe(1200);
   expect(png.readUInt32BE(20)).toBe(627);
 });
+
+test("vertical and horizontal scaling Field Note publishes diagrams and a social preview", async ({ page, request }) => {
+  const path = "/field-notes/vertical-vs-horizontal-scaling/";
+  await page.goto("/field-notes/");
+  await page.locator(`.notes-library a[href="${path}"]`).first().click();
+
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Vertical vs Horizontal Scaling: Where the Bottleneck Moves");
+  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
+
+  const image = "https://systemcraftlab.com/social/auto/field-notes/vertical-vs-horizontal-scaling.png";
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+  await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute("content", "1200");
+  await expect(page.locator('meta[property="og:image:height"]')).toHaveAttribute("content", "627");
+
+  const response = await request.get("/social/auto/field-notes/vertical-vs-horizontal-scaling.png");
+  expect(response.ok()).toBe(true);
+  expect(response.headers()["content-type"]).toContain("image/png");
+  const png = await response.body();
+  expect(png.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  expect(png.readUInt32BE(16)).toBe(1200);
+  expect(png.readUInt32BE(20)).toBe(627);
+});
