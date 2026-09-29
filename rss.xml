@@ -6,47 +6,71 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 28 Sep 2026 17:19:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 15:20:27 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>AWS Weekly Roundup: GPT-6 Sol and Luna, Claude Opus 5.5 on Amazon Bedrock, Strands harness, and more (September 28, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/</link>
-      <description>If there’s one theme that defined last week, it’s choice The frontier models keep arriving, and the interesting question is no longer just “how smart is it?” but “which model fits this step, at this cost, at this latency?” That’s exactly what landed on Amazon Bedrock over the past few days: GPT-6 Sol and GPT-6 […]</description>
-      <pubDate>Mon, 28 Sep 2026 16:14:54 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-sol-and-luna-claude-opus-5-5-on-amazon-bedrock-strands-harness-and-more-september-28-2026/</guid>
-      <source>AWS News</source>
+      <title>Developer policy update: Transparency, state policy, and what’s ahead</title>
+      <link>https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/</link>
+      <description>Explore GitHub’s latest transparency data and learn more about policy updates affecting developers and open source The post Developer policy update: Transparency, state policy, and what’s ahead appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 29 Sep 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Next.js applications, powered by Vite: introducing Vinext 1.0</title>
-      <link>https://blog.cloudflare.com/vinext-nextjs-on-vite/</link>
-      <description>Vinext 1.0 graduates from an AI experiment to a production-ready framework, letting developers run Next.js apps on Vite This release brings advanced cache warming, broader compatibility, and an automated testing pipeline.</description>
-      <pubDate>Mon, 28 Sep 2026 14:51:57 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/vinext-nextjs-on-vite/</guid>
+      <title>Evolving our calendar assistant Reclaim to be AI-native without starting over</title>
+      <link>https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native</link>
+      <description>How we redesigned Reclaim for AI and natural-language requests while preserving the scheduling experience people rely on.</description>
+      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native</guid>
+      <source>Dropbox Engineering</source>
+    </item>
+    <item>
+      <title>Using AI to chart a course for our post-quantum migration</title>
+      <link>https://blog.cloudflare.com/ai-driven-cryptography-discovery/</link>
+      <description>We’re building CryptoLabe, an internal AI-powered tool that discovers cryptography across our codebase, surfaces dependencies, and helps us progress toward a full post-quantum migration by 2029 Here’s what we’ve learned so far.</description>
+      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/ai-driven-cryptography-discovery/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Introducing cf: the agentic CLI for the entire Cloudflare API</title>
-      <link>https://blog.cloudflare.com/cloudflare-cf-cli-launch/</link>
-      <description>We are releasing cf, our new command-line tool that mirrors the entire Cloudflare API and supports programmatic TypeScript configuration We are also open-sourcing Forge, our internal SDK generator.</description>
-      <pubDate>Mon, 28 Sep 2026 14:50:37 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-cf-cli-launch/</guid>
+      <title>Building a certificate authority for the whole Internet</title>
+      <link>https://blog.cloudflare.com/cloudflare-certificate-authority/</link>
+      <description>Twelve years after launching Universal SSL, Cloudflare is applying to become a certificate authority By combining an established root, an ACME-first approach, and Merkle Tree Certificates, we are building a post-quantum CA for the open web.</description>
+      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-certificate-authority/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>How fast is the web? Explore billions of real-user measurements with BEACON</title>
-      <link>https://blog.cloudflare.com/how-fast-is-the-web/</link>
-      <description>Cloudflare is open-sourcing the BEACON dataset, making billions of anonymized Real User Monitoring (RUM) performance records publicly available on Google BigQuery Explore real-world Core Web Vitals, soft navigation metrics, and performance breakdowns across browsers and regions.</description>
-      <pubDate>Mon, 28 Sep 2026 14:43:05 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/how-fast-is-the-web/</guid>
+      <title>Adaptive application security for the AI era: how Cloudflare connects code, traffic, and intelligence to stop attacks</title>
+      <link>https://blog.cloudflare.com/ai-era-framework/</link>
+      <description>Cloudflare introduces an adaptive security framework connecting risk discovery, agent governance, runtime protection, and AI-powered response in a continuous learning loop.</description>
+      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/ai-era-framework/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Travel’s AI dilemma at Skift Global Forum</title>
-      <link>https://stripe.com/blog/travels-ai-dilemma-at-skift-global-forum</link>
-      <description>At the “great recalibration”-themed travel conference, Airbnb CEO Brian Chesky called AI “an existential risk” to his company and “literally the best thing to ever happen” to it in the same discussion That sums up many travel leaders’ push-and-pull relationship with AI.</description>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/travels-ai-dilemma-at-skift-global-forum</guid>
+      <title>Helping personal agents shop more intelligently and reliably with Link</title>
+      <link>https://stripe.com/blog/helping-personal-agents-shop-more-intelligently-and-reliably-with-link</link>
+      <description>As agents take on more purchases, agent builders have increasingly asked us to help agents navigate checkout and earn consumer trust Today, we’re sharing three major improvements to support this broader set of needs.</description>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/helping-personal-agents-shop-more-intelligently-and-reliably-with-link</guid>
       <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>How we found 24 Android vulnerabilities using our open source AI security agent</title>
+      <link>https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/</link>
+      <description>A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app The post How we found 24 Android vulnerabilities using our open source AI security agent appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 28 Sep 2026 19:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Highlights from Git 2.56</title>
+      <link>https://github.blog/open-source/git/highlights-from-git-2-56/</link>
+      <description>The open source Git project just released Git 2.56 Here is GitHub's look at some of the most interesting features and changes introduced since last time The post Highlights from Git 2.56 appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 28 Sep 2026 17:23:33 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/git/highlights-from-git-2-56/</guid>
+      <source>GitHub Blog</source>
     </item>
   </channel>
 </rss>
