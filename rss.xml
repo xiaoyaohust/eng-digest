@@ -6,71 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 29 Sep 2026 15:20:27 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 15:35:58 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Developer policy update: Transparency, state policy, and what’s ahead</title>
-      <link>https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/</link>
-      <description>Explore GitHub’s latest transparency data and learn more about policy updates affecting developers and open source The post Developer policy update: Transparency, state policy, and what’s ahead appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 29 Sep 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Evolving our calendar assistant Reclaim to be AI-native without starting over</title>
-      <link>https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native</link>
-      <description>How we redesigned Reclaim for AI and natural-language requests while preserving the scheduling experience people rely on.</description>
-      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/evolving-calendar-assistant-reclaim-to-be-ai-native</guid>
-      <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Using AI to chart a course for our post-quantum migration</title>
-      <link>https://blog.cloudflare.com/ai-driven-cryptography-discovery/</link>
-      <description>We’re building CryptoLabe, an internal AI-powered tool that discovers cryptography across our codebase, surfaces dependencies, and helps us progress toward a full post-quantum migration by 2029 Here’s what we’ve learned so far.</description>
-      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/ai-driven-cryptography-discovery/</guid>
+      <title>Cloudflare Impact reaches $100 million in donations</title>
+      <link>https://blog.cloudflare.com/100-million-donations/</link>
+      <description>This week, Cloudflare's Impact programs will reach $100 million in donated services This milestone means that thousands of entities including journalists, civil society, state and local governments, election management bodies, and public schools are being protected from cyberattacks.</description>
+      <pubDate>Wed, 30 Sep 2026 13:01:55 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/100-million-donations/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Building a certificate authority for the whole Internet</title>
-      <link>https://blog.cloudflare.com/cloudflare-certificate-authority/</link>
-      <description>Twelve years after launching Universal SSL, Cloudflare is applying to become a certificate authority By combining an established root, an ACME-first approach, and Merkle Tree Certificates, we are building a post-quantum CA for the open web.</description>
-      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-certificate-authority/</guid>
+      <title>Cut your AI spend with AI Gateway's Auto Router</title>
+      <link>https://blog.cloudflare.com/auto-router/</link>
+      <description>Cloudflare AI Gateway now features a model router that evaluates request complexity using an edge-deployed classifier to select the optimal model By balancing expected output quality against token costs, organizations can dramatically cut AI spend while maintaining performance.</description>
+      <pubDate>Wed, 30 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/auto-router/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Adaptive application security for the AI era: how Cloudflare connects code, traffic, and intelligence to stop attacks</title>
-      <link>https://blog.cloudflare.com/ai-era-framework/</link>
-      <description>Cloudflare introduces an adaptive security framework connecting risk discovery, agent governance, runtime protection, and AI-powered response in a continuous learning loop.</description>
-      <pubDate>Tue, 29 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/ai-era-framework/</guid>
+      <title>Detect and send production issues straight to your agent</title>
+      <link>https://blog.cloudflare.com/real-time-issue-detection/</link>
+      <description>You can now use built-in error monitoring in Cloudflare Workers to group production failures and send stack traces, logs, traces, and application context directly to a coding agent to investigate further and open a pull request.</description>
+      <pubDate>Wed, 30 Sep 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/real-time-issue-detection/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Helping personal agents shop more intelligently and reliably with Link</title>
-      <link>https://stripe.com/blog/helping-personal-agents-shop-more-intelligently-and-reliably-with-link</link>
-      <description>As agents take on more purchases, agent builders have increasingly asked us to help agents navigate checkout and earn consumer trust Today, we’re sharing three major improvements to support this broader set of needs.</description>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/helping-personal-agents-shop-more-intelligently-and-reliably-with-link</guid>
+      <title>OUSD is now the default stablecoin on Stripe</title>
+      <link>https://stripe.com/blog/ousd-now-live-on-stripe</link>
+      <description>Open USD (OUSD), a stablecoin built for global money movement, is now available across Stripe Businesses can use OUSD to manage funds, make payments, and offer new financial services.</description>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/ousd-now-live-on-stripe</guid>
       <source>Stripe Engineering</source>
     </item>
     <item>
-      <title>How we found 24 Android vulnerabilities using our open source AI security agent</title>
-      <link>https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/</link>
-      <description>A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app The post How we found 24 Android vulnerabilities using our open source AI security agent appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 28 Sep 2026 19:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Highlights from Git 2.56</title>
-      <link>https://github.blog/open-source/git/highlights-from-git-2-56/</link>
-      <description>The open source Git project just released Git 2.56 Here is GitHub's look at some of the most interesting features and changes introduced since last time The post Highlights from Git 2.56 appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 28 Sep 2026 17:23:33 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/git/highlights-from-git-2-56/</guid>
-      <source>GitHub Blog</source>
+      <title>Personalization without user identity</title>
+      <link>https://medium.com/airbnb-engineering/personalization-without-user-identity-8e7891a1d486?source=rss----53c7c27702d5---4</link>
+      <description>By grouping nearby users into buckets and aggregating their collective signals, we can construct rich, location-aware features available immediately for any user whose IP can be geo-located — no login, no prior history, and no persistent user identifier required.The challenge: serving users without individual signalsPersonalization at Airbnb has historically relied heavily on a user’s identifier to link together past searches, bookings, and browsing patterns This pattern holds however much Airbnb does or doesn’t know about the individual user.From any user’s IP address, the system derives a coarse geographic location, groups nearby users into an adaptive proximity bucket, and aggregates their collective signals into features for model scoring, with no persistent user identifier required.We operationalize this insight through a proximity key: a compact group key representing a local geographic cluster of approximately 1,000 users By grouping users geographically and aggregating their collective signals, we can construct features immediately available for any user whose IP can be geo-located, without relying on persistent user identifiers</description>
+      <pubDate>Tue, 29 Sep 2026 17:01:01 GMT</pubDate>
+      <guid isPermaLink="true">https://medium.com/airbnb-engineering/personalization-without-user-identity-8e7891a1d486?source=rss----53c7c27702d5---4</guid>
+      <source>Airbnb Engineering</source>
     </item>
   </channel>
 </rss>
