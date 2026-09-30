@@ -98,3 +98,26 @@ test("stock price alert article renders four diagrams and a LinkedIn preview", a
   expect(png.readUInt32BE(16)).toBe(1200);
   expect(png.readUInt32BE(20)).toBe(627);
 });
+
+test("multiplayer board game article renders architecture diagrams and a LinkedIn preview", async ({ page, request }) => {
+  await page.goto("/system-design/");
+  await page.locator('a[href="/system-design/real-time-multiplayer-board-games/"]').click();
+
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Real-Time Multiplayer Board Game Platform");
+  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
+
+  const image = "https://systemcraftlab.com/social/auto/system-design/real-time-multiplayer-board-games.png";
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+  await expect(page.locator('meta[property="og:image:width"]')).toHaveAttribute("content", "1200");
+  await expect(page.locator('meta[property="og:image:height"]')).toHaveAttribute("content", "627");
+
+  const response = await request.get("/social/auto/system-design/real-time-multiplayer-board-games.png");
+  expect(response.ok()).toBe(true);
+  expect(response.headers()["content-type"]).toContain("image/png");
+  const png = await response.body();
+  expect(png.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  expect(png.readUInt32BE(16)).toBe(1200);
+  expect(png.readUInt32BE(20)).toBe(627);
+});
