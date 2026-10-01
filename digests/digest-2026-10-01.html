@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-10-01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-10-01</p>
+        <div class="stats">
+            <span class="stat-item"><strong>8</strong> articles</span>
+            <span class="stat-item"><strong>4</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/" target="_blank" rel="noopener noreferrer">
+                                Amazon S3 Tables now support all Apache Iceberg V3 data types
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-30 22:10</p>
+                    <p class="article-summary">Amazon S3 Tables now support all data types in the Apache Iceberg V3 spec, along with column default values, deletion vectors, and row lineage Upgrade existing V2 tables or create new V3 tables with built-in compaction, maintenance, and engine compatibility.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/" target="_blank" rel="noopener noreferrer">
+                                Amazon S3 Vectors now supports metadata pre-filtering for higher recall on filtered searches
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-30 20:03</p>
+                    <p class="article-summary">Amazon S3 Vectors now supports metadata pre filtering, delivering up to 5x higher recall on filtered searches Filters evaluate before similarity search so scoped queries return more relevant results Ideal for RAG, agentic apps, and document search.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/" target="_blank" rel="noopener noreferrer">
+                                Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-09-30 17:22</p>
+                    <p class="article-summary">Amazon Aurora PostgreSQL now lets you directly query Apache Iceberg and Parquet data stored in your data lake alongside live operational data—no ETL pipelines required Powered by DuckDB embedded within Aurora, this capability enables single queries that join transactional and historical data using familiar PostgreSQL syntax It supports AWS Glue Data Catalog, S3, and S3 Tables, with optimizations like predicate pushdown and caching for efficient performance.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Cloudflare Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://blog.cloudflare.com/clef-decision-models/" target="_blank" rel="noopener noreferrer">
+                                Introducing Clef: our open-source decision models, and new RL fine-tuning platform
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-01 15:34</p>
+                    <p class="article-summary">We are introducing Clef and Clef-flash, open-source decision models hosted on Workers AI for high-speed classification and agentic workflows Also launching: a new reinforcement learning platform that allows developers to fine-tune decision models using their own data.</p>
+                    
+                    <a href="https://blog.cloudflare.com/clef-decision-models/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/" target="_blank" rel="noopener noreferrer">
+                                One year later: Sovereign AI and the fight for choice
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-01 13:04</p>
+                    <p class="article-summary">AI sovereignty is not a zero-sum game, but many governments now believe it is Cloudflare's answer: more local open-source models, model-agnostic security tools, and a commitment to giving nations genuine choice.</p>
+                    
+                    <a href="https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://blog.cloudflare.com/workers-kv-instant/" target="_blank" rel="noopener noreferrer">
+                                Introducing Workers KV Instant — powered by Quicksilver
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-01 13:00</p>
+                    <p class="article-summary">Workers KV Instant delivers sub-2ms p99 read latencies and 250ms global replication across Cloudflare’s 300+ edge locations KV Instant eliminates cold-read penalties and uses the familiar Workers KV API.</p>
+                    
+                    <a href="https://blog.cloudflare.com/workers-kv-instant/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/" target="_blank" rel="noopener noreferrer">
+                                10 technical talks I’m excited about at GitHub Universe 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-01 15:07</p>
+                    <p class="article-summary">From verifying AI-written code to securing npm dependencies, these are the sessions I’m building my Universe agenda around The post 10 technical talks I’m excited about at GitHub Universe 2026 appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/" target="_blank" rel="noopener noreferrer">
+                                Accelerating Spatio-Temporal Attention for Video Diffusion on TPUs
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-01 15:59</p>
+                    <p class="article-summary">To address the quadratic latency bottleneck of self-attention in high-resolution video diffusion models, developers implemented Sparse VideoGen (SVG) to dynamically route attention heads to highly structured spatial or temporal sparse masks Translating this algorithmic sparsity into physical hardware speedups on TPUs required optimizing the Splash Attention kernel by bypassing empty memory tiles, restricting exact coordinate masking strictly to boundary tiles, and permuting token memory layouts into temporal-major order for contiguous access By aligning these sparse masks with actual hardware tile execution, the combined optimizations significantly reduced wasted matrix operations and achieved up to a 1.69x end-to-end inference speedup for 1440p video generation.</p>
+                    
+                    <a href="https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-10-01 15:59:09</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>

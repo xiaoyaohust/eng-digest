@@ -6,47 +6,71 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 30 Sep 2026 15:35:58 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 15:59:09 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Cloudflare Impact reaches $100 million in donations</title>
-      <link>https://blog.cloudflare.com/100-million-donations/</link>
-      <description>This week, Cloudflare's Impact programs will reach $100 million in donated services This milestone means that thousands of entities including journalists, civil society, state and local governments, election management bodies, and public schools are being protected from cyberattacks.</description>
-      <pubDate>Wed, 30 Sep 2026 13:01:55 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/100-million-donations/</guid>
+      <title>Accelerating Spatio-Temporal Attention for Video Diffusion on TPUs</title>
+      <link>https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/</link>
+      <description>To address the quadratic latency bottleneck of self-attention in high-resolution video diffusion models, developers implemented Sparse VideoGen (SVG) to dynamically route attention heads to highly structured spatial or temporal sparse masks Translating this algorithmic sparsity into physical hardware speedups on TPUs required optimizing the Splash Attention kernel by bypassing empty memory tiles, restricting exact coordinate masking strictly to boundary tiles, and permuting token memory layouts into temporal-major order for contiguous access By aligning these sparse masks with actual hardware tile execution, the combined optimizations significantly reduced wasted matrix operations and achieved up to a 1.69x end-to-end inference speedup for 1440p video generation.</description>
+      <pubDate>Thu, 01 Oct 2026 15:59:07 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing Clef: our open-source decision models, and new RL fine-tuning platform</title>
+      <link>https://blog.cloudflare.com/clef-decision-models/</link>
+      <description>We are introducing Clef and Clef-flash, open-source decision models hosted on Workers AI for high-speed classification and agentic workflows Also launching: a new reinforcement learning platform that allows developers to fine-tune decision models using their own data.</description>
+      <pubDate>Thu, 01 Oct 2026 15:34:02 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/clef-decision-models/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Cut your AI spend with AI Gateway's Auto Router</title>
-      <link>https://blog.cloudflare.com/auto-router/</link>
-      <description>Cloudflare AI Gateway now features a model router that evaluates request complexity using an edge-deployed classifier to select the optimal model By balancing expected output quality against token costs, organizations can dramatically cut AI spend while maintaining performance.</description>
-      <pubDate>Wed, 30 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/auto-router/</guid>
+      <title>10 technical talks I’m excited about at GitHub Universe 2026</title>
+      <link>https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/</link>
+      <description>From verifying AI-written code to securing npm dependencies, these are the sessions I’m building my Universe agenda around The post 10 technical talks I’m excited about at GitHub Universe 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 01 Oct 2026 15:07:16 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>One year later: Sovereign AI and the fight for choice</title>
+      <link>https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/</link>
+      <description>AI sovereignty is not a zero-sum game, but many governments now believe it is Cloudflare's answer: more local open-source models, model-agnostic security tools, and a commitment to giving nations genuine choice.</description>
+      <pubDate>Thu, 01 Oct 2026 13:04:19 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Detect and send production issues straight to your agent</title>
-      <link>https://blog.cloudflare.com/real-time-issue-detection/</link>
-      <description>You can now use built-in error monitoring in Cloudflare Workers to group production failures and send stack traces, logs, traces, and application context directly to a coding agent to investigate further and open a pull request.</description>
-      <pubDate>Wed, 30 Sep 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/real-time-issue-detection/</guid>
+      <title>Introducing Workers KV Instant — powered by Quicksilver</title>
+      <link>https://blog.cloudflare.com/workers-kv-instant/</link>
+      <description>Workers KV Instant delivers sub-2ms p99 read latencies and 250ms global replication across Cloudflare’s 300+ edge locations KV Instant eliminates cold-read penalties and uses the familiar Workers KV API.</description>
+      <pubDate>Thu, 01 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/workers-kv-instant/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>OUSD is now the default stablecoin on Stripe</title>
-      <link>https://stripe.com/blog/ousd-now-live-on-stripe</link>
-      <description>Open USD (OUSD), a stablecoin built for global money movement, is now available across Stripe Businesses can use OUSD to manage funds, make payments, and offer new financial services.</description>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/ousd-now-live-on-stripe</guid>
-      <source>Stripe Engineering</source>
+      <title>Amazon S3 Tables now support all Apache Iceberg V3 data types</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/</link>
+      <description>Amazon S3 Tables now support all data types in the Apache Iceberg V3 spec, along with column default values, deletion vectors, and row lineage Upgrade existing V2 tables or create new V3 tables with built-in compaction, maintenance, and engine compatibility.</description>
+      <pubDate>Wed, 30 Sep 2026 22:10:00 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/</guid>
+      <source>AWS News</source>
     </item>
     <item>
-      <title>Personalization without user identity</title>
-      <link>https://medium.com/airbnb-engineering/personalization-without-user-identity-8e7891a1d486?source=rss----53c7c27702d5---4</link>
-      <description>By grouping nearby users into buckets and aggregating their collective signals, we can construct rich, location-aware features available immediately for any user whose IP can be geo-located — no login, no prior history, and no persistent user identifier required.The challenge: serving users without individual signalsPersonalization at Airbnb has historically relied heavily on a user’s identifier to link together past searches, bookings, and browsing patterns This pattern holds however much Airbnb does or doesn’t know about the individual user.From any user’s IP address, the system derives a coarse geographic location, groups nearby users into an adaptive proximity bucket, and aggregates their collective signals into features for model scoring, with no persistent user identifier required.We operationalize this insight through a proximity key: a compact group key representing a local geographic cluster of approximately 1,000 users By grouping users geographically and aggregating their collective signals, we can construct features immediately available for any user whose IP can be geo-located, without relying on persistent user identifiers</description>
-      <pubDate>Tue, 29 Sep 2026 17:01:01 GMT</pubDate>
-      <guid isPermaLink="true">https://medium.com/airbnb-engineering/personalization-without-user-identity-8e7891a1d486?source=rss----53c7c27702d5---4</guid>
-      <source>Airbnb Engineering</source>
+      <title>Amazon S3 Vectors now supports metadata pre-filtering for higher recall on filtered searches</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/</link>
+      <description>Amazon S3 Vectors now supports metadata pre filtering, delivering up to 5x higher recall on filtered searches Filters evaluate before similarity search so scoped queries return more relevant results Ideal for RAG, agentic apps, and document search.</description>
+      <pubDate>Wed, 30 Sep 2026 20:03:34 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/</link>
+      <description>Amazon Aurora PostgreSQL now lets you directly query Apache Iceberg and Parquet data stored in your data lake alongside live operational data—no ETL pipelines required Powered by DuckDB embedded within Aurora, this capability enables single queries that join transactional and historical data using familiar PostgreSQL syntax It supports AWS Glue Data Catalog, S3, and S3 Tables, with optimizations like predicate pushdown and caching for efficient performance.</description>
+      <pubDate>Wed, 30 Sep 2026 17:22:31 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/</guid>
+      <source>AWS News</source>
     </item>
   </channel>
 </rss>
