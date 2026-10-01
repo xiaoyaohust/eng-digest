@@ -2,6 +2,7 @@
 title: "Vertical vs Horizontal Scaling: Where the Bottleneck Moves"
 description: "A practical guide to adding capacity, finding the real bottleneck, and deciding when one larger node is simpler than many smaller ones."
 date: 2026-09-28
+topic: "System Design Fundamentals"
 tags:
   - scalability
   - vertical-scaling

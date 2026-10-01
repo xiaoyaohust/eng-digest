@@ -2,6 +2,7 @@
 title: "What Scalability Really Means"
 description: "How to reason about growth, bottlenecks, load distribution, partitioning, overload, and the cost of adding capacity."
 date: 2026-09-24
+topic: "System Design Fundamentals"
 tags:
   - scalability
   - system-design

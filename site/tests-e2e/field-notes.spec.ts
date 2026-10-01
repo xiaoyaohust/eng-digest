@@ -98,3 +98,32 @@ test("vertical and horizontal scaling Field Note publishes diagrams and a social
   expect(png.readUInt32BE(16)).toBe(1200);
   expect(png.readUInt32BE(20)).toBe(627);
 });
+
+test("Field Notes uses manually assigned topic clusters and publishes the state article", async ({ page, request }) => {
+  const path = "/field-notes/stateless-vs-stateful/";
+  await page.goto("/field-notes/");
+
+  const cluster = page.locator("#field-topic-system-design-fundamentals-1");
+  await expect(page.getByRole("navigation", { name: "Engineering Field Notes topics" })
+    .getByRole("link", { name: /System Design Fundamentals/ })).toHaveAttribute(
+      "href", "#field-topic-system-design-fundamentals-1",
+    );
+  await expect(cluster.getByRole("heading", { name: "System Design Fundamentals" })).toBeVisible();
+  await expect(cluster.locator(".article-card")).toHaveCount(5);
+  await cluster.locator(`a[href="${path}"]`).click();
+
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Stateless vs Stateful: Where Does the State Live?");
+  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();
+
+  const image = "https://systemcraftlab.com/social/auto/field-notes/stateless-vs-stateful.png";
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+  const response = await request.get("/social/auto/field-notes/stateless-vs-stateful.png");
+  expect(response.ok()).toBe(true);
+  const png = await response.body();
+  expect(png.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  expect(png.readUInt32BE(16)).toBe(1200);
+  expect(png.readUInt32BE(20)).toBe(627);
+});

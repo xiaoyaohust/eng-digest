@@ -69,6 +69,28 @@ practice:                    # optional — enables Interview Question Mode
 Suggested sections: Problem, Key Insight, Approach, Complexity, Implementation, Walkthrough,
 Edge Cases, Alternative Solutions, Interview Follow-ups.
 
+## Adding an Engineering Field Note
+
+Create `site/src/content/field-notes/<slug>.md` with the usual `title`, `description`,
+`date`, and `tags`, plus a **required, manually chosen** `topic`:
+
+```yaml
+---
+title: "Stateless vs Stateful: Where Does the State Live?"
+description: "How to choose the right state boundary for a service."
+date: 2026-09-30
+topic: "System Design Fundamentals"
+tags:
+  - distributed-systems
+featured: true
+draft: false
+---
+```
+
+The Field Notes index groups articles by the exact `topic` string. It does not infer a
+category from title or tags. Use the same spelling and capitalization to join an existing
+group, or enter a new topic to create one. `npm run check` rejects a missing or blank topic.
+
 ## Adding an Interview Experience article
 
 Create `site/src/content/interviews/<slug>.md`:
@@ -106,7 +128,7 @@ from the site base, e.g. in Markdown:
 The current custom domain serves from `/`, so public assets use root-relative paths. Astro
 components use `withBase()` when links must also support a GitHub project-site base.
 
-Every published System Design, Coding, and Interview article automatically receives a
+Every published System Design, Coding, Interview, and Engineering Field Note article automatically receives a
 1200×627 PNG share card during `npm run build`. The file is generated under
 `public/social/auto/` from the title, description, collection, and tags. To override it with
 bespoke art, add `socialImage: { src, alt, width, height }` to frontmatter.

@@ -2,6 +2,7 @@
 title: "The Five Constraints of System Design"
 description: "A practical mental model for latency, throughput, availability, durability, and consistency—and why improving one can make another harder."
 date: 2026-09-23
+topic: "System Design Fundamentals"
 tags:
   - system-design
   - reliability

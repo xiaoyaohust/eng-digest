@@ -2,6 +2,7 @@
 title: "Reliability and Fault Tolerance: The Recovery Path"
 description: "A practical guide to failure boundaries, safe retries, replication, overload control, and proving that recovery actually works."
 date: 2026-09-26
+topic: "System Design Fundamentals"
 tags:
   - reliability
   - fault-tolerance
