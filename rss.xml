@@ -6,70 +6,70 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 01 Oct 2026 15:59:09 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 15:21:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Accelerating Spatio-Temporal Attention for Video Diffusion on TPUs</title>
-      <link>https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/</link>
-      <description>To address the quadratic latency bottleneck of self-attention in high-resolution video diffusion models, developers implemented Sparse VideoGen (SVG) to dynamically route attention heads to highly structured spatial or temporal sparse masks Translating this algorithmic sparsity into physical hardware speedups on TPUs required optimizing the Splash Attention kernel by bypassing empty memory tiles, restricting exact coordinate masking strictly to boundary tiles, and permuting token memory layouts into temporal-major order for contiguous access By aligning these sparse masks with actual hardware tile execution, the combined optimizations significantly reduced wasted matrix operations and achieved up to a 1.69x end-to-end inference speedup for 1440p video generation.</description>
-      <pubDate>Thu, 01 Oct 2026 15:59:07 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/accelerating-spatio-temporal-attention-for-video-diffusion-on-tpus/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Introducing Clef: our open-source decision models, and new RL fine-tuning platform</title>
-      <link>https://blog.cloudflare.com/clef-decision-models/</link>
-      <description>We are introducing Clef and Clef-flash, open-source decision models hosted on Workers AI for high-speed classification and agentic workflows Also launching: a new reinforcement learning platform that allows developers to fine-tune decision models using their own data.</description>
-      <pubDate>Thu, 01 Oct 2026 15:34:02 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/clef-decision-models/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>10 technical talks I’m excited about at GitHub Universe 2026</title>
-      <link>https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/</link>
-      <description>From verifying AI-written code to securing npm dependencies, these are the sessions I’m building my Universe agenda around The post 10 technical talks I’m excited about at GitHub Universe 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 01 Oct 2026 15:07:16 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/</guid>
+      <title>AI is rewriting the developer career ladder. Here’s how to stand out.</title>
+      <link>https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/</link>
+      <description>Learn three ways to get noticed and grow your career as AI reshapes how developers build software The post AI is rewriting the developer career ladder Here’s how to stand out. appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 02 Oct 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>One year later: Sovereign AI and the fight for choice</title>
-      <link>https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/</link>
-      <description>AI sovereignty is not a zero-sum game, but many governments now believe it is Cloudflare's answer: more local open-source models, model-agnostic security tools, and a commitment to giving nations genuine choice.</description>
-      <pubDate>Thu, 01 Oct 2026 13:04:19 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/sovereign-ai-choice-one-year-later/</guid>
+      <title>Introducing Web Search API via AI Gateway</title>
+      <link>https://blog.cloudflare.com/introducing-web-search-api/</link>
+      <description>Cloudflare AI Gateway now supports native web search API integration in partnership with Ceramic.ai, Exa, and Linkup Developers can now inject real-time web context into model inference calls via AI Gateway, REST APIs, or Workers bindings.</description>
+      <pubDate>Fri, 02 Oct 2026 13:28:10 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/introducing-web-search-api/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Introducing Workers KV Instant — powered by Quicksilver</title>
-      <link>https://blog.cloudflare.com/workers-kv-instant/</link>
-      <description>Workers KV Instant delivers sub-2ms p99 read latencies and 250ms global replication across Cloudflare’s 300+ edge locations KV Instant eliminates cold-read penalties and uses the familiar Workers KV API.</description>
-      <pubDate>Thu, 01 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/workers-kv-instant/</guid>
+      <title>8 major updates to Cloudflare Observability</title>
+      <link>https://blog.cloudflare.com/one-observability-platform/</link>
+      <description>Cloudflare is launching eight major updates that bring logs, traces, analytics, alerts, dashboards, querying, and telemetry export into one observability platform, with simpler and more predictable pricing.</description>
+      <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/one-observability-platform/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Amazon S3 Tables now support all Apache Iceberg V3 data types</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/</link>
-      <description>Amazon S3 Tables now support all data types in the Apache Iceberg V3 spec, along with column default values, deletion vectors, and row lineage Upgrade existing V2 tables or create new V3 tables with built-in compaction, maintenance, and engine compatibility.</description>
-      <pubDate>Wed, 30 Sep 2026 22:10:00 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-support-all-apache-iceberg-v3-data-types/</guid>
+      <title>Introducing Cloudflare Traces: follow requests through our entire platform</title>
+      <link>https://blog.cloudflare.com/cloudflare-tracing/</link>
+      <description>Cloudflare Traces shows how a request moves through security rules, transformations, cache, routing, Workers, and your origin, then follows it across services running anywhere in your stack.</description>
+      <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-tracing/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Announcing AWS Well-Architected Agent, an AI-powered intelligence to optimize your cloud environment (preview)</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/</link>
+      <description>Introducing the public preview of AWS Well-Architected Agent, an AI-powered service that analyzes your AWS environment to deliver targeted, contextual recommendations for improving your applications' cost, security, performance, and resilience—with ready-to-implement fixes aligned to your business goals.</description>
+      <pubDate>Thu, 01 Oct 2026 20:04:04 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/</guid>
       <source>AWS News</source>
     </item>
     <item>
-      <title>Amazon S3 Vectors now supports metadata pre-filtering for higher recall on filtered searches</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/</link>
-      <description>Amazon S3 Vectors now supports metadata pre filtering, delivering up to 5x higher recall on filtered searches Filters evaluate before similarity search so scoped queries return more relevant results Ideal for RAG, agentic apps, and document search.</description>
-      <pubDate>Wed, 30 Sep 2026 20:03:34 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-vectors-now-supports-metadata-pre-filtering-for-higher-recall-on-filtered-searches/</guid>
-      <source>AWS News</source>
+      <title>ShopGym: Realistic, reproducible sandboxes for shopping agents</title>
+      <link>https://shopify.engineering/shopgym</link>
+      <description>ShopGym creates realistic online stores and generates shopping tasks based on each store’s products and features Developers can then repeatedly test shopping agents under consistent conditions.</description>
+      <pubDate>Thu, 01 Oct 2026 16:23:24 GMT</pubDate>
+      <guid isPermaLink="true">https://shopify.engineering/shopgym</guid>
+      <source>Shopify Engineering</source>
     </item>
     <item>
-      <title>Amazon Aurora PostgreSQL now supports direct querying of Apache Iceberg and Parquet data in your data lake</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/</link>
-      <description>Amazon Aurora PostgreSQL now lets you directly query Apache Iceberg and Parquet data stored in your data lake alongside live operational data—no ETL pipelines required Powered by DuckDB embedded within Aurora, this capability enables single queries that join transactional and historical data using familiar PostgreSQL syntax It supports AWS Glue Data Catalog, S3, and S3 Tables, with optimizations like predicate pushdown and caching for efficient performance.</description>
-      <pubDate>Wed, 30 Sep 2026 17:22:31 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-aurora-postgresql-now-supports-direct-querying-of-apache-iceberg-and-parquet-data-in-your-data-lake/</guid>
+      <title>Why I tried to kill token billing (and why we kept it)</title>
+      <link>https://stripe.com/blog/where-pricing-is-headed</link>
+      <description>Token billing is useful infrastructure, but usually a bad customer-facing pricing model Your invoice should define the value your product delivers, not break down what it cost you to create it.</description>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/where-pricing-is-headed</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>Celebrating Our Newest AWS Heroes – September 2026</title>
+      <link>https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/</link>
+      <description>Today, we’re excited to introduce the newest members of the AWS Heroes program AWS Heroes are a vibrant, worldwide group of AWS experts who go above and beyond to share knowledge, mentor others, and build thriving communities This month, we welcome […]</description>
+      <pubDate>Wed, 30 Sep 2026 17:04:05 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/</guid>
       <source>AWS News</source>
     </item>
   </channel>
