@@ -6,71 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 02 Oct 2026 15:21:34 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 14:07:47 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>AI is rewriting the developer career ladder. Here’s how to stand out.</title>
-      <link>https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/</link>
-      <description>Learn three ways to get noticed and grow your career as AI reshapes how developers build software The post AI is rewriting the developer career ladder Here’s how to stand out. appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 02 Oct 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Introducing Web Search API via AI Gateway</title>
-      <link>https://blog.cloudflare.com/introducing-web-search-api/</link>
-      <description>Cloudflare AI Gateway now supports native web search API integration in partnership with Ceramic.ai, Exa, and Linkup Developers can now inject real-time web context into model inference calls via AI Gateway, REST APIs, or Workers bindings.</description>
-      <pubDate>Fri, 02 Oct 2026 13:28:10 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/introducing-web-search-api/</guid>
+      <title>Streamline: custom video pipelines with Cloudflare Stream and Workers</title>
+      <link>https://blog.cloudflare.com/streamline/</link>
+      <description>Streamline demonstrates how to build long-running, continuous video processing pipelines by pairing Cloudflare Workers and Durable Objects with a containerized media engine.</description>
+      <pubDate>Fri, 02 Oct 2026 16:13:45 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/streamline/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>8 major updates to Cloudflare Observability</title>
-      <link>https://blog.cloudflare.com/one-observability-platform/</link>
-      <description>Cloudflare is launching eight major updates that bring logs, traces, analytics, alerts, dashboards, querying, and telemetry export into one observability platform, with simpler and more predictable pricing.</description>
+      <title>Updates on our pledge to make Cloudflare features accessible to everyone</title>
+      <link>https://blog.cloudflare.com/enterprise-for-all-update/</link>
+      <description>A year after pledging to eliminate two-tier product access, Cloudflare has expanded Logpush, multi-account governance, and higher platform limits to all accounts Here is an update on our progress, how we dogfood these tools internally, and what is coming next.</description>
       <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/one-observability-platform/</guid>
+      <guid isPermaLink="true">https://blog.cloudflare.com/enterprise-for-all-update/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Introducing Cloudflare Traces: follow requests through our entire platform</title>
-      <link>https://blog.cloudflare.com/cloudflare-tracing/</link>
-      <description>Cloudflare Traces shows how a request moves through security rules, transformations, cache, routing, Workers, and your origin, then follows it across services running anywhere in your stack.</description>
+      <title>Announcing Cloudflare OHTTP Gateway – expanding access to Cloudflare’s privacy-preserving infrastructure</title>
+      <link>https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/</link>
+      <description>We’re announcing the closed beta of a self-serve Cloudflare OHTTP Gateway We’re also renaming our Privacy Gateway to Cloudflare OHTTP Relay to better distinguish the two products.</description>
       <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-tracing/</guid>
+      <guid isPermaLink="true">https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/</guid>
       <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>Announcing AWS Well-Architected Agent, an AI-powered intelligence to optimize your cloud environment (preview)</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/</link>
-      <description>Introducing the public preview of AWS Well-Architected Agent, an AI-powered service that analyzes your AWS environment to deliver targeted, contextual recommendations for improving your applications' cost, security, performance, and resilience—with ready-to-implement fixes aligned to your business goals.</description>
-      <pubDate>Thu, 01 Oct 2026 20:04:04 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>ShopGym: Realistic, reproducible sandboxes for shopping agents</title>
-      <link>https://shopify.engineering/shopgym</link>
-      <description>ShopGym creates realistic online stores and generates shopping tasks based on each store’s products and features Developers can then repeatedly test shopping agents under consistent conditions.</description>
-      <pubDate>Thu, 01 Oct 2026 16:23:24 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/shopgym</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>Why I tried to kill token billing (and why we kept it)</title>
-      <link>https://stripe.com/blog/where-pricing-is-headed</link>
-      <description>Token billing is useful infrastructure, but usually a bad customer-facing pricing model Your invoice should define the value your product delivers, not break down what it cost you to create it.</description>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/where-pricing-is-headed</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Celebrating Our Newest AWS Heroes – September 2026</title>
-      <link>https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/</link>
-      <description>Today, we’re excited to introduce the newest members of the AWS Heroes program AWS Heroes are a vibrant, worldwide group of AWS experts who go above and beyond to share knowledge, mentor others, and build thriving communities This month, we welcome […]</description>
-      <pubDate>Wed, 30 Sep 2026 17:04:05 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/celebrating-our-newest-aws-heroes-september-2026/</guid>
-      <source>AWS News</source>
     </item>
   </channel>
 </rss>
