@@ -109,7 +109,8 @@ test("Field Notes uses manually assigned topic clusters and publishes the state 
       "href", "#field-topic-system-design-fundamentals-1",
     );
   await expect(cluster.getByRole("heading", { name: "System Design Fundamentals" })).toBeVisible();
-  await expect(cluster.locator(".article-card")).toHaveCount(5);
+  await expect(cluster.locator(`a[href="${path}"]`)).toBeVisible();
+  await expect(cluster.locator('a[href="/field-notes/capacity-estimation-from-dau-to-infrastructure/"]')).toBeVisible();
   await cluster.locator(`a[href="${path}"]`).click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Stateless vs Stateful: Where Does the State Live?");
@@ -121,6 +122,27 @@ test("Field Notes uses manually assigned topic clusters and publishes the state 
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
   await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
   const response = await request.get("/social/auto/field-notes/stateless-vs-stateful.png");
+  expect(response.ok()).toBe(true);
+  const png = await response.body();
+  expect(png.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  expect(png.readUInt32BE(16)).toBe(1200);
+  expect(png.readUInt32BE(20)).toBe(627);
+});
+
+test("capacity estimation Field Note publishes its diagram and social preview", async ({ page, request }) => {
+  const path = "/field-notes/capacity-estimation-from-dau-to-infrastructure/";
+  await page.goto("/field-notes/");
+  await page.locator(`.notes-library a[href="${path}"]`).first().click();
+
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    "Capacity Estimation: From DAU to QPS, Storage, and Bandwidth",
+  );
+  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(1, { timeout: 30_000 });
+  await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();
+
+  const image = "https://systemcraftlab.com/social/auto/field-notes/capacity-estimation-from-dau-to-infrastructure.png";
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
+  const response = await request.get("/social/auto/field-notes/capacity-estimation-from-dau-to-infrastructure.png");
   expect(response.ok()).toBe(true);
   const png = await response.body();
   expect(png.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
