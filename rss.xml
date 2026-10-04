@@ -6,30 +6,30 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 03 Oct 2026 14:07:47 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 14:36:38 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Streamline: custom video pipelines with Cloudflare Stream and Workers</title>
-      <link>https://blog.cloudflare.com/streamline/</link>
-      <description>Streamline demonstrates how to build long-running, continuous video processing pipelines by pairing Cloudflare Workers and Durable Objects with a containerized media engine.</description>
-      <pubDate>Fri, 02 Oct 2026 16:13:45 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/streamline/</guid>
+      <title>Follow the thread: a new dashboard to investigate account abuse</title>
+      <link>https://blog.cloudflare.com/account-abuse-protection-dashboard/</link>
+      <description>Fraudsters are increasingly using AI to bypass stateless security checks Cloudflare's new Account Abuse Protection dashboard uses stateful analysis and edge-generated Hashed User IDs to help teams investigate and block account abuse.</description>
+      <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/account-abuse-protection-dashboard/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Updates on our pledge to make Cloudflare features accessible to everyone</title>
-      <link>https://blog.cloudflare.com/enterprise-for-all-update/</link>
-      <description>A year after pledging to eliminate two-tier product access, Cloudflare has expanded Logpush, multi-account governance, and higher platform limits to all accounts Here is an update on our progress, how we dogfood these tools internally, and what is coming next.</description>
+      <title>Protected Quick Tunnels: simple accountless authentication for your next dev project</title>
+      <link>https://blog.cloudflare.com/protected-quick-tunnels/</link>
+      <description>Quick Tunnels now support email authentication Add --allowed-mail to one cloudflared command, and only the addresses or domains you list can reach your local app No Cloudflare account required on either side.</description>
       <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/enterprise-for-all-update/</guid>
+      <guid isPermaLink="true">https://blog.cloudflare.com/protected-quick-tunnels/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Announcing Cloudflare OHTTP Gateway – expanding access to Cloudflare’s privacy-preserving infrastructure</title>
-      <link>https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/</link>
-      <description>We’re announcing the closed beta of a self-serve Cloudflare OHTTP Gateway We’re also renaming our Privacy Gateway to Cloudflare OHTTP Relay to better distinguish the two products.</description>
+      <title>Building for good: How civil society organizations are automating on Cloudflare</title>
+      <link>https://blog.cloudflare.com/civil-society-automation/</link>
+      <description>Some of the world's leading organizations are building the future of non-profit work with Cloudflare.</description>
       <pubDate>Fri, 02 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/</guid>
+      <guid isPermaLink="true">https://blog.cloudflare.com/civil-society-automation/</guid>
       <source>Cloudflare Engineering</source>
     </item>
   </channel>
