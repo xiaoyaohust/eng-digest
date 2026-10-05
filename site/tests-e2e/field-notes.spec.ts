@@ -149,3 +149,25 @@ test("capacity estimation Field Note publishes its diagram and social preview", 
   expect(png.readUInt32BE(16)).toBe(1200);
   expect(png.readUInt32BE(20)).toBe(627);
 });
+
+test("Big-O Field Note publishes its diagrams, sources, and social preview", async ({ page, request }) => {
+  const path = "/field-notes/big-o-in-system-design/";
+  await page.goto("/field-notes/");
+  await page.locator(`.notes-library a[href="${path}"]`).first().click();
+
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("How Much Does Big-O Matter in System Design?");
+  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "Failure changes the cost model" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();
+
+  const image = "https://systemcraftlab.com/social/auto/field-notes/big-o-in-system-design.png";
+  await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+  const response = await request.get("/social/auto/field-notes/big-o-in-system-design.png");
+  expect(response.ok()).toBe(true);
+  const png = await response.body();
+  expect(png.subarray(0, 8)).toEqual(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  expect(png.readUInt32BE(16)).toBe(1200);
+  expect(png.readUInt32BE(20)).toBe(627);
+});
