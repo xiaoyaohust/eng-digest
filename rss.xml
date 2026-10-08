@@ -6,70 +6,46 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 07 Oct 2026 16:04:34 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2026 16:06:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>EmbeddingGemma 2: The Developer Guide</title>
-      <link>https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/</link>
-      <description>EmbeddingGemma 2 is a compact, open-source multimodal embedding model that maps text, code, images, video, and audio into a unified 768-dimensional space Developers can use the sentence-transformers library to selectively load modular modality encoders—ranging from 270M to 740M parameters—to optimize memory usage Additionally, Matryoshka Representation Learning enables dynamic dimension truncation down to 128d, significantly reducing vector database storage requirements while maintaining high retrieval performance.</description>
-      <pubDate>Wed, 07 Oct 2026 16:04:31 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/</guid>
+      <title>Supercharge your development with the Google Developer Knowledge API ecosystem</title>
+      <link>https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/</link>
+      <description>Google is launching the Developer Knowledge API and MCP Server in public preview This new toolset provides a canonical, machine-readable way for AI assistants and agentic platforms to search and retrieve up-to-date documentation across Firebase, Google Cloud, Android, and more By using the official MCP server, developers can connect tools directly to Google’s documentation corpus, ensuring that AI-generated code and guidance are based on authoritative, real-time context.</description>
+      <pubDate>Thu, 08 Oct 2026 16:06:32 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/supercharge-your-development-with-the-google-developer-knowledge-api-ecosystem/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Bring multimodal semantic search to the edge with EmbeddingGemma 2</title>
-      <link>https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/</link>
-      <description>EmbeddingGemma 2 is a new 740M open-weight multimodal model that maps text, images, video, and audio into a unified vector space for privacy-first, on-device retrieval Developers can easily integrate these capabilities cross-platform using MediaPipe Tasks or optimize fine-grained performance across CPU, GPU, and NPU accelerators with LiteRT The model enables ultra-low-latency local solutions like search-as-you-type media retrieval, keyframe video moments finding, and zero-shot intent routing.</description>
-      <pubDate>Wed, 07 Oct 2026 16:04:31 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/google-ai-edge-with-embeddinggemma-2/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Building Git infrastructure for agent-scale development</title>
-      <link>https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/</link>
-      <description>We're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development The post Building Git infrastructure for agent-scale development appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 06 Oct 2026 20:57:56 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>The keys to the Internet change on October 11. Are you ready?</title>
-      <link>https://blog.cloudflare.com/root-ksk-2024-rollover/</link>
-      <description>On October 11, 2026, the DNS root switches to a new key-signing key (KSK-2024) Learn what this means for you, and how RFC 8509 trust anchor sentinels allow you to test whether your DNS resolver is ready for the rollover.</description>
-      <pubDate>Tue, 06 Oct 2026 17:50:11 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/root-ksk-2024-rollover/</guid>
+      <title>Bridging technical depth and usability: The story behind Radar’s redesign</title>
+      <link>https://blog.cloudflare.com/radar-redesign/</link>
+      <description>We redesigned Cloudflare Radar to make real-time global traffic and outage data accessible to a wider audience — including journalists, less technical researchers, and everyday users By introducing an interactive map and standardized components, we simplified navigation while preserving technical depth.</description>
+      <pubDate>Thu, 08 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/radar-redesign/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Beyond synthetic testing: Capturing and replaying real database workloads at Airbnb</title>
-      <link>https://medium.com/airbnb-engineering/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb-cea7ee9b1ab2?source=rss----53c7c27702d5---4</link>
-      <description>How we capture real production database traffic at Airbnb and replay it offline to load-test, plan capacity, and de-risk upgrades.By: Zuofei Wang, Erluo LiIntroductionAt Airbnb, MySQL-compatible databases are a critical backbone of our online database infrastructure: a fleet of hundreds of clusters supporting thousands of use cases at millions of queries per second (QPS) As a result, it couldn’t accurately replay transactions, which made it impossible to verify that the same queries return the same results on the new database.To close these gaps, we set out to build a system for query capture and replay, with three goals:Load testing with real production traffic The query capture and replay system has three components, all built in-house: a Log Mover that collects the query logs, a Log Processor that turns them into replayable, per-cluster datasets, and a Log Replayer that runs captured traffic against target databases.Because captured queries can contain personal data, the pipeline treats them exactly as we treat production data</description>
-      <pubDate>Tue, 06 Oct 2026 17:01:04 GMT</pubDate>
-      <guid isPermaLink="true">https://medium.com/airbnb-engineering/beyond-synthetic-testing-capturing-and-replaying-real-database-workloads-at-airbnb-cea7ee9b1ab2?source=rss----53c7c27702d5---4</guid>
-      <source>Airbnb Engineering</source>
+      <title>Introducing: Spotify Technology. Proven at Spotify, now yours.</title>
+      <link>https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours/</link>
+      <description>The post Introducing: Spotify Technology Proven at Spotify, now yours. appeared first on Spotify Engineering.</description>
+      <pubDate>Thu, 08 Oct 2026 12:30:10 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.atspotify.com/2026/10/introducing-spotify-technology-proven-at-spotify-now-yours/</guid>
+      <source>Spotify Engineering</source>
     </item>
     <item>
-      <title>All the numbers: Amazon Prime Day 2026 powered by AWS</title>
-      <link>https://aws.amazon.com/blogs/aws/all-the-numbers-amazon-prime-day-2026-powered-by-aws/</link>
-      <description>Amazon Prime Day 2026 was exclusively for Prime members and ran June 23–26, 2026 with millions of deals across more than 35 categories As part of our annual tradition of sharing how AWS powered Prime Day (2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, and 2025), I want to share the services and chart-topping metrics […]</description>
-      <pubDate>Tue, 06 Oct 2026 16:09:36 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/all-the-numbers-amazon-prime-day-2026-powered-by-aws/</guid>
-      <source>AWS News</source>
+      <title>Secret protection must scale with software</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/</link>
+      <description>Developers aren’t becoming more careless; they’re being outpaced The tools that let developers create more software should also take on more of the work of protecting it The post Secret protection must scale with software appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 07 Oct 2026 17:45:34 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>NTS: Authenticated Time at Meta</title>
-      <link>https://engineering.fb.com/2026/10/06/production-engineering/nts-authenticated-time-at-meta/</link>
-      <description>Meta’s public time service now speaks NTS (Network Time Security, RFC 8915) at nts.meta.com Packets are authenticated, so a device can verify the time came from us and was not modified on the way The post NTS: Authenticated Time at Meta appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 06 Oct 2026 16:00:06 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/06/production-engineering/nts-authenticated-time-at-meta/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>AI Search is now generally available</title>
-      <link>https://blog.cloudflare.com/ai-search-ga/</link>
-      <description>AI Search is now generally available It embeds image pixels directly for visual search, runs optical character recognition on scanned PDFs, accepts files up to 10 MiB, and works with any chat model Here's what's new and how pricing works.</description>
-      <pubDate>Thu, 01 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/ai-search-ga/</guid>
+      <title>Building an evidence-grounded agentic security operations harness on Cloudflare</title>
+      <link>https://blog.cloudflare.com/agentic-security-operations/</link>
+      <description>Cloudflare Managed Defense uses a team of specialized AI agents built on Workers and global network telemetry to analyze security alerts By separating deterministic evidence collection from model inference, the system delivers grounded recommendations to Managed Defense Analysts.</description>
+      <pubDate>Wed, 07 Oct 2026 16:30:36 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/agentic-security-operations/</guid>
       <source>Cloudflare Engineering</source>
     </item>
   </channel>
