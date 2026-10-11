@@ -204,6 +204,19 @@ img {
   text-transform: uppercase;
 }
 
+.prose .table-scroll {
+  max-width: 100%;
+  margin: 1.7em 0;
+  overflow-x: auto;
+}
+
+.prose .table-scroll table { min-width: 640px; margin: 0; }
+
+.prose .table-scroll:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 2px;
+}
+
 .prose pre {
   position: relative;
   padding: 20px;
