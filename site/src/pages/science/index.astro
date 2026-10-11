@@ -1,0 +1,76 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { published } from "@/lib/content";
+import { withBase } from "@/lib/url";
+import { scienceProjects, scienceProjectIds, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
+
+const articles = await published("science");
+const projects = scienceProjectIds.filter((id) => articles.some((entry) => entry.data.project === id));
+---
+
+<BaseLayout title={SCIENCE_SECTION_NAME} description="Scientific research through Python, public data, numerical experiments, and reproducible measurements.">
+  <section class="observatory-hero">
+    <div class="wrap observatory-grid">
+      <div>
+        <p class="eyebrow">MODULE 05 / CODE, DATA &amp; RESEARCH</p>
+        <h1>Computing<br /><em>for Science</em></h1>
+        <p class="intro">Python pipelines, numerical models, and experiments with public scientific data. Each project records its measurements, uncertainty checks, and unfinished work.</p>
+        <a class="project-jump" href="#projects">Browse research projects ↓</a>
+      </div>
+      <aside class="observation-panel" aria-label="Research approach">
+        <p>OBSERVATION / EXPERIMENT / REVIEW</p>
+        <svg viewBox="0 0 360 190" aria-hidden="true">
+          <ellipse cx="180" cy="95" rx="145" ry="65" fill="none" stroke="#3b607d" stroke-dasharray="5 5" />
+          <ellipse cx="180" cy="95" rx="74" ry="30" fill="none" stroke="#3b607d" />
+          <circle cx="129" cy="77" r="22" fill="#31d5c1" /><circle cx="230" cy="113" r="15" fill="#f4b942" />
+          <path d="M15 170H80L100 183L122 170H218L240 178L262 170H345" fill="none" stroke="#80adcb" stroke-width="2" />
+        </svg>
+        <span>Concept illustration · no measured data</span>
+        <dl><div><dt>PROJECTS</dt><dd>{projects.length}</dd></div><div><dt>ARTICLES</dt><dd>{articles.length}</dd></div><div><dt>STANDARD</dt><dd>EVIDENCE FIRST</dd></div></dl>
+      </aside>
+    </div>
+  </section>
+  <section class="wrap project-library" id="projects">
+    <p class="eyebrow">RESEARCH PROJECTS</p>
+    <h2>Follow the measurements</h2>
+    <div class="project-grid">
+      {projects.map((id) => {
+        const project = scienceProjects[id];
+        const count = articles.filter((entry) => entry.data.project === id).length;
+        return <a class="project-card" href={withBase(`/science/${id}/`)}>
+          <span class="eyebrow">{project.discipline} / ACTIVE STUDY</span>
+          <h3>{project.name} <span>{project.subtitle}</span></h3>
+          <p>{project.description}</p>
+          <footer><span>{count} research {count === 1 ? "note" : "notes"}</span><strong>View project ↗</strong></footer>
+        </a>;
+      })}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .observatory-hero { background: #0b1320; color: #edf5f8; border-bottom: 1px solid #26364a; }
+  .observatory-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 60px; align-items: center; padding-block: 64px; }
+  .eyebrow { color: var(--color-accent); }
+  .observatory-hero .eyebrow { color: #62efdb; }
+  h1 { margin: 18px 0 24px; font-size: clamp(3rem, 6vw, 5.2rem); line-height: 1.04; }
+  h1 em { color: #62efdb; font-style: normal; }
+  .intro { color: #b4c4d4; max-width: 580px; }
+  .project-jump { display: inline-block; margin-top: 18px; color: #62efdb; }
+  .observation-panel { padding: 25px; border: 1px solid #334a60; background: #101e2e; }
+  .observation-panel p, .observation-panel span, dt { font: .65rem var(--font-mono); color: #a5b8ca; }
+  svg { display: block; width: 100%; }
+  dl { display: grid; gap: 13px; margin-bottom: 0; }
+  dl div { display: flex; justify-content: space-between; gap: 12px; }
+  dd { margin: 0; font: .72rem var(--font-mono); color: #edf5f8; }
+  .project-library { padding-block: 45px 70px; }
+  .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 20px; }
+  .project-card { color: var(--color-text); background: var(--color-bg-raised); padding: 30px; border: 1px solid var(--color-border); border-top: 3px solid var(--color-accent); border-radius: 8px; }
+  .project-card:hover { text-decoration: none; border-color: var(--color-accent); }
+  h3 { font-size: 1.65rem; margin-block: 20px 14px; }
+  h3 span { color: var(--color-text-muted); font-size: 1rem; }
+  .project-card p { color: var(--color-text-muted); max-width: 660px; }
+  .project-card footer { display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-between; padding-top: 20px; border-top: 1px solid var(--color-border); font: .75rem var(--font-mono); }
+  .project-card footer strong { color: var(--color-accent); }
+  @media (max-width: 760px) { .observatory-grid { grid-template-columns: 1fr; gap: 30px; padding-block: 40px; } }
+</style>

@@ -1,7 +1,8 @@
 # Content Guide
 
-Everything in this guide only requires writing a Markdown (or MDX) file, committing it, and
-pushing — no code changes, no database migration.
+Adding an article to an existing section or registered science project requires a Markdown
+(or MDX) file, a commit, and a push; no database migration is needed. A new science project
+also needs the small project-registry update described below.
 
 ## Adding a System Design article
 
@@ -91,6 +92,39 @@ The Field Notes index groups articles by the exact `topic` string. It does not i
 category from title or tags. Use the same spelling and capitalization to join an existing
 group, or enter a new topic to create one. `npm run check` rejects a missing or blank topic.
 
+## Adding a Computing for Science research note
+
+Create `site/src/content/science/<slug>.md` and assign its project manually:
+
+```yaml
+---
+title: "Your research article title"
+description: "What was measured, and what remains uncertain."
+date: 2026-10-11
+project: eclipse-atlas
+lang: en
+tags: [astrophysics, scientific-computing]
+socialTitle: "Eclipse Atlas: Your Research Title"
+socialDescription: "An English caption for the generated share artwork."
+draft: false
+---
+```
+
+The article appears at `/science/eclipse-atlas/<slug>/`, inside the **Eclipse Atlas**
+project under **Computing for Science**. It also appears on the homepage, tag pages,
+sitemap, and English search index at `/search/`.
+
+For another project, add its ID to `scienceProjectIds` and its manually chosen name and
+description to `site/src/data/scienceProjects.ts`. The schema rejects unregistered projects.
+The section and project pages show only projects with published notes, so drafts do not
+create empty public project pages. Adding an article to an existing project needs no code change.
+
+`socialTitle` and `socialDescription` control only the PNG artwork, allowing shorter
+English text on the share image while preserving the full article title in metadata.
+Put measured figures under `site/public/science/`
+and give their source, units, uncertainty, and whether they describe observations or simulations.
+Scientific claims should have dated evidence and distinguish measured results from forecasts.
+
 ## Adding an Interview Experience article
 
 Create `site/src/content/interviews/<slug>.md`:
@@ -128,7 +162,7 @@ from the site base, e.g. in Markdown:
 The current custom domain serves from `/`, so public assets use root-relative paths. Astro
 components use `withBase()` when links must also support a GitHub project-site base.
 
-Every published System Design, Coding, Interview, and Engineering Field Note article automatically receives a
+Every published System Design, Coding, Interview, Engineering Field Note, and Computing for Science article automatically receives a
 1200×627 PNG share card during `npm run build`. The file is generated under
 `public/social/auto/` from the title, description, collection, and tags. To override it with
 bespoke art, add `socialImage: { src, alt, width, height }` to frontmatter.

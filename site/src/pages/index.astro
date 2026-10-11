@@ -5,15 +5,17 @@ import DigestCard from "@/components/DigestCard.astro";
 import { withBase } from "@/lib/url";
 import { published, publishedDigests } from "@/lib/content";
 import { learningPaths, learningPathDuration } from "@/data/learningPaths";
+import { scienceArticleHref, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
 
-const [systemDesign, coding, fieldNotes, digests] = await Promise.all([
+const [systemDesign, coding, fieldNotes, digests, science] = await Promise.all([
   published("system-design"),
   published("coding"),
   published("field-notes"),
   publishedDigests(),
+  published("science"),
 ]);
 
-type Kicker = "System Design" | "Coding" | "Engineering Field Notes";
+type Kicker = "System Design" | "Coding" | "Engineering Field Notes" | typeof SCIENCE_SECTION_NAME;
 interface CardEntry {
   href: string;
   kicker: Kicker;
@@ -48,6 +50,10 @@ function toCards(entries: SourceEntry[], base: string, kicker: Kicker): CardEntr
 }
 
 const allArticles = [
+  ...science.map((entry) => ({
+    href: scienceArticleHref(entry), kicker: SCIENCE_SECTION_NAME,
+    ...entry.data,
+  })),
   ...toCards(systemDesign, "/system-design", "System Design"),
   ...toCards(coding, "/coding", "Coding"),
   ...toCards(fieldNotes, "/field-notes", "Engineering Field Notes"),
@@ -59,6 +65,15 @@ const latestArticles = allArticles.slice(0, 6);
 const latestDigest = digests[0];
 
 const sections = [
+  {
+    code: "05",
+    title: SCIENCE_SECTION_NAME,
+    href: "/science/",
+    description: "Python pipelines, numerical experiments, and scientific measurements from public data.",
+    meta: `${science.length} entries`,
+    label: "RESEARCH / EVIDENCE",
+    action: "Explore ↗",
+  },
   {
     code: "01",
     title: "System Design",
@@ -96,6 +111,7 @@ const sections = [
     action: "Explore ↗",
   },
 ];
+sections.sort((a, b) => a.code.localeCompare(b.code));
 ---
 
 <BaseLayout
@@ -118,7 +134,7 @@ const sections = [
         <div class="hero-metrics" aria-label="Knowledge base statistics">
           <div><strong>{allArticles.length}</strong><span>CORE NOTES</span></div>
           <div><strong>{digests.length}</strong><span>DAILY DIGESTS</span></div>
-          <div><strong>04</strong><span>KNOWLEDGE TRACKS</span></div>
+          <div><strong>{String(sections.length).padStart(2, "0")}</strong><span>KNOWLEDGE TRACKS</span></div>
         </div>
       </div>
 
@@ -144,7 +160,7 @@ const sections = [
 
   <section class="wrap home-section tracks-section">
     <header class="home-section-header">
-      <div><span class="eyebrow">CURRICULUM / 04 TRACKS</span><h2>Choose your learning vector</h2></div>
+      <div><span class="eyebrow">CURRICULUM / {String(sections.length).padStart(2, "0")} TRACKS</span><h2>Choose your learning vector</h2></div>
       <p>Move through a track or cross-link ideas as your interview loop demands.</p>
     </header>
     <div class="track-grid">
@@ -182,7 +198,7 @@ const sections = [
       <div class="wrap home-section">
         <header class="home-section-header inverse">
           <div><span class="eyebrow">EDITOR'S ROUTE / START HERE</span><h2>High-signal reading</h2></div>
-          <p>Foundational pieces selected for strong interview leverage.</p>
+          <p>Selected articles on engineering decisions and scientific measurement.</p>
         </header>
         <div class="card-grid featured-grid">
           {featuredCards.map((card, index) => (
@@ -375,7 +391,7 @@ const sections = [
   .home-section-header p { max-width: 400px; margin: 0; color: var(--color-text-muted); font-size: 0.92rem; }
   .home-section-header > a { color: var(--color-text-muted); font-family: var(--font-mono); font-size: 0.7rem; }
 
-  .track-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--color-border); border-left: 1px solid var(--color-border); }
+  .track-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--color-border); border-left: 1px solid var(--color-border); }
   .track-card { position: relative; min-height: 330px; padding: 22px; border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background: color-mix(in srgb, var(--color-bg-raised) 82%, transparent); color: var(--color-text); transition: background 180ms ease, transform 180ms ease; }
   .track-card:hover { z-index: 1; background: var(--color-bg-raised); box-shadow: var(--shadow-card-hover); text-decoration: none; transform: translateY(-4px); }
   .track-top,

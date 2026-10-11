@@ -12,6 +12,7 @@ const year = new Date().getFullYear();
     </div>
     <nav class="footer-links">
       <a href={withBase("/field-notes/")}>Engineering Field Notes</a>
+      <a href={withBase("/science/")}>Computing for Science</a>
       <a href={withBase("/architecture-lab/")}>Decision Lab</a>
       <a href={withBase("/eng-digest/")}>Engineering Digest</a>
       <a href={withBase("/rss.xml")}>RSS</a>
@@ -44,6 +45,7 @@ const year = new Date().getFullYear();
 
   .footer-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
   }
 

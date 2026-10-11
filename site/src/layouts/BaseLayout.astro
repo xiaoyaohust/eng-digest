@@ -5,6 +5,7 @@ import { withBase } from "@/lib/url";
 import "@/styles/global.css";
 
 interface Props {
+  lang?: string;
   title: string;
   description: string;
   image?: string;
@@ -20,6 +21,7 @@ interface Props {
 }
 
 const {
+  lang = "en",
   title,
   description,
   image,
@@ -56,7 +58,7 @@ const schemaJson = JSON.stringify(schemas).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,6 +69,7 @@ const schemaJson = JSON.stringify(schemas).replace(/</g, "\\u003c");
     <link rel="alternate" type="application/rss+xml" title="Eng Knowledge RSS" href={rssURL} />
 
     <meta property="og:type" content={type} />
+    <meta property="og:locale" content={lang === "zh-CN" ? "zh_CN" : "en_US"} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />

@@ -28,6 +28,9 @@ interface SocialImage {
 }
 
 interface Props {
+  lang?: string;
+  breadcrumbParents?: { title: string; href: string }[];
+  shareHashtags?: string[];
   title: string;
   description: string;
   kicker?: string;
@@ -47,6 +50,9 @@ interface Props {
 }
 
 const {
+  lang = "en",
+  breadcrumbParents,
+  shareHashtags,
   title,
   description,
   kicker,
@@ -67,6 +73,7 @@ const {
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 const imageURL = socialImage ? new URL(socialImage.src, Astro.site).toString() : undefined;
 const sectionName = kicker ?? "Knowledge Base";
+const parents = breadcrumbParents ?? [{ title: sectionName, href: sectionHref }];
 const structuredData = [
   {
     "@context": "https://schema.org",
@@ -81,6 +88,7 @@ const structuredData = [
     mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     ...(imageURL ? { image: [imageURL] } : {}),
     articleSection: sectionName,
+    inLanguage: lang,
     keywords: tags.join(", "),
     author: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
     publisher: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
@@ -90,14 +98,15 @@ const structuredData = [
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: new URL(withBase("/"), Astro.site).toString() },
-      { "@type": "ListItem", position: 2, name: sectionName, item: new URL(withBase(sectionHref), Astro.site).toString() },
-      { "@type": "ListItem", position: 3, name: title, item: canonical },
+      ...parents.map((parent, index) => ({ "@type": "ListItem", position: index + 2, name: parent.title, item: new URL(withBase(parent.href), Astro.site).toString() })),
+      { "@type": "ListItem", position: parents.length + 2, name: title, item: canonical },
     ],
   },
 ];
 ---
 
 <BaseLayout
+  lang={lang}
   title={title}
   description={description}
   image={socialImage?.src}
@@ -115,6 +124,12 @@ const structuredData = [
     <header class="article-hero">
       <div class="wrap article-header">
         <a class="back-link" href={withBase("/")}>&larr; KNOWLEDGE BASE</a>
+        {breadcrumbParents && <nav class="article-breadcrumbs" aria-label="Breadcrumb">
+          {breadcrumbParents.map((parent, index) => <span class="breadcrumb-item">
+            {index > 0 && <span aria-hidden="true">/</span>}
+            <a href={withBase(parent.href)}>{parent.title}</a>
+          </span>)}
+        </nav>}
         {kicker && <p class="eyebrow">MODULE / {kicker}</p>}
         <h1>{title}</h1>
         <p class="article-description">{description}</p>
@@ -136,7 +151,7 @@ const structuredData = [
     </div>
 
     <footer class="wrap article-footer">
-        <ArticleActions title={title} description={description} canonical={canonical} relatedPath={relatedPath} />
+        <ArticleActions title={title} description={description} canonical={canonical} relatedPath={relatedPath} shareHashtags={shareHashtags} />
         {(prev || next) && (
           <nav class="prev-next" aria-label="Article navigation">
             <a class:list={["prev-next-link", { disabled: !prev }]} href={prev ? withBase(prev.href) : undefined}>
@@ -174,6 +189,9 @@ const structuredData = [
 </BaseLayout>
 
 <style>
+  .article-breadcrumbs { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; font: .72rem var(--font-mono); }
+  .breadcrumb-item { display: inline-flex; gap: 12px; }
+  .breadcrumb-item > span { color: var(--color-text-muted); }
   .article-header {
     max-width: 980px;
     margin: 0 auto;

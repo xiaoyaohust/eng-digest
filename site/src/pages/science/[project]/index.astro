@@ -1,0 +1,41 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
+import { published } from "@/lib/content";
+import { withBase } from "@/lib/url";
+import { scienceProjectIds, scienceProjects, scienceArticleHref, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
+
+export async function getStaticPaths() {
+  const articles = await published("science");
+  return scienceProjectIds.flatMap((id) => {
+    const entries = articles.filter((entry) => entry.data.project === id);
+    return entries.length ? [{ params: { project: id }, props: { project: scienceProjects[id], entries } }] : [];
+  });
+}
+const { project, entries } = Astro.props;
+---
+
+<BaseLayout title={`${project.name} · ${SCIENCE_SECTION_NAME}`} description={project.description}>
+  <section class="wrap project-page">
+    <a href={withBase("/science/")}>← {SCIENCE_SECTION_NAME}</a>
+    <p class="eyebrow">{project.discipline} / RESEARCH PROJECT</p>
+    <h1>{project.name}</h1>
+    <p class="subtitle">{project.subtitle}</p>
+    <p class="intro">{project.description}</p>
+    <p class="project-status">WORK IN PROGRESS · Measurements and limitations are dated in each article.</p>
+    <h2>Research notes</h2>
+    <div class="card-grid">
+      {entries.map((entry) => <ArticleCard href={scienceArticleHref(entry)} kicker={project.name} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .project-page { padding-block: 50px 70px; }
+  .eyebrow { margin-top: 36px; }
+  h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); margin-bottom: 8px; }
+  .subtitle { margin-top: 0; color: var(--color-accent); }
+  .intro { max-width: 720px; color: var(--color-text-muted); }
+  .project-status { padding: 16px; border: 1px solid var(--color-border); font: .72rem var(--font-mono); line-height: 1.8; }
+  h2 { margin-top: 44px; }
+</style>

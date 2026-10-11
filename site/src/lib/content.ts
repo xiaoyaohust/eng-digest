@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
+import { scienceArticleHref, SCIENCE_SECTION_NAME } from "../data/scienceProjects";
 
 /** Digests per page of the daily archive.
  *
@@ -10,7 +11,7 @@ export const DIGEST_PAGE_SIZE = 24;
 
 /** Non-draft entries, newest first. Draft filtering happens once, here,
  * so no page template has to remember to do it itself. */
-export async function published<C extends "system-design" | "coding" | "interviews" | "field-notes">(
+export async function published<C extends "system-design" | "coding" | "interviews" | "field-notes" | "science">(
   collection: C
 ): Promise<CollectionEntry<C>[]> {
   const entries = await getCollection(collection, ({ data }) => !data.draft);
@@ -37,14 +38,22 @@ interface RelatedCandidate {
 
 /** Flattened, cross-collection candidate list for "Related" lookups. */
 export async function allCandidates(): Promise<RelatedCandidate[]> {
-  const [systemDesign, coding, interviews, fieldNotes] = await Promise.all([
+  const [systemDesign, coding, interviews, fieldNotes, science] = await Promise.all([
     published("system-design"),
     published("coding"),
     published("interviews"),
     published("field-notes"),
+    published("science"),
   ]);
 
   return [
+    ...science.map((e) => ({
+      slug: e.id,
+      href: scienceArticleHref(e),
+      title: e.data.title,
+      kicker: SCIENCE_SECTION_NAME,
+      tags: e.data.tags,
+    })),
     ...systemDesign.map((e) => ({
       slug: e.id,
       href: `/system-design/${e.id}/`,

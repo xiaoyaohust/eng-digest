@@ -6,11 +6,12 @@ interface Props {
   description: string;
   canonical: string;
   relatedPath?: { title: string; href: string };
+  shareHashtags?: string[];
 }
 
-const { title, description, canonical, relatedPath } = Astro.props;
+const { title, description, canonical, relatedPath, shareHashtags = ["SystemDesign", "Engineering", "TechInterview"] } = Astro.props;
 const linkedInURL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonical)}`;
-const linkedInSummary = `${title}\n\n${description}\n\n${canonical}\n\n#SystemDesign #Engineering #TechInterview`;
+const linkedInSummary = `${title}\n\n${description}\n\n${canonical}\n\n${shareHashtags.map((tag) => `#${tag}`).join(" ")}`;
 ---
 
 <section class="article-actions" aria-labelledby="share-heading" data-article-actions data-summary={linkedInSummary}>

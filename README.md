@@ -165,7 +165,7 @@ eng-digest/
 ├── rss.xml, index.html      # Legacy digest-only artifacts, kept for backward compatibility
 ├── site/                    # Astro website
 │   ├── src/
-│   │   ├── content/         # system-design/, coding/, interviews/ (authored)
+│   │   ├── content/         # Authored sections, including field-notes/ and science/
 │   │   │                    # generated-digests/ (gitignored, built from ../digests)
 │   │   ├── pages/           # routes: /, /system-design/, /coding/, /field-notes/,
 │   │   │                    # /eng-digest/, /tags/, /search/, /about/
@@ -196,6 +196,13 @@ git push
 That's it — no database migration, no server deployment. See
 [docs/CONTENT_GUIDE.md](docs/CONTENT_GUIDE.md) for frontmatter fields, Mermaid diagrams,
 images, tags, and drafts.
+
+**Computing for Science** (`/science/`) connects programming and numerical methods with
+scientific research. Its first project, **Eclipse Atlas**, measures stellar eclipse timing
+with Python and public TESS observations. Research notes live in `site/src/content/science/`; their required
+`project` field selects a manually registered project in `site/src/data/scienceProjects.ts`.
+The content guide includes an example and instructions for adding projects. Published
+notes are in English and appear in the site-wide search at `/search/`.
 
 ## Feature Comparison: Web vs CLI (Engineering Digest)
 

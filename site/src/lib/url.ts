@@ -32,6 +32,8 @@ export function slugifyTag(tag: string): string {
 
 /** Rough reading time estimate from raw Markdown/MDX body text. */
 export function readingTime(body: string): number {
-  const words = body.trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.round(words / 200));
+  const cjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/gu;
+  const characters = body.match(cjk)?.length ?? 0;
+  const words = body.replace(cjk, " ").trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200 + characters / 400));
 }
