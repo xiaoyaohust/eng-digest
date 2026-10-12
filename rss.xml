@@ -6,23 +6,39 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 10 Oct 2026 15:01:56 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 18:33:55 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash</title>
-      <link>https://blog.cloudflare.com/clef-faster-cheaper-multimodal/</link>
-      <description>We are expanding the Clef decision model family with Clef-omni, natively processing audio, video, images, and text in a single pipeline We’ve also lowered Clef-flash pricing and boosted Clef inference speeds by up to 2.0x.</description>
-      <pubDate>Fri, 09 Oct 2026 18:27:34 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/clef-faster-cheaper-multimodal/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>GitHub Copilot app for Beginners: How to teach Copilot about your codebase</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/</link>
+      <description>Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright The post GitHub Copilot app for Beginners: How to teach Copilot about your codebase appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 12 Oct 2026 17:43:59 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Hack the World: Why hackathons are still the best place to learn to build</title>
-      <link>https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/</link>
-      <description>The barriers to building software have collapsed Hackathons are a great place to start learning The post Hack the World: Why hackathons are still the best place to learn to build appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 09 Oct 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/</guid>
-      <source>GitHub Blog</source>
+      <title>Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest</title>
+      <link>https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/</link>
+      <description>Meta has begun deploying Media over QUIC (MoQ), an emerging open protocol for real-time video streaming at scale MoQ will help simplify our protocol stack for live streaming video and enhance overall user experience for live video The post Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 12 Oct 2026 16:01:32 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations</title>
+      <link>https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/</link>
+      <description>At Meta, we’ve built a system that enhances ads recommendations by leveraging idle inference capacity in our fleet Two elasticity levers in the system allow ads recommendation work to expand across opportunistic capacity, without compromising baseline performance The post Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 12 Oct 2026 16:00:50 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Filter, reshape, and redact logs before export with Transformers</title>
+      <link>https://blog.cloudflare.com/transformers-on-logpush/</link>
+      <description>Logpush now supports Transformers, allowing teams to filter, redact, and reshape log streams using SQL before export Powered by Apache DataFusion and Apache Arrow, Transformers apply those changes directly to log data before it reaches the destination.</description>
+      <pubDate>Mon, 12 Oct 2026 14:44:59 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/transformers-on-logpush/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
