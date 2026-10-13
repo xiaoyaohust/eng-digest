@@ -6,39 +6,79 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 12 Oct 2026 18:33:55 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 16:42:24 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>GitHub Copilot app for Beginners: How to teach Copilot about your codebase</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/</link>
-      <description>Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright The post GitHub Copilot app for Beginners: How to teach Copilot about your codebase appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 12 Oct 2026 17:43:59 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/</guid>
-      <source>GitHub Blog</source>
+      <title>Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon</title>
+      <link>https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/</link>
+      <description>How our engineering team ran Gemini 4 Argon unattended overnight with .agents/skills and /goal mode to cut in-memory session prep overhead by 40% in long sessions and speed up cold imports by 21% in Google's open-source Python Agent Development Kit (ADK).</description>
+      <pubDate>Tue, 13 Oct 2026 16:42:21 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/</guid>
+      <source>Google Developers</source>
     </item>
     <item>
-      <title>Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest</title>
-      <link>https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/</link>
-      <description>Meta has begun deploying Media over QUIC (MoQ), an emerging open protocol for real-time video streaming at scale MoQ will help simplify our protocol stack for live streaming video and enhance overall user experience for live video The post Shipping Media Over QUIC at Meta Scale for Instagram Live Ingest appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 12 Oct 2026 16:01:32 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/12/video-engineering/shipping-media-over-quic-at-meta-scale-for-instagram-live-ingest/</guid>
-      <source>Meta Engineering</source>
+      <title>Gemini 4 Argon for Robotics</title>
+      <link>https://developers.googleblog.com/gemini-4-argon-for-robotics/</link>
+      <description>Gemini 4 Argon is a general-purpose physical reasoning model designed to enhance workflows across the robotics stack with advanced capabilities in physical understanding, code generation, and visual-semantic reasoning Developers can access and integrate Argon across Google's developer platforms—including Google AI Studio, the Gemini API, and Google Antigravity—to build and test sophisticated robotic applications By leveraging simulation tools like MuJoCo and code-as-policies, engineers can seamlessly transition from real-world data or sketches to physically verified robot control and self-improvement workflows.</description>
+      <pubDate>Tue, 13 Oct 2026 16:42:21 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/gemini-4-argon-for-robotics/</guid>
+      <source>Google Developers</source>
     </item>
     <item>
-      <title>Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations</title>
-      <link>https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/</link>
-      <description>At Meta, we’ve built a system that enhances ads recommendations by leveraging idle inference capacity in our fleet Two elasticity levers in the system allow ads recommendation work to expand across opportunistic capacity, without compromising baseline performance The post Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 12 Oct 2026 16:00:50 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Filter, reshape, and redact logs before export with Transformers</title>
-      <link>https://blog.cloudflare.com/transformers-on-logpush/</link>
-      <description>Logpush now supports Transformers, allowing teams to filter, redact, and reshape log streams using SQL before export Powered by Apache DataFusion and Apache Arrow, Transformers apply those changes directly to log data before it reaches the destination.</description>
-      <pubDate>Mon, 12 Oct 2026 14:44:59 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/transformers-on-logpush/</guid>
+      <title>Under the hood, off the hot path: how D1 scales to millions of databases</title>
+      <link>https://blog.cloudflare.com/d1-control-plane/</link>
+      <description>A deep dive into how D1 architected its control plane to scale and manage millions of databases, while keeping data plane query operations at the edge We share guiding principles on how to build on the Developer Platform effectively.</description>
+      <pubDate>Tue, 13 Oct 2026 16:20:18 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/d1-control-plane/</guid>
       <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Meta’s Generative Ads Model (GEM): Scaling the Central Model and Compute Engine for Frontier Ads AI</title>
+      <link>https://engineering.fb.com/2026/10/13/ml-applications/generative-ads-model-gem-scaling-frontier-ads-ai/</link>
+      <description>Last year, we introduced GEM, the industry’s largest recommendation system (RecSys) foundation model GEM established Meta’s first LLM-inspired paradigm for ads recommendation, driving major performance gains The post Meta’s Generative Ads Model (GEM): Scaling the Central Model and Compute Engine for Frontier Ads AI appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 13 Oct 2026 16:01:00 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/13/ml-applications/generative-ads-model-gem-scaling-frontier-ads-ai/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: Prime Day 2026 by the numbers, Claude Haiku 5.5, Amazon Nova 2.5 Sonic, and more (October 13, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-prime-day-2026-by-the-numbers-claude-haiku-5-5-amazon-nova-2-5-sonic-and-more-october-13-2026/</link>
+      <description>Some numbers are hard to picture until you sit with them for a moment Last week we published the Prime Day 2026 metrics, and the one that stuck with me is 2.3 quadrillion: the daily requests Amazon ElastiCache peaked at during the event Prime Day ran back in June, so this post always lands as […]</description>
+      <pubDate>Tue, 13 Oct 2026 15:59:06 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-prime-day-2026-by-the-numbers-claude-haiku-5-5-amazon-nova-2-5-sonic-and-more-october-13-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Rewinding the exponential: How we keep hardware usage down</title>
+      <link>https://blog.cloudflare.com/rewinding-the-exponential/</link>
+      <description>Our strategies to optimize our data pipeline throughput without compromising data quality.</description>
+      <pubDate>Tue, 13 Oct 2026 15:51:41 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/rewinding-the-exponential/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>The “alien” economics of AI monetization</title>
+      <link>https://stripe.com/blog/economics-of-ai-monetization</link>
+      <description>As usage, costs, and customer expectations change, AI companies are moving beyond traditional SaaS pricing Leaders at Monetize 2026 shared how they’re combining subscriptions with usage-based billing, building spend controls into products, adapting packaging and value metrics, and making pricing readable for both human and AI buyers.</description>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/economics-of-ai-monetization</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>Announcing AWS Lambda Web Functions</title>
+      <link>https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/</link>
+      <description>AWS Lambda Web Functions is a serverless compute primitive that runs your HTTP framework natively, delivering fast, consistent responses through multi-concurrent execution and automated global distribution.</description>
+      <pubDate>Mon, 12 Oct 2026 22:34:47 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>OCP Summit 2026: Powering AI with Open Innovations in Scale-Up, Scale-Out, and Scale-Across Networks</title>
+      <link>https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/</link>
+      <description>At the 2026 Open Compute Project Global Summit, Meta is sharing the next generation of open networking infrastructure, including: Our first liquid-cooled network rack (IcePack), and 102.4T switch platform (IceCube) Flattened Planar Fabric (FPF), a multiplane backend scale-out fabric that fundamentally changes how GPUs connect to the network MetaRoCE, our open-source AI transport protocol The post OCP Summit 2026: Powering AI with Open Innovations in Scale-Up, Scale-Out, and Scale-Across Networks appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 12 Oct 2026 21:19:18 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/</guid>
+      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
