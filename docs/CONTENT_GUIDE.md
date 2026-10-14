@@ -92,6 +92,10 @@ The Field Notes index groups articles by the exact `topic` string. It does not i
 category from title or tags. Use the same spelling and capitalization to join an existing
 group, or enter a new topic to create one. `npm run check` rejects a missing or blank topic.
 
+Current series include `System Design Fundamentals` and `Computer Networking Fundamentals`.
+For the networking series, set `topic: "Computer Networking Fundamentals"`; this creates
+or joins its own group without changing the existing system-design articles.
+
 ## Adding a Computing for Science research note
 
 Create `site/src/content/science/<slug>.md` and assign its project manually:

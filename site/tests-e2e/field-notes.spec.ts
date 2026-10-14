@@ -103,10 +103,13 @@ test("Field Notes uses manually assigned topic clusters and publishes the state 
   const path = "/field-notes/stateless-vs-stateful/";
   await page.goto("/field-notes/");
 
-  const cluster = page.locator("#field-topic-system-design-fundamentals-1");
+  const cluster = page.locator(".field-topic-cluster").filter({
+    has: page.getByRole("heading", { name: "System Design Fundamentals", exact: true }),
+  });
+  const clusterId = await cluster.getAttribute("id");
   await expect(page.getByRole("navigation", { name: "Engineering Field Notes topics" })
     .getByRole("link", { name: /System Design Fundamentals/ })).toHaveAttribute(
-      "href", "#field-topic-system-design-fundamentals-1",
+      "href", `#${clusterId}`,
     );
   await expect(cluster.getByRole("heading", { name: "System Design Fundamentals" })).toBeVisible();
   await expect(cluster.locator(`a[href="${path}"]`)).toBeVisible();
