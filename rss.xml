@@ -6,79 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 13 Oct 2026 16:42:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 14:18:46 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Optimizing a 200,000-line Python codebase overnight with Gemini 4 Argon</title>
-      <link>https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/</link>
-      <description>How our engineering team ran Gemini 4 Argon unattended overnight with .agents/skills and /goal mode to cut in-memory session prep overhead by 40% in long sessions and speed up cold imports by 21% in Google's open-source Python Agent Development Kit (ADK).</description>
-      <pubDate>Tue, 13 Oct 2026 16:42:21 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/optimizing-a-200000-line-python-codebase-overnight-with-gemini-4-argon/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Gemini 4 Argon for Robotics</title>
-      <link>https://developers.googleblog.com/gemini-4-argon-for-robotics/</link>
-      <description>Gemini 4 Argon is a general-purpose physical reasoning model designed to enhance workflows across the robotics stack with advanced capabilities in physical understanding, code generation, and visual-semantic reasoning Developers can access and integrate Argon across Google's developer platforms—including Google AI Studio, the Gemini API, and Google Antigravity—to build and test sophisticated robotic applications By leveraging simulation tools like MuJoCo and code-as-policies, engineers can seamlessly transition from real-world data or sketches to physically verified robot control and self-improvement workflows.</description>
-      <pubDate>Tue, 13 Oct 2026 16:42:21 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/gemini-4-argon-for-robotics/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Under the hood, off the hot path: how D1 scales to millions of databases</title>
-      <link>https://blog.cloudflare.com/d1-control-plane/</link>
-      <description>A deep dive into how D1 architected its control plane to scale and manage millions of databases, while keeping data plane query operations at the edge We share guiding principles on how to build on the Developer Platform effectively.</description>
-      <pubDate>Tue, 13 Oct 2026 16:20:18 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/d1-control-plane/</guid>
+      <title>Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug</title>
+      <link>https://blog.cloudflare.com/hyperdrive-mysql/</link>
+      <description>While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available.</description>
+      <pubDate>Wed, 14 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/hyperdrive-mysql/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Meta’s Generative Ads Model (GEM): Scaling the Central Model and Compute Engine for Frontier Ads AI</title>
-      <link>https://engineering.fb.com/2026/10/13/ml-applications/generative-ads-model-gem-scaling-frontier-ads-ai/</link>
-      <description>Last year, we introduced GEM, the industry’s largest recommendation system (RecSys) foundation model GEM established Meta’s first LLM-inspired paradigm for ads recommendation, driving major performance gains The post Meta’s Generative Ads Model (GEM): Scaling the Central Model and Compute Engine for Frontier Ads AI appeared first on Engineering at Meta.</description>
-      <pubDate>Tue, 13 Oct 2026 16:01:00 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/13/ml-applications/generative-ads-model-gem-scaling-frontier-ads-ai/</guid>
-      <source>Meta Engineering</source>
+      <title>GitHub’s model for secret detection: Finding more secrets with less noise</title>
+      <link>https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/</link>
+      <description>GitHub’s context-aware secret classifier improves detection quality, raises weighted acceptance by 11.5%, and reduces median scan execution time by 86% The post GitHub’s model for secret detection: Finding more secrets with less noise appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 13 Oct 2026 17:56:33 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: Prime Day 2026 by the numbers, Claude Haiku 5.5, Amazon Nova 2.5 Sonic, and more (October 13, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-prime-day-2026-by-the-numbers-claude-haiku-5-5-amazon-nova-2-5-sonic-and-more-october-13-2026/</link>
-      <description>Some numbers are hard to picture until you sit with them for a moment Last week we published the Prime Day 2026 metrics, and the one that stuck with me is 2.3 quadrillion: the daily requests Amazon ElastiCache peaked at during the event Prime Day ran back in June, so this post always lands as […]</description>
-      <pubDate>Tue, 13 Oct 2026 15:59:06 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-prime-day-2026-by-the-numbers-claude-haiku-5-5-amazon-nova-2-5-sonic-and-more-october-13-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>Rewinding the exponential: How we keep hardware usage down</title>
-      <link>https://blog.cloudflare.com/rewinding-the-exponential/</link>
-      <description>Our strategies to optimize our data pipeline throughput without compromising data quality.</description>
-      <pubDate>Tue, 13 Oct 2026 15:51:41 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/rewinding-the-exponential/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>The “alien” economics of AI monetization</title>
-      <link>https://stripe.com/blog/economics-of-ai-monetization</link>
-      <description>As usage, costs, and customer expectations change, AI companies are moving beyond traditional SaaS pricing Leaders at Monetize 2026 shared how they’re combining subscriptions with usage-based billing, building spend controls into products, adapting packaging and value metrics, and making pricing readable for both human and AI buyers.</description>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/economics-of-ai-monetization</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Announcing AWS Lambda Web Functions</title>
-      <link>https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/</link>
-      <description>AWS Lambda Web Functions is a serverless compute primitive that runs your HTTP framework natively, delivering fast, consistent responses through multi-concurrent execution and automated global distribution.</description>
-      <pubDate>Mon, 12 Oct 2026 22:34:47 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/announcing-aws-lambda-web-functions-for-fast-consistent-web-app-performance-anywhere/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>OCP Summit 2026: Powering AI with Open Innovations in Scale-Up, Scale-Out, and Scale-Across Networks</title>
-      <link>https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/</link>
-      <description>At the 2026 Open Compute Project Global Summit, Meta is sharing the next generation of open networking infrastructure, including: Our first liquid-cooled network rack (IcePack), and 102.4T switch platform (IceCube) Flattened Planar Fabric (FPF), a multiplane backend scale-out fabric that fundamentally changes how GPUs connect to the network MetaRoCE, our open-source AI transport protocol The post OCP Summit 2026: Powering AI with Open Innovations in Scale-Up, Scale-Out, and Scale-Across Networks appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 12 Oct 2026 21:19:18 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/</guid>
-      <source>Meta Engineering</source>
+      <title>CASTLE: training natural language search before the first real query</title>
+      <link>https://medium.com/airbnb-engineering/castle-training-natural-language-search-before-the-first-real-query-3818ef8b4828?source=rss----53c7c27702d5---4</link>
+      <description>Promptagator [2] improves query diversity using few-shot examples, but is still limited by the gap between its generation distribution and real user behavior.In this post, we describe Contrastive And Seed-guided Training for natural Language sEarch (CASTLE), our framework for jointly generating queries and producing relevance labels from Airbnb’s own de-identified booking data Crucially, what is “positive” and “negative” is determined by actual, previous user booking behavior, not by the LLM itself, so there is no circularity in the subsequent generation of relevance labels.CASTLE architecture overview — contrastive listing pairs feeding into seed-guided query generationQuery generation Contrastive listing pairs from booking sessions ground query generation in real platform behavior and provide relevance labels by construction, while LLM prompting provides the query diversity and linguistic variety that behavioral data alone cannot supply</description>
+      <pubDate>Tue, 13 Oct 2026 17:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://medium.com/airbnb-engineering/castle-training-natural-language-search-before-the-first-real-query-3818ef8b4828?source=rss----53c7c27702d5---4</guid>
+      <source>Airbnb Engineering</source>
     </item>
   </channel>
 </rss>
