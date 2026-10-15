@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-10-15</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-10-15</p>
+        <div class="stats">
+            <span class="stat-item"><strong>9</strong> articles</span>
+            <span class="stat-item"><strong>5</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">AWS News</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/" target="_blank" rel="noopener noreferrer">
+                                Amazon S3 is now available on the Vercel Marketplace and v0 by Vercel
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:30</p>
+                    <p class="article-summary">Amazon Simple Storage Service (Amazon S3), including Amazon S3 Tables and Amazon S3 Vectors, is natively available on the Vercel Marketplace and v0 by Vercel.</p>
+                    
+                    <a href="https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Cloudflare Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/" target="_blank" rel="noopener noreferrer">
+                                Cloudflare and OpenAI: making AI discovery better for everyone
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 13:00</p>
+                    <p class="article-summary">How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer wasted requests — making the experience better for users and website owners alike.</p>
+                    
+                    <a href="https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://blog.cloudflare.com/yandex-outage/" target="_blank" rel="noopener noreferrer">
+                                Yandex outage: Data shows that instead of going dark, malicious bots went on the move
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 20:24</p>
+                    <p class="article-summary">When strikes hit Yandex data centers, many assumed Russian bot operations went dark Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks.</p>
+                    
+                    <a href="https://blog.cloudflare.com/yandex-outage/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/company-news/github-availability-report-september-2026/" target="_blank" rel="noopener noreferrer">
+                                GitHub availability report: September 2026
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 20:01</p>
+                    <p class="article-summary">In September, we experienced two incidents that resulted in degraded performance across GitHub services The post GitHub availability report: September 2026 appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/github-availability-report-september-2026/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/" target="_blank" rel="noopener noreferrer">
+                                From 2,500 requests to 24: Rebuilding star history without the stargazers
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:11</p>
+                    <p class="article-summary">Our new repo star history API now provides trends without returning individual identities or requiring unbounded database work These are the engineering tradeoffs we made The post From 2,500 requests to 24: Rebuilding star history without the stargazers appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/" target="_blank" rel="noopener noreferrer">
+                                Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 13:55</p>
+                    <p class="article-summary">Apigee hybrid 1.17.0 introduces native Model Context Protocol (MCP) support, enabling the MCP data plane to run directly within your own Kubernetes cluster This architecture ensures that AI agent request traffic and tool execution remain entirely inside your infrastructure while pulling configuration updates from the control plane Developers can expose OpenAPI 3.0.x specifications as discoverable MCP tools, leverage existing security policies and API products, and trace end-to-end requests using W3C trace context headers.</p>
+                    
+                    <a href="https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Integrating Netflix’s Foundation Model into Personalization applications
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 20:02</p>
+                    <p class="article-summary">Merging the Foundation Model as a subgraph also increases the application model size and inference time We are also working on a smaller distilled version of the Foundation Model to reduce the inference latency of the subgraph approach We also provide a fine-tuning framework to make it easy to fine-tune and leverage the Foundation Model</p>
+                    
+                    <a href="https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                DataJunction as Netflix’s answer to the missing piece of the modern data stack
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:59</p>
+                    <p class="article-summary">Our initial problem was most evident in our Experimentation Platform team, where the previous system required:extensive business knowledgefamiliarity with experimentation conventionsand complex engineering practicesThis led to metric authoring processes that would take weeks, which was a prohibitive requirement for Data Scientists and Analytics Engineers who wanted to onboard new metrics to the Experimentation Platform.Enter DataJunctionTo address this problem and to set ourselves on the path to a successful semantic layer solution in the future, we looked at several candidates They efficiently deliver both the semantic definitions (of metrics and dimensions) and fast data access It also provides flexible, user-friendly interfaces (including a UI, API, and various clients), making it easy for users to author and manage their metrics and other semantic models.ConclusionsWith experimentation domain well supported by DataJunction, we would like to take on next steps to unifying of the general analytics at Netflix and to make it easier for Netflix users to both:find and use metric definitions across verticals (defined in DJ)easily access, modify and experiment with new metrics across Netflix data stackThat will require building out strong integrations between DJ and other tools, but that has been underway and it is one of the most enjoyable parts of this project, where most of the feature exists and we are simply enabling existing systems to exchange information in a structured and reliable way</p>
+                    
+                    <a href="https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Measuring the Impact of Personalized Recommendations
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:57</p>
+                    <p class="article-summary">Because the model separately represents member preferences, title appeal, and recommendation effects, it lets us estimate not only how recommendations affect total viewing, but also how they change which titles are watched.The model is only useful, however, if it captures real substitution patterns Targeting is different: it captures whether the system is placing titles in front of members for whom the recommendation changes the decision.Decomposing the Impact of Recommendations into Selection, Exposure, and TargetingOur model lets us estimate these channels title by title The model lets us separate underlying title preferences from the incremental effect of recommendations, and the experiments verify that the model captures real substitution patterns.Using this framework, we find that personalization affects both how much members watch and which titles they watch</p>
+                    
+                    <a href="https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-10-15 13:55:12</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>

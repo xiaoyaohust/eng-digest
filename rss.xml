@@ -6,31 +6,79 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 14 Oct 2026 14:18:46 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 13:55:12 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug</title>
-      <link>https://blog.cloudflare.com/hyperdrive-mysql/</link>
-      <description>While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available.</description>
-      <pubDate>Wed, 14 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/hyperdrive-mysql/</guid>
+      <title>Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster</title>
+      <link>https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/</link>
+      <description>Apigee hybrid 1.17.0 introduces native Model Context Protocol (MCP) support, enabling the MCP data plane to run directly within your own Kubernetes cluster This architecture ensures that AI agent request traffic and tool execution remain entirely inside your infrastructure while pulling configuration updates from the control plane Developers can expose OpenAPI 3.0.x specifications as discoverable MCP tools, leverage existing security policies and API products, and trace end-to-end requests using W3C trace context headers.</description>
+      <pubDate>Thu, 15 Oct 2026 13:55:09 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Cloudflare and OpenAI: making AI discovery better for everyone</title>
+      <link>https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/</link>
+      <description>How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer wasted requests — making the experience better for users and website owners alike.</description>
+      <pubDate>Thu, 15 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>GitHub’s model for secret detection: Finding more secrets with less noise</title>
-      <link>https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/</link>
-      <description>GitHub’s context-aware secret classifier improves detection quality, raises weighted acceptance by 11.5%, and reduces median scan execution time by 86% The post GitHub’s model for secret detection: Finding more secrets with less noise appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 13 Oct 2026 17:56:33 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/</guid>
+      <title>Yandex outage: Data shows that instead of going dark, malicious bots went on the move</title>
+      <link>https://blog.cloudflare.com/yandex-outage/</link>
+      <description>When strikes hit Yandex data centers, many assumed Russian bot operations went dark Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks.</description>
+      <pubDate>Wed, 14 Oct 2026 20:24:19 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/yandex-outage/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Integrating Netflix’s Foundation Model into Personalization applications</title>
+      <link>https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4</link>
+      <description>Merging the Foundation Model as a subgraph also increases the application model size and inference time We are also working on a smaller distilled version of the Foundation Model to reduce the inference latency of the subgraph approach We also provide a fine-tuning framework to make it easy to fine-tune and leverage the Foundation Model</description>
+      <pubDate>Wed, 14 Oct 2026 20:02:22 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>GitHub availability report: September 2026</title>
+      <link>https://github.blog/news-insights/company-news/github-availability-report-september-2026/</link>
+      <description>In September, we experienced two incidents that resulted in degraded performance across GitHub services The post GitHub availability report: September 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 14 Oct 2026 20:01:35 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-september-2026/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>CASTLE: training natural language search before the first real query</title>
-      <link>https://medium.com/airbnb-engineering/castle-training-natural-language-search-before-the-first-real-query-3818ef8b4828?source=rss----53c7c27702d5---4</link>
-      <description>Promptagator [2] improves query diversity using few-shot examples, but is still limited by the gap between its generation distribution and real user behavior.In this post, we describe Contrastive And Seed-guided Training for natural Language sEarch (CASTLE), our framework for jointly generating queries and producing relevance labels from Airbnb’s own de-identified booking data Crucially, what is “positive” and “negative” is determined by actual, previous user booking behavior, not by the LLM itself, so there is no circularity in the subsequent generation of relevance labels.CASTLE architecture overview — contrastive listing pairs feeding into seed-guided query generationQuery generation Contrastive listing pairs from booking sessions ground query generation in real platform behavior and provide relevance labels by construction, while LLM prompting provides the query diversity and linguistic variety that behavioral data alone cannot supply</description>
-      <pubDate>Tue, 13 Oct 2026 17:01:02 GMT</pubDate>
-      <guid isPermaLink="true">https://medium.com/airbnb-engineering/castle-training-natural-language-search-before-the-first-real-query-3818ef8b4828?source=rss----53c7c27702d5---4</guid>
-      <source>Airbnb Engineering</source>
+      <title>DataJunction as Netflix’s answer to the missing piece of the modern data stack</title>
+      <link>https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4</link>
+      <description>Our initial problem was most evident in our Experimentation Platform team, where the previous system required:extensive business knowledgefamiliarity with experimentation conventionsand complex engineering practicesThis led to metric authoring processes that would take weeks, which was a prohibitive requirement for Data Scientists and Analytics Engineers who wanted to onboard new metrics to the Experimentation Platform.Enter DataJunctionTo address this problem and to set ourselves on the path to a successful semantic layer solution in the future, we looked at several candidates They efficiently deliver both the semantic definitions (of metrics and dimensions) and fast data access It also provides flexible, user-friendly interfaces (including a UI, API, and various clients), making it easy for users to author and manage their metrics and other semantic models.ConclusionsWith experimentation domain well supported by DataJunction, we would like to take on next steps to unifying of the general analytics at Netflix and to make it easier for Netflix users to both:find and use metric definitions across verticals (defined in DJ)easily access, modify and experiment with new metrics across Netflix data stackThat will require building out strong integrations between DJ and other tools, but that has been underway and it is one of the most enjoyable parts of this project, where most of the feature exists and we are simply enabling existing systems to exchange information in a structured and reliable way</description>
+      <pubDate>Wed, 14 Oct 2026 19:59:08 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Measuring the Impact of Personalized Recommendations</title>
+      <link>https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4</link>
+      <description>Because the model separately represents member preferences, title appeal, and recommendation effects, it lets us estimate not only how recommendations affect total viewing, but also how they change which titles are watched.The model is only useful, however, if it captures real substitution patterns Targeting is different: it captures whether the system is placing titles in front of members for whom the recommendation changes the decision.Decomposing the Impact of Recommendations into Selection, Exposure, and TargetingOur model lets us estimate these channels title by title The model lets us separate underlying title preferences from the incremental effect of recommendations, and the experiments verify that the model captures real substitution patterns.Using this framework, we find that personalization affects both how much members watch and which titles they watch</description>
+      <pubDate>Wed, 14 Oct 2026 19:57:43 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Amazon S3 is now available on the Vercel Marketplace and v0 by Vercel</title>
+      <link>https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/</link>
+      <description>Amazon Simple Storage Service (Amazon S3), including Amazon S3 Tables and Amazon S3 Vectors, is natively available on the Vercel Marketplace and v0 by Vercel.</description>
+      <pubDate>Wed, 14 Oct 2026 19:30:48 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>From 2,500 requests to 24: Rebuilding star history without the stargazers</title>
+      <link>https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/</link>
+      <description>Our new repo star history API now provides trends without returning individual identities or requiring unbounded database work These are the engineering tradeoffs we made The post From 2,500 requests to 24: Rebuilding star history without the stargazers appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 14 Oct 2026 19:11:33 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/</guid>
+      <source>GitHub Blog</source>
     </item>
   </channel>
 </rss>
