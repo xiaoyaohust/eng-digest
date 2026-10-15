@@ -38,7 +38,7 @@ const projects = scienceProjectIds.filter((id) => articles.some((entry) => entry
         const project = scienceProjects[id];
         const count = articles.filter((entry) => entry.data.project === id).length;
         return <a class="project-card" href={withBase(`/science/${id}/`)}>
-          <span class="eyebrow">{project.discipline} / ACTIVE STUDY</span>
+          <span class="eyebrow">{project.discipline} / {project.status}</span>
           <h3>{project.name} <span>{project.subtitle}</span></h3>
           <p>{project.description}</p>
           <footer><span>{count} research {count === 1 ? "note" : "notes"}</span><strong>View project ↗</strong></footer>

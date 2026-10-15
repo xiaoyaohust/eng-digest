@@ -9,12 +9,16 @@ export const scienceProjects: Record<ScienceProjectId, {
   subtitle: string;
   description: string;
   discipline: string;
+  status: string;
+  statusNote: string;
 }> = {
   "eclipse-atlas": {
     name: "Eclipse Atlas",
     subtitle: "Stellar timing with Python",
     description: "A Python research pipeline for public telescope data, eclipse timing, physical models, and uncertainty calibration.",
     discipline: "ASTROPHYSICS",
+    status: "RESEARCH ARCHIVE",
+    statusNote: "The current analysis line is closed after validation review. Measurements, limitations, and historical plans are dated in each note.",
   },
 };
 

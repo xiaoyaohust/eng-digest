@@ -2,6 +2,7 @@
 title: "Eclipse Atlas: Engineering a Python Pipeline for Stellar Timing"
 description: "How a Python research pipeline measures eclipsing stars, calibrates uncertainty, and reassesses 27 candidate systems using public TESS data."
 date: 2026-10-11
+updated: 2026-10-14
 project: eclipse-atlas
 lang: en
 tags: [astrophysics, eclipse-timing, scientific-computing, python]
@@ -10,6 +11,8 @@ draft: false
 socialTitle: "Eclipse Atlas: Python Meets Stellar Timing"
 socialDescription: "Public telescope data, numerical models, and a reassessment of 27 candidates. Measured results and the tests still unfinished."
 ---
+
+*October 14 update: the [phase-two validation report](/science/eclipse-atlas/stellar-clocks-phase-two/) records the later tests and the closeout of the current analysis line. The article below preserves the October 11 research snapshot; its proposed next experiments are historical plans, not active work.*
 
 Two stars orbit each other, periodically blocking part of each other's light. An eclipse that arrives a few seconds early can carry information about an unseen companion. It can also reflect a dark patch on a star, an imperfect model, or an error introduced during data processing. A program can measure the shift precisely and still give the wrong physical explanation.
 

@@ -22,7 +22,7 @@ const { project, entries } = Astro.props;
     <h1>{project.name}</h1>
     <p class="subtitle">{project.subtitle}</p>
     <p class="intro">{project.description}</p>
-    <p class="project-status">WORK IN PROGRESS · Measurements and limitations are dated in each article.</p>
+    <p class="project-status">{project.status} · {project.statusNote}</p>
     <h2>Research notes</h2>
     <div class="card-grid">
       {entries.map((entry) => <ArticleCard href={scienceArticleHref(entry)} kicker={project.name} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />)}
