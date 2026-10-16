@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-10-16</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-10-16</p>
+        <div class="stats">
+            <span class="stat-item"><strong>15</strong> articles</span>
+            <span class="stat-item"><strong>6</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Cloudflare Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://blog.cloudflare.com/verified-bots-accountability/" target="_blank" rel="noopener noreferrer">
+                                Continuous accountability for Verified bots
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 13:00</p>
+                    <p class="article-summary">Identity alone doesn't guarantee a bot will behave responsibly We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain accountable over time.</p>
+                    
+                    <a href="https://blog.cloudflare.com/verified-bots-accountability/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://blog.cloudflare.com/programmable-gateway-dlp/" target="_blank" rel="noopener noreferrer">
+                                A fully programmable secure web gateway
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 17:11</p>
+                    <p class="article-summary">Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform.</p>
+                    
+                    <a href="https://blog.cloudflare.com/programmable-gateway-dlp/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://blog.cloudflare.com/deploy-with-void/" target="_blank" rel="noopener noreferrer">
+                                Deploy with Void
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 14:00</p>
+                    <p class="article-summary">Introducing Void: an open-source SDK, CLI, and self-hosted platform for building full-stack Vite apps and deploying them to Cloudflare.</p>
+                    
+                    <a href="https://blog.cloudflare.com/deploy-with-void/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/" target="_blank" rel="noopener noreferrer">
+                                The next developer interface is ambient intelligence
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 19:39</p>
+                    <p class="article-summary">AI, agents, voice, and physical controls are shifting software development from operating tools to expressing intent—and helping developers stay focused on building The post The next developer interface is ambient intelligence appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/" target="_blank" rel="noopener noreferrer">
+                                Staying Evergreen: How we automated secure access and repo hygiene in a shared org
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 18:00</p>
+                    <p class="article-summary">Put native GitHub features to work to review outside collaborator access and archive stale repositories The post Staying Evergreen: How we automated secure access and repo hygiene in a shared org appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/" target="_blank" rel="noopener noreferrer">
+                                Evaluating AI agents: moving past the vibe check
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 13:43</p>
+                    <p class="article-summary">A practical engineering guide and reference architecture for establishing continuous evaluation pipelines for multi-turn AI agents using Gemini Enterprise Agent Platform, Google ADK, and OpenInference standards.</p>
+                    
+                    <a href="https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/" target="_blank" rel="noopener noreferrer">
+                                Three layers, one repo: a tour of google/adk-recipes
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 13:43</p>
+                    <p class="article-summary">The google/adk-recipes repository unifies Agent Development Kit (ADK) resources into three structured layers—core/, plugins/, and contrib/—serving as a single source of truth for building AI agents Developers can leverage reference patterns, install modular vertical skills (such as retail product search and virtual try-on) directly into their coding assistants, and deploy production-ready services across multiple languages This cohesive structure streamlines the entire workflow from initial scaffolding to full deployment on Google Cloud infrastructure.</p>
+                    
+                    <a href="https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/" target="_blank" rel="noopener noreferrer">
+                                Announcing DPoP Support for Google OAuth: Securing Refresh Tokens
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 13:43</p>
+                    <p class="article-summary">Google OAuth Platform now supports DPoP (Demonstrating Proof-of-Possession) to sender-constrain refresh tokens, neutralizing Infostealer malware and adversary-in-the-middle attacks By cryptographically binding long-lived refresh tokens while maintaining short-lived access tokens as standard Bearer tokens, developers achieve robust credential security without incurring high-QPS API performance overhead Additionally, developers integrating multi-agent or Model Context Protocol (MCP) workloads can use Google Cloud Secure Token Service (STS) to handle secure token delegation across agent chains.</p>
+                    
+                    <a href="https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/" target="_blank" rel="noopener noreferrer">
+                                How Meta Built Forum With AI-Native Engineering
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 19:00</p>
+                    <p class="article-summary">To build Forum, Meta engineers adopted a whole new way of working by bringing an AI agent into the development cycle We’re sharing insights into what it took to build Forum with agentic AI: how we [...] Read More The post How Meta Built Forum With AI-Native Engineering appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://engineering.fb.com/2026/10/15/production-engineering/2026-world-cup-record-traffic-reliability-at-scale/" target="_blank" rel="noopener noreferrer">
+                                2026 World Cup: Breaking Records, Spiky Charts and Reliability at Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 18:30</p>
+                    <p class="article-summary">Every four years, the World Cup becomes the largest planned stress test of our infrastructure There are a few moments throughout the year, like New Years Eve, that really let us see the collective impact of everything we’ve built — but none are bigger than the quadrennial [...] Read More The post 2026 World Cup: Breaking Records, Spiky Charts and Reliability at Scale appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/10/15/production-engineering/2026-world-cup-record-traffic-reliability-at-scale/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://engineering.fb.com/2026/10/15/developer-tools/sapienz-issta-2026-impact-paper-award-meta/" target="_blank" rel="noopener noreferrer">
+                                Sapienz Receives ISSTA 2026 Impact Paper Award
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 16:00</p>
+                    <p class="article-summary">Ke Mao, Mark Harman, and Yue Jia have been recognized with the ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) 2026 Most Influential Paper Award for their 2016 research, “Sapienz: multi-objective automated testing for Android applications.” The recognition celebrates a decade of impact from work that began at University College London and went [...] Read More The post Sapienz Receives ISSTA 2026 Impact Paper Award appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/10/15/developer-tools/sapienz-issta-2026-impact-paper-award-meta/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:56</p>
+                    <p class="article-summary">The users still use the same query interface:TimeSeries Tiered Storage Read PathThe Cold Tier Data Plane uses compaction metadata for aggressive planning and pruning, which dramatically reduces the S3 query fan-out The idea for tiering is simple:Read directly from these S3 backups instead of paying a separate data transfer cost to S3.Once TimeSeries marks a hot Time Slice as ready for cold storage, we can customize Cassandra to read directly from its backups, allowing us to delete the on-disk data copy As of Cassandra 4.1, we can leverage pluggable Memtables to redirect reads from “cold” tables directly to the backup storage in S3.-- create table for a given Time SliceCREATE TABLE data_20260616_00_04 ( ... ..., PRIMARY KEY ((time_series_id, time_bucket, event_bucket), event_time, event_id, key)) WITH CLUSTERING ORDER BY (event_time DESC, event_id DESC, key DESC)</p>
+                    
+                    <a href="https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Behind the Scenes: Evolving Netflix’s Ads Event Pipeline for Live — Part II
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:51</p>
+                    <p class="article-summary">The heart of the job: we match each client event to the ad-serving response for the same impression, enriching it with the full serving context using a KeyedCoProcessFunctionDeduplicate We extract measurement beacons for our partners and route the enriched ad event to its downstream consumers.The ad server logs responses to Kafka rather than writing to a registry; the Flink job joins responses with client events in real time and routes enriched ad events downstream.The join is the interesting part We encode the serving region into the ad token, so when a client event arrives in the wrong region, we forward it to the region that owns its response</p>
+                    
+                    <a href="https://netflixtechblog.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Netflix Conductor: The Next Chapter
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:50</p>
+                    <p class="article-summary">You stand it up, keep it running, and scale it, even for work that’s bursty or runs rarely.So Conductor added managed tasks: built-in task types where Conductor drives the compute directly, with no long-lived worker for you to host or scale Stratum is the serverless function layer of Netflix’s Cosmos platform, purpose-built for media-processing workloads, and a Conductor STRATUM task is the natural way to call one from a workflow That’s a polling problem, and at scale it has its own failure mode, one that showed up most sharply for Studio Orchestrator, the heavy Conductor user behind the Media Production Suite pipelines from earlier in this post.Conductor clients poll for work using worker threads, and historically the number of threads was fixed per task type</p>
+                    
+                    <a href="https://netflixtechblog.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/real-time-stripe-data-postgres" target="_blank" rel="noopener noreferrer">
+                                Sync real-time Stripe data to Postgres with Stripe Data Pipeline
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-15 00:00</p>
+                    <p class="article-summary">Applications rely on current Stripe data to fulfill orders, update customer accounts, and manage access to paid features Until now, developers have had to build and maintain custom integrations to keep application databases in sync with Stripe We’re introducing real-time sync to Postgres for Stripe Data Pipeline, which lets them keep databases current without having to build custom integrations.</p>
+                    
+                    <a href="https://stripe.com/blog/real-time-stripe-data-postgres" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-10-16 13:43:44</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>

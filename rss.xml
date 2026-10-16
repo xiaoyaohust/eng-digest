@@ -6,79 +6,127 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 15 Oct 2026 13:55:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 13:43:44 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Announcing MCP support in Apigee hybrid: agentic tools that run in your own cluster</title>
-      <link>https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/</link>
-      <description>Apigee hybrid 1.17.0 introduces native Model Context Protocol (MCP) support, enabling the MCP data plane to run directly within your own Kubernetes cluster This architecture ensures that AI agent request traffic and tool execution remain entirely inside your infrastructure while pulling configuration updates from the control plane Developers can expose OpenAPI 3.0.x specifications as discoverable MCP tools, leverage existing security policies and API products, and trace end-to-end requests using W3C trace context headers.</description>
-      <pubDate>Thu, 15 Oct 2026 13:55:09 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-mcp-support-in-apigee-hybrid-agentic-tools-that-run-in-your-own-cluster/</guid>
+      <title>Evaluating AI agents: moving past the vibe check</title>
+      <link>https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/</link>
+      <description>A practical engineering guide and reference architecture for establishing continuous evaluation pipelines for multi-turn AI agents using Gemini Enterprise Agent Platform, Google ADK, and OpenInference standards.</description>
+      <pubDate>Fri, 16 Oct 2026 13:43:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/evaluating-ai-agents-moving-past-the-vibe-check/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Cloudflare and OpenAI: making AI discovery better for everyone</title>
-      <link>https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/</link>
-      <description>How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer wasted requests — making the experience better for users and website owners alike.</description>
-      <pubDate>Thu, 15 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/</guid>
+      <title>Three layers, one repo: a tour of google/adk-recipes</title>
+      <link>https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/</link>
+      <description>The google/adk-recipes repository unifies Agent Development Kit (ADK) resources into three structured layers—core/, plugins/, and contrib/—serving as a single source of truth for building AI agents Developers can leverage reference patterns, install modular vertical skills (such as retail product search and virtual try-on) directly into their coding assistants, and deploy production-ready services across multiple languages This cohesive structure streamlines the entire workflow from initial scaffolding to full deployment on Google Cloud infrastructure.</description>
+      <pubDate>Fri, 16 Oct 2026 13:43:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/three-layers-one-repo-a-tour-of-googleadk-recipes/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Announcing DPoP Support for Google OAuth: Securing Refresh Tokens</title>
+      <link>https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/</link>
+      <description>Google OAuth Platform now supports DPoP (Demonstrating Proof-of-Possession) to sender-constrain refresh tokens, neutralizing Infostealer malware and adversary-in-the-middle attacks By cryptographically binding long-lived refresh tokens while maintaining short-lived access tokens as standard Bearer tokens, developers achieve robust credential security without incurring high-QPS API performance overhead Additionally, developers integrating multi-agent or Model Context Protocol (MCP) workloads can use Google Cloud Secure Token Service (STS) to handle secure token delegation across agent chains.</description>
+      <pubDate>Fri, 16 Oct 2026 13:43:41 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-dpop-support-for-google-oauth-securing-refresh-tokens/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Continuous accountability for Verified bots</title>
+      <link>https://blog.cloudflare.com/verified-bots-accountability/</link>
+      <description>Identity alone doesn't guarantee a bot will behave responsibly We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain accountable over time.</description>
+      <pubDate>Fri, 16 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/verified-bots-accountability/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Yandex outage: Data shows that instead of going dark, malicious bots went on the move</title>
-      <link>https://blog.cloudflare.com/yandex-outage/</link>
-      <description>When strikes hit Yandex data centers, many assumed Russian bot operations went dark Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks.</description>
-      <pubDate>Wed, 14 Oct 2026 20:24:19 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/yandex-outage/</guid>
+      <title>The next developer interface is ambient intelligence</title>
+      <link>https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/</link>
+      <description>AI, agents, voice, and physical controls are shifting software development from operating tools to expressing intent—and helping developers stay focused on building The post The next developer interface is ambient intelligence appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 15 Oct 2026 19:39:27 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>How Meta Built Forum With AI-Native Engineering</title>
+      <link>https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/</link>
+      <description>To build Forum, Meta engineers adopted a whole new way of working by bringing an AI agent into the development cycle We’re sharing insights into what it took to build Forum with agentic AI: how we [...] Read More The post How Meta Built Forum With AI-Native Engineering appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 15 Oct 2026 19:00:03 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>2026 World Cup: Breaking Records, Spiky Charts and Reliability at Scale</title>
+      <link>https://engineering.fb.com/2026/10/15/production-engineering/2026-world-cup-record-traffic-reliability-at-scale/</link>
+      <description>Every four years, the World Cup becomes the largest planned stress test of our infrastructure There are a few moments throughout the year, like New Years Eve, that really let us see the collective impact of everything we’ve built — but none are bigger than the quadrennial [...] Read More The post 2026 World Cup: Breaking Records, Spiky Charts and Reliability at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 15 Oct 2026 18:30:29 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/15/production-engineering/2026-world-cup-record-traffic-reliability-at-scale/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Staying Evergreen: How we automated secure access and repo hygiene in a shared org</title>
+      <link>https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/</link>
+      <description>Put native GitHub features to work to review outside collaborator access and archive stale repositories The post Staying Evergreen: How we automated secure access and repo hygiene in a shared org appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 15 Oct 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>A fully programmable secure web gateway</title>
+      <link>https://blog.cloudflare.com/programmable-gateway-dlp/</link>
+      <description>Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform.</description>
+      <pubDate>Thu, 15 Oct 2026 17:11:12 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/programmable-gateway-dlp/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Integrating Netflix’s Foundation Model into Personalization applications</title>
-      <link>https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4</link>
-      <description>Merging the Foundation Model as a subgraph also increases the application model size and inference time We are also working on a smaller distilled version of the Foundation Model to reduce the inference latency of the subgraph approach We also provide a fine-tuning framework to make it easy to fine-tune and leverage the Foundation Model</description>
-      <pubDate>Wed, 14 Oct 2026 20:02:22 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/integrating-netflixs-foundation-model-into-personalization-applications-cf176b5860eb?source=rss----2615bd06b42e---4</guid>
+      <title>Sapienz Receives ISSTA 2026 Impact Paper Award</title>
+      <link>https://engineering.fb.com/2026/10/15/developer-tools/sapienz-issta-2026-impact-paper-award-meta/</link>
+      <description>Ke Mao, Mark Harman, and Yue Jia have been recognized with the ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA) 2026 Most Influential Paper Award for their 2016 research, “Sapienz: multi-objective automated testing for Android applications.” The recognition celebrates a decade of impact from work that began at University College London and went [...] Read More The post Sapienz Receives ISSTA 2026 Impact Paper Award appeared first on Engineering at Meta.</description>
+      <pubDate>Thu, 15 Oct 2026 16:00:59 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/15/developer-tools/sapienz-issta-2026-impact-paper-award-meta/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Deploy with Void</title>
+      <link>https://blog.cloudflare.com/deploy-with-void/</link>
+      <description>Introducing Void: an open-source SDK, CLI, and self-hosted platform for building full-stack Vite apps and deploying them to Cloudflare.</description>
+      <pubDate>Thu, 15 Oct 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/deploy-with-void/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Sync real-time Stripe data to Postgres with Stripe Data Pipeline</title>
+      <link>https://stripe.com/blog/real-time-stripe-data-postgres</link>
+      <description>Applications rely on current Stripe data to fulfill orders, update customer accounts, and manage access to paid features Until now, developers have had to build and maintain custom integrations to keep application databases in sync with Stripe We’re introducing real-time sync to Postgres for Stripe Data Pipeline, which lets them keep databases current without having to build custom integrations.</description>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/real-time-stripe-data-postgres</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>TimeSeries Tiered Storage Journey: Kafka/Flink Streams to Native Cassandra Cold Reads</title>
+      <link>https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4</link>
+      <description>The users still use the same query interface:TimeSeries Tiered Storage Read PathThe Cold Tier Data Plane uses compaction metadata for aggressive planning and pruning, which dramatically reduces the S3 query fan-out The idea for tiering is simple:Read directly from these S3 backups instead of paying a separate data transfer cost to S3.Once TimeSeries marks a hot Time Slice as ready for cold storage, we can customize Cassandra to read directly from its backups, allowing us to delete the on-disk data copy As of Cassandra 4.1, we can leverage pluggable Memtables to redirect reads from “cold” tables directly to the backup storage in S3.-- create table for a given Time SliceCREATE TABLE data_20260616_00_04 ( ... ..., PRIMARY KEY ((time_series_id, time_bucket, event_bucket), event_time, event_id, key)) WITH CLUSTERING ORDER BY (event_time DESC, event_id DESC, key DESC)</description>
+      <pubDate>Wed, 14 Oct 2026 19:56:08 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/timeseries-tiered-storage-journey-kafka-flink-streams-to-native-cassandra-cold-reads-e59d597c9d60?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>GitHub availability report: September 2026</title>
-      <link>https://github.blog/news-insights/company-news/github-availability-report-september-2026/</link>
-      <description>In September, we experienced two incidents that resulted in degraded performance across GitHub services The post GitHub availability report: September 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 14 Oct 2026 20:01:35 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-september-2026/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>DataJunction as Netflix’s answer to the missing piece of the modern data stack</title>
-      <link>https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4</link>
-      <description>Our initial problem was most evident in our Experimentation Platform team, where the previous system required:extensive business knowledgefamiliarity with experimentation conventionsand complex engineering practicesThis led to metric authoring processes that would take weeks, which was a prohibitive requirement for Data Scientists and Analytics Engineers who wanted to onboard new metrics to the Experimentation Platform.Enter DataJunctionTo address this problem and to set ourselves on the path to a successful semantic layer solution in the future, we looked at several candidates They efficiently deliver both the semantic definitions (of metrics and dimensions) and fast data access It also provides flexible, user-friendly interfaces (including a UI, API, and various clients), making it easy for users to author and manage their metrics and other semantic models.ConclusionsWith experimentation domain well supported by DataJunction, we would like to take on next steps to unifying of the general analytics at Netflix and to make it easier for Netflix users to both:find and use metric definitions across verticals (defined in DJ)easily access, modify and experiment with new metrics across Netflix data stackThat will require building out strong integrations between DJ and other tools, but that has been underway and it is one of the most enjoyable parts of this project, where most of the feature exists and we are simply enabling existing systems to exchange information in a structured and reliable way</description>
-      <pubDate>Wed, 14 Oct 2026 19:59:08 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4</guid>
+      <title>Behind the Scenes: Evolving Netflix’s Ads Event Pipeline for Live — Part II</title>
+      <link>https://netflixtechblog.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss----2615bd06b42e---4</link>
+      <description>The heart of the job: we match each client event to the ad-serving response for the same impression, enriching it with the full serving context using a KeyedCoProcessFunctionDeduplicate We extract measurement beacons for our partners and route the enriched ad event to its downstream consumers.The ad server logs responses to Kafka rather than writing to a registry; the Flink job joins responses with client events in real time and routes enriched ad events downstream.The join is the interesting part We encode the serving region into the ad token, so when a client event arrives in the wrong region, we forward it to the region that owns its response</description>
+      <pubDate>Wed, 14 Oct 2026 19:51:35 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/behind-the-scenes-evolving-netflixs-ads-event-pipeline-for-live-part-ii-826ebf9ad9fb?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>Measuring the Impact of Personalized Recommendations</title>
-      <link>https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4</link>
-      <description>Because the model separately represents member preferences, title appeal, and recommendation effects, it lets us estimate not only how recommendations affect total viewing, but also how they change which titles are watched.The model is only useful, however, if it captures real substitution patterns Targeting is different: it captures whether the system is placing titles in front of members for whom the recommendation changes the decision.Decomposing the Impact of Recommendations into Selection, Exposure, and TargetingOur model lets us estimate these channels title by title The model lets us separate underlying title preferences from the incremental effect of recommendations, and the experiments verify that the model captures real substitution patterns.Using this framework, we find that personalization affects both how much members watch and which titles they watch</description>
-      <pubDate>Wed, 14 Oct 2026 19:57:43 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4</guid>
+      <title>Netflix Conductor: The Next Chapter</title>
+      <link>https://netflixtechblog.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss----2615bd06b42e---4</link>
+      <description>You stand it up, keep it running, and scale it, even for work that’s bursty or runs rarely.So Conductor added managed tasks: built-in task types where Conductor drives the compute directly, with no long-lived worker for you to host or scale Stratum is the serverless function layer of Netflix’s Cosmos platform, purpose-built for media-processing workloads, and a Conductor STRATUM task is the natural way to call one from a workflow That’s a polling problem, and at scale it has its own failure mode, one that showed up most sharply for Studio Orchestrator, the heavy Conductor user behind the Media Production Suite pipelines from earlier in this post.Conductor clients poll for work using worker threads, and historically the number of threads was fixed per task type</description>
+      <pubDate>Wed, 14 Oct 2026 19:50:17 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/netflix-conductor-the-next-chapter-41ad21067649?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Amazon S3 is now available on the Vercel Marketplace and v0 by Vercel</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/</link>
-      <description>Amazon Simple Storage Service (Amazon S3), including Amazon S3 Tables and Amazon S3 Vectors, is natively available on the Vercel Marketplace and v0 by Vercel.</description>
-      <pubDate>Wed, 14 Oct 2026 19:30:48 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-vercel-marketplace-v0/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>From 2,500 requests to 24: Rebuilding star history without the stargazers</title>
-      <link>https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/</link>
-      <description>Our new repo star history API now provides trends without returning individual identities or requiring unbounded database work These are the engineering tradeoffs we made The post From 2,500 requests to 24: Rebuilding star history without the stargazers appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 14 Oct 2026 19:11:33 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/</guid>
-      <source>GitHub Blog</source>
     </item>
   </channel>
 </rss>
