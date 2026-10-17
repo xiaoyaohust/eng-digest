@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-10-17</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-10-17</p>
+        <div class="stats">
+            <span class="stat-item"><strong>5</strong> articles</span>
+            <span class="stat-item"><strong>3</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Ontology-Driven Observability: Building an End-to-End Knowledge Graph at Netflix Scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 16:01</p>
+                    <p class="article-summary">Most of it went into reconstructing relationships that our observability systems already knew but we had never written down anywhere a human or machine could simply read and discover.The disagreement underneathThe instinct here could have been, around 2023, to reach for more data or better dashboards, and while both help at the margins, neither addresses what makes these investigations slow.It’s 2026 now, so we might say, “hey, agents”, but without the right context delivered to the agents, AI systems hallucinate, and especially when teams are on-call and need a fix “now”, we cannot let inaccurate agentic analysis lead us down the wrong path Data here is generated by parsing raw telemetry, logs, and incident discussions into triples (subject-predicate-object facts).Every harvest also produces a full Turtle serialization for archival, making it human-readable and diff-friendly, which has proven more useful for debugging than we expected.Our ontology is organized into twelve namespaces, each owning one operational domain:There are two decisions about this ontology that mattered while we built it, so they’re worth sharing.The first is that we refused a generic Service type. “Service” means four different things across our tooling, so applications resolve to exactly one type, ops:Application, and every one of them is validated against our software catalog of roughly 49,000 entries before the entity is created To that end, we are also working to translate these separate systems into the ontology, such as the Metrics Ontology and the Alerts Ontology, so everything could be queried from the Ontology itself.The Correlation Engine: finding the correlation chainsThe correlation engine assimilates the vast number of signals from diverse input sources and condenses them into causal or correlatory chains of events</p>
+                    
+                    <a href="https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://netflixtechblog.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Running Apache Spark experiments in my sleep (and on a plane)
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:49</p>
+                    <p class="article-summary">Because Spark buffers each full event bag in memory, long-session OOMs were driven by individual bag size, not total dataset volume Set spark.sql.adaptive.autoBroadcastJoinThreshold to 10 MB, leaving the compile-time threshold untouched.The Unresolved BottleneckWhile these fixes made the pipeline run cleanly, they didn’t solve the underlying scaling issue: aggregating an entire session’s event bag into a single row has a hard ceiling Build a way to run many full-scale runs in parallel instead.If your scheduler can use the branch name, then one branch becomes one isolated experiment, and running many at once becomes easy.Use an AI agent to run the operation, not only to write code</p>
+                    
+                    <a href="https://netflixtechblog.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">3.</span>
+                            <a href="https://netflixtechblog.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                The Lifecycle of LLM-as-a-Judge: Building, Aligning, and Monitoring at scale
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-14 19:48</p>
+                    <p class="article-summary">The four-phase lifecycle of an LLM judge, and the data that flows between the phases.We start with Birth: Benchmark Data Creation, where human experts craft hard or near-boundary examples and human raters label them with pass/fail decisions and written rationales We iterate in this phase until our metrics show that the judge is sufficiently aligned with human raters.In the third phase, Deployment, we integrate the judge into the explanation generation system as both a gate and a critic But it turns out to be incomplete in a way that simple label agreement cannot detect, as we show below.Reasoning-Aligned Rubric TuningWe tune each criterion’s LLM Judge with a procedure we call Reasoning-Aligned Rubric Tuning (RART)</p>
+                    
+                    <a href="https://netflixtechblog.com/the-lifecycle-of-llm-as-a-judge-building-aligning-and-monitoring-at-scale-c95bd8283508?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Spotify Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.atspotify.com/2026/10/advancing-generative-recommendation-inference-our-collaboration-with-nvidia-on-tensorrt-llm/" target="_blank" rel="noopener noreferrer">
+                                Advancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 14:29</p>
+                    <p class="article-summary">At Spotify, every surface and interaction is personalized to you as a user: the content on the Home page, the The post Advancing Generative Recommendation Inference: our collaboration with NVIDIA on TensorRT LLM appeared first on Spotify Engineering.</p>
+                    
+                    <a href="https://engineering.atspotify.com/2026/10/advancing-generative-recommendation-inference-our-collaboration-with-nvidia-on-tensorrt-llm/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Stripe Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://stripe.com/blog/new-ways-for-fintechs-to-move-money-and-expand-globally" target="_blank" rel="noopener noreferrer">
+                                New ways for fintechs to move money and expand globally
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-16 00:00</p>
+                    <p class="article-summary">We’re introducing three updates to help fintechs launch products and grow internationally more easily: simpler payout management with Stripe Global Payouts, support for stablecoin cards in more countries, and unified APIs for building global financial products.</p>
+                    
+                    <a href="https://stripe.com/blog/new-ways-for-fintechs-to-move-money-and-expand-globally" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-10-17 12:40:43</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
