@@ -55,9 +55,10 @@ test("English search finds the science article and existing engineering content"
   await expect(page.locator('.pagefind-ui__result-link[href="/system-design/cloud-sandbox-platform/"]')).toBeVisible();
 });
 
-test("science entry is linked from the homepage and its tags without horizontal overflow", async ({ page }) => {
+test("science section is linked from home and historical notes remain in tags without overflow", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator(`a[href="${articlePath}"]`).first()).toBeVisible();
+  // The latest-articles list rotates; older notes need not stay on the homepage.
+  await expect(page.locator('a[href="/science/"]').first()).toBeVisible();
   await page.goto("/tags/astrophysics/");
   await expect(page.locator(`a[href="${articlePath}"]`)).toBeVisible();
   for (const path of ["/science/", "/science/eclipse-atlas/", "/"]) {
