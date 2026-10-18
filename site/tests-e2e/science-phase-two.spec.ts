@@ -55,6 +55,7 @@ test("phase two publishes in the same science project with evidence and an accur
   await page.goto("/search/");
   await page.locator(".pagefind-ui__search-input").fill("Validation Limits");
   await expect(page.locator(`.pagefind-ui__result-link[href="${path}"]`)).toBeVisible();
-  await page.goto("/");
-  await expect(page.locator(`a[href="${path}"]`).first()).toBeVisible();
+  // The homepage's latest-articles list rotates as new articles are published.
+  await page.goto("/tags/astrophysics/");
+  await expect(page.locator(`a[href="${path}"]`)).toBeVisible();
 });
