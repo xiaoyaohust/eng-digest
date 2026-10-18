@@ -51,8 +51,10 @@ test("networking Field Note creates a manual category and publishes diagrams and
       style: ".navbar { visibility: hidden !important; }",
     });
   }
-  await page.goto("/");
-  await expect(page.locator(`a[href="${path}"]`).first()).toBeVisible();
+  // The homepage rotates its latest six articles as new notes are published.
+  // Historical networking notes remain discoverable through their tag archive.
+  await page.goto("/tags/networking/");
+  await expect(page.locator(`a[href="${path}"]`)).toBeVisible();
   await page.goto("/search/");
   await page.locator(".pagefind-ui__search-input").fill("How Real Networks Work");
   await expect(page.locator(`.pagefind-ui__result-link[href="${path}"]`)).toBeVisible();
