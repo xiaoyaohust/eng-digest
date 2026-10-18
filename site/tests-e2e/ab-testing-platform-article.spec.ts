@@ -35,8 +35,9 @@ test("experimentation article publishes five diagrams and a LinkedIn preview", a
       style: ".navbar { visibility: hidden !important; }",
     });
   }
-  await page.goto("/");
-  await expect(page.locator(`a[href="${path}"]`).first()).toBeVisible();
+  // New publications rotate the homepage list; topic and tag archives retain older articles.
+  await page.goto("/tags/experimentation/");
+  await expect(page.locator(`a[href="${path}"]`)).toBeVisible();
   await page.goto("/search/");
   await page.locator(".pagefind-ui__search-input").fill("A/B Testing Platform");
   await expect(page.locator(`.pagefind-ui__result-link[href="${path}"]`)).toBeVisible();
