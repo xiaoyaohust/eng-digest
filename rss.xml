@@ -6,15 +6,63 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 18 Oct 2026 12:57:47 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 16:10:18 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Netflix Stratum Media Processing: Automated Container Right-Sizing</title>
-      <link>https://netflixtechblog.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801?source=rss----2615bd06b42e---4</link>
-      <description>Once enrolled, SRT operates without a human in the loop across five steps:Figure 1: SRT Workflow High-LevelCollect resource usage metrics across all executions of that function.Generate a recommendation for each resource type (e.g., CPU or memory).Verify the recommendation through experiments.Apply or reject the recommendation based on the results of experiments.Monitor post-apply metrics, watching for anomalies after applying the recommendation.“Recommendation” is a key construct in SRT and serves as the primary unit of operation The workflow also generates recommendations for functions that have not opted into automatic right-sizing to preview potential savings.Each recommendation is saved in the recommendations datastore, enabling us to query and filter recommendations by function, resource type, or status on an ad hoc basis.Figure 4: Recommendation Generation SequenceFor each function and resource type, the workflow applies the following generation logic:Filter by workload type: We only tune high-throughput workloads Using pre-set thresholds serves as a reliable stopgap while we develop improved detection capabilities.SRT automatically enables the retry mechanism for any function opted into memory or disk right-sizing</description>
-      <pubDate>Wed, 14 Oct 2026 19:48:20 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/netflix-stratum-media-processing-automated-container-right-sizing-ddf9aa68a801?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
+      <title>Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK</title>
+      <link>https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/</link>
+      <description>The open-source Agent Development Kit (ADK) and gemini-3.8-live enable developers to build responsive voice agents by implementing non-blocking tools in Python Developers can use streaming tools to yield progress updates or background execution patterns to keep conversations fluid during long-running backend queries Additionally, configuring response scheduling behaviors such as WHEN_IDLE, INTERRUPT, or SILENT gives developers precise control over when and how tool results are delivered into the conversation.</description>
+      <pubDate>Mon, 19 Oct 2026 16:10:15 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>GenRecs Tokenization: Transforming Ads Recommendation at Meta with Stable Model Vocabulary</title>
+      <link>https://engineering.fb.com/2026/10/19/ml-applications/genrecs-tokenization-transforming-ads-recommendation-at-meta-with-stable-model-vocabulary/</link>
+      <description>Generative Recommenders (GenRecs) represent a paradigm shift from scoring every ad to reasoning about ad content and user preferences together in order to predict the best outcome for advertisers GenRecs Tokenization is the foundational data representation that [...] Read More The post GenRecs Tokenization: Transforming Ads Recommendation at Meta with Stable Model Vocabulary appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 19 Oct 2026 16:00:47 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/19/ml-applications/genrecs-tokenization-transforming-ads-recommendation-at-meta-with-stable-model-vocabulary/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AWS Lambda Web Functions, Amazon S3 on the Vercel Marketplace, and more (October 19, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/</link>
+      <description>Nothing last week added a new kind of compute What it did instead was shorten the distance between the code you already have and that code being live AWS Lambda learned to run a plain HTTP server with no adapter in front of it, and Amazon S3 became something you can provision from inside the […]</description>
+      <pubDate>Mon, 19 Oct 2026 15:34:59 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do</title>
+      <link>https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/</link>
+      <description>At Meta, we’ve seen notable improvements in efficiency and accuracy by keeping the orchestration layer of our data pipeline agents deliberately thin: It routes work and enforces reliability checks, while specialized agents do the domain reasoning We’re sharing our own [...] Read More The post The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 19 Oct 2026 15:30:37 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster</title>
+      <link>https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/</link>
+      <description>The first phase of Prometheus, our gigawatt-scale supercluster, is already complete and we’re working toward scaling it to comprise ~1 million GPUs Prometheus also features technologies like closed-loop liquid cooling [...] Read More The post Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 19 Oct 2026 13:00:10 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Beyond the patch: Protecting your NetScaler gateway against future vulnerabilities</title>
+      <link>https://blog.cloudflare.com/protect-your-netscaler-gateway/</link>
+      <description>CVE-2026-88771 lets attackers run commands on NetScaler Gateway before anyone signs in Patching takes time most teams don't have, so the sign-in decision has to move in front of the vulnerable code.</description>
+      <pubDate>Mon, 19 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/protect-your-netscaler-gateway/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era</title>
+      <link>https://stripe.com/blog/saas-platform-trends-in-AI-era</link>
+      <description>AI is creating more SaaS competition, and platforms are feeling the pressure A Stripe survey of 200 platform leaders shows how they plan to evolve pricing, grow revenue, and retain customers.</description>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/saas-platform-trends-in-AI-era</guid>
+      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
