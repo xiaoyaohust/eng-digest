@@ -6,63 +6,63 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 19 Oct 2026 16:10:18 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 14:04:27 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Step by Step guide: Build a Voice Agent That Never Goes Silent using ADK</title>
-      <link>https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/</link>
-      <description>The open-source Agent Development Kit (ADK) and gemini-3.8-live enable developers to build responsive voice agents by implementing non-blocking tools in Python Developers can use streaming tools to yield progress updates or background execution patterns to keep conversations fluid during long-running backend queries Additionally, configuring response scheduling behaviors such as WHEN_IDLE, INTERRUPT, or SILENT gives developers precise control over when and how tool results are delivered into the conversation.</description>
-      <pubDate>Mon, 19 Oct 2026 16:10:15 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/step-by-step-guide-build-a-voice-agent-that-never-goes-silent-using-adk/</guid>
+      <title>Native Model Authoring for Edge with LiteRT Tensor API</title>
+      <link>https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/</link>
+      <description>Meet the LiteRT Tensor API: giving developers native C++ control over the model graph to unify end-to-end ML computations on heterogeneous edge hardware.</description>
+      <pubDate>Tue, 20 Oct 2026 14:04:24 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>GenRecs Tokenization: Transforming Ads Recommendation at Meta with Stable Model Vocabulary</title>
-      <link>https://engineering.fb.com/2026/10/19/ml-applications/genrecs-tokenization-transforming-ads-recommendation-at-meta-with-stable-model-vocabulary/</link>
-      <description>Generative Recommenders (GenRecs) represent a paradigm shift from scoring every ad to reasoning about ad content and user preferences together in order to predict the best outcome for advertisers GenRecs Tokenization is the foundational data representation that [...] Read More The post GenRecs Tokenization: Transforming Ads Recommendation at Meta with Stable Model Vocabulary appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 19 Oct 2026 16:00:47 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/19/ml-applications/genrecs-tokenization-transforming-ads-recommendation-at-meta-with-stable-model-vocabulary/</guid>
-      <source>Meta Engineering</source>
+      <title>Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon</title>
+      <link>https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/</link>
+      <description>Google Research has completed the 32-bit open-source Coral NPU RISC-V architecture with the introduction of its Matrix Execution Unit, which delivers up to 1 TOPS while targeting 10 mW average power for edge inference Alongside this architecture, the release of the v1.0 open-source IREE/MLIR compiler allows developers to take models from JAX, PyTorch, and TensorFlow straight to Coral NPU hardware without writing custom assembly Developers can now prototype and deploy these multimodal edge applications using new hardware options like the Synaptics Astra SR200 MCU series and globally available Coralboard devkits.12</description>
+      <pubDate>Tue, 20 Oct 2026 14:04:24 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/</guid>
+      <source>Google Developers</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: AWS Lambda Web Functions, Amazon S3 on the Vercel Marketplace, and more (October 19, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/</link>
-      <description>Nothing last week added a new kind of compute What it did instead was shorten the distance between the code you already have and that code being live AWS Lambda learned to run a plain HTTP server with no adapter in front of it, and Amazon S3 became something you can provision from inside the […]</description>
-      <pubDate>Mon, 19 Oct 2026 15:34:59 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-web-functions-amazon-s3-on-the-vercel-marketplace-and-more-october-19-2026/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do</title>
-      <link>https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/</link>
-      <description>At Meta, we’ve seen notable improvements in efficiency and accuracy by keeping the orchestration layer of our data pipeline agents deliberately thin: It routes work and enforces reliability checks, while specialized agents do the domain reasoning We’re sharing our own [...] Read More The post The Thin Orchestrator: How We Made Our AI Agents More Reliable by Giving the Router Less to Do appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 19 Oct 2026 15:30:37 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster</title>
-      <link>https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/</link>
-      <description>The first phase of Prometheus, our gigawatt-scale supercluster, is already complete and we’re working toward scaling it to comprise ~1 million GPUs Prometheus also features technologies like closed-loop liquid cooling [...] Read More The post Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster appeared first on Engineering at Meta.</description>
-      <pubDate>Mon, 19 Oct 2026 13:00:10 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Beyond the patch: Protecting your NetScaler gateway against future vulnerabilities</title>
-      <link>https://blog.cloudflare.com/protect-your-netscaler-gateway/</link>
-      <description>CVE-2026-88771 lets attackers run commands on NetScaler Gateway before anyone signs in Patching takes time most teams don't have, so the sign-in decision has to move in front of the vulnerable code.</description>
-      <pubDate>Mon, 19 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/protect-your-netscaler-gateway/</guid>
+      <title>Introducing tsrs: a Port of TypeScript to Rust</title>
+      <link>https://blog.cloudflare.com/typescript-rust-port/</link>
+      <description>Cloudflare is collaborating on tsrs, a Rust port of TypeScript that is up to 8x faster and uses 70% less memory.</description>
+      <pubDate>Tue, 20 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/typescript-rust-port/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era</title>
-      <link>https://stripe.com/blog/saas-platform-trends-in-AI-era</link>
-      <description>AI is creating more SaaS competition, and platforms are feeling the pressure A Stripe survey of 200 platform leaders shows how they plan to evolve pricing, grow revenue, and retain customers.</description>
-      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/saas-platform-trends-in-AI-era</guid>
-      <source>Stripe Engineering</source>
+      <title>Building Overexposed: understanding application exposure</title>
+      <link>https://shopify.engineering/overexposed</link>
+      <description>Our first scanner read config files and missed what was running We rebuilt it with the cloud inventory, a careful probe, and honest results.</description>
+      <pubDate>Mon, 19 Oct 2026 21:54:14 GMT</pubDate>
+      <guid isPermaLink="true">https://shopify.engineering/overexposed</guid>
+      <source>Shopify Engineering</source>
+    </item>
+    <item>
+      <title>Cutting our inference bill by 68% by being obsessive about optimization</title>
+      <link>https://blog.cloudflare.com/obsessive-inference-optimization/</link>
+      <description>When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.</description>
+      <pubDate>Mon, 19 Oct 2026 19:12:53 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/obsessive-inference-optimization/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>How to continue a GitHub Copilot app session in VS Code</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/</link>
+      <description>Learn how to move an agent session from the GitHub Copilot app into VS Code without losing the conversation, code changes, or working context The post How to continue a GitHub Copilot app session in VS Code appeared first on The GitHub Blog.</description>
+      <pubDate>Mon, 19 Oct 2026 18:47:22 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Introducing Clairic, a new System One class of extraction models</title>
+      <link>https://blog.cloudflare.com/clairic-extraction-model/</link>
+      <description>Clairic is a new model from Cloudflare that is a System One extraction modeI, capable of extracting, computing, estimating, and forecasting data from unstructured inputs.</description>
+      <pubDate>Mon, 19 Oct 2026 17:48:26 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/clairic-extraction-model/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
