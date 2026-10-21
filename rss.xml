@@ -6,63 +6,87 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 20 Oct 2026 14:04:27 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 14:19:22 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Native Model Authoring for Edge with LiteRT Tensor API</title>
-      <link>https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/</link>
-      <description>Meet the LiteRT Tensor API: giving developers native C++ control over the model graph to unify end-to-end ML computations on heterogeneous edge hardware.</description>
-      <pubDate>Tue, 20 Oct 2026 14:04:24 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/native-model-authoring-for-edge-with-litert-tensor-api/</guid>
+      <title>Announcing New vLLM and SGLang Inference Engines on TPU</title>
+      <link>https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/</link>
+      <description>This post announces native PyTorch backends for vLLM and SGLang powered by TorchTPU, enabling developers to run and optimize serving workloads using familiar PyTorch tools Built in collaboration with open-source project maintainers, these engines include optimized TPU kernel implementations, production-ready features like KV cache management with TPU Sync, and disaggregated serving Public benchmarks demonstrate state-of-the-art performance and industry-leading cost efficiency on Ironwood TPU across long-context and agentic workloads.</description>
+      <pubDate>Wed, 21 Oct 2026 14:19:18 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Unifying Edge AI: How Coral NPU’s open standard brings portable, energy-viable intelligence from model to silicon</title>
-      <link>https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/</link>
-      <description>Google Research has completed the 32-bit open-source Coral NPU RISC-V architecture with the introduction of its Matrix Execution Unit, which delivers up to 1 TOPS while targeting 10 mW average power for edge inference Alongside this architecture, the release of the v1.0 open-source IREE/MLIR compiler allows developers to take models from JAX, PyTorch, and TensorFlow straight to Coral NPU hardware without writing custom assembly Developers can now prototype and deploy these multimodal edge applications using new hardware options like the Synaptics Astra SR200 MCU series and globally available Coralboard devkits.12</description>
-      <pubDate>Tue, 20 Oct 2026 14:04:24 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/unifying-edge-ai-how-coral-npus-open-standard-brings-portable-energy-viable-intelligence-from-model-to-silicon/</guid>
+      <title>Integrating TorchTPU into TorchTitan and Optimizing Models for TPU</title>
+      <link>https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/</link>
+      <description>TorchTPU integrates a native torch.device(&quot;tpu&quot;) backend directly into PyTorch, allowing developers to train large-scale models on Google Cloud TPUs without rewriting code in JAX The TorchTitan TPU fork enhances this with production-grade scaling primitives like SimpleFSDP, Graph Trainer, and custom Pallas kernels that achieve high Model Flops Utilization (MFU) across dense and MoE architectures Developers can leverage these battle-tested optimization playbooks, recipes, and the Hugging Face modeling backend to efficiently scale their own workloads on TPU infrastructure.</description>
+      <pubDate>Wed, 21 Oct 2026 14:19:18 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Introducing tsrs: a Port of TypeScript to Rust</title>
-      <link>https://blog.cloudflare.com/typescript-rust-port/</link>
-      <description>Cloudflare is collaborating on tsrs, a Rust port of TypeScript that is up to 8x faster and uses 70% less memory.</description>
-      <pubDate>Tue, 20 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/typescript-rust-port/</guid>
+      <title>Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer</title>
+      <link>https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/</link>
+      <description>Google AI Edge Model Explorer now supports custom compiler intermediate representations and open-source adapters like TOSA, VGF, and PTE for on-device machine learning Developers can leverage hierarchical graph visualization, split-pane views, and per-node trace overlays to catch export regressions and verify hardware delegation These tools enable engineering teams to transparently debug execution graphs and pinpoint cycle-level latency bottlenecks locally.</description>
+      <pubDate>Wed, 21 Oct 2026 14:19:18 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing full transaction detection for Cloudflare WAF</title>
+      <link>https://blog.cloudflare.com/full-transaction-waf/</link>
+      <description>Cloudflare's web application firewall can now correlate an HTTP request with its response Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.</description>
+      <pubDate>Wed, 21 Oct 2026 14:10:42 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/full-transaction-waf/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Building Overexposed: understanding application exposure</title>
-      <link>https://shopify.engineering/overexposed</link>
-      <description>Our first scanner read config files and missed what was running We rebuilt it with the cloud inventory, a careful probe, and honest results.</description>
-      <pubDate>Mon, 19 Oct 2026 21:54:14 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/overexposed</guid>
+      <title>Cloudflare deploys protections against php2shell vulnerability</title>
+      <link>https://blog.cloudflare.com/php-vulnerabilities-waf-protection/</link>
+      <description>Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.</description>
+      <pubDate>Wed, 21 Oct 2026 13:56:45 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/php-vulnerabilities-waf-protection/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>How Commerce.com and Cloudflare are getting storefronts ready for AI agents</title>
+      <link>https://blog.cloudflare.com/webmcp-commerce/</link>
+      <description>Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare Here's how we turned it on across every store at once, while keeping each merchant in control.</description>
+      <pubDate>Wed, 21 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/webmcp-commerce/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>How Shopify turns open models into task experts</title>
+      <link>https://shopify.engineering/open-model-task-experts</link>
+      <description>Sidekick’s frontier model hands its most token-heavy work to open models that Shopify post-trains and serves itself Here’s the loop we use to build them, and where NVIDIA’s models, software, and GPUs make each turn faster and cheaper.</description>
+      <pubDate>Wed, 21 Oct 2026 02:12:40 GMT</pubDate>
+      <guid isPermaLink="true">https://shopify.engineering/open-model-task-experts</guid>
       <source>Shopify Engineering</source>
     </item>
     <item>
-      <title>Cutting our inference bill by 68% by being obsessive about optimization</title>
-      <link>https://blog.cloudflare.com/obsessive-inference-optimization/</link>
-      <description>When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.</description>
-      <pubDate>Mon, 19 Oct 2026 19:12:53 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/obsessive-inference-optimization/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services</title>
+      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/</link>
+      <description>Try Amazon ECS Gateway, a new account-level resource that simplifies ingress networking for containerized workloads by dynamically provisioning and managing the necessary infrastructure on your behalf, with all resources created directly in your account.</description>
+      <pubDate>Tue, 20 Oct 2026 17:03:38 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/</guid>
+      <source>AWS News</source>
     </item>
     <item>
-      <title>How to continue a GitHub Copilot app session in VS Code</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/</link>
-      <description>Learn how to move an agent session from the GitHub Copilot app into VS Code without losing the conversation, code changes, or working context The post How to continue a GitHub Copilot app session in VS Code appeared first on The GitHub Blog.</description>
-      <pubDate>Mon, 19 Oct 2026 18:47:22 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/</guid>
+      <title>How 3 Java Champions are using GitHub Copilot for increased productivity</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/</link>
+      <description>Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results The post How 3 Java Champions are using GitHub Copilot for increased productivity appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 20 Oct 2026 16:05:03 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Introducing Clairic, a new System One class of extraction models</title>
-      <link>https://blog.cloudflare.com/clairic-extraction-model/</link>
-      <description>Clairic is a new model from Cloudflare that is a System One extraction modeI, capable of extracting, computing, estimating, and forecasting data from unstructured inputs.</description>
-      <pubDate>Mon, 19 Oct 2026 17:48:26 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/clairic-extraction-model/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>Cross-store product clustering across millions of stores</title>
+      <link>https://shopify.engineering/catalog-clustering-part-ii</link>
+      <description>How we group product listings across millions of stores using tiered matching models, graph partitioning, and learned cluster merge decisions.</description>
+      <pubDate>Tue, 20 Oct 2026 13:48:59 GMT</pubDate>
+      <guid isPermaLink="true">https://shopify.engineering/catalog-clustering-part-ii</guid>
+      <source>Shopify Engineering</source>
     </item>
   </channel>
 </rss>
