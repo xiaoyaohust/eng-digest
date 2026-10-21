@@ -34,7 +34,8 @@ test("ad accounting guide publishes five diagrams and a LinkedIn image", async (
   for (const [index, diagram] of (await page.locator(".prose .mermaid-diagram").all()).entries()) {
     await diagram.screenshot({ path: `test-results/ad-budget-diagram-${index + 1}.png`, style: ".navbar { visibility: hidden !important; }" });
   }
-  await page.goto("/");
+  // The homepage rotates its latest six articles as new guides are published.
+  await page.goto("/tags/ad-tech/");
   await expect(page.locator(`a[href="${path}"]`).first()).toBeVisible();
   await page.goto("/search/");
   await page.locator(".pagefind-ui__search-input").fill("Ad Budget and Pacing");
