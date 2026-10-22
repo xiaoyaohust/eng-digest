@@ -6,87 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 21 Oct 2026 14:19:22 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 14:19:32 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Announcing New vLLM and SGLang Inference Engines on TPU</title>
-      <link>https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/</link>
-      <description>This post announces native PyTorch backends for vLLM and SGLang powered by TorchTPU, enabling developers to run and optimize serving workloads using familiar PyTorch tools Built in collaboration with open-source project maintainers, these engines include optimized TPU kernel implementations, production-ready features like KV cache management with TPU Sync, and disaggregated serving Public benchmarks demonstrate state-of-the-art performance and industry-leading cost efficiency on Ironwood TPU across long-context and agentic workloads.</description>
-      <pubDate>Wed, 21 Oct 2026 14:19:18 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/</guid>
+      <title>Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond</title>
+      <link>https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/</link>
+      <description>The Agents CLI Extension System enables developers to use frameworks like LangChain, LangGraph, or custom enterprise stacks while retaining a unified deployment and evaluation workflow It details a first-party LangChain template that scaffolds, runs, and deploys agents without requiring the Agent Development Kit (ADK) Additionally, it demonstrates how platform teams can author custom extensions to enforce policies such as automated software bill of materials (SBOM) scans during deployment.</description>
+      <pubDate>Thu, 22 Oct 2026 14:19:29 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Integrating TorchTPU into TorchTitan and Optimizing Models for TPU</title>
-      <link>https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/</link>
-      <description>TorchTPU integrates a native torch.device(&quot;tpu&quot;) backend directly into PyTorch, allowing developers to train large-scale models on Google Cloud TPUs without rewriting code in JAX The TorchTitan TPU fork enhances this with production-grade scaling primitives like SimpleFSDP, Graph Trainer, and custom Pallas kernels that achieve high Model Flops Utilization (MFU) across dense and MoE architectures Developers can leverage these battle-tested optimization playbooks, recipes, and the Hugging Face modeling backend to efficiently scale their own workloads on TPU infrastructure.</description>
-      <pubDate>Wed, 21 Oct 2026 14:19:18 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/</guid>
-      <source>Google Developers</source>
+      <title>Single-tenant Titus: VM-level isolation on a multi-tenant container platform</title>
+      <link>https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-199472cfded5?source=rss----2615bd06b42e---4</link>
+      <description>This post is about them, and about single-tenant Titus, a mode that gives a task its own virtual machine while keeping everything else about Titus the same: the API, the deployment path, and the managed experience where the Compute/Platform team, not the application team, owns the host.We will walk through why shared-kernel isolation runs out of road for certain workloads, how we measure isolation rather than asserting it, the options we weighed (microVMs, gVisor, EC2, and more shared-kernel tuning) and why a dedicated VM inside Titus won, how the mode is built on the Titus federation layer and autoscaling, and what we have seen along three axes: isolation, fleet efficiency, and the operational cost of keeping the fleet patched.The cost of good neighborsMulti-tenancy is a tradeoff The job keeps the resources it requested; we recommend sizing it close to a node shape so the dedicated instance is well utilized, while keeping the workload portable and running identically whether in single-tenant mode or not, regardless of the host’s dimensions In aggregate, it can move the other way, for a reason related to how we dealt with poor isolation before single tenancy existed.To protect sensitive workloads on shared hosts, the platform used anti-affinity placement, scattering them across the fleet to reduce colocation of the same workload on the same nodes</description>
+      <pubDate>Thu, 22 Oct 2026 14:15:09 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-199472cfded5?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>Bringing Visual Graph Debugging to Custom Edge Compilers with Model Explorer</title>
-      <link>https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/</link>
-      <description>Google AI Edge Model Explorer now supports custom compiler intermediate representations and open-source adapters like TOSA, VGF, and PTE for on-device machine learning Developers can leverage hierarchical graph visualization, split-pane views, and per-node trace overlays to catch export regressions and verify hardware delegation These tools enable engineering teams to transparently debug execution graphs and pinpoint cycle-level latency bottlenecks locally.</description>
-      <pubDate>Wed, 21 Oct 2026 14:19:18 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/bringing-visual-graph-debugging-to-custom-edge-compilers-with-model-explorer/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Introducing full transaction detection for Cloudflare WAF</title>
-      <link>https://blog.cloudflare.com/full-transaction-waf/</link>
-      <description>Cloudflare's web application firewall can now correlate an HTTP request with its response Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.</description>
-      <pubDate>Wed, 21 Oct 2026 14:10:42 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/full-transaction-waf/</guid>
+      <title>Localizing compliance at scale: achieving South Korea’s ISMS certification</title>
+      <link>https://blog.cloudflare.com/k-isms/</link>
+      <description>Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.</description>
+      <pubDate>Thu, 22 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/k-isms/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Cloudflare deploys protections against php2shell vulnerability</title>
-      <link>https://blog.cloudflare.com/php-vulnerabilities-waf-protection/</link>
-      <description>Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.</description>
-      <pubDate>Wed, 21 Oct 2026 13:56:45 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/php-vulnerabilities-waf-protection/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>How Commerce.com and Cloudflare are getting storefronts ready for AI agents</title>
-      <link>https://blog.cloudflare.com/webmcp-commerce/</link>
-      <description>Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare Here's how we turned it on across every store at once, while keeping each merchant in control.</description>
-      <pubDate>Wed, 21 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/webmcp-commerce/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>How Shopify turns open models into task experts</title>
-      <link>https://shopify.engineering/open-model-task-experts</link>
-      <description>Sidekick’s frontier model hands its most token-heavy work to open models that Shopify post-trains and serves itself Here’s the loop we use to build them, and where NVIDIA’s models, software, and GPUs make each turn faster and cheaper.</description>
-      <pubDate>Wed, 21 Oct 2026 02:12:40 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/open-model-task-experts</guid>
+      <title>We gave AI agents a mobile dev environment</title>
+      <link>https://shopify.engineering/remote-dev</link>
+      <description>We built Remote Dev so AI agents can build and test apps in parallel, without maxing out developers’ laptops.</description>
+      <pubDate>Thu, 22 Oct 2026 12:56:38 GMT</pubDate>
+      <guid isPermaLink="true">https://shopify.engineering/remote-dev</guid>
       <source>Shopify Engineering</source>
     </item>
     <item>
-      <title>Introducing Amazon ECS Gateway: A fully-managed ingress solution for ECS services</title>
-      <link>https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/</link>
-      <description>Try Amazon ECS Gateway, a new account-level resource that simplifies ingress networking for containerized workloads by dynamically provisioning and managing the necessary infrastructure on your behalf, with all resources created directly in your account.</description>
-      <pubDate>Tue, 20 Oct 2026 17:03:38 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/introducing-amazon-ecs-gateway-a-fully-managed-ingress-solution-for-ecs-services/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>How 3 Java Champions are using GitHub Copilot for increased productivity</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/</link>
-      <description>Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results The post How 3 Java Champions are using GitHub Copilot for increased productivity appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 20 Oct 2026 16:05:03 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/</guid>
+      <title>The bridge to agent-scale Git infrastructure</title>
+      <link>https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/</link>
+      <description>We moved a copy of 99.99999% of GitHub's repositories to Azure Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently The post The bridge to agent-scale Git infrastructure appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 21 Oct 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Cross-store product clustering across millions of stores</title>
-      <link>https://shopify.engineering/catalog-clustering-part-ii</link>
-      <description>How we group product listings across millions of stores using tiered matching models, graph partitioning, and learned cluster merge decisions.</description>
-      <pubDate>Tue, 20 Oct 2026 13:48:59 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/catalog-clustering-part-ii</guid>
-      <source>Shopify Engineering</source>
+      <title>8 eMudhra certificates are compromised. Here's what you need to know</title>
+      <link>https://blog.cloudflare.com/emudhra-certificate-compromise/</link>
+      <description>Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates We explain the impact, our response, and what customers and developers should do next.</description>
+      <pubDate>Tue, 20 Oct 2026 22:20:16 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/emudhra-certificate-compromise/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>

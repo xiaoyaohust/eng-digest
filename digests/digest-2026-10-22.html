@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-10-22</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-10-22</p>
+        <div class="stats">
+            <span class="stat-item"><strong>6</strong> articles</span>
+            <span class="stat-item"><strong>5</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Cloudflare Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://blog.cloudflare.com/k-isms/" target="_blank" rel="noopener noreferrer">
+                                Localizing compliance at scale: achieving South Korea’s ISMS certification
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-22 13:00</p>
+                    <p class="article-summary">Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.</p>
+                    
+                    <a href="https://blog.cloudflare.com/k-isms/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://blog.cloudflare.com/emudhra-certificate-compromise/" target="_blank" rel="noopener noreferrer">
+                                8 eMudhra certificates are compromised. Here's what you need to know
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-20 22:20</p>
+                    <p class="article-summary">Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates We explain the impact, our response, and what customers and developers should do next.</p>
+                    
+                    <a href="https://blog.cloudflare.com/emudhra-certificate-compromise/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/" target="_blank" rel="noopener noreferrer">
+                                The bridge to agent-scale Git infrastructure
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-21 16:00</p>
+                    <p class="article-summary">We moved a copy of 99.99999% of GitHub's repositories to Azure Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently The post The bridge to agent-scale Git infrastructure appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/" target="_blank" rel="noopener noreferrer">
+                                Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-22 14:19</p>
+                    <p class="article-summary">The Agents CLI Extension System enables developers to use frameworks like LangChain, LangGraph, or custom enterprise stacks while retaining a unified deployment and evaluation workflow It details a first-party LangChain template that scaffolds, runs, and deploys agents without requiring the Agent Development Kit (ADK) Additionally, it demonstrates how platform teams can author custom extensions to enforce policies such as automated software bill of materials (SBOM) scans during deployment.</p>
+                    
+                    <a href="https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Netflix TechBlog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-199472cfded5?source=rss----2615bd06b42e---4" target="_blank" rel="noopener noreferrer">
+                                Single-tenant Titus: VM-level isolation on a multi-tenant container platform
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-22 14:15</p>
+                    <p class="article-summary">This post is about them, and about single-tenant Titus, a mode that gives a task its own virtual machine while keeping everything else about Titus the same: the API, the deployment path, and the managed experience where the Compute/Platform team, not the application team, owns the host.We will walk through why shared-kernel isolation runs out of road for certain workloads, how we measure isolation rather than asserting it, the options we weighed (microVMs, gVisor, EC2, and more shared-kernel tuning) and why a dedicated VM inside Titus won, how the mode is built on the Titus federation layer and autoscaling, and what we have seen along three axes: isolation, fleet efficiency, and the operational cost of keeping the fleet patched.The cost of good neighborsMulti-tenancy is a tradeoff The job keeps the resources it requested; we recommend sizing it close to a node shape so the dedicated instance is well utilized, while keeping the workload portable and running identically whether in single-tenant mode or not, regardless of the host’s dimensions In aggregate, it can move the other way, for a reason related to how we dealt with poor isolation before single tenancy existed.To protect sensitive workloads on shared hosts, the platform used anti-affinity placement, scattering them across the fleet to reduce colocation of the same workload on the same nodes</p>
+                    
+                    <a href="https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-199472cfded5?source=rss----2615bd06b42e---4" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Shopify Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://shopify.engineering/remote-dev" target="_blank" rel="noopener noreferrer">
+                                We gave AI agents a mobile dev environment
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-22 12:56</p>
+                    <p class="article-summary">We built Remote Dev so AI agents can build and test apps in parallel, without maxing out developers’ laptops.</p>
+                    
+                    <a href="https://shopify.engineering/remote-dev" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-10-22 14:19:32</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
