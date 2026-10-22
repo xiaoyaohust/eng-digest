@@ -240,6 +240,18 @@ img {
 
 .prose .mermaid-diagram svg { display: block; }
 
+/* rehypeMermaid emits a light and a dark SVG per diagram; show the one that
+   matches the active theme. */
+.prose .mermaid-diagram .mermaid-dark { display: none; }
+
+:root[data-theme="dark"] .prose .mermaid-diagram .mermaid-light { display: none; }
+:root[data-theme="dark"] .prose .mermaid-diagram .mermaid-dark { display: block; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .prose .mermaid-diagram .mermaid-light { display: none; }
+  :root:not([data-theme="light"]) .prose .mermaid-diagram .mermaid-dark { display: block; }
+}
+
 .prose .mermaid-diagram:focus-visible {
   outline: 2px solid var(--color-accent-bright);
   outline-offset: 2px;

@@ -14,7 +14,7 @@ test("distributed counting guide publishes runnable solutions, a diagram, and a 
   await expect(page.getByRole("heading", { name: "Python solution", exact: true })).toBeVisible();
   await expect(page.locator('.prose pre[data-language="java"]')).toHaveCount(1);
   await expect(page.locator('.prose pre[data-language="python"]')).toHaveCount(1);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(1, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(1, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose")).toContainText("O(N²)");
   await expect(page.locator(".prose")).toContainText("Permanent failure: timeout");

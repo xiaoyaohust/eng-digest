@@ -29,6 +29,39 @@ consistent with the *configured* base — they cannot know where the site is act
 `site/public/CNAME` is published with the site so the custom domain survives a Pages settings
 reset. Keep it in sync with the domain above.
 
+## Cloudflare proxy and asset caching
+
+DNS for `systemcraftlab.com` is on Cloudflare. GitHub Pages sends `cache-control: max-age=600`
+for every file and the header cannot be changed there, so even the content-hashed bundles under
+`/_astro/` would otherwise be revalidated by returning visitors every ten minutes. Proxying the
+domain through Cloudflare lets a Cache Rule give those files a one-year lifetime:
+
+1. **SSL/TLS → Overview**: set the mode to **Full**. *Flexible* loops forever, because GitHub
+   Pages redirects HTTP to HTTPS. *Full (strict)* would take the site down if GitHub's origin
+   certificate ever lapsed while proxied; *Full* still encrypts to the origin and tolerates that.
+2. **DNS → Records**: switch the four apex `A` records and the `www` `CNAME` to **Proxied**
+   (orange cloud).
+3. **Caching → Cache Rules → Create rule**, named "Hashed Astro assets":
+   - When: *Hostname* equals `systemcraftlab.com` **and** *URI Path* starts with `/_astro/`
+   - Cache eligibility: **Eligible for cache**
+   - Edge TTL: **Ignore cache-control header and use this TTL**, 1 year
+   - Browser TTL: **Override origin and use this TTL**, 1 year
+4. Leave **Web Analytics → automatic setup** off: the beacon is already in `BaseLayout`, and
+   enabling injection would count every page view twice.
+
+This is safe only because Astro puts a content hash in every filename under `/_astro/`, so a
+changed file is always a new URL. Do not widen the rule: HTML and `/pagefind/` entry files keep
+their names across deploys and must stay on the short origin TTL so a deploy shows up promptly.
+
+To check it, request any bundle twice:
+
+```bash
+curl -sI https://systemcraftlab.com/_astro/<file>.css | grep -iE 'cache-control|cf-cache-status'
+# expect: cache-control: max-age=31536000 and, on the second request, cf-cache-status: HIT
+```
+
+To roll back, switch the DNS records back to **DNS only** (grey cloud).
+
 ## What deploys
 
 - A human push to `main` runs `.github/workflows/deploy-site.yml`.
@@ -48,6 +81,7 @@ Node 22.19 or newer is required; `npm ci` refuses to run on anything older
 ```bash
 cd site
 npm ci
+npx playwright install chromium   # the build renders Mermaid diagrams in headless Chromium
 npm test
 npm run check
 npm run build

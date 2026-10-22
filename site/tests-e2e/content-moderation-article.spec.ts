@@ -9,7 +9,7 @@ test("content moderation article renders its diagrams and LinkedIn preview", asy
   await page.locator(`a[href="${path}"]`).click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Multi-Modal Content Moderation Platform");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", card);
@@ -29,7 +29,7 @@ test("content moderation article renders its diagrams and LinkedIn preview", asy
 test("content moderation architecture is scrollable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
 
   const diagram = page.locator(".prose .mermaid-diagram").first();
   const sizes = await diagram.evaluate((element) => ({ panel: element.clientWidth, scroll: element.scrollWidth }));

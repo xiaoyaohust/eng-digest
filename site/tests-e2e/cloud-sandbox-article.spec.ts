@@ -4,7 +4,7 @@ test("cloud sandbox article renders diagrams and serves its LinkedIn thumbnail",
   await page.goto("/system-design/");
   await page.locator('a[href="/system-design/cloud-sandbox-platform/"]').click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Cloud Sandbox Platform for Untrusted Code");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(

@@ -5,7 +5,7 @@ test("secure Copilot article publishes rendered diagrams and a LinkedIn image", 
   await page.locator('a[href="/system-design/secure-enterprise-copilot-api/"]').click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Secure Enterprise Copilot API");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   const image = await page.locator('meta[property="og:image"]').getAttribute("content");
@@ -26,7 +26,7 @@ test("secure Copilot article publishes rendered diagrams and a LinkedIn image", 
 test("Copilot architecture diagrams remain readable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/system-design/secure-enterprise-copilot-api/");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
 
   const diagram = page.locator(".prose .mermaid-diagram").first();
   const sizes = await diagram.evaluate((element) => {
@@ -45,7 +45,7 @@ test("restaurant analytics article renders its diagrams and LinkedIn preview", a
   await page.locator('a[href="/system-design/real-time-restaurant-analytics/"]').click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Real-Time Restaurant Analytics Dashboard");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   const image = "https://systemcraftlab.com/social/auto/system-design/real-time-restaurant-analytics.png";
@@ -66,7 +66,7 @@ test("restaurant analytics article renders its diagrams and LinkedIn preview", a
 test("restaurant analytics architecture diagram is horizontally navigable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/system-design/real-time-restaurant-analytics/");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
 
   const diagram = page.locator(".prose .mermaid-diagram").first();
   const sizes = await diagram.evaluate((element) => ({ panel: element.clientWidth, scroll: element.scrollWidth }));
@@ -81,7 +81,7 @@ test("stock price alert article renders four diagrams and a LinkedIn preview", a
   await page.locator('a[href="/system-design/real-time-stock-price-alerts/"]').click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Real-Time Stock Price Alert System");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   const image = "https://systemcraftlab.com/social/auto/system-design/real-time-stock-price-alerts.png";
@@ -104,7 +104,7 @@ test("multiplayer board game article renders architecture diagrams and a LinkedI
   await page.locator('a[href="/system-design/real-time-multiplayer-board-games/"]').click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Design a Real-Time Multiplayer Board Game Platform");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   const image = "https://systemcraftlab.com/social/auto/system-design/real-time-multiplayer-board-games.png";

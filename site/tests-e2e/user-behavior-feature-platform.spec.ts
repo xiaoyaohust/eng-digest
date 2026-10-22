@@ -10,7 +10,7 @@ test("user behavior feature platform publishes four diagrams and its LinkedIn ca
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Design a User Behavior Data and Feature Platform",
   );
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "Offline training and online inference are different paths" })).toBeVisible();
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);
@@ -30,7 +30,7 @@ test("user behavior feature platform publishes four diagrams and its LinkedIn ca
 test("feature platform architecture diagram can be explored on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(4, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(4, { timeout: 30_000 });
 
   const diagram = page.locator(".prose .mermaid-diagram").first();
   const sizes = await diagram.evaluate((element) => ({ panel: element.clientWidth, scroll: element.scrollWidth }));

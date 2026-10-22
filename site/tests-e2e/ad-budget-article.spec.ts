@@ -12,7 +12,7 @@ test("ad accounting guide publishes five diagrams and a LinkedIn image", async (
   await cluster.locator(`a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(5, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose")).toContainText("Reserved exposure is not automatically overspend.");
   await expect(page.locator(".prose")).toContainText("Expiry alone is not evidence that money is unused.");
@@ -45,7 +45,7 @@ test("ad accounting guide publishes five diagrams and a LinkedIn image", async (
 test("ad accounting diagrams and reference tables stay usable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(5, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5, { timeout: 30_000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const table = page.getByRole("region", { name: "Advertising accounting records" });
   expect(await table.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true);

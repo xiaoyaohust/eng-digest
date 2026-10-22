@@ -18,7 +18,7 @@ test("IP addressing article joins the existing networking category and publishes
   await cluster.locator(`a[href="${path}"]`).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose .table-scroll table")).toHaveCount(4);
   await expect(page.getByRole("heading", { name: "Failure scenarios and useful evidence", exact: true })).toBeVisible();
@@ -59,7 +59,7 @@ test("IP addressing article joins the existing networking category and publishes
 test("IP addressing diagrams and tables remain usable on mobile", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const table = page.getByRole("region", { name: "Longest prefix match example routes" });
   expect(await table.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true);

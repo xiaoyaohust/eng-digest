@@ -15,7 +15,7 @@ test("resumable iterator guide publishes both runnable solutions and a share car
   for (const language of ["java", "python"]) {
     await expect(page.locator(`.prose pre[data-language="${language}"]`)).toHaveCount(1);
   }
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(1, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(1, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose .table-scroll table")).toHaveCount(2);
   await expect(page.locator(".prose")).toContainText("File next offset: 11");

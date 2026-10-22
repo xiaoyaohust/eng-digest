@@ -13,7 +13,7 @@ test("shard rebalancing article publishes its solutions, diagram, and social car
   }
   await expect(page.locator('.prose pre[data-language="java"]')).toHaveCount(1);
   await expect(page.locator('.prose pre[data-language="python"]')).toHaveCount(1);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(1, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(1, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose")).toContainText("Nested deletion: [(A, 0, 100), (C, 101, 150)]");
   await expect(page.locator("html")).toHaveAttribute("lang", "en");

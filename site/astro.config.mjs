@@ -4,6 +4,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeMermaid from "./src/lib/rehypeMermaid.mjs";
 
 // SITE_URL / BASE_PATH let the deployment target change without touching any
 // component code. Defaults match the live custom domain, which serves the site
@@ -33,8 +34,12 @@ export default defineConfig({
       rehypePlugins: [
         rehypeSlug,
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
+        rehypeMermaid,
       ],
     }),
+    // rehypeMermaid renders mermaid blocks to SVG at build time; Shiki must
+    // leave them as plain code for it to find.
+    syntaxHighlight: { type: "shiki", excludeLangs: ["mermaid"] },
     shikiConfig: {
       themes: {
         light: "github-light",

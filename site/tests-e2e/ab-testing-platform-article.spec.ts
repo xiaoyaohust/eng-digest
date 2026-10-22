@@ -9,7 +9,7 @@ test("experimentation article publishes five diagrams and a LinkedIn preview", a
   await page.goto("/system-design/");
   await page.locator(`a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(5, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator('.prose pre[data-language="python"]')).toHaveCount(1);
   await expect(page.locator('.prose pre[data-language="sql"]')).toHaveCount(1);
@@ -46,7 +46,7 @@ test("experimentation article publishes five diagrams and a LinkedIn preview", a
 test("experimentation diagrams remain scrollable on mobile without page overflow", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(5, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5, { timeout: 30_000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await expect(page.getByRole("region", { name: "Experimentation API reference" }).locator("table")).toHaveCount(1);
   const diagram = page.locator(".prose .mermaid-diagram").first();

@@ -12,7 +12,7 @@ test("autocomplete design publishes in its search cluster with five diagrams and
   await cluster.locator(`a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(5, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose .table-scroll table")).toHaveCount(3);
   await expect(page.locator(".prose")).toContainText("M greater than K does not guarantee K safe results");
@@ -53,7 +53,7 @@ test("autocomplete design publishes in its search cluster with five diagrams and
 test("autocomplete diagrams and tables are accessible on mobile without page overflow", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(5, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5, { timeout: 30_000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const table = page.getByRole("region", { name: "Autocomplete index and overlay artifacts" });
   expect(await table.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true);

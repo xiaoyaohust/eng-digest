@@ -46,6 +46,12 @@ jobs:
         working-directory: site
         run: npm run import-digests
 
+      # The build renders Mermaid diagrams in headless Chromium; see
+      # build-deploy-site.yml.
+      - name: Install Chromium for diagram rendering
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
       - name: Type-check and validate content schemas
         working-directory: site
         env:

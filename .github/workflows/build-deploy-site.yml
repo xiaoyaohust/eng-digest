@@ -59,6 +59,15 @@ jobs:
         working-directory: site
         run: npm test
 
+      # Mermaid diagrams are rendered to SVG at build time in headless
+      # Chromium (src/lib/rehypeMermaid.mjs), and `astro check` renders
+      # content too, so the browser must exist before either runs. The same
+      # browser serves the interaction tests below; --with-deps also installs
+      # fonts-liberation, which the diagram text is measured against.
+      - name: Install Chromium for diagram rendering and interaction tests
+        working-directory: site
+        run: npx playwright install --with-deps chromium
+
       - name: Type-check and validate content schemas
         working-directory: site
         env:
@@ -75,10 +84,6 @@ jobs:
       # Both callers deploy main's HEAD, so skipping it on either one would let
       # a change that failed the gate on its own push go live the next morning.
       # Playwright retries twice in CI to absorb ordinary browser flakes.
-      - name: Install Chromium for interaction tests
-        working-directory: site
-        run: npx playwright install --with-deps chromium
-
       - name: Test browser interactions
         working-directory: site
         run: npm run test:e2e

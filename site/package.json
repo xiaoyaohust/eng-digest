@@ -27,10 +27,15 @@
     "@astrojs/mdx": "^8.0.1",
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.2",
+    "hast-util-from-html": "^2.0.3",
+    "hast-util-to-text": "^4.0.2",
     "mermaid": "11.17.2",
+    "mermaid-isomorphic": "^3.1.0",
+    "playwright": "^1.63.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "sharp": "^0.35.4",
+    "unist-util-visit": "^5.1.0",
     "yaml": "^2.9.1"
   },
   "devDependencies": {

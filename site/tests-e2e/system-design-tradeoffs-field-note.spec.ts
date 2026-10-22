@@ -9,7 +9,7 @@ test("trade-offs Field Note is published with rendered diagrams, sources, and a 
   await page.locator(`.notes-library a[href="${path}"]`).first().click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("The Trade-offs Behind Every System Design");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(2, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", image);

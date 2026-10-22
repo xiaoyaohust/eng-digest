@@ -9,7 +9,7 @@ test("no perfect architecture Field Note publishes in its topic with diagrams an
   });
   await cluster.locator(`a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Why No Architecture Is Perfect");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(2, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "Further reading", exact: true })).toBeVisible();
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(

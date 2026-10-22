@@ -10,7 +10,7 @@ test("Field Notes publishes its first article without a coming-soon state", asyn
 
   await expect(page).toHaveURL(new RegExp(`${articlePath}$`));
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("The Five Constraints of System Design");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(2, { timeout: 30_000 });
 
   const image = await page.locator('meta[property="og:image"]').getAttribute("content");
   expect(image).toBe("https://systemcraftlab.com/social/auto/field-notes/five-constraints-of-system-design.png");
@@ -38,7 +38,7 @@ test("scalability Field Note appears in the library with a rendered diagram and 
   await page.locator(`.notes-library a[href="${path}"]`).first().click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("What Scalability Really Means");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(1, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(1, { timeout: 30_000 });
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
     "content",
     "https://systemcraftlab.com/social/auto/field-notes/what-scalability-really-means.png",
@@ -59,7 +59,7 @@ test("reliability Field Note publishes its recovery diagrams and share image", a
   await page.locator(`.notes-library a[href="${path}"]`).first().click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Reliability and Fault Tolerance: The Recovery Path");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
     "content",
@@ -81,7 +81,7 @@ test("vertical and horizontal scaling Field Note publishes diagrams and a social
   await page.locator(`.notes-library a[href="${path}"]`).first().click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Vertical vs Horizontal Scaling: Where the Bottleneck Moves");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(2, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
 
   const image = "https://systemcraftlab.com/social/auto/field-notes/vertical-vs-horizontal-scaling.png";
@@ -117,7 +117,7 @@ test("Field Notes uses manually assigned topic clusters and publishes the state 
   await cluster.locator(`a[href="${path}"]`).click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Stateless vs Stateful: Where Does the State Live?");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();
 
@@ -140,7 +140,7 @@ test("capacity estimation Field Note publishes its diagram and social preview", 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     "Capacity Estimation: From DAU to QPS, Storage, and Bandwidth",
   );
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(1, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(1, { timeout: 30_000 });
   await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();
 
   const image = "https://systemcraftlab.com/social/auto/field-notes/capacity-estimation-from-dau-to-infrastructure.png";
@@ -159,7 +159,7 @@ test("Big-O Field Note publishes its diagrams, sources, and social preview", asy
   await page.locator(`.notes-library a[href="${path}"]`).first().click();
 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("How Much Does Big-O Matter in System Design?");
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(2, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(2, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "Failure changes the cost model" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Further reading" })).toBeVisible();

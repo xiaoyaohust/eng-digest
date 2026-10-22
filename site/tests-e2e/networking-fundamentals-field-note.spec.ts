@@ -23,7 +23,7 @@ test("networking Field Note creates a manual category and publishes diagrams and
   await cluster.locator(`a[href="${path}"]`).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   await expect(page.locator('.prose pre[data-language="mermaid"]')).toHaveCount(0);
   await expect(page.locator(".prose .table-scroll")).toHaveCount(3);
   await expect(page.locator(".prose .table-scroll table")).toHaveCount(3);
@@ -66,7 +66,7 @@ test("networking article and category remain usable on a small screen", async ({
   await expect(page.getByRole("heading", { name: topic, exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.goto(path);
-  await expect(page.locator(".prose .mermaid-diagram svg")).toHaveCount(3, { timeout: 30_000 });
+  await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(3, { timeout: 30_000 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   const table = page.getByRole("region", { name: "OSI and TCP IP responsibility mapping" });
   expect(await table.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(true);
