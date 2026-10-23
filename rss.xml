@@ -6,55 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 22 Oct 2026 14:19:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 14:02:46 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond</title>
-      <link>https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/</link>
-      <description>The Agents CLI Extension System enables developers to use frameworks like LangChain, LangGraph, or custom enterprise stacks while retaining a unified deployment and evaluation workflow It details a first-party LangChain template that scaffolds, runs, and deploys agents without requiring the Agent Development Kit (ADK) Additionally, it demonstrates how platform teams can author custom extensions to enforce policies such as automated software bill of materials (SBOM) scans during deployment.</description>
-      <pubDate>Thu, 22 Oct 2026 14:19:29 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/</guid>
+      <title>Architecting Governed, Self-Evolving AI Agents on Google Cloud</title>
+      <link>https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/</link>
+      <description>Learn how Project Chrysalis combines Google Cloud's Gemini Enterprise Agent Platform, Agent Development Kit (ADK), BigQuery, and a four-gate defense-in-depth security stack (Model Armor, Cloud KMS, Binary Authorization, and OPA) to build governed, self-evolving AI agents that remediate live production outages in 1.8 seconds.</description>
+      <pubDate>Fri, 23 Oct 2026 14:02:44 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec</title>
+      <link>https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/</link>
+      <description>API Gateway now supports real-time streaming—including Server-Sent Events, WebSockets, gRPC, and chunked transfer encoding—in Public Preview without requiring changes to your existing API specifications This update allows developers to route long-lived, bi-directional streams and AI workloads directly through the gateway while maintaining consistent authentication, rate limiting, and observability Additionally, gateways now feature deterministic default hostnames, simplifying environment provisioning and infrastructure-as-code management.</description>
+      <pubDate>Fri, 23 Oct 2026 14:02:44 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/</guid>
       <source>Google Developers</source>
     </item>
     <item>
       <title>Single-tenant Titus: VM-level isolation on a multi-tenant container platform</title>
-      <link>https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-199472cfded5?source=rss----2615bd06b42e---4</link>
+      <link>https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4</link>
       <description>This post is about them, and about single-tenant Titus, a mode that gives a task its own virtual machine while keeping everything else about Titus the same: the API, the deployment path, and the managed experience where the Compute/Platform team, not the application team, owns the host.We will walk through why shared-kernel isolation runs out of road for certain workloads, how we measure isolation rather than asserting it, the options we weighed (microVMs, gVisor, EC2, and more shared-kernel tuning) and why a dedicated VM inside Titus won, how the mode is built on the Titus federation layer and autoscaling, and what we have seen along three axes: isolation, fleet efficiency, and the operational cost of keeping the fleet patched.The cost of good neighborsMulti-tenancy is a tradeoff The job keeps the resources it requested; we recommend sizing it close to a node shape so the dedicated instance is well utilized, while keeping the workload portable and running identically whether in single-tenant mode or not, regardless of the host’s dimensions In aggregate, it can move the other way, for a reason related to how we dealt with poor isolation before single tenancy existed.To protect sensitive workloads on shared hosts, the platform used anti-affinity placement, scattering them across the fleet to reduce colocation of the same workload on the same nodes</description>
-      <pubDate>Thu, 22 Oct 2026 14:15:09 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-199472cfded5?source=rss----2615bd06b42e---4</guid>
+      <pubDate>Thu, 22 Oct 2026 22:19:12 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>Localizing compliance at scale: achieving South Korea’s ISMS certification</title>
-      <link>https://blog.cloudflare.com/k-isms/</link>
-      <description>Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.</description>
-      <pubDate>Thu, 22 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/k-isms/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>AWS Continuum for code vulnerabilities is now generally available</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/</link>
+      <description>AWS Continuum for code vulnerabilities is a new security service that uses AI to automatically find, validate, and prioritize code vulnerabilities in your environment, then delivers ready-to-review fixes as pull requests replacing what previously took hours of manual investigation and days of cross-team coordination.</description>
+      <pubDate>Thu, 22 Oct 2026 20:33:10 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/</guid>
+      <source>AWS News</source>
     </item>
     <item>
-      <title>We gave AI agents a mobile dev environment</title>
-      <link>https://shopify.engineering/remote-dev</link>
-      <description>We built Remote Dev so AI agents can build and test apps in parallel, without maxing out developers’ laptops.</description>
-      <pubDate>Thu, 22 Oct 2026 12:56:38 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/remote-dev</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>The bridge to agent-scale Git infrastructure</title>
-      <link>https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/</link>
-      <description>We moved a copy of 99.99999% of GitHub's repositories to Azure Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently The post The bridge to agent-scale Git infrastructure appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 21 Oct 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/</guid>
+      <title>How bug bounty sharpens one researcher’s security skills</title>
+      <link>https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/</link>
+      <description>As Cybersecurity Awareness Month continues, the GitHub Bug Bounty team spotlights @r31n, diving into their research approach, favorite bug classes, and advice for aspiring hackers The post How bug bounty sharpens one researcher’s security skills appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 22 Oct 2026 17:21:30 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>8 eMudhra certificates are compromised. Here's what you need to know</title>
-      <link>https://blog.cloudflare.com/emudhra-certificate-compromise/</link>
-      <description>Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates We explain the impact, our response, and what customers and developers should do next.</description>
-      <pubDate>Tue, 20 Oct 2026 22:20:16 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/emudhra-certificate-compromise/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>Trends from Money20/20 2026: The rise of “hidden” financial services</title>
+      <link>https://stripe.com/blog/trends-from-money20-20-2026-the-rise-of-hidden-financial-services</link>
+      <description>As fintech products become increasingly capable, the infrastructure behind them fades into the background Three trends from Money20/20 show how stablecoins, agents, and always-on money are changing financial services.</description>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/trends-from-money20-20-2026-the-rise-of-hidden-financial-services</guid>
+      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
