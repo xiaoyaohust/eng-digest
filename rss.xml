@@ -6,55 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 23 Oct 2026 14:02:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 13:04:58 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Architecting Governed, Self-Evolving AI Agents on Google Cloud</title>
-      <link>https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/</link>
-      <description>Learn how Project Chrysalis combines Google Cloud's Gemini Enterprise Agent Platform, Agent Development Kit (ADK), BigQuery, and a four-gate defense-in-depth security stack (Model Armor, Cloud KMS, Binary Authorization, and OPA) to build governed, self-evolving AI agents that remediate live production outages in 1.8 seconds.</description>
-      <pubDate>Fri, 23 Oct 2026 14:02:44 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec</title>
-      <link>https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/</link>
-      <description>API Gateway now supports real-time streaming—including Server-Sent Events, WebSockets, gRPC, and chunked transfer encoding—in Public Preview without requiring changes to your existing API specifications This update allows developers to route long-lived, bi-directional streams and AI workloads directly through the gateway while maintaining consistent authentication, rate limiting, and observability Additionally, gateways now feature deterministic default hostnames, simplifying environment provisioning and infrastructure-as-code management.</description>
-      <pubDate>Fri, 23 Oct 2026 14:02:44 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Single-tenant Titus: VM-level isolation on a multi-tenant container platform</title>
-      <link>https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4</link>
-      <description>This post is about them, and about single-tenant Titus, a mode that gives a task its own virtual machine while keeping everything else about Titus the same: the API, the deployment path, and the managed experience where the Compute/Platform team, not the application team, owns the host.We will walk through why shared-kernel isolation runs out of road for certain workloads, how we measure isolation rather than asserting it, the options we weighed (microVMs, gVisor, EC2, and more shared-kernel tuning) and why a dedicated VM inside Titus won, how the mode is built on the Titus federation layer and autoscaling, and what we have seen along three axes: isolation, fleet efficiency, and the operational cost of keeping the fleet patched.The cost of good neighborsMulti-tenancy is a tradeoff The job keeps the resources it requested; we recommend sizing it close to a node shape so the dedicated instance is well utilized, while keeping the workload portable and running identically whether in single-tenant mode or not, regardless of the host’s dimensions In aggregate, it can move the other way, for a reason related to how we dealt with poor isolation before single tenancy existed.To protect sensitive workloads on shared hosts, the platform used anti-affinity placement, scattering them across the fleet to reduce colocation of the same workload on the same nodes</description>
-      <pubDate>Thu, 22 Oct 2026 22:19:12 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/single-tenant-titus-vm-level-isolation-on-a-multi-tenant-container-platform-6d8b1909d163?source=rss----2615bd06b42e---4</guid>
+      <title>Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes</title>
+      <link>https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4</link>
+      <description>Quasar can then connect the library API to its consumer across repositories.Language-specific indexers emit SCIP definitions, references, and relationships into Quasar’s shared semantic graph.Relationships are especially useful when generated code separates the API a producer owns from the symbols consumers invoke For example, Quasar can trace a Protobuf definition through its generated Java members to the repositories that use them, even when consumer code never names the .proto element.SCIP records symbols and their references; it does not determine whether an API change violates an ecosystem’s compatibility rules Producers can review change findings through Quasar’s REST and GraphQL APIs or its MCP server, then investigate affected repositories and call sites</description>
+      <pubDate>Fri, 23 Oct 2026 18:32:51 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4</guid>
       <source>Netflix TechBlog</source>
     </item>
     <item>
-      <title>AWS Continuum for code vulnerabilities is now generally available</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/</link>
-      <description>AWS Continuum for code vulnerabilities is a new security service that uses AI to automatically find, validate, and prioritize code vulnerabilities in your environment, then delivers ready-to-review fixes as pull requests replacing what previously took hours of manual investigation and days of cross-team coordination.</description>
-      <pubDate>Thu, 22 Oct 2026 20:33:10 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-continuum-for-code-vulnerabilities-is-now-generally-available/</guid>
-      <source>AWS News</source>
+      <title>Origin Range Requests: Serving large files without range-request tuning</title>
+      <link>https://blog.cloudflare.com/origin-range-requests/</link>
+      <description>Naive byte-range caching can waste gigabytes of origin bandwidth on small requests We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.</description>
+      <pubDate>Fri, 23 Oct 2026 18:22:59 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/origin-range-requests/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>How bug bounty sharpens one researcher’s security skills</title>
-      <link>https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/</link>
-      <description>As Cybersecurity Awareness Month continues, the GitHub Bug Bounty team spotlights @r31n, diving into their research approach, favorite bug classes, and advice for aspiring hackers The post How bug bounty sharpens one researcher’s security skills appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 22 Oct 2026 17:21:30 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Trends from Money20/20 2026: The rise of “hidden” financial services</title>
-      <link>https://stripe.com/blog/trends-from-money20-20-2026-the-rise-of-hidden-financial-services</link>
-      <description>As fintech products become increasingly capable, the infrastructure behind them fades into the background Three trends from Money20/20 show how stablecoins, agents, and always-on money are changing financial services.</description>
-      <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/trends-from-money20-20-2026-the-rise-of-hidden-financial-services</guid>
-      <source>Stripe Engineering</source>
+      <title>Bringing post-quantum cryptography to geographically fenced key management</title>
+      <link>https://blog.cloudflare.com/post-quantum-geo-key-manager/</link>
+      <description>Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.</description>
+      <pubDate>Fri, 23 Oct 2026 18:06:56 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/post-quantum-geo-key-manager/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
