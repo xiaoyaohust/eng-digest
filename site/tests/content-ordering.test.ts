@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { contentSections } from "../src/data/contentSections.ts";
+import { contentSections, sectionCode } from "../src/data/contentSections.ts";
 import { newestFirst, groupByLatestArticle } from "../src/lib/contentOrdering.ts";
 import { orderAIArticles } from "../src/data/ai.ts";
 
@@ -8,11 +8,12 @@ const entry = (id: string, topic: string, date: string, order = 1) =>
   ({ id, data: { topic, date: new Date(date), order } });
 
 describe("content listing order", () => {
-  it("keeps the six content sections in editorial order, independent of module codes", () => {
+  it("keeps the six content sections in editorial order and numbers modules in that order", () => {
     assert.deepEqual(contentSections.map((section) => section.id), [
       "system-design", "ai", "field-notes", "eng-digest", "science", "coding",
     ]);
     assert.equal(new Set(contentSections.map((section) => section.href)).size, 6);
+    assert.deepEqual(contentSections.map((section) => sectionCode(section.id)), ["01", "02", "03", "04", "05", "06"]);
   });
 
   it("sorts by publication time without changing input or using updated dates", () => {

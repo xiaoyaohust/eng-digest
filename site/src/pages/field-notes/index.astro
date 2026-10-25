@@ -1,4 +1,5 @@
 ---
+import { sectionCode } from "@/data/contentSections";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
@@ -20,7 +21,7 @@ const clusterId = (topic: string, index: number) =>
     <div class="wrap field-notes-grid">
       <div class="field-notes-copy">
         <a class="back-link" href={withBase("/")}>&larr; KNOWLEDGE BASE</a>
-        <p class="eyebrow"><span></span> MODULE 03 / FIELD NOTES</p>
+        <p class="eyebrow"><span></span> MODULE {sectionCode("field-notes")} / FIELD NOTES</p>
         <h1>Engineering <br /><em>Field Notes</em></h1>
         <p class="intro">
           Practical write-ups on production systems, technical decisions, and the

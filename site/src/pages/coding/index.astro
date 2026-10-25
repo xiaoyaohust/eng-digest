@@ -1,4 +1,5 @@
 ---
+import { sectionCode } from "@/data/contentSections";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
@@ -10,7 +11,7 @@ const articles = await published("coding");
   <div class="wrap section">
     <h1>Coding</h1>
     <p class="muted section-intro">Algorithms, patterns, and interview problems.</p>
-    <div class="section-status"><span>MODULE 02</span><span>{articles.length} NOTES</span><span>PATTERNS / COMPLEXITY / PRACTICE</span></div>
+    <div class="section-status"><span>MODULE {sectionCode("coding")}</span><span>{articles.length} NOTES</span><span>PATTERNS / COMPLEXITY / PRACTICE</span></div>
     <div class="card-grid">
       {articles.map((entry) => (
         <ArticleCard

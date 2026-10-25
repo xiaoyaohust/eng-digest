@@ -1,4 +1,5 @@
 ---
+import { sectionCode } from "@/data/contentSections";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import DigestCard from "@/components/DigestCard.astro";
 import WeeklyDigestCard from "@/components/WeeklyDigestCard.astro";
@@ -37,7 +38,7 @@ const monthLabel = (month: string) => new Intl.DateTimeFormat("en", { month:"lon
       <a class="rss-link" href={withBase("/rss.xml")}><span></span> RSS SIGNAL</a>
     </div>
 
-    <div class="section-status"><span>MODULE 04</span><span>{digests.length} DIGESTS</span><span>AUTOMATED / STATIC / DAILY</span></div>
+    <div class="section-status"><span>MODULE {sectionCode("eng-digest")}</span><span>{digests.length} DIGESTS</span><span>AUTOMATED / STATIC / DAILY</span></div>
 
     {latestWeek && (
       <section class="weekly-feature">

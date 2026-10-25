@@ -1,4 +1,5 @@
 ---
+import { sectionCode } from "@/data/contentSections";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
@@ -17,7 +18,7 @@ const clusterId = (topic: string) => topic.toLowerCase().replace(/[^a-z0-9]+/g,"
   <div class="wrap section">
     <h1>System Design</h1>
     <p class="muted section-intro">Architecture and distributed systems interview prep.</p>
-    <div class="section-status"><span>MODULE 01</span><span>{articles.length} NOTES</span><span>ARCHITECTURE / TRADE-OFFS / SCALE</span></div>
+    <div class="section-status"><span>MODULE {sectionCode("system-design")}</span><span>{articles.length} NOTES</span><span>ARCHITECTURE / TRADE-OFFS / SCALE</span></div>
     <nav class="cluster-nav" aria-label="System design topic clusters">
       <span>TOPIC CLUSTERS</span>
       {clusters.map(([topic, entries]) => <a href={`#${clusterId(topic)}`}>{topic} <small>{entries.length}</small></a>)}

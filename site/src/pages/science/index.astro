@@ -1,4 +1,5 @@
 ---
+import { sectionCode } from "@/data/contentSections";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { published } from "@/lib/content";
 import { groupByLatestArticle } from "@/lib/contentOrdering";
@@ -13,7 +14,7 @@ const projects = groupByLatestArticle(articles, (entry) => entry.data.project);
   <section class="observatory-hero">
     <div class="wrap observatory-grid">
       <div>
-        <p class="eyebrow">MODULE 05 / CODE, DATA &amp; RESEARCH</p>
+        <p class="eyebrow">MODULE {sectionCode("science")} / CODE, DATA &amp; RESEARCH</p>
         <h1>Computing<br /><em>for Science</em></h1>
         <p class="intro">Python pipelines, numerical models, and experiments with public scientific data. Each project records its measurements, uncertainty checks, and unfinished work.</p>
         <a class="project-jump" href="#projects">Browse research projects ↓</a>

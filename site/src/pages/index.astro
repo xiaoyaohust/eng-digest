@@ -8,7 +8,7 @@ import { published, publishedDigests } from "@/lib/content";
 import { learningPaths, learningPathDuration } from "@/data/learningPaths";
 import { scienceArticleHref, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
 import { AI_SECTION_NAME } from "@/data/ai";
-import { contentSections } from "@/data/contentSections";
+import { contentSections, sectionCode } from "@/data/contentSections";
 import { founder } from "@/data/founder";
 
 const [systemDesign, coding, fieldNotes, digests, science, ai] = await Promise.all([
@@ -76,6 +76,7 @@ const counts = {
 };
 const sections = contentSections.map((section) => ({
   ...section,
+  code: sectionCode(section.id),
   meta: section.id === "ai"
     ? `${counts.ai} ${counts.ai === 1 ? "section" : "sections"}`
     : `${counts[section.id]} entries`,
