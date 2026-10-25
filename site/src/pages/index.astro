@@ -2,12 +2,14 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import DigestCard from "@/components/DigestCard.astro";
+import FounderIntro from "@/components/FounderIntro.astro";
 import { withBase } from "@/lib/url";
 import { published, publishedDigests } from "@/lib/content";
 import { learningPaths, learningPathDuration } from "@/data/learningPaths";
 import { scienceArticleHref, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
 import { AI_SECTION_NAME } from "@/data/ai";
 import { contentSections } from "@/data/contentSections";
+import { founder } from "@/data/founder";
 
 const [systemDesign, coding, fieldNotes, digests, science, ai] = await Promise.all([
   published("system-design"),
@@ -78,11 +80,24 @@ const sections = contentSections.map((section) => ({
     ? `${counts.ai} ${counts.ai === 1 ? "section" : "sections"}`
     : `${counts[section.id]} entries`,
 }));
+
+const founderSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": new URL(`${withBase("/")}#about-founder`, Astro.site).toString(),
+  name: founder.name,
+  description: `${founder.publicationRole} at System Craft Lab. ${founder.bio}`,
+  jobTitle: founder.jobTitle,
+  worksFor: { "@type": "Organization", name: founder.employer },
+  image: new URL(withBase(founder.portrait), Astro.site).toString(),
+  url: new URL(`${withBase("/")}#about-founder`, Astro.site).toString(),
+};
 ---
 
 <BaseLayout
   title="Eng Knowledge"
   description="Practical notes on system design, coding, engineering practice, and real-world systems."
+  structuredData={founderSchema}
 >
   <section class="hero">
     <div class="wrap hero-grid">
@@ -123,6 +138,8 @@ const sections = contentSections.map((section) => ({
       </div>
     </div>
   </section>
+
+  <FounderIntro />
 
   <section class="wrap home-section tracks-section">
     <header class="home-section-header">

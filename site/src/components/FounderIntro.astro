@@ -1,0 +1,90 @@
+---
+import { founder } from "@/data/founder";
+import { withBase } from "@/lib/url";
+---
+
+<section class="founder-section" id="about-founder" aria-labelledby="founder-name">
+  <div class="wrap">
+    <div class="founder-card">
+      <div class="founder-identity">
+        <div class="portrait-frame">
+          <img
+            src={withBase(founder.portrait)}
+            alt={`Portrait of ${founder.name}`}
+            width="400"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="founder-details">
+          <p class="founder-role">{founder.publicationRole}</p>
+          <h2 id="founder-name">{founder.name}</h2>
+          <p class="founder-job">{founder.jobTitle}<br /><span>at {founder.employer}</span></p>
+        </div>
+      </div>
+      <div class="founder-story">
+        <p class="founder-eyebrow">THE PERSON BEHIND SYSTEM CRAFT LAB</p>
+        <p class="founder-lead">{founder.lead}</p>
+        <p class="founder-bio">{founder.bio}</p>
+        <div class="founder-bottom">
+          <p class="founder-background">Previously at <span>{founder.previousCompanies.join(" · ")}</span></p>
+          <a class="founder-link" href={withBase("/field-notes/")}>Read my field notes <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="founder-disclaimer">Independent publication. Views are my own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .founder-section { padding-top: 32px; scroll-margin-top: 94px; }
+  .founder-card {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 40px;
+    padding: 32px;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 8px;
+    background: var(--color-bg-raised);
+    box-shadow: var(--shadow-card);
+  }
+  .founder-identity { display: flex; align-items: center; gap: 24px; min-width: 0; }
+  .portrait-frame { flex: 0 0 128px; overflow: hidden; border: 1px solid var(--color-border); border-radius: 6px; background: #fff; }
+  .portrait-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+  .founder-details { min-width: 0; }
+  .founder-role { margin: 0 0 9px; font: .62rem/1.7 var(--font-mono); color: var(--color-accent); }
+  h2 { margin: 0; color: var(--color-text); font: 700 clamp(1.9rem, 3vw, 2.5rem)/1.1 var(--font-display); letter-spacing: -.035em; }
+  .founder-job { margin: 12px 0 0; font-size: .85rem; line-height: 1.6; color: var(--color-text-muted); }
+  .founder-job span { color: var(--color-text); font-weight: 600; }
+  .founder-story { padding-left: 32px; border-left: 1px solid var(--color-border); min-width: 0; }
+  .founder-eyebrow { margin: 0 0 12px; color: var(--color-accent); font: .58rem/1.6 var(--font-mono); letter-spacing: .09em; }
+  .founder-lead { margin: 0 0 12px; color: var(--color-text); font: 600 clamp(1.2rem, 2vw, 1.45rem)/1.35 var(--font-display); letter-spacing: -.02em; }
+  .founder-bio { margin: 0; color: var(--color-text-muted); font-size: .88rem; line-height: 1.75; }
+  .founder-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; margin-top: 20px; }
+  .founder-background { margin: 0; color: var(--color-text-muted); font-size: .73rem; }
+  .founder-background span { color: var(--color-text); }
+  .founder-link { display: inline-flex; gap: 16px; align-items: center; color: var(--color-accent); font: 600 .7rem/1.5 var(--font-mono); }
+  .founder-link:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; border-radius: 2px; }
+  .founder-disclaimer { margin: 14px 0 0; color: var(--color-text-muted); font-size: .66rem; }
+
+  @media (max-width: 1000px) {
+    .founder-card { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 24px; padding: 26px; }
+    .founder-identity { gap: 18px; }
+    .portrait-frame { flex-basis: 96px; }
+    .founder-story { padding-left: 24px; }
+  }
+  @media (max-width: 760px) {
+    .founder-section { padding-top: 24px; }
+    .founder-card { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 24px; }
+    .founder-story { padding: 22px 0 0; border-left: 0; border-top: 1px solid var(--color-border); }
+    .founder-bottom { align-items: flex-start; flex-direction: column; }
+  }
+  @media (max-width: 380px) {
+    .founder-card { padding: 20px; }
+    .portrait-frame { flex-basis: 76px; }
+    .founder-identity { gap: 14px; }
+  }
+</style>
