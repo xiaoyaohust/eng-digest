@@ -1,5 +1,6 @@
 ---
 import { withBase } from "@/lib/url";
+import { AI_SECTION_NAME } from "@/data/ai";
 
 const year = new Date().getFullYear();
 ---
@@ -12,6 +13,7 @@ const year = new Date().getFullYear();
     </div>
     <nav class="footer-links">
       <a href={withBase("/field-notes/")}>Engineering Field Notes</a>
+      <a href={withBase("/ai/")}>{AI_SECTION_NAME}</a>
       <a href={withBase("/science/")}>Computing for Science</a>
       <a href={withBase("/architecture-lab/")}>Decision Lab</a>
       <a href={withBase("/eng-digest/")}>Engineering Digest</a>

@@ -2,11 +2,13 @@
 import { withBase } from "@/lib/url";
 import ThemeToggle from "./ThemeToggle.astro";
 import { SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
+import { AI_SECTION_NAME } from "@/data/ai";
 
 const navItems = [
   { label: "Systems", href: "/system-design/" },
   { label: "Coding", href: "/coding/" },
   { label: "Field Notes", href: "/field-notes/" },
+  { label: AI_SECTION_NAME, href: "/ai/" },
   { label: SCIENCE_SECTION_NAME, href: "/science/" },
   { label: "Lab", href: "/architecture-lab/" },
   { label: "Digest", href: "/eng-digest/" },
@@ -204,7 +206,7 @@ function isActive(href: string): boolean {
     display: none;
   }
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1200px) {
     .navbar-inner {
       flex-wrap: wrap;
       height: auto;

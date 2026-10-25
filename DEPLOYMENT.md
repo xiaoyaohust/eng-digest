@@ -124,6 +124,9 @@ Add or edit Markdown/MDX under one of these directories, then commit and push:
 
 - `site/src/content/system-design/`
 - `site/src/content/coding/`
+- `site/src/content/field-notes/`
+- `site/src/content/ai/` — AI Foundations, with manual topic and reading order
+- `site/src/content/science/`
 - `site/src/content/interviews/`
 
 No database or server migration is involved. See `docs/CONTENT_GUIDE.md` for schemas.

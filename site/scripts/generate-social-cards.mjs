@@ -6,7 +6,7 @@ import YAML from "yaml";
 const root = process.cwd();
 const contentRoot = path.join(root, "src", "content");
 const outputRoot = path.join(root, "public", "social", "auto");
-const collections = ["system-design", "coding", "interviews", "field-notes", "science"];
+const collections = ["system-design", "coding", "interviews", "field-notes", "science", "ai"];
 
 const escapeXml = (value = "") => String(value).replace(/[<>&'\"]/g, (character) => ({
   "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;",
@@ -44,7 +44,7 @@ function cardSvg(data, collection) {
   const titleLines = wrap(data.socialTitle ?? data.title, 31).slice(0, 3);
   const descriptionLines = wrap(data.socialDescription ?? data.description ?? "", 72).slice(0, 2);
   const tags = (data.tags ?? []).slice(0, 4).join("  /  ");
-  const label = collection === "science" ? "COMPUTING FOR SCIENCE" : collection === "field-notes" ? "ENGINEERING" : collection.replace("-", " ").toUpperCase();
+  const label = collection === "science" ? "COMPUTING FOR SCIENCE" : collection === "ai" ? "AI FOUNDATIONS" : collection === "field-notes" ? "ENGINEERING" : collection.replace("-", " ").toUpperCase();
   return `
     <svg width="1200" height="627" viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg">
       <rect width="1200" height="627" fill="#07111f"/>
@@ -55,9 +55,9 @@ function cardSvg(data, collection) {
         <rect x="0" y="0" width="44" height="44" fill="none" stroke="#4d708e" transform="rotate(45 22 22)"/>
         <circle cx="11" cy="31" r="3" fill="#21d4c2"/><circle cx="22" cy="22" r="3" fill="#21d4c2"/><circle cx="33" cy="13" r="3" fill="#f4b942"/>
         <text x="70" y="20" fill="#eef6ff" font-family="ui-monospace, monospace" font-size="18" font-weight="700" letter-spacing="2">ENG//KNOWLEDGE</text>
-        <text x="70" y="42" fill="#7f96ad" font-family="ui-monospace, monospace" font-size="11" letter-spacing="3">${collection === "science" ? "RESEARCH / PUBLIC DATA" : "INTERVIEW WORKBENCH"}</text>
+        <text x="70" y="42" fill="#7f96ad" font-family="ui-monospace, monospace" font-size="11" letter-spacing="3">${collection === "science" ? "RESEARCH / PUBLIC DATA" : collection === "ai" ? "CONCEPTS / EXPERIMENTS" : "INTERVIEW WORKBENCH"}</text>
       </g>
-      <text x="76" y="178" fill="#21d4c2" font-family="ui-monospace, monospace" font-size="15" font-weight="700" letter-spacing="3">${escapeXml(label)} / ${collection === "science" ? "RESEARCH NOTE" : "FIELD NOTE"}</text>
+      <text x="76" y="178" fill="#21d4c2" font-family="ui-monospace, monospace" font-size="15" font-weight="700" letter-spacing="3">${escapeXml(label)} / ${collection === "science" ? "RESEARCH NOTE" : collection === "ai" ? "STUDY NOTE" : "FIELD NOTE"}</text>
       ${titleLines.map((line, index) => `<text x="76" y="${252 + index * 67}" fill="#f5f8fc" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="750" letter-spacing="-2">${escapeXml(line)}</text>`).join("")}
       ${descriptionLines.map((line, index) => `<text x="76" y="${486 + index * 28}" fill="#9db0c3" font-family="Inter, Arial, sans-serif" font-size="20">${escapeXml(line)}</text>`).join("")}
       <line x1="76" y1="566" x2="1124" y2="566" stroke="#294158"/>

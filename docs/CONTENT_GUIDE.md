@@ -96,6 +96,49 @@ Current series include `System Design Fundamentals` and `Computer Networking Fun
 For the networking series, set `topic: "Computer Networking Fundamentals"`; this creates
 or joins its own group without changing the existing system-design articles.
 
+## Adding an AI Foundations section
+
+Create `site/src/content/ai/<slug>.md`:
+
+```yaml
+---
+title: "Your section title"
+description: "The concept and skills taught by this section."
+date: 2026-10-24
+topic: "AI Fundamentals"
+order: 2
+lang: en
+socialTitle: "A Short English Share Title"
+socialDescription: "A short description for the share image."
+tags: [artificial-intelligence, machine-learning]
+draft: false
+---
+```
+
+`topic`, positive integer `order`, `socialTitle`, and `socialDescription` are required.
+The index groups by the manually entered topic, and the reading sequence and previous/next
+links use `order` rather than publication date. Use distinct order values across the library;
+the first published section uses 1. `lang` defaults to `en` and also accepts `zh-CN`.
+The URL is `/ai/<slug>/`. Published sections enter the homepage, tags, search, related
+articles, and sitemap automatically. Share cards use the shorter English social text.
+
+State essential prerequisites, work through a concrete example, and label synthetic data.
+Execute code before describing output as verified. Include takeaways, exercises, and separate
+answer guidance. Do not invent section numbers or links to unwritten material.
+
+AI Foundations supports display equations in explicit `math` fences containing LaTeX:
+
+````md
+```math
+L(t) = \frac{1}{n}\sum_{i=1}^{n}\mathbf{1}[\hat{y}_t(x_i) \ne y_i]
+```
+````
+
+Equations render to HTML and accessible MathML at build time, using locally bundled KaTeX
+styles and fonts. Invalid formulas fail the build. Ordinary dollar amounts remain text;
+single-dollar inline math and `\(...\)` delimiters are not enabled. Use inline code for
+short variable names in prose.
+
 ## Adding a Computing for Science research note
 
 Create `site/src/content/science/<slug>.md` and assign its project manually:
@@ -166,7 +209,7 @@ from the site base, e.g. in Markdown:
 The current custom domain serves from `/`, so public assets use root-relative paths. Astro
 components use `withBase()` when links must also support a GitHub project-site base.
 
-Every published System Design, Coding, Interview, Engineering Field Note, and Computing for Science article automatically receives a
+Every published System Design, Coding, Interview, Engineering Field Note, AI Foundations, and Computing for Science article automatically receives a
 1200×627 PNG share card during `npm run build`. The file is generated under
 `public/social/auto/` from the title, description, collection, and tags. To override it with
 bespoke art, add `socialImage: { src, alt, width, height }` to frontmatter.
@@ -185,8 +228,9 @@ Service --> Database
 ```
 ````
 
-Rendering happens client-side (progressive enhancement) — with JavaScript disabled, the block
-still displays as readable Mermaid source in a code block instead of a diagram.
+Rendering happens at build time. Each diagram ships as a light SVG and a dark SVG, selected
+by the page theme. Diagrams remain visible with JavaScript disabled; invalid diagrams fail
+the build. Large diagrams have a keyboard-focusable horizontal scroll container.
 
 ## Tags
 

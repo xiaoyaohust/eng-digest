@@ -1,0 +1,47 @@
+---
+import { render } from "astro:content";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import { published, allCandidates, findRelated } from "@/lib/content";
+import { readingTime } from "@/lib/url";
+import { AI_SECTION_NAME, aiArticleHref, orderAIArticles } from "@/data/ai";
+import "katex/dist/katex.min.css";
+
+export async function getStaticPaths() {
+  const entries = orderAIArticles(await published("ai"));
+  return entries.map((entry, index, all) => ({
+    params: { slug: entry.id },
+    props: { entry, prevEntry: all[index - 1], nextEntry: all[index + 1] },
+  }));
+}
+
+const { entry, prevEntry, nextEntry } = Astro.props;
+const { Content, headings } = await render(entry);
+const related = findRelated(entry.data.tags, await allCandidates(), aiArticleHref(entry));
+const socialImage = entry.data.socialImage ?? {
+  src: `/social/auto/ai/${entry.id}.png`,
+  alt: entry.data.socialTitle,
+  width: 1200,
+  height: 627,
+};
+---
+
+<ArticleLayout
+  title={entry.data.title} description={entry.data.description}
+  lang={entry.data.lang} kicker={AI_SECTION_NAME}
+  date={entry.data.date} updated={entry.data.updated} tags={entry.data.tags}
+  readingMinutes={readingTime(entry.body ?? "")} headings={headings}
+  socialImage={socialImage} related={related} sectionHref="/ai/"
+  prev={prevEntry && { title: prevEntry.data.title, href: aiArticleHref(prevEntry) }}
+  next={nextEntry && { title: nextEntry.data.title, href: aiArticleHref(nextEntry) }}
+  shareHashtags={["ArtificialIntelligence", "MachineLearning", "LearningAI"]}
+  breadcrumbParents={[{ title: AI_SECTION_NAME, href: "/ai/" }]}
+>
+  <div class="ai-manuscript" lang={entry.data.lang}><Content /></div>
+</ArticleLayout>
+
+<style>
+  .ai-manuscript { line-height: 1.8; }
+  .ai-manuscript :global(h2), .ai-manuscript :global(h3) { line-height: 1.45; }
+  .ai-manuscript :global(.katex-display) { overflow-x: auto; overflow-y: hidden; padding-block: 12px; max-width: 100%; }
+  .ai-manuscript :global(.katex) { font-size: 1.06em; }
+</style>

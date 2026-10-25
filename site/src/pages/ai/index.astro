@@ -1,0 +1,63 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
+import { published } from "@/lib/content";
+import { withBase } from "@/lib/url";
+import { AI_SECTION_NAME, AI_SECTION_DESCRIPTION, aiArticleHref, orderAIArticles } from "@/data/ai";
+
+const articles = orderAIArticles(await published("ai"));
+const first = articles[0];
+const topics = [...new Set(articles.map((entry) => entry.data.topic))];
+---
+
+<BaseLayout title={AI_SECTION_NAME} description={AI_SECTION_DESCRIPTION}>
+  <section class="ai-hero">
+    <div class="wrap ai-hero-grid">
+      <div>
+        <p class="eyebrow">MODULE 06 / CONCEPTS + EXPERIMENTS</p>
+        <h1>AI <em>Foundations</em></h1>
+        <p class="intro">Learn how intelligent systems work, one concept and one experiment at a time. Start with rules and learning, then build toward models, language, and agents.</p>
+        {first && <a class="start-link" href={withBase(aiArticleHref(first))}>Start reading <span>↗</span></a>}
+      </div>
+      <aside class="study-panel" aria-label="Learning approach">
+        <span class="panel-label">READ / RUN / CHECK</span>
+        <ol><li><b>01</b><span>Understand the mechanism</span></li><li><b>02</b><span>Work through an example</span></li><li><b>03</b><span>Test what you learned</span></li></ol>
+        <p>{articles.length} published {articles.length === 1 ? "section" : "sections"} · Python experiments · Exercises</p>
+      </aside>
+    </div>
+  </section>
+  <section class="wrap ai-library" aria-labelledby="library-title">
+    <p class="eyebrow">STUDY LIBRARY / READING ORDER</p>
+    <h2 id="library-title">Build your understanding</h2>
+    <p class="muted">Articles follow a teaching sequence. Each section states its prerequisites and includes worked examples, reproducible code, and exercises with answer guidance.</p>
+    {topics.map((topic) => <section class="ai-topic">
+      <h3>{topic}</h3>
+      <div class="card-grid">{articles.filter((entry) => entry.data.topic === topic).map((entry) =>
+        <ArticleCard href={aiArticleHref(entry)} kicker={AI_SECTION_NAME} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />
+      )}</div>
+    </section>)}
+    {articles.length === 0 && <p class="muted">No sections published yet.</p>}
+  </section>
+</BaseLayout>
+
+<style>
+  .ai-hero { background: #0b1320; color: #edf5f8; border-bottom: 1px solid #26364a; }
+  .ai-hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center; gap: 64px; padding-block: 70px; }
+  .ai-hero .eyebrow { color: #62efdb; }
+  h1 { margin: 18px 0 24px; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.04; letter-spacing: -.04em; }
+  h1 em { display: block; color: #62efdb; font-style: normal; }
+  .intro { max-width: 590px; color: #b4c4d4; }
+  .start-link { display: inline-flex; gap: 30px; margin-top: 18px; padding: 12px 18px; border: 1px solid #62efdb; border-radius: 5px; color: #62efdb; }
+  .study-panel { padding: 28px; border: 1px solid #334a60; background: #101e2e; }
+  .panel-label { color: #f4b942; font: .65rem var(--font-mono); letter-spacing: .08em; }
+  ol { list-style: none; margin: 25px 0; padding: 0; }
+  li { display: flex; gap: 16px; padding-block: 15px; border-bottom: 1px solid #334a60; }
+  li b { color: #62efdb; font: .75rem var(--font-mono); padding-top: 3px; }
+  li span { color: #edf5f8; }
+  .study-panel p { margin: 0; font-size: .75rem; color: #a5b8ca; }
+  .ai-library { padding-block: 45px 70px; }
+  .ai-library > p { max-width: 760px; }
+  .ai-topic { margin-top: 38px; }
+  .ai-topic h3 { border-bottom: 1px solid var(--color-border); padding-bottom: 12px; }
+  @media (max-width: 760px) { .ai-hero-grid { grid-template-columns: 1fr; gap: 30px; padding-block: 40px; } }
+</style>

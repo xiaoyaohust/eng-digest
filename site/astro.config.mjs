@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeMermaid from "./src/lib/rehypeMermaid.mjs";
+import rehypeMath from "./src/lib/rehypeMath.mjs";
 
 // SITE_URL / BASE_PATH let the deployment target change without touching any
 // component code. Defaults match the live custom domain, which serves the site
@@ -32,6 +33,7 @@ export default defineConfig({
   markdown: {
     processor: unified({
       rehypePlugins: [
+        rehypeMath,
         rehypeSlug,
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
         rehypeMermaid,
@@ -39,7 +41,8 @@ export default defineConfig({
     }),
     // rehypeMermaid renders mermaid blocks to SVG at build time; Shiki must
     // leave them as plain code for it to find.
-    syntaxHighlight: { type: "shiki", excludeLangs: ["mermaid"] },
+    // Explicit math fences contain LaTeX. Ordinary dollar amounts remain text.
+    syntaxHighlight: { type: "shiki", excludeLangs: ["mermaid", "math"] },
     shikiConfig: {
       themes: {
         light: "github-light",
