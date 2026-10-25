@@ -22,7 +22,7 @@ const { href, kicker, title, description, date, tags = [], featured = false } = 
   <h3>{title}</h3>
   <p class="muted">{description}</p>
   <div class="article-card-footer">
-    {date && <span class="muted">{formatDate(date)}</span>}
+    {date && <time class="muted" datetime={date.toISOString()}>{formatDate(date)}</time>}
     {tags.length > 0 && (
       <span class="tag-list">
         {tags.slice(0, 3).map((tag) => (

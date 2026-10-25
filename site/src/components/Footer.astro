@@ -1,6 +1,6 @@
 ---
 import { withBase } from "@/lib/url";
-import { AI_SECTION_NAME } from "@/data/ai";
+import { contentSections } from "@/data/contentSections";
 
 const year = new Date().getFullYear();
 ---
@@ -12,11 +12,8 @@ const year = new Date().getFullYear();
       <p><strong>ENG//KNOWLEDGE</strong><br />Signal over noise. Systems over trivia. &copy; {year}</p>
     </div>
     <nav class="footer-links">
-      <a href={withBase("/field-notes/")}>Engineering Field Notes</a>
-      <a href={withBase("/ai/")}>{AI_SECTION_NAME}</a>
-      <a href={withBase("/science/")}>Computing for Science</a>
+      {contentSections.map((section) => <a href={withBase(section.href)}>{section.title}</a>)}
       <a href={withBase("/architecture-lab/")}>Decision Lab</a>
-      <a href={withBase("/eng-digest/")}>Engineering Digest</a>
       <a href={withBase("/rss.xml")}>RSS</a>
       <a href={withBase("/about/")}>About</a>
       <a href="https://github.com/xiaoyaohust/eng-digest" target="_blank" rel="noreferrer">

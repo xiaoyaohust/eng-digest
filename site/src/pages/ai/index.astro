@@ -2,12 +2,13 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
+import { groupByLatestArticle } from "@/lib/contentOrdering";
 import { withBase } from "@/lib/url";
 import { AI_SECTION_NAME, AI_SECTION_DESCRIPTION, aiArticleHref, orderAIArticles } from "@/data/ai";
 
-const articles = orderAIArticles(await published("ai"));
-const first = articles[0];
-const topics = [...new Set(articles.map((entry) => entry.data.topic))];
+const articles = await published("ai");
+const first = orderAIArticles(articles)[0];
+const topics = groupByLatestArticle(articles, (entry) => entry.data.topic);
 ---
 
 <BaseLayout title={AI_SECTION_NAME} description={AI_SECTION_DESCRIPTION}>
@@ -27,12 +28,12 @@ const topics = [...new Set(articles.map((entry) => entry.data.topic))];
     </div>
   </section>
   <section class="wrap ai-library" aria-labelledby="library-title">
-    <p class="eyebrow">STUDY LIBRARY / READING ORDER</p>
+    <p class="eyebrow">STUDY LIBRARY / NEWEST FIRST</p>
     <h2 id="library-title">Build your understanding</h2>
-    <p class="muted">Articles follow a teaching sequence. Each section states its prerequisites and includes worked examples and exercises with answer guidance. Code is included when it helps explain the concept.</p>
-    {topics.map((topic) => <section class="ai-topic">
+    <p class="muted">Browse the latest sections first. Use Start reading and each article's previous and next links to follow the teaching sequence. Each section includes prerequisites, worked examples, and exercises with answer guidance.</p>
+    {topics.map(([topic, entries]) => <section class="ai-topic">
       <h3>{topic}</h3>
-      <div class="card-grid">{articles.filter((entry) => entry.data.topic === topic).map((entry) =>
+      <div class="card-grid">{entries.map((entry) =>
         <ArticleCard href={aiArticleHref(entry)} kicker={AI_SECTION_NAME} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />
       )}</div>
     </section>)}

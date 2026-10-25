@@ -9,7 +9,8 @@ test("generative models section follows the AI sequence and publishes math, diag
   const links = page.locator('.ai-library .card-grid > a');
   const hrefs = await links.evaluateAll((elements) => elements.map((element) => element.getAttribute("href")));
   expect(hrefs.indexOf(previous)).toBeGreaterThanOrEqual(0);
-  expect(hrefs.indexOf(path)).toBeGreaterThan(hrefs.indexOf(previous));
+  expect(hrefs.indexOf(path)).toBeGreaterThanOrEqual(0);
+  expect(hrefs.indexOf(path)).toBeLessThan(hrefs.indexOf(previous));
   await links.filter({ has: page.getByRole("heading", { name: title, exact: true }) }).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");

@@ -7,6 +7,7 @@ import { published, publishedDigests } from "@/lib/content";
 import { learningPaths, learningPathDuration } from "@/data/learningPaths";
 import { scienceArticleHref, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
 import { AI_SECTION_NAME } from "@/data/ai";
+import { contentSections } from "@/data/contentSections";
 
 const [systemDesign, coding, fieldNotes, digests, science, ai] = await Promise.all([
   published("system-design"),
@@ -67,63 +68,16 @@ const featuredCards = markedFeatured.length > 0 ? markedFeatured : allArticles.s
 const latestArticles = allArticles.slice(0, 6);
 const latestDigest = digests[0];
 
-const sections = [
-  {
-    code: "06",
-    title: AI_SECTION_NAME,
-    href: "/ai/",
-    description: "Build understanding through worked examples, small Python experiments, and exercises, from fundamentals to models and agents.",
-    meta: `${ai.length} ${ai.length === 1 ? "section" : "sections"}`,
-    label: "CONCEPTS / EXPERIMENTS",
-    action: "Start learning ↗",
-  },
-  {
-    code: "05",
-    title: SCIENCE_SECTION_NAME,
-    href: "/science/",
-    description: "Python pipelines, numerical experiments, and scientific measurements from public data.",
-    meta: `${science.length} entries`,
-    label: "RESEARCH / EVIDENCE",
-    action: "Explore ↗",
-  },
-  {
-    code: "01",
-    title: "System Design",
-    href: "/system-design/",
-    description: "Architecture, trade-offs, distributed systems, and the decisions behind them.",
-    meta: `${systemDesign.length} entries`,
-    label: "ARCHITECTURE",
-    action: "Explore ↗",
-  },
-  {
-    code: "02",
-    title: "Coding Patterns",
-    href: "/coding/",
-    description: "Reusable problem-solving patterns, algorithms, and interview-ready practice.",
-    meta: `${coding.length} entries`,
-    label: "ALGORITHMS",
-    action: "Explore ↗",
-  },
-  {
-    code: "03",
-    title: "Engineering Field Notes",
-    href: "/field-notes/",
-    description: "Production lessons, technical deep dives, and decisions from real engineering work.",
-    meta: `${fieldNotes.length} entries`,
-    label: "PRACTICE / EXPERIENCE",
-    action: "Explore ↗",
-  },
-  {
-    code: "04",
-    title: "Engineering Digest",
-    href: "/eng-digest/",
-    description: "A daily signal feed distilled from high-quality engineering blogs.",
-    meta: `${digests.length} entries`,
-    label: "DAILY SIGNAL",
-    action: "Explore ↗",
-  },
-];
-sections.sort((a, b) => a.code.localeCompare(b.code));
+const counts = {
+  "system-design": systemDesign.length, ai: ai.length, "field-notes": fieldNotes.length,
+  "eng-digest": digests.length, science: science.length, coding: coding.length,
+};
+const sections = contentSections.map((section) => ({
+  ...section,
+  meta: section.id === "ai"
+    ? `${counts.ai} ${counts.ai === 1 ? "section" : "sections"}`
+    : `${counts[section.id]} entries`,
+}));
 ---
 
 <BaseLayout

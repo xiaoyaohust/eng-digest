@@ -1,17 +1,11 @@
 ---
 import { withBase } from "@/lib/url";
 import ThemeToggle from "./ThemeToggle.astro";
-import { SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
-import { AI_SECTION_NAME } from "@/data/ai";
+import { contentSections } from "@/data/contentSections";
 
 const navItems = [
-  { label: "Systems", href: "/system-design/" },
-  { label: "Coding", href: "/coding/" },
-  { label: "Field Notes", href: "/field-notes/" },
-  { label: AI_SECTION_NAME, href: "/ai/" },
-  { label: SCIENCE_SECTION_NAME, href: "/science/" },
+  ...contentSections.map((section) => ({ label: section.navLabel, href: section.href })),
   { label: "Lab", href: "/architecture-lab/" },
-  { label: "Digest", href: "/eng-digest/" },
 ];
 
 const currentPath = Astro.url.pathname;

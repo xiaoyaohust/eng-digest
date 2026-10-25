@@ -9,7 +9,7 @@ test("AI relationships section follows the first lesson and publishes diagrams a
   const articleLinks = page.locator('.ai-library .card-grid > a');
   const hrefs = await articleLinks.evaluateAll((elements) => elements.map((element) => element.getAttribute("href")));
   expect(hrefs.indexOf(previous)).toBeGreaterThanOrEqual(0);
-  expect(hrefs.indexOf(path)).toBeGreaterThan(hrefs.indexOf(previous));
+  expect(hrefs).toContain(path);
   await articleLinks.filter({ has: page.getByRole("heading", { name: title, exact: true }) }).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");

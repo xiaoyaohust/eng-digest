@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { scienceArticleHref, SCIENCE_SECTION_NAME } from "../data/scienceProjects";
 import { aiArticleHref, AI_SECTION_NAME } from "../data/ai";
+import { newestFirst } from "./contentOrdering";
 
 /** Digests per page of the daily archive.
  *
@@ -16,12 +17,12 @@ export async function published<C extends "system-design" | "coding" | "intervie
   collection: C
 ): Promise<CollectionEntry<C>[]> {
   const entries = await getCollection(collection, ({ data }) => !data.draft);
-  return entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return newestFirst(entries);
 }
 
 export async function publishedDigests() {
   const entries = await getCollection("generated-digests");
-  return entries.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  return newestFirst(entries);
 }
 
 export async function publishedWeeklyDigests() {

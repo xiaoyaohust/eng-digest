@@ -2,15 +2,12 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
+import { groupByLatestArticle } from "@/lib/contentOrdering";
 import { withBase } from "@/lib/url";
 
 const articles = await published("field-notes");
 const latest = articles[0];
-const clusters = [...articles.reduce((groups, entry) => {
-  const topic = entry.data.topic;
-  groups.set(topic, [...(groups.get(topic) ?? []), entry]);
-  return groups;
-}, new Map<string, typeof articles>()).entries()];
+const clusters = groupByLatestArticle(articles, (entry) => entry.data.topic);
 const clusterId = (topic: string, index: number) =>
   `field-topic-${topic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}-${index + 1}`;
 ---

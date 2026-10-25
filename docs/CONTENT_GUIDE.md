@@ -4,6 +4,20 @@ Adding an article to an existing section or registered science project requires 
 (or MDX) file, a commit, and a push; no database migration is needed. A new science project
 also needs the small project-registry update described below.
 
+## Listing order
+
+Navigation, homepage tracks, and footer share a fixed order: System Design, AI Foundations,
+Engineering Field Notes, Engineering Digest, Computing for Science, then Coding. Lab remains
+a separate tool after the content sections. Change `site/src/data/contentSections.ts` to edit
+this order; module codes are stable identifiers and do not control placement.
+
+Topic groups and science projects are ordered by their newest published article. Articles
+inside each group, science project, or flat Coding list appear newest first, using frontmatter
+`date`. The optional `updated` field does not move older articles up the list. For equal
+publication dates, article IDs and group names provide deterministic alphabetical tie-breakers.
+Use a full ISO date/time in `date` if the order of multiple same-day publications matters.
+Drafts are excluded before grouping. Digest days, weeks, months, and years also list newest first.
+
 ## Adding a System Design article
 
 Create `site/src/content/system-design/<slug>.md`:
@@ -116,8 +130,9 @@ draft: false
 ```
 
 `topic`, positive integer `order`, `socialTitle`, and `socialDescription` are required.
-The index groups by the manually entered topic, and the reading sequence and previous/next
-links use `order` rather than publication date. Use distinct order values across the library;
+The index groups by the manually entered topic and lists topics and articles newest first.
+The Start reading link and article previous/next links follow the teaching sequence using
+`order` rather than publication date. Use distinct order values across the library;
 the first published section uses 1. `lang` defaults to `en` and also accepts `zh-CN`.
 The URL is `/ai/<slug>/`. Published sections enter the homepage, tags, search, related
 articles, and sitemap automatically. Share cards use the shorter English social text.

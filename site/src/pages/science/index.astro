@@ -1,11 +1,12 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { published } from "@/lib/content";
+import { groupByLatestArticle } from "@/lib/contentOrdering";
 import { withBase } from "@/lib/url";
-import { scienceProjects, scienceProjectIds, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
+import { scienceProjects, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
 
 const articles = await published("science");
-const projects = scienceProjectIds.filter((id) => articles.some((entry) => entry.data.project === id));
+const projects = groupByLatestArticle(articles, (entry) => entry.data.project);
 ---
 
 <BaseLayout title={SCIENCE_SECTION_NAME} description="Scientific research through Python, public data, numerical experiments, and reproducible measurements.">
@@ -34,9 +35,9 @@ const projects = scienceProjectIds.filter((id) => articles.some((entry) => entry
     <p class="eyebrow">RESEARCH PROJECTS</p>
     <h2>Follow the measurements</h2>
     <div class="project-grid">
-      {projects.map((id) => {
+      {projects.map(([id, entries]) => {
         const project = scienceProjects[id];
-        const count = articles.filter((entry) => entry.data.project === id).length;
+        const count = entries.length;
         return <a class="project-card" href={withBase(`/science/${id}/`)}>
           <span class="eyebrow">{project.discipline} / {project.status}</span>
           <h3>{project.name} <span>{project.subtitle}</span></h3>
