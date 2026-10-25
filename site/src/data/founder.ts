@@ -7,6 +7,7 @@ export const founder = {
   employer: "Uber",
   previousCompanies: ["Coupang", "DoorDash", "eBay"],
   portrait: "/images/yao-xiao.jpg",
+  linkedIn: "https://www.linkedin.com/in/yaoxiaoduke/",
   lead: "I build platforms and write about the engineering decisions behind them.",
   bio: "My work spans storage, streaming, logistics, and advertising systems. System Craft Lab brings that perspective to system design, AI fundamentals, and practical engineering guides.",
 } as const;

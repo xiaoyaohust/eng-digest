@@ -21,6 +21,13 @@ import { withBase } from "@/lib/url";
           <p class="founder-role">{founder.publicationRole}</p>
           <h2 id="founder-name">{founder.name}</h2>
           <p class="founder-job">{founder.jobTitle}<br /><span>at {founder.employer}</span></p>
+          <a
+            class="founder-link founder-linkedin"
+            href={founder.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${founder.name} on LinkedIn (opens in a new tab)`}
+          >LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <div class="founder-story">
@@ -68,6 +75,7 @@ import { withBase } from "@/lib/url";
   .founder-background span { color: var(--color-text); }
   .founder-link { display: inline-flex; gap: 16px; align-items: center; color: var(--color-accent); font: 600 .7rem/1.5 var(--font-mono); }
   .founder-link:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; border-radius: 2px; }
+  .founder-linkedin { margin-top: 14px; }
   .founder-disclaimer { margin: 14px 0 0; color: var(--color-text-muted); font-size: .66rem; }
 
   @media (max-width: 1000px) {

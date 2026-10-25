@@ -86,6 +86,7 @@ const founderSchema = {
   "@type": "Person",
   "@id": new URL(`${withBase("/")}#about-founder`, Astro.site).toString(),
   name: founder.name,
+  sameAs: [founder.linkedIn],
   description: `${founder.publicationRole} at System Craft Lab. ${founder.bio}`,
   jobTitle: founder.jobTitle,
   worksFor: { "@type": "Organization", name: founder.employer },

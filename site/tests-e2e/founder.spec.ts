@@ -23,7 +23,11 @@ test("home introduces Yao Xiao with the real portrait, concise background, and p
   expect(person.jobTitle).toBe("Staff Software Engineer");
   expect(person.worksFor.name).toBe("Uber");
   expect(person.image).toBe("https://systemcraftlab.com/images/yao-xiao.jpg");
-  expect(person.sameAs).toBeUndefined();
+  expect(person.sameAs).toEqual(["https://www.linkedin.com/in/yaoxiaoduke/"]);
+  const linkedIn = introduction.getByRole("link", { name: "Yao Xiao on LinkedIn (opens in a new tab)", exact: true });
+  await expect(linkedIn).toHaveAttribute("href", "https://www.linkedin.com/in/yaoxiaoduke/");
+  await expect(linkedIn).toHaveAttribute("target", "_blank");
+  await expect(linkedIn).toHaveAttribute("rel", "noopener noreferrer");
   await introduction.screenshot({ path: "test-results/founder-desktop-light.png", style: ".navbar { visibility: hidden !important; }" });
   await page.getByRole("button", { name: "Toggle color theme" }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
@@ -39,6 +43,7 @@ test("founder card and original section order fit phone, tablet, and desktop wid
     const introduction = page.getByRole("region", { name: "Yao Xiao", exact: true });
     await introduction.scrollIntoViewIfNeeded();
     await expect(introduction.getByRole("img")).toBeVisible();
+    await expect(introduction.getByRole("link", { name: /Yao Xiao on LinkedIn/ })).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     expect(await introduction.evaluate((element) => element.scrollWidth <= element.clientWidth)).toBe(true);
     const hrefs = await page.locator(".track-card").evaluateAll((links) => links.map((link) => link.getAttribute("href")));

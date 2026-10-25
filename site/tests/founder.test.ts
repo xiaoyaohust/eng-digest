@@ -4,13 +4,14 @@ import { describe, it } from "node:test";
 import { founder } from "../src/data/founder.ts";
 
 describe("founder introduction", () => {
-  it("uses the supplied name and career highlights without inventing a profile URL", () => {
+  it("uses the supplied name, career highlights, and LinkedIn profile", () => {
     assert.equal(founder.name, "Yao Xiao");
     assert.equal(founder.jobTitle, "Staff Software Engineer");
     assert.equal(founder.employer, "Uber");
     assert.equal(founder.publicationRole, "Founder & Technical Writer");
     assert.deepEqual(founder.previousCompanies, ["Coupang", "DoorDash", "eBay"]);
-    assert.doesNotMatch(JSON.stringify(founder), /linkedin\.com|\d{4}|billions?|millions?/i);
+    assert.equal(founder.linkedIn, "https://www.linkedin.com/in/yaoxiaoduke/");
+    assert.doesNotMatch(JSON.stringify(founder), /\d{4}|billions?|millions?/i);
   });
 
   it("keeps the introduction concise and connects expertise with the publication", () => {
