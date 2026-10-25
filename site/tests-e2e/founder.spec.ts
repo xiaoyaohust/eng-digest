@@ -5,7 +5,7 @@ test("home introduces Yao Xiao with the real portrait, concise background, and p
   const introduction = page.getByRole("region", { name: "Yao Xiao", exact: true });
   await introduction.scrollIntoViewIfNeeded();
   await expect(introduction.getByRole("heading", { level: 2 })).toHaveText("Yao Xiao");
-  for (const fact of ["Founder & Technical Writer", "Staff Software Engineer", "at Uber", "Coupang · DoorDash · eBay", "storage, streaming, logistics, and advertising", "Independent publication. Views are my own."])
+  for (const fact of ["Founder & Technical Writer", "Staff Software Engineer", "at Uber", "Coupang · DoorDash · eBay · Microsoft · Amazon", "storage, streaming, logistics, and advertising", "Independent publication. Views are my own."])
     await expect(introduction).toContainText(fact);
   const portrait = introduction.getByRole("img", { name: "Portrait of Yao Xiao" });
   await expect(portrait).toHaveAttribute("src", "/images/yao-xiao.jpg");

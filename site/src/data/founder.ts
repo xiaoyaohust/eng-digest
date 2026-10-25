@@ -5,7 +5,7 @@ export const founder = {
   publicationRole: "Founder & Technical Writer",
   jobTitle: "Staff Software Engineer",
   employer: "Uber",
-  previousCompanies: ["Coupang", "DoorDash", "eBay"],
+  previousCompanies: ["Coupang", "DoorDash", "eBay", "Microsoft", "Amazon"],
   portrait: "/images/yao-xiao.jpg",
   linkedIn: "https://www.linkedin.com/in/yaoxiaoduke/",
   lead: "I build platforms and write about the engineering decisions behind them.",

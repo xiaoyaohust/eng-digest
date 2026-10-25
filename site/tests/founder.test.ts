@@ -9,7 +9,7 @@ describe("founder introduction", () => {
     assert.equal(founder.jobTitle, "Staff Software Engineer");
     assert.equal(founder.employer, "Uber");
     assert.equal(founder.publicationRole, "Founder & Technical Writer");
-    assert.deepEqual(founder.previousCompanies, ["Coupang", "DoorDash", "eBay"]);
+    assert.deepEqual(founder.previousCompanies, ["Coupang", "DoorDash", "eBay", "Microsoft", "Amazon"]);
     assert.equal(founder.linkedIn, "https://www.linkedin.com/in/yaoxiaoduke/");
     assert.doesNotMatch(JSON.stringify(founder), /\d{4}|billions?|millions?/i);
   });
