@@ -29,7 +29,7 @@ const topics = [...new Set(articles.map((entry) => entry.data.topic))];
   <section class="wrap ai-library" aria-labelledby="library-title">
     <p class="eyebrow">STUDY LIBRARY / READING ORDER</p>
     <h2 id="library-title">Build your understanding</h2>
-    <p class="muted">Articles follow a teaching sequence. Each section states its prerequisites and includes worked examples, reproducible code, and exercises with answer guidance.</p>
+    <p class="muted">Articles follow a teaching sequence. Each section states its prerequisites and includes worked examples and exercises with answer guidance. Code is included when it helps explain the concept.</p>
     {topics.map((topic) => <section class="ai-topic">
       <h3>{topic}</h3>
       <div class="card-grid">{articles.filter((entry) => entry.data.topic === topic).map((entry) =>
