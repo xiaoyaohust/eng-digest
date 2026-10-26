@@ -6,31 +6,15 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 24 Oct 2026 13:04:58 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 15:49:38 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Beyond API Compatibility: Building a Tool to Measure the Blast Radius of Library Changes</title>
-      <link>https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4</link>
-      <description>Quasar can then connect the library API to its consumer across repositories.Language-specific indexers emit SCIP definitions, references, and relationships into Quasar’s shared semantic graph.Relationships are especially useful when generated code separates the API a producer owns from the symbols consumers invoke For example, Quasar can trace a Protobuf definition through its generated Java members to the repositories that use them, even when consumer code never names the .proto element.SCIP records symbols and their references; it does not determine whether an API change violates an ecosystem’s compatibility rules Producers can review change findings through Quasar’s REST and GraphQL APIs or its MCP server, then investigate affected repositories and call sites</description>
-      <pubDate>Fri, 23 Oct 2026 18:32:51 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/beyond-api-compatibility-building-a-tool-to-measure-the-blast-radius-of-library-changes-9474f2fd4f90?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
-    </item>
-    <item>
-      <title>Origin Range Requests: Serving large files without range-request tuning</title>
-      <link>https://blog.cloudflare.com/origin-range-requests/</link>
-      <description>Naive byte-range caching can waste gigabytes of origin bandwidth on small requests We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.</description>
-      <pubDate>Fri, 23 Oct 2026 18:22:59 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/origin-range-requests/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>Bringing post-quantum cryptography to geographically fenced key management</title>
-      <link>https://blog.cloudflare.com/post-quantum-geo-key-manager/</link>
-      <description>Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.</description>
-      <pubDate>Fri, 23 Oct 2026 18:06:56 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/post-quantum-geo-key-manager/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>AWS Weekly Roundup: Amazon Polly Generative engine, TorchNeuron for Trainium, and more (October 26, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/</link>
+      <description>A few weeks ago I presented to a small group of commercial and technology leaders from Brazilian agribusiness at the AWS office in São Paulo My talk ran through where generative AI fits across the different stages of an agribusiness operation, and the point I kept returning to is that the markets we call traditional […]</description>
+      <pubDate>Mon, 26 Oct 2026 15:02:24 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/</guid>
+      <source>AWS News</source>
     </item>
   </channel>
 </rss>
