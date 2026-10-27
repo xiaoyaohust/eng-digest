@@ -6,15 +6,71 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 26 Oct 2026 15:49:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 15:06:22 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>AWS Weekly Roundup: Amazon Polly Generative engine, TorchNeuron for Trainium, and more (October 26, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/</link>
-      <description>A few weeks ago I presented to a small group of commercial and technology leaders from Brazilian agribusiness at the AWS office in São Paulo My talk ran through where generative AI fits across the different stages of an agribusiness operation, and the point I kept returning to is that the markets we call traditional […]</description>
-      <pubDate>Mon, 26 Oct 2026 15:02:24 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-polly-generative-engine-torchneuron-for-trainium-and-more-october-26-2026/</guid>
-      <source>AWS News</source>
+      <title>Preview, edit, and collaborate on markdown (.md) files natively in Google Docs and Drive</title>
+      <link>https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/</link>
+      <description>Google Workspace now offers native support for Markdown (.md) files, allowing developers and AI agents to seamlessly collaborate on documentation directly in Google Docs without manual file conversions This integration preserves native file fidelity for use with Git repositories and developer tools while unlocking standard Docs features like line-level commenting, rendered Drive previews, and tracked version history.</description>
+      <pubDate>Tue, 27 Oct 2026 15:06:19 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/preview-edit-and-collaborate-on-markdown-md-files-natively-in-google-docs-and-drive/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Introducing the Cloudflare PHP Capture the Flag challenge</title>
+      <link>https://blog.cloudflare.com/php-ctf/</link>
+      <description>We are launching a PHP Capture the Flag challenge integrated with our Bug Bounty program to test our WAF protections Security researchers are invited to bypass our defenses and capture the flag to help make the Internet safer.</description>
+      <pubDate>Tue, 27 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/php-ctf/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>What took the Internet offline in Q3 2026</title>
+      <link>https://blog.cloudflare.com/q3-2026-internet-disruption-summary/</link>
+      <description>An examination of global Internet disruptions observed by Cloudflare Radar during the third quarter of 2026 This review analyzes how power failures, natural disasters, and government shutdowns impacted network connectivity and traffic.</description>
+      <pubDate>Tue, 27 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/q3-2026-internet-disruption-summary/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>How the fastest-growing enterprises on Stripe scale globally</title>
+      <link>https://stripe.com/blog/how-the-fastest-growing-enterprises-on-stripe-scale-globally</link>
+      <description>Despite slower global economic growth and greater geopolitical fragmentation, the fastest-growing enterprises continue to look beyond their home markets and are investing in tools and workflows that make expansion faster and more repeatable.</description>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/how-the-fastest-growing-enterprises-on-stripe-scale-globally</guid>
+      <source>Stripe Engineering</source>
+    </item>
+    <item>
+      <title>Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang</title>
+      <link>https://blog.cloudflare.com/kv-cache-exposure-remediation/</link>
+      <description>A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests Here is how we addressed the issue.</description>
+      <pubDate>Mon, 26 Oct 2026 22:01:23 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/kv-cache-exposure-remediation/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Making Failure Diagnosis Reliable with Pensive AI</title>
+      <link>https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4</link>
+      <description>The legacy data model contained one flattened error string; AI extraction instead returns a list of errors, one for each log source, with deep links back to the originating logs We run those rules over production logs and compare their extracted spans with Pensive AI’s output Equally important, we must avoid retrying non-transient failures that will not succeed, because retries waste compute and delay data pipelines.Our work on Pensive AI in Data Platform addresses concrete user pain points in debugging, improves maintainability for platform owners, and improves precision and recall for error extraction</description>
+      <pubDate>Mon, 26 Oct 2026 17:04:57 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Multi‑Ratio Video Resizing for Mobile Feed and Marketing</title>
+      <link>https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss----2615bd06b42e---4</link>
+      <description>To support both our in‑app feed and external marketing campaigns at scale, we built an automated multi‑ratio video cropping system, tightly integrated into our internal production tools, that can generate high‑quality vertical and other aspect‑ratio variants with minimal manual effort.Our Video Resizing ApproachConverting cinematic 16:9 footage into mobile‑friendly aspect ratios takes more than a simple center crop Our model aggregates these cues with shot‑level content understanding to establish a continuous “focus region” for the virtual camera.Blue box shows the focus region around the primary character for reframing.Temporal ReframingOnce we’ve established the focus region, the next challenge is deciding how the crop should move over time When there is significant motion, we compute a dynamic tracking window and smooth its path so that any panning feels intentional and cinematic.The vertical crop (magenta box) follows the character’s movement with a smooth panning path.Tooling and Workflow IntegrationWe integrated the resizing algorithm directly into our internal Clips tool, so editors and producers can access it as part of their existing workflow</description>
+      <pubDate>Mon, 26 Oct 2026 16:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Meta Networking at the 2026 OCP Global Summit: Open Innovation for Scale-Up, Scale-Out, and Scale-Across AI Networks</title>
+      <link>https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks/</link>
+      <description>At the 2026 Open Compute Project (OCP) Global Summit, Meta shared the networking innovations that are directly supporting our latest AI models, including Muse Wonder and Muse Spark, and our gigawatt-scale Prometheus cluster Highlights IcePack &amp; IceCube: Meta’s first liquid-cooled network rack with 102.4T switch blades (128×800G, Broadcom Tomahawk 6C and NVIDIA Spectrum-6 variants), running [...] Read More The post Meta Networking at the 2026 OCP Global Summit: Open Innovation for Scale-Up, Scale-Out, and Scale-Across AI Networks appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 26 Oct 2026 16:00:07 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks/</guid>
+      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
