@@ -39,7 +39,7 @@ function isMermaidBlock(node) {
     (code.properties.className ?? []).includes("language-mermaid");
 }
 
-function toSvgNode(svg, theme, fallbackWidth) {
+function toSvgNode(svg, theme, fallbackWidth, intrinsicDimensions) {
   const node = fromHtml(svg, { fragment: true }).children.find(
     (child) => child.type === "element" && child.tagName === "svg"
   );
@@ -53,15 +53,23 @@ function toSvgNode(svg, theme, fallbackWidth) {
     child.tagName = "span";
     child.properties = { style: "display: block;" };
   });
-  const viewBoxWidth = Number(String(node.properties.viewBox ?? "").split(/\s+/)[2]);
+  const viewBox = String(node.properties.viewBox ?? "").trim().split(/\s+/).map(Number);
+  const viewBoxWidth = viewBox[2];
+  const viewBoxHeight = viewBox[3];
   const naturalWidth = viewBoxWidth || fallbackWidth;
   const width = Math.min(maxDiagramWidth, Math.ceil(naturalWidth * diagramScale));
   node.properties.className = [...(node.properties.className ?? []), `mermaid-${theme}`];
   node.properties.style = `max-width: none; width: max(100%, ${width}px); height: auto;`;
+  if (intrinsicDimensions && viewBoxWidth > 0 && viewBoxHeight > 0) {
+    // Explicit intrinsic dimensions reserve the SVG's height before labels or
+    // styles finish loading. CSS still controls its responsive display width.
+    node.properties.width = viewBoxWidth;
+    node.properties.height = viewBoxHeight;
+  }
   return node;
 }
 
-export default function rehypeMermaid() {
+export default function rehypeMermaid({ intrinsicDimensions = true } = {}) {
   return async (tree, file) => {
     const blocks = [];
     visit(tree, "element", (node, index, parent) => {
@@ -92,7 +100,7 @@ export default function rehypeMermaid() {
             `${file.path ?? "markdown"}: Mermaid diagram ${i + 1} (${name} theme) failed to render: ${result.reason}`
           );
         }
-        return toSvgNode(result.value.svg, name, result.value.width);
+        return toSvgNode(result.value.svg, name, result.value.width, intrinsicDimensions);
       });
       const container = {
         type: "element",

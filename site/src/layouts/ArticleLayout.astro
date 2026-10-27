@@ -6,6 +6,7 @@ import TableOfContents from "@/components/TableOfContents.astro";
 import PracticeMode from "@/components/PracticeMode.astro";
 import ArticleActions from "@/components/ArticleActions.astro";
 import { withBase } from "@/lib/url";
+import { canonicalPageURL } from "@/lib/canonical";
 
 interface RelatedLink {
   title: string;
@@ -47,6 +48,7 @@ interface Props {
   sectionHref?: string;
   practiceKey?: string;
   relatedPath?: { title: string; href: string };
+  hasMath?: boolean;
 }
 
 const {
@@ -69,8 +71,9 @@ const {
   sectionHref = "/",
   practiceKey,
   relatedPath,
+  hasMath = false,
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const canonical = canonicalPageURL(Astro.url.pathname, Astro.site).toString();
 const imageURL = socialImage ? new URL(socialImage.src, Astro.site).toString() : undefined;
 const sectionName = kicker ?? "Knowledge Base";
 const parents = breadcrumbParents ?? [{ title: sectionName, href: sectionHref }];
@@ -119,6 +122,7 @@ const structuredData = [
   articleSection={sectionName}
   tags={tags}
   structuredData={structuredData}
+  hasMath={hasMath}
 >
   <article class="article-page">
     <header class="article-hero">

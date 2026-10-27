@@ -121,6 +121,7 @@ site/test-results/
 site/src/content/generated-digests/
 site/src/content/generated-weekly/
 site/public/social/auto/
+site/public/vendor/katex/
 
 # mypy
 .mypy_cache/

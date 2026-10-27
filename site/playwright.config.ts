@@ -34,10 +34,20 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
+      testIgnore: /performance\.spec\.ts/,
       use: {
         ...devices["Desktop Chrome"],
         permissions: ["clipboard-read", "clipboard-write"],
       },
+    },
+    {
+      name: "performance",
+      testMatch: /performance\.spec\.ts/,
+      // Run measurements after the functional suite, with no competing test
+      // workers changing CPU load. The same gate runs on every deployment.
+      dependencies: ["chromium"],
+      workers: 1,
+      use: { ...devices["Desktop Chrome"] },
     },
   ],
 });

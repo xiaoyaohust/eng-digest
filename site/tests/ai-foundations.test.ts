@@ -3,6 +3,8 @@ import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
 import { AI_SECTION_NAME, aiArticleHref, orderAIArticles } from "../src/data/ai.ts";
 import rehypeMath from "../src/lib/rehypeMath.mjs";
+import { createMarkdownProcessor } from "@astrojs/markdown-remark";
+import { mathStylesheetPath } from "../src/lib/mathAssets.mjs";
 
 const article = readFileSync(new URL("../src/content/ai/from-rules-to-machine-learning.md", import.meta.url), "utf8");
 const pre = (language: string, source: string) => ({
@@ -49,6 +51,19 @@ describe("AI Foundations publication", () => {
     const tree = { type: "root", children: [pre("math", "\\href{javascript:alert(1)}{x}")] };
     rehypeMath()(tree);
     assert.ok(!JSON.stringify(tree).includes('"tagName":"a"'));
+  });
+
+  it("exposes parsed math metadata and clears stale flags when a formula is removed", async () => {
+    const processor = await createMarkdownProcessor({
+      syntaxHighlight: false, rehypePlugins: [rehypeMath],
+    });
+    const math = await processor.render("```math\nx^2\n```");
+    assert.equal(math.metadata.frontmatter.hasMath, true);
+    assert.match(math.code, /class="katex-display"/);
+    const plain = await processor.render("Price $20.\n\n````markdown\n```math\nx^2\n```\n````", { frontmatter: { hasMath: true } });
+    assert.equal(plain.metadata.frontmatter.hasMath, false);
+    assert.doesNotMatch(plain.code, /class="katex-display"/);
+    assert.match(mathStylesheetPath, /^\/vendor\/katex\/\d+\.\d+\.\d+\/katex\.min\.css$/);
   });
 
   it("teaches the requested English section with consistent experimental controls", () => {

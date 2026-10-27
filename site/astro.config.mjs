@@ -33,10 +33,12 @@ export default defineConfig({
   markdown: {
     processor: unified({
       rehypePlugins: [
-        rehypeMath,
+        // Explicit options also invalidate Astro's persisted Markdown cache
+        // when pulling this change into a previously built checkout.
+        [rehypeMath, { metadataProperty: "hasMath" }],
         rehypeSlug,
         [rehypeAutolinkHeadings, { behavior: "wrap" }],
-        rehypeMermaid,
+        [rehypeMermaid, { intrinsicDimensions: true }],
       ],
     }),
     // rehypeMermaid renders mermaid blocks to SVG at build time; Shiki must

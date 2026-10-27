@@ -59,8 +59,9 @@ import { withBase } from "@/lib/url";
     box-shadow: var(--shadow-card);
   }
   .founder-identity { display: flex; align-items: center; gap: 24px; min-width: 0; }
-  .portrait-frame { flex: 0 0 128px; overflow: hidden; border: 1px solid var(--color-border); border-radius: 6px; background: #fff; }
-  .portrait-frame img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+  /* Reserve the frame itself even while the lazy image is still unavailable. */
+  .portrait-frame { flex: 0 0 128px; aspect-ratio: 1; overflow: hidden; border: 1px solid var(--color-border); border-radius: 6px; background: #fff; }
+  .portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1; }
   .founder-details { min-width: 0; }
   .founder-role { margin: 0 0 9px; font: .62rem/1.7 var(--font-mono); color: var(--color-accent); }
   h2 { margin: 0; color: var(--color-text); font: 700 clamp(1.9rem, 3vw, 2.5rem)/1.1 var(--font-display); letter-spacing: -.035em; }

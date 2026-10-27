@@ -48,6 +48,9 @@ const server = createServer(async (request, response) => {
     response.writeHead(200, {
       "Content-Length": fileInfo.size,
       "Content-Type": contentTypes.get(extname(file)) ?? "application/octet-stream",
+      // Match Pages' short asset cache so repeat-visit performance tests can
+      // exercise a real browser cache. HTML is revalidated on each navigation.
+      "Cache-Control": extname(file) === ".html" ? "no-cache" : "public, max-age=600",
     });
     if (request.method === "HEAD") response.end();
     else createReadStream(file).pipe(response);

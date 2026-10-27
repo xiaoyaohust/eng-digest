@@ -76,6 +76,15 @@ jobs:
         working-directory: site
         run: npm run test:e2e
 
+      - name: Upload browser diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-diagnostics-tests
+          path: site/test-results/
+          retention-days: 7
+          if-no-files-found: ignore
+
   pytest:
     runs-on: ubuntu-latest
     strategy:

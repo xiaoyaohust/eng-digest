@@ -92,6 +92,44 @@ npm run preview
 `rss.xml` and legacy `digests/*.{md,html}`, and fails if a generated page contains a broken
 internal link.
 
+The build also checks canonical URLs, Open Graph URLs, LinkedIn/Copy link targets,
+and sitemap entries. Site links must use the configured origin and trailing slashes
+for pages. Historical `/interviews/` bookmarks still redirect to `/field-notes/`;
+new internal links should point directly to `/field-notes/`. Existing domain and
+GitHub Pages redirects remain managed by the hosting service.
+
+### Performance regression checks
+
+`npm run test:e2e` runs functional tests first, then a single-worker performance
+project against the same production build. To run only that project locally:
+
+```bash
+cd site
+npm run test:performance
+```
+
+It covers desktop/mobile first and repeat visits to the homepage, founder anchor,
+AI index, and articles with/without formulas. Chromium uses a 2x CPU slowdown,
+100ms latency, and 1.5Mbps download limit. Each measured visit must have CLS <= 0.1
+and LCP <= 2.5s. JSON attachments include layout-shift sources and timings; these
+controlled lab measurements are not field percentiles from Cloudflare. The external
+analytics beacon is blocked only in the performance measurements, not on the site.
+
+Additional checks delay the portrait response, verify diagram dimensions across
+themes, and check that math-free articles request no KaTeX assets. No fixed height
+is imposed on the founder biography. Layout styles remain render-blocking in the
+head; analytics and client-side features are unchanged.
+
+KaTeX is rendered to HTML/MathML at build time. The math plugin records whether the
+parsed article contains formulas; only those AI articles link its stylesheet.
+`prepare-math-assets` (part of `predev` and `prebuild`) copies the installed KaTeX
+CSS and fonts into a generated, versioned `/vendor/katex/<version>/` directory.
+Fonts stay self-hosted and retain their relative paths. Do not restore an
+unconditional CSS import in the AI route or preload every math font globally.
+After changing a Markdown rendering plugin locally, run `npx astro sync --force`
+before rebuilding: Astro can otherwise reuse rendered content from its old cache.
+CI starts with a fresh content cache.
+
 The deployment defaults are:
 
 - `SITE_URL=https://systemcraftlab.com`

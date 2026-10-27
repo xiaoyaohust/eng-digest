@@ -7,17 +7,20 @@
     "node": ">=22.19.0"
   },
   "scripts": {
-    "predev": "npm run import-digests && npm run generate-social-cards",
+    "predev": "npm run import-digests && npm run generate-social-cards && npm run prepare-math-assets",
     "dev": "astro dev",
     "import-digests": "node scripts/import-digests.mjs && node scripts/generate-weekly-digests.mjs",
     "generate-social-cards": "node scripts/generate-social-cards.mjs",
-    "prebuild": "npm run import-digests && npm run generate-social-cards",
-    "build": "astro build && npm run search-index && npm run copy-legacy && npm run check-links",
+    "prepare-math-assets": "node scripts/prepare-math-assets.mjs",
+    "prebuild": "npm run import-digests && npm run generate-social-cards && npm run prepare-math-assets",
+    "build": "astro build && npm run search-index && npm run copy-legacy && npm run check-links && npm run check-urls",
     "search-index": "pagefind --site dist",
     "copy-legacy": "node scripts/copy-legacy-artifacts.mjs",
     "check-links": "node scripts/check-internal-links.mjs",
+    "check-urls": "node scripts/check-canonical-urls.mjs",
     "test": "node --test --experimental-strip-types --disable-warning=ExperimentalWarning tests/*.test.ts",
     "test:e2e": "playwright test",
+    "test:performance": "playwright test --project=performance --no-deps",
     "preview": "astro preview",
     "preview:test": "node scripts/serve-dist.mjs",
     "check": "astro check"

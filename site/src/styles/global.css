@@ -70,6 +70,9 @@
 html {
   color-scheme: light dark;
   scroll-behavior: smooth;
+  /* Classic scrollbars must not narrow the layout after the first paint.
+     This is especially relevant near responsive breakpoints on Windows. */
+  scrollbar-gutter: stable;
 }
 
 body {

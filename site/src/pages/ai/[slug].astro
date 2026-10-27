@@ -4,7 +4,6 @@ import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { published, allCandidates, findRelated } from "@/lib/content";
 import { readingTime } from "@/lib/url";
 import { AI_SECTION_NAME, aiArticleHref, orderAIArticles } from "@/data/ai";
-import "katex/dist/katex.min.css";
 
 export async function getStaticPaths() {
   const entries = orderAIArticles(await published("ai"));
@@ -15,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { entry, prevEntry, nextEntry } = Astro.props;
-const { Content, headings } = await render(entry);
+const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 const related = findRelated(entry.data.tags, await allCandidates(), aiArticleHref(entry));
 const socialImage = entry.data.socialImage ?? {
   src: `/social/auto/ai/${entry.id}.png`,
@@ -35,6 +34,7 @@ const socialImage = entry.data.socialImage ?? {
   next={nextEntry && { title: nextEntry.data.title, href: aiArticleHref(nextEntry) }}
   shareHashtags={["ArtificialIntelligence", "MachineLearning", "LearningAI"]}
   breadcrumbParents={[{ title: AI_SECTION_NAME, href: "/ai/" }]}
+  hasMath={remarkPluginFrontmatter.hasMath === true}
 >
   <div class="ai-manuscript" lang={entry.data.lang}><Content /></div>
 </ArticleLayout>
