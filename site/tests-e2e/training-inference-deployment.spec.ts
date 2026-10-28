@@ -6,7 +6,12 @@ const previous = "/ai/large-language-models-and-agents/";
 
 test("model lifecycle lesson joins AI Foundations with static diagrams, math, and a share image", async ({ page, request }) => {
   await page.goto("/ai/");
-  await expect(page.locator(".ai-library .article-card").first()).toHaveAttribute("href", path);
+  // New lessons can precede this one in the newest-first library while its
+  // teaching sequence remains unchanged.
+  const hrefs = await page.locator(".ai-library .article-card").evaluateAll((cards) => cards.map((card) => card.getAttribute("href")));
+  expect(hrefs.indexOf(path)).toBeGreaterThanOrEqual(0);
+  expect(hrefs.indexOf(previous)).toBeGreaterThanOrEqual(0);
+  expect(hrefs.indexOf(path)).toBeLessThan(hrefs.indexOf(previous));
   await page.locator(`.ai-library a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
