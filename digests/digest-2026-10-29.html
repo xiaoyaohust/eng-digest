@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Daily Digest – 2026-10-29</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .stat-item strong {
+            color: #667eea;
+            font-size: 1.5em;
+        }
+
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-section {
+            margin-bottom: 50px;
+        }
+
+        .source-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .source-name {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .articles {
+            display: grid;
+            gap: 25px;
+        }
+
+        .article-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 15px;
+        }
+
+        .article-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 8px;
+        }
+
+        .article-title {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #667eea;
+        }
+
+        .article-date {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .article-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .keywords {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword {
+            background: #e0e7ff;
+            color: #4c51bf;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+        }
+
+        footer strong {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header, main, footer {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .source-name {
+                font-size: 1.5em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+
+    <header>
+        <h1>Engineering Daily Digest</h1>
+        <p class="subtitle">2026-10-29</p>
+        <div class="stats">
+            <span class="stat-item"><strong>6</strong> articles</span>
+            <span class="stat-item"><strong>4</strong> sources</span>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Cloudflare Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://blog.cloudflare.com/ddos-threat-report-2026-q3/" target="_blank" rel="noopener noreferrer">
+                                Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-29 12:55</p>
+                    <p class="article-summary">Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns.</p>
+                    
+                    <a href="https://blog.cloudflare.com/ddos-threat-report-2026-q3/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">GitHub Blog</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/" target="_blank" rel="noopener noreferrer">
+                                GitHub Universe 2026: Evolving every layer of the stack
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-28 16:09</p>
+                    <p class="article-summary">Today, we laid out our vision for GitHub as the most comprehensive, end-to-end software delivery system in the world The post GitHub Universe 2026: Evolving every layer of the stack appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/" target="_blank" rel="noopener noreferrer">
+                                Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-28 16:07</p>
+                    <p class="article-summary">See how a record year of growth reached every industry, every field, and every kind of builder in the 2026 Octoverse report The post Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents appeared first on The GitHub Blog.</p>
+                    
+                    <a href="https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Google Developers</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://developers.googleblog.com/smaller-apps-and-faster-gpu-inference-with-litert-in-google-play-services/" target="_blank" rel="noopener noreferrer">
+                                Smaller apps and faster GPU inference with LiteRT in Google Play services
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-29 15:49</p>
+                    <p class="article-summary">LiteRT in Google Play services now offers GPU inference powered by ML Drift, delivering about 1.4x faster performance alongside the new CompiledModel API Switching from bundled binaries reduces app size by approximately 8 MB while enabling seamless, automatic runtime updates across billions of devices Developers can easily adopt these updates by updating their dependencies and utilizing the new Android Studio LiteRT skill for automated migration.</p>
+                    
+                    <a href="https://developers.googleblog.com/smaller-apps-and-faster-gpu-inference-with-litert-in-google-play-services/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">2.</span>
+                            <a href="https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/" target="_blank" rel="noopener noreferrer">
+                                Hill-Climbing Agent Quality with Agents CLI Evaluation
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-29 15:49</p>
+                    <p class="article-summary">This post walks through the Agents CLI evaluation loop for systematically improving agent performance through continuous testing and grading It demonstrates how to catch prompt regressions, evaluate model backend swaps using side-by-side trace comparisons, and automate evaluation passes Developers will also learn how to integrate nightly scheduled runs with threshold-based alerting to track quality over time.</p>
+                    
+                    <a href="https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+        <section class="source-section">
+            <h2 class="source-name">Meta Engineering</h2>
+            <div class="articles">
+
+
+                <article class="article-card">
+                    <div class="article-header">
+                        <h3 class="article-title">
+                            <span class="article-number">1.</span>
+                            <a href="https://engineering.fb.com/2026/10/28/ml-applications/meta-andromeda-next-gen-ads-retrieval-gpu-co-design/" target="_blank" rel="noopener noreferrer">
+                                Meta Andromeda: Powering the Next Generation of Ads Retrieval Through Model-System Co-Design
+                            </a>
+                        </h3>
+                    </div>
+                    <p class="article-date">📅 2026-10-28 16:00</p>
+                    <p class="article-summary">This post describes the next generation of Meta Andromeda, Meta’s personalized ads retrieval engine, and how co-designing the model, system, and GPU hardware unlocks a new efficiency frontier for ads retrieval In production, the system scores every eligible ad with near ranking-level model performance at retrieval scale and surfaces the top candidates at over one [...] Read More The post Meta Andromeda: Powering the Next Generation of Ads Retrieval Through Model-System Co-Design appeared first on Engineering at Meta.</p>
+                    
+                    <a href="https://engineering.fb.com/2026/10/28/ml-applications/meta-andromeda-next-gen-ads-retrieval-gpu-co-design/" class="read-more" target="_blank" rel="noopener noreferrer">
+                        Read Full Article →
+                    </a>
+                </article>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Generated on 2026-10-29 15:49:34</p>
+        <p>Powered by <strong>Eng Digest</strong> - No AI, Pure Algorithms</p>
+    </footer>
+
+
+</div>
+</body>
+</html>
