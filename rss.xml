@@ -6,54 +6,30 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 29 Oct 2026 15:49:34 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 15:30:38 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Smaller apps and faster GPU inference with LiteRT in Google Play services</title>
-      <link>https://developers.googleblog.com/smaller-apps-and-faster-gpu-inference-with-litert-in-google-play-services/</link>
-      <description>LiteRT in Google Play services now offers GPU inference powered by ML Drift, delivering about 1.4x faster performance alongside the new CompiledModel API Switching from bundled binaries reduces app size by approximately 8 MB while enabling seamless, automatic runtime updates across billions of devices Developers can easily adopt these updates by updating their dependencies and utilizing the new Android Studio LiteRT skill for automated migration.</description>
-      <pubDate>Thu, 29 Oct 2026 15:49:31 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/smaller-apps-and-faster-gpu-inference-with-litert-in-google-play-services/</guid>
+      <title>Build Generative UI Apps with A2UI &amp; CopilotKit Agents</title>
+      <link>https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/</link>
+      <description>See Google A2Ui in action Learn how to natively render agentic UIs across Langchain, AWS Strands, Microsoft agents, and Google ADK using CopilotKit SDKs for A2UI.</description>
+      <pubDate>Fri, 30 Oct 2026 15:30:36 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Hill-Climbing Agent Quality with Agents CLI Evaluation</title>
-      <link>https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/</link>
-      <description>This post walks through the Agents CLI evaluation loop for systematically improving agent performance through continuous testing and grading It demonstrates how to catch prompt regressions, evaluate model backend swaps using side-by-side trace comparisons, and automate evaluation passes Developers will also learn how to integrate nightly scheduled runs with threshold-based alerting to track quality over time.</description>
-      <pubDate>Thu, 29 Oct 2026 15:49:31 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/hill-climbing-agent-quality-with-agents-cli-evaluation/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants</title>
-      <link>https://blog.cloudflare.com/ddos-threat-report-2026-q3/</link>
-      <description>Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns.</description>
-      <pubDate>Thu, 29 Oct 2026 12:55:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/ddos-threat-report-2026-q3/</guid>
+      <title>Cloudflare services for private origins is now generally available</title>
+      <link>https://blog.cloudflare.com/private-origins-public-to-private/</link>
+      <description>Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity.</description>
+      <pubDate>Fri, 30 Oct 2026 14:23:43 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/private-origins-public-to-private/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>GitHub Universe 2026: Evolving every layer of the stack</title>
-      <link>https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/</link>
-      <description>Today, we laid out our vision for GitHub as the most comprehensive, end-to-end software delivery system in the world The post GitHub Universe 2026: Evolving every layer of the stack appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 28 Oct 2026 16:09:28 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents</title>
-      <link>https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/</link>
-      <description>See how a record year of growth reached every industry, every field, and every kind of builder in the 2026 Octoverse report The post Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 28 Oct 2026 16:07:40 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Meta Andromeda: Powering the Next Generation of Ads Retrieval Through Model-System Co-Design</title>
-      <link>https://engineering.fb.com/2026/10/28/ml-applications/meta-andromeda-next-gen-ads-retrieval-gpu-co-design/</link>
-      <description>This post describes the next generation of Meta Andromeda, Meta’s personalized ads retrieval engine, and how co-designing the model, system, and GPU hardware unlocks a new efficiency frontier for ads retrieval In production, the system scores every eligible ad with near ranking-level model performance at retrieval scale and surfaces the top candidates at over one [...] Read More The post Meta Andromeda: Powering the Next Generation of Ads Retrieval Through Model-System Co-Design appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 28 Oct 2026 16:00:01 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/28/ml-applications/meta-andromeda-next-gen-ads-retrieval-gpu-co-design/</guid>
+      <title>Catching Bugs Before They Land: JiTTesting’s Human-on-the-Loop Approach at Full Scale</title>
+      <link>https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/</link>
+      <description>Over the last year we’ve been sharing our work leveraging large language models to catch bugs on the fly — a novel approach we call Catching Just-in-Time Tests (JiTTests) Now, we’re sharing the results and positive impact we’ve seen with Catching JiTTests deployed into production Our paper, “Just-in-Time Catching Test Generation at Meta,” fully details [...] Read More</description>
+      <pubDate>Thu, 29 Oct 2026 16:00:12 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/</guid>
       <source>Meta Engineering</source>
     </item>
   </channel>
