@@ -6,31 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 30 Oct 2026 15:30:38 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 14:59:59 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Build Generative UI Apps with A2UI &amp; CopilotKit Agents</title>
-      <link>https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/</link>
-      <description>See Google A2Ui in action Learn how to natively render agentic UIs across Langchain, AWS Strands, Microsoft agents, and Google ADK using CopilotKit SDKs for A2UI.</description>
-      <pubDate>Fri, 30 Oct 2026 15:30:36 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/</guid>
+      <title>DevFest is back!</title>
+      <link>https://developers.googleblog.com/devfest-is-back/</link>
+      <description>DevFest 2026 runs from October 1 to December 31, bringing together nearly a million developers across more than 800 global events centered on the agentic AI era Under the theme &quot;Build, Secure, Scale,&quot; participants gain hands-on experience with Google’s developer stack—including Gemini, Google AI Studio, Google Antigravity, and Web MCP—through live workshops and codelabs The conference focuses on enabling developers to prototype rapidly, ensure secure and private deployments, and leverage production-ready infrastructure.</description>
+      <pubDate>Sat, 31 Oct 2026 14:59:56 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/devfest-is-back/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Cloudflare services for private origins is now generally available</title>
-      <link>https://blog.cloudflare.com/private-origins-public-to-private/</link>
-      <description>Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity.</description>
-      <pubDate>Fri, 30 Oct 2026 14:23:43 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/private-origins-public-to-private/</guid>
+      <title>4 real? Tracking exploitation and patching of eMudhra’s weak keys</title>
+      <link>https://blog.cloudflare.com/emudhra-patching/</link>
+      <description>Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.</description>
+      <pubDate>Fri, 30 Oct 2026 17:38:50 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/emudhra-patching/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Catching Bugs Before They Land: JiTTesting’s Human-on-the-Loop Approach at Full Scale</title>
-      <link>https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/</link>
-      <description>Over the last year we’ve been sharing our work leveraging large language models to catch bugs on the fly — a novel approach we call Catching Just-in-Time Tests (JiTTests) Now, we’re sharing the results and positive impact we’ve seen with Catching JiTTests deployed into production Our paper, “Just-in-Time Catching Test Generation at Meta,” fully details [...] Read More</description>
-      <pubDate>Thu, 29 Oct 2026 16:00:12 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/10/29/security/catching-bugs-before-they-land-jittestings-human-on-the-loop-approach-at-full-scale/</guid>
-      <source>Meta Engineering</source>
+      <title>Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts</title>
+      <link>https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts</link>
+      <description>In early 2026, we began moving our vendor payments to Global Payouts, Stripe’s product for paying recipients in 160+ countries New-market setup fell from six weeks to one, with a 99.9% payout success rate</description>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts</guid>
+      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
