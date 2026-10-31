@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
-import { AI_SECTION_NAME, aiArticleHref, orderAIArticles } from "../src/data/ai.ts";
+import { AI_SECTION_NAME, aiArticleHref, aiTopicId, orderAIArticles } from "../src/data/ai.ts";
 import rehypeMath from "../src/lib/rehypeMath.mjs";
 import { createMarkdownProcessor } from "@astrojs/markdown-remark";
 import { mathStylesheetPath } from "../src/lib/mathAssets.mjs";
@@ -15,6 +15,13 @@ const pre = (language: string, source: string) => ({
 });
 
 describe("AI Foundations publication", () => {
+  it("gives manually named topics distinct anchors independent of listing position", () => {
+    assert.equal(aiTopicId("Introduction to AI"), "ai-topic-Introduction%20to%20AI");
+    assert.notEqual(aiTopicId("A B"), aiTopicId("A-B"));
+    assert.notEqual(aiTopicId("A/B"), aiTopicId("A%2FB"));
+    assert.equal(decodeURIComponent(aiTopicId("AI & Science").slice(9)), "AI & Science");
+  });
+
   it("keeps reading order independent of publication date without mutating inputs", () => {
     const entries = [
       { id: "later", data: { order: 2, date: new Date("2026-10-01") } },
@@ -68,7 +75,7 @@ describe("AI Foundations publication", () => {
 
   it("teaches the requested English section with consistent experimental controls", () => {
     for (const contract of [
-      'lang: en', 'date: 2026-10-24', 'topic: "AI Fundamentals"', 'order: 1',
+      'lang: en', 'date: 2026-10-24', 'topic: "Introduction to AI"', 'order: 1',
       "The following dataset is synthetic", "unique best candidate", "independent check",
       "Both approaches make one mistake out of four", "Data leakage", "validation set",
       "The verified output", "five units", "costing two units",

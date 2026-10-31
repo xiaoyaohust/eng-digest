@@ -3,7 +3,7 @@ import { render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { published, allCandidates, findRelated } from "@/lib/content";
 import { readingTime } from "@/lib/url";
-import { AI_SECTION_NAME, aiArticleHref, orderAIArticles } from "@/data/ai";
+import { AI_SECTION_NAME, aiArticleHref, aiTopicId, orderAIArticles } from "@/data/ai";
 
 export async function getStaticPaths() {
   const entries = orderAIArticles(await published("ai"));
@@ -33,7 +33,10 @@ const socialImage = entry.data.socialImage ?? {
   prev={prevEntry && { title: prevEntry.data.title, href: aiArticleHref(prevEntry) }}
   next={nextEntry && { title: nextEntry.data.title, href: aiArticleHref(nextEntry) }}
   shareHashtags={["ArtificialIntelligence", "MachineLearning", "LearningAI"]}
-  breadcrumbParents={[{ title: AI_SECTION_NAME, href: "/ai/" }]}
+  breadcrumbParents={[
+    { title: AI_SECTION_NAME, href: "/ai/" },
+    { title: entry.data.topic, href: `/ai/#${aiTopicId(entry.data.topic)}` },
+  ]}
   hasMath={remarkPluginFrontmatter.hasMath === true}
 >
   <div class="ai-manuscript" lang={entry.data.lang}><Content /></div>

@@ -5,10 +5,10 @@ import { describe, it } from "node:test";
 const article = readFileSync(new URL("../src/content/ai/large-language-models-and-agents.md", import.meta.url), "utf8");
 
 describe("LLM and agent foundations publication", () => {
-  it("continues the AI Fundamentals sequence and states the example's limits", () => {
+  it("continues the Introduction to AI sequence and states the example's limits", () => {
     for (const requirement of [
       'title: "Large Language Models and Agents"', 'date: 2026-10-25T11:40:00-07:00',
-      'topic: "AI Fundamentals"', 'order: 4', 'lang: en',
+      'topic: "Introduction to AI"', 'order: 4', 'lang: en',
       '/ai/discriminative-and-generative-models/',
       "A causal mask prevents a position from using later target tokens",
       "no credentials, network requests, downloaded weights, or third-party dependencies",

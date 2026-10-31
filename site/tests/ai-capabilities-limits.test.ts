@@ -8,7 +8,7 @@ describe("AI capabilities and limits publication", () => {
   it("continues the fundamentals sequence and states the limits of the worked example", () => {
     for (const requirement of [
       'title: "AI Capabilities and Their Limits"', 'date: 2026-10-27',
-      'topic: "AI Fundamentals"', 'order: 6', 'lang: en',
+      'topic: "Introduction to AI"', 'order: 6', 'lang: en',
       "/ai/training-inference-and-deployment/", "eight synthetic tickets",
       "with no trained model or real service behind it", "Neither can reliably distinguish",
       "additional requirements are met", "It does not establish that every model",

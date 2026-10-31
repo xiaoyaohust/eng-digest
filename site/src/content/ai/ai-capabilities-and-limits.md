@@ -2,7 +2,7 @@
 title: "AI Capabilities and Their Limits"
 description: "Learn which tasks AI can support, where information and evaluation set limits, and how to measure the cost of mistakes and human review."
 date: 2026-10-27
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 6
 lang: en
 socialTitle: "AI Capabilities and Their Limits"

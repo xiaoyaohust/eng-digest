@@ -8,7 +8,7 @@ describe("CPU, GPU, memory, and cost publication", () => {
   it("continues the series with explicit hypothetical assumptions and limitations", () => {
     for (const text of [
       'title: "CPUs, GPUs, GPU Memory, and Compute Costs"', "date: 2026-10-28",
-      'topic: "AI Fundamentals"', "order: 7", "lang: en",
+      'topic: "Introduction to AI"', "order: 7", "lang: en",
       "/ai/training-inference-and-deployment/", "invented architecture inputs",
       "including generated tokens", "working allowance is a simplifying assumption",
       "Use key-value heads", "physical storage", "not a price quote or measured benchmark",

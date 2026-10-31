@@ -8,7 +8,7 @@ describe("discriminative and generative models publication", () => {
   it("follows the existing AI sequence and introduces the intended distinctions", () => {
     for (const requirement of [
       'title: "Discriminative and Generative Models"', 'date: 2026-10-25', 'order: 3',
-      'topic: "AI Fundamentals"', 'lang: en', '/ai/ai-machine-learning-deep-learning/',
+      'topic: "Introduction to AI"', 'lang: en', '/ai/ai-machine-learning-deep-learning/',
       "A discriminative classifier can also sample a label",
       "without providing a tractable probability calculation",
       "The presence of a vertical bar alone cannot distinguish these uses",

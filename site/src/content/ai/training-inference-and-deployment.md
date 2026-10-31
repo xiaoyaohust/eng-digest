@@ -2,7 +2,7 @@
 title: "Training, Inference, and Deployment"
 description: "Follow a fitted email classifier from training data to a versioned release, and learn how prediction, evaluation, and deployment differ."
 date: 2026-10-27
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 5
 lang: en
 socialTitle: "Training, Inference, and Deployment"

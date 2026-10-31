@@ -8,7 +8,7 @@ describe("training, inference, and deployment lesson", () => {
   it("continues the existing fundamentals series with explicit experimental limits", () => {
     for (const requirement of [
       'title: "Training, Inference, and Deployment"', 'date: 2026-10-27',
-      'topic: "AI Fundamentals"', 'order: 5', 'lang: en',
+      'topic: "Introduction to AI"', 'order: 5', 'lang: en',
       "/ai/from-rules-to-machine-learning/", "/ai/large-language-models-and-agents/",
       "same message reaches the model with a different input", "synthetic training counts",
       "begins allowing messages that the experiment blocked",

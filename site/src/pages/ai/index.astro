@@ -5,7 +5,7 @@ import ArticleCard from "@/components/ArticleCard.astro";
 import { published } from "@/lib/content";
 import { groupByLatestArticle } from "@/lib/contentOrdering";
 import { withBase } from "@/lib/url";
-import { AI_SECTION_NAME, AI_SECTION_DESCRIPTION, aiArticleHref, orderAIArticles } from "@/data/ai";
+import { AI_SECTION_NAME, AI_SECTION_DESCRIPTION, aiArticleHref, aiTopicId, orderAIArticles } from "@/data/ai";
 
 const articles = await published("ai");
 const first = orderAIArticles(articles)[0];
@@ -32,8 +32,11 @@ const topics = groupByLatestArticle(articles, (entry) => entry.data.topic);
     <p class="eyebrow">STUDY LIBRARY / NEWEST FIRST</p>
     <h2 id="library-title">Build your understanding</h2>
     <p class="muted">Browse the latest sections first. Use Start reading and each article's previous and next links to follow the teaching sequence. Each section includes prerequisites, worked examples, and exercises with answer guidance.</p>
+    {topics.length > 0 && <nav class="ai-topic-nav" aria-label="AI Foundations topics">
+      {topics.map(([topic, entries]) => <a href={`#${aiTopicId(topic)}`}>{topic} <small>{entries.length}</small></a>)}
+    </nav>}
     {topics.map(([topic, entries]) => <section class="ai-topic">
-      <h3>{topic}</h3>
+      <h3 id={aiTopicId(topic)}>{topic}</h3>
       <div class="card-grid">{entries.map((entry) =>
         <ArticleCard href={aiArticleHref(entry)} kicker={AI_SECTION_NAME} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />
       )}</div>
@@ -59,7 +62,11 @@ const topics = groupByLatestArticle(articles, (entry) => entry.data.topic);
   .study-panel p { margin: 0; font-size: .75rem; color: #a5b8ca; }
   .ai-library { padding-block: 45px 70px; }
   .ai-library > p { max-width: 760px; }
+  .ai-topic-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .ai-topic-nav a { padding: 8px 12px; border: 1px solid var(--color-border); border-radius: 5px; font: .72rem var(--font-mono); overflow-wrap: anywhere; }
+  .ai-topic-nav a:hover, .ai-topic-nav a:focus-visible { border-color: var(--color-accent); }
+  .ai-topic-nav small { margin-left: 6px; color: var(--color-text-muted); }
   .ai-topic { margin-top: 38px; }
-  .ai-topic h3 { border-bottom: 1px solid var(--color-border); padding-bottom: 12px; }
+  .ai-topic > h3 { border-bottom: 1px solid var(--color-border); padding-bottom: 12px; scroll-margin-top: 100px; }
   @media (max-width: 760px) { .ai-hero-grid { grid-template-columns: 1fr; gap: 30px; padding-block: 40px; } }
 </style>

@@ -2,7 +2,7 @@
 title: "From Rule-Based Systems to Machine Learning"
 description: "Learn what a model learns, how training differs from prediction, and why lower training error needs an independent test."
 date: 2026-10-24
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 1
 lang: en
 socialTitle: "From Rules to Machine Learning"

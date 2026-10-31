@@ -119,7 +119,7 @@ Create `site/src/content/ai/<slug>.md`:
 title: "Your section title"
 description: "The concept and skills taught by this section."
 date: 2026-10-24
-topic: "AI Fundamentals"
+topic: "From Real-World Problems to AI Tasks"
 order: 2
 lang: en
 socialTitle: "A Short English Share Title"
@@ -131,6 +131,12 @@ draft: false
 
 `topic`, positive integer `order`, `socialTitle`, and `socialDescription` are required.
 The index groups by the manually entered topic and lists topics and articles newest first.
+Use `Introduction to AI` for the introductory series and
+`From Real-World Problems to AI Tasks` for task-definition sections. These are manually
+assigned names, not inferred categories. Reuse the exact spelling to join an existing
+group, or enter another name to create one. Topic links and article breadcrumbs point
+back to the corresponding group on `/ai/`. Changing a topic does not change an article's
+URL or publication date.
 The Start reading link and article previous/next links follow the teaching sequence using
 `order` rather than publication date. Use distinct order values across the library;
 the first published section uses 1. `lang` defaults to `en` and also accepts `zh-CN`.

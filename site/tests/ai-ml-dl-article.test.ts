@@ -5,10 +5,10 @@ import { describe, it } from "node:test";
 const article = readFileSync(new URL("../src/content/ai/ai-machine-learning-deep-learning.md", import.meta.url), "utf8");
 
 describe("AI, ML, and DL section editorial checks", () => {
-  it("follows the first AI Fundamentals section without inventing a section number", () => {
+  it("follows the first Introduction to AI section without inventing a section number", () => {
     for (const field of [
       'title: "How AI, Machine Learning, and Deep Learning Fit Together"',
-      'topic: "AI Fundamentals"', "order: 2", "date: 2026-10-24", "lang: en",
+      'topic: "Introduction to AI"', "order: 2", "date: 2026-10-24", "lang: en",
       "/ai/from-rules-to-machine-learning/",
     ]) assert.ok(article.includes(field), field);
     assert.doesNotMatch(article, /^## \d+[. ]/m);

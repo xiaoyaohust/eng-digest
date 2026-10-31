@@ -2,7 +2,7 @@
 title: "How AI, Machine Learning, and Deep Learning Fit Together"
 description: "Understand the relationship between AI, machine learning, and deep learning through one concrete email-filtering system."
 date: 2026-10-24
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 2
 lang: en
 socialTitle: "AI, Machine Learning, and Deep Learning"

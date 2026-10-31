@@ -2,7 +2,7 @@
 title: "Discriminative and Generative Models"
 description: "Learn what each model represents, derive a generative classifier step by step, and verify the probabilities with NumPy."
 date: 2026-10-25
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 3
 lang: en
 socialTitle: "Discriminative and Generative Models"

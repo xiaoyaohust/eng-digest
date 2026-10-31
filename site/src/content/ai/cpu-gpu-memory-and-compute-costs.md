@@ -2,7 +2,7 @@
 title: "CPUs, GPUs, GPU Memory, and Compute Costs"
 description: "Calculate model weights, KV cache, and serving costs, and learn how CPU work, GPU execution, and memory limits shape an AI application."
 date: 2026-10-28
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 7
 lang: en
 socialTitle: "CPUs, GPUs, Memory, and Cost"

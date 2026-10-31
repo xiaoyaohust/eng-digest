@@ -2,7 +2,7 @@
 title: "Large Language Models and Agents"
 description: "Follow an order-support request from token prediction to a bounded tool-calling loop, with a runnable Python example and explicit permission checks."
 date: 2026-10-25T11:40:00-07:00
-topic: "AI Fundamentals"
+topic: "Introduction to AI"
 order: 4
 lang: en
 socialTitle: "Large Language Models and Agents"
