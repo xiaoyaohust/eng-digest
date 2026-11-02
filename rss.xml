@@ -6,31 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 31 Oct 2026 14:59:59 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 19:09:00 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>DevFest is back!</title>
-      <link>https://developers.googleblog.com/devfest-is-back/</link>
-      <description>DevFest 2026 runs from October 1 to December 31, bringing together nearly a million developers across more than 800 global events centered on the agentic AI era Under the theme &quot;Build, Secure, Scale,&quot; participants gain hands-on experience with Google’s developer stack—including Gemini, Google AI Studio, Google Antigravity, and Web MCP—through live workshops and codelabs The conference focuses on enabling developers to prototype rapidly, ensure secure and private deployments, and leverage production-ready infrastructure.</description>
-      <pubDate>Sat, 31 Oct 2026 14:59:56 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/devfest-is-back/</guid>
-      <source>Google Developers</source>
+      <title>AWS Weekly Roundup: GPT-6.1 Terra on Bedrock, Step Functions as agent tools, and more (November 2, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/</link>
+      <description>The agentic launches that stayed with me last week had nothing to do with how capable a model is AWS Step Functions, which already orchestrates over 220 AWS services, can now be handed to an agent as a tool, so workflows teams already trust became callable without a rewrite</description>
+      <pubDate>Mon, 02 Nov 2026 16:45:48 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-gpt-6-1-terra-on-bedrock-step-functions-as-agent-tools-and-more-november-2-2026/</guid>
+      <source>AWS News</source>
     </item>
     <item>
-      <title>4 real? Tracking exploitation and patching of eMudhra’s weak keys</title>
-      <link>https://blog.cloudflare.com/emudhra-patching/</link>
-      <description>Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.</description>
-      <pubDate>Fri, 30 Oct 2026 17:38:50 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/emudhra-patching/</guid>
+      <title>How we halved DNS build delay and cut memory use by 85%</title>
+      <link>https://blog.cloudflare.com/dns-targeted-zone-builds/</link>
+      <description>Zone setting changes used to rebuild entire DNS zones, even ones with tens of millions of records Here is how we built a planner that picks the smallest safe build, cutting full builds by 40%, peak memory by 85%, and halving build delay.</description>
+      <pubDate>Mon, 02 Nov 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/dns-targeted-zone-builds/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts</title>
-      <link>https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts</link>
-      <description>In early 2026, we began moving our vendor payments to Global Payouts, Stripe’s product for paying recipients in 160+ countries New-market setup fell from six weeks to one, with a 99.9% payout success rate</description>
-      <pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts</guid>
-      <source>Stripe Engineering</source>
+      <title>Game Off 2026: The theme is SHIFT</title>
+      <link>https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/</link>
+      <description>GitHub’s annual month-long game jam is back for its 14th year This November, make a game inspired by the theme SHIFT The post Game Off 2026: The theme is SHIFT appeared first on The GitHub Blog.</description>
+      <pubDate>Sun, 01 Nov 2026 21:36:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/</guid>
+      <source>GitHub Blog</source>
     </item>
   </channel>
 </rss>
