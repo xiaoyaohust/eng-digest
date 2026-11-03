@@ -8,7 +8,7 @@ const title = "Business Metrics and Model Metrics";
 test("metrics lesson publishes in the newest topic with working reading links and share metadata", async ({ page, request }) => {
   await page.goto("/ai/");
   const group = page.locator(".ai-topic").filter({ has: page.getByRole("heading", { name: topic, exact: true }) });
-  await expect(page.locator(".ai-topic").first().getByRole("heading", { name: topic, exact: true })).toBeVisible();
+  await expect(group.getByRole("heading", { name: topic, exact: true })).toBeVisible();
   const hrefs = await group.locator("a.article-card").evaluateAll((cards) => cards.map((card) => card.getAttribute("href")));
   expect(hrefs.indexOf(path)).toBeGreaterThanOrEqual(0);
   expect(hrefs.indexOf(previous)).toBeGreaterThanOrEqual(0);

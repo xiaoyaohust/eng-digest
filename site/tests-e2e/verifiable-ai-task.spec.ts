@@ -12,7 +12,7 @@ test("case study joins the current AI topic with static teaching material, searc
   expect(hrefs.indexOf(path)).toBeGreaterThanOrEqual(0);
   expect(hrefs.indexOf(previous)).toBeGreaterThanOrEqual(0);
   expect(hrefs.indexOf(path)).toBeLessThan(hrefs.indexOf(previous));
-  await expect(page.locator(".ai-topic").first().getByRole("heading", { name: topic, exact: true })).toBeVisible();
+  await expect(group.getByRole("heading", { name: topic, exact: true })).toBeVisible();
   await group.locator(`a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
