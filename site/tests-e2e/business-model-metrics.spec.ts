@@ -9,7 +9,10 @@ test("metrics lesson publishes in the newest topic with working reading links an
   await page.goto("/ai/");
   const group = page.locator(".ai-topic").filter({ has: page.getByRole("heading", { name: topic, exact: true }) });
   await expect(page.locator(".ai-topic").first().getByRole("heading", { name: topic, exact: true })).toBeVisible();
-  await expect(group.locator("a.article-card").first()).toHaveAttribute("href", path);
+  const hrefs = await group.locator("a.article-card").evaluateAll((cards) => cards.map((card) => card.getAttribute("href")));
+  expect(hrefs.indexOf(path)).toBeGreaterThanOrEqual(0);
+  expect(hrefs.indexOf(previous)).toBeGreaterThanOrEqual(0);
+  expect(hrefs.indexOf(path)).toBeLessThan(hrefs.indexOf(previous));
   await group.locator(`a[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
