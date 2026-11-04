@@ -6,23 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 03 Nov 2026 16:48:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 16:49:15 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Arnis turns any place on Earth into a Minecraft world</title>
-      <link>https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/</link>
-      <description>Louis Erbkamm built the first prototype in his free time Now GitHub Copilot helps him maintain it alone The post Arnis turns any place on Earth into a Minecraft world appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 03 Nov 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/</guid>
-      <source>GitHub Blog</source>
+      <title>Cost per task: Using cheap classifiers to route across Gemini models and thinking levels</title>
+      <link>https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/</link>
+      <description>Per-token API prices keep falling, yet engineering bills for autonomous coding agents keep climbing....</description>
+      <pubDate>Wed, 04 Nov 2026 16:49:11 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/cost-per-task-using-cheap-classifiers-to-route-across-gemini-models-and-thinking-levels/</guid>
+      <source>Google Developers</source>
     </item>
     <item>
-      <title>Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities</title>
-      <link>https://blog.cloudflare.com/zero-wire/</link>
-      <description>Zero Wire on Cloudflare Radar pairs plain-language briefings with global attack telemetry and remediation steps Triage critical CVEs faster and decide how to protect your infrastructure.</description>
-      <pubDate>Tue, 03 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/zero-wire/</guid>
+      <title>See the agents, set the terms: new visibility and control for personal agents</title>
+      <link>https://blog.cloudflare.com/personal-agents-visibility-control/</link>
+      <description>Personal AI agents have changed how users interact with the web, blurring the lines between automated and human traffic Learn how Cloudflare gives site owners visibility and control to manage personal agent access.</description>
+      <pubDate>Wed, 04 Nov 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/personal-agents-visibility-control/</guid>
       <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>F3 Lightning: How Meta Accelerates Ads ML Features to Production at Scale</title>
+      <link>https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/</link>
+      <description>Facebook Feature Framework (F3) is Meta’s framework for authoring, compiling, and serving the machine learning features underlying ads ranking models, where a single request can require more than 20,000 features F3 reduced execution computational costs by compiling all features into a single merged graph, but that [...] Read More The post F3 Lightning: How Meta Accelerates Ads ML Features to Production at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 03 Nov 2026 17:00:35 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/</guid>
+      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
