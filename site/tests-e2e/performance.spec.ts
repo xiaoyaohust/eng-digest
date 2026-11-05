@@ -28,6 +28,10 @@ for (const profile of [
     test.setTimeout(120_000);
     const samples = [];
     for (const path of paths) {
+      // Fragment scrolling can end LCP collection before any candidate paints.
+      // Keep CLS coverage there, but enforce LCP on ordinary document loads.
+      // https://www.w3.org/TR/largest-contentful-paint/#processing-model
+      const hasFragment = Boolean(new URL(path, baseURL).hash);
       // A new context per URL gives each first visit its own empty cache.
       const context = await browser.newContext({ baseURL, ...profile });
       try {
@@ -43,7 +47,10 @@ for (const profile of [
           offline: false, latency: 100, downloadThroughput: 187_500, uploadThroughput: 93_750,
         });
         for (const visit of ["first", "repeat"]) {
-          await page.goto(path);
+          // A second goto to the same fragment may be a same-document
+          // navigation. Reload to measure a fresh document with a warm cache.
+          if (visit === "repeat") await page.reload();
+          else await page.goto(path);
           const log = await readMetrics(page);
           const cls = calculateCLS(log.shifts);
           samples.push({ path, visit, cls, lcp: log.lcp, shifts: log.shifts });
@@ -53,9 +60,14 @@ for (const profile of [
           expect(log.supported).toContain("layout-shift");
           expect(log.supported).toContain("largest-contentful-paint");
           expect(cls, JSON.stringify(samples.at(-1))).toBeLessThanOrEqual(0.1);
-          expect(log.lcp).toBeGreaterThan(0);
-          // A lab ceiling for this fixed profile, not a claim about field P75.
-          expect(log.lcp, `${path} ${visit} LCP`).toBeLessThanOrEqual(2500);
+          if (!hasFragment) {
+            expect(log.lcp, `${path} ${visit} must produce an LCP candidate`).toBeGreaterThan(0);
+            // A lab ceiling for this fixed profile, not a claim about field P75.
+            expect(log.lcp, `${path} ${visit} LCP`).toBeLessThanOrEqual(2500);
+          } else {
+            await expect(page.locator(new URL(path, baseURL).hash)).toBeInViewport();
+            expect(await page.evaluate(() => scrollY)).toBeGreaterThan(0);
+          }
           expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
         }
       } finally { await context.close(); }
