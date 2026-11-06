@@ -6,63 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 05 Nov 2026 17:03:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 16:34:25 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Agents aren’t humans (but they kinda are)</title>
-      <link>https://blog.cloudflare.com/trusted-agent-delegation/</link>
-      <description>AI agents act for millions, but servers see intermediaries that strip user visibility This post defines the problem space and introduces a collaborative approach to safely identifying, allowing, and managing this automated traffic.</description>
-      <pubDate>Thu, 05 Nov 2026 17:03:04 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/trusted-agent-delegation/</guid>
+      <title>Agent Distraction</title>
+      <link>https://developers.googleblog.com/agent-distraction/</link>
+      <description>Analysis of over 913,000 coding agent sessions reveals that 13% expose agents to inline TODO(b/...) comments In 6% of encounters, agents act on these comments, with 83% being entirely unprompted by the developer Higher-capability models show higher distraction rates, highlighting the need for automated cleanup and linters to maintain agent-friendly codebases</description>
+      <pubDate>Fri, 06 Nov 2026 16:34:23 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/agent-distraction/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>The post-quantum future of web privacy</title>
+      <link>https://blog.cloudflare.com/vole-mole/</link>
+      <description>Cryptographic protocols like Privacy Pass help keep web sites safe from abuse while keeping their users private This post looks at the quantum threat to these protocols, and some new post-quantum cryptography that may help close the gap.</description>
+      <pubDate>Fri, 06 Nov 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/vole-mole/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Accessibility statements now have a home on GitHub</title>
-      <link>https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/</link>
-      <description>GitHub now highlights ACCESSIBILITY.md files and helps maintainers document accessibility goals, known barriers, supported environments, contributor expectations, and reporting processes The post Accessibility statements now have a home on GitHub appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 05 Nov 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/</guid>
+      <title>Inside GitHub’s new Git storage architecture</title>
+      <link>https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/</link>
+      <description>GitHub's new Git storage architecture is built so thousands of agents can push to a single repository at once The post Inside GitHub’s new Git storage architecture appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 05 Nov 2026 20:23:21 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/</guid>
       <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Reflex: an architecture for building mobile apps with agents</title>
-      <link>https://shopify.engineering/reflex</link>
-      <description>Our architecture lets agents test mobile app behavior without an emulator and use one test suite to keep iOS and Android in sync.</description>
-      <pubDate>Thu, 05 Nov 2026 15:41:40 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/reflex</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>How two engineer side projects became the agent taking action inside Dropbox</title>
-      <link>https://dropbox.tech/machine-learning/how-two-engineer-side-projects-became-the-agent-taking-action-inside-dropbox</link>
-      <description>Two side projects explored a new way to get work done with files already in Dropbox Here’s how engineers brought them together and turned those experiments into a new customer experience.</description>
-      <pubDate>Thu, 05 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-two-engineer-side-projects-became-the-agent-taking-action-inside-dropbox</guid>
-      <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>How AI-assisted development helped us build the new Dropbox experience</title>
-      <link>https://dropbox.tech/machine-learning/how-aiassisted-development-helped-us-build-the-new-dropbox-experience</link>
-      <description>From sharing features across web and desktop to testing the details customers depend on, this is how AI-assisted development helped our engineers deliver the updated Dropbox experience.</description>
-      <pubDate>Thu, 05 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://dropbox.tech/machine-learning/how-aiassisted-development-helped-us-build-the-new-dropbox-experience</guid>
-      <source>Dropbox Engineering</source>
-    </item>
-    <item>
-      <title>Analyze your Stripe data directly with your agent</title>
-      <link>https://stripe.com/blog/analyze-your-stripe-data-directly-with-your-agent</link>
-      <description>You can now use natural language to create an investor slide deck highlighting where your business outperformed in the previous quarter, or build a custom dashboard to understand why your Stripe revenue changed.</description>
-      <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/analyze-your-stripe-data-directly-with-your-agent</guid>
-      <source>Stripe Engineering</source>
-    </item>
-    <item>
-      <title>Amazon S3 Tables now offer managed migration of Apache Hive tables to Apache Iceberg</title>
-      <link>https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-offer-managed-migration-of-apache-hive-tables-to-apache-iceberg/</link>
-      <description>You can now migrate existing Apache Hive datasets in Amazon S3 to fully managed Apache Iceberg tables in Amazon S3 Tables, with no pipelines to build or compute to provision, while production workloads keep running.</description>
-      <pubDate>Wed, 04 Nov 2026 23:34:52 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/amazon-s3-tables-now-offer-managed-migration-of-apache-hive-tables-to-apache-iceberg/</guid>
-      <source>AWS News</source>
     </item>
   </channel>
 </rss>
