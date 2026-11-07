@@ -215,6 +215,13 @@ img {
 
 .prose .table-scroll table { min-width: 640px; margin: 0; }
 
+.prose .katex-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 12px;
+}
+
 .prose .table-scroll:focus-visible {
   outline: 2px solid var(--color-accent-bright);
   outline-offset: 2px;

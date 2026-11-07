@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 const { entry, prevEntry, nextEntry } = Astro.props;
-const { Content, headings } = await render(entry);
+const { Content, headings, remarkPluginFrontmatter } = await render(entry);
 
 const candidates = await allCandidates();
 const related = findRelated(entry.data.tags, candidates, `/system-design/${entry.id}/`);
@@ -47,6 +47,7 @@ const socialImage = entry.data.socialImage ?? {
   practice={entry.data.practice}
   practiceKey={`system-design/${entry.id}`}
   socialImage={socialImage}
+  hasMath={remarkPluginFrontmatter.hasMath === true}
   sectionHref="/system-design/"
   relatedPath={path && { title: path.title, href: `/learning-paths/${path.slug}/` }}
 >
