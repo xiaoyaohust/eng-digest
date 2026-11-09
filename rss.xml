@@ -6,15 +6,63 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 07 Nov 2026 15:23:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 19:28:17 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Beyond code generation: A developer’s guide to agentic engineering</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/</link>
-      <description>The work around it didn't See how you can plan, write code, review changes, and investigate production issues with GitHub Copilot, and what work still needs your judgment The post Beyond code generation: A developer’s guide to agentic engineering appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 06 Nov 2026 22:15:59 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/</guid>
-      <source>GitHub Blog</source>
+      <title>From prompt to app: Build with Google Maps in AI Studio</title>
+      <link>https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/</link>
+      <description>Developers can now build applications powered by Google Maps Platform directly within Google AI Studio by prompting Gemini with real-world geospatial concepts The integration eliminates traditional configuration hurdles by providing one-click demo keys that generate instantly without requiring Cloud Console redirects or credit cards This setup grants developers immediate access to core APIs—including Maps, Places, and Routes—supported by daily sandbox quotas for seamless prototyping.</description>
+      <pubDate>Mon, 09 Nov 2026 19:28:15 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/from-prompt-to-app-build-with-google-maps-in-ai-studio/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>What is Pathways? Single-controller training for large models</title>
+      <link>https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/</link>
+      <description>Pathways is a single-controller distributed training system designed to coordinate large-scale model training across multiple accelerator groups by representing computations as a global dataflow graph Unlike traditional SPMD models like DDP and FSDP that rely on synchronous collectives, Pathways uses asynchronous dispatch and a central scheduler to maximize hardware utilization and prevent deadlocks in complex workloads By decoupling model definition from physical hardware via virtual devices, developers can efficiently scale complex training architectures and seamlessly handle dynamic workloads like reinforcement learning post-training.</description>
+      <pubDate>Mon, 09 Nov 2026 19:28:15 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/what-is-pathways-single-controller-training-for-large-models/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>AWS Weekly Roundup: AgentCore Runtime V2, Amazon DynamoDB bulk put items, and more (November 9, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-agentcore-runtime-v2-amazon-dynamodb-bulk-put-items-and-more-november-9-2026/</link>
+      <description>Most of the cost of adopting something new isn’t the new thing, it’s the move Moving a Hive table to Apache Iceberg has typically meant weeks of engineering work Last week, Amazon S3 Tables turned that into three steps: start, sync as often as you need, complete</description>
+      <pubDate>Mon, 09 Nov 2026 17:55:26 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-agentcore-runtime-v2-amazon-dynamodb-bulk-put-items-and-more-november-9-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>AI Product Management at Spotify: A View From Three Angles</title>
+      <link>https://engineering.atspotify.com/2026/11/ai-product-management-at-spotify-a-view-from-three-angles/</link>
+      <description>Almost every article or podcast about product management and AI refers to &quot;the AI PM&quot; as one job The post AI Product Management at Spotify: A View From Three Angles appeared first on Spotify Engineering.</description>
+      <pubDate>Mon, 09 Nov 2026 17:53:35 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.atspotify.com/2026/11/ai-product-management-at-spotify-a-view-from-three-angles/</guid>
+      <source>Spotify Engineering</source>
+    </item>
+    <item>
+      <title>Fact-Checking at Scale: Building a More Accurate and Efficient Synopsis Factuality System</title>
+      <link>https://netflixtechblog.com/fact-checking-at-scale-building-a-more-accurate-and-efficient-synopsis-factuality-system-d7d85859d808?source=rss----2615bd06b42e---4</link>
+      <description>We want these rationales to be better aligned so that (1) the model can consistently flag nuanced errors, and (2) its explanations can be used downstream to automatically correct issues in the synopsis.Our new approach tackles both problems at once This approach has two main limitations:High cost: Each judgment requires multiple (five, to be exact) calls to a large reasoning model over extremely long contexts (100k+ tokens), which does not scale well.Misaligned reasoning: The model can fail synopses for nitpicky reasons (e.g., “This is a show about wonderful magic” gets failed because the characters never literally call the magic “wonderful”) while overlooking nuanced errors by convincing itself they “don’t really make the synopsis false.” This misalignment makes verdicts less reliable and rationales less useful for downstream correction.Optimizing the Holistic PipelineTo understand exactly where we should optimize the current holistic pipeline, we study the current pipeline both qualitatively and quantitatively on a custom factuality benchmark that we built But are these verdicts correct for the right reasons?To measure this, we use an LLM-as-a-Judge to compare each pipeline’s reasoning against the human rationale on Gold-FAIL (GF) synopses</description>
+      <pubDate>Mon, 09 Nov 2026 17:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/fact-checking-at-scale-building-a-more-accurate-and-efficient-synopsis-factuality-system-d7d85859d808?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
+    </item>
+    <item>
+      <title>Extending LLDB to Debug Applications That Span CPUs and GPUs</title>
+      <link>https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus/</link>
+      <description>We built a vendor-neutral accelerator plugin architecture in lldb-server for debugging applications that span CPUs and GPUs The design represents the CPU and GPU as separate debugger processes while presenting them in one debugging session The post Extending LLDB to Debug Applications That Span CPUs and GPUs appeared first on Engineering at Meta.</description>
+      <pubDate>Mon, 09 Nov 2026 17:00:12 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>Launching the Vite Ecosystem Fund</title>
+      <link>https://blog.cloudflare.com/launching-vite-ecosystem-fund/</link>
+      <description>Cloudflare is distributing the first $301,300 of the Vite Ecosystem Fund to open source projects and maintainers The recipients were chosen by a panel of Vite stack core team members, including maintainers not employed by Cloudflare.</description>
+      <pubDate>Mon, 09 Nov 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/launching-vite-ecosystem-fund/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
