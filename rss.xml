@@ -6,23 +6,63 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 10 Nov 2026 16:45:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 16:51:57 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Announcing Long-Context Training on TPUs with MaxText Context Parallelism</title>
-      <link>https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/</link>
-      <description>Google Cloud's MaxText framework now supports long-context training up to 14 million tokens on Cloud TPUs by implementing four context-parallel strategies: All-gather, A2A, P2P, and USP Powered by the Tokamax Splash Attention kernel, these strategies effectively manage attention compute and memory bottlenecks without materializing full key-value sequences in high-bandwidth memory Developers can adopt these capabilities in MaxText v0.2.4 to achieve high Model FLOPs Utilization (MFU) across large-scale model training workflows.</description>
-      <pubDate>Tue, 10 Nov 2026 16:45:54 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/</guid>
+      <title>On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery</title>
+      <link>https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/</link>
+      <description>Google AI Edge Gallery now supports on-device, offline Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) capabilities for building developer-friendly voice applications Developers can leverage ML Kit for optimized Android performance, or use MediaPipe Tasks and LiteRT for cross-platform open-weight model integration This local pipeline seamlessly pairs lightweight speech models with on-device small language models like Gemini Nano and Gemma 4 to enable real-time streaming transcription and low-latency synthesis.</description>
+      <pubDate>Wed, 11 Nov 2026 16:51:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>How we rebuilt the Shopify app in 12 weeks</title>
-      <link>https://shopify.engineering/shopify-app-rebuild</link>
-      <description>What changed when agents started writing our mobile code, and how we redesigned our architecture, tooling, and workflow around validation.</description>
-      <pubDate>Tue, 10 Nov 2026 14:36:23 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/shopify-app-rebuild</guid>
-      <source>Shopify Engineering</source>
+      <title>A2UI 1.0: Build delightful, fast, reliable, agentic experiences</title>
+      <link>https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/</link>
+      <description>A2UI 1.0 is an open protocol for generative UI that enables AI agents to render interactive, native screens across web, mobile, and desktop applications Developers can leverage open-source renderer SDKs—including React, Angular, Lit, Flutter, SwiftUI, and Jetpack Compose—alongside agent SDKs for Python, TypeScript, and Dart The release introduces bidirectional function calls, swappable inference formats, and secure data binding to help teams seamlessly integrate generative UI into their product stacks.</description>
+      <pubDate>Wed, 11 Nov 2026 16:51:54 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Choosing QuePaxa, an unusual consensus algorithm</title>
+      <link>https://blog.cloudflare.com/choosing-quepaxa/</link>
+      <description>Cloudflare is building an experimental consensus service using a never-before-deployed consensus algorithm, QuePaxa In this post we explain how QuePaxa works and why we chose it.</description>
+      <pubDate>Wed, 11 Nov 2026 14:24:46 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/choosing-quepaxa/</guid>
+      <source>Cloudflare Engineering</source>
+    </item>
+    <item>
+      <title>Skipper, Airbnb’s embedded workflow engine, is now open source</title>
+      <link>https://medium.com/airbnb-engineering/skipper-airbnbs-embedded-workflow-engine-is-now-open-source-78dd354f472b?source=rss----53c7c27702d5---4</link>
+      <description>It also let workflow execution stay in-process, without a separate coordinator between steps.That requirement shaped Skipper’s architecture, as shown in the figure.With Skipper, the service’s replicas also run the workflow runtime and scheduler It also puts responsibility for workflow execution, database capacity, and recovery with the service’s team Even then, a downstream effect and its checkpoint are not one atomic operation, so side effects remain at least once.On the normal execution path, a workflow can run directly in the service process, backed by persisted state and scheduled recovery work</description>
+      <pubDate>Tue, 10 Nov 2026 18:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://medium.com/airbnb-engineering/skipper-airbnbs-embedded-workflow-engine-is-now-open-source-78dd354f472b?source=rss----53c7c27702d5---4</guid>
+      <source>Airbnb Engineering</source>
+    </item>
+    <item>
+      <title>Git security vulnerabilities announced</title>
+      <link>https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/</link>
+      <description>Git is releasing updates addressing six security vulnerabilities affecting recursive clones, reference handling, merges, binary patches, and imports Here is what users need to know The post Git security vulnerabilities announced appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 10 Nov 2026 18:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Your Algorithm: Giving People More Ways to Personalize Facebook Recommendations</title>
+      <link>https://engineering.fb.com/2026/11/10/ml-applications/your-algorithm-giving-people-more-ways-to-personalize-facebook-recommendations/</link>
+      <description>Your algorithm is a suite of AI-powered tools that makes Facebook recommendations more transparent and steerable, with a single editable view of the interests that shape Feed and Reels We’re sharing how Your algorithm turns people’s natural language preferences into responsive recommendations, and how LLMs are tailored to specific tasks within the system The post Your Algorithm: Giving People More Ways to Personalize Facebook Recommendations appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 10 Nov 2026 17:00:49 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/11/10/ml-applications/your-algorithm-giving-people-more-ways-to-personalize-facebook-recommendations/</guid>
+      <source>Meta Engineering</source>
+    </item>
+    <item>
+      <title>How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale</title>
+      <link>https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/</link>
+      <description>Triton Low-Level Extensions (TLX), is an extension to Triton that helps engineers optimize GPU performance while preserving Triton’s productive programming model TLX has demonstrated performance improvements in RecSys training, RecSys inference, and large-scale LLM pretraining The post How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale appeared first on Engineering at Meta.</description>
+      <pubDate>Tue, 10 Nov 2026 16:59:31 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/</guid>
+      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
