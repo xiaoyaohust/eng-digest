@@ -86,7 +86,9 @@ jobs:
           if-no-files-found: ignore
 
   pytest:
-    runs-on: ubuntu-latest
+    # Python 3.9 builds are available for 24.04, but not for the 26.04 image
+    # now selected by ubuntu-latest. Keep the declared minimum-version check.
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
