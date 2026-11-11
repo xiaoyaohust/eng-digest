@@ -5,14 +5,15 @@ const previous = "/ai/training-validation-and-test-sets/";
 const topic = "Building Good Experimental Habits";
 const title = "Why Data Leakage Distorts Evaluation";
 
-test("leakage lesson continues the latest AI topic with static teaching and share assets", async ({ page, request }) => {
+test("leakage lesson stays discoverable in its AI topic with static teaching and share assets", async ({ page, request }) => {
   await page.goto("/ai/");
   const group = page.locator(".ai-topic").filter({ has: page.getByRole("heading", { name: topic, exact: true }) });
-  await expect(page.locator(".ai-topic > h3").first()).toHaveText(topic);
   const cards = group.locator("a.article-card");
-  await expect(cards.first()).toHaveAttribute("href", path);
-  await expect(cards.nth(1)).toHaveAttribute("href", previous);
-  await cards.first().click();
+  const lesson = group.locator(`a.article-card[href="${path}"]`);
+  await expect(lesson).toBeVisible();
+  const paths = await cards.evaluateAll(elements => elements.map(element => element.getAttribute("href")));
+  expect(paths[paths.indexOf(path) + 1]).toBe(previous);
+  await lesson.click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(page.locator('.navbar a[href="/ai/"]')).toHaveAttribute("aria-current", "page");
