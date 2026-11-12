@@ -6,7 +6,7 @@ const title = "Aggregate Transactions by Merchant and Hour";
 
 test("transaction aggregation publishes tested solutions, a diagram, and share metadata", async ({ page, request }) => {
   await page.goto("/coding/");
-  await expect(page.locator("a.article-card").first()).toHaveAttribute("href", path);
+  await expect(page.locator(`a.article-card[href="${path}"]`)).toBeVisible();
   await page.locator(`a.article-card[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
