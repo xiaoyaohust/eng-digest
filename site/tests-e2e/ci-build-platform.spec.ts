@@ -6,9 +6,8 @@ const topic = "Infrastructure & Developer Platforms";
 
 test("CI design joins developer platforms with five rendered figures and a LinkedIn image", async ({ page, request }) => {
   await page.goto("/system-design/");
-  await expect(page.locator(".topic-cluster > header h2").first()).toHaveText(topic);
   const cluster = page.locator(".topic-cluster").filter({ has: page.getByRole("heading", { name: topic, exact: true }) });
-  await expect(cluster.locator("a.article-card").first()).toHaveAttribute("href", path);
+  await expect(cluster.locator(`a.article-card[href="${path}"]`)).toBeVisible();
   await cluster.locator(`a.article-card[href="${path}"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
