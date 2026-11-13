@@ -6,39 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 12 Nov 2026 17:20:02 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 16:56:04 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Cyber Chaos Monkey: Staying ahead of security threats with AI agents</title>
-      <link>https://shopify.engineering/cyber-chaos-monkey</link>
-      <description>How we pair AI agents with our knowledge of Shopify’s systems to safely attack our production infrastructure, find bugs, and reduce risks.</description>
-      <pubDate>Thu, 12 Nov 2026 14:57:16 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/cyber-chaos-monkey</guid>
-      <source>Shopify Engineering</source>
+      <title>How Agent Anomaly Detection scores on benchmarks we didn't write</title>
+      <link>https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/</link>
+      <description>Agent Anomaly Detection (AAD) provides asynchronous, low-latency monitoring for AI agents by analyzing OpenTelemetry traces and logs to flag goal hijacks and tool misuse Tested across five public security benchmarks, AAD successfully caught 87% of harmful instructions carried out by agents without adding runtime latency Developers can integrate AAD alongside semantic governance and strict tool limits as part of a defense-in-depth strategy to secure agentic applications.</description>
+      <pubDate>Fri, 13 Nov 2026 16:56:01 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/</guid>
+      <source>Google Developers</source>
     </item>
     <item>
-      <title>Test your applications against AWS locally with AWS Emulator</title>
-      <link>https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/</link>
-      <description>AWS Emulator is a free, open-source local emulator in Rust that lets developers test applications against nearly every AWS service on their own machine using the same CLI and SDK commands, with fidelity measured against real AWS behavior.</description>
-      <pubDate>Wed, 11 Nov 2026 19:00:44 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/test-your-applications-against-aws-locally-with-aws-emulator/</guid>
-      <source>AWS News</source>
+      <title>Catch Go bugs that fuzzing misses with Gemini and a constraint solver</title>
+      <link>https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/</link>
+      <description>How pairing Go's surviving compiler bounds-check traps with Gemini 4 Argon and the Z3 constraint solver catches latent out-of-bounds panics in Go code and uncovers a slice-capacity blind spot in go test -fuzz.</description>
+      <pubDate>Fri, 13 Nov 2026 16:56:01 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/</guid>
+      <source>Google Developers</source>
     </item>
     <item>
-      <title>Shopify’s generative discovery model</title>
-      <link>https://shopify.engineering/generative-discovery</link>
-      <description>How we train and serve a shared generative model for personalized search and recommendation at Shopify scale.</description>
-      <pubDate>Wed, 11 Nov 2026 18:27:48 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/generative-discovery</guid>
-      <source>Shopify Engineering</source>
+      <title>Introducing Spend Management: Spending limits and alerts for Cloudflare</title>
+      <link>https://blog.cloudflare.com/spend-management/</link>
+      <description>Spend Management adds opt-in spending caps for Cloudflare Workers and Durable Objects, and more products soon Here is how we built the metering pipeline that turns usage into runtime decisions.</description>
+      <pubDate>Fri, 13 Nov 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/spend-management/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Intelligent Delivery: Making Every Unit of Compute Serve Better Ads</title>
-      <link>https://engineering.fb.com/2026/11/11/ml-applications/intelligent-delivery-serve-better-ads/</link>
-      <description>Ads ranking models are growing toward LLM scale faster than the hardware to run them can keep up An extra unit of compute has more impact on some ad requests, models, and chips than on others The post Intelligent Delivery: Making Every Unit of Compute Serve Better Ads appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 11 Nov 2026 17:00:38 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/11/11/ml-applications/intelligent-delivery-serve-better-ads/</guid>
-      <source>Meta Engineering</source>
+      <title>GitHub availability report: October 2026</title>
+      <link>https://github.blog/news-insights/company-news/github-availability-report-october-2026/</link>
+      <description>In October, we experienced eight incidents that resulted in degraded performance across GitHub services The post GitHub availability report: October 2026 appeared first on The GitHub Blog.</description>
+      <pubDate>Fri, 13 Nov 2026 00:20:16 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-october-2026/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>Build once, run on any agent: A practical guide to agent skills</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/</link>
+      <description>Agent skills capture repeatable engineering work in files teams can review and reuse, while tools, project context, and permissions remain specific to the host that runs them The post Build once, run on any agent: A practical guide to agent skills appeared first on The GitHub Blog.</description>
+      <pubDate>Thu, 12 Nov 2026 22:54:52 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/</guid>
+      <source>GitHub Blog</source>
     </item>
   </channel>
 </rss>
