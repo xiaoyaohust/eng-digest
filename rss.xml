@@ -6,47 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 13 Nov 2026 16:56:04 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:31:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>How Agent Anomaly Detection scores on benchmarks we didn't write</title>
-      <link>https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/</link>
-      <description>Agent Anomaly Detection (AAD) provides asynchronous, low-latency monitoring for AI agents by analyzing OpenTelemetry traces and logs to flag goal hijacks and tool misuse Tested across five public security benchmarks, AAD successfully caught 87% of harmful instructions carried out by agents without adding runtime latency Developers can integrate AAD alongside semantic governance and strict tool limits as part of a defense-in-depth strategy to secure agentic applications.</description>
-      <pubDate>Fri, 13 Nov 2026 16:56:01 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Catch Go bugs that fuzzing misses with Gemini and a constraint solver</title>
-      <link>https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/</link>
-      <description>How pairing Go's surviving compiler bounds-check traps with Gemini 4 Argon and the Z3 constraint solver catches latent out-of-bounds panics in Go code and uncovers a slice-capacity blind spot in go test -fuzz.</description>
-      <pubDate>Fri, 13 Nov 2026 16:56:01 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Introducing Spend Management: Spending limits and alerts for Cloudflare</title>
-      <link>https://blog.cloudflare.com/spend-management/</link>
-      <description>Spend Management adds opt-in spending caps for Cloudflare Workers and Durable Objects, and more products soon Here is how we built the metering pipeline that turns usage into runtime decisions.</description>
-      <pubDate>Fri, 13 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/spend-management/</guid>
+      <title>Kitesurf is now open source</title>
+      <link>https://blog.cloudflare.com/kitesurf-open-source/</link>
+      <description>Kitesurf, our experimental browser engine for AI agents, is now open source Inspect the code, run it locally, or deploy your own instance on Cloudflare Workers.</description>
+      <pubDate>Fri, 13 Nov 2026 20:20:21 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/kitesurf-open-source/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>GitHub availability report: October 2026</title>
-      <link>https://github.blog/news-insights/company-news/github-availability-report-october-2026/</link>
-      <description>In October, we experienced eight incidents that resulted in degraded performance across GitHub services The post GitHub availability report: October 2026 appeared first on The GitHub Blog.</description>
-      <pubDate>Fri, 13 Nov 2026 00:20:16 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/github-availability-report-october-2026/</guid>
-      <source>GitHub Blog</source>
+      <title>Adapting to AI penetration testing orchestrators: The Modern Security Model</title>
+      <link>https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/</link>
+      <description>AI-orchestrated penetration testing platforms like ARTEX have become increasingly powerful tools enabling effective attacks on exposed infrastructure Here we share Cloudflare’s observations and recommended countermeasures.</description>
+      <pubDate>Fri, 13 Nov 2026 19:26:07 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Build once, run on any agent: A practical guide to agent skills</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/</link>
-      <description>Agent skills capture repeatable engineering work in files teams can review and reuse, while tools, project context, and permissions remain specific to the host that runs them The post Build once, run on any agent: A practical guide to agent skills appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 12 Nov 2026 22:54:52 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/</guid>
-      <source>GitHub Blog</source>
+      <title>Cuttlefish on Mac: Running Android’s Virtual Device Framework Natively on Apple Silicon</title>
+      <link>https://engineering.fb.com/2026/11/13/android/cuttlefish-on-mac/</link>
+      <description>How Meta's Reality Labs brought Cuttlefish and its QEMU backend to macOS and Apple silicon. [...] Read More The post Cuttlefish on Mac: Running Android’s Virtual Device Framework Natively on Apple Silicon appeared first on Engineering at Meta.</description>
+      <pubDate>Fri, 13 Nov 2026 17:00:39 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.fb.com/2026/11/13/android/cuttlefish-on-mac/</guid>
+      <source>Meta Engineering</source>
     </item>
   </channel>
 </rss>
