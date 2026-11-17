@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
+import { published } from "@/lib/content";
+import { withBase } from "@/lib/url";
+import { personalArticleHref, personalCategories, personalCategoryIds, PERSONAL_SECTION_NAME } from "@/data/personal";
+
+// Every column gets a page, even before its first article, so the section's
+// links never 404 while articles are still being written.
+export async function getStaticPaths() {
+  const articles = await published("personal");
+  return personalCategoryIds.map((id) => ({
+    params: { category: id },
+    props: { category: personalCategories[id], entries: articles.filter((entry) => entry.data.category === id) },
+  }));
+}
+const { category, entries } = Astro.props;
+---
+
+<BaseLayout title={`${category.name} · ${PERSONAL_SECTION_NAME}`} description={category.description}>
+  <section class="wrap column-page">
+    <a href={withBase("/personal/")}>← {PERSONAL_SECTION_NAME}</a>
+    <p class="eyebrow">{category.label}</p>
+    <h1>{category.name}</h1>
+    <p class="subtitle">{category.subtitle}</p>
+    <p class="intro">{category.description}</p>
+    <h2>Articles</h2>
+    {entries.length > 0 ? (
+      <div class="card-grid">
+        {entries.map((entry) => <ArticleCard href={personalArticleHref(entry)} kicker={category.name} title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />)}
+      </div>
+    ) : (
+      <p class="empty-state">The first articles in this column are on the way.</p>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .column-page { padding-block: 50px 70px; }
+  .eyebrow { margin-top: 36px; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 8px; }
+  .subtitle { margin-top: 0; color: var(--color-accent); }
+  .intro { max-width: 720px; color: var(--color-text-muted); }
+  h2 { margin-top: 44px; }
+  .empty-state { padding: 22px; border: 1px dashed var(--color-border-strong); border-radius: 8px; color: var(--color-text-muted); font: .78rem var(--font-mono); }
+</style>

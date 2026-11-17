@@ -1,5 +1,6 @@
 import { AI_SECTION_NAME } from "./ai.ts";
 import { SCIENCE_SECTION_NAME } from "./scienceProjects.ts";
+import { PERSONAL_SECTION_DESCRIPTION, PERSONAL_SECTION_NAME } from "./personal.ts";
 
 /** Editorial display order, shared by navigation, home tracks, and footer.
  * Module numbers follow this order (see sectionCode), so reordering the list
@@ -34,6 +35,11 @@ export const contentSections = [
     id: "coding", title: "Coding Patterns", navLabel: "Coding", href: "/coding/",
     description: "Reusable problem-solving patterns, algorithms, and interview-ready practice.",
     label: "ALGORITHMS", action: "Explore ↗",
+  },
+  {
+    id: "personal", title: PERSONAL_SECTION_NAME, navLabel: "Personal", href: "/personal/",
+    description: PERSONAL_SECTION_DESCRIPTION,
+    label: "HISTORY / LANGUAGE / TRAVEL", action: "Explore ↗",
   },
 ] as const;
 

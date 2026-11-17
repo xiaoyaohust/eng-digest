@@ -5,15 +5,17 @@ import { published } from "@/lib/content";
 import { slugifyTag } from "@/lib/url";
 import { scienceArticleHref, SCIENCE_SECTION_NAME } from "@/data/scienceProjects";
 import { aiArticleHref, AI_SECTION_NAME } from "@/data/ai";
+import { personalArticleHref, personalCategories } from "@/data/personal";
 
 export async function getStaticPaths() {
-  const [systemDesign, coding, interviews, fieldNotes, science, ai] = await Promise.all([
+  const [systemDesign, coding, interviews, fieldNotes, science, ai, personal] = await Promise.all([
     published("system-design"),
     published("coding"),
     published("interviews"),
     published("field-notes"),
     published("science"),
     published("ai"),
+    published("personal"),
   ]);
 
   type Card = {
@@ -26,6 +28,10 @@ export async function getStaticPaths() {
   };
 
   const all: Card[] = [
+    ...personal.map((e) => ({
+      href: personalArticleHref(e), kicker: personalCategories[e.data.category].name,
+      title: e.data.title, description: e.data.description, date: e.data.date, tags: e.data.tags,
+    })),
     ...ai.map((e) => ({
       href: aiArticleHref(e), kicker: AI_SECTION_NAME,
       title: e.data.title, description: e.data.description, date: e.data.date, tags: e.data.tags,

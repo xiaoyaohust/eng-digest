@@ -47,7 +47,7 @@ test("founder card and original section order fit phone, tablet, and desktop wid
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     expect(await introduction.evaluate((element) => element.scrollWidth <= element.clientWidth)).toBe(true);
     const hrefs = await page.locator(".track-card").evaluateAll((links) => links.map((link) => link.getAttribute("href")));
-    expect(hrefs).toEqual(["/system-design/", "/ai/", "/field-notes/", "/eng-digest/", "/science/", "/coding/"]);
+    expect(hrefs).toEqual(["/system-design/", "/ai/", "/field-notes/", "/eng-digest/", "/science/", "/coding/", "/personal/"]);
     if (width === 390) await introduction.screenshot({ path: "test-results/founder-mobile.png", style: ".navbar { visibility: hidden !important; }" });
   }
 });

@@ -193,6 +193,68 @@ Put measured figures under `site/public/science/`
 and give their source, units, uncertainty, and whether they describe observations or simulations.
 Scientific claims should have dated evidence and distinguish measured results from forecasts.
 
+## Adding a Personal Interest article
+
+Create `site/src/content/personal/<slug>.md` and choose its column with `category`:
+
+| `category`      | Column                     |
+| --------------- | -------------------------- |
+| `china-history` | A General History of China |
+| `history-talks` | History Talks              |
+| `spanish`       | Spanish Learning           |
+| `travel`        | Travel Blog                |
+
+```yaml
+---
+title: "The Qin Unification"
+description: "How a frontier state unified China in 221 BCE."
+date: 2026-11-20
+category: china-history
+lang: en            # or zh-CN if the article is written in Chinese
+tags: [chinese-history, qin-dynasty]
+socialTitle: "The Qin Unification"   # optional, English text for the share image
+draft: false
+---
+```
+
+The article appears at `/personal/<category>/<slug>/`, in its column and on tag pages.
+All four column pages exist even before their first article. Columns are registered in
+`site/src/data/personal.ts`; add an ID there to create a new one.
+
+## Adding a Chinese (or English) translation of any article
+
+Every article page, in every section, gets an **EN / CN** switch as soon as a translation
+file exists for it. Articles without one look exactly as before.
+
+Put the translation at `site/src/content/translations/<section>/<article id>.md`, where
+the article id is the original file name without `.md`:
+
+| Original article                                              | Translation file                                           |
+| ------------------------------------------------------------- | ---------------------------------------------------------- |
+| `content/field-notes/tcp-three-way-handshake.md`              | `content/translations/field-notes/tcp-three-way-handshake.md` |
+| `content/system-design/<id>.md`, `coding/`, `ai/`, `interviews/` | `content/translations/<same folder>/<id>.md`             |
+| `content/science/<id>.md` (any project)                       | `content/translations/science/<id>.md`                     |
+| `content/personal/<id>.md` (any column)                       | `content/translations/personal/<id>.md`                    |
+| Daily digest `/eng-digest/<date>/`                            | `content/translations/eng-digest/<date>.md`                |
+| Weekly digest `/eng-digest/weekly/<week>/`                    | `content/translations/eng-digest/weekly/<week>.md`         |
+
+```yaml
+---
+title: "TCP 三次握手：状态、延迟与故障"
+description: "为什么 TCP 需要三条握手报文……"
+lang: zh-CN         # default; use en for the English version of a Chinese article
+draft: false
+---
+
+正文使用和原文相同的 Markdown，Mermaid 图、数学公式、代码块都可以用。
+```
+
+The switch appears under the article header and again at the end of the article. It swaps
+the title, description, table of contents, and body; tags, dates, practice questions, and
+previous/next links stay shared. The reader's choice is remembered for other articles, and
+a link can choose the language with `?lang=zh` or `?lang=en`. A translation whose `lang`
+matches the original article's language is ignored.
+
 ## Adding an Interview Experience article
 
 Create `site/src/content/interviews/<slug>.md`:

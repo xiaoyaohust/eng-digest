@@ -1,0 +1,49 @@
+---
+import { render } from "astro:content";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import { loadTranslation } from "@/lib/translations";
+import { published, allCandidates, findRelated } from "@/lib/content";
+import { readingTime } from "@/lib/url";
+import { personalArticleHref, personalCategories, PERSONAL_SECTION_NAME } from "@/data/personal";
+
+export async function getStaticPaths() {
+  const entries = await published("personal");
+  return entries.map((entry) => {
+    // Previous/next stay within the same column, oldest to newest.
+    const column = entries.filter((other) => other.data.category === entry.data.category);
+    const index = column.indexOf(entry);
+    return {
+      params: { category: entry.data.category, slug: entry.id },
+      props: { entry, prevEntry: column[index + 1], nextEntry: column[index - 1] },
+    };
+  });
+}
+const { entry, prevEntry, nextEntry } = Astro.props;
+const category = personalCategories[entry.data.category];
+const categoryHref = `/personal/${entry.data.category}/`;
+const { Content, headings, remarkPluginFrontmatter } = await render(entry);
+const translation = await loadTranslation("personal", entry.id, entry.data.lang);
+const related = findRelated(entry.data.tags, await allCandidates(), personalArticleHref(entry));
+const socialImage = entry.data.socialImage ?? {
+  src: `/social/auto/personal/${entry.id}.png`,
+  alt: entry.data.socialTitle ?? entry.data.title,
+  width: 1200,
+  height: 627,
+};
+---
+
+<ArticleLayout
+  title={entry.data.title} description={entry.data.description}
+  lang={entry.data.lang} kicker={`${PERSONAL_SECTION_NAME} / ${category.name}`}
+  date={entry.data.date} updated={entry.data.updated} tags={entry.data.tags}
+  readingMinutes={readingTime(entry.body ?? "")} headings={headings}
+  socialImage={socialImage} related={related} sectionHref={categoryHref}
+  prev={prevEntry && { title: prevEntry.data.title, href: personalArticleHref(prevEntry) }}
+  next={nextEntry && { title: nextEntry.data.title, href: personalArticleHref(nextEntry) }}
+  shareHashtags={["History", "LanguageLearning", "Travel"]}
+  breadcrumbParents={[{ title: PERSONAL_SECTION_NAME, href: "/personal/" }, { title: category.name, href: categoryHref }]}
+  hasMath={remarkPluginFrontmatter.hasMath === true}
+  translation={translation}
+>
+  <Content />
+</ArticleLayout>

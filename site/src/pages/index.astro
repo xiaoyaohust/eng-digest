@@ -11,13 +11,14 @@ import { AI_SECTION_NAME } from "@/data/ai";
 import { contentSections, sectionCode } from "@/data/contentSections";
 import { founder } from "@/data/founder";
 
-const [systemDesign, coding, fieldNotes, digests, science, ai] = await Promise.all([
+const [systemDesign, coding, fieldNotes, digests, science, ai, personal] = await Promise.all([
   published("system-design"),
   published("coding"),
   published("field-notes"),
   publishedDigests(),
   published("science"),
   published("ai"),
+  published("personal"),
 ]);
 
 type Kicker = "System Design" | "Coding" | "Engineering Field Notes" | typeof SCIENCE_SECTION_NAME | typeof AI_SECTION_NAME;
@@ -73,6 +74,7 @@ const latestDigest = digests[0];
 const counts = {
   "system-design": systemDesign.length, ai: ai.length, "field-notes": fieldNotes.length,
   "eng-digest": digests.length, science: science.length, coding: coding.length,
+  personal: personal.length,
 };
 const sections = contentSections.map((section) => ({
   ...section,

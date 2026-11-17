@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import { loadTranslation } from "@/lib/translations";
 
 export async function getStaticPaths() {
   const entries = (await getCollection("generated-digests")).sort(
@@ -18,6 +19,7 @@ export async function getStaticPaths() {
 
 const { entry, prevEntry, nextEntry } = Astro.props;
 const { Content, headings } = await render(entry);
+const translation = await loadTranslation("eng-digest", entry.id);
 
 const description = `Engineering digest for ${entry.data.date.toISOString().slice(0, 10)}${
   entry.data.articleCount ? ` — ${entry.data.articleCount} articles` : ""
@@ -33,6 +35,7 @@ const description = `Engineering digest for ${entry.data.date.toISOString().slic
   sectionHref="/eng-digest/"
   prev={prevEntry && { title: `Digest — ${prevEntry.id}`, href: `/eng-digest/${prevEntry.id}/` }}
   next={nextEntry && { title: `Digest — ${nextEntry.id}`, href: `/eng-digest/${nextEntry.id}/` }}
+  translation={translation}
 >
   {entry.data.sources && entry.data.sources.length > 0 && (
     <p class="digest-sources tag-list" aria-label="Sources in this digest">

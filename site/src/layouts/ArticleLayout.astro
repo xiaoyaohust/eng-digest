@@ -5,6 +5,8 @@ import ArticleMeta from "@/components/ArticleMeta.astro";
 import TableOfContents from "@/components/TableOfContents.astro";
 import PracticeMode from "@/components/PracticeMode.astro";
 import ArticleActions from "@/components/ArticleActions.astro";
+import LanguageToggle from "@/components/LanguageToggle.astro";
+import type { ArticleTranslation } from "@/lib/translations";
 import { withBase } from "@/lib/url";
 import { canonicalPageURL } from "@/lib/canonical";
 
@@ -49,6 +51,8 @@ interface Props {
   practiceKey?: string;
   relatedPath?: { title: string; href: string };
   hasMath?: boolean;
+  /** Second-language version; when present the article gets an EN / CN switch. */
+  translation?: ArticleTranslation;
 }
 
 const {
@@ -72,7 +76,10 @@ const {
   practiceKey,
   relatedPath,
   hasMath = false,
+  translation,
 } = Astro.props;
+const TranslatedContent = translation?.Content;
+const altLang = translation?.lang;
 const canonical = canonicalPageURL(Astro.url.pathname, Astro.site).toString();
 const imageURL = socialImage ? new URL(socialImage.src, Astro.site).toString() : undefined;
 const sectionName = kicker ?? "Knowledge Base";
@@ -122,9 +129,31 @@ const structuredData = [
   articleSection={sectionName}
   tags={tags}
   structuredData={structuredData}
-  hasMath={hasMath}
+  hasMath={hasMath || translation?.hasMath === true}
 >
   <article class="article-page">
+    {translation && (
+      <script is:inline define:vars={{ primaryLang: lang, altLang }}>
+        // Runs before the article paints so a remembered or linked language
+        // never flashes the other version first. LanguageToggle wires clicks.
+        (function () {
+          var wanted = null;
+          try {
+            var query = (new URLSearchParams(location.search).get("lang") || "").toLowerCase();
+            if (query === "en") wanted = "en";
+            else if (query === "zh" || query === "cn" || query === "zh-cn") wanted = "zh-CN";
+          } catch (e) {}
+          if (!wanted) { try { wanted = localStorage.getItem("article-lang"); } catch (e) {} }
+          var root = document.documentElement;
+          root.dataset.langReady = "true";
+          if (wanted === altLang && wanted !== primaryLang) {
+            root.dataset.langView = "alt";
+            root.lang = altLang;
+          }
+        })();
+      </script>
+    )}
+    {translation && <div hidden data-article-langs data-primary-lang={lang} data-alt-lang={translation.lang} data-primary-title={title} data-alt-title={translation.title}></div>}
     <header class="article-hero">
       <div class="wrap article-header">
         <a class="back-link" href={withBase("/")}>&larr; KNOWLEDGE BASE</a>
@@ -135,9 +164,25 @@ const structuredData = [
           </span>)}
         </nav>}
         {kicker && <p class="eyebrow">MODULE / {kicker}</p>}
-        <h1>{title}</h1>
-        <p class="article-description">{description}</p>
+        {translation ? (
+          <>
+            <div data-lang-pane="primary" lang={lang}>
+              <h1>{title}</h1>
+              <p class="article-description">{description}</p>
+            </div>
+            <div data-lang-pane="alt" lang={translation.lang}>
+              <h1>{translation.title}</h1>
+              <p class="article-description">{translation.description}</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <h1>{title}</h1>
+            <p class="article-description">{description}</p>
+          </>
+        )}
         <ArticleMeta date={date} updated={updated} tags={tags} readingMinutes={readingMinutes} />
+        {translation && <LanguageToggle placement="top" />}
       </div>
     </header>
 
@@ -146,15 +191,26 @@ const structuredData = [
     <div class="wrap article-body">
       <aside class="article-toc">
         <div class="toc-sticky">
-          <TableOfContents headings={headings} />
+          {translation ? (
+            <>
+              <div data-lang-pane="primary"><TableOfContents headings={headings} /></div>
+              <div data-lang-pane="alt" lang={translation.lang}><TableOfContents headings={translation.headings} /></div>
+            </>
+          ) : <TableOfContents headings={headings} />}
         </div>
       </aside>
       <div class="prose">
-        <slot />
+        {TranslatedContent ? (
+          <>
+            <div data-lang-pane="primary" lang={lang}><slot /></div>
+            <div data-lang-pane="alt" lang={translation.lang}><TranslatedContent /></div>
+          </>
+        ) : <slot />}
       </div>
     </div>
 
     <footer class="wrap article-footer">
+        {translation && <LanguageToggle placement="bottom" />}
         <ArticleActions title={title} description={description} canonical={canonical} relatedPath={relatedPath} shareHashtags={shareHashtags} />
         {(prev || next) && (
           <nav class="prev-next" aria-label="Article navigation">
@@ -193,6 +249,10 @@ const structuredData = [
 </BaseLayout>
 
 <style>
+  :global(html:not([data-lang-view="alt"]) [data-lang-pane="alt"]),
+  :global(html[data-lang-view="alt"] [data-lang-pane="primary"]) { display: none; }
+  /* Without JavaScript the switch could not work, so it is not shown. */
+  :global(html:not([data-lang-ready]) [data-lang-toggle]) { display: none; }
   .article-breadcrumbs { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; font: .72rem var(--font-mono); }
   .breadcrumb-item { display: inline-flex; gap: 12px; }
   .breadcrumb-item > span { color: var(--color-text-muted); }

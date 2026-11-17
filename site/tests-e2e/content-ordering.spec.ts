@@ -1,6 +1,6 @@
 import { expect, test, type Locator } from "@playwright/test";
 
-const sectionHrefs = ["/system-design/", "/ai/", "/field-notes/", "/eng-digest/", "/science/", "/coding/"];
+const sectionHrefs = ["/system-design/", "/ai/", "/field-notes/", "/eng-digest/", "/science/", "/coding/", "/personal/"];
 
 async function expectNewestFirst(cards: Locator): Promise<number[]> {
   const dates = await cards.locator("time[datetime]").evaluateAll((elements) =>
@@ -23,7 +23,7 @@ test("home, desktop navigation, footer, and mobile navigation share the fixed se
   await page.goto("/ai/");
   await page.locator('label[for="nav-toggle"]').click();
   const navLinks = page.locator(".navbar .nav-links a:visible");
-  expect((await navLinks.evaluateAll((links) => links.map((link) => link.getAttribute("href")))).slice(0, 6)).toEqual(sectionHrefs);
+  expect((await navLinks.evaluateAll((links) => links.map((link) => link.getAttribute("href")))).slice(0, sectionHrefs.length)).toEqual(sectionHrefs);
   await expect(page.locator('.navbar a[href="/ai/"]')).toHaveAttribute("aria-current", "page");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

@@ -1,6 +1,7 @@
 ---
 import { render } from "astro:content";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
+import { loadTranslation } from "@/lib/translations";
 import { published, allCandidates, findRelated } from "@/lib/content";
 import { readingTime } from "@/lib/url";
 import { AI_SECTION_NAME, aiArticleHref, aiTopicId, orderAIArticles } from "@/data/ai";
@@ -15,6 +16,7 @@ export async function getStaticPaths() {
 
 const { entry, prevEntry, nextEntry } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await render(entry);
+const translation = await loadTranslation("ai", entry.id, entry.data.lang);
 const related = findRelated(entry.data.tags, await allCandidates(), aiArticleHref(entry));
 const socialImage = entry.data.socialImage ?? {
   src: `/social/auto/ai/${entry.id}.png`,
@@ -38,6 +40,7 @@ const socialImage = entry.data.socialImage ?? {
     { title: entry.data.topic, href: `/ai/#${aiTopicId(entry.data.topic)}` },
   ]}
   hasMath={remarkPluginFrontmatter.hasMath === true}
+  translation={translation}
 >
   <div class="ai-manuscript" lang={entry.data.lang}><Content /></div>
 </ArticleLayout>

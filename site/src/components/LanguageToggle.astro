@@ -1,0 +1,69 @@
+---
+// EN / CN switch for articles that have a translation. Every instance on the
+// page stays in sync; the choice is remembered across articles and can be
+// linked with ?lang=en or ?lang=zh. The early script in ArticleLayout applies
+// a stored choice before the article paints, so there is no flash of the
+// other language.
+interface Props {
+  placement: "top" | "bottom";
+}
+
+const { placement } = Astro.props;
+---
+
+<div class:list={["lang-toggle", `lang-toggle-${placement}`]} role="group" aria-label="Article language / 文章语言" data-lang-toggle>
+  <span class="lang-toggle-label" aria-hidden="true">{placement === "top" ? "READ IN" : "LANGUAGE"}</span>
+  <button type="button" data-lang-choice="en" lang="en" aria-pressed="false" title="Read in English">EN</button>
+  <button type="button" data-lang-choice="zh-CN" lang="zh-CN" aria-pressed="false" title="切换到中文">CN</button>
+</div>
+
+<style>
+  .lang-toggle { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); }
+  .lang-toggle-top { position: relative; z-index: 1; margin-top: 18px; }
+  .lang-toggle-bottom { margin-bottom: 20px; }
+  .lang-toggle-label { margin-right: 4px; color: var(--color-text-muted); font-size: .62rem; letter-spacing: .08em; }
+  .lang-toggle button {
+    min-width: 44px; min-height: 32px; padding: 6px 12px;
+    border: 1px solid var(--color-border-strong); border-radius: 5px;
+    background: var(--color-bg-raised); color: var(--color-text);
+    cursor: pointer; font: 700 .7rem var(--font-mono); letter-spacing: .06em;
+  }
+  .lang-toggle button:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .lang-toggle button[aria-pressed="true"] { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-accent-contrast); }
+  .lang-toggle button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+</style>
+
+<script>
+  const root = document.documentElement;
+  const config = document.querySelector<HTMLElement>("[data-article-langs]");
+
+  if (config) {
+    const primary = config.dataset.primaryLang ?? "en";
+    const alternate = config.dataset.altLang ?? "zh-CN";
+    const titles: Record<string, string> = {
+      [primary]: config.dataset.primaryTitle ?? document.title,
+      [alternate]: config.dataset.altTitle ?? document.title,
+    };
+
+    const show = (lang: string, remember: boolean) => {
+      const useAlternate = lang === alternate;
+      if (useAlternate) root.dataset.langView = "alt";
+      else delete root.dataset.langView;
+      root.lang = useAlternate ? alternate : primary;
+      document.title = `${titles[root.lang]} · Eng Knowledge`;
+      document.querySelectorAll<HTMLButtonElement>("[data-lang-choice]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.langChoice === root.lang));
+      });
+      if (!remember) return;
+      try { localStorage.setItem("article-lang", root.lang); } catch { /* private mode: still switches */ }
+      const url = new URL(location.href);
+      url.searchParams.set("lang", root.lang === "zh-CN" ? "zh" : "en");
+      history.replaceState(history.state, "", url);
+    };
+
+    show(root.dataset.langView === "alt" ? alternate : primary, false);
+    document.querySelectorAll<HTMLButtonElement>("[data-lang-choice]").forEach((button) => {
+      button.addEventListener("click", () => show(button.dataset.langChoice ?? primary, true));
+    });
+  }
+</script>

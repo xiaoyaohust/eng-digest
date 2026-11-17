@@ -1,0 +1,78 @@
+---
+import { sectionCode } from "@/data/contentSections";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
+import { published } from "@/lib/content";
+import { withBase } from "@/lib/url";
+import {
+  personalArticleHref, personalCategories, personalCategoryIds,
+  PERSONAL_SECTION_DESCRIPTION, PERSONAL_SECTION_NAME,
+} from "@/data/personal";
+
+const articles = await published("personal");
+const categories = personalCategoryIds.map((id) => ({
+  id,
+  ...personalCategories[id],
+  count: articles.filter((entry) => entry.data.category === id).length,
+}));
+const latest = articles.slice(0, 6);
+---
+
+<BaseLayout title={PERSONAL_SECTION_NAME} description={PERSONAL_SECTION_DESCRIPTION}>
+  <section class="personal-hero">
+    <div class="wrap">
+      <p class="eyebrow">MODULE {sectionCode("personal")} / HISTORY, LANGUAGE &amp; TRAVEL</p>
+      <h1>Personal<br /><em>Interest</em></h1>
+      <p class="intro">Reading notes and essays from outside engineering work: Chinese history, history talks, learning Spanish, and travel.</p>
+    </div>
+  </section>
+
+  <section class="wrap personal-library" aria-labelledby="personal-columns">
+    <p class="eyebrow">COLUMNS</p>
+    <h2 id="personal-columns">Pick a column</h2>
+    <div class="column-grid">
+      {categories.map((category) => (
+        <a class="column-card" href={withBase(`/personal/${category.id}/`)}>
+          <span class="eyebrow">{category.label}</span>
+          <h3>{category.name}</h3>
+          <p class="column-subtitle">{category.subtitle}</p>
+          <p>{category.description}</p>
+          <footer>
+            <span>{category.count === 0 ? "Coming soon" : `${category.count} ${category.count === 1 ? "article" : "articles"}`}</span>
+            <strong>Open column ↗</strong>
+          </footer>
+        </a>
+      ))}
+    </div>
+
+    {latest.length > 0 && (
+      <>
+        <h2 class="latest-heading">Recently added</h2>
+        <div class="card-grid">
+          {latest.map((entry) => (
+            <ArticleCard href={personalArticleHref(entry)} kicker={personalCategories[entry.data.category].name}
+              title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />
+          ))}
+        </div>
+      </>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .personal-hero { padding-block: 64px 54px; border-bottom: 1px solid var(--color-border); background: var(--color-bg-raised); }
+  h1 { margin: 18px 0 22px; font-size: clamp(3rem, 6vw, 5.2rem); line-height: 1.04; }
+  h1 em { color: var(--color-signal); font-style: normal; }
+  .intro { max-width: 620px; color: var(--color-text-muted); }
+  .personal-library { padding-block: 45px 70px; }
+  .column-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; }
+  .column-card { display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--color-border); border-top: 3px solid var(--color-signal); border-radius: 8px; background: var(--color-bg-raised); color: var(--color-text); }
+  .column-card:hover { border-color: var(--color-signal); text-decoration: none; }
+  .column-card h3 { margin: 18px 0 4px; font-size: 1.45rem; }
+  .column-subtitle { margin: 0 0 12px; color: var(--color-accent); font-size: .92rem; }
+  .column-card p:not(.column-subtitle) { flex: 1; color: var(--color-text-muted); }
+  .column-card footer { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--color-border); font: .72rem var(--font-mono); }
+  .column-card footer strong { color: var(--color-accent); }
+  .latest-heading { margin-top: 52px; }
+  @media (max-width: 640px) { .personal-hero { padding-block: 40px; } }
+</style>

@@ -204,6 +204,14 @@ with Python and public TESS observations. Research notes live in `site/src/conte
 The content guide includes an example and instructions for adding projects. Published
 notes are in English and appear in the site-wide search at `/search/`.
 
+**Personal Interest** (`/personal/`) holds four columns outside engineering: A General
+History of China, History Talks, Spanish Learning, and Travel Blog. Articles live in
+`site/src/content/personal/` with a `category` field.
+
+**Bilingual articles:** any article in any section gets an EN / CN switch when a
+translation exists at `site/src/content/translations/<section>/<article id>.md`. See the
+content guide for the file layout.
+
 ## Feature Comparison: Web vs CLI (Engineering Digest)
 
 | Feature | Web (`/eng-digest/`) | CLI (Local) |
