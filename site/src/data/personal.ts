@@ -45,5 +45,8 @@ export function personalArticleHref(entry: { id: string; data: { category: Perso
 
 /** Keep manually named chapter anchors stable when newer articles are added. */
 export function personalTopicId(topic: string): string {
-  return `personal-topic-${encodeURIComponent(topic)}`;
+  // Preserve the chapter anchor published before its display name became English.
+  const originalName = topic === "Chapter 1: The Natural Environment and Archaeological Evidence of Prehistoric China"
+    ? "第一章 史前中国的自然环境与考古学证据" : topic;
+  return `personal-topic-${encodeURIComponent(originalName)}`;
 }

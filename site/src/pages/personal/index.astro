@@ -50,7 +50,7 @@ const latest = articles.slice(0, 6);
         <h2 class="latest-heading">Recently added</h2>
         <div class="card-grid">
           {latest.map((entry) => (
-            <ArticleCard href={personalArticleHref(entry)} kicker={personalCategories[entry.data.category].name}
+            <ArticleCard href={`${personalArticleHref(entry)}?lang=en`} kicker={personalCategories[entry.data.category].name}
               title={entry.data.title} description={entry.data.description} date={entry.data.date} tags={entry.data.tags} />
           ))}
         </div>

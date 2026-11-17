@@ -44,9 +44,6 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       new window.PagefindUI({
         element: "#pagefind-search",
         showSubResults: true,
-        // A distinct absolute bundle URL lets Pagefind 1.5 load the Chinese
-        // language from this bundle without its same-path merge guard skipping it.
-        mergeIndex: [{ bundlePath: new URL(`${base}pagefind/`, location.origin).href, language: "zh-cn" }],
       });
     })
     .catch(() => {

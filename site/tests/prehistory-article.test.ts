@@ -6,20 +6,22 @@ import { personalTopicId, personalArticleHref } from "../src/data/personal.ts";
 import { groupByLatestArticle } from "../src/lib/contentOrdering.ts";
 
 const slug = "prehistory-sites-and-archaeological-evidence";
-const zh = readFileSync(new URL(`../src/content/personal/${slug}.md`, import.meta.url), "utf8");
-const en = readFileSync(new URL(`../src/content/translations/personal/${slug}.md`, import.meta.url), "utf8");
-const topic = "第一章 史前中国的自然环境与考古学证据";
+const en = readFileSync(new URL(`../src/content/personal/${slug}.md`, import.meta.url), "utf8");
+const zh = readFileSync(new URL(`../src/content/translations/personal/${slug}.md`, import.meta.url), "utf8");
+const topic = "Chapter 1: The Natural Environment and Archaeological Evidence of Prehistoric China";
 const metadata = (text: string) => parse(text.split("---")[1]);
 
 describe("prehistoric China article and manual chapters", () => {
-  it("publishes Chinese as the primary language with an English alternate in the requested chapter", () => {
-    const data = metadata(zh);
+  it("publishes English by default in an English chapter with the complete Chinese version retained", () => {
+    const data = metadata(en);
     assert.equal(data.category, "china-history");
     assert.equal(data.topic, topic);
-    assert.equal(data.lang, "zh-CN");
-    assert.equal(metadata(en).lang, "en");
+    assert.equal(data.lang, "en");
+    assert.equal(metadata(zh).lang, "zh-CN");
+    assert.equal(data.title, "From Yangshao to Liangzhu: Reconstructing Prehistoric China");
+    assert.doesNotMatch(data.description, /[\u3400-\u9fff]/);
     assert.equal(data.draft, false);
-    assert.equal(metadata(en).draft, false);
+    assert.equal(metadata(zh).draft, false);
     assert.equal(personalArticleHref({ id: slug, data }), `/personal/china-history/${slug}/`);
     assert.ok(data.socialTitle.length < 65 && data.socialDescription.length < 160);
     const main = zh.split("## 发现与研究时间线")[0].replace(/^---\n[\s\S]*?\n---/, "");
@@ -62,7 +64,7 @@ describe("prehistoric China article and manual chapters", () => {
   });
 
   it("keeps manual chapter anchors stable and orders chapters and their articles by the newest publication", () => {
-    assert.equal(personalTopicId(topic), personalTopicId(topic));
+    assert.equal(personalTopicId(topic), personalTopicId("第一章 史前中国的自然环境与考古学证据"));
     assert.notEqual(personalTopicId("A B"), personalTopicId("A-B"));
     assert.notEqual(personalTopicId("第一章"), personalTopicId("第二章"));
     const items = [

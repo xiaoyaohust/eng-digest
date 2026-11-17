@@ -1,10 +1,10 @@
 ---
-title: "从仰韶到良渚：中国史前史怎样被重建"
-description: "从仰韶村、周口店和后冈地层写到河姆渡与良渚，讲清遗址如何经过记录、比较和测年，成为理解中国史前社会的证据。"
+title: "From Yangshao to Liangzhu: Reconstructing Prehistoric China"
+description: "How excavations at Yangshao, Zhoukoudian, Hougang, Hemudu, and Liangzhu turn objects, layers, dates, and environmental remains into historical evidence."
 date: 2026-11-16
 category: china-history
-topic: "第一章 史前中国的自然环境与考古学证据"
-lang: zh-CN
+topic: "Chapter 1: The Natural Environment and Archaeological Evidence of Prehistoric China"
+lang: en
 socialTitle: "Discovering Prehistoric China"
 socialDescription: "From Yangshao to Liangzhu: how excavation, stratigraphy, dating, and environmental evidence reshape early history."
 tags: [chinese-history, archaeology, prehistory, historical-method]
@@ -12,204 +12,204 @@ featured: true
 draft: false
 ---
 
-中国境内史前遗址的发现，改变了历史能够从哪里写起。史书没有留下姓名的人，也开始通过房屋、食物、墓葬和器物进入历史。让这些材料具有解释力的，是出土位置、先后关系和可以核对的研究记录。
+The discovery of prehistoric sites within present day China changed where its history could begin. People whose names never entered written records became subjects of historical inquiry through their houses, food, burials, and possessions. The explanatory value of these remains depends on where they were found, their chronological relationships, and records that other researchers can check.
 
-1921年，河南渑池仰韶村的发掘使一批彩陶、石器和居住遗存进入学术讨论。它们没有告诉研究者村民如何称呼自己，更没有附上一份王朝年表。陶器与石器的组合、遗址所在的环境，却足以要求人们重新考虑文字记载以前的社会生活。
+In 1921, excavations at Yangshao village in Mianchi, Henan, brought painted pottery, stone tools, and traces of settlement into scholarly discussion. These finds did not tell researchers what the villagers called themselves. They supplied no dynastic chronology. Their combinations and environmental setting nevertheless required historians to reconsider life before written records.
 
-此后，周口店把研究的时间尺度推向数十万年前，后冈地层帮助排列不同遗存的先后，河姆渡与良渚又让稻作、聚落和大型工程成为理解早期社会的重要材料。每次发现都会带来新的判断，也会暴露旧判断的局限。把这些发现连起来，才能看清史前史的重建过程：材料被保存下来，研究者记录它们的关系，再用不同方法检验解释。
+Subsequent work at Zhoukoudian extended the timescale to hundreds of thousands of years. Layers at Hougang helped establish the sequence of different remains. Hemudu and Liangzhu brought rice cultivation, settlements, and large construction projects into the study of early society. Each discovery supported new interpretations and exposed limits in earlier ones. Together, they reveal how prehistory is reconstructed: material survives, researchers document its relationships, and different methods test the resulting explanations.
 
-这里所说的“中国境内”是今天的地理研究范围。史前人群并不生活在现代国界和民族分类之中。本篇讨论的是这些地方留下的历史，以及近代以来人们如何认识它。
+“Within China” refers here to a modern geographical area of study. Prehistoric communities did not inhabit the borders or ethnic classifications of modern states. This essay concerns the past preserved in these places and the methods through which it has become knowable.
 
 <details>
-<summary>本期标题备选</summary>
+<summary>Alternative titles for this essay</summary>
 <ol>
-<li>中国史前遗址的发现与考古学研究</li>
-<li>没有文字的年代，历史从哪里开始？</li>
-<li>一片陶片进入历史之后</li>
-<li>从仰韶到良渚：中国史前史怎样被重建</li>
-<li>地层、年代与聚落：中国史前研究的证据</li>
+<li>The Discovery and Archaeological Study of Prehistoric Sites in China</li>
+<li>Where Does History Begin When There Are No Written Records?</li>
+<li>When a Potsherd Enters History</li>
+<li>From Yangshao to Liangzhu: Reconstructing Prehistoric China</li>
+<li>Layers, Dates, and Settlements: Evidence for China's Prehistoric Past</li>
 </ol>
 </details>
 
-## 古书之外，还有多长的过去
+## The past beyond the ancient texts
 
-很长时间里，人们主要依靠传世文献认识中国上古。《史记》从五帝讲起，把不同来源的古老记忆整理进一部通史。它留下了极其重要的历史认识，却不能为远古村落逐一提供同时代记录。司马迁与传说所指的人物相隔久远，后人还必须分辨文本成书、材料流传和事件发生这几层时间。
+For centuries, transmitted texts provided the main framework for understanding China's remote past. The *Records of the Grand Historian*, or *Shiji*, begins with the Five Emperors and draws inherited memories from different sources into a general history. It preserves an important understanding of the past, but it cannot provide contemporary records for every ancient village. Sima Qian lived long after the figures described in those traditions. Readers must distinguish when a text was compiled, how its sources were transmitted, and when the events it describes might have occurred.
 
-传统学问并非完全忽视实物。金石学长期搜集、著录青铜器和碑刻，通过铭文考订名物、制度与人物。这种积累使器物能够进入历史讨论。不过，一件离开出土地的古器，即使铭文保存完整，也未必能够说明它与附近房屋、墓葬和其他遗物的关系。到了缺少可释读文字的年代，原来的材料基础更显不足。
+Traditional scholarship also studied physical objects. The study of bronze and stone inscriptions collected and catalogued artifacts, using their texts to investigate objects, institutions, and people. This work established a place for material evidence in historical inquiry. Yet an ancient object removed from its findspot, even one with a complete inscription, may reveal little about its relationship to nearby houses, burials, or other objects. The difficulty becomes greater in periods without decipherable writing.
 
-史前研究需要面对一类不同的问题。没有姓名和纪年，也要辨认人群曾经怎样居住，依靠什么食物，如何处理死者，以及不同聚落之间怎样发生联系。材料往往零散，保存条件又不相同。木器腐烂之后，石器留下来了；聚落被洪水冲走之后，洞穴中的堆积可能还在。今天能够看到的遗存，首先经过了自然保存过程的筛选。
+Prehistoric research therefore faces a different set of problems. Without names or recorded years, researchers still need to establish how people lived, what they ate, how they treated their dead, and how settlements interacted. The surviving material is fragmentary and unevenly preserved. Stone tools can remain after wooden implements have decayed. Cave deposits may survive when floodwaters have washed away a settlement. Natural processes have already selected the evidence available for study.
 
-因此，遗址分布图也不能直接当作古代人口地图。调查多的地方可能发现得多，黄土台地上的陶片容易露出地面，深埋在冲积平原下的聚落却未必容易找到。研究者必须同时考虑古人的活动和遗址后来经历的侵蚀、覆盖、搬运与破坏。
+A map of known sites consequently cannot serve directly as a map of ancient population. Areas that receive more survey work may produce more discoveries. Potsherds can become visible on eroding loess terraces, while settlements buried beneath alluvial plains remain difficult to locate. Researchers must consider both ancient activity and the later erosion, burial, movement, and destruction of its traces.
 
-近代地质学带来了一种有用的时间认识。地层有形成过程，地表可以反复变化，人类活动只是其中一部分。欧洲在十九世纪逐渐建立起史前考古的研究方法，中国的相关研究则在地质调查、大学教育、博物馆与学术机构的发展中获得条件。方法的传播与本地材料结合，才使原来难以归入文献年代的发现得到持续研究。
+Modern geology introduced a useful understanding of time. Deposits form through processes, the ground surface changes repeatedly, and human activity accounts for only part of that history. Methods of prehistoric archaeology developed in nineteenth century Europe. In China, geological surveys, university teaching, museums, and research institutions provided conditions for related work. Sustained investigation became possible when these methods were applied to local material that could not readily be placed within a chronology drawn from texts.
 
-## 地质调查把研究者带到了仰韶村
+## Geological surveys lead to Yangshao
 
-二十世纪初，中国的地质调查与矿产、地形和化石研究密切相关。调查人员需要走进村落，辨认地层，访问熟悉山川的当地人，并把采集物运回机构比较。这样的工作网络，使某些散落的石器和陶片有机会进入专业研究。
+In the early twentieth century, geological surveying in China involved the study of minerals, landforms, and fossils. Investigators travelled through villages, examined deposits, consulted residents familiar with the terrain, and brought collections back to institutions for comparison. These working connections allowed scattered stone tools and pottery fragments to enter specialist research.
 
-安特生是一位受聘于中国政府的瑞典地质学者。袁复礼接受过地质学训练，也具备测量和野外观察的经验。1921年，两人参与仰韶村的发掘。村庄位于豫西地区，黄土覆盖的台地、沟谷和水源，为考察遗址所在环境提供了条件。这里的陶片和石器不是在一张地图上自动显现的，地方居民的认识、调查线索与机构支持都参与了发现过程。[清华大学的袁复礼资料](https://www.tsinghua.edu.cn/info/1925/75835.htm)保存了他参与这项工作的记录。
+Johan Gunnar Andersson was a Swedish geologist employed by the Chinese government. Yuan Fuli had trained in geology and possessed skills in surveying and field observation. Both participated in the 1921 excavation at Yangshao. The village lies in western Henan, among loess terraces, gullies, and water sources that shaped the setting of the site. Its pottery and tools did not appear automatically on a research map. Local knowledge, survey leads, and institutional support helped turn them into a discovery. [Tsinghua University's account of Yuan Fuli](https://www.tsinghua.edu.cn/info/1925/75835.htm) records his involvement.
 
-仰韶发现的重要性，在于一处史前生活地点成为可以反复讨论的对象。人们看到的材料包括不同用途的陶器、石器及其他遗存。它们共同指向一套过去的生活方式，不能只按古董的精美程度取舍。日常使用、破碎后被丢弃的东西，也能够说明人的活动。
+Yangshao mattered because a place of prehistoric habitation became an object of sustained inquiry. Pottery of different functions, stone tools, and other remains pointed to patterns of past life. Selecting objects solely for their beauty would have obscured those patterns. Ordinary things, broken and discarded after use, could also reveal human activity.
 
-“仰韶文化”这个名称，后来成为考古学的分类名称。这里的文化，是研究者根据一定时空范围内反复出现的器物组合、制作习惯和遗迹特征建立的分析单位。它并不直接等于一个有明确国名的政权，也不能凭名称就认定属于某个古代民族。
+The term “Yangshao culture” subsequently became an archaeological classification. In this usage, a culture is an analytical grouping based on recurring combinations of artifacts, production practices, and features within a particular span of time and space. The name alone cannot identify a polity with a known state name or establish an ancient ethnic identity.
 
-这种分类首先解决材料之间如何比较的问题。不同遗址出现相近的陶器组合，研究者便能够讨论它们的联系；如果组合存在稳定差别，也需要解释差别来自年代、地域、功能还是不同的社会关系。只有相似的花纹，尚不足以证明一整个人群沿着某条路线迁来。
+Such classifications first make comparison possible. Similar pottery assemblages at different sites allow researchers to investigate connections. Persistent differences require explanations involving chronology, geography, function, or social relations. A similar decorative pattern, on its own, cannot demonstrate the migration of an entire population along a particular route.
 
-当时，军政局势不稳，调查、经费、人员训练和标本保存都不容易。发掘能够开展，需要在具体条件下组织合作。把仰韶发现归结为一个人的眼光，会漏掉支撑研究的地方知识、技术人员和制度安排；把它说成偶然捡到陶片，也解释不了为什么线索最终能够形成学术问题。
+Political instability made travel, funding, training, and the preservation of collections difficult. Excavation required cooperation under specific practical constraints. Attributing Yangshao entirely to one person's insight leaves out local knowledge, technical staff, and institutional arrangements. Describing it as the chance discovery of pottery also fails to explain how the initial clues became a sustained research question.
 
 <figure>
-  <img src="/images/personal/prehistory/excavation-context.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="现代考古人员在探方旁记录土层与遗物位置的水彩示意插画" />
-  <figcaption>图1：发掘记录把器物与周围环境联系起来。此图为 AI 生成的现代考古工作示意插画，不对应某一遗址或真实发掘现场。</figcaption>
+  <img src="/images/personal/prehistory/excavation-context.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Watercolor illustration of a modern archaeologist recording soil layers and find positions beside an excavation unit" />
+  <figcaption>Figure 1: Excavation records connect objects with their surroundings. This AI generated illustration depicts generic modern archaeological work; it does not show a particular site or an actual excavation.</figcaption>
 </figure>
 
-## 西阴村与一门学科的工作条件
+## Xiyin and the conditions of a working discipline
 
-李济把田野发掘带进了中国学者主持的研究实践。他受过人类学训练，在清华学校国学研究院任教。1926年，他与袁复礼参与山西夏县西阴村的调查和发掘。西阴村与仰韶村同处黄河流域，却有自己的地理位置与材料组合。新发现使比较不再局限于一处遗址。
+Li Ji helped establish field excavation directed by Chinese scholars. Trained in anthropology, he taught at Tsinghua's Institute of Chinese Studies. In 1926, he and Yuan Fuli investigated and excavated Xiyin village in Xia County, Shanxi. Xiyin and Yangshao both belonged to the Yellow River basin, but their geographical settings and assemblages differed. Comparison could now extend beyond a single site.
 
-西阴村发掘还留下了关于合作方式的具体材料。项目获得清华与美国弗利尔艺术馆的合作支持，相关安排涉及经费、报告出版和出土物保管。有关研究记载，双方约定报告分别以中文、英文出版，所得古物留存中国的博物馆系统。这些细节说明，学术研究需要同时处理谁出资、谁记录、谁发表以及谁保存材料的问题。[中国科学院自然科学史研究所网站所收的西阴村研究](https://agri-history.ihns.ac.cn/scholars/weisi/weisi41.htm)介绍了这次合作。
+The Xiyin project also left specific evidence about the organization of research. Cooperation between Tsinghua and the Freer Gallery of Art in the United States involved funding, publication, and custody of excavated objects. An account of the project records an agreement for reports in Chinese and English and for finds to remain in Chinese museum collections. These provisions show that scholarship had to address who paid, who recorded, who published, and who retained the material. [A study of Xiyin hosted by the Institute for the History of Natural Sciences, Chinese Academy of Sciences](https://agri-history.ihns.ac.cn/scholars/weisi/weisi41.htm) describes the arrangement.
 
-记录与发表决定一处遗址能否超出发掘者个人的经验。没有图、标本编号和位置记录，后来的人只能接受现场人员的判断。保存这些材料之后，研究者便有机会重新检查分类，比较器物，甚至指出原解释的问题。发掘会移走原有堆积，记录承担了保留关系的责任。
+Recording and publication determine whether a site can be studied beyond the experience of its excavators. Without drawings, specimen numbers, and location records, later researchers have little choice but to accept the field team's judgment. With these materials, they can reconsider classifications, compare objects, and challenge an interpretation. Excavation removes original deposits. Its records take on the responsibility of preserving their relationships.
 
-1928年成立的中央研究院历史语言研究所，为这种工作提供了更持续的组织。傅斯年参与创办并主持研究所，李济、梁思永等人在相关田野研究中发挥重要作用。大学、研究所和博物馆逐步形成了调查、发掘、整理与出版之间的联系。史语所的[机构沿革](https://www1.ihp.sinica.edu.tw/AboutIHP/History)说明了它的成立背景。
+Founded in 1928, Academia Sinica's Institute of History and Philology provided a more sustained institutional base. Fu Sinian helped establish and directed the institute; Li Ji, Liang Siyong, and others played important roles in its field research. Universities, research institutes, and museums gradually connected survey, excavation, analysis, and publication. The institute's [institutional history](https://www1.ihp.sinica.edu.tw/AboutIHP/History) describes its foundation.
 
-这种联系并不意味着经费从此充足、研究从此顺利。战争和迁徙会打断工作，人员与材料也可能分离。但一旦报告、图纸和标本形成可传递的记录，知识便不必随着一位研究者离开而全部消失。中国史前研究能够延续，依靠的是这种逐渐建立起来的工作条件。
+These connections did not guarantee adequate funding or uninterrupted work. War and relocation could separate people from their collections. Once reports, drawings, and specimens formed a transferable record, however, knowledge no longer had to disappear when an individual researcher left. The continuity of Chinese prehistoric research depended on these developing working arrangements.
 
-## 周口店把尺度推向了数十万年
+## Zhoukoudian extends the timescale
 
-仰韶和西阴村主要打开了新石器时代聚落的研究。北京西南的周口店则把人的过去放进更深的地质时间。在山前洞穴与裂隙形成的堆积中，人类化石、石制品和动物化石能够共同进入研究，但这些堆积也可能受到水流、动物活动与洞穴变化的影响。
+Yangshao and Xiyin opened up the study of Neolithic settlements. Zhoukoudian, southwest of Beijing, placed human history within a much deeper geological timescale. Deposits in caves and fissures contain human fossils, stone artifacts, and animal remains. Water, animal activity, and changes within the caves could also affect how those deposits formed.
 
-1929年，新生代研究室在北京成立，周口店发掘是它的重要工作。同年12月，裴文中发现了第一件北京人头盖骨。裴文中具有地质学背景，贾兰坡后来也在长期田野工作中成长为重要研究者。化石的发现、清理、修复和比较需要多人协作，不能只用发现头骨的一个瞬间概括。[中国科学院古脊椎动物与古人类研究所的历史沿革](https://ivpp.cas.cn/jggk/lsyg/)记载了这个机构及相关工作。
+The Cenozoic Research Laboratory was established in Beijing in 1929, with excavation at Zhoukoudian among its major activities. That December, Pei Wenzhong discovered the first Peking Man skullcap. Pei had a background in geology. Jia Lanpo later became another important researcher through sustained fieldwork. Discovery, cleaning, conservation, and comparison required collective effort that a single moment of finding a skull cannot adequately describe. The [history of the Institute of Vertebrate Paleontology and Paleoanthropology](https://ivpp.cas.cn/jggk/lsyg/) records this work and its institutional setting.
 
-头骨使人类化石研究与石器研究可以结合。石器能够说明制作与使用活动，化石提供了另一类观察对象，动物与沉积材料又帮助理解环境。不同证据各有条件：动物骨骼上的痕迹需要辨认成因，同一地点发现的材料，也要先确定是否处于可以比较的层位。
+Human fossils could now be studied alongside stone tools. Artifacts offer evidence about manufacture and use; fossils provide a different object of observation; animal remains and sediments help reconstruct environmental conditions. Each requires its own checks. Marks on animal bones need an explanation of how they formed. Materials recovered at one locality must first be shown to occupy contexts that can meaningfully be compared.
 
-周口店还说明，熟悉的遗址并不会因此拥有永远不变的年代。2009年发表的一项研究，利用石英中宇宙成因核素的埋藏测年，把第一地点部分下部地层的年龄估计到约77万年前。这个数字对应被测地层及其研究范围，不能套给周口店所有地点、所有化石。[该研究的论文信息与摘要](https://www.nature.com/articles/nature07741)说明了测量对象。
+Zhoukoudian also shows why the age of a familiar site need not remain fixed. A study published in 2009 used burial dating based on cosmogenic nuclides in quartz to estimate an age of about 770,000 years for part of the lower deposits at Locality 1. That estimate applies to the sampled deposits and the scope of the study. It cannot be assigned to every locality or fossil at Zhoukoudian. [The paper's information and abstract](https://www.nature.com/articles/nature07741) identify what was measured.
 
-这里尤其要分清地名、年代和人群。周口店包含不同时期的地点，北京人与山顶洞人的研究对象不能混写。直立人化石的发现，也不能直接变成现代民族谱系的证明。年代距离越大，需要建立的证据联系越多。
+Place names, dates, and human populations must remain distinct. Zhoukoudian includes localities of different periods. Peking Man and the Upper Cave humans cannot be treated as a single research subject. Finding *Homo erectus* fossils also does not establish the ancestry of a modern ethnic group. Greater chronological distance requires more evidence to connect the populations being discussed.
 
-1937年战争爆发后，相关工作遭受中断，部分研究人员转移到西南。学科的发展受到现实条件约束，保管、修复与记录因此具有直接后果。一个标本能够继续被研究，往往还依赖那些不容易出现在发现故事中的技术工作。
+War interrupted the work in 1937, and some researchers moved to southwestern China. Practical conditions constrained the discipline, giving conservation, repair, and documentation direct consequences. A specimen's continuing availability for research often depends on technical work that rarely occupies the centre of a discovery story.
 
-## 后冈的土层，怎样排出了先后
+## How the layers at Hougang established a sequence
 
-发现不同面貌的遗址之后，研究者仍要解决先后问题。彩陶和黑陶存在差异，不能仅凭颜色决定谁早谁晚。制作工艺可能变化，不同地区也可能同时使用不同器物。把差异变成年代顺序，需要另一种证据。
+Discovering sites with different characteristics still left the problem of chronological order. Painted pottery and black pottery differed, but their colour alone could not determine which came first. Production techniques could change, and separate regions could use different vessels at the same time. Turning differences into a sequence required another kind of evidence.
 
-1928年，吴金鼎在山东章丘发现城子崖遗址，后来这里成为龙山文化研究的重要起点。1930年、1931年的发掘，使黑陶等材料得到进一步认识。但新材料越多，越需要确定它们与已经知道的仰韶遗存是什么关系。[山东地方史志资料](https://shandong-chorography.org/database/f063/section/31/article/95/)记载了城子崖的发现与发掘。
+In 1928, Wu Jinding discovered Chengziya at Zhangqiu, Shandong. The site became an important starting point for research on Longshan culture. Excavations in 1930 and 1931 developed knowledge of its black pottery and other material. More discoveries also made it more important to establish their relationship to the already known Yangshao remains. [Shandong's local historical records](https://shandong-chorography.org/database/f063/section/31/article/95/) describe the discovery and excavations.
 
-梁思永在这个问题上发挥了重要作用。他是梁启超之子，在哈佛接受过考古学训练，回国后进入史语所工作。他所掌握的田野方法，能够把器物比较放回具体的地层关系中。
+Liang Siyong played an important role in this problem. A son of Liang Qichao, he had studied archaeology at Harvard before joining the Institute of History and Philology. His field training helped place comparisons between objects within documented stratigraphic relationships.
 
-1931年春，河南安阳后冈的工作已经提供线索；同年秋季的发掘，清楚辨认出上下叠压的遗存：上部是小屯即商代相关遗存，中部是龙山相关遗存，下部是仰韶相关遗存。后冈的关键，是在同一地点找到了能够约束先后的堆积关系。[史语所历史文物陈列馆对后冈三叠层的介绍](https://museum.sinica.edu.tw/en/knowledge-base/item/92/)明确区分了春季线索和秋季确认的过程。
+Work at Hougang, near Anyang in Henan, provided clues in the spring of 1931. Excavation that autumn clearly identified superimposed remains: Xiaotun material associated with the Shang period above, Longshan material in the middle, and Yangshao material below. Hougang supplied relationships within one locality that constrained their chronological order. [The Institute of History and Philology museum's account of the three layers](https://museum.sinica.edu.tw/en/knowledge-base/item/92/) distinguishes the spring indications from the autumn confirmation.
 
-地层关系之所以有效，是因为后形成的堆积通常覆盖先形成的堆积。不过，这个判断有条件。后人挖坑，会切穿早期土层；早期陶片也可能被带进晚期填土。因此，发掘者要辨认土质、土色、边界和切破关系，判断哪些材料仍保有原来的位置。只看离地面多深，可能把后挖的坑底误当成最早的遗存。
+Stratigraphy works because later deposits normally cover earlier ones. This principle has conditions. A later pit can cut through earlier layers; an early potsherd can be redeposited in later fill. Excavators therefore examine soil texture, colour, boundaries, and cuts to decide which materials retain their original positions. Depth below the surface alone can mislead: the bottom of a late pit may lie lower than a much earlier deposit.
 
-后冈提供的是当地明确的相对顺序。研究者再把有可靠层位的器物组合与其他地点比较，逐步建立更大范围的关系。这个过程不允许把全国遗址都塞进相同的三层图，也不能认为每个地区都必须经历完全一样的变化。相对年代的力量，来自具体关系的反复核对。
+Hougang established a clear local relative sequence. Researchers could then compare assemblages from secure contexts with material elsewhere and gradually build wider chronological relationships. This process cannot force every site in China into the same three layers or assume that every region experienced identical changes. Relative chronology draws its strength from repeated checks on specific relationships.
 
 ```mermaid
 flowchart TB
-    A["上部：小屯相关遗存<br/>商代，形成较晚"] --> B["中部：龙山相关遗存"]
-    B --> C["下部：仰韶相关遗存<br/>形成较早"]
+    A["Upper: Xiaotun remains<br/>Shang period, deposited later"] --> B["Middle: Longshan remains"]
+    B --> C["Lower: Yangshao remains<br/>Deposited earlier"]
 ```
 
-<p class="figure-caption">图2：后冈三叠层所确立的局部先后关系。此图只表示上下顺序，不是原始剖面图，也不代表中国各地都有相同的三层堆积。</p>
+<p class="figure-caption">Figure 2: The local relative sequence established at Hougang. This schematic shows order alone; it is not an original section drawing and does not imply identical deposits throughout China.</p>
 
-## 从“谁在前面”到“距今多久”
+## From relative order to elapsed time
 
-相对顺序建立之后，仍然不能自动得到公历年份。一件器物早于另一件，与它距今六千年还是五千年，是两个层次的问题。过去依靠器物与文献的联系推定年代，在缺乏文字的时期常常受到限制。实验室测年为这类研究增加了独立的时间尺度。
+An established relative sequence does not automatically produce calendar dates. Knowing that one object predates another is different from knowing whether it is five or six thousand years old. Dating through links between objects and texts faces particular limits in periods without writing. Laboratory methods introduced an independent timescale for such research.
 
-1949年，詹姆斯·阿诺德与威拉德·利比发表利用放射性碳含量测定已知年代样品的研究。这项方法利用生物死亡后放射性碳逐渐衰变的过程，估算适用样品的年龄。它测量的是含碳材料，不能把一块石器放进去，就直接得到打制石器的时间。[论文的出版记录](https://pubmed.ncbi.nlm.nih.gov/15407879/)保留了这项早期验证工作的资料。
+In 1949, James Arnold and Willard Libby published a study testing radiocarbon dating against samples of known age. The method uses the decay of radioactive carbon after an organism dies to estimate the age of suitable material. It measures material containing carbon. Placing a stone tool in the apparatus will not directly reveal when someone shaped it. [The paper's publication record](https://pubmed.ncbi.nlm.nih.gov/15407879/) documents this early validation.
 
-测年首先要问样品与事件是什么关系。木炭可能来自生长很久的树木，测到的碳年龄会早于木材被燃烧的时刻。附近的一粒种子，也必须确认属于所研究的活动层，而非后来落入的材料。相对短寿命的植物遗存通常有助于缩小这类差距，但样品仍可能受到污染或搬运。[Historic England 的测年指南](https://historicengland.org.uk/images-books/publications/radiocarbon-dating-chronological-modelling/the-bayesian-process/)解释了样品与事件的关系。
+Dating begins with the relationship between a sample and an event. Charcoal may come from a tree that grew for a long time; its carbon can predate the burning of the wood. A nearby seed must be shown to belong to the activity under study rather than a later intrusion. Plant remains from organisms with short lifespans can help reduce such discrepancies, but contamination and redeposition still need consideration. [Historic England's dating guidance](https://historicengland.org.uk/images-books/publications/radiocarbon-dating-chronological-modelling/the-bayesian-process/) explains these relationships.
 
-读年代时，还要认识“校正”。过去大气中的放射性碳比例有变化，实验室给出的常规碳十四年龄，需要与校正曲线比较，才能转换为公历年代范围。曲线和测量都存在不确定性，所以结果常以一个或几个可能的时间区间表示。[牛津大学放射性碳加速器研究室的说明](https://c14.arch.ox.ac.uk/calibration.html)解释了这种转换。
+Dates also require calibration. The atmospheric proportion of radiocarbon has varied over time. A conventional radiocarbon age must be compared with a calibration curve to obtain a range of calendar dates. Uncertainty in the measurements and the curve means that results often take the form of one or more possible intervals. The [Oxford Radiocarbon Accelerator Unit's explanation](https://c14.arch.ox.ac.uk/calibration.html) describes the conversion.
 
-文献中的 BP 通常以公元1950年为起点，不是以读者打开网页的年份为起点；cal BP 表示校正后的距今年代，cal BCE 则表示校正后的公元前年代。把未经校正的数字直接从某一年减去，会得到貌似精确、实际含义错误的年份。2020年发表的 [IntCal20 北半球校正曲线](https://www.cambridge.org/core/journals/radiocarbon/article/intcal20-northern-hemisphere-radiocarbon-age-calibration-curve-055-cal-kbp/83257B63DC3AF9CFA6243F59D7503EFF)，也是研究者不断整理不同年代证据的一部分。
+In this literature, BP conventionally counts back from 1950 CE, regardless of when a reader opens a webpage. Cal BP indicates calibrated years before that reference year; cal BCE indicates calibrated calendar years before the Common Era. Simply subtracting an uncalibrated number from a calendar year creates an apparently precise date with the wrong meaning. The [IntCal20 Northern Hemisphere calibration curve](https://www.cambridge.org/core/journals/radiocarbon/article/intcal20-northern-hemisphere-radiocarbon-age-calibration-curve-055-cal-kbp/83257B63DC3AF9CFA6243F59D7503EFF), published in 2020, forms part of the continuing work of reconciling chronological evidence.
 
-年代还会改变我们对生活变化的排列。江西仙人洞的研究在2012年把相关早期陶器的年代估计到约两万年前。这个例子提示，制陶、种植作物和长期定居之间，不能预先规定一套处处适用的顺序。陶器需要结合使用痕迹、动植物遗存和环境一起解释。[相关论文摘要](https://pubmed.ncbi.nlm.nih.gov/22745428/)介绍了测年依据。
+Dating can also alter the assumed order of changes in daily life. A study published in 2012 estimated an age of about 20,000 years for early pottery from Xianrendong Cave in Jiangxi. This example cautions against imposing a universal sequence on pottery production, crop cultivation, and sustained settlement. Pottery requires interpretation alongside use traces, animal and plant remains, and environmental evidence. [The paper's abstract](https://pubmed.ncbi.nlm.nih.gov/22745428/) describes its dating evidence.
 
-## 河姆渡让食物和环境进入叙事
+## Hemudu brings food and environment into the account
 
-1973年发现并开始发掘的河姆渡，位于今天浙江余姚一带。长江下游的湿润低地，与豫西黄土台地的保存条件不同。水湿环境中，一些在其他地点容易腐烂的木构件和植物遗存得以保存。研究者因此能够把房屋结构、植物利用和生产工具放在一起讨论。[中国国家博物馆对河姆渡稻谷遗存的介绍](https://www.chnmuseum.cn/zp/zpml/kgfjp/202008/t20200824_247227.shtml)列举了稻谷、木构建筑和骨制工具等材料。
+Hemudu, in present day Yuyao, Zhejiang, was discovered and first excavated in 1973. The wet lowlands of the lower Yangtze preserved material differently from the loess terraces of western Henan. Wooden structural elements and plant remains survived in conditions where they would often have decayed elsewhere. Researchers could study houses, plant use, and production tools together. The [National Museum of China's account of rice remains from Hemudu](https://www.chnmuseum.cn/zp/zpml/kgfjp/202008/t20200824_247227.shtml) describes rice, wooden structures, and bone tools among the finds.
 
-这里的地理条件同时影响生活与今天的知识。低地居民需要应对积水和潮湿，建筑方式与之有关；水湿堆积又使后来的研究者看见更多有机材料。一个地区留下木器，另一个地区主要留下石器，不能据此判定后者从来不会使用木材。保存差异必须先从历史差异中分辨出来。
+Geography influenced both ancient life and modern knowledge. Lowland residents dealt with standing water and damp conditions, which affected building practices. Waterlogged deposits also allow researchers to recover more organic material. Finding wood in one region and mainly stone in another cannot establish that the second region never used timber. Differences in preservation must first be separated from differences in past behaviour.
 
-稻谷的发现也需要分层解释。有人利用稻，不等于已经长期种植；种植不等于作物所有性状都已经完成驯化；发现稻谷，也不能单凭数量就推算它在日常食物中占了多少。每一步判断都要增加相应材料，不能让一把稻谷承担全部结论。
+Rice finds likewise require several distinct interpretations. Using rice does not establish sustained cultivation. Cultivation does not establish that every trait associated with domestication had developed. The quantity recovered cannot, by itself, reveal rice's share of the diet. Each inference requires additional evidence; a handful of grains cannot carry every conclusion.
 
-例如，野生稻成熟后容易自然落粒，受到持续选择的稻，其相关特征会逐渐变化。研究者观察考古稻的小穗基部等部位，可以讨论落粒特征与人工选择。2016年发表的长江下游研究，正是通过这类材料讨论稻作驯化的长期过程。[论文摘要与研究信息](https://pubmed.ncbi.nlm.nih.gov/27324699/)没有把它缩成一个突然完成的时刻。
+Wild rice tends to shed its grains naturally when mature. Sustained selection can gradually alter the traits involved. Studying features such as archaeological rice spikelet bases helps researchers investigate shattering and human selection. A lower Yangtze study published in 2016 used this material to examine domestication as a prolonged process. [Its abstract and publication information](https://pubmed.ncbi.nlm.nih.gov/27324699/) do not reduce that process to a single sudden event.
 
-取样方法会进一步改变所能看见的生活。细小的炭化种子容易在普通清理中被忽略，浮选利用水分离土样中的轻质材料，再进行筛选与鉴定。这样得到的材料，需要连同取样地点、土量和处理方法一起保存。否则，一处遗址样品多、一处样品少，可能只是工作方式不同。[Historic England 的植物考古介绍](https://historicengland.org.uk/research/methods/archaeology/archaeobotany/)说明了这些研究对象与处理设施。
+Sampling methods change what becomes visible. Tiny charred seeds can be overlooked during ordinary excavation. Flotation uses water to separate light material from sediment before sorting and identification. The recovered material needs records of sample location, sediment volume, and processing methods. Otherwise, different quantities at two sites may reflect field procedures. [Historic England's introduction to archaeobotany](https://historicengland.org.uk/research/methods/archaeology/archaeobotany/) describes these materials and processing facilities.
 
-植物微体遗存也能提供线索，例如植硅体，是植物组织中形成并可能留在土里的微小硅质结构。不过，不同方法各有辨认和保存条件。能否认定某种植物，能否讨论它的生长环境，又能否推断人们如何使用它，需要分别说明。河姆渡及其周边研究的意义，也在于它们不断促使考古人员更细致地采集这些容易错过的材料。[中国社会科学网所载的相关考古介绍](https://www.cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431157.shtml)讨论了这一带丰富的动植物证据。
+Plant microremains provide further clues. Phytoliths, for example, are minute silica structures formed in plant tissues that may survive in soil. Each method nevertheless has its own limits of identification and preservation. Identifying a plant, reconstructing its growing conditions, and inferring its use by people require separate arguments. Research at Hemudu and nearby sites has repeatedly encouraged more careful collection of easily missed remains. [An archaeological account published by the Chinese Social Sciences Network](https://www.cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431157.shtml) discusses the area's abundant animal and plant evidence.
 
 <figure>
-  <img src="/images/personal/prehistory/plant-remains-analysis.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="研究人员在显微镜旁分拣微小植物遗存的水彩示意插画" />
-  <figcaption>图3：细小的植物遗存也能进入历史解释。此图为 AI 生成的植物考古工作示意插画，不是河姆渡现场照片，也不用于鉴定具体物种或展示研究数据。</figcaption>
+  <img src="/images/personal/prehistory/plant-remains-analysis.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Watercolor illustration of a researcher sorting tiny plant remains beside a microscope" />
+  <figcaption>Figure 3: Small plant remains can contribute to historical interpretation. This AI generated illustration depicts generic archaeobotanical work. It is not a photograph of Hemudu, an identification plate for a particular species, or a presentation of research data.</figcaption>
 </figure>
 
-## 良渚的城与水，让问题转向社会组织
+## Liangzhu's city and waterworks raise questions of organization
 
-1936年，在西湖博物馆工作的施昕更开始对良渚一带进行调查发掘。今天浙江杭州附近的这片地区，后来不断提供新的遗址材料。到了2007年，良渚古城的发现与确认，使研究进一步面向城址整体。[2007年的同期报道](https://zjrb.zjol.com.cn/html/2007-11/30/content_486849.htm)记录了这个转折。
+In 1936, Shi Xingeng, who worked at the West Lake Museum, began investigating and excavating the Liangzhu area. The region, near present day Hangzhou in Zhejiang, continued to yield new sites. The discovery and identification of Liangzhu's ancient city in 2007 directed further attention to the settlement as a whole. [A contemporary report from 2007](https://zjrb.zjol.com.cn/html/2007-11/30/content_486849.htm) records this development.
 
-良渚相关遗存通常置于约公元前3300年至公元前2300年的范围。这里地处长江下游低地，山地、河流和平原相接。水提供资源和交通条件，也带来需要管理的问题。讨论这个地区的社会，因而不能只盯住一件玉器，还要看聚落与水系之间的空间关系。[联合国教科文组织的良渚古城遗址介绍](https://whc.unesco.org/en/list/1592/)列出了城址、水利系统和墓地等相互关联的证据。
+Liangzhu remains are generally placed within the period from about 3300 to 2300 BCE. The area lies in the lower Yangtze lowlands, where hills, rivers, and plains meet. Water provided resources and transport but also created problems requiring management. Understanding this society consequently requires examining the spatial relationships between settlements and waterways as well as individual jade objects. [UNESCO's account of the Archaeological Ruins of Liangzhu City](https://whc.unesco.org/en/list/1592/) identifies the linked evidence of the city, water management system, and cemeteries.
 
-大型工程需要持续投入劳动，还要处理工程位置、施工顺序、材料和维护。它们使研究者能够讨论超出单个家庭的组织能力。墓葬规模与随葬品分布不均，又为社会差异提供另一类材料。把这些现象放在同一个年代与空间范围中比较，比单凭器物华美判断“文明程度”更有解释力。
+Large construction projects required sustained labour, decisions about location and sequence, supplies of materials, and maintenance. They allow researchers to discuss organization extending beyond a single household. Unequal burial sizes and distributions of grave goods provide another body of evidence for social differences. Comparing such patterns within an established chronological and geographical setting explains more than judging a society's development by the beauty of its artifacts.
 
-不过，工程存在并不能直接复原行政机构的名称。多人协作的方式可能不同，墓葬中的差异也要结合年龄、性别、使用年代和葬俗理解。相关研究把良渚讨论为具有复杂组织的早期区域性社会或国家时，依据的是一组材料的联系；由此仍然无法写出统治者姓名、官员名单或一套完整法令。
+Yet an engineering project cannot directly supply the names of administrative offices. Communities can organize collective work in different ways. Burial differences also require examination alongside age, sex, chronology, and funerary practices. Interpretations of Liangzhu as an early regional society or state with complex organization rest on relationships among several kinds of material. They cannot provide rulers' names, a list of officials, or a complete legal code.
 
-这也影响我们怎样解释变化。低地的水环境很重要，不能因此把遗址衰落直接写成一次洪水摧毁一切。环境记录、聚落年代和人群活动是否对应，需要分别检验。地理条件会限制人的选择，具体社会怎样安排生产、工程和分配，则要继续从材料中寻找答案。
+The same caution applies to change. Water conditions mattered in these lowlands, but that does not establish that a single flood destroyed the whole society. Environmental records, settlement chronologies, and human activity must be checked for correspondence. Geography constrained people's options. How a particular society organized production, construction, and distribution remains a question to investigate through the evidence.
 
-2019年，良渚古城遗址列入《世界遗产名录》。对通史写作而言，更需要留下的是研究上的变化：视野从出土器物扩大到整座聚落，再扩大到它依赖的资源、工程和周边地区。社会组织由此成为可以讨论、也必须接受检验的历史问题。
+Liangzhu's ancient city entered the World Heritage List in 2019. For a general history, the important development in research is the expanding scale of inquiry: from excavated objects to an entire settlement, then to its resources, construction projects, and surrounding region. Social organization becomes a historical question that can be discussed and must be tested.
 
 ```mermaid
 flowchart LR
-    A["位置与层位<br/>先确认材料的关系"] --> D["比较不同证据<br/>检验社会组织的解释"]
-    B["房屋、食物、墓葬与工程<br/>观察不同方面的活动"] --> D
-    C["测年与环境分析<br/>约束年代和条件"] --> D
-    D --> E["王朝名称与族群归属<br/>仍需另外建立证据联系"]
+    A["Location and stratigraphy<br/>Establish relationships"] --> D["Compare different evidence<br/>Test social interpretations"]
+    B["Houses, food, burials, and works<br/>Examine different activities"] --> D
+    C["Dating and environmental analysis<br/>Constrain time and conditions"] --> D
+    D --> E["Dynastic and ethnic identities<br/>Require further evidence"]
 ```
 
-<p class="figure-caption">图4：关于社会的判断，需要多种证据共同约束。从聚落形态到具体王朝或族群的名称，还存在需要单独证明的联系。</p>
+<p class="figure-caption">Figure 4: Interpretations of society require several kinds of evidence to constrain one another. Connecting settlement patterns to a named dynasty or ethnic group requires an additional argument.</p>
 
-## 遗址能够回答到哪里
+## What a site can establish
 
-1959年，徐旭生在豫西调查中发现二里头遗址。后续工作揭示了大型建筑、道路、作坊和高等级遗存，使早期都邑研究拥有更丰富的材料。但辨认一座具有中心地位的聚落，与确认它对应哪一个传世王朝，仍然是两项不同的判断。[有关二里头发现六十周年的研究介绍](https://cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431258.shtml)呈现了这些发现与讨论。
+Xu Xusheng discovered Erlitou during a survey in western Henan in 1959. Subsequent work revealed large buildings, roads, workshops, and high status remains, considerably enriching the study of early urban centres. Identifying a settlement with a central role and assigning it to a dynasty named in transmitted texts nevertheless remain separate judgments. [A research account marking the sixtieth anniversary of Erlitou's discovery](https://cssn.cn/kgxc/kgxc_kgsb/202207/t20220728_5431258.shtml) discusses the finds and their interpretation.
 
-**【史料存在争议】** 二里头遗存如何与文献中的夏、商对应，涉及年代、地望、文化分期及文献解释。将二里头主体与夏联系起来，是有影响的研究判断，但不能写成遗址已经出土了可以直接确认这一王朝名称的同时代文字。指出这一点，也不等于否认已经发现的大型聚落与社会组织。争议针对的是材料与历史名称之间如何建立联系。[相关学者访谈](https://m.thepaper.cn/yidian_promDetail.jsp?contid=5218758&from=yidian)可以帮助分清这些问题。
+**[Historical evidence remains disputed]** Relating Erlitou to the Xia and Shang of transmitted accounts involves chronology, geography, cultural phases, and interpretation of the texts. Associating the principal Erlitou remains with Xia is an influential scholarly position. It should not be presented as an identification already confirmed by contemporary writing naming that dynasty at the site. Recognizing this limit does not diminish the material evidence for a large settlement and substantial social organization. The dispute concerns the connection between that evidence and a historical name. [An interview with scholars working on these questions](https://m.thepaper.cn/yidian_promDetail.jsp?contid=5218758&from=yidian) helps distinguish the issues.
 
-通史叙事容易把所有遗存排成一条必然走向后世王朝的道路。这样写虽显得整齐，却会删去当时人群面对的不同生活条件。河谷居民与沿海居民能够取得的资源不同；同一类技术的传播，也可能来自交换、学习、婚姻联系或人口移动。材料尚不能区分这些过程时，就应当保留解释的边界。
+General histories can too easily arrange all prehistoric remains along a single inevitable path towards later dynasties. That tidy sequence removes the differing circumstances in which people lived. River valley communities and coastal communities had access to different resources. The spread of a technology might reflect exchange, learning, marriage connections, or migration. Where the material cannot distinguish these processes, interpretation must retain its limits.
 
-仰韶、周口店、后冈、河姆渡和良渚，改变了中国历史中“可以知道什么”的范围。没有文字的年代，日常生活也可以得到有根据的描述。这个范围依靠每一次可靠记录逐步扩大，新的测量和新的发现还会改变其中的年代与解释。
+Yangshao, Zhoukoudian, Hougang, Hemudu, and Liangzhu expanded what can be known about China's past. Daily life before writing can receive an account supported by evidence. Reliable records gradually extend that account; new measurements and discoveries can still change its chronology and interpretation.
 
-读者在博物馆看见一片陶片时，展柜往往先告诉他年代与名称。田野记录则保存了另一部分内容：它原来在哪里，与什么东西一起埋藏，周围的土经历过什么。只要这些关系仍然可以核对，后人便有机会重新理解留下它的人。
+When visitors see a potsherd in a museum, a display label usually supplies its age and name. Field records preserve something else: where it lay, what was buried with it, and what happened to the surrounding earth. While those relationships remain open to examination, later researchers have a chance to understand the people who left it differently.
 
-## 发现与研究时间线
+## A chronology of discovery and research
 
-以下列的是近现代发现与研究的年份，不是遗址本身的生活年代。
+These dates mark modern discoveries and research, rather than the periods when prehistoric sites were occupied.
 
-1. 公元1921年：仰韶村发掘开展，史前聚落材料进入持续研究。
-2. 公元1926年：李济、袁复礼调查并发掘西阴村遗址。
-3. 公元1928年：吴金鼎发现城子崖；中央研究院历史语言研究所成立。
-4. 公元1929年：新生代研究室成立；裴文中于12月发现第一件北京人头盖骨。
-5. 公元1931年：后冈秋季发掘清楚确认仰韶、龙山、小屯相关遗存的叠压顺序。
-6. 公元1936年：施昕更开始良渚一带的调查发掘。
-7. 公元1949年：阿诺德与利比发表以已知年代样品检验放射性碳测年的论文。
-8. 公元1959年：徐旭生调查发现二里头遗址。
-9. 公元1973年：河姆渡遗址被发现并开始发掘。
-10. 公元2007年：良渚古城的发现与确认受到集中公布和讨论。
-11. 公元2009年：周口店第一地点部分下部地层的埋藏测年研究发表。
-12. 公元2012年：仙人洞早期陶器测年研究发表。
-13. 公元2019年：良渚古城遗址列入《世界遗产名录》。
-14. 公元2020年：IntCal20 北半球放射性碳年龄校正曲线发表。
+1. 1921 CE: Excavation at Yangshao brings prehistoric settlement remains into sustained research.
+2. 1926 CE: Li Ji and Yuan Fuli investigate and excavate Xiyin.
+3. 1928 CE: Wu Jinding discovers Chengziya; the Institute of History and Philology is established.
+4. 1929 CE: The Cenozoic Research Laboratory is founded; Pei Wenzhong discovers the first Peking Man skullcap in December.
+5. 1931 CE: Autumn excavations at Hougang clearly establish the superposition of Yangshao, Longshan, and Xiaotun remains.
+6. 1936 CE: Shi Xingeng begins investigations and excavation in the Liangzhu area.
+7. 1949 CE: Arnold and Libby publish a test of radiocarbon dating using samples of known age.
+8. 1959 CE: Xu Xusheng discovers Erlitou during survey work.
+9. 1973 CE: Hemudu is discovered and first excavated.
+10. 2007 CE: The discovery and identification of Liangzhu's ancient city receive concentrated publication and discussion.
+11. 2009 CE: Burial dating research on part of the lower deposits at Zhoukoudian Locality 1 is published.
+12. 2012 CE: A dating study of early pottery at Xianrendong is published.
+13. 2019 CE: The Archaeological Ruins of Liangzhu City enter the World Heritage List.
+14. 2020 CE: The IntCal20 Northern Hemisphere radiocarbon calibration curve is published.
 
-## 人物与机构关系速览
+## People and institutions at a glance
 
-以下箭头表示工作联系，不全部表示上下级或师生关系。
+Arrows indicate working connections. They do not all represent formal hierarchies or relationships between teachers and students.
 
-* 地质调查工作 → 安特生、袁复礼 → 仰韶村调查与发掘。
-* 清华学校国学研究院、弗利尔艺术馆的合作 → 李济、袁复礼 → 西阴村发掘、测绘与报告。
-* 中央研究院历史语言研究所 → 傅斯年参与创办并主持；李济、梁思永等开展田野研究。
-* 梁思永 → 参与后冈研究 → 以地层关系约束文化先后。
-* 新生代研究室 → 裴文中、贾兰坡等 → 周口店发掘与化石研究。
-* 西湖博物馆 → 施昕更 → 良渚早期调查与发掘。
-* 徐旭生 → 豫西调查 → 二里头遗址的发现。
+* Geological survey work → Andersson and Yuan Fuli → Investigation and excavation at Yangshao.
+* Cooperation between Tsinghua's Institute of Chinese Studies and the Freer Gallery → Li Ji and Yuan Fuli → Excavation, surveying, and reporting at Xiyin.
+* Academia Sinica's Institute of History and Philology → Fu Sinian helps establish and directs it; Li Ji, Liang Siyong, and others undertake field research.
+* Liang Siyong → Research at Hougang → Stratigraphic constraints on the cultural sequence.
+* Cenozoic Research Laboratory → Pei Wenzhong, Jia Lanpo, and colleagues → Excavation and fossil research at Zhoukoudian.
+* West Lake Museum → Shi Xingeng → Early investigation and excavation at Liangzhu.
+* Xu Xusheng → Survey in western Henan → Discovery of Erlitou.
 
-## 延伸阅读
+## Further reading
 
-正文中的链接对应各项发现和方法说明。继续阅读时，可以先看[后冈三叠层的机构介绍](https://museum.sinica.edu.tw/en/knowledge-base/item/92/)，再看[牛津大学关于放射性碳校正的解释](https://c14.arch.ox.ac.uk/calibration.html)，比较相对顺序与公历年代各自解决什么问题。[良渚古城的世界遗产资料](https://whc.unesco.org/en/list/1592/)适合用来观察城址、工程与墓地如何被放进同一项论证。
+Links in the text identify the sources for individual discoveries and methods. The [institutional account of Hougang's three layers](https://museum.sinica.edu.tw/en/knowledge-base/item/92/) and [Oxford's explanation of radiocarbon calibration](https://c14.arch.ox.ac.uk/calibration.html) provide a useful comparison of relative sequence and calendar dating. The [World Heritage documentation for Liangzhu](https://whc.unesco.org/en/list/1592/) shows how a city, engineering works, and cemeteries contribute to a shared interpretation.
