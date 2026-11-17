@@ -4,12 +4,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Search"
-  description="Search engineering and scientific computing articles."
+  description="Search engineering, AI, scientific computing, and personal essays in English and Chinese."
 >
   <div class="wrap section">
     <h1>Search</h1>
     <p class="muted section-intro">
-      Search System Design, Coding, Field Notes, Computing for Science, and Digest.
+      Search System Design, AI Foundations, Field Notes, Digest, Computing for Science, Coding, and Personal Interest in English or Chinese.
     </p>
     <div id="pagefind-search"></div>
     <p id="search-fallback" class="muted" hidden>
@@ -41,7 +41,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   loadScript(`${base}pagefind/pagefind-ui.js`)
     .then(() => {
       // @ts-expect-error — PagefindUI is loaded onto window by the script above.
-      new window.PagefindUI({ element: "#pagefind-search", showSubResults: true });
+      new window.PagefindUI({
+        element: "#pagefind-search",
+        showSubResults: true,
+        // A distinct absolute bundle URL lets Pagefind 1.5 load the Chinese
+        // language from this bundle without its same-path merge guard skipping it.
+        mergeIndex: [{ bundlePath: new URL(`${base}pagefind/`, location.origin).href, language: "zh-cn" }],
+      });
     })
     .catch(() => {
       document.getElementById("search-fallback")?.removeAttribute("hidden");

@@ -102,6 +102,7 @@ const personal = defineCollection({
   schema: z.object({
     ...baseFields,
     category: z.enum(personalCategoryIds),
+    topic: z.string().trim().min(1).optional(),
     lang: z.enum(["en", "zh-CN"]).default("en"),
     // Latin-script artwork avoids missing CJK fonts on the deployment runner.
     socialTitle: z.string().optional(),

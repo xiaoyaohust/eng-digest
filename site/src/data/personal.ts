@@ -15,8 +15,8 @@ export const personalCategories: Record<PersonalCategoryId, {
 }> = {
   "china-history": {
     name: "A General History of China",
-    subtitle: "Dynasty by dynasty",
-    description: "Notes on Chinese history from early civilization to the modern era, dynasty by dynasty.",
+    subtitle: "Evidence, people, and historical change",
+    description: "Chinese history through focused essays on archaeological evidence, people, institutions, and social change.",
     label: "HISTORY / CHINA",
   },
   "history-talks": {
@@ -41,4 +41,9 @@ export const personalCategories: Record<PersonalCategoryId, {
 
 export function personalArticleHref(entry: { id: string; data: { category: PersonalCategoryId } }): string {
   return `/personal/${entry.data.category}/${entry.id}/`;
+}
+
+/** Keep manually named chapter anchors stable when newer articles are added. */
+export function personalTopicId(topic: string): string {
+  return `personal-topic-${encodeURIComponent(topic)}`;
 }

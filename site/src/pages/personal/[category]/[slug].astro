@@ -4,7 +4,7 @@ import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { loadTranslation } from "@/lib/translations";
 import { published, allCandidates, findRelated } from "@/lib/content";
 import { readingTime } from "@/lib/url";
-import { personalArticleHref, personalCategories, PERSONAL_SECTION_NAME } from "@/data/personal";
+import { personalArticleHref, personalCategories, personalTopicId, PERSONAL_SECTION_NAME } from "@/data/personal";
 
 export async function getStaticPaths() {
   const entries = await published("personal");
@@ -41,7 +41,11 @@ const socialImage = entry.data.socialImage ?? {
   prev={prevEntry && { title: prevEntry.data.title, href: personalArticleHref(prevEntry) }}
   next={nextEntry && { title: nextEntry.data.title, href: personalArticleHref(nextEntry) }}
   shareHashtags={["History", "LanguageLearning", "Travel"]}
-  breadcrumbParents={[{ title: PERSONAL_SECTION_NAME, href: "/personal/" }, { title: category.name, href: categoryHref }]}
+  breadcrumbParents={[
+    { title: PERSONAL_SECTION_NAME, href: "/personal/" },
+    { title: category.name, href: categoryHref },
+    ...(entry.data.topic ? [{ title: entry.data.topic, href: `${categoryHref}#${personalTopicId(entry.data.topic)}` }] : []),
+  ]}
   hasMath={remarkPluginFrontmatter.hasMath === true}
   translation={translation}
 >
