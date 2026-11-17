@@ -6,39 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 16 Nov 2026 19:14:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 18:07:17 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Securing Your Agents: A Hands-On Guide to Agent Anomaly Detection</title>
-      <link>https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/</link>
-      <description>This guide walks developers through setting up Agent Anomaly Detection on the Gemini Enterprise Agent Platform to monitor AI agent telemetry and catch behavioral risks It demonstrates how to deploy a sample customer support agent, trigger out-of-scope security findings, and configure proactive alerts using Cloud Monitoring and Security Command Center.</description>
-      <pubDate>Mon, 16 Nov 2026 19:14:28 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/</guid>
+      <title>TPU Model Design Considerations and Optimization Guide</title>
+      <link>https://developers.googleblog.com/tpu-model-design-considerations-and-optimization-guide/</link>
+      <description>The newly launched AI-Hypercomputer/tpu-codesign guide provides hardware-grounded design rules to help developers maximize performance on TPUs for LLMs and Mixture-of-Experts (MoE) workloads Key principles include aligning reduction and output dimensions to 256 for systolic arrays, adopting LatentMoE to compress routed token traffic, and mapping parallel axes directly onto physical links.</description>
+      <pubDate>Tue, 17 Nov 2026 18:07:14 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/tpu-model-design-considerations-and-optimization-guide/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Agents are sessions, not requests: size GKE node pools for AI agent sessions</title>
-      <link>https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/</link>
-      <description>AI agent sessions remain active and idle for most of the workday, making traditional one-Pod-per-session allocations inefficient for cluster resources By using open-source tools like Agent Substrate and AX on GKE, developers can park idle sessions in object storage to release compute resources while maintaining session state This approach optimizes resource utilization and reduces Kubernetes node costs by up to 40%.</description>
-      <pubDate>Mon, 16 Nov 2026 19:14:28 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/</guid>
+      <title>Gemini 4 Hydrogen: a faster model for general purpose robotics</title>
+      <link>https://developers.googleblog.com/gemini-hydrogen-for-robotics/</link>
+      <description>Google's Gemini 4 Hydrogen brings strong spatial and embodied reasoning capabilities to a fast, efficient model built specifically for robotics To help developers put these capabilities to work, the new Robotics plugin for Google Antigravity transforms the platform into a comprehensive workbench supporting rapid hardware bring-up, MuJoCo simulation, and closed-loop control Developers can leverage these tools to transition from an unboxed robot arm to a fully functional real-to-sim-to-real application in an afternoon using natural language prompts and day-one support in the google-genai SDKs.</description>
+      <pubDate>Tue, 17 Nov 2026 18:07:14 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/gemini-hydrogen-for-robotics/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Unlocking Stable On-Policy RL on TPU with Bitwise-Zero Train–Inference Mismatch</title>
-      <link>https://developers.googleblog.com/unlocking-stable-on-policy-rl-on-tpu-with-bitwise-zero-traininference-mismatch/</link>
-      <description>How we eliminated floating-point train–inference logprob drift for on-policy LLM reinforcement learning across 64 Cloud TPU v5p chips using a generalizable four-part JAX and Pallas recipe in Tunix.</description>
-      <pubDate>Mon, 16 Nov 2026 19:14:28 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/unlocking-stable-on-policy-rl-on-tpu-with-bitwise-zero-traininference-mismatch/</guid>
+      <title>Accelerating development for massive Git repositories</title>
+      <link>https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/</link>
+      <description>Meet Another Build File Service (ABFS), Google's open-source content-addressable filesystem and build cache that cuts Android checkouts to &lt;8s and builds to ~2m.</description>
+      <pubDate>Tue, 17 Nov 2026 18:07:14 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: AWS Nitro Sandboxes, AWS Emulator, and more (November 16, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/</link>
-      <description>A second delivery of the same message can reveal more about an application than its happy-path demo I like tools that make those cases easier to investigate while a change is still small Last week’s launch of AWS Emulator brings part of that work onto your own machine: developers and coding agents can exercise AWS […]</description>
-      <pubDate>Mon, 16 Nov 2026 17:55:46 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/</guid>
+      <title>Four Continents, Four New AWS Heroes: Closing Out 2026</title>
+      <link>https://aws.amazon.com/blogs/aws/four-continents-four-new-aws-heroes-closing-out-2026/</link>
+      <description>As AWS re:Invent is around the corner, we’re proud to recognize a new group of AWS Heroes Every Hero finds their own way to give back, whether through sharing what they know, bringing people together, or building tools that help others succeed What they have in common is a genuine commitment to supporting the builders […]</description>
+      <pubDate>Tue, 17 Nov 2026 17:06:43 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/four-continents-four-new-aws-heroes-closing-out-2026/</guid>
       <source>AWS News</source>
+    </item>
+    <item>
+      <title>Engineering AI Discover</title>
+      <link>https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss----2615bd06b42e---4</link>
+      <description>The planner can find new ways to serve a request, and we can balance cost, latency and quality for each task, from a lean single-call plan to a richer multi-step one.4 Before we switch, each candidate is scored on the same tasks by automated checks and LLM judges, so every swap is a measured change.Much of the system’s behavior lives in server-side prompts and configuration, so we can swap models, tools and capabilities without new code or a TV app release.Upgrades get cheap and experiments get easy We’ll cover MemberLLM in more detail in an upcoming post.In AI Discover, members can also tune their recommendations and tell us directly what they want</description>
+      <pubDate>Tue, 17 Nov 2026 17:01:02 GMT</pubDate>
+      <guid isPermaLink="true">https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss----2615bd06b42e---4</guid>
+      <source>Netflix TechBlog</source>
     </item>
   </channel>
 </rss>
