@@ -15,7 +15,7 @@ export const personalCategories: Record<PersonalCategoryId, {
 }> = {
   "china-history": {
     name: "A General History of China",
-    subtitle: "中国通史",
+    subtitle: "Dynasty by dynasty",
     description: "Notes on Chinese history from early civilization to the modern era, dynasty by dynasty.",
     label: "HISTORY / CHINA",
   },
