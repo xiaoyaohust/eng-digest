@@ -6,47 +6,55 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 17 Nov 2026 18:07:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 17:46:02 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>TPU Model Design Considerations and Optimization Guide</title>
-      <link>https://developers.googleblog.com/tpu-model-design-considerations-and-optimization-guide/</link>
-      <description>The newly launched AI-Hypercomputer/tpu-codesign guide provides hardware-grounded design rules to help developers maximize performance on TPUs for LLMs and Mixture-of-Experts (MoE) workloads Key principles include aligning reduction and output dimensions to 256 for systolic arrays, adopting LatentMoE to compress routed token traffic, and mapping parallel axes directly onto physical links.</description>
-      <pubDate>Tue, 17 Nov 2026 18:07:14 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/tpu-model-design-considerations-and-optimization-guide/</guid>
+      <title>Build full-stack Android apps with Gemini in Google AI Studio</title>
+      <link>https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/</link>
+      <description>Google AI Studio now lets developers build, test, and ship full-stack Kotlin Android apps from a single prompt—complete with Cloud Firestore, Firebase Authentication, Firebase AI Logic, a faster HD emulator with audio, visual screenshot debugging, and direct publishing to your personal Google Play library.</description>
+      <pubDate>Wed, 18 Nov 2026 17:45:59 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>Gemini 4 Hydrogen: a faster model for general purpose robotics</title>
-      <link>https://developers.googleblog.com/gemini-hydrogen-for-robotics/</link>
-      <description>Google's Gemini 4 Hydrogen brings strong spatial and embodied reasoning capabilities to a fast, efficient model built specifically for robotics To help developers put these capabilities to work, the new Robotics plugin for Google Antigravity transforms the platform into a comprehensive workbench supporting rapid hardware bring-up, MuJoCo simulation, and closed-loop control Developers can leverage these tools to transition from an unboxed robot arm to a fully functional real-to-sim-to-real application in an afternoon using natural language prompts and day-one support in the google-genai SDKs.</description>
-      <pubDate>Tue, 17 Nov 2026 18:07:14 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/gemini-hydrogen-for-robotics/</guid>
-      <source>Google Developers</source>
+      <title>How Cloudflare WAF helps protect against Java4Shell (CVE-2026-114938)</title>
+      <link>https://blog.cloudflare.com/java4shell-waf-protection/</link>
+      <description>Java4Shell is a critical memory-corruption flaw in OpenJDK's Base64 decoder that can lead to remote code execution Cloudflare has released six WAF managed rules for paid plans that logs matching requests by default Patch your Java runtimes now.</description>
+      <pubDate>Wed, 18 Nov 2026 14:52:10 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/java4shell-waf-protection/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Accelerating development for massive Git repositories</title>
-      <link>https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/</link>
-      <description>Meet Another Build File Service (ABFS), Google's open-source content-addressable filesystem and build cache that cuts Android checkouts to &lt;8s and builds to ~2m.</description>
-      <pubDate>Tue, 17 Nov 2026 18:07:14 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/accelerating-development-for-massive-git-repositories/</guid>
-      <source>Google Developers</source>
+      <title>Quad9’s withdrawal from France: A canary in the coal mine</title>
+      <link>https://blog.cloudflare.com/quad9-withdrawal-from-france/</link>
+      <description>Quad9's forced withdrawal from France highlights the dangers of mandating DNS-level blocking We explore why forcing public resolvers to act as content filters is technically flawed and threatens the open Internet.</description>
+      <pubDate>Tue, 17 Nov 2026 20:24:27 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/quad9-withdrawal-from-france/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Four Continents, Four New AWS Heroes: Closing Out 2026</title>
-      <link>https://aws.amazon.com/blogs/aws/four-continents-four-new-aws-heroes-closing-out-2026/</link>
-      <description>As AWS re:Invent is around the corner, we’re proud to recognize a new group of AWS Heroes Every Hero finds their own way to give back, whether through sharing what they know, bringing people together, or building tools that help others succeed What they have in common is a genuine commitment to supporting the builders […]</description>
-      <pubDate>Tue, 17 Nov 2026 17:06:43 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/four-continents-four-new-aws-heroes-closing-out-2026/</guid>
-      <source>AWS News</source>
+      <title>Maintainers don’t need more AI bug reports. They need fixes.</title>
+      <link>https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/</link>
+      <description>In the Codename MDASH pilot, GitHub and Microsoft turned thousands of raw AI findings into 99 checked, private reports with suggested fixes for six widely used open source projects The post Maintainers don’t need more AI bug reports They need fixes. appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 17 Nov 2026 18:29:29 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Engineering AI Discover</title>
-      <link>https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss----2615bd06b42e---4</link>
-      <description>The planner can find new ways to serve a request, and we can balance cost, latency and quality for each task, from a lean single-call plan to a richer multi-step one.4 Before we switch, each candidate is scored on the same tasks by automated checks and LLM judges, so every swap is a measured change.Much of the system’s behavior lives in server-side prompts and configuration, so we can swap models, tools and capabilities without new code or a TV app release.Upgrades get cheap and experiments get easy We’ll cover MemberLLM in more detail in an upcoming post.In AI Discover, members can also tune their recommendations and tell us directly what they want</description>
-      <pubDate>Tue, 17 Nov 2026 17:01:02 GMT</pubDate>
-      <guid isPermaLink="true">https://netflixtechblog.com/engineering-ai-discover-e244944cdc38?source=rss----2615bd06b42e---4</guid>
-      <source>Netflix TechBlog</source>
+      <title>Building the Agent Host Protocol for sessions that continue across devices</title>
+      <link>https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/</link>
+      <description>Discover how we built the open Agent Host Protocol to keep your agent sessions accessible across editors, apps, phones, and the cloud The post Building the Agent Host Protocol for sessions that continue across devices appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 17 Nov 2026 18:20:40 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices/</guid>
+      <source>GitHub Blog</source>
+    </item>
+    <item>
+      <title>De-identifying text at scale: How Airbnb protects personal data in AI training</title>
+      <link>https://medium.com/airbnb-engineering/de-identifying-text-at-scale-how-airbnb-protects-personal-data-in-ai-training-32f3ff8ff7d0?source=rss----53c7c27702d5---4</link>
+      <description>We use de-identification to remove PII and replace it with simulated data that’s as realistic as possible to maximize its usefulness for ML model training.Decisions relating to user privacy start as policy For an NER-based one, it depends on the model behind it, so the model choices discussed later affect only some of our recognizers.Recognizers run independently, so two different recognizers can claim text strings that overlap, or in which one is nested within another It is built so a team training a model on text doesn’t have to make privacy decisions from scratch, and so that the decisions they inherit are ones we can point to evidence for.Getting detection working was an important milestone, but there is still plenty of work to be done</description>
+      <pubDate>Tue, 17 Nov 2026 18:01:03 GMT</pubDate>
+      <guid isPermaLink="true">https://medium.com/airbnb-engineering/de-identifying-text-at-scale-how-airbnb-protects-personal-data-in-ai-training-32f3ff8ff7d0?source=rss----53c7c27702d5---4</guid>
+      <source>Airbnb Engineering</source>
     </item>
   </channel>
 </rss>
