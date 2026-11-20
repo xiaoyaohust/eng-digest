@@ -6,79 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Nov 2026 17:57:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 17:30:59 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Multi-Turn Agentic Reinforcement Learning with Tunix and Gemma 4 on Google TPUs</title>
-      <link>https://developers.googleblog.com/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/</link>
-      <description>This post walks developers through training a multi-turn, tool-using LLM agent using Tunix and Gemma 4 on Cloud TPUs By leveraging agentic Group Relative Policy Optimization (GRPO) and asynchronous vLLM rollouts, the approach significantly improves complex reasoning and tool compliance in interactive environments.</description>
-      <pubDate>Thu, 19 Nov 2026 17:57:13 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/multi-turn-agentic-reinforcement-learning-with-tunix-and-gemma-4-on-google-tpus/</guid>
+      <title>Distributed LLM Training Across Metros: Streaming DiLoCo in MaxText</title>
+      <link>https://developers.googleblog.com/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/</link>
+      <description>Streaming DiLoCo in MaxText enables developers to efficiently train large language models across geographically distributed TPU slices by streaming parameter fragments instead of synchronizing full models at every step This approach slashes cross-slice communication volume by over 60× and eliminates network stalls, allowing seamless multi-datacenter scaling without degrading model convergence or quality.</description>
+      <pubDate>Fri, 20 Nov 2026 17:30:56 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>The best things in open source are built together</title>
-      <link>https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/</link>
-      <description>Introducing Replica and the Open Source Accessibility Framework, new open source projects for collaboration and inclusion The post The best things in open source are built together appeared first on The GitHub Blog.</description>
-      <pubDate>Thu, 19 Nov 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/open-source/maintainers/the-best-things-in-open-source-are-built-together/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Internet traffic and attacks during the 2026 U.S. midterm elections</title>
-      <link>https://blog.cloudflare.com/internet-traffic-2026-us-election/</link>
-      <description>On November 3, 2026 U.S. voters headed to the polls Here’s what Cloudflare data across more than 1,400 protected sites tells us about Election Day Internet traffic and cyberattacks.</description>
-      <pubDate>Thu, 19 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/internet-traffic-2026-us-election/</guid>
+      <title>nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them</title>
+      <link>https://blog.cloudflare.com/nginx2root/</link>
+      <description>Five memory corruption bugs in nginx, called nginx2root, can let an unauthenticated attacker run code on a server Here’s how they work, and why origins behind Cloudflare's proxy are shielded from the most serious of these bugs.</description>
+      <pubDate>Fri, 20 Nov 2026 01:58:29 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/nginx2root/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>When Can You Ship on Offline Evals Alone?</title>
-      <link>https://engineering.atspotify.com/2026/11/when-can-you-ship-on-offline-evals-alone/</link>
-      <description>TL;DR Teams building AI features want to skip slow A/B tests and decide from offline evals alone The post When Can You Ship on Offline Evals Alone? appeared first on Spotify Engineering.</description>
-      <pubDate>Thu, 19 Nov 2026 13:34:19 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.atspotify.com/2026/11/when-can-you-ship-on-offline-evals-alone/</guid>
-      <source>Spotify Engineering</source>
-    </item>
-    <item>
-      <title>An updated Clairic and Clairic-flash are now open-weight, from the new Workers AI Superintelligence team</title>
-      <link>https://blog.cloudflare.com/open-clairic/</link>
-      <description>Clairic graduates from preview, while Clairic-flash joins the repertoire on Workers AI We’re doing an open-weight release for both extraction models.</description>
-      <pubDate>Wed, 18 Nov 2026 22:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/open-clairic/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>Building secure mobile apps in the agentic era</title>
-      <link>https://shopify.engineering/secure-agentic-apps</link>
-      <description>How we scale our security with attack surface maps, focused AI reviews, and checks that improve with every vulnerability fixed.</description>
-      <pubDate>Wed, 18 Nov 2026 20:34:30 GMT</pubDate>
-      <guid isPermaLink="true">https://shopify.engineering/secure-agentic-apps</guid>
-      <source>Shopify Engineering</source>
-    </item>
-    <item>
-      <title>AWS Lambda now supports GPU instances for Event Functions on Lambda Managed Instances</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/</link>
-      <description>AWS Lambda now supports GPU instances (G-series) for Event Functions running on Lambda Managed Instances, enabling serverless GPU workloads like machine learning inference, media processing, and rendering Lambda handles all infrastructure tasks, including instance lifecycle, driver management, and auto scaling, while maximizing GPU utilization across concurrent requests with standard EC2 pricing plus a management fee</description>
-      <pubDate>Wed, 18 Nov 2026 19:39:07 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/</guid>
-      <source>AWS News</source>
-    </item>
-    <item>
-      <title>How Meta Uses AI Agents to Scale ML Innovations Across Ads Ranking Models</title>
-      <link>https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/</link>
-      <description>Our previous post in this series introduced the Ranking Engineer Agent (REA), an autonomous system that generates hypotheses, designs experiments, and proves new machine learning (ML) techniques on ads ranking models Now, we’re sharing how we propagate ranking model improvements like architectural advancements and training optimizations efficiently across a large and diverse fleet of ads [...] Read More The post How Meta Uses AI Agents to Scale ML Innovations Across Ads Ranking Models appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 18 Nov 2026 17:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/11/18/ml-applications/ai-agents-to-scale-ml-innovations-across-ads-ranking-models/</guid>
-      <source>Meta Engineering</source>
-    </item>
-    <item>
-      <title>Design Once, Deploy at Scale: Building a Template-Driven ML Ecosystem</title>
-      <link>https://engineering.fb.com/2026/11/18/ml-applications/design-once-deploy-at-scale-template-driven-ml-ecosystem/</link>
-      <description>As ML ecosystems grow to a large number of production models, the bottleneck is no longer inventing new techniques to improve these models, but rather shipping them reliably and efficiently across a fragmented model space, creating a rising tide that lifts all the boats At Meta, we built a template-driven approach that standardizes model design [...] Read More The post Design Once, Deploy at Scale: Building a Template-Driven ML Ecosystem appeared first on Engineering at Meta.</description>
-      <pubDate>Wed, 18 Nov 2026 16:59:38 GMT</pubDate>
-      <guid isPermaLink="true">https://engineering.fb.com/2026/11/18/ml-applications/design-once-deploy-at-scale-template-driven-ml-ecosystem/</guid>
-      <source>Meta Engineering</source>
+      <title>Give your agents controlled access to analyze your data and move funds</title>
+      <link>https://stripe.com/blog/give-your-agents-controlled-access-to-analyze-your-data-and-move-funds</link>
+      <description>Stripe Treasury now lets agents transfer funds, convert currencies, and pay vendors within limits you set Give agents the access they need to help run your business, with customizable controls and human approvals.</description>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/give-your-agents-controlled-access-to-analyze-your-data-and-move-funds</guid>
+      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
