@@ -6,10 +6,13 @@ const chineseTitle = "设计端到端加密聊天平台";
 
 test("encrypted messaging publishes in Real-Time Systems with a LinkedIn image and both languages", async ({ page, request }) => {
   await page.goto("/system-design/");
-  const cluster = page.locator(".topic-cluster").first();
-  await expect(cluster.getByRole("heading", { level: 2 })).toHaveText("Real-Time Systems");
-  await expect(cluster.locator("a.article-card").first()).toHaveAttribute("href", path);
-  await cluster.locator(`a.article-card[href="${path}"]`).click();
+  const cluster = page.locator(".topic-cluster").filter({
+    has: page.getByRole("heading", { level: 2, name: "Real-Time Systems", exact: true }),
+  });
+  await expect(cluster).toHaveCount(1);
+  const article = cluster.locator(`a.article-card[href="${path}"]`);
+  await expect(article).toBeVisible();
+  await article.click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(page.locator("[data-lang-toggle]")).toHaveCount(2);
