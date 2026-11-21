@@ -6,31 +6,47 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 20 Nov 2026 17:30:59 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 16:35:09 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Distributed LLM Training Across Metros: Streaming DiLoCo in MaxText</title>
-      <link>https://developers.googleblog.com/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/</link>
-      <description>Streaming DiLoCo in MaxText enables developers to efficiently train large language models across geographically distributed TPU slices by streaming parameter fragments instead of synchronizing full models at every step This approach slashes cross-slice communication volume by over 60× and eliminates network stalls, allowing seamless multi-datacenter scaling without degrading model convergence or quality.</description>
-      <pubDate>Fri, 20 Nov 2026 17:30:56 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/distributed-llm-training-across-metros-streaming-diloco-in-maxtext/</guid>
+      <title>How to handle user, connector, and agent auth in Gemini Enterprise with a custom UI</title>
+      <link>https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/</link>
+      <description>When building a custom enterprise UI on top of Gemini Enterprise's :streamAssist API, developers must manually implement three core authentication layers These include authenticating users or workloads via Google Identity or Workforce/Workload Identity Federation, managing third-party 3-legged OAuth (3LO) for Federated Connectors through the Keystore, and configuring on-demand per-tool OAuth for custom ADK agents using Vertex AI Agent Engine and GCP Auth Manager.</description>
+      <pubDate>Sat, 21 Nov 2026 16:35:07 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/</guid>
       <source>Google Developers</source>
     </item>
     <item>
-      <title>nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them</title>
-      <link>https://blog.cloudflare.com/nginx2root/</link>
-      <description>Five memory corruption bugs in nginx, called nginx2root, can let an unauthenticated attacker run code on a server Here’s how they work, and why origins behind Cloudflare's proxy are shielded from the most serious of these bugs.</description>
-      <pubDate>Fri, 20 Nov 2026 01:58:29 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/nginx2root/</guid>
+      <title>Check what your AI agents do before they do it, with Semantic governance policies</title>
+      <link>https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/</link>
+      <description>Semantic governance policies enable developers to govern AI agents by evaluating every proposed tool call inline before execution Operating via Agent Gateway, the policy engine checks each action against user intent and plain-language rules to prevent unauthorized data sharing and prompt injection attacks Developers can easily attach natural-language constraints to their agents and monitor auditable verdicts through Cloud Logging.</description>
+      <pubDate>Sat, 21 Nov 2026 16:35:07 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How to securely connect internal Cloud Run MCP servers to Gemini Enterprise</title>
+      <link>https://developers.googleblog.com/how-to-securely-connect-internal-cloud-run-mcp-servers-to-gemini-enterprise/</link>
+      <description>How to connect Gemini Enterprise privately to internal StreamableHTTP MCP servers on Cloud Run using Egress Agent Gateway, Private Service Connect, FQDN-scoped Private Cloud DNS, and dual-header OAuth 2.0 authentication.</description>
+      <pubDate>Sat, 21 Nov 2026 16:35:07 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/how-to-securely-connect-internal-cloud-run-mcp-servers-to-gemini-enterprise/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)</title>
+      <link>https://blog.cloudflare.com/ruby2shell-waf-protection/</link>
+      <description>ruby2shell lets attackers corrupt memory in default Rails and Sinatra apps without logging in Cloudflare WAF blocks it for every customer, including Free plans Upgrade Ruby now, and use the WAF to cover the gap.</description>
+      <pubDate>Fri, 20 Nov 2026 20:24:38 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/ruby2shell-waf-protection/</guid>
       <source>Cloudflare Engineering</source>
     </item>
     <item>
-      <title>Give your agents controlled access to analyze your data and move funds</title>
-      <link>https://stripe.com/blog/give-your-agents-controlled-access-to-analyze-your-data-and-move-funds</link>
-      <description>Stripe Treasury now lets agents transfer funds, convert currencies, and pay vendors within limits you set Give agents the access they need to help run your business, with customizable controls and human approvals.</description>
-      <pubDate>Thu, 19 Nov 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/give-your-agents-controlled-access-to-analyze-your-data-and-move-funds</guid>
-      <source>Stripe Engineering</source>
+      <title>How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws</title>
+      <link>https://blog.cloudflare.com/phpaftershell-waf-protection/</link>
+      <description>phpAfterShell is a critical flaw in PHP's default session handler that can lead to code execution Cloudflare WAF blocks it for all customers, including Free plans, and adds new rules for other PHP flaws fixed in the same release.</description>
+      <pubDate>Fri, 20 Nov 2026 20:00:45 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/phpaftershell-waf-protection/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
