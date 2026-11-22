@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc" xml:lang="zh-CN">
+<title id="title">从环境信号到社会解释</title><desc id="desc">每一步都需要相应的证据</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#167b82" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="760" fill="#fcf9f2"/>
+<g fill="#193341" font-family="Arial, 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+<rect x="48" y="50" width="8" height="42" fill="#167b82"/>
+<text x="76" y="82" font-size="36" font-weight="700">从环境信号到社会解释</text>
+<text x="76" y="124" font-size="24">每一步都需要相应的证据</text>
+<rect x="70" y="175" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="218" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="95" dy="0">01</tspan>
+</text>
+<text x="95" y="263" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">区域出现异常</tspan>
+</text>
+<text x="95" y="305" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">有年代的自然记录</tspan>
+<tspan x="95" dy="34">检验记录机制</tspan>
+</text>
+<rect x="635" y="175" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="660" y="218" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="660" dy="0">02</tspan>
+</text>
+<text x="660" y="263" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="660" dy="0">遗址受到影响</tspan>
+</text>
+<text x="660" y="305" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="660" dy="0">当地沉积与损伤</tspan>
+<tspan x="660" dy="34">辨认水体与范围</tspan>
+</text>
+<rect x="70" y="425" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="468" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="95" dy="0">03</tspan>
+</text>
+<text x="95" y="513" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">活动时间改变</tspan>
+</text>
+<text x="95" y="555" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">使用与结束的样品</tspan>
+<tspan x="95" dy="34">比较误差与顺序</tspan>
+</text>
+<rect x="635" y="425" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="660" y="468" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="660" dy="0">04</tspan>
+</text>
+<text x="660" y="513" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="660" dy="0">生活受到干扰</tspan>
+</text>
+<text x="660" y="555" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="660" dy="0">住房、食物与迁居</tspan>
+<tspan x="660" dy="34">检验作用过程</tspan>
+</text>
+<path d="M570 265 L620 265" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M885 360 V394 H317 V417" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M570 515 L620 515" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="70" y="662" text-anchor="start" font-size="26" font-weight="400" fill="#a95534">
+<tspan x="70" dy="0">年代相近支持追查联系，原因仍需过程证据。</tspan>
+</text>
+<text x="76" y="718" text-anchor="start" font-size="22" font-weight="400" fill="#5b635f">
+<tspan x="76" dy="0">原创教学示意图 · 不对应真实遗址或实测资料</tspan>
+</text>
+</g></svg>

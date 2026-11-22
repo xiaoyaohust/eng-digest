@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc" xml:lang="en">
+<title id="title">From environmental signal to social explanation</title><desc id="desc">Each step needs evidence appropriate to the claim</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#167b82" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="760" fill="#fcf9f2"/>
+<g fill="#193341" font-family="Arial, 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+<rect x="48" y="50" width="8" height="42" fill="#167b82"/>
+<text x="76" y="82" font-size="36" font-weight="700">From environmental signal to social explanation</text>
+<text x="76" y="124" font-size="24">Each step needs evidence appropriate to the claim</text>
+<rect x="70" y="175" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="218" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="95" dy="0">01</tspan>
+</text>
+<text x="95" y="263" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">Regional anomaly</tspan>
+</text>
+<text x="95" y="305" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">Dated natural records</tspan>
+<tspan x="95" dy="34">Check recording process</tspan>
+</text>
+<rect x="635" y="175" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="660" y="218" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="660" dy="0">02</tspan>
+</text>
+<text x="660" y="263" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="660" dy="0">Impact at the site</tspan>
+</text>
+<text x="660" y="305" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="660" dy="0">Local deposits and damage</tspan>
+<tspan x="660" dy="34">Identify water and extent</tspan>
+</text>
+<rect x="70" y="425" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="468" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="95" dy="0">03</tspan>
+</text>
+<text x="95" y="513" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">Occupation changes</tspan>
+</text>
+<text x="95" y="555" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">Samples linked to site use</tspan>
+<tspan x="95" dy="34">Compare ranges and order</tspan>
+</text>
+<rect x="635" y="425" width="495" height="180" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="660" y="468" text-anchor="start" font-size="26" font-weight="700" fill="#167b82">
+<tspan x="660" dy="0">04</tspan>
+</text>
+<text x="660" y="513" text-anchor="start" font-size="29" font-weight="700" fill="#193341">
+<tspan x="660" dy="0">Disruption to daily life</tspan>
+</text>
+<text x="660" y="555" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="660" dy="0">Housing, food, relocation</tspan>
+<tspan x="660" dy="34">Test the mechanism</tspan>
+</text>
+<path d="M570 265 L620 265" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M885 360 V394 H317 V417" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M570 515 L620 515" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="70" y="662" text-anchor="start" font-size="26" font-weight="400" fill="#a95534">
+<tspan x="70" dy="0">Similar dates justify investigating a link; causation needs process evidence.</tspan>
+</text>
+<text x="76" y="718" text-anchor="start" font-size="22" font-weight="400" fill="#5b635f">
+<tspan x="76" dy="0">Original teaching diagram · No actual site or measured data</tspan>
+</text>
+</g></svg>

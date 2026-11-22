@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc" xml:lang="zh-CN">
+<title id="title">三种环境记录，各有边界</title><desc id="desc">比较记录机制、空间范围和年代误差</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#167b82" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="760" fill="#fcf9f2"/>
+<g fill="#193341" font-family="Arial, 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+<rect x="48" y="50" width="8" height="42" fill="#167b82"/>
+<text x="76" y="82" font-size="36" font-weight="700">三种环境记录，各有边界</text>
+<text x="76" y="124" font-size="24">比较记录机制、空间范围和年代误差</text>
+<rect x="55" y="175" width="345" height="465" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<rect x="56" y="176" width="343" height="8" fill="#167b82"/>
+<text x="77" y="226" text-anchor="start" font-size="31" font-weight="700" fill="#193341">
+<tspan x="77" dy="0">聚落</tspan>
+</text>
+<text x="77" y="271" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="77" dy="0">人选择和带入的植物</tspan>
+</text>
+<path d="M155 370 L225 310 L295 370 M175 355 V416 H275 V355" fill="none" stroke="#167b82" stroke-width="5"/>
+<text x="77" y="485" text-anchor="start" font-size="24" font-weight="400" fill="#193341">
+<tspan x="77" dy="0">种子、木炭、植硅体</tspan>
+</text>
+<text x="77" y="553" text-anchor="start" font-size="24" font-weight="400" fill="#193341">
+<tspan x="77" dy="0">燃料不等于全部植被</tspan>
+<tspan x="77" dy="42">检查用途与保存过程</tspan>
+</text>
+<rect x="430" y="175" width="345" height="465" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<rect x="431" y="176" width="343" height="8" fill="#167b82"/>
+<text x="452" y="226" text-anchor="start" font-size="31" font-weight="700" fill="#193341">
+<tspan x="452" dy="0">湖泊</tspan>
+</text>
+<text x="452" y="271" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="452" dy="0">汇集不同来源的沉积</tspan>
+</text>
+<path d="M485 325 Q525 309 565 325 T645 325 T725 325" fill="none" stroke="#167b82" stroke-width="3"/>
+<path d="M485 350 Q525 334 565 350 T645 350 T725 350" fill="none" stroke="#167b82" stroke-width="3"/>
+<path d="M485 375 Q525 359 565 375 T645 375 T725 375" fill="none" stroke="#167b82" stroke-width="3"/>
+<rect x="580" y="345" width="36" height="100" rx="5" fill="#d7b78c" stroke="#193341" stroke-width="3"/>
+<path d="M580 370 H616" stroke="#8c7055" stroke-width="3"/>
+<path d="M580 395 H616" stroke="#8c7055" stroke-width="3"/>
+<path d="M580 420 H616" stroke="#8c7055" stroke-width="3"/>
+<text x="452" y="485" text-anchor="start" font-size="24" font-weight="400" fill="#193341">
+<tspan x="452" dy="0">花粉、颗粒、微体生物</tspan>
+</text>
+<text x="452" y="553" text-anchor="start" font-size="24" font-weight="400" fill="#193341">
+<tspan x="452" dy="0">百分比不等于覆盖率</tspan>
+<tspan x="452" dy="42">深度需要年代模型</tspan>
+</text>
+<rect x="805" y="175" width="345" height="465" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<rect x="806" y="176" width="343" height="8" fill="#167b82"/>
+<text x="827" y="226" text-anchor="start" font-size="31" font-weight="700" fill="#193341">
+<tspan x="827" dy="0">洞穴</tspan>
+</text>
+<text x="827" y="271" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="827" dy="0">滴水形成的碳酸盐</tspan>
+</text>
+<path d="M853 425 Q880 290 975 295 Q1070 290 1100 425" fill="none" stroke="#167b82" stroke-width="5"/>
+<path d="M947 425 L977 350 L1003 425 Z" fill="#d7b78c" stroke="#193341" stroke-width="3"/>
+<text x="827" y="485" text-anchor="start" font-size="24" font-weight="400" fill="#193341">
+<tspan x="827" dy="0">石笋与同位素信号</tspan>
+</text>
+<text x="827" y="553" text-anchor="start" font-size="24" font-weight="400" fill="#193341">
+<tspan x="827" dy="0">区域线索需要当地检验</tspan>
+<tspan x="827" dy="42">不是村庄的雨量计</tspan>
+</text>
+<text x="76" y="718" text-anchor="start" font-size="22" font-weight="400" fill="#5b635f">
+<tspan x="76" dy="0">原创教学示意图 · 不对应真实遗址或实测资料</tspan>
+</text>
+</g></svg>

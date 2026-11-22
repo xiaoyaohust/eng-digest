@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc" xml:lang="zh-CN">
+<title id="title">深度与事件先后不同</title><desc id="desc">一个假设聚落的剖面与事件关系</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#167b82" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="760" fill="#fcf9f2"/>
+<g fill="#193341" font-family="Arial, 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+<rect x="48" y="50" width="8" height="42" fill="#167b82"/>
+<text x="76" y="82" font-size="36" font-weight="700">深度与事件先后不同</text>
+<text x="76" y="124" font-size="24">一个假设聚落的剖面与事件关系</text>
+<rect x="60" y="180" width="650" height="460" rx="12" fill="#e5d5bb" stroke="#c8c2b6" stroke-width="2"/>
+<rect x="62" y="270" width="646" height="32" fill="#bfceb3"/>
+<rect x="62" y="400" width="646" height="26" fill="#c29870"/>
+<path d="M335 302 L335 510 Q335 600 420 600 Q505 600 505 510 L505 302 Z" fill="#bdb9aa"/>
+<path d="M335 304 L335 510 Q335 600 420 600 Q505 600 505 510 L505 304" fill="none" stroke="#a95534" stroke-width="5" stroke-dasharray="9 6"/>
+<text x="85" y="242" text-anchor="start" font-size="28" font-weight="700" fill="#193341">
+<tspan x="85" dy="0">丁 新地面</tspan>
+</text>
+<text x="85" y="385" text-anchor="start" font-size="28" font-weight="700" fill="#193341">
+<tspan x="85" dy="0">甲 旧地面</tspan>
+</text>
+<text x="420" y="465" text-anchor="middle" font-size="28" font-weight="400" fill="#193341">
+<tspan x="420" dy="0">丙</tspan>
+<tspan x="420" dy="38">填土</tspan>
+</text>
+<text x="85" y="555" text-anchor="start" font-size="26" font-weight="400" fill="#a95534">
+<tspan x="85" dy="0">乙 挖坑界面</tspan>
+<tspan x="85" dy="38">切穿旧地面</tspan>
+</text>
+<path d="M270 552 L335 525" stroke="#a95534" stroke-width="2"/>
+<rect x="770" y="190" width="355" height="74" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="947" y="237" text-anchor="middle" font-size="28" font-weight="700" fill="#193341">
+<tspan x="947" dy="0">甲 旧地面</tspan>
+</text>
+<path d="M947 268 L947 292" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="770" y="298" width="355" height="74" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="947" y="345" text-anchor="middle" font-size="28" font-weight="700" fill="#193341">
+<tspan x="947" dy="0">乙 挖坑</tspan>
+</text>
+<path d="M947 376 L947 400" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="770" y="406" width="355" height="74" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="947" y="453" text-anchor="middle" font-size="28" font-weight="700" fill="#193341">
+<tspan x="947" dy="0">丙 填坑</tspan>
+</text>
+<path d="M947 484 L947 508" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="770" y="514" width="355" height="74" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="947" y="561" text-anchor="middle" font-size="28" font-weight="700" fill="#193341">
+<tspan x="947" dy="0">丁 新地面</tspan>
+</text>
+<text x="947" y="652" text-anchor="middle" font-size="23" font-weight="400" fill="#193341">
+<tspan x="947" dy="0">箭头表示由早到晚</tspan>
+</text>
+<text x="76" y="718" text-anchor="start" font-size="22" font-weight="400" fill="#5b635f">
+<tspan x="76" dy="0">原创教学示意图 · 不对应真实遗址或实测资料</tspan>
+</text>
+</g></svg>

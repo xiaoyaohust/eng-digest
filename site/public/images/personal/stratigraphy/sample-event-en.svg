@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc" xml:lang="en">
+<title id="title">Connecting sample time to event time</title><desc id="desc">Calibration and archaeological association address different questions</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#167b82" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="760" fill="#fcf9f2"/>
+<g fill="#193341" font-family="Arial, 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+<rect x="48" y="50" width="8" height="42" fill="#167b82"/>
+<text x="76" y="82" font-size="36" font-weight="700">Connecting sample time to event time</text>
+<text x="76" y="124" font-size="24">Calibration and archaeological association address different questions</text>
+<rect x="70" y="165" width="740" height="90" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="201" text-anchor="start" font-size="28" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">Target event</tspan>
+</text>
+<text x="95" y="235" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">For example, cooking on a floor</tspan>
+</text>
+<path d="M440 258 L440 278" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="283" width="740" height="90" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="319" text-anchor="start" font-size="28" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">Select samples</tspan>
+</text>
+<text x="95" y="353" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">Check context, lifespan, and movement</tspan>
+</text>
+<path d="M440 376 L440 396" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="401" width="740" height="90" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="437" text-anchor="start" font-size="28" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">Laboratory result</tspan>
+</text>
+<text x="95" y="471" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">Report ID, determination, uncertainty</tspan>
+</text>
+<path d="M440 494 L440 514" fill="none" stroke="#167b82" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="70" y="519" width="740" height="90" rx="12" fill="#ffffff" stroke="#c8c2b6" stroke-width="2"/>
+<text x="95" y="555" text-anchor="start" font-size="28" font-weight="700" fill="#193341">
+<tspan x="95" dy="0">Calendar calibration</tspan>
+</text>
+<text x="95" y="589" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="95" dy="0">Report curve, version, and ranges</tspan>
+</text>
+<rect x="845" y="165" width="290" height="444" rx="12" fill="#f1e4d5" stroke="#c8c2b6" stroke-width="2"/>
+<text x="870" y="210" text-anchor="start" font-size="27" font-weight="700" fill="#a95534">
+<tspan x="870" dy="0">Association checks</tspan>
+</text>
+<text x="870" y="265" text-anchor="start" font-size="25" font-weight="400" fill="#193341">
+<tspan x="870" dy="0">Wood can predate fire</tspan>
+<tspan x="870" dy="48">Old finds can move</tspan>
+<tspan x="870" dy="48">Aquatic carbon</tspan>
+<tspan x="870" dy="48">may appear older</tspan>
+<tspan x="870" dy="48">Calibration cannot</tspan>
+<tspan x="870" dy="48">repair lost context</tspan>
+</text>
+<text x="76" y="718" text-anchor="start" font-size="22" font-weight="400" fill="#5b635f">
+<tspan x="76" dy="0">Original teaching diagram · No actual site or measured data</tspan>
+</text>
+</g></svg>
