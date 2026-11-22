@@ -8,12 +8,14 @@ const enTitle = "From Yangshao to Liangzhu: Reconstructing Prehistoric China";
 test("Chinese history chapter is discoverable and publishes a valid share image and canonical URL", async ({ page, request }) => {
   await page.goto("/personal/");
   await page.evaluate(() => localStorage.setItem("article-lang", "zh-CN"));
-  await expect(page.locator(`a.article-card[href="${path}?lang=en"] h3`)).toHaveText(enTitle);
+  // Older articles stay discoverable through their column after leaving Recently added.
+  await expect(page.locator('.column-card[href="/personal/china-history/"]')).toContainText("A General History of China");
   await page.locator('.column-card[href="/personal/china-history/"]').click();
   await expect(page.getByRole("heading", { name: topic, exact: true })).toBeVisible();
   expect(await page.locator(".column-page").innerText()).not.toMatch(/[\u3400-\u9fff]/);
-  await page.getByRole("navigation", { name: "Article chapters" }).getByRole("link").click();
-  await expect.poll(() => page.locator(".personal-topic").evaluate(element => element.matches(":target"))).toBe(true);
+  // Select this chapter explicitly as the history series gains more chapters.
+  await page.getByRole("navigation", { name: "Article chapters" }).getByRole("link", { name: topic }).click();
+  await expect(page.locator(".personal-topic:target").getByRole("heading", { name: topic, exact: true })).toBeVisible();
   await page.locator(`a.article-card[href="${path}?lang=en"]`).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(enTitle);
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
@@ -29,7 +31,7 @@ test("Chinese history chapter is discoverable and publishes a valid share image 
   expect(schemas.find((schema: { "@type": string }) => schema["@type"] === "Article").headline).toBe(enTitle);
   expect(await (await request.get("/sitemap-0.xml")).text()).toContain(`https://systemcraftlab.com${path}`);
   await page.getByRole("navigation", { name: "Breadcrumb", exact: true }).getByRole("link", { name: topic, exact: true }).click();
-  await expect.poll(() => page.locator(".personal-topic").evaluate(element => element.matches(":target"))).toBe(true);
+  await expect(page.locator(".personal-topic:target").getByRole("heading", { name: topic, exact: true })).toBeVisible();
   await page.goto("/search/");
   await page.locator(".pagefind-ui__search-input").fill("仰韶");
   await expect(page.locator(`.pagefind-ui__result-link[href$="${path}"]`)).toBeVisible();
@@ -99,6 +101,6 @@ test("English history text and static diagrams remain readable without JavaScrip
     await expect(page.locator(".prose figure img:visible")).toHaveCount(2);
     await expect(page.getByRole("heading", { name: "A chronology of discovery and research", exact: true })).toBeVisible();
     await page.getByRole("navigation", { name: "Breadcrumb", exact: true }).getByRole("link", { name: topic, exact: true }).click();
-    await expect.poll(() => page.locator(".personal-topic").evaluate(element => element.matches(":target"))).toBe(true);
+    await expect(page.locator(".personal-topic:target").getByRole("heading", { name: topic, exact: true })).toBeVisible();
   } finally { await context.close(); }
 });
