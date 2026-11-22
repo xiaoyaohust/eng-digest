@@ -6,47 +6,15 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 21 Nov 2026 16:35:09 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 16:52:34 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>How to handle user, connector, and agent auth in Gemini Enterprise with a custom UI</title>
-      <link>https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/</link>
-      <description>When building a custom enterprise UI on top of Gemini Enterprise's :streamAssist API, developers must manually implement three core authentication layers These include authenticating users or workloads via Google Identity or Workforce/Workload Identity Federation, managing third-party 3-legged OAuth (3LO) for Federated Connectors through the Keystore, and configuring on-demand per-tool OAuth for custom ADK agents using Vertex AI Agent Engine and GCP Auth Manager.</description>
-      <pubDate>Sat, 21 Nov 2026 16:35:07 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/</guid>
+      <title>Agent Anomaly Detection: Safeguarding agents across other clouds</title>
+      <link>https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/</link>
+      <description>Agent Anomaly Detection now monitors ADK agents running across AWS, Azure, or on-premises by analyzing their traces and logs in your Google Cloud project By ingesting OpenTelemetry-formatted data through the Telemetry API, it evaluates full conversations for behavioral drift without needing access to the agent's underlying runtime This enables security teams to detect risks like rogue behaviors, tool misuse, and resource exhaustion across multi-cloud environments.</description>
+      <pubDate>Sun, 22 Nov 2026 16:52:32 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/</guid>
       <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Check what your AI agents do before they do it, with Semantic governance policies</title>
-      <link>https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/</link>
-      <description>Semantic governance policies enable developers to govern AI agents by evaluating every proposed tool call inline before execution Operating via Agent Gateway, the policy engine checks each action against user intent and plain-language rules to prevent unauthorized data sharing and prompt injection attacks Developers can easily attach natural-language constraints to their agents and monitor auditable verdicts through Cloud Logging.</description>
-      <pubDate>Sat, 21 Nov 2026 16:35:07 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>How to securely connect internal Cloud Run MCP servers to Gemini Enterprise</title>
-      <link>https://developers.googleblog.com/how-to-securely-connect-internal-cloud-run-mcp-servers-to-gemini-enterprise/</link>
-      <description>How to connect Gemini Enterprise privately to internal StreamableHTTP MCP servers on Cloud Run using Egress Agent Gateway, Private Service Connect, FQDN-scoped Private Cloud DNS, and dual-header OAuth 2.0 authentication.</description>
-      <pubDate>Sat, 21 Nov 2026 16:35:07 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/how-to-securely-connect-internal-cloud-run-mcp-servers-to-gemini-enterprise/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)</title>
-      <link>https://blog.cloudflare.com/ruby2shell-waf-protection/</link>
-      <description>ruby2shell lets attackers corrupt memory in default Rails and Sinatra apps without logging in Cloudflare WAF blocks it for every customer, including Free plans Upgrade Ruby now, and use the WAF to cover the gap.</description>
-      <pubDate>Fri, 20 Nov 2026 20:24:38 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/ruby2shell-waf-protection/</guid>
-      <source>Cloudflare Engineering</source>
-    </item>
-    <item>
-      <title>How Cloudflare WAF helps protect against phpAfterShell and other critical PHP flaws</title>
-      <link>https://blog.cloudflare.com/phpaftershell-waf-protection/</link>
-      <description>phpAfterShell is a critical flaw in PHP's default session handler that can lead to code execution Cloudflare WAF blocks it for all customers, including Free plans, and adds new rules for other PHP flaws fixed in the same release.</description>
-      <pubDate>Fri, 20 Nov 2026 20:00:45 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/phpaftershell-waf-protection/</guid>
-      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
