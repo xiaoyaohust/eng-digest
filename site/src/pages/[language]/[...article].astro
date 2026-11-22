@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import { published } from "@/lib/content";
+import { orderAIArticles } from "@/data/ai";
+import PersonalArticle from "../personal/[category]/[slug].astro";
+import AIArticle from "../ai/[slug].astro";
+import ScienceArticle from "../science/[project]/[slug].astro";
+import SystemDesignArticle from "../system-design/[slug].astro";
+import CodingArticle from "../coding/[slug].astro";
+import FieldNoteArticle from "../field-notes/[slug].astro";
+import InterviewArticle from "../interviews/[slug].astro";
+
+// Reuse the original page components so practice, diagrams, reading links,
+// and future editorial changes behave identically at either language URL.
+export async function getStaticPaths() {
+  const sections = ["personal", "ai", "science", "system-design", "coding", "field-notes", "interviews"] as const;
+  const translations = new Map((await getCollection("translations")).map(entry => [entry.id, entry]));
+  const paths = [];
+  for (const section of sections) {
+    const publishedEntries = await published(section);
+    const entries = section === "ai" ? orderAIArticles(await published("ai")) : publishedEntries;
+    for (const entry of entries) {
+      const primary = "lang" in entry.data ? entry.data.lang : "en";
+      const translation = translations.get(`${section}/${entry.id}`);
+      if (!translation || translation.data.draft || translation.data.lang === primary) continue;
+      const category = "category" in entry.data ? entry.data.category : undefined;
+      const column = section === "personal"
+        ? entries.filter(other => "category" in other.data && other.data.category === category)
+        : entries;
+      const index = column.indexOf(entry);
+      const article = section === "personal" && "category" in entry.data ? `personal/${entry.data.category}/${entry.id}`
+        : section === "science" && "project" in entry.data ? `science/${entry.data.project}/${entry.id}`
+        : `${section}/${entry.id}`;
+      paths.push({
+        params: { language: translation.data.lang === "zh-CN" ? "zh" : "en", article },
+        props: { section, entry,
+          prevEntry: section === "science" ? undefined : column[index + (section === "ai" ? -1 : 1)],
+          nextEntry: section === "science" ? undefined : column[index + (section === "ai" ? 1 : -1)],
+        },
+      });
+    }
+  }
+  return paths;
+}
+
+const pages = { personal: PersonalArticle, ai: AIArticle, science: ScienceArticle, "system-design": SystemDesignArticle, coding: CodingArticle, "field-notes": FieldNoteArticle, interviews: InterviewArticle };
+const { section, entry, prevEntry, nextEntry } = Astro.props;
+const Page: AstroComponentFactory = pages[section as keyof typeof pages];
+---
+
+<Page entry={entry} prevEntry={prevEntry} nextEntry={nextEntry} />

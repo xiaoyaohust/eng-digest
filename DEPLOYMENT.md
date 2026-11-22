@@ -171,6 +171,28 @@ No database or server migration is involved. See `docs/CONTENT_GUIDE.md` for sch
 
 ## Troubleshooting
 
+### Sharing an English or Chinese article
+
+Articles with a published translation have separate static URLs. For example,
+`/personal/china-history/stratigraphy-dating-and-past-environments/` is English,
+and `/zh/personal/china-history/stratigraphy-dating-and-past-environments/` is Chinese.
+Each HTML file contains its own title, description, Open Graph image, locale,
+canonical URL, and reciprocal language links. Readers can switch languages;
+the address bar, Copy link button, LinkedIn link, and copied summary follow
+the selected language. Older `?lang=zh` links still open the translation and
+normalize to its static URL when JavaScript runs.
+
+To share Chinese on WeChat, switch to CN and use **复制中文链接**, or copy the
+resulting `/zh/…/` address. A crawler requesting the old English URL with
+`?lang=zh` still receives English HTML because GitHub Pages serves static files.
+Previously sent messages or cached previews are controlled by the sharing app;
+share the new Chinese URL rather than expecting an old preview to update.
+
+The build generates translated PNGs from translation frontmatter. Optional
+`socialTitle` and `socialDescription` fields in the translation can shorten the
+card text without changing the article title or description. The bundled
+Chinese font is used only during image generation and is not served to readers.
+
 ### The live site still shows “Engineering Daily Digest Archive”
 
 Pages is still using the old branch-based deployment. Change **Settings → Pages → Source** to

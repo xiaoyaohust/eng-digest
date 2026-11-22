@@ -54,7 +54,7 @@ test("EN and CN retain figure placement, switch both TOCs, and remember the read
   await page.locator("[data-lang-toggle]").first().getByRole("button", { name: "CN", exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(chineseTitle);
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
-  await expect(page).toHaveURL(/[?&]lang=zh\b/);
+  await expect(page).toHaveURL(new RegExp(`/zh${path}$`));
   await expect(page.locator('.prose [data-lang-pane="primary"]')).toBeHidden();
   await expect(page.locator(".prose .mermaid-diagram svg:visible")).toHaveCount(5);
   await expect(page.locator(".article-toc").getByRole("link", { name: "3. 总体架构", exact: true })).toBeVisible();
@@ -74,7 +74,7 @@ test("EN and CN retain figure placement, switch both TOCs, and remember the read
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await page.goto(`${path}?lang=zh`);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(chineseTitle);
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `https://systemcraftlab.com${path}`);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `https://systemcraftlab.com/zh${path}`);
 });
 
 test("both language versions keep figures and tables usable on a phone", async ({ page }) => {

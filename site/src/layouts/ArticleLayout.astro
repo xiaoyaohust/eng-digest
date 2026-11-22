@@ -9,6 +9,7 @@ import LanguageToggle from "@/components/LanguageToggle.astro";
 import type { ArticleTranslation } from "@/lib/translations";
 import { withBase } from "@/lib/url";
 import { canonicalPageURL } from "@/lib/canonical";
+import { articleLanguagePath, articleRouteLanguage, type ArticleLanguage } from "@/lib/articleLanguages";
 
 interface RelatedLink {
   title: string;
@@ -80,16 +81,36 @@ const {
 } = Astro.props;
 const TranslatedContent = translation?.Content;
 const altLang = translation?.lang;
+const base = import.meta.env.BASE_URL;
+const routeLang = translation ? articleRouteLanguage(Astro.url.pathname, lang as ArticleLanguage, base) : lang;
+const useTranslation = translation && routeLang === translation.lang;
+const pageTitle = useTranslation ? translation.title : title;
+const pageDescription = useTranslation ? translation.description : description;
+const pageImage = useTranslation ? { src: `/social/auto/${translation.key}.${translation.lang}.png`, alt: translation.title, width: 1200, height: 627 } : socialImage;
 const canonical = canonicalPageURL(Astro.url.pathname, Astro.site).toString();
-const imageURL = socialImage ? new URL(socialImage.src, Astro.site).toString() : undefined;
+const absoluteImageURL = (src: string) => new URL(src.startsWith("/") ? withBase(src) : src, Astro.site).toString();
+const imageURL = pageImage ? absoluteImageURL(pageImage.src) : undefined;
+const primaryURL = canonicalPageURL(articleLanguagePath(Astro.url.pathname, lang as ArticleLanguage, lang as ArticleLanguage, base), Astro.site).toString();
+const alternateURL = translation ? canonicalPageURL(articleLanguagePath(Astro.url.pathname, translation.lang, lang as ArticleLanguage, base), Astro.site).toString() : undefined;
+const languages = translation ? [
+  { lang, title, description, url: primaryURL, image: socialImage ? absoluteImageURL(socialImage.src) : undefined },
+  { lang: translation.lang, title: translation.title, description: translation.description, url: alternateURL!, image: absoluteImageURL(`/social/auto/${translation.key}.${translation.lang}.png`) },
+] : [];
+const versions = translation ? [
+  { pane: "primary", lang, title, description, headings, Content: undefined },
+  { pane: "alt", lang: translation.lang, title: translation.title, description: translation.description, headings: translation.headings, Content: TranslatedContent },
+] : [];
+// Some link previews inspect body text or the first image as a fallback.
+// Put the requested language first in the source as well as on screen.
+if (useTranslation) versions.reverse();
 const sectionName = kicker ?? "Knowledge Base";
 const parents = breadcrumbParents ?? [{ title: sectionName, href: sectionHref }];
 const structuredData = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: title,
-    description,
+    headline: pageTitle,
+    description: pageDescription,
     datePublished: date.toISOString(),
     dateModified: (updated ?? date).toISOString(),
     // Google expects mainEntityOfPage as a node, not a bare URL string, and
@@ -98,7 +119,7 @@ const structuredData = [
     mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     ...(imageURL ? { image: [imageURL] } : {}),
     articleSection: sectionName,
-    inLanguage: lang,
+    inLanguage: routeLang,
     keywords: tags.join(", "),
     author: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
     publisher: { "@type": "Organization", name: "System Craft Lab", url: new URL(withBase("/"), Astro.site).toString() },
@@ -109,20 +130,22 @@ const structuredData = [
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: new URL(withBase("/"), Astro.site).toString() },
       ...parents.map((parent, index) => ({ "@type": "ListItem", position: index + 2, name: parent.title, item: new URL(withBase(parent.href), Astro.site).toString() })),
-      { "@type": "ListItem", position: parents.length + 2, name: title, item: canonical },
+      { "@type": "ListItem", position: parents.length + 2, name: pageTitle, item: canonical },
     ],
   },
 ];
 ---
 
 <BaseLayout
-  lang={lang}
-  title={title}
-  description={description}
-  image={socialImage?.src}
-  imageAlt={socialImage?.alt}
-  imageWidth={socialImage?.width}
-  imageHeight={socialImage?.height}
+  lang={routeLang}
+  title={pageTitle}
+  description={pageDescription}
+  image={pageImage?.src}
+  imageAlt={pageImage?.alt}
+  imageWidth={pageImage?.width}
+  imageHeight={pageImage?.height}
+  initialLangView={useTranslation ? "alt" : undefined}
+  languageAlternates={languages.map(item => ({ lang: item.lang, href: item.url }))}
   type="article"
   publishedTime={date}
   modifiedTime={updated}
@@ -133,7 +156,7 @@ const structuredData = [
 >
   <article class="article-page">
     {translation && (
-      <script is:inline define:vars={{ primaryLang: lang, altLang }}>
+      <script is:inline define:vars={{ primaryLang: lang, altLang, routeLang }}>
         // Runs before the article paints so a remembered or linked language
         // never flashes the other version first. LanguageToggle wires clicks.
         (function () {
@@ -143,17 +166,21 @@ const structuredData = [
             if (query === "en") wanted = "en";
             else if (query === "zh" || query === "cn" || query === "zh-cn") wanted = "zh-CN";
           } catch (e) {}
+          if (!wanted && routeLang !== primaryLang) wanted = routeLang;
           if (!wanted) { try { wanted = localStorage.getItem("article-lang"); } catch (e) {} }
           var root = document.documentElement;
           root.dataset.langReady = "true";
           if (wanted === altLang && wanted !== primaryLang) {
             root.dataset.langView = "alt";
             root.lang = altLang;
+          } else {
+            delete root.dataset.langView;
+            root.lang = primaryLang;
           }
         })();
       </script>
     )}
-    {translation && <div hidden data-article-langs data-primary-lang={lang} data-alt-lang={translation.lang} data-primary-title={title} data-alt-title={translation.title}></div>}
+    {translation && <div hidden data-article-langs data-primary-lang={lang} data-alt-lang={translation.lang} data-primary-title={title} data-alt-title={translation.title} data-language-options={JSON.stringify(languages)}></div>}
     <header class="article-hero">
       <div class="wrap article-header">
         <a class="back-link" href={withBase("/")}>&larr; KNOWLEDGE BASE</a>
@@ -165,16 +192,10 @@ const structuredData = [
         </nav>}
         {kicker && <p class="eyebrow">MODULE / {kicker}</p>}
         {translation ? (
-          <>
-            <div data-lang-pane="primary" lang={lang}>
-              <h1>{title}</h1>
-              <p class="article-description">{description}</p>
-            </div>
-            <div data-lang-pane="alt" lang={translation.lang}>
-              <h1>{translation.title}</h1>
-              <p class="article-description">{translation.description}</p>
-            </div>
-          </>
+          versions.map(version => <div data-lang-pane={version.pane} lang={version.lang}>
+            <h1>{version.title}</h1>
+            <p class="article-description">{version.description}</p>
+          </div>)
         ) : (
           <>
             <h1>{title}</h1>
@@ -192,26 +213,23 @@ const structuredData = [
       <aside class="article-toc">
         <div class="toc-sticky">
           {translation ? (
-            <>
-              <div data-lang-pane="primary"><TableOfContents headings={headings} /></div>
-              <div data-lang-pane="alt" lang={translation.lang}><TableOfContents headings={translation.headings} /></div>
-            </>
+            versions.map(version => <div data-lang-pane={version.pane} lang={version.lang}><TableOfContents headings={version.headings} /></div>)
           ) : <TableOfContents headings={headings} />}
         </div>
       </aside>
       <div class="prose">
         {TranslatedContent ? (
-          <>
-            <div data-lang-pane="primary" lang={lang}><slot /></div>
-            <div data-lang-pane="alt" lang={translation.lang}><TranslatedContent /></div>
-          </>
+          versions.map(version => {
+            const Content = version.Content;
+            return <div data-lang-pane={version.pane} lang={version.lang}>{Content ? <Content /> : <slot />}</div>;
+          })
         ) : <slot />}
       </div>
     </div>
 
     <footer class="wrap article-footer">
         {translation && <LanguageToggle placement="bottom" />}
-        <ArticleActions title={title} description={description} canonical={canonical} relatedPath={relatedPath} shareHashtags={shareHashtags} />
+        <ArticleActions title={pageTitle} description={pageDescription} lang={routeLang} canonical={canonical} relatedPath={relatedPath} shareHashtags={shareHashtags} />
         {(prev || next) && (
           <nav class="prev-next" aria-label="Article navigation">
             <a class:list={["prev-next-link", { disabled: !prev }]} href={prev ? withBase(prev.href) : undefined}>

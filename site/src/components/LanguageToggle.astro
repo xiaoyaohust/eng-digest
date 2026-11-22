@@ -1,7 +1,8 @@
 ---
 // EN / CN switch for articles that have a translation. Every instance on the
 // page stays in sync; the choice is remembered across articles and can be
-// linked with ?lang=en or ?lang=zh. The early script in ArticleLayout applies
+// linked with a static /zh/ (or /en/) URL. Old ?lang= links remain supported.
+// The early script in ArticleLayout applies
 // a stored choice before the article paints, so there is no flash of the
 // other language.
 interface Props {
@@ -34,12 +35,14 @@ const { placement } = Astro.props;
 </style>
 
 <script>
+  import { readArticleLanguages, setArticleShareLanguage } from "@/lib/articleSharing";
   const root = document.documentElement;
   const config = document.querySelector<HTMLElement>("[data-article-langs]");
 
   if (config) {
     const primary = config.dataset.primaryLang ?? "en";
     const alternate = config.dataset.altLang ?? "zh-CN";
+    const options = readArticleLanguages();
     const titles: Record<string, string> = {
       [primary]: config.dataset.primaryTitle ?? document.title,
       [alternate]: config.dataset.altTitle ?? document.title,
@@ -51,14 +54,13 @@ const { placement } = Astro.props;
       else delete root.dataset.langView;
       root.lang = useAlternate ? alternate : primary;
       document.title = `${titles[root.lang]} · Eng Knowledge`;
+      const selected = options.find(option => option.lang === root.lang);
+      if (selected) setArticleShareLanguage(selected);
       document.querySelectorAll<HTMLButtonElement>("[data-lang-choice]").forEach((button) => {
         button.setAttribute("aria-pressed", String(button.dataset.langChoice === root.lang));
       });
       if (!remember) return;
       try { localStorage.setItem("article-lang", root.lang); } catch { /* private mode: still switches */ }
-      const url = new URL(location.href);
-      url.searchParams.set("lang", root.lang === "zh-CN" ? "zh" : "en");
-      history.replaceState(history.state, "", url);
     };
 
     show(root.dataset.langView === "alt" ? alternate : primary, false);

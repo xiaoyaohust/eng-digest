@@ -7,22 +7,24 @@ interface Props {
   canonical: string;
   relatedPath?: { title: string; href: string };
   shareHashtags?: string[];
+  lang?: string;
 }
 
-const { title, description, canonical, relatedPath, shareHashtags = ["SystemDesign", "Engineering", "TechInterview"] } = Astro.props;
+const { title, description, canonical, relatedPath, lang = "en", shareHashtags = ["SystemDesign", "Engineering", "TechInterview"] } = Astro.props;
+const chinese = lang === "zh-CN";
 const linkedInURL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonical)}`;
 const linkedInSummary = `${title}\n\n${description}\n\n${canonical}\n\n${shareHashtags.map((tag) => `#${tag}`).join(" ")}`;
 ---
 
-<section class="article-actions" aria-labelledby="share-heading" data-article-actions data-summary={linkedInSummary}>
+<section class="article-actions" aria-labelledby="share-heading" data-article-actions data-summary={linkedInSummary} data-share-hashtags={JSON.stringify(shareHashtags)}>
   <div>
-    <span class="eyebrow">KEEP THE SIGNAL MOVING</span>
-    <h2 id="share-heading">Share or continue learning</h2>
+    <span class="eyebrow" data-share-eyebrow>{chinese ? "分享与阅读" : "KEEP THE SIGNAL MOVING"}</span>
+    <h2 id="share-heading">{chinese ? "分享文章或继续阅读" : "Share or continue learning"}</h2>
   </div>
   <div class="action-buttons">
-    <button type="button" data-copy-value={canonical}>Copy link</button>
-    <a href={linkedInURL} target="_blank" rel="noreferrer">Share on LinkedIn ↗</a>
-    <button type="button" data-copy-summary>Copy LinkedIn summary</button>
+    <button type="button" data-copy-value={canonical}>{chinese ? "复制中文链接" : "Copy link"}</button>
+    <a data-share-linkedin href={linkedInURL} target="_blank" rel="noreferrer">{chinese ? "分享到 LinkedIn ↗" : "Share on LinkedIn ↗"}</a>
+    <button type="button" data-copy-summary>{chinese ? "复制中文分享摘要" : "Copy LinkedIn summary"}</button>
     {relatedPath && <a class="path-action" href={withBase(relatedPath.href)}>Related path: {relatedPath.title} →</a>}
   </div>
   <p class="copy-status" data-copy-status aria-live="polite"></p>
@@ -39,13 +41,39 @@ const linkedInSummary = `${title}\n\n${description}\n\n${canonical}\n\n${shareHa
 </style>
 
 <script>
+  import { readArticleLanguages } from "@/lib/articleSharing";
+
   document.querySelectorAll<HTMLElement>("[data-article-actions]").forEach((root) => {
     const status = root.querySelector<HTMLElement>("[data-copy-status]");
+    const options = readArticleLanguages();
+    const hashtags: string[] = JSON.parse(root.dataset.shareHashtags ?? "[]");
+    const refresh = () => {
+      const selected = options.find(option => option.lang === document.documentElement.lang);
+      if (!selected) return;
+      const chinese = selected.lang === "zh-CN";
+      const button = root.querySelector<HTMLButtonElement>("[data-copy-value]");
+      if (button) { button.dataset.copyValue = selected.url; button.textContent = chinese ? "复制中文链接" : "Copy link"; }
+      const linkedIn = root.querySelector<HTMLAnchorElement>("[data-share-linkedin]");
+      if (linkedIn) {
+        linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(selected.url)}`;
+        linkedIn.textContent = chinese ? "分享到 LinkedIn ↗" : "Share on LinkedIn ↗";
+      }
+      root.dataset.summary = `${selected.title}\n\n${selected.description}\n\n${selected.url}\n\n${hashtags.map(tag => `#${tag}`).join(" ")}`;
+      const summary = root.querySelector("[data-copy-summary]");
+      if (summary) summary.textContent = chinese ? "复制中文分享摘要" : "Copy LinkedIn summary";
+      const heading = root.querySelector("#share-heading");
+      if (heading) heading.textContent = chinese ? "分享文章或继续阅读" : "Share or continue learning";
+      const eyebrow = root.querySelector("[data-share-eyebrow]");
+      if (eyebrow) eyebrow.textContent = chinese ? "分享与阅读" : "KEEP THE SIGNAL MOVING";
+      if (status) status.textContent = "";
+    };
+    refresh();
+    document.addEventListener("article-language-change", refresh);
     const copy = async (value: string, message: string) => {
       try { await navigator.clipboard.writeText(value); if (status) status.textContent = message; }
-      catch { if (status) status.textContent = "Copy failed — select the browser URL instead."; }
+      catch { if (status) status.textContent = document.documentElement.lang === "zh-CN" ? "复制失败，请复制浏览器地址栏中的网址。" : "Copy failed — select the browser URL instead."; }
     };
-    root.querySelector<HTMLButtonElement>("[data-copy-value]")?.addEventListener("click", (event) => copy((event.currentTarget as HTMLButtonElement).dataset.copyValue ?? location.href, "Link copied."));
-    root.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", () => copy(root.dataset.summary ?? "", "LinkedIn summary copied."));
+    root.querySelector<HTMLButtonElement>("[data-copy-value]")?.addEventListener("click", (event) => copy((event.currentTarget as HTMLButtonElement).dataset.copyValue ?? location.href, document.documentElement.lang === "zh-CN" ? "中文链接已复制，可粘贴到微信。" : "Link copied."));
+    root.querySelector<HTMLButtonElement>("[data-copy-summary]")?.addEventListener("click", () => copy(root.dataset.summary ?? "", document.documentElement.lang === "zh-CN" ? "中文分享摘要已复制。" : "LinkedIn summary copied."));
   });
 </script>

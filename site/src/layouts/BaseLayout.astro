@@ -21,6 +21,8 @@ interface Props {
   tags?: string[];
   structuredData?: Record<string, unknown> | Record<string, unknown>[];
   hasMath?: boolean;
+  initialLangView?: "alt";
+  languageAlternates?: { lang: string; href: string }[];
 }
 
 const {
@@ -38,6 +40,8 @@ const {
   tags = [],
   structuredData,
   hasMath = false,
+  initialLangView,
+  languageAlternates = [],
 } = Astro.props;
 
 const pageTitle = title === "Eng Knowledge" ? title : `${title} · Eng Knowledge`;
@@ -62,19 +66,21 @@ const schemaJson = JSON.stringify(schemas).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} data-lang-view={initialLangView}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
+    {languageAlternates.map(item => <link rel="alternate" hreflang={item.lang} href={item.href} />)}
     <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
     <link rel="alternate" type="application/rss+xml" title="Eng Knowledge RSS" href={rssURL} />
     {hasMath && <link rel="stylesheet" href={withBase(mathStylesheetPath)} />}
 
     <meta property="og:type" content={type} />
     <meta property="og:locale" content={lang === "zh-CN" ? "zh_CN" : "en_US"} />
+    {languageAlternates.filter(item => item.lang !== lang).map(item => <meta property="og:locale:alternate" content={item.lang === "zh-CN" ? "zh_CN" : "en_US"} />)}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />

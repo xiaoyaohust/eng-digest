@@ -65,7 +65,7 @@ test("EN / CN switch changes the article language and remembers the choice", asy
   await toggles.first().getByRole("button", { name: "CN" }).click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
   await expect(page.locator("html")).toHaveAttribute("lang", "zh-CN");
-  await expect(page).toHaveURL(/[?&]lang=zh\b/);
+  await expect(page).toHaveURL(new RegExp(`/zh${href}$`));
   await expect(page.locator('[data-lang-choice="zh-CN"][aria-pressed="true"]')).toHaveCount(2);
   await expect(page.locator('.prose [data-lang-pane="primary"]')).toBeHidden();
   await expect(page.locator('.prose [data-lang-pane="alt"]')).toBeVisible();

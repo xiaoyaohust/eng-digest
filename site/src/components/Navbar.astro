@@ -2,13 +2,14 @@
 import { withBase } from "@/lib/url";
 import ThemeToggle from "./ThemeToggle.astro";
 import { contentSections } from "@/data/contentSections";
+import { articleLanguagePath } from "@/lib/articleLanguages";
 
 const navItems = [
   ...contentSections.map((section) => ({ label: section.navLabel, href: section.href })),
   { label: "Lab", href: "/architecture-lab/" },
 ];
 
-const currentPath = Astro.url.pathname;
+const currentPath = articleLanguagePath(Astro.url.pathname, "en", "en", import.meta.env.BASE_URL);
 function isActive(href: string): boolean {
   const base = withBase(href);
   if (href === "/") {

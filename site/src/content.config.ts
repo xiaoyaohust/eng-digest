@@ -121,6 +121,8 @@ const translations = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    socialTitle: z.string().optional(),
+    socialDescription: z.string().optional(),
     // The language of this file. Most articles are written in English, so a
     // translation defaults to Simplified Chinese; set "en" for the English
     // version of an article originally written in Chinese.

@@ -5,6 +5,7 @@ import { readingTime } from "./url";
 export type ArticleLang = "en" | "zh-CN";
 
 export interface ArticleTranslation {
+  key: string;
   lang: ArticleLang;
   title: string;
   description: string;
@@ -34,6 +35,7 @@ export async function loadTranslation(
   if (!entry || entry.data.draft || entry.data.lang === primaryLang) return undefined;
   const { Content, headings, remarkPluginFrontmatter } = await render(entry);
   return {
+    key: translationKey(section, id),
     lang: entry.data.lang,
     title: entry.data.title,
     description: entry.data.description,
