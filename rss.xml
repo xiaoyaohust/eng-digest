@@ -6,15 +6,23 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Nov 2026 16:52:34 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 20:51:08 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Agent Anomaly Detection: Safeguarding agents across other clouds</title>
-      <link>https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/</link>
-      <description>Agent Anomaly Detection now monitors ADK agents running across AWS, Azure, or on-premises by analyzing their traces and logs in your Google Cloud project By ingesting OpenTelemetry-formatted data through the Telemetry API, it evaluates full conversations for behavioral drift without needing access to the agent's underlying runtime This enables security teams to detect risks like rogue behaviors, tool misuse, and resource exhaustion across multi-cloud environments.</description>
-      <pubDate>Sun, 22 Nov 2026 16:52:32 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/</guid>
+      <title>Did the user ask for this? Securing AI agents against intent hijacking with Semantic governance policies</title>
+      <link>https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/</link>
+      <description>Semantic governance policies protect AI agents from indirect prompt injection and intent hijacking by validating every proposed tool call against user intent and natural language constraints before execution As demonstrated on the AgentDojo benchmark using a Gemini 2.5 Flash agent, this mechanism reduced attack success rates from 48.7% to 0.9% while maintaining high task utility Developers can leverage these policies in preview within the Gemini platform via Agent Gateway to secure tool-use workflows.</description>
+      <pubDate>Mon, 23 Nov 2026 20:51:06 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/</guid>
       <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Probing DNS at Cloudflare</title>
+      <link>https://blog.cloudflare.com/probing-dns-at-cloudflare/</link>
+      <description>At Cloudflare we’ve built tools to enable teams to extend our internal testing framework and build test tooling for networking protocols This is the story of how this was used for DNS.</description>
+      <pubDate>Mon, 23 Nov 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/probing-dns-at-cloudflare/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
