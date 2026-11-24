@@ -6,23 +6,31 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 23 Nov 2026 20:51:08 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 19:55:45 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>Did the user ask for this? Securing AI agents against intent hijacking with Semantic governance policies</title>
-      <link>https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/</link>
-      <description>Semantic governance policies protect AI agents from indirect prompt injection and intent hijacking by validating every proposed tool call against user intent and natural language constraints before execution As demonstrated on the AgentDojo benchmark using a Gemini 2.5 Flash agent, this mechanism reduced attack success rates from 48.7% to 0.9% while maintaining high task utility Developers can leverage these policies in preview within the Gemini platform via Agent Gateway to secure tool-use workflows.</description>
-      <pubDate>Mon, 23 Nov 2026 20:51:06 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/</guid>
-      <source>Google Developers</source>
+      <title>These are the gifts developers will actually want</title>
+      <link>https://github.blog/news-insights/company-news/these-are-the-gifts-developers-will-actually-want/</link>
+      <description>The developer you're shopping for hasn’t shared their holiday wish list with you yet Check out these gifts, plus our Black Friday discount all week long The post These are the gifts developers will actually want appeared first on The GitHub Blog.</description>
+      <pubDate>Tue, 24 Nov 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/these-are-the-gifts-developers-will-actually-want/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Probing DNS at Cloudflare</title>
-      <link>https://blog.cloudflare.com/probing-dns-at-cloudflare/</link>
-      <description>At Cloudflare we’ve built tools to enable teams to extend our internal testing framework and build test tooling for networking protocols This is the story of how this was used for DNS.</description>
-      <pubDate>Mon, 23 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/probing-dns-at-cloudflare/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>AWS Weekly Roundup: Local Zone in Bogotá, 30-minute Lambda timeout, and more (November 24, 2026)</title>
+      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/</link>
+      <description>Some limits shape architecture more than any feature does AWS Lambda launched in 2014 with a 60-second timeout, moved to 5 minutes in 2015 and to 15 minutes in 2018, and then stayed there for eight years Last week the limit doubled, and in the same week Lambda learned to run on GPUs and gave […]</description>
+      <pubDate>Tue, 24 Nov 2026 15:39:59 GMT</pubDate>
+      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/</guid>
+      <source>AWS News</source>
+    </item>
+    <item>
+      <title>Custom software, specialized workflows, and other new growth paths from SaaS Platform Summit</title>
+      <link>https://stripe.com/blog/custom-software-specialized-workflows-and-other-new-growth-paths-from-saas-platform-summit</link>
+      <description>SaaS platforms have long built for specific verticals Now AI makes it practical to build for one merchant At Stripe’s SaaS Platform Summit, founders and operators shared how custom software and embedded finance can open new revenue streams.</description>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://stripe.com/blog/custom-software-specialized-workflows-and-other-new-growth-paths-from-saas-platform-summit</guid>
+      <source>Stripe Engineering</source>
     </item>
   </channel>
 </rss>
