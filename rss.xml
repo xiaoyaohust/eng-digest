@@ -6,31 +6,39 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 24 Nov 2026 19:55:45 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 18:57:46 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>These are the gifts developers will actually want</title>
-      <link>https://github.blog/news-insights/company-news/these-are-the-gifts-developers-will-actually-want/</link>
-      <description>The developer you're shopping for hasn’t shared their holiday wish list with you yet Check out these gifts, plus our Black Friday discount all week long The post These are the gifts developers will actually want appeared first on The GitHub Blog.</description>
-      <pubDate>Tue, 24 Nov 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/these-are-the-gifts-developers-will-actually-want/</guid>
+      <title>From Files to Cited Answers in One API Call: Managed Ingestion and SearchDocuments in Agent Retrieval</title>
+      <link>https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/</link>
+      <description>Agent Retrieval in Vertex AI introduces managed ingestion and SearchDocuments to replace custom chunking and embedding pipelines Developers can now import document and video files directly from Cloud Storage and query them with a single API call for cited page numbers and timestamped results The feature supports hybrid retrieval, metadata filtering, reranking, and multimodal video audio search.</description>
+      <pubDate>Wed, 25 Nov 2026 18:57:44 GMT</pubDate>
+      <guid isPermaLink="true">https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/</guid>
+      <source>Google Developers</source>
+    </item>
+    <item>
+      <title>Art of play in the age of AI</title>
+      <link>https://github.blog/news-insights/company-news/art-of-play-in-the-age-of-ai/</link>
+      <description>Now that code ships faster than ever, you have more time to spend on projects just for the fun of it Here's what we can learn through that process as developers The post Art of play in the age of AI appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 25 Nov 2026 16:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/news-insights/company-news/art-of-play-in-the-age-of-ai/</guid>
       <source>GitHub Blog</source>
     </item>
     <item>
-      <title>AWS Weekly Roundup: Local Zone in Bogotá, 30-minute Lambda timeout, and more (November 24, 2026)</title>
-      <link>https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/</link>
-      <description>Some limits shape architecture more than any feature does AWS Lambda launched in 2014 with a 60-second timeout, moved to 5 minutes in 2015 and to 15 minutes in 2018, and then stayed there for eight years Last week the limit doubled, and in the same week Lambda learned to run on GPUs and gave […]</description>
-      <pubDate>Tue, 24 Nov 2026 15:39:59 GMT</pubDate>
-      <guid isPermaLink="true">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-local-zone-in-bogota-30-minute-lambda-timeout-and-more-november-24-2026/</guid>
-      <source>AWS News</source>
+      <title>How to choose the next safe step in application modernization</title>
+      <link>https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/</link>
+      <description>Learn how to assess a legacy application, choose a bounded modernization step, and reuse the method with a GitHub Copilot agent skill The post How to choose the next safe step in application modernization appeared first on The GitHub Blog.</description>
+      <pubDate>Wed, 25 Nov 2026 15:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/</guid>
+      <source>GitHub Blog</source>
     </item>
     <item>
-      <title>Custom software, specialized workflows, and other new growth paths from SaaS Platform Summit</title>
-      <link>https://stripe.com/blog/custom-software-specialized-workflows-and-other-new-growth-paths-from-saas-platform-summit</link>
-      <description>SaaS platforms have long built for specific verticals Now AI makes it practical to build for one merchant At Stripe’s SaaS Platform Summit, founders and operators shared how custom software and embedded finance can open new revenue streams.</description>
-      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://stripe.com/blog/custom-software-specialized-workflows-and-other-new-growth-paths-from-saas-platform-summit</guid>
-      <source>Stripe Engineering</source>
+      <title>Introducing Search for Agents</title>
+      <link>https://blog.cloudflare.com/search-for-agents/</link>
+      <description>Flip one toggle to make your site searchable by AI agents — complete with automatic content indexing, a discoverable search API, and native HTTP QUERY support.</description>
+      <pubDate>Wed, 25 Nov 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://blog.cloudflare.com/search-for-agents/</guid>
+      <source>Cloudflare Engineering</source>
     </item>
   </channel>
 </rss>
