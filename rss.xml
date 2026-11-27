@@ -6,39 +6,15 @@
     <description>Daily digest of engineering blog posts from top tech companies</description>
     <language>en-us</language>
     <atom:link href="https://systemcraftlab.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Nov 2026 18:57:46 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 18:40:24 GMT</lastBuildDate>
     <generator>Eng Digest</generator>
     <item>
-      <title>From Files to Cited Answers in One API Call: Managed Ingestion and SearchDocuments in Agent Retrieval</title>
-      <link>https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/</link>
-      <description>Agent Retrieval in Vertex AI introduces managed ingestion and SearchDocuments to replace custom chunking and embedding pipelines Developers can now import document and video files directly from Cloud Storage and query them with a single API call for cited page numbers and timestamped results The feature supports hybrid retrieval, metadata filtering, reranking, and multimodal video audio search.</description>
-      <pubDate>Wed, 25 Nov 2026 18:57:44 GMT</pubDate>
-      <guid isPermaLink="true">https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/</guid>
-      <source>Google Developers</source>
-    </item>
-    <item>
-      <title>Art of play in the age of AI</title>
-      <link>https://github.blog/news-insights/company-news/art-of-play-in-the-age-of-ai/</link>
-      <description>Now that code ships faster than ever, you have more time to spend on projects just for the fun of it Here's what we can learn through that process as developers The post Art of play in the age of AI appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 25 Nov 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/news-insights/company-news/art-of-play-in-the-age-of-ai/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>How to choose the next safe step in application modernization</title>
-      <link>https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/</link>
-      <description>Learn how to assess a legacy application, choose a bounded modernization step, and reuse the method with a GitHub Copilot agent skill The post How to choose the next safe step in application modernization appeared first on The GitHub Blog.</description>
-      <pubDate>Wed, 25 Nov 2026 15:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/</guid>
-      <source>GitHub Blog</source>
-    </item>
-    <item>
-      <title>Introducing Search for Agents</title>
-      <link>https://blog.cloudflare.com/search-for-agents/</link>
-      <description>Flip one toggle to make your site searchable by AI agents — complete with automatic content indexing, a discoverable search API, and native HTTP QUERY support.</description>
-      <pubDate>Wed, 25 Nov 2026 14:00:00 GMT</pubDate>
-      <guid isPermaLink="true">https://blog.cloudflare.com/search-for-agents/</guid>
-      <source>Cloudflare Engineering</source>
+      <title>September 29 Outage Incident Report: What we learnt</title>
+      <link>https://engineering.atspotify.com/2026/11/september-29-outage-incident-report-what-we-learnt/</link>
+      <description>On September 29, Spotify experienced an outage that disrupted users’ access to the platform The post September 29 Outage Incident Report: What we learnt appeared first on Spotify Engineering.</description>
+      <pubDate>Fri, 27 Nov 2026 14:00:11 GMT</pubDate>
+      <guid isPermaLink="true">https://engineering.atspotify.com/2026/11/september-29-outage-incident-report-what-we-learnt/</guid>
+      <source>Spotify Engineering</source>
     </item>
   </channel>
 </rss>
